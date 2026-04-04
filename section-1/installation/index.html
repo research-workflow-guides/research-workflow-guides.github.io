@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1.1 LaTeX Installation | Research Workflow Guidebook</title>
+    <meta
+      name="description"
+      content="LaTeX 설치 방법 3가지 옵션 안내. TeX Live (빠른 설치), TeX Live (전체 설치), MiKTeX 중에서 선택하세요."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="../../assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap site-header-inner">
+        <a class="brand" href="../../index.html">Research Workflow Guidebook</a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="../../index.html">Home</a>
+          <a href="#intro">서론</a>
+          <a href="#options">Options</a>
+          <a href="#note">Note</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content-shell">
+      <aside class="page-sidebar">
+        <section class="toc-card" aria-labelledby="toc-title">
+          <p id="toc-title" class="toc-title">On this page</p>
+          <a href="#intro">서론 / Introduction</a>
+          <a href="#option-1">Option 1: TeX Live (fast)</a>
+          <a href="#option-2">Option 2: TeX Live (slow)</a>
+          <a href="#option-3">Option 3: MiKTeX</a>
+          <a href="#note">참고 / Note</a>
+        </section>
+
+        <section class="meta-card">
+          <p><strong>Section</strong></p>
+          <p>1.1 LaTeX Installation</p>
+          <p><strong>Updated</strong></p>
+          <p>2026.04.02</p>
+          <p><strong>Original source</strong></p>
+          <a href="https://sites.google.com/view/a-30-year-journey">Google Sites page</a>
+        </section>
+      </aside>
+
+      <article class="doc-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../../index.html">Home</a>
+          <span>/</span>
+          <span>Section 1</span>
+          <span>/</span>
+          <span>Installation</span>
+        </nav>
+
+        <section id="intro" class="doc-hero">
+          <p class="eyebrow">Section 1 / Installation</p>
+          <h1>1.1 LaTeX 설치(Installation)</h1>
+          <p class="lead korean-line">
+            3가지 선택지가 있습니다. 필요에 맞게 선택하여서 설치를 진행하세요.
+          </p>
+          <p class="lead muted">
+            There are three options available. Choose according to your needs and proceed with the installation.
+          </p>
+        </section>
+
+        <section id="options" class="doc-section">
+          <div class="card-grid">
+            <article id="option-1" class="guide-card guide-card-light">
+              <p class="card-tag">Option 1</p>
+              <h3>TeX Live (fast)</h3>
+              <p class="korean-line">
+                10분만에 비교적 쉽게 설치 가능, 나중에 패키지를 일일이 다운 받아야 함.
+              </p>
+              <p class="muted">
+                Quick and easy installation in about 10 minutes, but you'll need to manually download packages later.
+              </p>
+              <a class="text-link" href="option-1/">자세히 보기 →</a>
+            </article>
+
+            <article id="option-2" class="guide-card guide-card-mid">
+              <p class="card-tag">Option 2</p>
+              <h3>TeX Live (slow)</h3>
+              <p class="korean-line">
+                엄청 쉽지만 오랜 설치 시간, 나중에 패키지를 다운 받을 필요 없음.
+              </p>
+              <p class="muted">
+                Easier installation but takes longer, and you won't need to download packages later.
+              </p>
+              <a class="text-link" href="option-2/">자세히 보기 →</a>
+            </article>
+
+            <article id="option-3" class="guide-card guide-card-dark">
+              <p class="card-tag">Option 3</p>
+              <h3>MiKTeX <span style="font-size:0.85rem; font-weight:400">(Windows only)</span></h3>
+              <p class="korean-line">
+                10분만에 비교적 쉽게 설치 가능, 나중에 패키지를 자동으로 다운 받을 수 있음.
+                Windows만 지원함. Mac에서도 지원하는지 알 수 없음.
+              </p>
+              <p class="muted">
+                Can be installed relatively easily in about 10 minutes, and it can automatically
+                download packages later. Only supported on Windows. Not sure for Mac.
+              </p>
+              <a class="text-link" href="option-3/">자세히 보기 →</a>
+            </article>
+          </div>
+        </section>
+
+        <section id="note" class="tip-card">
+          <p class="eyebrow">Note</p>
+          <h2>본 강의에서는 MiKTeX을 사용합니다</h2>
+          <p class="korean-line">
+            VS Code의 LaTeX-Workshop은 공식적으로 MiKTeX보다는 TeX Live를 사용하는 것을 강력히
+            추천합니다. 그러나 본 강의에서는 MiKTeX을 사용합니다. 보다 자세한 내용은
+            공식 사이트를 참고하세요.
+          </p>
+          <p class="muted">
+            VS Code's LaTeX-Workshop strongly recommends using TeX Live over MiKTeX officially.
+            However, in this tutorial, we will be using MiKTeX. For more detailed information,
+            please refer to the official website.
+          </p>
+          <a class="text-link" href="https://github.com/James-Yu/LaTeX-Workshop">
+            James-Yu/LaTeX-Workshop — official repository
+          </a>
+          <p class="source-note" style="margin-top:1.2rem;">
+            MiKTeX과 TeX Live의 차이에 대하여 보다 자세한 내용이 궁금하시다면 다음의 자료를
+            참고하세요. (추천하지는 않습니다)<br>
+            <span class="muted">For more information about the differences between MiKTeX and TeX Live,
+            refer to additional resources. (Not recommended)</span>
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>Research Workflow Guidebook migration draft.</p>
+        <p>Converted from Google Sites for GitHub Pages deployment.</p>
+      </div>
+    </footer>
+  </body>
+</html>
