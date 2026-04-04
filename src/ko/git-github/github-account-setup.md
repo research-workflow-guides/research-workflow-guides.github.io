@@ -25,6 +25,22 @@ tags:
 
 연구 작업에 계속 사용할 GitHub 계정 하나를 정합니다. 처음 workflow를 여러 임시 계정에 나누면 나중에 관리가 더 어려워집니다.
 
+<div class="doc-section-grid">
+  <div>
+    <p>처음 확인할 화면은 GitHub 메인 페이지와 회원가입 진입 화면 두 곳이면 충분합니다.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.4-1.png" alt="GitHub 홈페이지">
+      <figcaption>GitHub 메인 페이지에서 시작합니다.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.4-2.png" alt="GitHub 회원가입 페이지">
+      <figcaption>계정이 없다면 기본 회원가입 흐름으로 진행합니다.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## 기본 보안 설정
 
 적어도 강한 비밀번호와 실제로 접근 가능한 recovery 경로를 확보합니다. 가능하다면 repository가 중요해지기 전에 two-factor authentication도 켭니다.
@@ -36,4 +52,3 @@ username, display name, verified email이 안정적으로 보이게 맞춥니다
 ## 점검
 
 문제 없이 로그인할 수 있고, GitHub 메일을 받을 수 있으며, 프로필에 안정적인 username이 보이면 다음 단계로 넘어갑니다.
-

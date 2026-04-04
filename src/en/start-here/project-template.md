@@ -30,6 +30,22 @@ For this first rollout, use the existing starter repository as the project templ
 
 [Starter repository: research-workflow-guides/seed-documents](https://github.com/research-workflow-guides/seed-documents)
 
+<div class="doc-section-grid">
+  <div>
+    <p>Use the starter repository page as the source of truth, then open the GitHub code menu to download the ZIP archive.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.5-1.png" alt="Starter repository on GitHub">
+      <figcaption>The starter repository page shows the project you will download.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/github-code-btn.svg" alt="GitHub Code button">
+      <figcaption>Open the GitHub code menu and choose the ZIP download path.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## Open the project in VS Code
 
 1. Open the extracted folder in VS Code as a project, not as a single file.

@@ -30,6 +30,22 @@ tags:
 
 [Starter repository: research-workflow-guides/seed-documents](https://github.com/research-workflow-guides/seed-documents)
 
+<div class="doc-section-grid">
+  <div>
+    <p>starter repository 페이지를 기준 화면으로 두고, GitHub의 code 메뉴에서 ZIP 다운로드 경로를 확인하면 됩니다.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.5-1.png" alt="GitHub의 starter repository">
+      <figcaption>먼저 starter repository 페이지를 엽니다.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/github-code-btn.svg" alt="GitHub Code 버튼">
+      <figcaption>GitHub code 메뉴에서 ZIP 다운로드 경로를 선택합니다.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## project 열기
 
 1. VS Code에서 압축을 푼 폴더 전체를 project로 엽니다.

@@ -36,6 +36,22 @@ This page is not a TeX Live comparison guide. The implementation path here assum
 
 [Official MiKTeX downloads](https://miktex.org/download)
 
+<div class="doc-section-grid">
+  <div>
+    <p>The official homepage and download page are the two screens you should expect to see first.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-1.png" alt="MiKTeX homepage">
+      <figcaption>Start from the official MiKTeX homepage.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-2.png" alt="MiKTeX download page">
+      <figcaption>Choose the download page that matches your platform.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## Install MiKTeX
 
 1. Download the installer from the official MiKTeX download page for your platform.
@@ -43,6 +59,42 @@ This page is not a TeX Live comparison guide. The implementation path here assum
 3. Run updates in MiKTeX Console before moving on, so the package database is current.
 4. Keep package installation on demand enabled, since that is the working assumption of this guide.
 5. Confirm that `latexmk` is available. If it is missing, install it through MiKTeX Console before continuing.
+
+<div class="doc-section-grid">
+  <div>
+    <p>The installer itself is straightforward. After installation, the important follow-up screen is MiKTeX Console.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-3.png" alt="MiKTeX installer window">
+      <figcaption>The standard installer flow starts here.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-4.png" alt="MiKTeX installation steps">
+      <figcaption>Finish the normal setup steps, then launch MiKTeX Console.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Inside MiKTeX Console, update packages first, then check whether <code>latexmk</code> is available and keep package-on-demand enabled.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-5.png" alt="MiKTeX Console">
+      <figcaption>Open MiKTeX Console after the installer finishes.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-6.png" alt="MiKTeX Console package search for latexmk">
+      <figcaption>Search for and install <code>latexmk</code> if it is missing.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package-on-demand confirmation dialog">
+      <figcaption>Keep package-on-demand enabled so missing packages can install as needed.</figcaption>
+    </figure>
+  </div>
+</div>
 
 ## Platform notes
 
@@ -68,6 +120,11 @@ latexmk -v
 ```
 
 On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, verify that Perl is already available before you proceed.
+
+<figure class="image-frame">
+  <img src="/assets/images/1.1.3-7.png" alt="Strawberry Perl download page">
+  <figcaption>If Windows does not already provide Perl, Strawberry Perl is the usual fallback.</figcaption>
+</figure>
 
 ## Before you move on
 

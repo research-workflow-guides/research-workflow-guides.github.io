@@ -26,6 +26,22 @@ tags:
 
 [VS Code 공식 다운로드](https://code.visualstudio.com/Download)
 
+<div class="doc-section-grid">
+  <div>
+    <p>처음에는 VS Code 공식 사이트에 들어갔는지, 그리고 운영체제에 맞는 설치 파일을 받았는지만 확인하면 충분합니다.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.2-1.png" alt="VS Code 홈페이지">
+      <figcaption>VS Code 공식 홈페이지에서 시작합니다.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.2-2.png" alt="VS Code 다운로드 페이지">
+      <figcaption>운영체제에 맞는 설치 파일을 선택합니다.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## LaTeX Workshop 설치
 
 1. 좌측 Extensions 패널이나 Command Palette를 엽니다.
@@ -34,7 +50,22 @@ tags:
 
 [VS Code Marketplace의 LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
+<div class="doc-section-grid">
+  <div>
+    <p>핵심 확인 화면은 Extensions 패널과 설치가 끝난 뒤의 extension 페이지 두 곳입니다.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.2-3.png" alt="LaTeX Workshop가 보이는 VS Code Extensions 패널">
+      <figcaption>Extensions 패널에서 <strong>LaTeX Workshop</strong>를 검색합니다.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.2-4.png" alt="설치가 완료된 VS Code 화면">
+      <figcaption>설치가 끝나면 VS Code가 첫 project 작업을 받을 준비가 됩니다.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## 점검
 
 VS Code가 정상적으로 열리고, LaTeX Workshop이 설치되어 있으며, Command Palette에서 LaTeX Workshop 관련 명령이 보이면 다음 단계로 넘어갑니다.
-

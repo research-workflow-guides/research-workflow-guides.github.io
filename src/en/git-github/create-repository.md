@@ -29,6 +29,38 @@ For the first workflow, one private repository for one working project is enough
 
 Use GitHub to create a new private repository with a clear project name. You do not need to add a README, `.gitignore`, or license if you want the first local push flow to stay explicit.
 
+<div class="doc-section-grid">
+  <div>
+    <p>From your profile, move to the repositories list and use the <strong>New</strong> button to start a fresh repository.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="GitHub profile with the Repositories tab highlighted">
+      <figcaption>Open the repository list from your GitHub profile.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="GitHub repositories page with the New button highlighted">
+      <figcaption>Use the <strong>New</strong> button to begin the repository form.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Choose a clear name, keep the repository private, and leave extra initialization options unchecked for the first run.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="GitHub create repository form">
+      <figcaption>Fill out the repository form with a project name and privacy setting.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="Empty GitHub repository page after creation">
+      <figcaption>An empty repository page is the expected result before the first clone and push.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## Keep it simple
 
 The point of the first repository is to understand the connection between local files and remote history. Complexity can come later.
@@ -36,4 +68,3 @@ The point of the first repository is to understand the connection between local 
 ## Self-check
 
 If the private repository exists on GitHub and is still empty, you are ready to clone it locally.
-

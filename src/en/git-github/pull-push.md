@@ -32,6 +32,11 @@ git pull
 
 If you know nobody else changed the repository, the pull may do nothing. That is fine.
 
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/pull-menu.png" alt="VS Code source control menu with Pull highlighted">
+  <figcaption>The pull action is usually available from the Source Control menu in VS Code.</figcaption>
+</figure>
+
 ## Use a daily sync loop
 
 The loop is usually:
@@ -44,6 +49,22 @@ The loop is usually:
 ## Keep commits coherent
 
 A good commit collects one understandable change. It does not need to be huge. It only needs to make sense when you read the history later.
+
+<div class="doc-section-grid">
+  <div>
+    <p>Write a short message that names the unit of work, then publish it with the usual push step.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
+      <figcaption>A visible commit message helps keep the history readable later.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu with Commit & Push highlighted">
+      <figcaption>After the commit is ready, push it to keep the remote history aligned.</figcaption>
+    </figure>
+  </div>
+</div>
 
 ## Self-check
 

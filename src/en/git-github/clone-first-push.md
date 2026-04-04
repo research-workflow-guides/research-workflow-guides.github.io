@@ -30,9 +30,41 @@ git clone <repository-url>
 cd <repository-folder>
 ```
 
+<div class="doc-section-grid">
+  <div>
+    <p>Copy the repository URL from GitHub, then use the VS Code clone flow if you prefer not to paste the command manually into the terminal.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/clone-copy-url.png" alt="GitHub repository page with the clone URL copied">
+      <figcaption>Copy the repository URL from the GitHub code menu.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/clone-command.png" alt="VS Code source control panel with Clone Repository">
+      <figcaption>VS Code can start the clone flow directly from the Source Control panel.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## Copy the project into the clone
 
 Move the working files into the cloned folder instead of trying to push from an unrelated directory. This keeps the remote and local repository history aligned from the beginning.
+
+<div class="doc-section-grid">
+  <div>
+    <p>Choose a destination folder for the clone, then open the cloned repository as the working folder before copying the project files into it.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="Folder selection dialog for choosing a clone destination">
+      <figcaption>Select a clear destination folder for the cloned repository.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/clone-open-repo.png" alt="VS Code after opening the cloned repository">
+      <figcaption>Open the cloned repository before you copy your project files into it.</figcaption>
+    </figure>
+  </div>
+</div>
 
 ## First commit and push
 
@@ -45,7 +77,22 @@ git push origin main
 
 If the default branch is not `main`, use the branch name GitHub created for the repository.
 
+<div class="doc-section-grid">
+  <div>
+    <p>Once the files are inside the clone, write a commit message and use the standard push action to publish the first history.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
+      <figcaption>Write the initial commit message before publishing.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu showing Commit & Push">
+      <figcaption>Use the combined commit-and-push flow if that matches your interface.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## Self-check
 
 If GitHub now shows the project files and your local repository is clean after the push, the first remote publication worked.
-

@@ -27,6 +27,22 @@ A conflict usually appears when two sets of changes touch the same lines or the 
 
 Git stops and asks you to decide what the final text should be.
 
+<div class="doc-section-grid">
+  <div>
+    <p>A common first sign is a push warning that tells you to pull first. After that, the Source Control menu is where the merge flow usually begins.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/conflict-push-warning.png" alt="VS Code warning that a push was rejected and a pull is required">
+      <figcaption>A rejected push often means the remote changed and you need to pull before continuing.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/conflict-pull-menu.png" alt="VS Code source control menu with Pull highlighted after a push warning">
+      <figcaption>Start the merge by pulling the remote changes into your local repository.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## Resolve one file carefully
 
 Use the VS Code Merge Editor or the conflict markers directly. Read the surrounding lines, decide what should remain, and keep the final text consistent.
@@ -37,7 +53,11 @@ Do not rush to accept everything from one side unless that really is the correct
 
 After resolving the file, confirm the conflict markers are gone, stage the file, and finish the merge commit or re-run the normal commit flow.
 
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/conflict-merge-state.png" alt="VS Code source control panel during a merge with merge changes shown">
+  <figcaption>The repository should return to a normal staged state after you resolve the merge and finish the commit.</figcaption>
+</figure>
+
 ## Self-check
 
 If you can explain what the final file should say and the repository returns to a clean state afterward, the conflict has been handled correctly.
-

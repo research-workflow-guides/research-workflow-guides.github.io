@@ -36,6 +36,22 @@ tags:
 
 [MiKTeX 공식 다운로드](https://miktex.org/download)
 
+<div class="doc-section-grid">
+  <div>
+    <p>처음 확인해야 하는 화면은 MiKTeX 공식 홈페이지와 다운로드 페이지 두 곳입니다.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-1.png" alt="MiKTeX 홈페이지">
+      <figcaption>MiKTeX 공식 홈페이지에서 시작합니다.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-2.png" alt="MiKTeX 다운로드 페이지">
+      <figcaption>운영체제에 맞는 다운로드 페이지로 이동합니다.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## MiKTeX 설치
 
 1. 운영체제에 맞는 MiKTeX 설치 파일을 다운로드합니다.
@@ -43,6 +59,42 @@ tags:
 3. 업데이트를 먼저 적용해 패키지 데이터베이스를 최신 상태로 맞춥니다.
 4. package-on-demand 옵션은 켜 둡니다.
 5. `latexmk`가 보이지 않으면 MiKTeX Console에서 설치한 뒤 진행합니다.
+
+<div class="doc-section-grid">
+  <div>
+    <p>설치 프로그램 자체는 일반적인 흐름으로 진행하면 충분하고, 설치 후에는 MiKTeX Console이 핵심 확인 화면입니다.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-3.png" alt="MiKTeX 설치 화면">
+      <figcaption>MiKTeX 설치는 일반적인 installer 흐름으로 시작합니다.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-4.png" alt="MiKTeX 설치 단계">
+      <figcaption>설치를 마친 뒤 MiKTeX Console을 실행합니다.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>MiKTeX Console 안에서는 먼저 업데이트를 적용하고, <code>latexmk</code>가 보이지 않으면 설치한 뒤 package-on-demand를 유지합니다.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-5.png" alt="MiKTeX Console">
+      <figcaption>설치가 끝나면 MiKTeX Console을 엽니다.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-6.png" alt="MiKTeX Console에서 latexmk 검색">
+      <figcaption><code>latexmk</code>가 없다면 Console에서 검색해 설치합니다.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package-on-demand 확인 창">
+      <figcaption>필요한 패키지가 자동 설치되도록 package-on-demand를 켜 둡니다.</figcaption>
+    </figure>
+  </div>
+</div>
 
 ## 운영체제별 메모
 
@@ -69,7 +121,11 @@ latexmk -v
 
 Windows에서는 Perl이 없으면 Strawberry Perl을 설치합니다. macOS와 Linux는 기본 Perl이 있는지 먼저 확인합니다.
 
+<figure class="image-frame">
+  <img src="/assets/images/1.1.3-7.png" alt="Strawberry Perl 다운로드 페이지">
+  <figcaption>Windows에 Perl이 없다면 Strawberry Perl을 함께 설치합니다.</figcaption>
+</figure>
+
 ## 점검
 
 MiKTeX Console이 열리고, `latexmk -v`가 동작하며, 필요하다면 `perl --version`도 정상 출력되면 다음 단계로 넘어갑니다.
-

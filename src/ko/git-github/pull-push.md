@@ -32,6 +32,11 @@ git pull
 
 아무도 remote를 바꾸지 않았다면 pull이 아무 일도 하지 않을 수 있습니다. 그것도 정상입니다.
 
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/pull-menu.png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
+  <figcaption>VS Code에서는 Source Control 메뉴에서 pull 동작을 찾는 경우가 많습니다.</figcaption>
+</figure>
+
 ## 일상 sync 루프
 
 기본 루프는 보통 다음과 같습니다.
@@ -45,7 +50,22 @@ git pull
 
 좋은 commit은 "이력이 나중에 읽혀도 이해되는 한 덩어리 변화"입니다. 거대할 필요는 없고, 읽었을 때 무슨 변화인지 분명하면 충분합니다.
 
+<div class="doc-section-grid">
+  <div>
+    <p>짧은 commit message로 작업 단위를 붙잡아 두고, 그다음 일반적인 push 흐름으로 원격 history를 맞춥니다.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="commit message가 입력된 VS Code 화면">
+      <figcaption>commit message가 보여야 history를 나중에 따라가기 쉽습니다.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 강조된 VS Code 메뉴">
+      <figcaption>commit이 준비되면 push로 원격 history를 맞춥니다.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## 점검
 
 언제 pull하고, 언제 commit하고, 언제 push하는지 즉흥적으로 판단하지 않고 설명할 수 있으면 기본 sync 루프는 자리 잡은 것입니다.
-

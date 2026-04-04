@@ -25,6 +25,38 @@ tags:
 
 Use the official installer or the package manager that is standard on your platform. The goal is simply to make the `git` command available from the terminal and from VS Code.
 
+<div class="doc-section-grid">
+  <div>
+    <p>The official homepage and download page are enough for the first installation pass.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.3-1.png" alt="Git homepage">
+      <figcaption>Start from the official Git homepage.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.3-2.png" alt="Git download page">
+      <figcaption>Choose the installer for your operating system.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>The default installer flow is usually fine. If you see an editor choice during setup, selecting VS Code is reasonable.</p>
+  </div>
+  <div class="figure-stack">
+    <figure class="image-frame">
+      <img src="/assets/images/1.3-3.png" alt="Git installer steps">
+      <figcaption>The installer runs through a normal sequence of setup screens.</figcaption>
+    </figure>
+    <figure class="image-frame">
+      <img src="/assets/images/1.3-4.png" alt="Git installation complete">
+      <figcaption>Finish the setup and return to the terminal for verification.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## Set your identity
 
 Git records a display name and email address in your commits. Set them once before you begin repository work.
@@ -48,4 +80,3 @@ Confirm that Git responds normally and that your name and email are visible.
 ## Self-check
 
 If `git --version` works and your global identity is set correctly, move on to the GitHub account step.
-

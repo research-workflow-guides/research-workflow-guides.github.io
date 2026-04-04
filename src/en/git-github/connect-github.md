@@ -29,6 +29,11 @@ Open the Accounts menu or Source Control prompts in VS Code and choose the GitHu
 
 VS Code usually opens a browser page for authorization. Finish that flow with the same GitHub account you prepared in the previous step.
 
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/connect-confirm-access.png" alt="GitHub browser confirmation page for VS Code access">
+  <figcaption>The browser authorization step should confirm that VS Code is being granted access to your GitHub account.</figcaption>
+</figure>
+
 ## Confirm the connection
 
 Return to VS Code and check that the account is shown as connected. Repository-related prompts should now recognize GitHub instead of asking you to start from zero each time.
@@ -36,4 +41,3 @@ Return to VS Code and check that the account is shown as connected. Repository-r
 ## Self-check
 
 If VS Code shows the correct GitHub account and the sign-in does not keep repeating, proceed to repository creation.
-
