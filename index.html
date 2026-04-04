@@ -6,7 +6,7 @@
     <title>Research Workflow Guidebook</title>
     <meta
       name="description"
-      content="A GitHub Pages site for LaTeX, VS Code, GitHub, and practical research workflow guides."
+      content="A bilingual landing page for research workflow guides covering LaTeX, VS Code, and GitHub."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,31 +14,15 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="/assets/styles.css">
   </head>
   <body>
     <header class="site-header">
       <div class="wrap site-header-inner">
-        <a class="brand" href="index.html">Research Workflow Guidebook</a>
+        <a class="brand" href="/">Research Workflow Guidebook</a>
         <nav class="main-nav" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <div class="nav-dropdown">
-            <a href="section-1/">Section 1</a>
-            <div class="dropdown-menu">
-              <a href="/section-1/installation/">1.1 LaTeX Installation</a>
-              <a href="/section-1/vs-code/">1.2 VS Code Installation</a>
-              <a href="/section-1/git/">1.3 Git Installation</a>
-              <a href="/section-1/github/">1.4 GitHub Sign Up</a>
-              <a href="/section-1/basic-doc-pack/">1.5 Basic Document Pack</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <a href="section-2/">Section 2</a>
-            <div class="dropdown-menu">
-              <a href="/section-2/usage/vs-code-github/gitignore/">2.2.8 Gitignore</a>
-            </div>
-          </div>
-          <a class="lang-switch" href="ko/">한국어</a>
+          <a href="/en/">English</a>
+          <a class="lang-switch" href="/ko/">한국어</a>
         </nav>
       </div>
     </header>
@@ -47,22 +31,21 @@
       <section class="hero">
         <div class="wrap hero-grid">
           <div>
-            <h1>Research Workflow Guidebook</h1>
+            <p class="eyebrow">Root Landing</p>
+            <h1>Choose a language, then start the workflow.</h1>
             <p class="hero-copy">
-              A repository-managed documentation site for LaTeX, VS Code, GitHub,
-              and practical research workflows.
+              This site is being rebuilt as a bilingual documentation guide for researchers using
+              LaTeX, VS Code, Git, and GitHub. Start with a language home, then move into the
+              category that matches your next task.
             </p>
-            <div class="button-row">
-              <a class="button button-secondary" href="https://github.com/research-workflow-guides/research-workflow-guides.github.io">GitHub Repository</a>
-              <a class="button button-secondary" href="https://youtube.com/playlist?list=PLEu38-PC5GV-_dV2lY6R6qT72RnJQc2wd">YouTube</a>
-            </div>
           </div>
           <div class="hero-card">
-            <p class="hero-card-label">Recent updates</p>
-            <dl class="meta-list" id="recent-updates">
-              <div><dt>—</dt><dd>Loading…</dd></div>
-            </dl>
-            <a class="text-link" href="updates/" style="margin-top:1rem;">More updates →</a>
+            <p class="hero-card-label">Choose your language</p>
+            <p class="subtle">Both language homes use the same top-level structure.</p>
+            <div class="button-row">
+              <a class="button button-primary" href="/en/">Enter English</a>
+              <a class="button button-secondary" href="/ko/">한국어로 보기</a>
+            </div>
           </div>
         </div>
       </section>
@@ -70,31 +53,35 @@
       <section class="section-block section-block-alt">
         <div class="wrap">
           <div class="section-heading">
-            <h2>Guide Map</h2>
+            <h2>Category Map</h2>
           </div>
-          <div class="card-grid">
-            <a href="section-1/" class="guide-card guide-card-light card-link">
-              <div class="card-logo-row">
-                <img class="card-logo" src="assets/images/LaTeX_project_logo_bird.svg.png" alt="LaTeX">
+          <div class="hub-grid">
+            <article class="hub-card">
+              <p class="kicker">Category 1</p>
+              <h3>Start Here</h3>
+              <p>Set up the tools and reach your first successful compile.</p>
+              <div class="link-pair">
+                <a class="button button-secondary" href="/en/start-here/">English</a>
+                <a class="button button-secondary" href="/ko/start-here/">한국어</a>
               </div>
-              <p class="eyebrow">Section 1</p>
-              <h3>Installation</h3>
-              <p>Environment and editor setup for LaTeX-centered collaborative work.</p>
-            </a>
-            <a href="section-2/" class="guide-card guide-card-mid card-link">
-              <div class="card-logo-row">
-                <img class="card-logo" src="assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
-                <img class="card-logo" src="assets/images/GitHub-Mark.png" alt="GitHub">
+            </article>
+            <article class="hub-card">
+              <p class="kicker">Category 2</p>
+              <h3>Writing in VS Code</h3>
+              <p>Move from setup into the daily editing, build, preview, and writing loop.</p>
+              <div class="link-pair">
+                <a class="button button-secondary" href="/en/writing-in-vs-code/">English</a>
+                <a class="button button-secondary" href="/ko/writing-in-vs-code/">한국어</a>
               </div>
-              <p class="eyebrow">Section 2</p>
-              <h3>Usage</h3>
-              <p>Hands-on workflow guides for VS Code, Git, and GitHub collaboration.</p>
-            </a>
-            <article class="guide-card guide-card-dark">
-              <p class="eyebrow">Section 3</p>
-              <h3>Useful Tools</h3>
-              <p>Reference pages for tools that support writing, versioning, and collaboration.</p>
-              <p class="card-note">Migration planned</p>
+            </article>
+            <article class="hub-card">
+              <p class="kicker">Category 3</p>
+              <h3>Git &amp; GitHub</h3>
+              <p>Connect the repository, publish your first project, and learn the repeat workflow.</p>
+              <div class="link-pair">
+                <a class="button button-secondary" href="/en/git-github/">English</a>
+                <a class="button button-secondary" href="/ko/git-github/">한국어</a>
+              </div>
             </article>
           </div>
         </div>
@@ -104,34 +91,8 @@
     <footer class="site-footer">
       <div class="wrap footer-inner">
         &copy; 2026 Kiwoong Kwon, Kiyuob Jung
-        <span id="last-updated" class="muted" style="font-size:0.9rem;">Last updated: —</span><script src="/assets/last-updated.js"></script>
         <a href="https://sites.google.com/view/a-30-year-journey/" style="text-decoration:none; color:var(--muted);">Old Version</a>
       </div>
     </footer>
-    <script>
-      fetch('updates/data.json')
-        .then(r => r.json())
-        .then(data => {
-          const completed = data
-            .filter(d => d.status === 'completed' && d.date)
-            .sort((a, b) => b.date.localeCompare(a.date));
-
-          // Group by date, take latest 2 date groups
-          const groups = {};
-          completed.forEach(item => {
-            if (!groups[item.date]) groups[item.date] = [];
-            groups[item.date].push(item.title);
-          });
-          const latestDates = Object.keys(groups).sort((a, b) => b.localeCompare(a)).slice(0, 2);
-
-          const html = latestDates.map(date => `
-            <div>
-              <dt>${date.replace(/-/g, '.')}</dt>
-              <dd>${groups[date].join(', ')}</dd>
-            </div>`).join('');
-
-          document.getElementById('recent-updates').innerHTML = html;
-        });
-    </script>
   </body>
 </html>

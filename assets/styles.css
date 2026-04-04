@@ -728,3 +728,151 @@ li {
 .toc-item-sub:hover {
   color: #5a9bd4;
 }
+
+.landing-grid,
+.language-grid,
+.hub-grid,
+.doc-list,
+.phase-grid,
+.link-pair {
+  display: grid;
+  gap: 1rem;
+}
+
+.landing-grid,
+.language-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hub-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.phase-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.link-pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.landing-card,
+.hub-card,
+.doc-item,
+.phase-card,
+.nav-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.landing-card,
+.hub-card,
+.doc-item,
+.phase-card {
+  padding: 1.3rem;
+}
+
+.landing-card h3,
+.hub-card h3,
+.doc-item h3,
+.phase-card h3,
+.nav-panel h3 {
+  font-size: 1.2rem;
+}
+
+.landing-card p,
+.hub-card p,
+.doc-item p,
+.phase-card p,
+.nav-panel p {
+  margin: 0.6rem 0 0;
+}
+
+.kicker {
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.subtle {
+  color: var(--muted);
+}
+
+.stack-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.stack-list .doc-item {
+  padding: 1rem 1.15rem;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.9rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(15, 76, 129, 0.1);
+  color: var(--brand-deep);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.page-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.nav-panel {
+  display: block;
+  padding: 1.1rem 1.2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-panel strong {
+  display: block;
+  color: var(--brand);
+  font-size: 0.9rem;
+}
+
+.nav-panel span {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.hero-card .button-row {
+  margin-top: 1rem;
+}
+
+.hero-card .button {
+  width: 100%;
+}
+
+.doc-hero .meta-list {
+  margin-top: 1rem;
+}
+
+.doc-hero .meta-list div {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 980px) {
+  .landing-grid,
+  .language-grid,
+  .hub-grid,
+  .phase-grid,
+  .page-nav,
+  .link-pair {
+    grid-template-columns: 1fr;
+  }
+}

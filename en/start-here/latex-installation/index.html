@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LaTeX Installation | Research Workflow Guidebook</title>
+    <meta
+      name="description"
+      content="Install MiKTeX and confirm the basic LaTeX workflow is ready."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap site-header-inner">
+        <a class="brand" href="/en/">Research Workflow Guidebook</a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="/en/start-here/">Start Here</a>
+          <a href="/en/writing-in-vs-code/">Writing in VS Code</a>
+          <a href="/en/git-github/">Git &amp; GitHub</a>
+          <a class="lang-switch" href="/ko/start-here/">한국어</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content-shell">
+      <aside class="page-sidebar">
+        <section class="toc-card" aria-labelledby="toc-title">
+          <p id="toc-title" class="toc-title">On this page</p>
+          <a href="#why">Why MiKTeX</a>
+          <a href="#install">Install MiKTeX</a>
+          <a href="#platforms">Platform notes</a>
+          <a href="#perl">Perl requirement</a>
+          <a href="#check">Self-check</a>
+        </section>
+      </aside>
+
+      <article class="doc-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/en/">English Home</a><span>/</span>
+          <a href="/en/start-here/">Start Here</a><span>/</span>
+          <span>LaTeX Installation</span>
+        </nav>
+
+        <section class="doc-hero">
+          <p class="eyebrow">Step 1</p>
+          <h1>LaTeX Installation</h1>
+          <p class="lead">Install MiKTeX, enable package-on-demand behavior, and confirm the base toolchain is available.</p>
+          <dl class="meta-list">
+            <div><dt>Default distribution</dt><dd>MiKTeX</dd></div>
+            <div><dt>Goal</dt><dd>Reach a working LaTeX installation with `latexmk` available.</dd></div>
+          </dl>
+        </section>
+
+        <section id="why" class="doc-section">
+          <h2>Why MiKTeX</h2>
+          <p>For this site, MiKTeX is the default distribution because it is lighter to start with, beginner-friendly, and can install missing packages as you work.</p>
+          <p class="subtle">This page is not a TeX Live comparison guide. The implementation path here assumes you will continue with MiKTeX.</p>
+          <a class="text-link" href="https://miktex.org/download">Official MiKTeX downloads →</a>
+        </section>
+
+        <section id="install" class="doc-section">
+          <h2>Install MiKTeX</h2>
+          <div class="stack-list">
+            <article class="doc-item">
+              <h3>1. Download the installer</h3>
+              <p class="subtle">Use the official MiKTeX download page and choose the installer for your platform.</p>
+            </article>
+            <article class="doc-item">
+              <h3>2. Finish the installation</h3>
+              <p class="subtle">Complete the normal installer flow, then open MiKTeX Console once after installation.</p>
+            </article>
+            <article class="doc-item">
+              <h3>3. Update packages</h3>
+              <p class="subtle">Run updates in MiKTeX Console before moving on, so the package database is current.</p>
+            </article>
+            <article class="doc-item">
+              <h3>4. Keep package installation on demand</h3>
+              <p class="subtle">The working assumption for this guide is that MiKTeX can install missing packages when needed.</p>
+            </article>
+            <article class="doc-item">
+              <h3>5. Confirm `latexmk` is available</h3>
+              <p class="subtle">If `latexmk` is not available yet, install it through MiKTeX Console before continuing.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="platforms" class="doc-section">
+          <h2>Platform notes</h2>
+          <div class="stack-list">
+            <article class="doc-item">
+              <h3>Windows</h3>
+              <p class="subtle">Windows is the simplest path in this guide. If later workflows need Perl tools, install Strawberry Perl.</p>
+            </article>
+            <article class="doc-item">
+              <h3>macOS</h3>
+              <p class="subtle">Use the official MiKTeX installer for macOS, then verify both MiKTeX and Perl from the terminal.</p>
+            </article>
+            <article class="doc-item">
+              <h3>Linux</h3>
+              <p class="subtle">Treat Linux as a supported-with-caveat path. Follow MiKTeX documentation for your distribution and verify the toolchain carefully.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="perl" class="doc-section">
+          <h2>Perl requirement</h2>
+          <p>`latexmk` and later `latexdiff`-style workflows depend on Perl-based tooling.</p>
+          <div class="code-box">
+            <pre><code>perl --version
+latexmk -v</code></pre>
+          </div>
+          <p class="subtle">On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, verify that Perl is already available before you proceed.</p>
+        </section>
+
+        <section id="check" class="tip-card">
+          <p class="eyebrow">Self-check</p>
+          <h2>Before you move on</h2>
+          <p>Confirm that MiKTeX Console opens, `latexmk -v` works, and `perl --version` works if your setup needs Perl-based tools.</p>
+          <div class="page-nav">
+            <a class="nav-panel" href="/en/start-here/">
+              <strong>Previous</strong>
+              <span>Start Here category home</span>
+            </a>
+            <a class="nav-panel" href="/en/start-here/vs-code-installation/">
+              <strong>Next</strong>
+              <span>VS Code Installation</span>
+            </a>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        &copy; 2026 Kiwoong Kwon, Kiyuob Jung
+      </div>
+    </footer>
+  </body>
+</html>
