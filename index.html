@@ -33,7 +33,7 @@
       <section class="hero">
         <div class="wrap hero-grid">
           <div>
-                        <h1>Research Workflow Guidebook</h1>
+            <h1>Research Workflow Guidebook</h1>
             <p class="hero-copy">
               A repository-managed documentation site for LaTeX, VS Code, GitHub,
               and practical research workflows.
@@ -45,15 +45,8 @@
           </div>
           <div class="hero-card">
             <p class="hero-card-label">Recent updates</p>
-            <dl class="meta-list">
-              <div>
-                <dt>2026.04.04</dt>
-                <dd>1.1.3 Option 3: MiKTeX</dd>
-              </div>
-              <div>
-                <dt>2026.04.04</dt>
-                <dd>1.1.1 &amp; 1.1.2 TeX Live options</dd>
-              </div>
+            <dl class="meta-list" id="recent-updates">
+              <div><dt>—</dt><dd>Loading…</dd></div>
             </dl>
             <a class="text-link" href="updates/" style="margin-top:1rem;">More updates →</a>
           </div>
@@ -63,7 +56,7 @@
       <section class="section-block section-block-alt">
         <div class="wrap">
           <div class="section-heading">
-                        <h2>Guide Map</h2>
+            <h2>Guide Map</h2>
           </div>
           <div class="card-grid">
             <a href="section-1/" class="guide-card guide-card-light card-link">
@@ -100,5 +93,23 @@
         <a class="text-link" href="https://sites.google.com/view/a-30-year-journey/">Old Version</a>
       </div>
     </footer>
+    <script>
+      fetch('updates/data.json')
+        .then(r => r.json())
+        .then(data => {
+          const latest = data
+            .filter(d => d.status === 'completed' && d.date)
+            .sort((a, b) => b.date.localeCompare(a.date))
+            .slice(0, 2);
+
+          const html = latest.map(item => `
+            <div>
+              <dt>${item.date.replace(/-/g, '.')}</dt>
+              <dd>${item.title}</dd>
+            </div>`).join('');
+
+          document.getElementById('recent-updates').innerHTML = html;
+        });
+    </script>
   </body>
 </html>
