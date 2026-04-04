@@ -15,10 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/site-assets": "site-assets" });
   eleventyConfig.addPassthroughCopy({ assets: "assets" });
   eleventyConfig.addPassthroughCopy({ "old-assets": "old-assets" });
-  eleventyConfig.addPassthroughCopy({ "section-1": "section-1" });
-  eleventyConfig.addPassthroughCopy({ "section-2": "section-2" });
-  eleventyConfig.addPassthroughCopy({ updates: "updates" });
-  eleventyConfig.addPassthroughCopy({ "ko/section-1": "ko/section-1" });
+  eleventyConfig.addPassthroughCopy({ "updates/data.json": "updates/data.json" });
 
   eleventyConfig.addCollection("docs", function (collectionApi) {
     return collectionApi.getFilteredByTag("doc").sort((left, right) => {

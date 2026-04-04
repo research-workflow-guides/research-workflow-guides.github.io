@@ -552,6 +552,124 @@ li {
   background: rgba(248, 245, 239, 0.8);
 }
 
+.doc-section-grid,
+.intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.95fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.figure-stack {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.step-label {
+  margin: 0 0 0.4rem;
+  color: var(--brand);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.image-frame {
+  margin: 0;
+  padding: 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--shadow);
+}
+
+.image-frame figcaption {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.info-card,
+.copy-card,
+.code-box {
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.info-card + .info-card {
+  margin-top: 0.85rem;
+}
+
+.info-card h3 {
+  margin-bottom: 0.35rem;
+}
+
+.code-box {
+  background: #182331;
+  color: #f7f7f2;
+}
+
+.code-box pre {
+  margin: 0;
+  overflow-x: auto;
+}
+
+.code-box p,
+.small-note,
+.source-note,
+.korean-line {
+  margin: 0.6rem 0 0;
+}
+
+.small-note,
+.source-note {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.toc-nested,
+.placeholder-list {
+  display: grid;
+  gap: 0.45rem;
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0;
+}
+
+.toc-sublist {
+  display: grid;
+  gap: 0.3rem;
+  list-style: none;
+  padding: 0.45rem 0 0 1.1rem;
+  margin: 0;
+}
+
+.toc-item-top,
+.toc-item-sub {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.toc-item-sub {
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.placeholder-list li {
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius-md);
+  background: rgba(24, 61, 93, 0.045);
+}
+
+.placeholder-list a {
+  color: var(--brand);
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .footer-inner {
   display: flex;
   justify-content: space-between;
@@ -611,6 +729,11 @@ li {
 
   .search-panel-top {
     flex-direction: column;
+  }
+
+  .doc-section-grid,
+  .intro-grid {
+    grid-template-columns: 1fr;
   }
 }
 

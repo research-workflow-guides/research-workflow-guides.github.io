@@ -1,0 +1,80 @@
+---
+layout: layouts/doc.njk
+title: "Recent Updates"
+description: "Recent progress on the Research Workflow Guidebook."
+lang: en
+navStyle: legacy-en
+activeSection: updates
+permalink: /updates/
+langSwitch:
+  url: /ko/
+  label: 한국어
+eyebrow: Project Updates
+lead: Recent completed work, active work, and planned sections for the guidebook.
+breadcrumbs:
+  - title: Home
+    url: /
+  - title: Recent Updates
+toc:
+  - id: completed
+    label: Completed
+  - id: in-progress
+    label: In Progress
+  - id: planned
+    label: Planned
+meta:
+  - label: Source
+    value: updates/data.json
+  - label: Format
+    value: Server-rendered
+searchTitle: Search updates and progress notes
+prevPage:
+  title: Section 2 Usage
+  url: /section-2/
+---
+<section id="completed" class="doc-section">
+  <h2>Completed</h2>
+  {% for group in progress.completed %}
+    <div class="info-card">
+      <p class="small-note">{{ group.date | replace("-", ".") }}</p>
+      <ul>
+        {% for item in group.items %}
+          <li>
+            {% if item.url %}
+              <a class="text-link" href="{{ item.url }}">{{ item.title }}</a>
+            {% else %}
+              {{ item.title }}
+            {% endif %}
+            {% if item.description %}<span class="small-note"> {{ item.description }}</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
+
+<section id="in-progress" class="doc-section">
+  <h2>In Progress</h2>
+  {% if progress.inProgress.length %}
+    {% for item in progress.inProgress %}
+      <div class="info-card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    {% endfor %}
+  {% else %}
+    <div class="info-card">
+      <p>No items are currently marked as in progress.</p>
+    </div>
+  {% endif %}
+</section>
+
+<section id="planned" class="doc-section">
+  <h2>Planned</h2>
+  {% for item in progress.planned %}
+    <div class="info-card">
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+    </div>
+  {% endfor %}
+</section>

@@ -97,5 +97,41 @@ module.exports = {
       url: "/ko/",
       switchLabel: "English"
     }
+  },
+  legacy: {
+    en: [
+      {
+        key: "home",
+        label: "Home",
+        url: "/"
+      },
+      {
+        key: "section-1",
+        label: "Section 1",
+        url: "/section-1/"
+      },
+      {
+        key: "section-2",
+        label: "Section 2",
+        url: "/section-2/"
+      },
+      {
+        key: "updates",
+        label: "Updates",
+        url: "/updates/"
+      }
+    ],
+    koSection: [
+      {
+        key: "home",
+        label: "홈",
+        url: "/ko/"
+      },
+      {
+        key: "section-1",
+        label: "섹션 1",
+        url: "/section-1/"
+      }
+    ]
   }
 };
