@@ -13,15 +13,15 @@ Current draft contents:
 Planned publication target:
 
 - Organization: `research-workflow-guides`
-- Repository: `research-workflow-guidebook`
+- Repository: `research-workflow-guides.github.io`
 - Site title: `Research Workflow Guidebook`
-- URL: `https://research-workflow-guides.github.io/research-workflow-guidebook/`
+- URL: `https://research-workflow-guides.github.io/`
 
 ## Publish Steps
 
 1. Create the GitHub organization `research-workflow-guides`.
 2. Invite the second maintainer and promote them to `Owner` if you want equal admin control.
-3. Create a public repository named `research-workflow-guidebook` under the organization.
+3. Create a public repository named `research-workflow-guides.github.io` under the organization.
 4. Copy the contents of this folder into that repository root.
 5. Push to `main`.
 6. In repository settings, enable GitHub Pages from `Deploy from a branch`, branch `main`, folder `/ (root)`.

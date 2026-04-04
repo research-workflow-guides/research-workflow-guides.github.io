@@ -8,7 +8,7 @@
 
 ## Repository
 
-- Create repository: `research-workflow-guidebook`
+- Create repository: `research-workflow-guides.github.io`
 - Visibility: `Public`
 - Keep the default branch as `main`
 
@@ -27,7 +27,7 @@
 
 ## Final URL
 
-- `https://research-workflow-guides.github.io/research-workflow-guidebook/`
+- `https://research-workflow-guides.github.io/`
 
 ## Immediate Next Migration Targets
 
