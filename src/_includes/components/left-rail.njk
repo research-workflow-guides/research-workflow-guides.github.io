@@ -1,7 +1,7 @@
 {% set currentUrl = page.url %}
 {% set isLanguageHome = currentUrl == ("/" ~ lang ~ "/") %}
 {% set navigationLabel = "내비게이션 열기" if lang == "ko" else "Open navigation" %}
-{% set railTitle = "가이드 구조" if lang == "ko" else "Guide map" %}
+{% set railTitle = "목차" if lang == "ko" else "Contents" %}
 <aside class="page-sidebar" data-pagefind-ignore="all">
   <button
     class="sidebar-toggle"

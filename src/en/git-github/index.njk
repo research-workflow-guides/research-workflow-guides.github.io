@@ -16,11 +16,11 @@ toc:
   - id: preparation
     label: Preparation
   - id: first-remote-workflow
-    label: First remote workflow
+    label: First GitHub workflow
   - id: repeat-workflow
-    label: Repeat workflow
+    label: Daily workflow
   - id: collaboration-and-exceptions
-    label: Collaboration and exceptions
+    label: Collaboration
 ---
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
@@ -36,9 +36,6 @@ toc:
       </div>
     </section>
 
-    {% set searchTitle = "Search Git and GitHub workflow docs" %}
-    {% include "components/search-panel.njk" %}
-
     <section id="preparation" class="doc-section">
       <h2>Preparation</h2>
       <div class="stack-list">
@@ -48,7 +45,7 @@ toc:
     </section>
 
     <section id="first-remote-workflow" class="doc-section">
-      <h2>First remote workflow</h2>
+      <h2>First GitHub workflow</h2>
       <div class="stack-list">
         <article class="stack-item"><h3>Connect GitHub</h3><p>Sign in from VS Code and confirm the account is attached correctly.</p></article>
         <article class="stack-item"><h3>Create Repository</h3><p>Create the first empty private repository for your working project.</p></article>
@@ -57,7 +54,7 @@ toc:
     </section>
 
     <section id="repeat-workflow" class="doc-section">
-      <h2>Repeat workflow</h2>
+      <h2>Daily workflow</h2>
       <div class="stack-list">
         <article class="stack-item"><h3>Pull &amp; Push</h3><p>Use one clean daily sync loop instead of improvising every time.</p></article>
         <article class="stack-item"><h3>Version Control</h3><p>Understand tracked, staged, committed, and ignored states well enough to stay calm.</p></article>
@@ -65,7 +62,7 @@ toc:
     </section>
 
     <section id="collaboration-and-exceptions" class="doc-section">
-      <h2>Collaboration and exceptions</h2>
+      <h2>Collaboration</h2>
       <div class="stack-list">
         <article class="stack-item"><h3>Collaboration</h3><p>Work in a shared private repository with a small research team.</p></article>
         <article class="stack-item"><h3>Conflict</h3><p>Resolve same-file text conflicts with the VS Code Merge Editor.</p></article>

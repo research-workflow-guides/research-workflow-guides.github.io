@@ -14,9 +14,9 @@ breadcrumbs:
   - title: Initial Setup
 toc:
   - id: core-route
-    label: Core route
+    label: Steps
   - id: readiness
-    label: Readiness check
+    label: Before moving on
 ---
 {% set docs = collections.docs | docsFor("en", "start-here") %}
 <main class="content-shell">
@@ -33,11 +33,8 @@ toc:
       </div>
     </section>
 
-    {% set searchTitle = "Search Initial Setup and related docs" %}
-    {% include "components/search-panel.njk" %}
-
     <section id="core-route" class="doc-section">
-      <h2>Core route</h2>
+      <h2>Steps</h2>
       <div class="feature-grid feature-grid-compact">
         {% for doc in docs %}
           <a class="feature-card panel" href="{{ doc.url }}">
@@ -50,7 +47,7 @@ toc:
     </section>
 
     <section id="readiness" class="doc-section">
-      <h2>Readiness check</h2>
+      <h2>Before moving on</h2>
       <div class="stack-list">
         <article class="stack-item">
           <h3>Install the toolchain in order</h3>
