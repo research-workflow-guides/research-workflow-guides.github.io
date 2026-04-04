@@ -276,6 +276,23 @@ li {
   padding: 1.35rem;
 }
 
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card-link:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+
+.card-link h3,
+.card-link p {
+  color: inherit;
+}
+
 .guide-card::before {
   content: "";
   position: absolute;
