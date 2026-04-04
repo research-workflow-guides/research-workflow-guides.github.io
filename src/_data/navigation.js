@@ -34,8 +34,8 @@ const sections = [
       ko: "/ko/start-here/"
     },
     title: {
-      en: "Start Here",
-      ko: "Start Here"
+      en: "Initial Setup",
+      ko: "Initial Setup"
     },
     summary: {
       en: "Set up the toolchain and reach the first successful compile.",
@@ -54,8 +54,8 @@ const sections = [
       ko: "/ko/writing-in-vs-code/"
     },
     title: {
-      en: "Writing in VS Code",
-      ko: "Writing in VS Code"
+      en: "Work in VS Code",
+      ko: "Work in VS Code"
     },
     summary: {
       en: "Move into the daily edit, build, preview, and revision loop.",

@@ -15,7 +15,7 @@ lead: Download one starter project, open it in VS Code, and use it to confirm th
 breadcrumbs:
   - title: English Home
     url: /en/
-  - title: Start Here
+  - title: Initial Setup
     url: /en/start-here/
   - title: Project Template
 toc:
@@ -31,7 +31,7 @@ prevPage:
   title: VS Code Installation
   url: /en/start-here/vs-code-installation/
 nextPage:
-  title: Writing in VS Code
+  title: Work in VS Code
   url: /en/writing-in-vs-code/
 tags:
   - doc

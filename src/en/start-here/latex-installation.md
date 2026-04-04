@@ -20,7 +20,7 @@ meta:
 breadcrumbs:
   - title: English Home
     url: /en/
-  - title: Start Here
+  - title: Initial Setup
     url: /en/start-here/
   - title: LaTeX Installation
 toc:
@@ -35,7 +35,7 @@ toc:
   - id: before-you-move-on
     label: Self-check
 prevPage:
-  title: Start Here category home
+  title: Initial Setup category home
   url: /en/start-here/
 nextPage:
   title: VS Code Installation

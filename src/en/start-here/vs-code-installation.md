@@ -15,7 +15,7 @@ lead: Install Visual Studio Code, add LaTeX Workshop, and confirm the editor is 
 breadcrumbs:
   - title: English Home
     url: /en/
-  - title: Start Here
+  - title: Initial Setup
     url: /en/start-here/
   - title: VS Code Installation
 toc:
