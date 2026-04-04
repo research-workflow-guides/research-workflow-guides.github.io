@@ -1,28 +1,9 @@
 ---
 layout: layouts/base.njk
 pageClass: page-doc
-showSearch: true
 ---
 <main class="content-shell">
-  <aside class="page-sidebar" data-pagefind-ignore="all">
-    <button
-      class="sidebar-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="page-outline"
-      data-toc-toggle
-    >
-      {% if lang == "ko" %}목차 보기{% else %}Open outline{% endif %}
-    </button>
-    <section id="page-outline" class="sidebar-card" data-toc-panel>
-      <p class="sidebar-title">{% if lang == "ko" %}이 페이지{% else %}On this page{% endif %}</p>
-      <div class="sidebar-links">
-        {% for item in toc %}
-          <a href="#{{ item.id }}">{{ item.label }}</a>
-        {% endfor %}
-      </div>
-    </section>
-  </aside>
+  {% include "components/left-rail.njk" %}
 
   <article class="doc-content panel" data-pagefind-body>
     {% include "components/breadcrumbs.njk" %}
@@ -44,8 +25,6 @@ showSearch: true
         </dl>
       {% endif %}
     </section>
-
-    {% include "components/search-panel.njk" %}
 
     <div class="prose">
       {{ content | safe }}

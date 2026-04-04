@@ -9,48 +9,43 @@ langSwitch:
   label: 한국어
 pageClass: page-home
 ---
-<main>
-  <section class="home-hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy-block">
-        <p class="eyebrow">English Home</p>
-        <h1>From first setup to confident collaboration.</h1>
-        <p class="hero-copy">
-          Start with the tools that get a first compile working, move into the everyday writing
-          loop, and then stabilize your Git and GitHub workflow for real research projects.
+<main class="content-shell">
+  {% include "components/left-rail.njk" %}
+
+  <article class="doc-content panel" data-pagefind-body>
+    <section class="doc-hero doc-hero-simple">
+      <div>
+        <p class="eyebrow">English Guidebook</p>
+        <h1>Research workflow guides for setup, writing, and GitHub collaboration.</h1>
+        <p class="lead">
+          Use this guide to reach a working local setup, settle into a repeatable writing loop, and move into calm repository collaboration.
+        </p>
+        <p class="subtle">
+          Start with Start Here if you are beginning from zero. If your environment is already working, use the left rail to jump straight to the section you need.
         </p>
         <div class="button-row">
-          <a class="button button-primary" href="/en/start-here/">Begin with Start Here</a>
-          <a class="button button-secondary" href="/">Back to language landing</a>
+          <a class="button button-primary" href="/en/start-here/">Start with Start Here</a>
+          <a class="text-link" href="/">Back to language landing</a>
         </div>
       </div>
-      <aside class="hero-panel panel">
-        <p class="eyebrow">Working Assumption</p>
-        <h2>Build habits, not just installations.</h2>
-        <p class="subtle">
-          The guidebook is organized for researchers who need a stable daily workflow, not a one-time setup checklist.
-        </p>
-        {% if updates.latest %}
-          <div class="update-chip">
-            <span>{{ updates.latest.date }}</span>
-            <a href="{{ updates.latest.url }}">{{ updates.latest.title }}</a>
-          </div>
-        {% endif %}
-      </aside>
-    </div>
-  </section>
+    </section>
 
-  <section class="home-search wrap">
-    {% set searchTitle = "Search the English guidebook" %}
-    {% include "components/search-panel.njk" %}
-  </section>
-
-  <section class="editorial-band">
-    <div class="wrap">
-      <div class="section-heading">
-        <p class="eyebrow">Category Map</p>
-        <h2>Choose the part of the workflow you need next.</h2>
+    <section class="doc-section">
+      <h2>How to use this guide</h2>
+      <div class="stack-list">
+        <article class="stack-item">
+          <h3>Get one project compiling first</h3>
+          <p>Start with the shortest path to a working toolchain before you worry about convenience features.</p>
+        </article>
+        <article class="stack-item">
+          <h3>Then turn it into a daily workflow</h3>
+          <p>Move from setup into writing, preview, and GitHub habits that hold up during real research work.</p>
+        </article>
       </div>
+    </section>
+
+    <section class="doc-section">
+      <h2>Sections</h2>
       <div class="feature-grid">
         {% for section in navigation.sections %}
           <a class="feature-card panel" href="{{ section.url.en }}">
@@ -60,6 +55,6 @@ pageClass: page-home
           </a>
         {% endfor %}
       </div>
-    </div>
-  </section>
+    </section>
+  </article>
 </main>

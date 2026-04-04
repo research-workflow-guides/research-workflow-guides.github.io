@@ -1,3 +1,31 @@
+const publishedPages = {
+  "start-here": {
+    en: [
+      {
+        title: "LaTeX Installation",
+        url: "/en/start-here/latex-installation/"
+      },
+      {
+        title: "VS Code Installation",
+        url: "/en/start-here/vs-code-installation/"
+      },
+      {
+        title: "Project Template",
+        url: "/en/start-here/project-template/"
+      }
+    ],
+    ko: []
+  },
+  "writing-in-vs-code": {
+    en: [],
+    ko: []
+  },
+  "git-github": {
+    en: [],
+    ko: []
+  }
+};
+
 const sections = [
   {
     key: "start-here",
@@ -16,7 +44,8 @@ const sections = [
     kicker: {
       en: "Foundation",
       ko: "Foundation"
-    }
+    },
+    pages: publishedPages["start-here"]
   },
   {
     key: "writing-in-vs-code",
@@ -35,7 +64,8 @@ const sections = [
     kicker: {
       en: "Practice",
       ko: "Practice"
-    }
+    },
+    pages: publishedPages["writing-in-vs-code"]
   },
   {
     key: "git-github",
@@ -54,7 +84,8 @@ const sections = [
     kicker: {
       en: "Collaboration",
       ko: "Collaboration"
-    }
+    },
+    pages: publishedPages["git-github"]
   }
 ];
 

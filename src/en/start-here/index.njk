@@ -20,45 +20,17 @@ toc:
 ---
 {% set docs = collections.docs | docsFor("en", "start-here") %}
 <main class="content-shell">
-  <aside class="page-sidebar" data-pagefind-ignore="all">
-    <button
-      class="sidebar-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="page-outline"
-      data-toc-toggle
-    >
-      Open outline
-    </button>
-    <section id="page-outline" class="sidebar-card" data-toc-panel>
-      <p class="sidebar-title">Start Here</p>
-      <div class="sidebar-links">
-        {% for item in toc %}
-          <a href="#{{ item.id }}">{{ item.label }}</a>
-        {% endfor %}
-      </div>
-    </section>
-  </aside>
+  {% include "components/left-rail.njk" %}
 
   <article class="doc-content panel" data-pagefind-body>
     {% include "components/breadcrumbs.njk" %}
 
-    <section class="doc-hero">
+    <section class="doc-hero doc-hero-simple">
       <div>
         <p class="eyebrow">Category</p>
         <h1>Start Here</h1>
         <p class="lead">Use these three steps to reach your first successful compile.</p>
       </div>
-      <dl class="meta-list">
-        <div>
-          <dt>Audience</dt>
-          <dd>Researchers setting up a first local LaTeX workflow.</dd>
-        </div>
-        <div>
-          <dt>Default path</dt>
-          <dd>MiKTeX, VS Code, LaTeX Workshop, then one starter project.</dd>
-        </div>
-      </dl>
     </section>
 
     {% set searchTitle = "Search Start Here and related docs" %}

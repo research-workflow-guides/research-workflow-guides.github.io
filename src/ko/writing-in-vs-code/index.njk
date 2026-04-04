@@ -19,45 +19,17 @@ toc:
     label: 선택 문서
 ---
 <main class="content-shell">
-  <aside class="page-sidebar" data-pagefind-ignore="all">
-    <button
-      class="sidebar-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="page-outline"
-      data-toc-toggle
-    >
-      목차 보기
-    </button>
-    <section id="page-outline" class="sidebar-card" data-toc-panel>
-      <p class="sidebar-title">구성</p>
-      <div class="sidebar-links">
-        {% for item in toc %}
-          <a href="#{{ item.id }}">{{ item.label }}</a>
-        {% endfor %}
-      </div>
-    </section>
-  </aside>
+  {% include "components/left-rail.njk" %}
 
   <article class="doc-content panel" data-pagefind-body>
     {% include "components/breadcrumbs.njk" %}
 
-    <section class="doc-hero">
+    <section class="doc-hero doc-hero-simple">
       <div>
         <p class="eyebrow">카테고리</p>
         <h1>Writing in VS Code</h1>
         <p class="lead">첫 compile 이후에 문서를 실제로 쓰는 일상 작업 흐름을 다룹니다.</p>
       </div>
-      <dl class="meta-list">
-        <div>
-          <dt>핵심</dt>
-          <dd>수정, build, preview가 막히지 않는 일상 루프</dd>
-        </div>
-        <div>
-          <dt>목표</dt>
-          <dd>문서가 길어져도 유지되는 작업 습관 만들기</dd>
-        </div>
-      </dl>
     </section>
 
     {% set searchTitle = "VS Code 작성 흐름 문서 검색" %}

@@ -316,6 +316,10 @@ li {
   padding: 1rem;
 }
 
+.sidebar-card-rail {
+  padding: 1rem 1rem 1.1rem;
+}
+
 .sidebar-title {
   margin: 0 0 0.85rem;
   font-weight: 700;
@@ -335,6 +339,63 @@ li {
 .sidebar-links a:hover,
 .sidebar-links a:focus-visible {
   color: var(--brand);
+}
+
+.rail-tree,
+.rail-subtree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rail-tree {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.rail-section + .rail-section {
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(24, 61, 93, 0.08);
+}
+
+.rail-subtree {
+  margin-top: 0.45rem;
+  margin-left: 0.15rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid rgba(24, 61, 93, 0.12);
+  display: grid;
+  gap: 0.25rem;
+}
+
+.rail-link {
+  display: block;
+  padding: 0.1rem 0;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.rail-link-section {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.rail-link-page {
+  font-weight: 600;
+}
+
+.rail-link-heading {
+  font-size: 0.95rem;
+}
+
+.rail-link:hover,
+.rail-link:focus-visible,
+.rail-link.is-current {
+  color: var(--brand);
+}
+
+.rail-link-page.is-current,
+.rail-link-section.is-current {
+  font-weight: 700;
 }
 
 .doc-content {
@@ -360,6 +421,10 @@ li {
   gap: 1.2rem;
   padding-bottom: 1.4rem;
   border-bottom: 1px solid rgba(31, 36, 49, 0.08);
+}
+
+.doc-hero-simple {
+  grid-template-columns: 1fr;
 }
 
 .meta-list {
@@ -493,6 +558,10 @@ li {
 .callout-card {
   margin-top: 2rem;
   padding: 1.35rem;
+}
+
+.page-home .doc-content {
+  padding-top: 1.8rem;
 }
 
 .page-nav {

@@ -1,0 +1,70 @@
+{% set currentUrl = page.url %}
+{% set isLanguageHome = currentUrl == ("/" ~ lang ~ "/") %}
+{% set navigationLabel = "내비게이션 열기" if lang == "ko" else "Open navigation" %}
+{% set railTitle = "가이드 구조" if lang == "ko" else "Guide map" %}
+<aside class="page-sidebar" data-pagefind-ignore="all">
+  <button
+    class="sidebar-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="page-navigation"
+    data-toc-toggle
+  >
+    {{ navigationLabel }}
+  </button>
+  <section id="page-navigation" class="sidebar-card sidebar-card-rail" data-toc-panel>
+    <p class="sidebar-title">{{ railTitle }}</p>
+    <ul class="rail-tree">
+      {% for section in navigation.sections %}
+        {% set sectionUrl = section.url[lang] %}
+        {% set sectionPages = section.pages[lang] %}
+        {% set sectionExpanded = isLanguageHome or activeSection == section.key %}
+        {% set sectionCurrent = currentUrl == sectionUrl or activeSection == section.key %}
+        <li class="rail-section{% if sectionExpanded %} is-expanded{% endif %}">
+          <a
+            class="rail-link rail-link-section{% if sectionCurrent %} is-current{% endif %}"
+            href="{{ sectionUrl }}"
+            {% if currentUrl == sectionUrl %}aria-current="page"{% endif %}
+          >
+            {{ section.title[lang] }}
+          </a>
+
+          {% if sectionExpanded %}
+            {% if currentUrl == sectionUrl and toc and toc.length %}
+              <ul class="rail-subtree rail-subtree-headings">
+                {% for item in toc %}
+                  <li><a class="rail-link rail-link-heading" href="#{{ item.id }}">{{ item.label }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+
+            {% if sectionPages and sectionPages.length %}
+              <ul class="rail-subtree rail-subtree-pages">
+                {% for item in sectionPages %}
+                  {% set itemCurrent = currentUrl == item.url %}
+                  <li class="rail-page-item{% if itemCurrent %} is-current{% endif %}">
+                    <a
+                      class="rail-link rail-link-page{% if itemCurrent %} is-current{% endif %}"
+                      href="{{ item.url }}"
+                      {% if itemCurrent %}aria-current="page"{% endif %}
+                    >
+                      {{ item.title }}
+                    </a>
+
+                    {% if itemCurrent and toc and toc.length %}
+                      <ul class="rail-subtree rail-subtree-headings">
+                        {% for heading in toc %}
+                          <li><a class="rail-link rail-link-heading" href="#{{ heading.id }}">{{ heading.label }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</aside>

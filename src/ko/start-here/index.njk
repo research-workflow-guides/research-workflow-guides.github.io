@@ -19,45 +19,17 @@ toc:
     label: 다음 단계
 ---
 <main class="content-shell">
-  <aside class="page-sidebar" data-pagefind-ignore="all">
-    <button
-      class="sidebar-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="page-outline"
-      data-toc-toggle
-    >
-      목차 보기
-    </button>
-    <section id="page-outline" class="sidebar-card" data-toc-panel>
-      <p class="sidebar-title">Start Here</p>
-      <div class="sidebar-links">
-        {% for item in toc %}
-          <a href="#{{ item.id }}">{{ item.label }}</a>
-        {% endfor %}
-      </div>
-    </section>
-  </aside>
+  {% include "components/left-rail.njk" %}
 
   <article class="doc-content panel" data-pagefind-body>
     {% include "components/breadcrumbs.njk" %}
 
-    <section class="doc-hero">
+    <section class="doc-hero doc-hero-simple">
       <div>
         <p class="eyebrow">카테고리</p>
         <h1>Start Here</h1>
         <p class="lead">첫 compile 성공까지 가는 가장 짧은 시작 경로를 모아둡니다.</p>
       </div>
-      <dl class="meta-list">
-        <div>
-          <dt>대상</dt>
-          <dd>LaTeX 문서 작업을 처음 로컬 환경에서 시작하는 연구자</dd>
-        </div>
-        <div>
-          <dt>기준 경로</dt>
-          <dd>MiKTeX, VS Code, LaTeX Workshop, starter project</dd>
-        </div>
-      </dl>
     </section>
 
     {% set searchTitle = "Start Here 관련 문서 검색" %}
