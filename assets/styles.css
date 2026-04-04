@@ -96,6 +96,54 @@ pre {
   color: #ffffff;
 }
 
+
+/* Nav dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > a::after {
+  content: ' ▾';
+  font-size: 0.72em;
+  opacity: 0.7;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 210px;
+  background: rgba(9, 24, 40, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0;
+  z-index: 100;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.42rem 1rem;
+  font-size: 0.88rem;
+  white-space: nowrap;
+  color: rgba(249, 245, 239, 0.82);
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
 .hero {
   padding: 5.5rem 0 4rem;
 }
@@ -539,7 +587,55 @@ li {
 }
 
 @media (max-width: 640px) {
-  .hero {
+  
+/* Nav dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > a::after {
+  content: ' ▾';
+  font-size: 0.72em;
+  opacity: 0.7;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 210px;
+  background: rgba(9, 24, 40, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0;
+  z-index: 100;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.42rem 1rem;
+  font-size: 0.88rem;
+  white-space: nowrap;
+  color: rgba(249, 245, 239, 0.82);
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.hero {
     padding-top: 4.4rem;
   }
 
