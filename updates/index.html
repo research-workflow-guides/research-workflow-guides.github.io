@@ -62,23 +62,35 @@
     </footer>
     <script>
       function formatDate(dateStr) {
-        if (!dateStr) return '';
         return dateStr.replace(/-/g, '.');
       }
 
-      function renderCard(item) {
-        const linkPart = item.url
-          ? ` &mdash; <a href="${item.url}">view page</a>`
-          : '';
-        const datePart = item.date
-          ? `<p class="muted" style="font-size:0.9rem;">${formatDate(item.date)}${linkPart}</p>`
-          : '';
-        return `
+      function renderGrouped(items) {
+        const groups = {};
+        items.forEach(item => {
+          const key = item.date || '__nodate__';
+          if (!groups[key]) groups[key] = [];
+          groups[key].push(item);
+        });
+        const sortedKeys = Object.keys(groups).sort((a, b) => b.localeCompare(a));
+        return sortedKeys.map(date => {
+          const entries = groups[date].map(item => {
+            const link = item.url ? ` &mdash; <a href="${item.url}">view page</a>` : '';
+            return `<li>${item.title}${link}</li>`;
+          }).join('');
+          const dateLabel = date !== '__nodate__'
+            ? `<p class="muted" style="font-size:0.9rem; margin-bottom:0.4rem;">${formatDate(date)}</p>`
+            : '';
+          return `<div class="info-card">${dateLabel}<ul style="margin:0; padding-left:1.2rem;">${entries}</ul></div>`;
+        }).join('');
+      }
+
+      function renderCards(items) {
+        return items.map(item => `
           <div class="info-card">
             <h3>${item.title}</h3>
             <p>${item.description}</p>
-            ${datePart}
-          </div>`;
+          </div>`).join('');
       }
 
       fetch('data.json')
@@ -90,9 +102,9 @@
           const inProgress = data.filter(d => d.status === 'in-progress');
           const planned = data.filter(d => d.status === 'planned');
 
-          document.getElementById('list-completed').innerHTML = completed.map(renderCard).join('');
-          document.getElementById('list-in-progress').innerHTML = inProgress.map(renderCard).join('');
-          document.getElementById('list-planned').innerHTML = planned.map(renderCard).join('');
+          document.getElementById('list-completed').innerHTML = renderGrouped(completed);
+          document.getElementById('list-in-progress').innerHTML = renderCards(inProgress);
+          document.getElementById('list-planned').innerHTML = renderCards(planned);
         });
     </script>
   </body>

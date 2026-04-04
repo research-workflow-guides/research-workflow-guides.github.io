@@ -32,7 +32,7 @@ body {
     radial-gradient(circle at top left, rgba(200, 144, 10, 0.08), transparent 28%),
     radial-gradient(circle at top right, rgba(15, 76, 129, 0.16), transparent 34%),
     linear-gradient(180deg, #f2f3f5 0%, #eef0f2 100%);
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   line-height: 1.6;
 }
 
@@ -73,7 +73,7 @@ pre {
 }
 
 .brand {
-  font-family: "Fraunces", serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   text-decoration: none;
@@ -120,7 +120,7 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-family: "Fraunces", serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.08;
 }
 
