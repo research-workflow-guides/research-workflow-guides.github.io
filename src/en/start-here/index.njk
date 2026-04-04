@@ -1,0 +1,105 @@
+---
+layout: layouts/base.njk
+title: Start Here
+description: Use these three steps to reach your first successful compile.
+lang: en
+activeSection: start-here
+langSwitch:
+  url: /ko/start-here/
+  label: 한국어
+pageClass: page-section
+breadcrumbs:
+  - title: English Home
+    url: /en/
+  - title: Start Here
+toc:
+  - id: core-route
+    label: Core route
+  - id: readiness
+    label: Readiness check
+---
+{% set docs = collections.docs | docsFor("en", "start-here") %}
+<main class="content-shell">
+  <aside class="page-sidebar" data-pagefind-ignore="all">
+    <button
+      class="sidebar-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="page-outline"
+      data-toc-toggle
+    >
+      Open outline
+    </button>
+    <section id="page-outline" class="sidebar-card" data-toc-panel>
+      <p class="sidebar-title">Start Here</p>
+      <div class="sidebar-links">
+        {% for item in toc %}
+          <a href="#{{ item.id }}">{{ item.label }}</a>
+        {% endfor %}
+      </div>
+    </section>
+  </aside>
+
+  <article class="doc-content panel" data-pagefind-body>
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="doc-hero">
+      <div>
+        <p class="eyebrow">Category</p>
+        <h1>Start Here</h1>
+        <p class="lead">Use these three steps to reach your first successful compile.</p>
+      </div>
+      <dl class="meta-list">
+        <div>
+          <dt>Audience</dt>
+          <dd>Researchers setting up a first local LaTeX workflow.</dd>
+        </div>
+        <div>
+          <dt>Default path</dt>
+          <dd>MiKTeX, VS Code, LaTeX Workshop, then one starter project.</dd>
+        </div>
+      </dl>
+    </section>
+
+    {% set searchTitle = "Search Start Here and related docs" %}
+    {% include "components/search-panel.njk" %}
+
+    <section id="core-route" class="doc-section">
+      <h2>Core route</h2>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in docs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Step {{ doc.data.order }}</p>
+            <h3>{{ doc.data.title }}</h3>
+            <p>{{ doc.data.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="readiness" class="doc-section">
+      <h2>Readiness check</h2>
+      <div class="stack-list">
+        <article class="stack-item">
+          <h3>Install the toolchain in order</h3>
+          <p>Distribution first, editor second, starter project last.</p>
+        </article>
+        <article class="stack-item">
+          <h3>Use one stable template for the first build</h3>
+          <p>A working starter project is more important than exploring too many setup variations.</p>
+        </article>
+        <article class="stack-item">
+          <h3>Move on only after the PDF appears</h3>
+          <p>The next section assumes the local compile loop is already working.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="callout-card">
+      <p class="eyebrow">Next</p>
+      <h2>After the first compile</h2>
+      <p>Move into the daily editing and preview loop inside VS Code.</p>
+      <a class="text-link" href="/en/writing-in-vs-code/">Go to Writing in VS Code</a>
+    </section>
+  </article>
+</main>

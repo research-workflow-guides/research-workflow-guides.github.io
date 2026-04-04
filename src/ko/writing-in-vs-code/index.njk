@@ -1,0 +1,85 @@
+---
+layout: layouts/base.njk
+title: Writing in VS Code
+description: VS Code 안의 일상적인 문서 작성 흐름을 위한 카테고리 홈.
+lang: ko
+activeSection: writing-in-vs-code
+langSwitch:
+  url: /en/writing-in-vs-code/
+  label: English
+pageClass: page-section
+breadcrumbs:
+  - title: 한국어 홈
+    url: /ko/
+  - title: Writing in VS Code
+toc:
+  - id: core-documents
+    label: core 문서
+  - id: optional-documents
+    label: 선택 문서
+---
+<main class="content-shell">
+  <aside class="page-sidebar" data-pagefind-ignore="all">
+    <button
+      class="sidebar-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="page-outline"
+      data-toc-toggle
+    >
+      목차 보기
+    </button>
+    <section id="page-outline" class="sidebar-card" data-toc-panel>
+      <p class="sidebar-title">구성</p>
+      <div class="sidebar-links">
+        {% for item in toc %}
+          <a href="#{{ item.id }}">{{ item.label }}</a>
+        {% endfor %}
+      </div>
+    </section>
+  </aside>
+
+  <article class="doc-content panel" data-pagefind-body>
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="doc-hero">
+      <div>
+        <p class="eyebrow">카테고리</p>
+        <h1>Writing in VS Code</h1>
+        <p class="lead">첫 compile 이후에 문서를 실제로 쓰는 일상 작업 흐름을 다룹니다.</p>
+      </div>
+      <dl class="meta-list">
+        <div>
+          <dt>핵심</dt>
+          <dd>수정, build, preview가 막히지 않는 일상 루프</dd>
+        </div>
+        <div>
+          <dt>목표</dt>
+          <dd>문서가 길어져도 유지되는 작업 습관 만들기</dd>
+        </div>
+      </dl>
+    </section>
+
+    {% set searchTitle = "VS Code 작성 흐름 문서 검색" %}
+    {% include "components/search-panel.njk" %}
+
+    <section id="core-documents" class="doc-section">
+      <h2>core 문서</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Folder Setup</h3><p>올바른 project root를 엽니다.</p></article>
+        <article class="stack-item"><h3>Settings</h3><p>LaTeX 중심의 VS Code 작업 환경을 맞춥니다.</p></article>
+        <article class="stack-item"><h3>Usage Basics</h3><p>수정, build, preview, sync 루프를 안정적으로 반복합니다.</p></article>
+        <article class="stack-item"><h3>Shortcuts</h3><p>가장 자주 쓰는 동작을 더 빠르게 만듭니다.</p></article>
+        <article class="stack-item"><h3>Snippets</h3><p>반복 입력을 줄이는 작은 snippet 집합을 씁니다.</p></article>
+      </div>
+    </section>
+
+    <section id="optional-documents" class="doc-section">
+      <h2>선택 문서</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Overleaf</h3><p>워크플로우에 꼭 필요할 때만 Overleaf를 GitHub bridge로 씁니다.</p></article>
+        <article class="stack-item"><h3>latexdiff revision PDF</h3><p>수정 전후 TeX를 비교한 review PDF를 만듭니다.</p></article>
+      </div>
+    </section>
+  </article>
+</main>

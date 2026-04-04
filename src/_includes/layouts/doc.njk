@@ -1,0 +1,71 @@
+---
+layout: layouts/base.njk
+pageClass: page-doc
+showSearch: true
+---
+<main class="content-shell">
+  <aside class="page-sidebar" data-pagefind-ignore="all">
+    <button
+      class="sidebar-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="page-outline"
+      data-toc-toggle
+    >
+      {% if lang == "ko" %}목차 보기{% else %}Open outline{% endif %}
+    </button>
+    <section id="page-outline" class="sidebar-card" data-toc-panel>
+      <p class="sidebar-title">{% if lang == "ko" %}이 페이지{% else %}On this page{% endif %}</p>
+      <div class="sidebar-links">
+        {% for item in toc %}
+          <a href="#{{ item.id }}">{{ item.label }}</a>
+        {% endfor %}
+      </div>
+    </section>
+  </aside>
+
+  <article class="doc-content panel" data-pagefind-body>
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="doc-hero">
+      <div>
+        {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
+        <h1>{{ title }}</h1>
+        {% if lead %}<p class="lead">{{ lead }}</p>{% endif %}
+      </div>
+      {% if meta %}
+        <dl class="meta-list">
+          {% for item in meta %}
+            <div>
+              <dt>{{ item.label }}</dt>
+              <dd>{{ item.value }}</dd>
+            </div>
+          {% endfor %}
+        </dl>
+      {% endif %}
+    </section>
+
+    {% include "components/search-panel.njk" %}
+
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+
+    {% if prevPage or nextPage %}
+      <section class="page-nav">
+        {% if prevPage %}
+          <a class="nav-panel" href="{{ prevPage.url }}">
+            <strong>{% if lang == "ko" %}Previous{% else %}Previous{% endif %}</strong>
+            <span>{{ prevPage.title }}</span>
+          </a>
+        {% endif %}
+        {% if nextPage %}
+          <a class="nav-panel" href="{{ nextPage.url }}">
+            <strong>{% if lang == "ko" %}Next{% else %}Next{% endif %}</strong>
+            <span>{{ nextPage.title }}</span>
+          </a>
+        {% endif %}
+      </section>
+    {% endif %}
+  </article>
+</main>

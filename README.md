@@ -1,8 +1,22 @@
 # Research Workflow Guidebook
 
-This repository is being redesigned as a bilingual practical documentation site for researchers using LaTeX, VS Code, Git, and GitHub.
+This repository is being redesigned as a bilingual Eleventy documentation site for researchers using LaTeX, VS Code, Git, and GitHub.
 
-This repository hosts the public GitHub Pages site and related public implementation assets.
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+Build the site:
+
+```bash
+npm run build
+npm run pagefind
+```
+
+The new Eleventy source lives under `src/`. Legacy static paths such as `section-1/` and `section-2/` are kept as passthrough content during the migration.
 
 ## Authors
 

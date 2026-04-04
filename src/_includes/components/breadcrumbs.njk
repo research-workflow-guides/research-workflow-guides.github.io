@@ -1,0 +1,12 @@
+<nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore="all">
+  {% for crumb in breadcrumbs %}
+    {% if crumb.url %}
+      <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+    {% else %}
+      <span>{{ crumb.title }}</span>
+    {% endif %}
+    {% if not loop.last %}
+      <span>/</span>
+    {% endif %}
+  {% endfor %}
+</nav>

@@ -1,0 +1,92 @@
+---
+layout: layouts/base.njk
+title: Writing in VS Code
+description: English category home for daily writing workflows in VS Code.
+lang: en
+activeSection: writing-in-vs-code
+langSwitch:
+  url: /ko/writing-in-vs-code/
+  label: 한국어
+pageClass: page-section
+breadcrumbs:
+  - title: English Home
+    url: /en/
+  - title: Writing in VS Code
+toc:
+  - id: core-documents
+    label: Core documents
+  - id: optional-documents
+    label: Optional documents
+---
+<main class="content-shell">
+  <aside class="page-sidebar" data-pagefind-ignore="all">
+    <button
+      class="sidebar-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="page-outline"
+      data-toc-toggle
+    >
+      Open outline
+    </button>
+    <section id="page-outline" class="sidebar-card" data-toc-panel>
+      <p class="sidebar-title">Category outline</p>
+      <div class="sidebar-links">
+        {% for item in toc %}
+          <a href="#{{ item.id }}">{{ item.label }}</a>
+        {% endfor %}
+      </div>
+    </section>
+  </aside>
+
+  <article class="doc-content panel" data-pagefind-body>
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="doc-hero">
+      <div>
+        <p class="eyebrow">Category</p>
+        <h1>Writing in VS Code</h1>
+        <p class="lead">This category covers the daily workflow after the first successful compile.</p>
+      </div>
+      <dl class="meta-list">
+        <div>
+          <dt>Focus</dt>
+          <dd>Repeatable editing, build, preview, and revision habits.</dd>
+        </div>
+        <div>
+          <dt>Outcome</dt>
+          <dd>A writing loop that stays calm when the document gets real.</dd>
+        </div>
+      </dl>
+    </section>
+
+    {% set searchTitle = "Search writing workflow docs" %}
+    {% include "components/search-panel.njk" %}
+
+    <section id="core-documents" class="doc-section">
+      <h2>Core documents</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Folder Setup</h3><p>Open the correct project root in VS Code.</p></article>
+        <article class="stack-item"><h3>Settings</h3><p>Shape the editor around a LaTeX-first working environment.</p></article>
+        <article class="stack-item"><h3>Usage Basics</h3><p>Repeat the edit, build, preview, and SyncTeX loop without friction.</p></article>
+        <article class="stack-item"><h3>Shortcuts</h3><p>Make the most frequent actions easier to reach.</p></article>
+        <article class="stack-item"><h3>Snippets</h3><p>Reduce repetitive typing with a small, durable snippet set.</p></article>
+      </div>
+    </section>
+
+    <section id="optional-documents" class="doc-section">
+      <h2>Optional documents</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Overleaf</h3><p>Use Overleaf as a GitHub bridge only when the workflow really benefits from it.</p></article>
+        <article class="stack-item"><h3>latexdiff revision PDFs</h3><p>Create review-friendly PDFs that highlight changes between TeX versions.</p></article>
+      </div>
+    </section>
+
+    <section class="callout-card">
+      <p class="eyebrow">Next</p>
+      <h2>Then move to Git &amp; GitHub</h2>
+      <p>Once the writing loop is stable, continue to repository and collaboration workflows.</p>
+      <a class="text-link" href="/en/git-github/">Go to Git &amp; GitHub</a>
+    </section>
+  </article>
+</main>

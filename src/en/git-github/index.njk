@@ -1,0 +1,103 @@
+---
+layout: layouts/base.njk
+title: Git & GitHub
+description: English category home for Git and GitHub workflows.
+lang: en
+activeSection: git-github
+langSwitch:
+  url: /ko/git-github/
+  label: 한국어
+pageClass: page-section
+breadcrumbs:
+  - title: English Home
+    url: /en/
+  - title: Git & GitHub
+toc:
+  - id: preparation
+    label: Preparation
+  - id: first-remote-workflow
+    label: First remote workflow
+  - id: repeat-workflow
+    label: Repeat workflow
+  - id: collaboration-and-exceptions
+    label: Collaboration and exceptions
+---
+<main class="content-shell">
+  <aside class="page-sidebar" data-pagefind-ignore="all">
+    <button
+      class="sidebar-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="page-outline"
+      data-toc-toggle
+    >
+      Open outline
+    </button>
+    <section id="page-outline" class="sidebar-card" data-toc-panel>
+      <p class="sidebar-title">Phases</p>
+      <div class="sidebar-links">
+        {% for item in toc %}
+          <a href="#{{ item.id }}">{{ item.label }}</a>
+        {% endfor %}
+      </div>
+    </section>
+  </aside>
+
+  <article class="doc-content panel" data-pagefind-body>
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="doc-hero">
+      <div>
+        <p class="eyebrow">Category</p>
+        <h1>Git &amp; GitHub</h1>
+        <p class="lead">Use this category after the project template is already compiling locally.</p>
+      </div>
+      <dl class="meta-list">
+        <div>
+          <dt>Starting point</dt>
+          <dd>A project that already builds on your machine.</dd>
+        </div>
+        <div>
+          <dt>Ending point</dt>
+          <dd>A clean repository workflow for solo and small-team research.</dd>
+        </div>
+      </dl>
+    </section>
+
+    {% set searchTitle = "Search Git and GitHub workflow docs" %}
+    {% include "components/search-panel.njk" %}
+
+    <section id="preparation" class="doc-section">
+      <h2>Preparation</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Git Installation</h3><p>Install Git and set your basic identity first.</p></article>
+        <article class="stack-item"><h3>GitHub Account Setup</h3><p>Create the account you will use for repositories and collaboration.</p></article>
+      </div>
+    </section>
+
+    <section id="first-remote-workflow" class="doc-section">
+      <h2>First remote workflow</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Connect GitHub</h3><p>Sign in from VS Code and confirm the account is attached correctly.</p></article>
+        <article class="stack-item"><h3>Create Repository</h3><p>Create the first empty private repository for your working project.</p></article>
+        <article class="stack-item"><h3>Clone + First Push</h3><p>Clone the repository locally, add the starter project, and publish the first commit.</p></article>
+      </div>
+    </section>
+
+    <section id="repeat-workflow" class="doc-section">
+      <h2>Repeat workflow</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Pull &amp; Push</h3><p>Use one clean daily sync loop instead of improvising every time.</p></article>
+        <article class="stack-item"><h3>Version Control</h3><p>Understand tracked, staged, committed, and ignored states well enough to stay calm.</p></article>
+      </div>
+    </section>
+
+    <section id="collaboration-and-exceptions" class="doc-section">
+      <h2>Collaboration and exceptions</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Collaboration</h3><p>Work in a shared private repository with a small research team.</p></article>
+        <article class="stack-item"><h3>Conflict</h3><p>Resolve same-file text conflicts with the VS Code Merge Editor.</p></article>
+      </div>
+    </section>
+  </article>
+</main>

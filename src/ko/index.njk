@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+title: 한국어 홈
+description: LaTeX, VS Code, GitHub 연구 워크플로우 가이드를 위한 한국어 진입 페이지.
+lang: ko
+activeSection: home
+langSwitch:
+  url: /en/
+  label: English
+pageClass: page-home
+---
+<main>
+  <section class="home-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy-block">
+        <p class="eyebrow">한국어 홈</p>
+        <h1>설치부터 협업까지 이어지는 연구 워크플로우</h1>
+        <p class="hero-copy">
+          먼저 기본 환경을 맞추고, 그다음 VS Code 안에서의 일상적인 작성 흐름을 익히고,
+          마지막으로 Git과 GitHub 협업까지 자연스럽게 연결하는 구조로 정리했습니다.
+        </p>
+        <div class="button-row">
+          <a class="button button-primary" href="/ko/start-here/">Start Here부터 보기</a>
+          <a class="button button-secondary" href="/">언어 선택으로 돌아가기</a>
+        </div>
+      </div>
+      <aside class="hero-panel panel">
+        <p class="eyebrow">현재 방향</p>
+        <h2>설정보다 습관을 만드는 문서 구조</h2>
+        <p class="subtle">
+          단순 설치 안내가 아니라, 실제 연구 문서 작업이 반복 가능한 형태로 이어지도록 구성합니다.
+        </p>
+        {% if updates.latest %}
+          <div class="update-chip">
+            <span>{{ updates.latest.date }}</span>
+            {% if updates.latest.url %}
+              <a href="{{ updates.latest.url }}">{{ updates.latest.title }}</a>
+            {% else %}
+              <span>{{ updates.latest.title }}</span>
+            {% endif %}
+          </div>
+        {% endif %}
+      </aside>
+    </div>
+  </section>
+
+  <section class="home-search wrap">
+    {% set searchTitle = "한국어 가이드 검색" %}
+    {% include "components/search-panel.njk" %}
+  </section>
+
+  <section class="editorial-band">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">카테고리</p>
+        <h2>다음에 필요한 작업 흐름으로 바로 이동하세요.</h2>
+      </div>
+      <div class="feature-grid">
+        {% for section in navigation.sections %}
+          <a class="feature-card panel" href="{{ section.url.ko }}">
+            <p class="card-kicker">{{ section.kicker.ko }}</p>
+            <h3>{{ section.title.ko }}</h3>
+            <p>{{ section.summary.ko }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>

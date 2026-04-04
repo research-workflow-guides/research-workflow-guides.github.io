@@ -1,0 +1,39 @@
+{% set searchId = "search-" + (page.fileSlug or "page") %}
+<section class="search-panel panel" data-search-root data-search-lang="{{ lang }}" data-pagefind-ignore="all">
+  <div class="search-panel-top">
+    <div>
+      <p class="eyebrow">Search</p>
+      <h2 class="search-title">{{ searchTitle or "Search this guide" }}</h2>
+    </div>
+    <p class="search-copy">
+      {% if lang == "ko" %}
+        한국어 결과를 먼저 보여주고, 필요하면 다른 언어 결과도 함께 노출합니다.
+      {% else %}
+        Results from this language are shown first, with other language matches listed after.
+      {% endif %}
+    </p>
+  </div>
+  <label class="search-label" for="{{ searchId }}">
+    {% if lang == "ko" %}
+      문서 검색
+    {% else %}
+      Search the docs
+    {% endif %}
+  </label>
+  <input
+    id="{{ searchId }}"
+    class="search-input"
+    type="search"
+    autocomplete="off"
+    placeholder="{% if lang == 'ko' %}예: GitHub, LaTeX, VS Code{% else %}e.g. GitHub, LaTeX, VS Code{% endif %}"
+    data-search-input
+  >
+  <p class="search-status" data-search-status>
+    {% if lang == "ko" %}
+      두 글자 이상 입력하면 검색이 시작됩니다.
+    {% else %}
+      Search starts after two or more characters.
+    {% endif %}
+  </p>
+  <div class="search-results" data-search-results></div>
+</section>

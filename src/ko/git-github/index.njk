@@ -1,0 +1,103 @@
+---
+layout: layouts/base.njk
+title: Git & GitHub
+description: Git과 GitHub 워크플로우를 위한 카테고리 홈.
+lang: ko
+activeSection: git-github
+langSwitch:
+  url: /en/git-github/
+  label: English
+pageClass: page-section
+breadcrumbs:
+  - title: 한국어 홈
+    url: /ko/
+  - title: Git & GitHub
+toc:
+  - id: preparation
+    label: 준비
+  - id: first-remote-workflow
+    label: 처음 원격 워크플로우
+  - id: repeat-workflow
+    label: 반복 작업
+  - id: collaboration-and-exceptions
+    label: 공동 작업과 예외
+---
+<main class="content-shell">
+  <aside class="page-sidebar" data-pagefind-ignore="all">
+    <button
+      class="sidebar-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="page-outline"
+      data-toc-toggle
+    >
+      목차 보기
+    </button>
+    <section id="page-outline" class="sidebar-card" data-toc-panel>
+      <p class="sidebar-title">단계</p>
+      <div class="sidebar-links">
+        {% for item in toc %}
+          <a href="#{{ item.id }}">{{ item.label }}</a>
+        {% endfor %}
+      </div>
+    </section>
+  </aside>
+
+  <article class="doc-content panel" data-pagefind-body>
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="doc-hero">
+      <div>
+        <p class="eyebrow">카테고리</p>
+        <h1>Git &amp; GitHub</h1>
+        <p class="lead">project template이 로컬에서 이미 동작하는 상태를 전제로 시작합니다.</p>
+      </div>
+      <dl class="meta-list">
+        <div>
+          <dt>출발점</dt>
+          <dd>로컬에서 빌드가 되는 연구 문서 프로젝트</dd>
+        </div>
+        <div>
+          <dt>도착점</dt>
+          <dd>혼자서도, 작은 팀에서도 안정적인 저장소 운영</dd>
+        </div>
+      </dl>
+    </section>
+
+    {% set searchTitle = "Git과 GitHub 문서 검색" %}
+    {% include "components/search-panel.njk" %}
+
+    <section id="preparation" class="doc-section">
+      <h2>준비</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Git Installation</h3><p>Git 설치와 기본 identity 설정부터 맞춥니다.</p></article>
+        <article class="stack-item"><h3>GitHub Account Setup</h3><p>저장소 작업에 사용할 GitHub 계정을 준비합니다.</p></article>
+      </div>
+    </section>
+
+    <section id="first-remote-workflow" class="doc-section">
+      <h2>처음 원격 워크플로우</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Connect GitHub</h3><p>VS Code에서 GitHub 계정을 연결합니다.</p></article>
+        <article class="stack-item"><h3>Create Repository</h3><p>첫 empty private repository를 만듭니다.</p></article>
+        <article class="stack-item"><h3>Clone + First Push</h3><p>clone 후 starter project를 넣고 첫 push를 마칩니다.</p></article>
+      </div>
+    </section>
+
+    <section id="repeat-workflow" class="doc-section">
+      <h2>반복 작업</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Pull &amp; Push</h3><p>즉흥적인 동작 대신 한 가지 clean sync 루프를 반복합니다.</p></article>
+        <article class="stack-item"><h3>Version Control</h3><p>tracked, staged, committed, ignored 상태를 명확히 이해합니다.</p></article>
+      </div>
+    </section>
+
+    <section id="collaboration-and-exceptions" class="doc-section">
+      <h2>공동 작업과 예외</h2>
+      <div class="stack-list">
+        <article class="stack-item"><h3>Collaboration</h3><p>shared private repo를 작은 팀이 함께 운영합니다.</p></article>
+        <article class="stack-item"><h3>Conflict</h3><p>같은 텍스트 파일 충돌을 Merge Editor로 해결합니다.</p></article>
+      </div>
+    </section>
+  </article>
+</main>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="{{ lang or 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/site-assets/styles.css">
+  </head>
+  <body class="{{ pageClass or '' }}" data-page-lang="{{ lang or '' }}">
+    <header class="site-header" data-pagefind-ignore="all">
+      <div class="wrap site-header-inner">
+        <a class="brand" href="{% if lang %}/{{ lang }}/{% else %}/{% endif %}">{{ site.name }}</a>
+
+        {% if lang %}
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            data-menu-toggle
+          >
+            Menu
+          </button>
+          <nav id="primary-nav" class="site-nav" aria-label="Primary">
+            {% for item in navigation.main[lang] %}
+              <a
+                href="{{ item.url }}"
+                {% if activeSection == item.key %}aria-current="page"{% endif %}
+              >
+                {{ item.label }}
+              </a>
+            {% endfor %}
+            {% if langSwitch %}
+              <a class="lang-switch" href="{{ langSwitch.url }}">{{ langSwitch.label }}</a>
+            {% endif %}
+          </nav>
+        {% else %}
+          <nav class="site-nav site-nav-root" aria-label="Primary">
+            {% for language in navigation.languages %}
+              <a href="{{ language.url }}">{{ language.label }}</a>
+            {% endfor %}
+          </nav>
+        {% endif %}
+      </div>
+    </header>
+
+    {{ content | safe }}
+
+    <footer class="site-footer" data-pagefind-ignore="all">
+      <div class="wrap footer-inner">
+        <div>
+          <p class="footer-brand">{{ site.name }}</p>
+          <p class="footer-copy">{{ site.footerNote }}</p>
+        </div>
+        <div class="footer-meta">
+          <p>&copy; 2026 {{ site.authorLine }}</p>
+          <a href="{{ site.oldVersionUrl }}">Old Version</a>
+          {% if updates.latest %}
+            <p class="footer-update">
+              Latest update:
+              {% if updates.latest.url %}
+                <a href="{{ updates.latest.url }}">{{ updates.latest.title }}</a>
+              {% else %}
+                <span>{{ updates.latest.title }}</span>
+              {% endif %}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </footer>
+
+    <script src="/site-assets/app.js" defer></script>
+  </body>
+</html>

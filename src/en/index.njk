@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+title: English Home
+description: English entry point for the research workflow guidebook.
+lang: en
+activeSection: home
+langSwitch:
+  url: /ko/
+  label: 한국어
+pageClass: page-home
+---
+<main>
+  <section class="home-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy-block">
+        <p class="eyebrow">English Home</p>
+        <h1>From first setup to confident collaboration.</h1>
+        <p class="hero-copy">
+          Start with the tools that get a first compile working, move into the everyday writing
+          loop, and then stabilize your Git and GitHub workflow for real research projects.
+        </p>
+        <div class="button-row">
+          <a class="button button-primary" href="/en/start-here/">Begin with Start Here</a>
+          <a class="button button-secondary" href="/">Back to language landing</a>
+        </div>
+      </div>
+      <aside class="hero-panel panel">
+        <p class="eyebrow">Working Assumption</p>
+        <h2>Build habits, not just installations.</h2>
+        <p class="subtle">
+          The guidebook is organized for researchers who need a stable daily workflow, not a one-time setup checklist.
+        </p>
+        {% if updates.latest %}
+          <div class="update-chip">
+            <span>{{ updates.latest.date }}</span>
+            <a href="{{ updates.latest.url }}">{{ updates.latest.title }}</a>
+          </div>
+        {% endif %}
+      </aside>
+    </div>
+  </section>
+
+  <section class="home-search wrap">
+    {% set searchTitle = "Search the English guidebook" %}
+    {% include "components/search-panel.njk" %}
+  </section>
+
+  <section class="editorial-band">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Category Map</p>
+        <h2>Choose the part of the workflow you need next.</h2>
+      </div>
+      <div class="feature-grid">
+        {% for section in navigation.sections %}
+          <a class="feature-card panel" href="{{ section.url.en }}">
+            <p class="card-kicker">{{ section.kicker.en }}</p>
+            <h3>{{ section.title.en }}</h3>
+            <p>{{ section.summary.en }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>

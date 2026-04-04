@@ -1,0 +1,84 @@
+---
+layout: layouts/base.njk
+title: Research Workflow Guidebook
+description: Choose a language, then move from setup to writing and GitHub-based collaboration.
+pageClass: page-landing
+---
+<main>
+  <section class="landing-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy-block">
+        <p class="eyebrow">Bilingual Guidebook</p>
+        <h1>Choose a language, then build a research workflow that actually holds up.</h1>
+        <p class="hero-copy">
+          This site is being rebuilt as an editorial guidebook for researchers using LaTeX,
+          VS Code, Git, and GitHub. The new structure keeps the public URLs stable while
+          making the core bilingual path easier to maintain.
+        </p>
+        <div class="button-row">
+          {% for language in navigation.languages %}
+            <a class="button {% if loop.first %}button-primary{% else %}button-secondary{% endif %}" href="{{ language.url }}">
+              {{ language.label }}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <aside class="hero-panel panel">
+        <p class="eyebrow">Current Build</p>
+        <h2>Eleventy migration in progress</h2>
+        <p class="subtle">
+          Core English and Korean paths are now being reorganized under shared templates,
+          Markdown documents, and a search-ready static build.
+        </p>
+        {% if updates.latest %}
+          <div class="update-chip">
+            <span>{{ updates.latest.date }}</span>
+            {% if updates.latest.url %}
+              <a href="{{ updates.latest.url }}">{{ updates.latest.title }}</a>
+            {% else %}
+              <span>{{ updates.latest.title }}</span>
+            {% endif %}
+          </div>
+        {% endif %}
+      </aside>
+    </div>
+  </section>
+
+  <section class="editorial-band">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Route Map</p>
+        <h2>Three sections, mirrored across English and Korean.</h2>
+      </div>
+      <div class="feature-grid">
+        {% for section in navigation.sections %}
+          <article class="feature-card panel">
+            <p class="card-kicker">{{ section.kicker.en }}</p>
+            <h3>{{ section.title.en }}</h3>
+            <p>{{ section.summary.en }}</p>
+            <div class="link-row">
+              <a href="{{ section.url.en }}">English</a>
+              <a href="{{ section.url.ko }}">한국어</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="language-showcase">
+    <div class="wrap language-grid">
+      {% for language in navigation.languages %}
+        <article class="language-card panel">
+          <p class="eyebrow">{{ language.label }}</p>
+          <h2>{% if language.code == "ko" %}한국어 진입 페이지{% else %}Language home{% endif %}</h2>
+          <p class="subtle">{{ language.summary }}</p>
+          <a class="text-link" href="{{ language.url }}">
+            {% if language.code == "ko" %}한국어 홈으로 이동{% else %}Enter the English home{% endif %}
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+</main>
