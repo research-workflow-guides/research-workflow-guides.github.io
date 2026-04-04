@@ -3,22 +3,16 @@ layout: layouts/base.njk
 title: Initial Setup
 description: Use these three steps to reach your first successful compile.
 lang: en
-activeSection: start-here
-langSwitch:
-  url: /ko/start-here/
-  label: 한국어
 pageClass: page-section
-breadcrumbs:
-  - title: English Home
-    url: /en/
-  - title: Initial Setup
 toc:
   - id: core-route
     label: Steps
   - id: readiness
     label: Before moving on
 ---
-{% set docs = collections.docs | docsFor("en", "start-here") %}
+{% set pageUi = canonical.pageUi[page.url] %}
+{% set breadcrumbs = pageUi.breadcrumbs %}
+{% set docs = canonical.groupedDocs.en["start-here"].steps %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -38,9 +32,9 @@ toc:
       <div class="feature-grid feature-grid-compact">
         {% for doc in docs %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Step {{ doc.data.order }}</p>
-            <h3>{{ doc.data.title }}</h3>
-            <p>{{ doc.data.description }}</p>
+            <p class="card-kicker">Step {{ doc.order }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
           </a>
         {% endfor %}
       </div>

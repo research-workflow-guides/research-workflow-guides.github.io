@@ -14,9 +14,14 @@
     <link rel="stylesheet" href="/site-assets/styles.css">
   </head>
   <body class="{{ pageClass or '' }}" data-page-lang="{{ lang or '' }}">
+    {% set currentPageMeta = canonical.pagesByUrl[page.url] %}
+    {% set currentPageUi = canonical.pageUi[page.url] %}
+    {% set currentLang = currentPageMeta.lang if currentPageMeta and currentPageMeta.lang != "root" else lang %}
+    {% set currentSection = currentPageUi.activeSection if currentPageUi else activeSection %}
+    {% set currentLangSwitch = currentPageUi.langSwitch if currentPageUi else langSwitch %}
     <header class="site-header" data-pagefind-ignore="all">
       <div class="wrap site-header-inner">
-        <a class="brand" href="{% if navStyle == 'legacy-en' %}/{% elif navStyle == 'legacy-ko-section' %}/ko/{% elif lang %}/{{ lang }}/{% else %}/{% endif %}">{{ site.name }}</a>
+        <a class="brand" href="{% if navStyle == 'legacy-en' %}/{% elif navStyle == 'legacy-ko-section' %}/ko/{% elif currentLang %}/{{ currentLang }}/{% else %}/{% endif %}">{{ site.name }}</a>
 
         {% if navStyle == "legacy-en" %}
           <button
@@ -32,13 +37,13 @@
             {% for item in navigation.legacy.en %}
               <a
                 href="{{ item.url }}"
-                {% if activeSection == item.key %}aria-current="page"{% endif %}
+                {% if currentSection == item.key %}aria-current="page"{% endif %}
               >
                 {{ item.label }}
               </a>
             {% endfor %}
-            {% if langSwitch %}
-              <a class="lang-switch" href="{{ langSwitch.url }}">{{ langSwitch.label }}</a>
+            {% if currentLangSwitch %}
+              <a class="lang-switch" href="{{ currentLangSwitch.url }}">{{ currentLangSwitch.label }}</a>
             {% endif %}
           </nav>
         {% elif navStyle == "legacy-ko-section" %}
@@ -55,16 +60,16 @@
             {% for item in navigation.legacy.koSection %}
               <a
                 href="{{ item.url }}"
-                {% if activeSection == item.key %}aria-current="page"{% endif %}
+                {% if currentSection == item.key %}aria-current="page"{% endif %}
               >
                 {{ item.label }}
               </a>
             {% endfor %}
-            {% if langSwitch %}
-              <a class="lang-switch" href="{{ langSwitch.url }}">{{ langSwitch.label }}</a>
+            {% if currentLangSwitch %}
+              <a class="lang-switch" href="{{ currentLangSwitch.url }}">{{ currentLangSwitch.label }}</a>
             {% endif %}
           </nav>
-        {% elif lang %}
+        {% elif currentLang %}
           <button
             class="menu-toggle"
             type="button"
@@ -75,16 +80,16 @@
             Menu
           </button>
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
-            {% for item in navigation.main[lang] %}
+            {% for item in navigation.main[currentLang] %}
               <a
                 href="{{ item.url }}"
-                {% if activeSection == item.key %}aria-current="page"{% endif %}
+                {% if currentSection == item.key %}aria-current="page"{% endif %}
               >
                 {{ item.label }}
               </a>
             {% endfor %}
-            {% if langSwitch %}
-              <a class="lang-switch" href="{{ langSwitch.url }}">{{ langSwitch.label }}</a>
+            {% if currentLangSwitch %}
+              <a class="lang-switch" href="{{ currentLangSwitch.url }}">{{ currentLangSwitch.label }}</a>
             {% endif %}
           </nav>
         {% else %}

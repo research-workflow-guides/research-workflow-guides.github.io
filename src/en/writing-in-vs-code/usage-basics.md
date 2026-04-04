@@ -1,0 +1,52 @@
+---
+layout: layouts/doc.njk
+title: Usage Basics
+description: Practice the edit, build, preview, and SyncTeX loop until it feels routine.
+lang: en
+section: writing-in-vs-code
+order: 3
+permalink: /en/writing-in-vs-code/usage-basics/
+translationKey: writing-usage-basics
+eyebrow: Topic 3
+lead: "The daily workflow is simple: edit, build, preview, and jump between source and PDF without losing context."
+toc:
+  - id: the-basic-loop
+    label: The basic loop
+  - id: use-preview-early
+    label: Use preview early
+  - id: use-synctex-both-ways
+    label: Use SyncTeX both ways
+  - id: before-you-move-on
+    label: Self-check
+tags:
+  - doc
+---
+## The basic loop
+
+For most writing sessions, repeat the same four actions:
+
+1. Edit the source.
+2. Build the document.
+3. Check the PDF.
+4. Return to the source and continue.
+
+The goal is not to memorize many commands. The goal is to make this loop feel normal.
+
+## Use preview early
+
+Do not wait until a chapter is large before opening the PDF preview. Use preview from the beginning so layout, errors, and section flow stay visible while you write.
+
+Frequent preview checks also reduce the chance that many mistakes accumulate before you notice them.
+
+## Use SyncTeX both ways
+
+LaTeX Workshop is most useful when you jump from source to PDF and back again.
+
+- from source to the corresponding PDF location
+- from the PDF click position back to the corresponding source line
+
+This is especially helpful once a paper becomes long and navigation slows down.
+
+## Self-check
+
+Confirm that you can edit, build, preview, and jump between source and PDF without pausing to rediscover the interface.

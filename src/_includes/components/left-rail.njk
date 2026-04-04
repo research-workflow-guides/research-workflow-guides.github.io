@@ -1,7 +1,11 @@
 {% set currentUrl = page.url %}
-{% set isLanguageHome = currentUrl == ("/" ~ lang ~ "/") %}
-{% set navigationLabel = "내비게이션 열기" if lang == "ko" else "Open navigation" %}
-{% set railTitle = "목차" if lang == "ko" else "Contents" %}
+{% set currentPageMeta = canonical.pagesByUrl[currentUrl] %}
+{% set currentPageUi = canonical.pageUi[currentUrl] %}
+{% set currentLang = currentPageMeta.lang if currentPageMeta and currentPageMeta.lang != "root" else lang %}
+{% set currentSection = currentPageUi.activeSection if currentPageUi else activeSection %}
+{% set isLanguageHome = currentPageMeta and currentPageMeta.pageType == "language-home" %}
+{% set navigationLabel = "내비게이션 열기" if currentLang == "ko" else "Open navigation" %}
+{% set railTitle = "목차" if currentLang == "ko" else "Contents" %}
 <aside class="page-sidebar" data-pagefind-ignore="all">
   <button
     class="sidebar-toggle"
@@ -16,10 +20,10 @@
     <p class="sidebar-title">{{ railTitle }}</p>
     <ul class="rail-tree">
       {% for section in navigation.sections %}
-        {% set sectionUrl = section.url[lang] %}
-        {% set sectionPages = section.pages[lang] %}
-        {% set sectionExpanded = isLanguageHome or activeSection == section.key %}
-        {% set sectionCurrent = currentUrl == sectionUrl or activeSection == section.key %}
+        {% set sectionUrl = section.url[currentLang] %}
+        {% set sectionPages = section.pages[currentLang] %}
+        {% set sectionExpanded = isLanguageHome or currentSection == section.key %}
+        {% set sectionCurrent = currentUrl == sectionUrl or currentSection == section.key %}
         <li class="rail-section{% if sectionExpanded %} is-expanded{% endif %}">
           <a
             class="rail-link rail-link-section{% if sectionCurrent %} is-current{% endif %}"

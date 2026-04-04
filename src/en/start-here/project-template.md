@@ -6,18 +6,9 @@ lang: en
 section: start-here
 order: 3
 permalink: /en/start-here/project-template/
-activeSection: start-here
-langSwitch:
-  url: /ko/start-here/
-  label: 한국어
+translationKey: start-here-project-template
 eyebrow: Step 3
 lead: Download one starter project, open it in VS Code, and use it to confirm the full toolchain works.
-breadcrumbs:
-  - title: English Home
-    url: /en/
-  - title: Initial Setup
-    url: /en/start-here/
-  - title: Project Template
 toc:
   - id: download-the-starter-archive
     label: Download the template
@@ -27,12 +18,6 @@ toc:
     label: Run the first build
   - id: before-you-move-on
     label: Self-check
-prevPage:
-  title: VS Code Installation
-  url: /en/start-here/vs-code-installation/
-nextPage:
-  title: Work in VS Code
-  url: /en/writing-in-vs-code/
 tags:
   - doc
 ---

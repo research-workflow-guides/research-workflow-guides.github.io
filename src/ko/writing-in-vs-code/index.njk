@@ -3,21 +3,14 @@ layout: layouts/base.njk
 title: Work in VS Code
 description: VS Code 안의 일상적인 문서 작성 흐름을 위한 카테고리 홈.
 lang: ko
-activeSection: writing-in-vs-code
-langSwitch:
-  url: /en/writing-in-vs-code/
-  label: English
 pageClass: page-section
-breadcrumbs:
-  - title: 한국어 홈
-    url: /ko/
-  - title: Work in VS Code
 toc:
   - id: core-documents
     label: 주요 문서
-  - id: optional-documents
-    label: 선택 문서
 ---
+{% set pageUi = canonical.pageUi[page.url] %}
+{% set breadcrumbs = pageUi.breadcrumbs %}
+{% set docs = canonical.groupedDocs.ko["writing-in-vs-code"]["main-topics"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -34,20 +27,14 @@ toc:
 
     <section id="core-documents" class="doc-section">
       <h2>주요 문서</h2>
-      <div class="stack-list">
-        <article class="stack-item"><h3>Folder Setup</h3><p>올바른 project root를 엽니다.</p></article>
-        <article class="stack-item"><h3>Settings</h3><p>LaTeX 중심의 VS Code 작업 환경을 맞춥니다.</p></article>
-        <article class="stack-item"><h3>Usage Basics</h3><p>수정, build, preview, sync 루프를 안정적으로 반복합니다.</p></article>
-        <article class="stack-item"><h3>Shortcuts</h3><p>가장 자주 쓰는 동작을 더 빠르게 만듭니다.</p></article>
-        <article class="stack-item"><h3>Snippets</h3><p>반복 입력을 줄이는 작은 snippet 집합을 씁니다.</p></article>
-      </div>
-    </section>
-
-    <section id="optional-documents" class="doc-section">
-      <h2>선택 문서</h2>
-      <div class="stack-list">
-        <article class="stack-item"><h3>Overleaf</h3><p>워크플로우에 꼭 필요할 때만 Overleaf를 GitHub bridge로 씁니다.</p></article>
-        <article class="stack-item"><h3>latexdiff revision PDF</h3><p>수정 전후 TeX를 비교한 review PDF를 만듭니다.</p></article>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in docs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Topic {{ doc.order }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
       </div>
     </section>
   </article>

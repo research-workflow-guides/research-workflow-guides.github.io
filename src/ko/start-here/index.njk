@@ -3,21 +3,16 @@ layout: layouts/base.njk
 title: Initial Setup
 description: 첫 compile 성공까지 이어지는 Initial Setup 카테고리 홈.
 lang: ko
-activeSection: start-here
-langSwitch:
-  url: /en/start-here/
-  label: English
 pageClass: page-section
-breadcrumbs:
-  - title: 한국어 홈
-    url: /ko/
-  - title: Initial Setup
 toc:
   - id: core-route
     label: 세 단계
   - id: readiness
     label: 다음으로 넘어가기 전에
 ---
+{% set pageUi = canonical.pageUi[page.url] %}
+{% set breadcrumbs = pageUi.breadcrumbs %}
+{% set docs = canonical.groupedDocs.ko["start-here"].steps %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -35,21 +30,13 @@ toc:
     <section id="core-route" class="doc-section">
       <h2>세 단계</h2>
       <div class="feature-grid feature-grid-compact">
-        <article class="feature-card panel">
-          <p class="card-kicker">Step 1</p>
-          <h3>LaTeX Installation</h3>
-          <p>MiKTeX 중심으로 LaTeX 환경을 준비합니다.</p>
-        </article>
-        <article class="feature-card panel">
-          <p class="card-kicker">Step 2</p>
-          <h3>VS Code Installation</h3>
-          <p>VS Code와 LaTeX Workshop을 설치합니다.</p>
-        </article>
-        <article class="feature-card panel">
-          <p class="card-kicker">Step 3</p>
-          <h3>Project Template</h3>
-          <p>starter project를 열고 첫 build를 확인합니다.</p>
-        </article>
+        {% for doc in docs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Step {{ doc.order }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
       </div>
     </section>
 

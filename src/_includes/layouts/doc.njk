@@ -2,6 +2,10 @@
 layout: layouts/base.njk
 pageClass: page-doc
 ---
+{% set currentPageUi = canonical.pageUi[page.url] %}
+{% set breadcrumbs = currentPageUi.breadcrumbs if currentPageUi else breadcrumbs %}
+{% set prevPage = currentPageUi.prevPage if currentPageUi else prevPage %}
+{% set nextPage = currentPageUi.nextPage if currentPageUi else nextPage %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 

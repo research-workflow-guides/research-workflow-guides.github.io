@@ -3,15 +3,7 @@ layout: layouts/base.njk
 title: Git & GitHub
 description: Git과 GitHub 워크플로우를 위한 카테고리 홈.
 lang: ko
-activeSection: git-github
-langSwitch:
-  url: /en/git-github/
-  label: English
 pageClass: page-section
-breadcrumbs:
-  - title: 한국어 홈
-    url: /ko/
-  - title: Git & GitHub
 toc:
   - id: preparation
     label: 준비
@@ -22,6 +14,9 @@ toc:
   - id: collaboration-and-exceptions
     label: 협업
 ---
+{% set pageUi = canonical.pageUi[page.url] %}
+{% set breadcrumbs = pageUi.breadcrumbs %}
+{% set grouped = canonical.groupedDocs.ko["git-github"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -39,33 +34,36 @@ toc:
     <section id="preparation" class="doc-section">
       <h2>준비</h2>
       <div class="stack-list">
-        <article class="stack-item"><h3>Git Installation</h3><p>Git 설치와 기본 identity 설정부터 맞춥니다.</p></article>
-        <article class="stack-item"><h3>GitHub Account Setup</h3><p>저장소 작업에 사용할 GitHub 계정을 준비합니다.</p></article>
+        {% for doc in grouped.preparation %}
+          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+        {% endfor %}
       </div>
     </section>
 
     <section id="first-remote-workflow" class="doc-section">
       <h2>첫 GitHub 작업</h2>
       <div class="stack-list">
-        <article class="stack-item"><h3>Connect GitHub</h3><p>VS Code에서 GitHub 계정을 연결합니다.</p></article>
-        <article class="stack-item"><h3>Create Repository</h3><p>첫 empty private repository를 만듭니다.</p></article>
-        <article class="stack-item"><h3>Clone + First Push</h3><p>clone 후 starter project를 넣고 첫 push를 마칩니다.</p></article>
+        {% for doc in grouped["first-github-workflow"] %}
+          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+        {% endfor %}
       </div>
     </section>
 
     <section id="repeat-workflow" class="doc-section">
       <h2>일상 작업</h2>
       <div class="stack-list">
-        <article class="stack-item"><h3>Pull &amp; Push</h3><p>즉흥적인 동작 대신 한 가지 clean sync 루프를 반복합니다.</p></article>
-        <article class="stack-item"><h3>Version Control</h3><p>tracked, staged, committed, ignored 상태를 명확히 이해합니다.</p></article>
+        {% for doc in grouped["daily-workflow"] %}
+          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+        {% endfor %}
       </div>
     </section>
 
     <section id="collaboration-and-exceptions" class="doc-section">
       <h2>협업</h2>
       <div class="stack-list">
-        <article class="stack-item"><h3>Collaboration</h3><p>shared private repo를 작은 팀이 함께 운영합니다.</p></article>
-        <article class="stack-item"><h3>Conflict</h3><p>같은 텍스트 파일 충돌을 Merge Editor로 해결합니다.</p></article>
+        {% for doc in grouped.collaboration %}
+          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+        {% endfor %}
       </div>
     </section>
   </article>

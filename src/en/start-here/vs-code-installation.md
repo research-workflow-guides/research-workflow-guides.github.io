@@ -6,18 +6,9 @@ lang: en
 section: start-here
 order: 2
 permalink: /en/start-here/vs-code-installation/
-activeSection: start-here
-langSwitch:
-  url: /ko/start-here/
-  label: 한국어
+translationKey: start-here-vs-code-installation
 eyebrow: Step 2
 lead: Install Visual Studio Code, add LaTeX Workshop, and confirm the editor is ready for the first project.
-breadcrumbs:
-  - title: English Home
-    url: /en/
-  - title: Initial Setup
-    url: /en/start-here/
-  - title: VS Code Installation
 toc:
   - id: install-vs-code
     label: Install VS Code
@@ -25,12 +16,6 @@ toc:
     label: Install LaTeX Workshop
   - id: before-you-move-on
     label: Self-check
-prevPage:
-  title: LaTeX Installation
-  url: /en/start-here/latex-installation/
-nextPage:
-  title: Project Template
-  url: /en/start-here/project-template/
 tags:
   - doc
 ---

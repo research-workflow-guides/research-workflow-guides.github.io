@@ -3,21 +3,14 @@ layout: layouts/base.njk
 title: Work in VS Code
 description: English category home for daily writing workflows in VS Code.
 lang: en
-activeSection: writing-in-vs-code
-langSwitch:
-  url: /ko/writing-in-vs-code/
-  label: 한국어
 pageClass: page-section
-breadcrumbs:
-  - title: English Home
-    url: /en/
-  - title: Work in VS Code
 toc:
   - id: core-documents
     label: Main topics
-  - id: optional-documents
-    label: Optional topics
 ---
+{% set pageUi = canonical.pageUi[page.url] %}
+{% set breadcrumbs = pageUi.breadcrumbs %}
+{% set docs = canonical.groupedDocs.en["writing-in-vs-code"]["main-topics"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -34,20 +27,14 @@ toc:
 
     <section id="core-documents" class="doc-section">
       <h2>Main topics</h2>
-      <div class="stack-list">
-        <article class="stack-item"><h3>Folder Setup</h3><p>Open the correct project root in VS Code.</p></article>
-        <article class="stack-item"><h3>Settings</h3><p>Shape the editor around a LaTeX-first working environment.</p></article>
-        <article class="stack-item"><h3>Usage Basics</h3><p>Repeat the edit, build, preview, and SyncTeX loop without friction.</p></article>
-        <article class="stack-item"><h3>Shortcuts</h3><p>Make the most frequent actions easier to reach.</p></article>
-        <article class="stack-item"><h3>Snippets</h3><p>Reduce repetitive typing with a small, durable snippet set.</p></article>
-      </div>
-    </section>
-
-    <section id="optional-documents" class="doc-section">
-      <h2>Optional topics</h2>
-      <div class="stack-list">
-        <article class="stack-item"><h3>Overleaf</h3><p>Use Overleaf as a GitHub bridge only when the workflow really benefits from it.</p></article>
-        <article class="stack-item"><h3>latexdiff revision PDFs</h3><p>Create review-friendly PDFs that highlight changes between TeX versions.</p></article>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in docs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Topic {{ doc.order }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
       </div>
     </section>
 

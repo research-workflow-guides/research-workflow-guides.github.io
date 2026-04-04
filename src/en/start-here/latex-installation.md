@@ -6,10 +6,7 @@ lang: en
 section: start-here
 order: 1
 permalink: /en/start-here/latex-installation/
-activeSection: start-here
-langSwitch:
-  url: /ko/start-here/
-  label: 한국어
+translationKey: start-here-latex-installation
 eyebrow: Step 1
 lead: Install MiKTeX, enable package-on-demand behavior, and confirm the base toolchain is available.
 meta:
@@ -17,12 +14,6 @@ meta:
     value: MiKTeX
   - label: Goal
     value: Reach a working LaTeX installation with latexmk available.
-breadcrumbs:
-  - title: English Home
-    url: /en/
-  - title: Initial Setup
-    url: /en/start-here/
-  - title: LaTeX Installation
 toc:
   - id: why-miktex
     label: Why MiKTeX
@@ -34,12 +25,6 @@ toc:
     label: Perl requirement
   - id: before-you-move-on
     label: Self-check
-prevPage:
-  title: Initial Setup category home
-  url: /en/start-here/
-nextPage:
-  title: VS Code Installation
-  url: /en/start-here/vs-code-installation/
 tags:
   - doc
 ---
