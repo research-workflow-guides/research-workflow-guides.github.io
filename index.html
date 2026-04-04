@@ -97,15 +97,22 @@
       fetch('updates/data.json')
         .then(r => r.json())
         .then(data => {
-          const latest = data
+          const completed = data
             .filter(d => d.status === 'completed' && d.date)
-            .sort((a, b) => b.date.localeCompare(a.date))
-            .slice(0, 2);
+            .sort((a, b) => b.date.localeCompare(a.date));
 
-          const html = latest.map(item => `
+          // Group by date, take latest 2 date groups
+          const groups = {};
+          completed.forEach(item => {
+            if (!groups[item.date]) groups[item.date] = [];
+            groups[item.date].push(item.title);
+          });
+          const latestDates = Object.keys(groups).sort((a, b) => b.localeCompare(a)).slice(0, 2);
+
+          const html = latestDates.map(date => `
             <div>
-              <dt>${item.date.replace(/-/g, '.')}</dt>
-              <dd>${item.title}</dd>
+              <dt>${date.replace(/-/g, '.')}</dt>
+              <dd>${groups[date].join(', ')}</dd>
             </div>`).join('');
 
           document.getElementById('recent-updates').innerHTML = html;
