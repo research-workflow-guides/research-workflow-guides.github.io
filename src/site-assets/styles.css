@@ -501,6 +501,20 @@ li {
   font-weight: 600;
 }
 
+.rail-link-group,
+.rail-group-label {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rail-group + .rail-group {
+  margin-top: 0.45rem;
+}
+
 .rail-link-heading {
   font-size: 0.95rem;
 }

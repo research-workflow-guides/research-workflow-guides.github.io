@@ -7,10 +7,13 @@ pageClass: page-section
 toc:
   - id: core-documents
     label: Main topics
+  - id: optional-documents
+    label: Optional topics
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
 {% set docs = canonical.groupedDocs.en["writing-in-vs-code"]["main-topics"] %}
+{% set optionalDocs = canonical.groupedDocs.en["writing-in-vs-code"]["optional-topics"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -31,6 +34,20 @@ toc:
         {% for doc in docs %}
           <a class="feature-card panel" href="{{ doc.url }}">
             <p class="card-kicker">Topic {{ doc.order }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="optional-documents" class="doc-section">
+      <h2>Optional topics</h2>
+      <p class="subtle">Use these only when you need an external writing bridge or a review PDF workflow.</p>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in optionalDocs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Optional</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>

@@ -52,6 +52,13 @@ const sectionDefinitions = [
           en: "Main topics",
           ko: "주요 문서"
         }
+      },
+      {
+        key: "optional-topics",
+        label: {
+          en: "Optional topics",
+          ko: "선택 문서"
+        }
       }
     ]
   },
@@ -363,6 +370,58 @@ const pages = [
     status: "core"
   },
   {
+    url: "/en/writing-in-vs-code/overleaf/",
+    pageType: "document",
+    lang: "en",
+    section: "writing-in-vs-code",
+    slug: "overleaf",
+    order: 6,
+    group: "optional-topics",
+    title: "Overleaf",
+    description: "Use Overleaf Professional as a GitHub-connected writing bridge when local VS Code is not the whole workflow.",
+    translationKey: "writing-overleaf",
+    status: "optional"
+  },
+  {
+    url: "/ko/writing-in-vs-code/overleaf/",
+    pageType: "document",
+    lang: "ko",
+    section: "writing-in-vs-code",
+    slug: "overleaf",
+    order: 6,
+    group: "optional-topics",
+    title: "Overleaf",
+    description: "Overleaf Professional을 GitHub와 연결해 보조 작성 환경으로 사용하는 흐름을 정리합니다.",
+    translationKey: "writing-overleaf",
+    status: "optional"
+  },
+  {
+    url: "/en/writing-in-vs-code/revision-pdf-latexdiff/",
+    pageType: "document",
+    lang: "en",
+    section: "writing-in-vs-code",
+    slug: "revision-pdf-latexdiff",
+    order: 7,
+    group: "optional-topics",
+    title: "Generate a Revision PDF with latexdiff",
+    description: "Compare an old TeX file with a revised one and compile a review PDF with latexdiff.",
+    translationKey: "writing-revision-pdf-latexdiff",
+    status: "optional"
+  },
+  {
+    url: "/ko/writing-in-vs-code/revision-pdf-latexdiff/",
+    pageType: "document",
+    lang: "ko",
+    section: "writing-in-vs-code",
+    slug: "revision-pdf-latexdiff",
+    order: 7,
+    group: "optional-topics",
+    title: "latexdiff로 revision PDF 만들기",
+    description: "old TeX와 revised TeX를 비교해 latexdiff로 review PDF를 만드는 흐름을 정리합니다.",
+    translationKey: "writing-revision-pdf-latexdiff",
+    status: "optional"
+  },
+  {
     url: "/ko/writing-in-vs-code/snippets/",
     pageType: "document",
     lang: "ko",
@@ -669,14 +728,23 @@ for (const page of pages) {
 
 const sectionOrder = sectionDefinitions.map((section) => section.key);
 const groupedDocs = { en: {}, ko: {} };
+const publicDocStatuses = new Set(["core", "optional"]);
+
+function isPublicDoc(page) {
+  return page.pageType === "document" && publicDocStatuses.has(page.status);
+}
+
+function buildPublicDocs(sectionKey, language) {
+  return pages
+    .filter((page) => {
+      return isPublicDoc(page) && page.lang === language && page.section === sectionKey;
+    })
+    .sort((left, right) => left.order - right.order);
+}
 
 for (const language of ["en", "ko"]) {
   for (const section of sectionDefinitions) {
-    const docs = pages
-      .filter((page) => {
-        return page.pageType === "document" && page.lang === language && page.section === section.key && page.status === "core";
-      })
-      .sort((left, right) => left.order - right.order);
+    const docs = buildPublicDocs(section.key, language);
 
     const groupMap = {};
 
@@ -697,12 +765,24 @@ const sections = sectionDefinitions.map((section) => {
     kicker: section.kicker,
     groups: section.groups,
     pages: {
-      en: pages
-        .filter((page) => page.pageType === "document" && page.lang === "en" && page.section === section.key && page.status === "core")
-        .sort((left, right) => left.order - right.order),
-      ko: pages
-        .filter((page) => page.pageType === "document" && page.lang === "ko" && page.section === section.key && page.status === "core")
-        .sort((left, right) => left.order - right.order)
+      en: buildPublicDocs(section.key, "en"),
+      ko: buildPublicDocs(section.key, "ko")
+    },
+    groupedPages: {
+      en: section.groups
+        .map((group) => ({
+          key: group.key,
+          label: group.label.en,
+          pages: groupedDocs.en[section.key][group.key]
+        }))
+        .filter((group) => group.pages.length),
+      ko: section.groups
+        .map((group) => ({
+          key: group.key,
+          label: group.label.ko,
+          pages: groupedDocs.ko[section.key][group.key]
+        }))
+        .filter((group) => group.pages.length)
     }
   };
 });
@@ -750,15 +830,22 @@ function buildPrevNext(page) {
     return { prevPage: null, nextPage: null };
   }
 
-  const sectionDocs = sections
-    .find((section) => section.key === page.section)
-    .pages[page.lang];
-  const index = sectionDocs.findIndex((item) => item.url === page.url);
   const section = sections.find((item) => item.key === page.section);
+  let sequence = section.pages[page.lang];
+
+  if (page.section === "writing-in-vs-code" && page.group === "main-topics") {
+    sequence = sequence.filter((item) => item.status === "core");
+  }
+
+  if (page.section === "writing-in-vs-code" && page.group === "optional-topics") {
+    sequence = sequence.filter((item) => item.group === "optional-topics");
+  }
+
+  const index = sequence.findIndex((item) => item.url === page.url);
   const prevPage = index > 0
     ? {
-        title: sectionDocs[index - 1].title,
-        url: sectionDocs[index - 1].url
+        title: sequence[index - 1].title,
+        url: sequence[index - 1].url
       }
     : {
         title: section.title[page.lang],
@@ -767,10 +854,10 @@ function buildPrevNext(page) {
 
   let nextPage = null;
 
-  if (index >= 0 && index < sectionDocs.length - 1) {
+  if (index >= 0 && index < sequence.length - 1) {
     nextPage = {
-      title: sectionDocs[index + 1].title,
-      url: sectionDocs[index + 1].url
+      title: sequence[index + 1].title,
+      url: sequence[index + 1].url
     };
   } else {
     const nextSection = getNextSection(page.section);
