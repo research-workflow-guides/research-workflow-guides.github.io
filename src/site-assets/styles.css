@@ -22,6 +22,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -697,6 +702,8 @@ li {
 
 .prose {
   margin-top: 1.6rem;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .prose > *:first-child {
@@ -718,6 +725,13 @@ li {
 
 .prose a {
   color: var(--brand);
+}
+
+.prose img,
+.prose table,
+.prose iframe,
+.prose video {
+  max-width: 100%;
 }
 
 .prose pre {
