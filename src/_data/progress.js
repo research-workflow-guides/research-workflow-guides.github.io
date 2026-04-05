@@ -1,4 +1,4 @@
-const progressItems = require("../../updates/data.json");
+const progressItems = require("../../updates/data.json").items;
 
 const completedItems = progressItems
   .filter((item) => item.status === "completed")

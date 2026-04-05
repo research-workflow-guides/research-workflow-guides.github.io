@@ -1,56 +1,78 @@
 ---
 layout: layouts/base.njk
-title: 한국어 홈
-description: LaTeX, VS Code, GitHub 연구 워크플로우 가이드를 위한 한국어 진입 페이지.
+title: Research Workflow Guidebook
+description: 언어를 선택하고, LaTeX부터 GitHub 협업까지 이어지는 연구 워크플로우를 시작하세요.
 lang: ko
-pageClass: page-home
+langSwitch:
+  url: /
+  label: English
+pageClass: page-landing
 ---
-<main class="content-shell">
-  {% include "components/left-rail.njk" %}
-
-  <article class="doc-content panel" data-pagefind-body>
-    <section class="doc-hero doc-hero-simple">
-      <div>
-        <p class="eyebrow">한국어 가이드</p>
-        <h1>설치, 작성, GitHub 협업까지 이어지는 연구 워크플로우 가이드</h1>
-        <p class="lead">
-          로컬 환경을 먼저 안정적으로 맞추고, 그다음 VS Code 안에서의 작성 루프를 익힌 뒤, Git과 GitHub 협업으로 자연스럽게 넘어가도록 구성했습니다.
-        </p>
-        <p class="subtle">
-          처음부터 다시 시작한다면 Initial Setup부터 보고, 이미 환경이 준비되어 있다면 좌측 내비게이션에서 필요한 섹션으로 바로 이동하면 됩니다.
+<main>
+  <section class="landing-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy-block">
+        <h1>설치부터 GitHub 협업까지 이어지는 연구 워크플로우를 구축하세요.</h1>
+        <p class="hero-copy">
+          LaTeX, VS Code, Git, GitHub를 활용하는 연구자를 위한 가이드북입니다. 환경 설치부터 일상적인 작성 루프, 저장소 협업까지 단계별로 정리했습니다.
         </p>
         <div class="button-row">
-          <a class="button button-primary" href="/ko/start-here/">Initial Setup부터 시작</a>
-          <a class="text-link" href="/">언어 선택으로 돌아가기</a>
+          <a class="button button-secondary" href="/">English</a>
+          <a class="button button-primary" href="/ko/">한국어</a>
         </div>
       </div>
-    </section>
 
-    <section class="doc-section">
-      <h2>이 가이드를 쓰는 순서</h2>
-      <div class="stack-list">
-        <article class="stack-item">
-          <h3>먼저 동작하는 환경을 만듭니다</h3>
-          <p>첫 compile이 되는 상태를 확보한 뒤에야 이후 작성과 협업 흐름이 편해집니다.</p>
-        </article>
-        <article class="stack-item">
-          <h3>그다음 반복 가능한 습관으로 넘어갑니다</h3>
-          <p>설치 체크리스트에 머무르지 않고, 실제 연구 문서 작업 루프와 저장소 운영 습관으로 연결합니다.</p>
-        </article>
+      <aside class="hero-panel panel">
+        <p class="eyebrow">Recent Updates</p>
+        {% if updates.currentBuild %}
+          <h2 class="hero-panel-title">{{ updates.currentBuild.title }}</h2>
+        {% endif %}
+        <dl class="updates-list">
+          {% for item in updates.completed %}
+            {% if loop.index <= 2 %}
+              <div>
+                <dt>{{ item.date }}</dt>
+                <dd>
+                  {% if item.url %}
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                  {% else %}
+                    {{ item.title }}
+                  {% endif %}
+                </dd>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </dl>
+        <a class="text-link" href="/updates/">More updates →</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="editorial-band">
+    <div class="wrap">
+      <div class="section-heading">
+        <h2>Route Map</h2>
       </div>
-    </section>
-
-    <section class="doc-section">
-      <h2>섹션</h2>
       <div class="feature-grid">
         {% for section in navigation.sections %}
           <a class="feature-card panel" href="{{ section.url.ko }}">
+            <div class="card-logo-row">
+              {% if section.key == "start-here" %}
+                <img class="card-logo" src="/assets/images/LaTeX_project_logo_bird.svg.png" alt="LaTeX">
+                <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
+              {% elif section.key == "writing-in-vs-code" %}
+                <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
+              {% elif section.key == "git-github" %}
+                <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
+                <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
+              {% endif %}
+            </div>
             <p class="card-kicker">{{ section.kicker.ko }}</p>
             <h3>{{ section.title.ko }}</h3>
             <p>{{ section.summary.ko }}</p>
           </a>
         {% endfor %}
       </div>
-    </section>
-  </article>
+    </div>
+  </section>
 </main>

@@ -1,93 +1,99 @@
-[
-  {
-    "title": "1.5 Basic Document Pack",
-    "description": "Starter LaTeX file pack download guide. Includes seed document, check document, keybindings, snippets, and settings.",
-    "date": "2026-04-04",
-    "status": "completed",
-    "url": "../section-1/basic-doc-pack/"
+{
+  "currentBuild": {
+    "title": "Migration in progress",
+    "summary": "Core English and Korean paths are now being reorganized under shared templates, Markdown documents, and a search-ready static build."
   },
-  {
-    "title": "1.4 GitHub Sign Up",
-    "description": "GitHub account creation guide with a tip on GitHub Desktop.",
-    "date": "2026-04-04",
-    "status": "completed",
-    "url": "../section-1/github/"
-  },
-  {
-    "title": "1.3 Git Installation",
-    "description": "Git installation guide for Windows and macOS. Includes default editor configuration.",
-    "date": "2026-04-04",
-    "status": "completed",
-    "url": "../section-1/git/"
-  },
-  {
-    "title": "Language split (EN / KO)",
-    "description": "English is now the default. A Korean version of the homepage is available at /ko/.",
-    "date": "2026-04-04",
-    "status": "completed",
-    "url": null
-  },
-  {
-    "title": "1.2 VS Code 설치 (Installation)",
-    "description": "VS Code installation guide with required and optional extensions for LaTeX workflow.",
-    "date": "2026-04-04",
-    "status": "completed",
-    "url": "../section-1/vs-code/"
-  },
-  {
-    "title": "1.1.3 Option 3: MiKTeX (Windows only)",
-    "description": "MiKTeX installation guide — the distribution used in this course. Includes latexmk and Strawberry Perl setup.",
-    "date": "2026-04-04",
-    "status": "completed",
-    "url": "../section-1/installation/option-3/"
-  },
-  {
-    "title": "1.1.2 Option 2: TeX Live (slow/full)",
-    "description": "Full TeX Live installation guide using the network installer for the complete package set.",
-    "date": "2026-04-04",
-    "status": "completed",
-    "url": "../section-1/installation/option-2/"
-  },
-  {
-    "title": "1.1.1 Option 1: TeX Live (fast)",
-    "description": "Step-by-step guide for the recommended quick TeX Live installation via install-tl-windows.exe.",
-    "date": "2026-04-04",
-    "status": "completed",
-    "url": "../section-1/installation/option-1/"
-  },
-  {
-    "title": "1.1 LaTeX Installation",
-    "description": "Overview of three LaTeX installation options: TeX Live (fast), TeX Live (slow), and MiKTeX.",
-    "date": "2026-04-03",
-    "status": "completed",
-    "url": "../section-1/installation/"
-  },
-  {
-    "title": "2.2.8 Gitignore",
-    "description": "First migrated content page. Excludes files/folders from GitHub commits using .gitignore.",
-    "date": "2026-04-02",
-    "status": "completed",
-    "url": "../section-2/usage/vs-code-github/gitignore/"
-  },
-  {
-    "title": "Site skeleton",
-    "description": "Homepage, shared CSS, and folder structure set up for GitHub Pages.",
-    "date": "2026-04-02",
-    "status": "completed",
-    "url": null
-  },
-  {
-    "title": "Section 2: Usage",
-    "description": "2.1 LaTeX in VS Code, 2.2 VS Code and GitHub (all sub-pages), 2.3 Overleaf and PDF.",
-    "date": null,
-    "status": "planned",
-    "url": null
-  },
-  {
-    "title": "Section 3: Useful Tools",
-    "description": "Copilot, JabRef, Mathpix, ChatGPT.",
-    "date": null,
-    "status": "planned",
-    "url": null
-  }
-]
+  "items": [
+    {
+      "title": "1.5 Basic Document Pack",
+      "description": "Starter LaTeX file pack download guide. Includes seed document, check document, keybindings, snippets, and settings.",
+      "date": "2026-04-04",
+      "status": "completed",
+      "url": "../section-1/basic-doc-pack/"
+    },
+    {
+      "title": "1.4 GitHub Sign Up",
+      "description": "GitHub account creation guide with a tip on GitHub Desktop.",
+      "date": "2026-04-04",
+      "status": "completed",
+      "url": "../section-1/github/"
+    },
+    {
+      "title": "1.3 Git Installation",
+      "description": "Git installation guide for Windows and macOS. Includes default editor configuration.",
+      "date": "2026-04-04",
+      "status": "completed",
+      "url": "../section-1/git/"
+    },
+    {
+      "title": "Language split (EN / KO)",
+      "description": "English is now the default. A Korean version of the homepage is available at /ko/.",
+      "date": "2026-04-04",
+      "status": "completed",
+      "url": null
+    },
+    {
+      "title": "1.2 VS Code 설치 (Installation)",
+      "description": "VS Code installation guide with required and optional extensions for LaTeX workflow.",
+      "date": "2026-04-04",
+      "status": "completed",
+      "url": "../section-1/vs-code/"
+    },
+    {
+      "title": "1.1.3 Option 3: MiKTeX (Windows only)",
+      "description": "MiKTeX installation guide — the distribution used in this course. Includes latexmk and Strawberry Perl setup.",
+      "date": "2026-04-04",
+      "status": "completed",
+      "url": "../section-1/installation/option-3/"
+    },
+    {
+      "title": "1.1.2 Option 2: TeX Live (slow/full)",
+      "description": "Full TeX Live installation guide using the network installer for the complete package set.",
+      "date": "2026-04-04",
+      "status": "completed",
+      "url": "../section-1/installation/option-2/"
+    },
+    {
+      "title": "1.1.1 Option 1: TeX Live (fast)",
+      "description": "Step-by-step guide for the recommended quick TeX Live installation via install-tl-windows.exe.",
+      "date": "2026-04-04",
+      "status": "completed",
+      "url": "../section-1/installation/option-1/"
+    },
+    {
+      "title": "1.1 LaTeX Installation",
+      "description": "Overview of three LaTeX installation options: TeX Live (fast), TeX Live (slow), and MiKTeX.",
+      "date": "2026-04-03",
+      "status": "completed",
+      "url": "../section-1/installation/"
+    },
+    {
+      "title": "2.2.8 Gitignore",
+      "description": "First migrated content page. Excludes files/folders from GitHub commits using .gitignore.",
+      "date": "2026-04-02",
+      "status": "completed",
+      "url": "../section-2/usage/vs-code-github/gitignore/"
+    },
+    {
+      "title": "Site skeleton",
+      "description": "Homepage, shared CSS, and folder structure set up for GitHub Pages.",
+      "date": "2026-04-02",
+      "status": "completed",
+      "url": null
+    },
+    {
+      "title": "Section 2: Usage",
+      "description": "2.1 LaTeX in VS Code, 2.2 VS Code and GitHub (all sub-pages), 2.3 Overleaf and PDF.",
+      "date": null,
+      "status": "planned",
+      "url": null
+    },
+    {
+      "title": "Section 3: Useful Tools",
+      "description": "Copilot, JabRef, Mathpix, ChatGPT.",
+      "date": null,
+      "status": "planned",
+      "url": null
+    }
+  ]
+}

@@ -725,7 +725,7 @@ function buildBreadcrumbs(page) {
     return [];
   }
 
-  const crumbs = [homes[page.lang]];
+  const crumbs = [{ title: "Home", url: "/" }];
   const section = sections.find((item) => item.key === page.section);
 
   if (section) {

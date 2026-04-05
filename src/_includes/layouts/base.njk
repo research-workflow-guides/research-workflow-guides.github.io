@@ -21,7 +21,7 @@
     {% set currentLangSwitch = currentPageUi.langSwitch if currentPageUi else langSwitch %}
     <header class="site-header" data-pagefind-ignore="all">
       <div class="wrap site-header-inner">
-        <a class="brand" href="{% if navStyle == 'legacy-en' %}/{% elif navStyle == 'legacy-ko-section' %}/ko/{% elif currentLang %}/{{ currentLang }}/{% else %}/{% endif %}">{{ site.name }}</a>
+        <a class="brand" href="/">{{ site.name }}</a>
 
         {% if navStyle == "legacy-en" %}
           <button
@@ -80,13 +80,18 @@
             Menu
           </button>
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
-            {% for item in navigation.main[currentLang] %}
-              <a
-                href="{{ item.url }}"
-                {% if currentSection == item.key %}aria-current="page"{% endif %}
-              >
-                {{ item.label }}
-              </a>
+            {% for section in navigation.sections %}
+              <div class="nav-dropdown">
+                <a
+                  href="{{ section.url[currentLang] }}"
+                  {% if currentSection == section.key %}aria-current="page"{% endif %}
+                >{{ section.title[currentLang] }}</a>
+                <div class="dropdown-menu">
+                  {% for docPage in section.pages[currentLang] %}
+                    <a href="{{ docPage.url }}">{{ docPage.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
             {% endfor %}
             {% if currentLangSwitch %}
               <a class="lang-switch" href="{{ currentLangSwitch.url }}">{{ currentLangSwitch.label }}</a>
@@ -108,21 +113,13 @@
       <div class="wrap footer-inner">
         <div>
           <p class="footer-brand">{{ site.name }}</p>
-          <p class="footer-copy">{{ site.footerNote }}</p>
+          {% if updates.latest %}
+            <p class="footer-update">Latest update: {{ updates.latest.date }}</p>
+          {% endif %}
         </div>
         <div class="footer-meta">
           <p>&copy; 2026 {{ site.authorLine }}</p>
           <a href="{{ site.oldVersionUrl }}">Old Version</a>
-          {% if updates.latest %}
-            <p class="footer-update">
-              Latest update:
-              {% if updates.latest.url %}
-                <a href="{{ updates.latest.url }}">{{ updates.latest.title }}</a>
-              {% else %}
-                <span>{{ updates.latest.title }}</span>
-              {% endif %}
-            </p>
-          {% endif %}
         </div>
       </div>
     </footer>

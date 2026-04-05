@@ -1,80 +1,89 @@
 ---
-layout: layouts/doc.njk
-title: "Recent Updates"
-description: "Recent progress on the Research Workflow Guidebook."
+layout: layouts/base.njk
+title: Recent Updates
 lang: en
-navStyle: legacy-en
-activeSection: updates
-permalink: /updates/
 langSwitch:
   url: /ko/
   label: 한국어
-eyebrow: Project Updates
-lead: Recent completed work, active work, and planned sections for the guidebook.
-breadcrumbs:
-  - title: Home
-    url: /
-  - title: Recent Updates
-toc:
-  - id: completed
-    label: Completed
-  - id: in-progress
-    label: In Progress
-  - id: planned
-    label: Planned
-meta:
-  - label: Source
-    value: updates/data.json
-  - label: Format
-    value: Server-rendered
-searchTitle: Search updates and progress notes
-prevPage:
-  title: Section 2 Usage
-  url: /section-2/
+pageClass: page-doc
 ---
-<section id="completed" class="doc-section">
-  <h2>Completed</h2>
-  {% for group in progress.completed %}
-    <div class="info-card">
-      <p class="small-note">{{ group.date | replace("-", ".") }}</p>
-      <ul>
-        {% for item in group.items %}
-          <li>
+<main class="content-shell">
+  <aside class="page-sidebar">
+    <nav class="toc-card panel" aria-label="On this page">
+      <p class="toc-title">On this page</p>
+      <a href="#completed">Completed</a>
+      <a href="#in-progress">In Progress</a>
+      <a href="#planned">Planned</a>
+    </nav>
+  </aside>
+
+  <article class="doc-content panel">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Recent Updates</span>
+    </nav>
+
+    <section class="doc-hero doc-hero-simple">
+      <div>
+        <h1>Recent Updates</h1>
+      </div>
+    </section>
+
+    <section id="completed" class="doc-section">
+      <h2>Completed</h2>
+      {% set byDate = {} %}
+      {% for item in updates.completed %}
+        <div class="info-card" style="margin-bottom:0.75rem;">
+          <p class="muted" style="font-size:0.9rem; margin:0 0 0.3rem;">{{ item.date }}</p>
+          <p style="margin:0; font-weight:600;">
             {% if item.url %}
-              <a class="text-link" href="{{ item.url }}">{{ item.title }}</a>
+              <a href="{{ item.url }}">{{ item.title }}</a>
             {% else %}
               {{ item.title }}
             {% endif %}
-            {% if item.description %}<span class="small-note"> {{ item.description }}</span>{% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  {% endfor %}
-</section>
+          </p>
+          {% if item.description %}
+            <p style="margin:0.3rem 0 0; color:var(--muted); font-size:0.95rem;">{{ item.description }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </section>
 
-<section id="in-progress" class="doc-section">
-  <h2>In Progress</h2>
-  {% if progress.inProgress.length %}
-    {% for item in progress.inProgress %}
-      <div class="info-card">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
-      </div>
+    {% set inProgress = [] %}
+    {% for item in updates.items %}
+      {% if item.status === "in-progress" %}
+        {% set inProgress = (inProgress.push(item), inProgress) %}
+      {% endif %}
     {% endfor %}
-  {% else %}
-    <div class="info-card">
-      <p>No items are currently marked as in progress.</p>
-    </div>
-  {% endif %}
-</section>
+    {% if inProgress.length %}
+      <section id="in-progress" class="doc-section">
+        <h2>In Progress</h2>
+        {% for item in updates.items %}
+          {% if item.status === "in-progress" %}
+            <div class="info-card" style="margin-bottom:0.75rem;">
+              <p style="margin:0; font-weight:600;">{{ item.title }}</p>
+              {% if item.description %}
+                <p style="margin:0.3rem 0 0; color:var(--muted); font-size:0.95rem;">{{ item.description }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </section>
+    {% endif %}
 
-<section id="planned" class="doc-section">
-  <h2>Planned</h2>
-  {% for item in progress.planned %}
-    <div class="info-card">
-      <h3>{{ item.title }}</h3>
-      <p>{{ item.description }}</p>
-    </div>
-  {% endfor %}
-</section>
+    <section id="planned" class="doc-section">
+      <h2>Planned</h2>
+      {% for item in updates.items %}
+        {% if item.status === "planned" %}
+          <div class="info-card" style="margin-bottom:0.75rem;">
+            <p style="margin:0; font-weight:600;">{{ item.title }}</p>
+            {% if item.description %}
+              <p style="margin:0.3rem 0 0; color:var(--muted); font-size:0.95rem;">{{ item.description }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </section>
+  </article>
+</main>
