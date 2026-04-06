@@ -52,18 +52,22 @@ A good commit collects one understandable change. It does not need to be huge. I
 
 <div class="doc-section-grid">
   <div>
-    <p>Write a short message that names the unit of work, then publish it with the usual push step.</p>
+    <p>Write a short message that names the unit of work before you publish anything to the remote.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
-      <figcaption>A visible commit message helps keep the history readable later.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu with Commit & Push highlighted">
-      <figcaption>After the commit is ready, push it to keep the remote history aligned.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
+    <figcaption>A visible commit message helps keep the history readable later.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>After the commit is ready, push it so the remote history stays aligned with your local work.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu with Commit & Push highlighted">
+    <figcaption>After the commit is ready, push it to keep the remote history aligned.</figcaption>
+  </figure>
 </div>
 
 ## Self-check

@@ -73,18 +73,22 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 
 <div class="doc-section-grid">
   <div>
-    <p>이 단계는 곧바로 PDF를 만들지 않습니다. 먼저 비교 결과가 반영된 새 TeX 파일인 <code>diff_version.tex</code>를 생성합니다.</p>
+    <p>이 단계는 먼저 두 입력 파일이 있는 manuscript 폴더에서 terminal을 여는 것부터 시작합니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="Terminal opened in the manuscript directory before running latexdiff">
-      <figcaption>먼저 두 입력 파일이 있는 manuscript 폴더에서 terminal을 엽니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-4.png" alt="latexdiff command executed in a terminal to produce diff_version.tex">
-      <figcaption><code>latexdiff</code>를 실행해 <code>diff_version.tex</code>를 생성합니다.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="Terminal opened in the manuscript directory before running latexdiff">
+    <figcaption>먼저 두 입력 파일이 있는 manuscript 폴더에서 terminal을 엽니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>그다음 <code>latexdiff</code>를 실행해 비교 결과가 반영된 새 TeX 파일인 <code>diff_version.tex</code>를 생성합니다.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-4.png" alt="latexdiff command executed in a terminal to produce diff_version.tex">
+    <figcaption><code>latexdiff</code>를 실행해 <code>diff_version.tex</code>를 생성합니다.</figcaption>
+  </figure>
 </div>
 
 ## Inspect diff_version.tex

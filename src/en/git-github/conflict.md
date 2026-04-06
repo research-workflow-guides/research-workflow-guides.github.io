@@ -29,18 +29,22 @@ Git stops and asks you to decide what the final text should be.
 
 <div class="doc-section-grid">
   <div>
-    <p>A common first sign is a push warning that tells you to pull first. After that, the Source Control menu is where the merge flow usually begins.</p>
+    <p>A common first sign is a push warning telling you that the remote changed and you need to pull first.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/conflict-push-warning.png" alt="VS Code warning that a push was rejected and a pull is required">
-      <figcaption>A rejected push often means the remote changed and you need to pull before continuing.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/conflict-pull-menu.png" alt="VS Code source control menu with Pull highlighted after a push warning">
-      <figcaption>Start the merge by pulling the remote changes into your local repository.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/conflict-push-warning.png" alt="VS Code warning that a push was rejected and a pull is required">
+    <figcaption>A rejected push often means the remote changed and you need to pull before continuing.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>After that warning appears, the Source Control menu is usually where the merge flow begins.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/conflict-pull-menu.png" alt="VS Code source control menu with Pull highlighted after a push warning">
+    <figcaption>Start the merge by pulling the remote changes into your local repository.</figcaption>
+  </figure>
 </div>
 
 ## Resolve one file carefully

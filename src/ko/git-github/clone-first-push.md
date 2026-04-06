@@ -32,18 +32,22 @@ cd <repository-folder>
 
 <div class="doc-section-grid">
   <div>
-    <p>GitHub에서 repository URL을 복사한 뒤, 터미널 대신 VS Code의 clone 흐름을 써도 괜찮습니다.</p>
+    <p>먼저 GitHub에서 repository URL을 복사해 clone 대상이 무엇인지 분명하게 잡습니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/clone-copy-url.png" alt="clone URL이 복사된 GitHub 저장소 화면">
-      <figcaption>GitHub code 메뉴에서 repository URL을 복사합니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/clone-command.png" alt="Clone Repository가 보이는 VS Code Source Control 패널">
-      <figcaption>VS Code Source Control 패널에서 clone 흐름을 시작할 수 있습니다.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/clone-copy-url.png" alt="clone URL이 복사된 GitHub 저장소 화면">
+    <figcaption>GitHub code 메뉴에서 repository URL을 복사합니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>그다음 터미널 대신 VS Code의 clone 흐름을 써도 괜찮습니다. 핵심은 같은 URL로 clone을 시작하는 것입니다.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/clone-command.png" alt="Clone Repository가 보이는 VS Code Source Control 패널">
+    <figcaption>VS Code Source Control 패널에서 clone 흐름을 시작할 수 있습니다.</figcaption>
+  </figure>
 </div>
 
 ## clone 안으로 project 넣기
@@ -52,18 +56,22 @@ cd <repository-folder>
 
 <div class="doc-section-grid">
   <div>
-    <p>clone 위치를 먼저 고르고, clone이 열린 뒤 그 안에 project 파일을 옮겨 넣는 순서가 가장 안전합니다.</p>
+    <p>먼저 clone을 둘 위치를 정해 local repository의 루트를 안정적으로 만듭니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="clone 위치를 고르는 폴더 선택 창">
-      <figcaption>clone을 둘 폴더를 먼저 선택합니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/clone-open-repo.png" alt="clone된 저장소가 열린 VS Code 화면">
-      <figcaption>clone이 열린 뒤 그 안에 project 파일을 옮깁니다.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="clone 위치를 고르는 폴더 선택 창">
+    <figcaption>clone을 둘 폴더를 먼저 선택합니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>clone이 열린 뒤에야 그 안으로 project 파일을 옮겨 넣어 remote와 local 이력을 같은 루트에서 맞춥니다.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/clone-open-repo.png" alt="clone된 저장소가 열린 VS Code 화면">
+    <figcaption>clone이 열린 뒤 그 안에 project 파일을 옮깁니다.</figcaption>
+  </figure>
 </div>
 
 ## 첫 commit과 push
@@ -79,18 +87,22 @@ git push origin main
 
 <div class="doc-section-grid">
   <div>
-    <p>파일이 clone 안에 들어갔다면 commit message를 적고, 일반적인 push 흐름으로 첫 history를 올립니다.</p>
+    <p>파일이 clone 안에 들어갔다면 먼저 첫 commit message를 적어 작업 단위를 분명하게 남깁니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="commit message가 입력된 VS Code Source Control 패널">
-      <figcaption>먼저 첫 commit message를 적습니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 보이는 VS Code 메뉴">
-      <figcaption>필요하다면 VS Code의 commit-and-push 흐름을 그대로 써도 됩니다.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="commit message가 입력된 VS Code Source Control 패널">
+    <figcaption>먼저 첫 commit message를 적습니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>그다음 일반적인 push 흐름으로 첫 history를 remote에 올립니다. 필요하면 VS Code의 commit-and-push 동작을 그대로 써도 됩니다.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 보이는 VS Code 메뉴">
+    <figcaption>필요하다면 VS Code의 commit-and-push 흐름을 그대로 써도 됩니다.</figcaption>
+  </figure>
 </div>
 
 ## 점검

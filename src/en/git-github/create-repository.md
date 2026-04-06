@@ -31,34 +31,42 @@ Use GitHub to create a new private repository with a clear project name. You do 
 
 <div class="doc-section-grid">
   <div>
-    <p>From your profile, move to the repositories list and use the <strong>New</strong> button to start a fresh repository.</p>
+    <p>From your profile, move to the repositories list before you try to create anything new.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="GitHub profile with the Repositories tab highlighted">
-      <figcaption>Open the repository list from your GitHub profile.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="GitHub repositories page with the New button highlighted">
-      <figcaption>Use the <strong>New</strong> button to begin the repository form.</figcaption>
-    </figure>
-  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="GitHub profile with the Repositories tab highlighted">
+    <figcaption>Open the repository list from your GitHub profile.</figcaption>
+  </figure>
 </div>
 
 <div class="doc-section-grid">
   <div>
-    <p>Choose a clear name, keep the repository private, and leave extra initialization options unchecked for the first run.</p>
+    <p>Then use the <strong>New</strong> button from that repositories page to start the repository form.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="GitHub create repository form">
-      <figcaption>Fill out the repository form with a project name and privacy setting.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="Empty GitHub repository page after creation">
-      <figcaption>An empty repository page is the expected result before the first clone and push.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="GitHub repositories page with the New button highlighted">
+    <figcaption>Use the <strong>New</strong> button to begin the repository form.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Choose a clear name, keep the repository private, and fill out only the basic form fields for the first run.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="GitHub create repository form">
+    <figcaption>Fill out the repository form with a project name and privacy setting.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>After creation, the expected result is an empty repository page that is ready for the first clone and push.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="Empty GitHub repository page after creation">
+    <figcaption>An empty repository page is the expected result before the first clone and push.</figcaption>
+  </figure>
 </div>
 
 ## Keep it simple

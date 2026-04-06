@@ -73,18 +73,22 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 
 <div class="doc-section-grid">
   <div>
-    <p>This step creates a new TeX file instead of a PDF directly. The output file is <code>diff_version.tex</code>, which still needs inspection and compilation.</p>
+    <p>This step starts in the manuscript directory where both TeX inputs are available.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="Terminal opened in the manuscript directory before running latexdiff">
-      <figcaption>Start from the manuscript directory where both TeX inputs are available.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-4.png" alt="Terminal output after running latexdiff to produce diff_version.tex">
-      <figcaption>Run <code>latexdiff</code> to generate <code>diff_version.tex</code>.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="Terminal opened in the manuscript directory before running latexdiff">
+    <figcaption>Start from the manuscript directory where both TeX inputs are available.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Then run <code>latexdiff</code> to generate <code>diff_version.tex</code>, which still needs inspection and compilation.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-4.png" alt="Terminal output after running latexdiff to produce diff_version.tex">
+    <figcaption>Run <code>latexdiff</code> to generate <code>diff_version.tex</code>.</figcaption>
+  </figure>
 </div>
 
 ## Inspect diff_version.tex

@@ -28,18 +28,22 @@ tags:
 
 <div class="doc-section-grid">
   <div>
-    <p>처음에는 VS Code 공식 사이트에 들어갔는지, 그리고 운영체제에 맞는 설치 파일을 받았는지만 확인하면 충분합니다.</p>
+    <p>먼저 VS Code 공식 홈페이지에 들어가서 올바른 다운로드 경로에 있는지만 확인합니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/1.2-1.png" alt="VS Code 홈페이지">
-      <figcaption>VS Code 공식 홈페이지에서 시작합니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/1.2-2.png" alt="VS Code 다운로드 페이지">
-      <figcaption>운영체제에 맞는 설치 파일을 선택합니다.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/1.2-1.png" alt="VS Code 홈페이지">
+    <figcaption>VS Code 공식 홈페이지에서 시작합니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>그다음 다운로드 페이지로 이동해 현재 운영체제에 맞는 설치 파일을 선택합니다.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.2-2.png" alt="VS Code 다운로드 페이지">
+    <figcaption>운영체제에 맞는 설치 파일을 선택합니다.</figcaption>
+  </figure>
 </div>
 
 ## LaTeX Workshop 설치
@@ -52,18 +56,22 @@ tags:
 
 <div class="doc-section-grid">
   <div>
-    <p>핵심 확인 화면은 Extensions 패널과 설치가 끝난 뒤의 extension 페이지 두 곳입니다.</p>
+    <p>먼저 Extensions 패널에서 <strong>LaTeX Workshop</strong>를 검색해 올바른 확장을 찾습니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/1.2-3.png" alt="LaTeX Workshop가 보이는 VS Code Extensions 패널">
-      <figcaption>Extensions 패널에서 <strong>LaTeX Workshop</strong>를 검색합니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/1.2-4.png" alt="설치가 완료된 VS Code 화면">
-      <figcaption>설치가 끝나면 VS Code가 첫 project 작업을 받을 준비가 됩니다.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/1.2-3.png" alt="LaTeX Workshop가 보이는 VS Code Extensions 패널">
+    <figcaption>Extensions 패널에서 <strong>LaTeX Workshop</strong>를 검색합니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>설치가 끝난 뒤에는 확장이 활성화됐는지 확인하고, VS Code가 첫 project 작업을 받을 준비가 됐는지 봅니다.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.2-4.png" alt="설치가 완료된 VS Code 화면">
+    <figcaption>설치가 끝나면 VS Code가 첫 project 작업을 받을 준비가 됩니다.</figcaption>
+  </figure>
 </div>
 
 ## 점검

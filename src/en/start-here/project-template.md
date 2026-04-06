@@ -32,18 +32,22 @@ Use the starter repository as your project template source.
 
 <div class="doc-section-grid">
   <div>
-    <p>Use the starter repository page as the source of truth, then open the GitHub code menu to download the ZIP archive.</p>
+    <p>Use the starter repository page as the source of truth before you download anything from GitHub.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/1.5-1.png" alt="Starter repository on GitHub">
-      <figcaption>The starter repository page shows the project you will download.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/github-code-btn.svg" alt="GitHub Code button">
-      <figcaption>Open the GitHub code menu and choose the ZIP download path.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/1.5-1.png" alt="Starter repository on GitHub">
+    <figcaption>The starter repository page shows the project you will download.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Then open the GitHub code menu and choose the ZIP download path for that repository.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/github-code-btn.svg" alt="GitHub Code button">
+    <figcaption>Open the GitHub code menu and choose the ZIP download path.</figcaption>
+  </figure>
 </div>
 
 ## Open the project in VS Code

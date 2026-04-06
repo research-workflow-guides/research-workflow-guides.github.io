@@ -52,18 +52,22 @@ git pull
 
 <div class="doc-section-grid">
   <div>
-    <p>짧은 commit message로 작업 단위를 붙잡아 두고, 그다음 일반적인 push 흐름으로 원격 history를 맞춥니다.</p>
+    <p>먼저 짧은 commit message로 지금 작업 단위를 분명하게 붙잡아 둡니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="commit message가 입력된 VS Code 화면">
-      <figcaption>commit message가 보여야 history를 나중에 따라가기 쉽습니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 강조된 VS Code 메뉴">
-      <figcaption>commit이 준비되면 push로 원격 history를 맞춥니다.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="commit message가 입력된 VS Code 화면">
+    <figcaption>commit message가 보여야 history를 나중에 따라가기 쉽습니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>그다음 push를 실행해 local에서 만든 commit을 remote history와 다시 맞춥니다.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 강조된 VS Code 메뉴">
+    <figcaption>commit이 준비되면 push로 원격 history를 맞춥니다.</figcaption>
+  </figure>
 </div>
 
 ## 점검

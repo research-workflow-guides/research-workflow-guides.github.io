@@ -35,38 +35,52 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
 
 <div class="doc-section-grid">
   <div>
-    <p>Adding collaborators and checking who has access are the two GitHub screens that matter most before shared work begins.</p>
+    <p>Before shared work begins, start from repository settings so you can manage access from the right place.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="GitHub repository page with the Settings tab highlighted">
-      <figcaption>Open the repository settings before you invite collaborators.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access page">
-      <figcaption>The access page shows who already has repository access.</figcaption>
-    </figure>
-  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="GitHub repository page with the Settings tab highlighted">
+    <figcaption>Open the repository settings before you invite collaborators.</figcaption>
+  </figure>
 </div>
 
 <div class="doc-section-grid">
   <div>
-    <p>The actual invitation flow is simple: search for the collaborator, add them, then confirm that the invitation is pending or accepted.</p>
+    <p>Then open the access page to confirm who already has repository access before you send new invitations.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="Search field for adding a collaborator on GitHub">
-      <figcaption>Search for the collaborator by username or email.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="GitHub dialog for confirming a collaborator invitation">
-      <figcaption>Confirm the invitation once the correct collaborator is selected.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="GitHub access page showing a pending collaborator invitation">
-      <figcaption>A pending invitation is a normal intermediate state before the collaborator accepts.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access page">
+    <figcaption>The access page shows who already has repository access.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>The invitation flow starts by searching for the collaborator by username or email.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="Search field for adding a collaborator on GitHub">
+    <figcaption>Search for the collaborator by username or email.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>After the correct person appears, confirm the invitation so GitHub can send access to that collaborator.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="GitHub dialog for confirming a collaborator invitation">
+    <figcaption>Confirm the invitation once the correct collaborator is selected.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>A pending invitation is a normal intermediate state before the collaborator accepts and joins the repository.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="GitHub access page showing a pending collaborator invitation">
+    <figcaption>A pending invitation is a normal intermediate state before the collaborator accepts.</figcaption>
+  </figure>
 </div>
 
 ## Keep history readable

@@ -27,18 +27,22 @@ Use one GitHub account that you can keep for research work. Avoid splitting the 
 
 <div class="doc-section-grid">
   <div>
-    <p>The two useful reference screens are the GitHub homepage and the sign-up entry page.</p>
+    <p>Start from the main GitHub homepage so you know you are entering the standard account flow.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/1.4-1.png" alt="GitHub homepage">
-      <figcaption>Start from the main GitHub homepage.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/1.4-2.png" alt="GitHub sign-up page">
-      <figcaption>Create the account from the standard sign-up flow if you do not already have one.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/1.4-1.png" alt="GitHub homepage">
+    <figcaption>Start from the main GitHub homepage.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>If you do not already have an account, move into the standard sign-up flow from there.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.4-2.png" alt="GitHub sign-up page">
+    <figcaption>Create the account from the standard sign-up flow if you do not already have one.</figcaption>
+  </figure>
 </div>
 
 ## Turn on basic security

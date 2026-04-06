@@ -29,18 +29,22 @@ Git은 어느 쪽을 최종 텍스트로 남길지 스스로 결정하지 않고
 
 <div class="doc-section-grid">
   <div>
-    <p>처음에는 "먼저 pull하라"는 push 경고가 보이는 경우가 많고, 그다음 Source Control 메뉴에서 merge 흐름을 시작하게 됩니다.</p>
+    <p>처음에는 "먼저 pull하라"는 push 경고가 보이는 경우가 많습니다. 이것은 remote가 먼저 바뀌었다는 신호일 수 있습니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/conflict-push-warning.png" alt="먼저 pull하라는 VS Code push 경고">
-      <figcaption>push가 거절되면 먼저 remote 변경을 받아와야 한다는 뜻일 수 있습니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/conflict-pull-menu.png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
-      <figcaption>보통은 pull로 merge 흐름을 먼저 시작합니다.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/conflict-push-warning.png" alt="먼저 pull하라는 VS Code push 경고">
+    <figcaption>push가 거절되면 먼저 remote 변경을 받아와야 한다는 뜻일 수 있습니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>그다음 Source Control 메뉴에서 pull을 시작하면 merge 흐름으로 들어가는 경우가 많습니다.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/conflict-pull-menu.png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
+    <figcaption>보통은 pull로 merge 흐름을 먼저 시작합니다.</figcaption>
+  </figure>
 </div>
 
 ## 파일 하나씩 해결

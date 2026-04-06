@@ -67,18 +67,22 @@ Import the existing repository from GitHub instead of uploading a ZIP copy. That
 
 <div class="doc-section-grid">
   <div>
-    <p>Start from the GitHub import entry, then choose the repository that already stores the LaTeX project. The imported Overleaf project should correspond to the same repository you use locally.</p>
+    <p>Start from the GitHub import entry rather than from a blank project or ZIP upload.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-3.png" alt="Overleaf import dialog with GitHub repository source">
-      <figcaption>Begin from the GitHub import path rather than from a blank project or ZIP upload.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-4.png" alt="Overleaf dialog for selecting a GitHub repository to import">
-      <figcaption>Select the repository that already contains the working manuscript.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-3.png" alt="Overleaf import dialog with GitHub repository source">
+    <figcaption>Begin from the GitHub import path rather than from a blank project or ZIP upload.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Then choose the repository that already stores the LaTeX project so Overleaf points to the same manuscript history you use locally.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-4.png" alt="Overleaf dialog for selecting a GitHub repository to import">
+    <figcaption>Select the repository that already contains the working manuscript.</figcaption>
+  </figure>
 </div>
 
 ## Work in Overleaf
@@ -101,18 +105,22 @@ After the browser-side edits are ready, use the GitHub integration to push those
 
 <div class="doc-section-grid">
   <div>
-    <p>The key point is round-trip consistency. Overleaf should feed changes back into the same GitHub repository so local VS Code and browser editing do not drift apart.</p>
+    <p>The first push-back checkpoint is opening the GitHub sync controls when you are ready to send browser edits back to the repository.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-6.png" alt="Overleaf GitHub integration menu for syncing project changes">
-      <figcaption>Open the GitHub sync controls when you are ready to send browser edits back to the repository.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-7.png" alt="Overleaf confirmation flow for pushing project changes to GitHub">
-      <figcaption>Finish the push-back flow so the repository history stays current.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-6.png" alt="Overleaf GitHub integration menu for syncing project changes">
+    <figcaption>Open the GitHub sync controls when you are ready to send browser edits back to the repository.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Then finish the push-back flow so the repository history stays current and local VS Code work does not drift from browser edits.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-7.png" alt="Overleaf confirmation flow for pushing project changes to GitHub">
+    <figcaption>Finish the push-back flow so the repository history stays current.</figcaption>
+  </figure>
 </div>
 
 ## Before you move on

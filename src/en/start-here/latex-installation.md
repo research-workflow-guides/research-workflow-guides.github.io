@@ -38,18 +38,22 @@ This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're co
 
 <div class="doc-section-grid">
   <div>
-    <p>The official homepage and download page are the two screens you should expect to see first.</p>
+    <p>Start from the official MiKTeX homepage so you know you are on the correct distribution site before downloading anything.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/1.1.3-1.png" alt="MiKTeX homepage">
-      <figcaption>Start from the official MiKTeX homepage.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/1.1.3-2.png" alt="MiKTeX download page">
-      <figcaption>Choose the download page that matches your platform.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-1.png" alt="MiKTeX homepage">
+    <figcaption>Start from the official MiKTeX homepage.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Then move to the download page and choose the installer that matches your operating system.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-2.png" alt="MiKTeX download page">
+    <figcaption>Choose the download page that matches your platform.</figcaption>
+  </figure>
 </div>
 
 ## Install MiKTeX
@@ -62,38 +66,52 @@ This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're co
 
 <div class="doc-section-grid">
   <div>
-    <p>The installer is straightforward. The key follow-up step is opening MiKTeX Console.</p>
+    <p>The installer itself is straightforward. The first checkpoint is simply that the setup flow starts normally.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/1.1.3-3.png" alt="MiKTeX installer window">
-      <figcaption>The standard installer flow starts here.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/1.1.3-4.png" alt="MiKTeX installation steps">
-      <figcaption>Finish the normal setup steps, then launch MiKTeX Console.</figcaption>
-    </figure>
-  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-3.png" alt="MiKTeX installer window">
+    <figcaption>The standard installer flow starts here.</figcaption>
+  </figure>
 </div>
 
 <div class="doc-section-grid">
   <div>
-    <p>Inside MiKTeX Console, update packages first, then confirm that <code>latexmk</code> is available and that on-demand installation is enabled.</p>
+    <p>Once the installer finishes, the next important action is to launch MiKTeX Console rather than stopping at the setup wizard.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/1.1.3-5.png" alt="MiKTeX Console">
-      <figcaption>Open MiKTeX Console after the installer finishes.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/1.1.3-6.png" alt="MiKTeX Console package search for latexmk">
-      <figcaption>Search for and install <code>latexmk</code> if it is missing.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package-on-demand confirmation dialog">
-      <figcaption>Keep package-on-demand enabled so missing packages can install as needed.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-4.png" alt="MiKTeX installation steps">
+    <figcaption>Finish the normal setup steps, then launch MiKTeX Console.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Inside MiKTeX Console, start by confirming that the application opens normally after installation.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-5.png" alt="MiKTeX Console">
+    <figcaption>Open MiKTeX Console after the installer finishes.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Then search for <code>latexmk</code> and install it if the package is missing from the local setup.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-6.png" alt="MiKTeX Console package search for latexmk">
+    <figcaption>Search for and install <code>latexmk</code> if it is missing.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Keep package-on-demand enabled so later document builds can add missing packages instead of blocking the workflow.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package-on-demand confirmation dialog">
+    <figcaption>Keep package-on-demand enabled so missing packages can install as needed.</figcaption>
+  </figure>
 </div>
 
 ## Platform notes

@@ -27,34 +27,42 @@ Use the official installer or the package manager that is standard on your platf
 
 <div class="doc-section-grid">
   <div>
-    <p>The official homepage and download page are enough for the first installation pass.</p>
+    <p>Start from the official Git homepage so you know you are downloading from the correct source.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/1.3-1.png" alt="Git homepage">
-      <figcaption>Start from the official Git homepage.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/1.3-2.png" alt="Git download page">
-      <figcaption>Choose the installer for your operating system.</figcaption>
-    </figure>
-  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.3-1.png" alt="Git homepage">
+    <figcaption>Start from the official Git homepage.</figcaption>
+  </figure>
 </div>
 
 <div class="doc-section-grid">
   <div>
-    <p>The default installer flow is usually fine. If you see an editor choice during setup, selecting VS Code is reasonable.</p>
+    <p>Then move to the download page and choose the installer that matches your operating system.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/1.3-3.png" alt="Git installer steps">
-      <figcaption>The installer runs through a normal sequence of setup screens.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/1.3-4.png" alt="Git installation complete">
-      <figcaption>Finish the setup and return to the terminal for verification.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/1.3-2.png" alt="Git download page">
+    <figcaption>Choose the installer for your operating system.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>The default installer flow is usually fine. First confirm that the setup wizard starts normally.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.3-3.png" alt="Git installer steps">
+    <figcaption>The installer runs through a normal sequence of setup screens.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>After the installer finishes, return to the terminal and verify that Git is now available from the command line.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.3-4.png" alt="Git installation complete">
+    <figcaption>Finish the setup and return to the terminal for verification.</figcaption>
+  </figure>
 </div>
 
 ## Set your identity

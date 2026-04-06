@@ -35,38 +35,52 @@ tags:
 
 <div class="doc-section-grid">
   <div>
-    <p>협업을 시작하기 전에 가장 중요한 GitHub 화면은 access 설정과 현재 누가 접근권한을 갖는지 보여 주는 화면입니다.</p>
+    <p>협업을 시작하기 전에는 먼저 repository settings로 가서 접근 관리 위치를 정확히 잡습니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="Settings 탭이 강조된 GitHub 저장소 화면">
-      <figcaption>먼저 repository settings로 이동합니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access 페이지">
-      <figcaption>access 페이지에서 현재 collaborator 상태를 확인할 수 있습니다.</figcaption>
-    </figure>
-  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="Settings 탭이 강조된 GitHub 저장소 화면">
+    <figcaption>먼저 repository settings로 이동합니다.</figcaption>
+  </figure>
 </div>
 
 <div class="doc-section-grid">
   <div>
-    <p>실제 초대 흐름은 단순합니다. collaborator를 검색하고 추가한 뒤, 초대가 pending인지 accepted인지 확인하면 됩니다.</p>
+    <p>그다음 access 페이지를 열어 현재 누가 collaborator인지, 누가 아직 없는지부터 확인합니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="GitHub collaborator 검색 창">
-      <figcaption>username이나 email로 collaborator를 검색합니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="GitHub collaborator 추가 확인 창">
-      <figcaption>올바른 collaborator를 선택한 뒤 초대를 보냅니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="pending invite가 보이는 GitHub access 페이지">
-      <figcaption>상대가 수락하기 전까지는 pending invitation 상태가 정상입니다.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access 페이지">
+    <figcaption>access 페이지에서 현재 collaborator 상태를 확인할 수 있습니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>실제 초대 흐름은 먼저 collaborator를 username이나 email로 검색하는 것부터 시작합니다.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="GitHub collaborator 검색 창">
+    <figcaption>username이나 email로 collaborator를 검색합니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>올바른 collaborator가 보이면 추가를 확인해 초대를 실제로 보냅니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="GitHub collaborator 추가 확인 창">
+    <figcaption>올바른 collaborator를 선택한 뒤 초대를 보냅니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>상대가 아직 수락하지 않았다면 pending invitation 상태가 보이는데, 이것은 정상적인 중간 단계입니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="pending invite가 보이는 GitHub access 페이지">
+    <figcaption>상대가 수락하기 전까지는 pending invitation 상태가 정상입니다.</figcaption>
+  </figure>
 </div>
 
 ## 읽히는 이력 유지

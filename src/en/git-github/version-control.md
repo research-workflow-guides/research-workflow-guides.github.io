@@ -51,38 +51,52 @@ Use `.gitignore` to keep those files out of commits. The goal is not to hide rea
 
 <div class="doc-section-grid">
   <div>
-    <p>A simple example is a heavy local folder that should never leave your computer. The repository view is much calmer once that folder is ignored.</p>
+    <p>Start by identifying the heavy local folder or generated files that should never leave your computer.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/gitignore/example-folder.png" alt="Example project tree with a heavy folder">
-      <figcaption>Start by identifying the local folder or generated files that should stay out of Git.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/gitignore/step1-root-file.png" alt="A new .gitignore file in the project root">
-      <figcaption>Create the <code>.gitignore</code> file in the project root.</figcaption>
-    </figure>
-  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/gitignore/example-folder.png" alt="Example project tree with a heavy folder">
+    <figcaption>Start by identifying the local folder or generated files that should stay out of Git.</figcaption>
+  </figure>
 </div>
 
 <div class="doc-section-grid">
   <div>
-    <p>After you add the ignore rule and save the file, VS Code usually makes the ignored folder visibly dimmer.</p>
+    <p>Then create the <code>.gitignore</code> file in the project root so the ignore rules live beside the manuscript files.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/gitignore/step2-ignore-entry.png" alt="A .gitignore file containing an ignore rule">
-      <figcaption>Add the folder name or pattern to <code>.gitignore</code>.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/gitignore/step2-gray-folder.png" alt="Ignored folder shown dimmed in VS Code">
-      <figcaption>The ignored folder becomes visually dimmed in the explorer.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/gitignore/step3-commit-result.png" alt="GitHub repository where the ignored folder is absent">
-      <figcaption>Ignored files stay out of the repository view after commit and push.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/gitignore/step1-root-file.png" alt="A new .gitignore file in the project root">
+    <figcaption>Create the <code>.gitignore</code> file in the project root.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Add the folder name or ignore pattern to <code>.gitignore</code> so Git knows that this path should stay local.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/gitignore/step2-ignore-entry.png" alt="A .gitignore file containing an ignore rule">
+    <figcaption>Add the folder name or pattern to <code>.gitignore</code>.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>After you save the file, VS Code usually makes the ignored folder visibly dimmer in the explorer.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/gitignore/step2-gray-folder.png" alt="Ignored folder shown dimmed in VS Code">
+    <figcaption>The ignored folder becomes visually dimmed in the explorer.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>Once the ignore rule is active, those files should stay out of the repository view even after commit and push.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/gitignore/step3-commit-result.png" alt="GitHub repository where the ignored folder is absent">
+    <figcaption>Ignored files stay out of the repository view after commit and push.</figcaption>
+  </figure>
 </div>
 
 ## Self-check

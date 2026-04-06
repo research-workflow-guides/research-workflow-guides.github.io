@@ -27,18 +27,22 @@ tags:
 
 <div class="doc-section-grid">
   <div>
-    <p>처음 확인할 화면은 GitHub 메인 페이지와 회원가입 진입 화면 두 곳이면 충분합니다.</p>
+    <p>먼저 GitHub 메인 페이지에 들어가서 표준 계정 흐름으로 들어가는지 확인합니다.</p>
   </div>
-  <div class="figure-stack">
-    <figure class="image-frame">
-      <img src="/assets/images/1.4-1.png" alt="GitHub 홈페이지">
-      <figcaption>GitHub 메인 페이지에서 시작합니다.</figcaption>
-    </figure>
-    <figure class="image-frame">
-      <img src="/assets/images/1.4-2.png" alt="GitHub 회원가입 페이지">
-      <figcaption>계정이 없다면 기본 회원가입 흐름으로 진행합니다.</figcaption>
-    </figure>
+  <figure class="image-frame">
+    <img src="/assets/images/1.4-1.png" alt="GitHub 홈페이지">
+    <figcaption>GitHub 메인 페이지에서 시작합니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-section-grid">
+  <div>
+    <p>계정이 아직 없다면 그다음 기본 회원가입 화면으로 들어가 standard sign-up 흐름을 밟습니다.</p>
   </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.4-2.png" alt="GitHub 회원가입 페이지">
+    <figcaption>계정이 없다면 기본 회원가입 흐름으로 진행합니다.</figcaption>
+  </figure>
 </div>
 
 ## 기본 보안 설정

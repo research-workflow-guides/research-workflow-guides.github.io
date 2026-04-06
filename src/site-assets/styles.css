@@ -768,6 +768,11 @@ li {
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.95fr);
   gap: 1rem;
   align-items: start;
+  margin: 1rem 0;
+}
+
+.doc-section-grid + .doc-section-grid {
+  margin-top: 1.15rem;
 }
 
 .figure-stack {
