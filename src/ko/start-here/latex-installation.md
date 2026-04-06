@@ -32,7 +32,7 @@ tags:
 
 이 가이드의 기본 배포판은 MiKTeX입니다. 초기 설치 부담이 적고, 처음 사용자에게 익숙하며, 필요한 패키지를 작업 중에 설치할 수 있습니다.
 
-이 가이드는 MiKTeX와 TeX Live를 비교하지 않습니다. 여기서는 MiKTeX를 계속 사용한다고 가정합니다.
+이 가이드에서는 MiKTeX로 설치합니다.
 
 [MiKTeX 공식 다운로드](https://miktex.org/download)
 
