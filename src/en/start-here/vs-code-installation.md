@@ -28,11 +28,11 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>Start from the official VS Code homepage so you know you are downloading from the correct source.</p>
+    <p>Download it from the VS Code website.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-1.png" alt="VS Code homepage">
-    <figcaption>Start from the official VS Code homepage.</figcaption>
+    <figcaption>Download it from the VS Code website.</figcaption>
   </figure>
 </div>
 

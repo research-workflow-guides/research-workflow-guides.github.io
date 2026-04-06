@@ -38,11 +38,11 @@ Use MiKTeX for this installation guide.
 
 <div class="doc-step-pair">
   <div>
-    <p>Start from the official MiKTeX homepage so you know you are on the correct distribution site before downloading anything.</p>
+    <p>Download it from the MiKTeX website.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-1.png" alt="MiKTeX homepage">
-    <figcaption>Start from the official MiKTeX homepage.</figcaption>
+    <figcaption>Download it from the MiKTeX website.</figcaption>
   </figure>
 </div>
 
