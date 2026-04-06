@@ -30,7 +30,7 @@ git status
 git pull
 ```
 
-아무도 remote를 바꾸지 않았다면 pull이 아무 일도 하지 않을 수 있습니다. 그것도 정상입니다.
+아무도 remote를 바꾸지 않았다면 pull은 아무 일도 하지 않습니다. 그것도 정상입니다.
 
 <figure class="image-frame">
   <img src="/assets/images/legacy/github-workflow/pull-menu.png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
@@ -39,7 +39,7 @@ git pull
 
 ## 일상 sync 루프
 
-기본 루프는 보통 다음과 같습니다.
+기본 루프는 다음과 같습니다.
 
 1. remote 변경 가능성이 있으면 pull
 2. 로컬에서 작업

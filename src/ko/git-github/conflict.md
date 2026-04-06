@@ -23,13 +23,13 @@ tags:
 ---
 ## conflict의 의미
 
-conflict는 보통 두 수정이 같은 줄이나 아주 가까운 영역을 동시에 건드릴 때 생깁니다.
+conflict는 두 수정이 같은 줄이나 같은 영역을 동시에 건드릴 때 생깁니다.
 
 Git은 어느 쪽을 최종 텍스트로 남길지 스스로 결정하지 않고 멈춰 섭니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>처음에는 "먼저 pull하라"는 push 경고가 보이는 경우가 많습니다. 이것은 remote가 먼저 바뀌었다는 신호일 수 있습니다.</p>
+    <p>처음 신호는 push 경고입니다. remote가 먼저 바뀌었으니 pull부터 하라는 뜻입니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/conflict-push-warning.png" alt="먼저 pull하라는 VS Code push 경고">
@@ -39,7 +39,7 @@ Git은 어느 쪽을 최종 텍스트로 남길지 스스로 결정하지 않고
 
 <div class="doc-step-pair">
   <div>
-    <p>그다음 Source Control 메뉴에서 pull을 시작하면 merge 흐름으로 들어가는 경우가 많습니다.</p>
+    <p>경고 후에는 Source Control 메뉴에서 merge 흐름을 시작합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/conflict-pull-menu.png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
@@ -51,7 +51,7 @@ Git은 어느 쪽을 최종 텍스트로 남길지 스스로 결정하지 않고
 
 VS Code Merge Editor나 conflict marker를 직접 보면서, 주변 문맥을 읽고 최종 텍스트가 무엇이어야 하는지 판단합니다.
 
-한쪽을 무조건 통째로 받기보다, 최종 문서가 실제로 무엇을 말해야 하는지 기준으로 정리하는 편이 안전합니다.
+최종 결과가 실제로 그래야 하는 게 아니라면 한쪽을 통째로 받지 않습니다.
 
 <figure class="image-frame">
   <img src="/assets/images/legacy/github-workflow/conflict-merge-state.png" alt="merge 진행 중인 VS Code Source Control 상태">

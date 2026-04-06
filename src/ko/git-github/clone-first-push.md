@@ -32,7 +32,7 @@ cd <repository-folder>
 
 <div class="doc-step-pair">
   <div>
-    <p>먼저 GitHub에서 repository URL을 복사해 clone 대상이 무엇인지 분명하게 잡습니다.</p>
+    <p>로컬 작업 전에 GitHub에서 repository URL을 복사합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-copy-url.png" alt="clone URL이 복사된 GitHub 저장소 화면">
@@ -42,7 +42,7 @@ cd <repository-folder>
 
 <div class="doc-step-pair">
   <div>
-    <p>그다음 터미널 대신 VS Code의 clone 흐름을 써도 괜찮습니다. 핵심은 같은 URL로 clone을 시작하는 것입니다.</p>
+    <p>터미널에 명령을 입력하는 대신 VS Code에서 clone 흐름을 직접 시작해도 됩니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-command.png" alt="Clone Repository가 보이는 VS Code Source Control 패널">
@@ -56,7 +56,7 @@ cd <repository-folder>
 
 <div class="doc-step-pair">
   <div>
-    <p>먼저 clone을 둘 위치를 정해 local repository의 루트를 안정적으로 만듭니다.</p>
+    <p>project 파일을 옮기기 전에 clone을 둘 위치를 먼저 정합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="clone 위치를 고르는 폴더 선택 창">
@@ -87,7 +87,7 @@ git push origin main
 
 <div class="doc-step-pair">
   <div>
-    <p>파일이 clone 안에 들어갔다면 먼저 첫 commit message를 적어 작업 단위를 분명하게 남깁니다.</p>
+    <p>파일이 clone 안에 들어갔다면 첫 commit message를 작성합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="commit message가 입력된 VS Code Source Control 패널">
@@ -97,7 +97,7 @@ git push origin main
 
 <div class="doc-step-pair">
   <div>
-    <p>그다음 일반적인 push 흐름으로 첫 history를 remote에 올립니다. 필요하면 VS Code의 commit-and-push 동작을 그대로 써도 됩니다.</p>
+    <p>일반 push 흐름으로 첫 commit을 올립니다. VS Code의 commit-and-push 동작이 있다면 그대로 써도 됩니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 보이는 VS Code 메뉴">

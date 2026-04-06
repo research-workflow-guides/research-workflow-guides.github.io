@@ -35,7 +35,7 @@ Git 개념을 한 번에 다 알 필요는 없습니다. 이 상태들만 구분
 
 ## status 자주 확인
 
-헷갈릴 때 가장 안전하게 먼저 실행할 명령은 `git status`입니다.
+헷갈릴 때 실행할 명령은 `git status`입니다.
 
 ```bash
 git status
@@ -51,7 +51,7 @@ git status
 
 <div class="doc-step-pair">
   <div>
-    <p>먼저 내 컴퓨터에만 남아 있어야 할 큰 폴더나 generated file이 무엇인지 식별합니다.</p>
+    <p>version control에 올리면 안 되는 큰 로컬 폴더나 generated file을 식별합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/example-folder.png" alt="heavy 폴더가 있는 예시 project 구조">

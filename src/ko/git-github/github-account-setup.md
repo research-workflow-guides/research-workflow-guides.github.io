@@ -23,11 +23,11 @@ tags:
 ---
 ## 계정 만들기 또는 확인
 
-연구 작업에 계속 사용할 GitHub 계정 하나를 정합니다. 처음 workflow를 여러 임시 계정에 나누면 나중에 관리가 더 어려워집니다.
+연구 작업용 GitHub 계정 하나를 정합니다. workflow를 여러 임시 계정에 나누면 관리가 어려워집니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>먼저 GitHub 메인 페이지에 들어가서 표준 계정 흐름으로 들어가는지 확인합니다.</p>
+    <p>GitHub 메인 페이지에서 시작합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.4-1.png" alt="GitHub 홈페이지">
@@ -37,7 +37,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>계정이 아직 없다면 그다음 기본 회원가입 화면으로 들어가 standard sign-up 흐름을 밟습니다.</p>
+    <p>계정이 없다면 그 페이지에서 회원가입합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.4-2.png" alt="GitHub 회원가입 페이지">
@@ -47,7 +47,7 @@ tags:
 
 ## 기본 보안 설정
 
-적어도 강한 비밀번호와 실제로 접근 가능한 recovery 경로를 확보합니다. 가능하다면 repository가 중요해지기 전에 two-factor authentication도 켭니다.
+강한 비밀번호와 본인이 직접 접근할 수 있는 recovery 경로를 설정합니다. 가능하다면 two-factor authentication도 켭니다.
 
 ## 프로필 정리
 

@@ -27,7 +27,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>먼저 Git 공식 홈페이지에 들어가서 올바른 다운로드 경로에 와 있는지 확인합니다.</p>
+    <p>Git 공식 홈페이지에서 시작합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-1.png" alt="Git 홈페이지">
@@ -47,7 +47,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>설치 과정은 기본값으로 진행해도 무방합니다. 먼저 setup 화면이 정상적으로 시작되는지만 확인하면 됩니다.</p>
+    <p>기본 설치 옵션으로 진행하면 됩니다. setup 화면이 정상적으로 시작되는지 확인합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-3.png" alt="Git 설치 진행">
@@ -57,7 +57,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>설치가 끝나면 터미널로 돌아가 Git 명령이 실제로 동작하는지 버전 확인으로 점검합니다.</p>
+    <p>설치가 끝나면 터미널로 돌아가 Git이 동작하는지 확인합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-4.png" alt="Git 설치 완료">

@@ -23,7 +23,7 @@ tags:
 ---
 ## 공통 리듬 합의
 
-팀은 모두가 비슷한 기본 기대를 공유할 때 훨씬 안정적으로 움직입니다.
+팀은 기본 기대를 공유할 때 안정적으로 움직입니다.
 
 - 큰 작업 전 pull
 - 의미 있는 단위로 commit
@@ -35,7 +35,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>협업을 시작하기 전에는 먼저 repository settings로 가서 접근 관리 위치를 정확히 잡습니다.</p>
+    <p>협업을 시작하기 전에 repository settings를 열어 접근을 관리합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="Settings 탭이 강조된 GitHub 저장소 화면">
@@ -45,7 +45,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>그다음 access 페이지를 열어 현재 누가 collaborator인지, 누가 아직 없는지부터 확인합니다.</p>
+    <p>access 페이지를 열어 현재 collaborator를 확인합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access 페이지">
