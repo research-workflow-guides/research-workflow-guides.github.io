@@ -32,7 +32,7 @@ tags:
 
 MiKTeX is the default distribution for this guide. It starts lightweight, works well for first-time users, and installs missing packages as you need them.
 
-This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're continuing with MiKTeX.
+Use MiKTeX for this installation guide.
 
 [Official MiKTeX downloads](https://miktex.org/download)
 
