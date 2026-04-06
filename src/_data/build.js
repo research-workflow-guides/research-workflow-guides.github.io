@@ -1,0 +1,5 @@
+module.exports = () => ({
+  assetVersion: process.env.GITHUB_SHA
+    ? process.env.GITHUB_SHA.slice(0, 7)
+    : Date.now().toString(36),
+});
