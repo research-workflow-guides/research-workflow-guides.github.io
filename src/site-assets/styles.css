@@ -762,6 +762,7 @@ li {
   background: rgba(248, 245, 239, 0.8);
 }
 
+.doc-step-pair,
 .doc-section-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -770,6 +771,7 @@ li {
   margin: 1rem 0 1.25rem;
 }
 
+.doc-step-pair > .image-frame,
 .doc-section-grid > .image-frame {
   justify-self: start;
   width: min(100%, 54rem);
@@ -783,6 +785,7 @@ li {
   margin: 1rem 0;
 }
 
+.doc-step-pair + .doc-step-pair,
 .doc-section-grid + .doc-section-grid {
   margin-top: 1.15rem;
 }

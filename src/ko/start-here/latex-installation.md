@@ -36,7 +36,7 @@ tags:
 
 [MiKTeX 공식 다운로드](https://miktex.org/download)
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>먼저 MiKTeX 공식 홈페이지에 들어가서 올바른 배포판 사이트에 와 있는지부터 확인합니다.</p>
   </div>
@@ -46,7 +46,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 다운로드 페이지로 이동해서 현재 운영체제에 맞는 설치 파일을 고릅니다.</p>
   </div>
@@ -64,7 +64,7 @@ tags:
 4. package-on-demand 옵션은 켜 둡니다.
 5. `latexmk`가 보이지 않으면 MiKTeX Console에서 설치한 뒤 진행합니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>설치 프로그램 자체는 일반적인 흐름으로 진행하면 충분합니다. 먼저 installer가 정상적으로 시작되는지만 보면 됩니다.</p>
   </div>
@@ -74,7 +74,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>설치가 끝나면 setup wizard에서 멈추지 말고 MiKTeX Console까지 열어 다음 점검으로 넘어갑니다.</p>
   </div>
@@ -84,7 +84,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>MiKTeX Console 안에서는 먼저 프로그램이 정상적으로 열리는지부터 확인합니다.</p>
   </div>
@@ -94,7 +94,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 <code>latexmk</code>가 보이지 않는지 확인하고, 없으면 Console에서 바로 검색해 설치합니다.</p>
   </div>
@@ -104,7 +104,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>이후 package-on-demand를 켜 두면 나중에 필요한 패키지가 빠졌을 때 첫 build를 덜 막히게 만들 수 있습니다.</p>
   </div>

@@ -49,7 +49,7 @@ Some files do not belong in version control, such as generated auxiliary files, 
 
 Use `.gitignore` to keep those files out of commits. The goal is not to hide real work. The goal is to stop noisy local artifacts from polluting the history.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Start by identifying the heavy local folder or generated files that should never leave your computer.</p>
   </div>
@@ -59,7 +59,7 @@ Use `.gitignore` to keep those files out of commits. The goal is not to hide rea
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then create the <code>.gitignore</code> file in the project root so the ignore rules live beside the manuscript files.</p>
   </div>
@@ -69,7 +69,7 @@ Use `.gitignore` to keep those files out of commits. The goal is not to hide rea
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Add the folder name or ignore pattern to <code>.gitignore</code> so Git knows that this path should stay local.</p>
   </div>
@@ -79,7 +79,7 @@ Use `.gitignore` to keep those files out of commits. The goal is not to hide rea
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>After you save the file, VS Code usually makes the ignored folder visibly dimmer in the explorer.</p>
   </div>
@@ -89,7 +89,7 @@ Use `.gitignore` to keep those files out of commits. The goal is not to hide rea
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Once the ignore rule is active, those files should stay out of the repository view even after commit and push.</p>
   </div>

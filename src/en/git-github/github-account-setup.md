@@ -25,7 +25,7 @@ tags:
 
 Use one GitHub account that you can keep for research work. Avoid splitting the first workflow across several temporary accounts.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Start from the main GitHub homepage so you know you are entering the standard account flow.</p>
   </div>
@@ -35,7 +35,7 @@ Use one GitHub account that you can keep for research work. Avoid splitting the 
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>If you do not already have an account, move into the standard sign-up flow from there.</p>
   </div>

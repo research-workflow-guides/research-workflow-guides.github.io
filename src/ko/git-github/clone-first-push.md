@@ -30,7 +30,7 @@ git clone <repository-url>
 cd <repository-folder>
 ```
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>먼저 GitHub에서 repository URL을 복사해 clone 대상이 무엇인지 분명하게 잡습니다.</p>
   </div>
@@ -40,7 +40,7 @@ cd <repository-folder>
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 터미널 대신 VS Code의 clone 흐름을 써도 괜찮습니다. 핵심은 같은 URL로 clone을 시작하는 것입니다.</p>
   </div>
@@ -54,7 +54,7 @@ cd <repository-folder>
 
 이미 작업 중인 파일들을 clone 폴더 안으로 옮깁니다. 전혀 다른 디렉터리에서 무리하게 push하려고 하기보다, 처음부터 remote와 local repository 이력을 같은 루트에서 맞추는 편이 더 안정적입니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>먼저 clone을 둘 위치를 정해 local repository의 루트를 안정적으로 만듭니다.</p>
   </div>
@@ -64,7 +64,7 @@ cd <repository-folder>
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>clone이 열린 뒤에야 그 안으로 project 파일을 옮겨 넣어 remote와 local 이력을 같은 루트에서 맞춥니다.</p>
   </div>
@@ -85,7 +85,7 @@ git push origin main
 
 기본 branch 이름이 `main`이 아니라면 GitHub가 만든 branch 이름을 사용합니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>파일이 clone 안에 들어갔다면 먼저 첫 commit message를 적어 작업 단위를 분명하게 남깁니다.</p>
   </div>
@@ -95,7 +95,7 @@ git push origin main
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 일반적인 push 흐름으로 첫 history를 remote에 올립니다. 필요하면 VS Code의 commit-and-push 동작을 그대로 써도 됩니다.</p>
   </div>

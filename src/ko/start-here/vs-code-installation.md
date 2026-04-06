@@ -26,7 +26,7 @@ tags:
 
 [VS Code 공식 다운로드](https://code.visualstudio.com/Download)
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>먼저 VS Code 공식 홈페이지에 들어가서 올바른 다운로드 경로에 있는지만 확인합니다.</p>
   </div>
@@ -36,7 +36,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 다운로드 페이지로 이동해 현재 운영체제에 맞는 설치 파일을 선택합니다.</p>
   </div>
@@ -54,7 +54,7 @@ tags:
 
 [VS Code Marketplace의 LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>먼저 Extensions 패널에서 <strong>LaTeX Workshop</strong>를 검색해 올바른 확장을 찾습니다.</p>
   </div>
@@ -64,7 +64,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>설치가 끝난 뒤에는 확장이 활성화됐는지 확인하고, VS Code가 첫 project 작업을 받을 준비가 됐는지 봅니다.</p>
   </div>

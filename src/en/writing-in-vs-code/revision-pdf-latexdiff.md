@@ -39,7 +39,7 @@ The guide keeps the flow narrow on purpose: prepare two TeX files, generate `dif
 
 Keep one stable snapshot of the earlier manuscript as `old_version.tex`. This file should correspond to the version you want to compare against, not just a random backup from the folder.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Name the comparison input clearly. If the old file is ambiguous, the generated diff PDF will be ambiguous too.</p>
   </div>
@@ -53,7 +53,7 @@ Keep one stable snapshot of the earlier manuscript as `old_version.tex`. This fi
 
 Save the current manuscript state as `revised_version.tex`. The two files should be comparable versions of the same document, not two unrelated drafts.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Keep the filenames explicit. The workflow is easier to audit when the old and revised inputs are clearly separated before you run the command.</p>
   </div>
@@ -71,7 +71,7 @@ Open a terminal in the directory that contains both files, then run the diff com
 latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 ```
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>This step starts in the manuscript directory where both TeX inputs are available.</p>
   </div>
@@ -81,7 +81,7 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then run <code>latexdiff</code> to generate <code>diff_version.tex</code>, which still needs inspection and compilation.</p>
   </div>
@@ -95,7 +95,7 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 
 Before compiling, open `diff_version.tex` once and confirm that the file was generated normally. A quick check here catches obvious problems earlier than a failed PDF build.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>You do not need to read every line. Just verify that the file exists, that the markup looks reasonable, and that the output corresponds to the document you meant to compare.</p>
   </div>
@@ -119,7 +119,7 @@ This should produce a PDF that highlights insertions and deletions in a reviewer
 
 Open the compiled PDF and check whether the marked changes are readable enough to send out.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>The final check is visual. Make sure the markup is understandable, equations remain readable, and the revision PDF matches the comparison you intended to show.</p>
   </div>

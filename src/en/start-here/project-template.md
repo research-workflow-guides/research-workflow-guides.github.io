@@ -30,7 +30,7 @@ Use the starter repository as your project template source.
 
 [Starter repository: research-workflow-guides/seed-documents](https://github.com/research-workflow-guides/seed-documents)
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Use the starter repository page as the source of truth before you download anything from GitHub.</p>
   </div>
@@ -40,7 +40,7 @@ Use the starter repository as your project template source.
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then open the GitHub code menu and choose the ZIP download path for that repository.</p>
   </div>

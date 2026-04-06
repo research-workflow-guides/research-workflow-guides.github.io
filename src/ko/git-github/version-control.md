@@ -49,7 +49,7 @@ git status
 
 이런 파일은 `.gitignore`로 repository 밖에 두어 이력이 불필요하게 지저분해지지 않도록 합니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>먼저 내 컴퓨터에만 남아 있어야 할 큰 폴더나 generated file이 무엇인지 식별합니다.</p>
   </div>
@@ -59,7 +59,7 @@ git status
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 project 최상위에 <code>.gitignore</code> 파일을 만들어 ignore 규칙을 둘 자리를 잡습니다.</p>
   </div>
@@ -69,7 +69,7 @@ git status
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>이제 <code>.gitignore</code>에 실제 폴더 이름이나 패턴을 적어 Git이 local clutter를 제외하게 만듭니다.</p>
   </div>
@@ -79,7 +79,7 @@ git status
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>규칙을 저장하면 VS Code에서는 보통 ignored 폴더가 explorer에서 더 흐리게 보입니다.</p>
   </div>
@@ -89,7 +89,7 @@ git status
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>이후 commit과 push를 해도 그런 파일은 GitHub 저장소 화면에 나타나지 않아야 합니다.</p>
   </div>

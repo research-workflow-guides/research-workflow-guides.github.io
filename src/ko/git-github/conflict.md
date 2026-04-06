@@ -27,7 +27,7 @@ conflict는 보통 두 수정이 같은 줄이나 아주 가까운 영역을 동
 
 Git은 어느 쪽을 최종 텍스트로 남길지 스스로 결정하지 않고 멈춰 섭니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>처음에는 "먼저 pull하라"는 push 경고가 보이는 경우가 많습니다. 이것은 remote가 먼저 바뀌었다는 신호일 수 있습니다.</p>
   </div>
@@ -37,7 +37,7 @@ Git은 어느 쪽을 최종 텍스트로 남길지 스스로 결정하지 않고
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 Source Control 메뉴에서 pull을 시작하면 merge 흐름으로 들어가는 경우가 많습니다.</p>
   </div>

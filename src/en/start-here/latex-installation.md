@@ -36,7 +36,7 @@ This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're co
 
 [Official MiKTeX downloads](https://miktex.org/download)
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Start from the official MiKTeX homepage so you know you are on the correct distribution site before downloading anything.</p>
   </div>
@@ -46,7 +46,7 @@ This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're co
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then move to the download page and choose the installer that matches your operating system.</p>
   </div>
@@ -64,7 +64,7 @@ This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're co
 4. Keep package installation on demand enabled, since that is the working assumption of this guide.
 5. Confirm that `latexmk` is available. If it is missing, install it through MiKTeX Console before continuing.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>The installer itself is straightforward. The first checkpoint is simply that the setup flow starts normally.</p>
   </div>
@@ -74,7 +74,7 @@ This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're co
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Once the installer finishes, the next important action is to launch MiKTeX Console rather than stopping at the setup wizard.</p>
   </div>
@@ -84,7 +84,7 @@ This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're co
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Inside MiKTeX Console, start by confirming that the application opens normally after installation.</p>
   </div>
@@ -94,7 +94,7 @@ This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're co
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then search for <code>latexmk</code> and install it if the package is missing from the local setup.</p>
   </div>
@@ -104,7 +104,7 @@ This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're co
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Keep package-on-demand enabled so later document builds can add missing packages instead of blocking the workflow.</p>
   </div>

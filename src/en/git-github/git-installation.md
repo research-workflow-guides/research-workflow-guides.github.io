@@ -25,7 +25,7 @@ tags:
 
 Use the official installer or the package manager that is standard on your platform. The goal is simply to make the `git` command available from the terminal and from VS Code.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Start from the official Git homepage so you know you are downloading from the correct source.</p>
   </div>
@@ -35,7 +35,7 @@ Use the official installer or the package manager that is standard on your platf
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then move to the download page and choose the installer that matches your operating system.</p>
   </div>
@@ -45,7 +45,7 @@ Use the official installer or the package manager that is standard on your platf
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>The default installer flow is usually fine. First confirm that the setup wizard starts normally.</p>
   </div>
@@ -55,7 +55,7 @@ Use the official installer or the package manager that is standard on your platf
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>After the installer finishes, return to the terminal and verify that Git is now available from the command line.</p>
   </div>

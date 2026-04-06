@@ -33,7 +33,7 @@ Teams do better when everyone uses the same basic expectations:
 
 If you are about to rename many files, reorganize a folder, or rewrite a shared section, tell the other collaborators first. Most collaboration pain comes from surprise, not from Git itself.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Before shared work begins, start from repository settings so you can manage access from the right place.</p>
   </div>
@@ -43,7 +43,7 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then open the access page to confirm who already has repository access before you send new invitations.</p>
   </div>
@@ -53,7 +53,7 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>The invitation flow starts by searching for the collaborator by username or email.</p>
   </div>
@@ -63,7 +63,7 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>After the correct person appears, confirm the invitation so GitHub can send access to that collaborator.</p>
   </div>
@@ -73,7 +73,7 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>A pending invitation is a normal intermediate state before the collaborator accepts and joins the repository.</p>
   </div>

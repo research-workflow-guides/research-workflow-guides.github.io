@@ -37,7 +37,7 @@ This is not a general Overleaf introduction. It also does not replace the local 
 
 This workflow assumes that you can use the GitHub-connected features in Overleaf Professional. If your plan does not provide that integration, stop here and stay with the local VS Code workflow instead.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Check the Overleaf project menu and account area first. The important question is whether GitHub sync is available in your current workspace.</p>
   </div>
@@ -51,7 +51,7 @@ This workflow assumes that you can use the GitHub-connected features in Overleaf
 
 Before importing a repository, connect your GitHub account inside Overleaf so the browser flow can authenticate cleanly.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Do the account-level connection once, then reuse it for later projects. This avoids repeating authorization steps every time you start a new paper.</p>
   </div>
@@ -65,7 +65,7 @@ Before importing a repository, connect your GitHub account inside Overleaf so th
 
 Import the existing repository from GitHub instead of uploading a ZIP copy. That keeps one repository history and avoids creating a disconnected browser-only project.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Start from the GitHub import entry rather than from a blank project or ZIP upload.</p>
   </div>
@@ -75,7 +75,7 @@ Import the existing repository from GitHub instead of uploading a ZIP copy. That
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then choose the repository that already stores the LaTeX project so Overleaf points to the same manuscript history you use locally.</p>
   </div>
@@ -89,7 +89,7 @@ Import the existing repository from GitHub instead of uploading a ZIP copy. That
 
 Once the repository is imported, treat Overleaf as a focused writing surface, not as a different project structure. Keep the same `main.tex`, folder layout, and manuscript files that already work locally.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Edit, compile, and review the manuscript inside Overleaf only when the browser workflow is the real convenience. Avoid restructuring files differently from the local project unless the whole team agrees.</p>
   </div>
@@ -103,7 +103,7 @@ Once the repository is imported, treat Overleaf as a focused writing surface, no
 
 After the browser-side edits are ready, use the GitHub integration to push those changes back to the repository. Then return to the normal local workflow for the next round of writing when appropriate.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>The first push-back checkpoint is opening the GitHub sync controls when you are ready to send browser edits back to the repository.</p>
   </div>
@@ -113,7 +113,7 @@ After the browser-side edits are ready, use the GitHub integration to push those
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then finish the push-back flow so the repository history stays current and local VS Code work does not drift from browser edits.</p>
   </div>

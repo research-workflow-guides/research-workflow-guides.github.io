@@ -30,7 +30,7 @@ tags:
 
 [Starter repository: research-workflow-guides/seed-documents](https://github.com/research-workflow-guides/seed-documents)
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>먼저 starter repository 페이지를 기준 화면으로 두고, 내려받을 project가 맞는지 확인합니다.</p>
   </div>
@@ -40,7 +40,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 GitHub의 code 메뉴를 열고 ZIP 다운로드 경로를 선택합니다.</p>
   </div>

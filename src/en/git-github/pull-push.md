@@ -50,7 +50,7 @@ The loop is usually:
 
 A good commit collects one understandable change. It does not need to be huge. It only needs to make sense when you read the history later.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Write a short message that names the unit of work before you publish anything to the remote.</p>
   </div>
@@ -60,7 +60,7 @@ A good commit collects one understandable change. It does not need to be huge. I
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>After the commit is ready, push it so the remote history stays aligned with your local work.</p>
   </div>

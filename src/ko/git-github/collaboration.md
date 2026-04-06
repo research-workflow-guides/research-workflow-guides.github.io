@@ -33,7 +33,7 @@ tags:
 
 파일 대량 이름 변경, 폴더 구조 재정리, 공유 섹션 대폭 수정처럼 큰 변화가 예정되어 있다면 먼저 팀에 알립니다. 협업의 대부분의 고통은 Git 자체보다 "예상하지 못한 변화"에서 옵니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>협업을 시작하기 전에는 먼저 repository settings로 가서 접근 관리 위치를 정확히 잡습니다.</p>
   </div>
@@ -43,7 +43,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 access 페이지를 열어 현재 누가 collaborator인지, 누가 아직 없는지부터 확인합니다.</p>
   </div>
@@ -53,7 +53,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>실제 초대 흐름은 먼저 collaborator를 username이나 email로 검색하는 것부터 시작합니다.</p>
   </div>
@@ -63,7 +63,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>올바른 collaborator가 보이면 추가를 확인해 초대를 실제로 보냅니다.</p>
   </div>
@@ -73,7 +73,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>상대가 아직 수락하지 않았다면 pending invitation 상태가 보이는데, 이것은 정상적인 중간 단계입니다.</p>
   </div>

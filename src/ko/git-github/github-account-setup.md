@@ -25,7 +25,7 @@ tags:
 
 연구 작업에 계속 사용할 GitHub 계정 하나를 정합니다. 처음 workflow를 여러 임시 계정에 나누면 나중에 관리가 더 어려워집니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>먼저 GitHub 메인 페이지에 들어가서 표준 계정 흐름으로 들어가는지 확인합니다.</p>
   </div>
@@ -35,7 +35,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>계정이 아직 없다면 그다음 기본 회원가입 화면으로 들어가 standard sign-up 흐름을 밟습니다.</p>
   </div>

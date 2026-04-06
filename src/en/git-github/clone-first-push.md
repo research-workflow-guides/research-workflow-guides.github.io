@@ -30,7 +30,7 @@ git clone <repository-url>
 cd <repository-folder>
 ```
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>First copy the repository URL from GitHub so the clone target is explicit before you open any local workflow.</p>
   </div>
@@ -40,7 +40,7 @@ cd <repository-folder>
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then start the clone flow in VS Code if you prefer not to paste the command manually into the terminal.</p>
   </div>
@@ -54,7 +54,7 @@ cd <repository-folder>
 
 Move the working files into the cloned folder instead of trying to push from an unrelated directory. This keeps the remote and local repository history aligned from the beginning.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Choose the destination folder for the clone before you move any project files around.</p>
   </div>
@@ -64,7 +64,7 @@ Move the working files into the cloned folder instead of trying to push from an 
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>After the clone finishes, open that cloned repository as the working folder before copying your project files into it.</p>
   </div>
@@ -85,7 +85,7 @@ git push origin main
 
 If the default branch is not `main`, use the branch name GitHub created for the repository.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Once the files are inside the clone, start by writing a clear initial commit message.</p>
   </div>
@@ -95,7 +95,7 @@ If the default branch is not `main`, use the branch name GitHub created for the 
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then publish that first history with the normal push flow, including the combined commit-and-push action if your interface offers it.</p>
   </div>

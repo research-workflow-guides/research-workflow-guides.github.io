@@ -50,7 +50,7 @@ git pull
 
 좋은 commit은 "이력이 나중에 읽혀도 이해되는 한 덩어리 변화"입니다. 거대할 필요는 없고, 읽었을 때 무슨 변화인지 분명하면 충분합니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>먼저 짧은 commit message로 지금 작업 단위를 분명하게 붙잡아 둡니다.</p>
   </div>
@@ -60,7 +60,7 @@ git pull
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 push를 실행해 local에서 만든 commit을 remote history와 다시 맞춥니다.</p>
   </div>

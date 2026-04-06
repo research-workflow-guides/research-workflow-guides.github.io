@@ -29,7 +29,7 @@ For the first workflow, one private repository for one working project is enough
 
 Use GitHub to create a new private repository with a clear project name. You do not need to add a README, `.gitignore`, or license if you want the first local push flow to stay explicit.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>From your profile, move to the repositories list before you try to create anything new.</p>
   </div>
@@ -39,7 +39,7 @@ Use GitHub to create a new private repository with a clear project name. You do 
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then use the <strong>New</strong> button from that repositories page to start the repository form.</p>
   </div>
@@ -49,7 +49,7 @@ Use GitHub to create a new private repository with a clear project name. You do 
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Choose a clear name, keep the repository private, and fill out only the basic form fields for the first run.</p>
   </div>
@@ -59,7 +59,7 @@ Use GitHub to create a new private repository with a clear project name. You do 
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>After creation, the expected result is an empty repository page that is ready for the first clone and push.</p>
   </div>

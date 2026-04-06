@@ -26,7 +26,7 @@ tags:
 
 [Official VS Code downloads](https://code.visualstudio.com/Download)
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Start from the official VS Code homepage so you know you are downloading from the correct source.</p>
   </div>
@@ -36,7 +36,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Then move to the download page and choose the installer that matches your operating system.</p>
   </div>
@@ -54,7 +54,7 @@ tags:
 
 [LaTeX Workshop on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>Use the Extensions panel to search for <strong>LaTeX Workshop</strong> inside VS Code.</p>
   </div>
@@ -64,7 +64,7 @@ tags:
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>After installation, confirm that the extension is active and that VS Code is ready for the first project workflow.</p>
   </div>

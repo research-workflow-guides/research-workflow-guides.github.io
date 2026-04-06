@@ -27,7 +27,7 @@ A conflict usually appears when two sets of changes touch the same lines or the 
 
 Git stops and asks you to decide what the final text should be.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>A common first sign is a push warning telling you that the remote changed and you need to pull first.</p>
   </div>
@@ -37,7 +37,7 @@ Git stops and asks you to decide what the final text should be.
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>After that warning appears, the Source Control menu is usually where the merge flow begins.</p>
   </div>

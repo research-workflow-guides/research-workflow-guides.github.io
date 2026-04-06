@@ -39,7 +39,7 @@ tags:
 
 먼저 이전 원고 상태를 `old_version.tex`로 따로 둡니다. 이 파일은 단순한 임시 백업이 아니라, 실제로 비교 기준이 되는 원고 상태여야 합니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>비교 기준 파일 이름이 분명해야 결과 PDF도 분명해집니다. 무엇을 기준으로 비교했는지 모호하면 revision PDF의 의미도 바로 흐려집니다.</p>
   </div>
@@ -53,7 +53,7 @@ tags:
 
 현재 원고 상태는 `revised_version.tex`로 둡니다. 두 파일은 같은 문서의 이전/현재 버전이어야지, 서로 다른 초안이면 안 됩니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>입력 파일 이름을 명확하게 나누면 이후 점검이 쉬워집니다. 실행 전에 old와 revised가 분리돼 있어야 명령과 결과를 해석하기 쉽습니다.</p>
   </div>
@@ -71,7 +71,7 @@ tags:
 latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 ```
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>이 단계는 먼저 두 입력 파일이 있는 manuscript 폴더에서 terminal을 여는 것부터 시작합니다.</p>
   </div>
@@ -81,7 +81,7 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
   </figure>
 </div>
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>그다음 <code>latexdiff</code>를 실행해 비교 결과가 반영된 새 TeX 파일인 <code>diff_version.tex</code>를 생성합니다.</p>
   </div>
@@ -95,7 +95,7 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 
 compile하기 전에 `diff_version.tex`를 한 번 열어 정상적으로 만들어졌는지 확인하세요. 이 짧은 확인만으로도 입력 파일을 잘못 넣은 경우를 빨리 잡을 수 있습니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>모든 줄을 읽을 필요는 없습니다. 파일이 실제로 생성됐는지, 표시용 markup가 대체로 정상인지, 의도한 문서를 비교한 결과가 맞는지만 보면 충분합니다.</p>
   </div>
@@ -119,7 +119,7 @@ latexmk -pdf diff_version.tex
 
 마지막으로 만들어진 PDF를 열어 수정 표시가 실제로 읽기 좋은지 확인합니다.
 
-<div class="doc-section-grid">
+<div class="doc-step-pair">
   <div>
     <p>최종 점검은 시각적인 확인입니다. 변경 표시가 지나치게 깨지지 않았는지, 수식이 읽히는지, 의도한 비교 결과가 맞는지 확인하세요.</p>
   </div>
