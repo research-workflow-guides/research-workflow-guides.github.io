@@ -118,17 +118,48 @@ Use MiKTeX for this installation guide.
 
 ### Windows
 
-Windows is the simplest path in this guide. If later workflows need Perl-based tools, install Strawberry Perl.
+For this guide, treat Windows as the default path. Install MiKTeX first, then **install Strawberry Perl as a required dependency** so later `latexmk`/`latexdiff` workflows do not fail because Perl is missing.
+
+- Strawberry Perl (official): <https://strawberryperl.com/>
+- After install, open a new terminal and verify:
+
+```powershell
+perl --version
+where perl
+latexmk -v
+```
 
 ### macOS
 
-Use the official MiKTeX installer for macOS, then verify both MiKTeX and Perl from the terminal.
+Use the official MiKTeX installer for macOS. macOS environments usually expose Perl already (`/usr/bin/perl`), but you should verify from Terminal before moving on.
+
+```bash
+perl --version
+which perl
+latexmk -v
+```
+
+If `perl` is not found, install a Perl runtime first, then rerun the checks.
 
 ### Linux
 
-Treat Linux as a supported-with-caveat path. Follow the MiKTeX documentation for your distribution and verify the toolchain carefully.
+Linux is supported, but setup details vary by distribution. Follow MiKTeX’s **official Linux installation page** for your distro and package manager, then verify the toolchain with commands below.
+
+- MiKTeX Linux install docs (official): <https://miktex.org/howto/install-miktex-unx>
+
+Recommended post-install checks:
+
+```bash
+perl --version
+which perl
+latexmk -v
+miktex --version
+```
+
+If `latexmk` is missing, install it from MiKTeX Console or your distro/MiKTeX package flow, then re-check.
 
 ## Perl requirement
+
 
 `latexmk` and `latexdiff`-style workflows both depend on Perl.
 

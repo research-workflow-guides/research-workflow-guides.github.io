@@ -118,17 +118,48 @@ tags:
 
 ### Windows
 
-이 가이드에서는 Windows 경로가 가장 단순합니다. 나중에 Perl 기반 도구가 필요하면 Strawberry Perl을 추가합니다.
+이 가이드에서는 Windows를 기본 경로로 봅니다. MiKTeX를 설치한 뒤, 이후 `latexmk`/`latexdiff` 계열 작업에서 막히지 않도록 **Strawberry Perl을 필수로 설치**해 두는 것을 권장합니다.
+
+- Strawberry Perl 공식 사이트: <https://strawberryperl.com/>
+- 설치 후 새 터미널에서 다음을 확인합니다.
+
+```powershell
+perl --version
+where perl
+latexmk -v
+```
 
 ### macOS
 
-공식 MiKTeX 설치 프로그램을 쓴 뒤, 터미널에서 MiKTeX와 Perl이 실제로 잡히는지 확인합니다.
+macOS는 공식 MiKTeX 설치 프로그램을 사용합니다. 보통 Perl이 기본 경로(`/usr/bin/perl`)에 잡혀 있지만, 진행 전에 터미널에서 직접 확인하는 것을 권장합니다.
+
+```bash
+perl --version
+which perl
+latexmk -v
+```
+
+`perl` 명령이 없으면 Perl 런타임을 먼저 설치한 뒤 다시 확인합니다.
 
 ### Linux
 
-배포판마다 설치 방식 차이가 있으므로 MiKTeX 문서를 참고하고, 핵심 명령이 동작하는지 더 꼼꼼히 확인합니다.
+Linux는 지원되지만 배포판별 설치 방식 차이가 큽니다. 따라서 배포판별 세부 단계는 MiKTeX **공식 Linux 설치 문서**를 기준으로 진행하는 것이 가장 안전합니다.
+
+- MiKTeX Linux 설치(공식): <https://miktex.org/howto/install-miktex-unx>
+
+설치 후에는 아래처럼 도구 체인을 점검하도록 문구를 넣는 것을 권장합니다.
+
+```bash
+perl --version
+which perl
+latexmk -v
+miktex --version
+```
+
+`latexmk`가 없으면 MiKTeX Console(또는 해당 배포판의 MiKTeX 패키지 흐름)에서 설치한 뒤 다시 확인합니다.
 
 ## Perl 확인
+
 
 `latexmk`와 이후 `latexdiff` 계열 작업은 Perl 기반 도구에 의존합니다.
 
