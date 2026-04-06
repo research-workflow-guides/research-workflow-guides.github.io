@@ -1,14 +1,14 @@
 ---
 layout: layouts/doc.njk
 title: VS Code Installation
-description: Install VS Code and LaTeX Workshop for the core writing workflow.
+description: Install VS Code and add the LaTeX Workshop extension.
 lang: en
 section: start-here
 order: 2
 permalink: /en/start-here/vs-code-installation/
 translationKey: start-here-vs-code-installation
 eyebrow: Step 2
-lead: Install Visual Studio Code, add LaTeX Workshop, and confirm the editor is ready for the first project.
+lead: Install VS Code, add the LaTeX Workshop extension, and confirm the editor is ready for the first project.
 toc:
   - id: install-vs-code
     label: Install VS Code
@@ -22,13 +22,13 @@ tags:
 ## Install VS Code
 
 1. Download VS Code from the official download page for your operating system.
-2. Open VS Code once after installation and confirm that the editor launches normally.
+2. Open VS Code after installation and confirm it launches without errors.
 
 [Official VS Code downloads](https://code.visualstudio.com/Download)
 
 <div class="doc-section-grid">
   <div>
-    <p>The first two checkpoints are simple: confirm that you are on the official VS Code site and that you downloaded the correct installer for your operating system.</p>
+    <p>Two quick checks: confirm you're on the official VS Code site and that you've downloaded the right installer for your OS.</p>
   </div>
   <div class="figure-stack">
     <figure class="image-frame">
@@ -46,13 +46,13 @@ tags:
 
 1. Open the Extensions panel from the left sidebar or the Command Palette.
 2. Search for **LaTeX Workshop** and install the extension published by James Yu.
-3. Keep VS Code open briefly after installation so the commands and side features can finish registering.
+3. Leave VS Code open for a moment after installation so the extension finishes registering.
 
 [LaTeX Workshop on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
 <div class="doc-section-grid">
   <div>
-    <p>The two screens that matter most are the Extensions panel and the installed extension page.</p>
+    <p>Check the Extensions panel and the installed extension page to confirm it's active.</p>
   </div>
   <div class="figure-stack">
     <figure class="image-frame">

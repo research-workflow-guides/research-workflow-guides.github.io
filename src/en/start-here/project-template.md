@@ -8,7 +8,7 @@ order: 3
 permalink: /en/start-here/project-template/
 translationKey: start-here-project-template
 eyebrow: Step 3
-lead: Download one starter project, open it in VS Code, and use it to confirm the full toolchain works.
+lead: Download the starter project, open it in VS Code, and run one build to confirm the full toolchain works.
 toc:
   - id: download-the-starter-archive
     label: Download the template
@@ -23,10 +23,10 @@ tags:
 ---
 ## Download the starter archive
 
-For this first rollout, use the existing starter repository as the project template source.
+Use the starter repository as your project template source.
 
 1. Open the starter repository and download the ZIP archive from GitHub.
-2. Unzip the archive and keep the folder intact so you can open the project structure in VS Code.
+2. Extract the archive and keep the folder intact — you'll open the entire project folder in VS Code.
 
 [Starter repository: research-workflow-guides/seed-documents](https://github.com/research-workflow-guides/seed-documents)
 
@@ -49,14 +49,14 @@ For this first rollout, use the existing starter repository as the project templ
 ## Open the project in VS Code
 
 1. Open the extracted folder in VS Code as a project, not as a single file.
-2. Use `seed-document/seed-document.tex` as the first working document inside the starter repository.
+2. Use `seed-document/seed-document.tex` as your starting point.
 
 ## Run the first build
 
 1. Trigger the build from LaTeX Workshop rather than from a manual terminal command.
-2. Open the PDF preview and confirm that the project compiles without blocking errors.
-3. Treat this as the final setup check. If the template builds, your distribution, editor, and extension are working together.
+2. Open the PDF preview and confirm the document compiles without errors.
+3. This is your final setup checkpoint. If the template builds cleanly, your distribution, editor, and extension are all working together.
 
 ## Before you move on
 
-Confirm that the starter file opens in VS Code, the build completes, and a PDF preview is available.
+Confirm that the starter file opens in VS Code, the build completes without errors, and a PDF preview appears.

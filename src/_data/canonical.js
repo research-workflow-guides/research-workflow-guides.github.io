@@ -165,7 +165,7 @@ const pages = [
     order: 1,
     group: "steps",
     title: "LaTeX Installation",
-    description: "Install MiKTeX and confirm the basic LaTeX workflow is ready.",
+    description: "Install MiKTeX and verify the base LaTeX toolchain is working.",
     translationKey: "start-here-latex-installation",
     status: "core"
   },
@@ -191,7 +191,7 @@ const pages = [
     order: 2,
     group: "steps",
     title: "VS Code Installation",
-    description: "Install VS Code and LaTeX Workshop for the core writing workflow.",
+    description: "Install VS Code and add the LaTeX Workshop extension.",
     translationKey: "start-here-vs-code-installation",
     status: "core"
   },
@@ -217,7 +217,7 @@ const pages = [
     order: 3,
     group: "steps",
     title: "Project Template",
-    description: "Open a stable starter project and confirm the first PDF build works.",
+    description: "Open the starter project, run the first build, and confirm the full toolchain works.",
     translationKey: "start-here-project-template",
     status: "core"
   },

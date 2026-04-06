@@ -1,14 +1,14 @@
 ---
 layout: layouts/doc.njk
 title: LaTeX Installation
-description: Install MiKTeX and confirm the basic LaTeX workflow is ready.
+description: Install MiKTeX and verify the base LaTeX toolchain is working.
 lang: en
 section: start-here
 order: 1
 permalink: /en/start-here/latex-installation/
 translationKey: start-here-latex-installation
 eyebrow: Step 1
-lead: Install MiKTeX, enable package-on-demand behavior, and confirm the base toolchain is available.
+lead: Install MiKTeX, enable on-demand package installation, and verify the base toolchain is ready.
 meta:
   - label: Default distribution
     value: MiKTeX
@@ -30,9 +30,9 @@ tags:
 ---
 ## Why MiKTeX
 
-For this guidebook, MiKTeX is the default distribution because it is lighter to begin with, friendly to first-time users, and able to install missing packages as you work.
+MiKTeX is the default distribution for this guide. It starts lightweight, works well for first-time users, and installs missing packages as you need them.
 
-This page is not a TeX Live comparison guide. The implementation path here assumes you will continue with MiKTeX.
+This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're continuing with MiKTeX.
 
 [Official MiKTeX downloads](https://miktex.org/download)
 
@@ -62,7 +62,7 @@ This page is not a TeX Live comparison guide. The implementation path here assum
 
 <div class="doc-section-grid">
   <div>
-    <p>The installer itself is straightforward. After installation, the important follow-up screen is MiKTeX Console.</p>
+    <p>The installer is straightforward. The key follow-up step is opening MiKTeX Console.</p>
   </div>
   <div class="figure-stack">
     <figure class="image-frame">
@@ -78,7 +78,7 @@ This page is not a TeX Live comparison guide. The implementation path here assum
 
 <div class="doc-section-grid">
   <div>
-    <p>Inside MiKTeX Console, update packages first, then check whether <code>latexmk</code> is available and keep package-on-demand enabled.</p>
+    <p>Inside MiKTeX Console, update packages first, then confirm that <code>latexmk</code> is available and that on-demand installation is enabled.</p>
   </div>
   <div class="figure-stack">
     <figure class="image-frame">
@@ -112,7 +112,7 @@ Treat Linux as a supported-with-caveat path. Follow the MiKTeX documentation for
 
 ## Perl requirement
 
-`latexmk` and later `latexdiff`-style workflows depend on Perl-based tooling.
+`latexmk` and `latexdiff`-style workflows both depend on Perl.
 
 ```bash
 perl --version
@@ -123,9 +123,9 @@ On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, veri
 
 <figure class="image-frame">
   <img src="/assets/images/1.1.3-7.png" alt="Strawberry Perl download page">
-  <figcaption>If Windows does not already provide Perl, Strawberry Perl is the usual fallback.</figcaption>
+  <figcaption>Strawberry Perl is the standard fallback for Windows.</figcaption>
 </figure>
 
 ## Before you move on
 
-Confirm that MiKTeX Console opens, `latexmk -v` works, and `perl --version` works if your setup needs Perl-based tools.
+Confirm that MiKTeX Console opens and `latexmk -v` runs without errors. If your workflow uses Perl-based tools, verify `perl --version` as well.
