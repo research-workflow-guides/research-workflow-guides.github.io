@@ -113,8 +113,9 @@
       <div class="wrap footer-inner">
         <div>
           <p class="footer-brand">{{ site.name }}</p>
-          {% if updates.latest %}
-            <p class="footer-update">Latest update: {{ updates.latest.date }}</p>
+          {% set latestFooterDate = git.latestCommitDate or (updates.latest.date if updates.latest else null) %}
+          {% if latestFooterDate %}
+            <p class="footer-update">Latest update: {{ latestFooterDate }}</p>
           {% endif %}
         </div>
         <div class="footer-meta">
