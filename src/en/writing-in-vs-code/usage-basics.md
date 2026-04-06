@@ -30,13 +30,13 @@ For most writing sessions, repeat the same four actions:
 3. Check the PDF.
 4. Return to the source and continue.
 
-The goal is not to memorize many commands. The goal is to make this loop feel normal.
+The goal is not to memorize commands — it is to make this loop feel routine.
 
 ## Use preview early
 
-Do not wait until a chapter is large before opening the PDF preview. Use preview from the beginning so layout, errors, and section flow stay visible while you write.
+Open PDF preview early, not after the document is already large. Layout issues, errors, and section flow stay visible as you write.
 
-Frequent preview checks also reduce the chance that many mistakes accumulate before you notice them.
+Frequent checks also prevent small errors from accumulating unnoticed.
 
 ## Use SyncTeX both ways
 

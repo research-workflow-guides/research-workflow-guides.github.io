@@ -8,7 +8,7 @@ order: 1
 permalink: /en/writing-in-vs-code/folder-setup/
 translationKey: writing-folder-setup
 eyebrow: Topic 1
-lead: Open the project as one folder, keep the root stable, and avoid starting the writing loop from the wrong location.
+lead: Open the whole project folder in VS Code, not a single file. Keep the root stable and always build from the correct location.
 toc:
   - id: open-the-project-root
     label: Open the project root
@@ -29,7 +29,7 @@ When the root folder is open, LaTeX Workshop, search, file references, and sourc
 
 ## Keep one stable folder shape
 
-Use one predictable structure for the working project:
+Keep one predictable structure for the working project:
 
 - root folder for the repository or paper project
 - a main `.tex` file near the root or in one clearly named subfolder
@@ -45,5 +45,5 @@ If LaTeX Workshop cannot find the main file, the problem is often the folder you
 
 ## Self-check
 
-Confirm that the Explorer shows the whole project, the main `.tex` file is inside that tree, and the build commands are running against the intended project root.
+Confirm that the Explorer shows the whole project, the main `.tex` file is inside that tree, and builds are running against the intended root.
 
