@@ -55,11 +55,11 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>입력 파일 이름을 명확하게 나누면 이후 점검이 쉬워집니다. 실행 전에 old와 revised가 분리돼 있어야 명령과 결과를 해석하기 쉽습니다.</p>
+    <p>이전 버전과 현재 버전은 분리된 비교 입력으로 두세요. 실행 전에 현재 원고 파일이 따로 구분되어 있어야 결과를 해석하기 쉽습니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-2.png" alt="Example current manuscript file saved as revised_version.tex">
-    <figcaption>현재 원고 상태를 <code>revised_version.tex</code>로 둡니다.</figcaption>
+    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-2.png" alt="latexdiff 실행 전에 현재 원고 파일을 따로 준비한 화면">
+    <figcaption>현재 원고를 이전 버전과 분리된 비교 파일로 준비합니다.</figcaption>
   </figure>
 </div>
 
@@ -73,11 +73,11 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 
 <div class="doc-step-pair">
   <div>
-    <p>이 단계는 먼저 두 입력 파일이 있는 manuscript 폴더에서 terminal을 여는 것부터 시작합니다.</p>
+    <p>이 단계는 먼저 두 비교 입력이 있는 manuscript project에서 terminal을 여는 것부터 시작합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="Terminal opened in the manuscript directory before running latexdiff">
-    <figcaption>먼저 두 입력 파일이 있는 manuscript 폴더에서 terminal을 엽니다.</figcaption>
+    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="VS Code command palette에서 Create New Terminal을 선택하는 화면">
+    <figcaption>diff 명령을 실행하기 전에 manuscript project에서 terminal을 엽니다.</figcaption>
   </figure>
 </div>
 
@@ -93,15 +93,15 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 
 ## Inspect diff_version.tex
 
-compile하기 전에 `diff_version.tex`를 한 번 열어 정상적으로 만들어졌는지 확인하세요. 이 짧은 확인만으로도 입력 파일을 잘못 넣은 경우를 빨리 잡을 수 있습니다.
+compile하기 전에 `diff_version.tex`가 실제로 생성됐는지 확인하고, 필요할 때만 가볍게 열어보세요. 이 짧은 확인만으로도 입력 파일을 잘못 넣은 경우를 빨리 잡을 수 있습니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>모든 줄을 읽을 필요는 없습니다. 파일이 실제로 생성됐는지, 표시용 markup가 대체로 정상인지, 의도한 문서를 비교한 결과가 맞는지만 보면 충분합니다.</p>
+    <p>모든 줄을 읽을 필요는 없습니다. 먼저 diff 파일이 project 안에 생성됐는지 확인하고, 필요하면 그다음에만 빠르게 내용을 점검하면 충분합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-5.png" alt="Generated diff_version.tex opened for inspection in an editor">
-    <figcaption>compile 전에 <code>diff_version.tex</code>를 한 번 열어 확인합니다.</figcaption>
+    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-5.png" alt="project 안에 생성된 diff_version 파일이 보이는 화면">
+    <figcaption>생성된 diff 파일이 project 안에 나타나는지 먼저 확인합니다.</figcaption>
   </figure>
 </div>
 

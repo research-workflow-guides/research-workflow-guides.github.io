@@ -55,11 +55,11 @@ Save the current manuscript state as `revised_version.tex`. The two files should
 
 <div class="doc-step-pair">
   <div>
-    <p>Keep the filenames explicit. The workflow is easier to audit when the old and revised inputs are clearly separated before you run the command.</p>
+    <p>Keep the revised manuscript separate from the old snapshot. What matters here is that the current comparison input is clearly distinguishable before you run the command.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-2.png" alt="Example revised manuscript file saved as revised_version.tex">
-    <figcaption>Save the current manuscript state as <code>revised_version.tex</code>.</figcaption>
+    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-2.png" alt="Current manuscript file prepared separately before running latexdiff">
+    <figcaption>Keep the current manuscript as a separate comparison file before running the diff.</figcaption>
   </figure>
 </div>
 
@@ -73,11 +73,11 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 
 <div class="doc-step-pair">
   <div>
-    <p>This step starts in the manuscript directory where both TeX inputs are available.</p>
+    <p>This step starts by opening a terminal from the manuscript project where both comparison inputs are available.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="Terminal opened in the manuscript directory before running latexdiff">
-    <figcaption>Start from the manuscript directory where both TeX inputs are available.</figcaption>
+    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="VS Code command palette with the Create New Terminal action">
+    <figcaption>Open a terminal from the manuscript project before running the diff command.</figcaption>
   </figure>
 </div>
 
@@ -93,15 +93,15 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 
 ## Inspect diff_version.tex
 
-Before compiling, open `diff_version.tex` once and confirm that the file was generated normally. A quick check here catches obvious problems earlier than a failed PDF build.
+Before compiling, confirm that `diff_version.tex` was generated normally and open it only if you need a quick sanity check. A quick check here catches obvious problems earlier than a failed PDF build.
 
 <div class="doc-step-pair">
   <div>
-    <p>You do not need to read every line. Just verify that the file exists, that the markup looks reasonable, and that the output corresponds to the document you meant to compare.</p>
+    <p>You do not need to read every line. First verify that the generated diff file appears in the project, then open it only if you need a quick inspection.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-5.png" alt="Generated diff_version.tex opened in an editor after running latexdiff">
-    <figcaption>Open <code>diff_version.tex</code> once before you compile it.</figcaption>
+    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-5.png" alt="Project folder showing the generated diff_version file">
+    <figcaption>Confirm that the generated diff file appears in the project.</figcaption>
   </figure>
 </div>
 

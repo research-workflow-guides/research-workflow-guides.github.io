@@ -35,29 +35,29 @@ This is not a general Overleaf introduction. It also does not replace the local 
 
 ## Professional requirement
 
-This workflow assumes that you can use the GitHub-connected features in Overleaf Professional. If your plan does not provide that integration, stop here and stay with the local VS Code workflow instead.
+This workflow assumes that your account or workspace already exposes the GitHub-connected features available in Overleaf Professional. If you cannot see those controls, stop here and stay with the local VS Code workflow instead.
 
 <div class="doc-step-pair">
   <div>
-    <p>Check the Overleaf project menu and account area first. The important question is whether GitHub sync is available in your current workspace.</p>
+    <p>Check the account area first. The practical question here is whether the account shows the professional access and workspace context that this GitHub-connected workflow depends on.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-1.png" alt="Overleaf project menu showing GitHub synchronization options">
-    <figcaption>Confirm that the project menu exposes the GitHub-connected workflow you plan to use.</figcaption>
+    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-1.png" alt="Overleaf account settings showing professional status">
+    <figcaption>Check the account area for the professional access this workflow relies on.</figcaption>
   </figure>
 </div>
 
 ## Link GitHub in Overleaf
 
-Before importing a repository, connect your GitHub account inside Overleaf so the browser flow can authenticate cleanly.
+Before importing a repository, open Overleaf's synchronization settings and confirm that GitHub Sync is available for the current project. If the account is not linked yet, this is the place to manage that connection.
 
 <div class="doc-step-pair">
   <div>
-    <p>Do the account-level connection once, then reuse it for later projects. This avoids repeating authorization steps every time you start a new paper.</p>
+    <p>This screen is mainly a status and management checkpoint. What matters is whether GitHub Sync is available here for the account or project you plan to use.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-2.png" alt="Overleaf settings page for connecting a GitHub account">
-    <figcaption>Link the GitHub account in Overleaf before trying to import the repository.</figcaption>
+    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-2.png" alt="Overleaf project synchronization page showing GitHub Sync availability">
+    <figcaption>Use the synchronization page to confirm that GitHub Sync is available for the project.</figcaption>
   </figure>
 </div>
 

@@ -53,14 +53,14 @@ Use the VS Code Merge Editor or the conflict markers directly. Read the surround
 
 Do not rush to accept everything from one side unless that really is the correct outcome.
 
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/conflict-merge-state.png" alt="VS Code source control panel during a merge with merge changes shown">
+  <figcaption>While conflicts remain, the repository stays in a merge-in-progress state until you resolve each one.</figcaption>
+</figure>
+
 ## Finish the merge cleanly
 
 After resolving the file, confirm the conflict markers are gone, stage the file, and finish the merge commit or re-run the normal commit flow.
-
-<figure class="image-frame">
-  <img src="/assets/images/legacy/github-workflow/conflict-merge-state.png" alt="VS Code source control panel during a merge with merge changes shown">
-  <figcaption>The repository should return to a normal staged state after you resolve the merge and finish the commit.</figcaption>
-</figure>
 
 ## Self-check
 

@@ -66,51 +66,51 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>설치 프로그램 자체는 일반적인 흐름으로 진행하면 충분합니다. 먼저 installer가 정상적으로 시작되는지만 보면 됩니다.</p>
+    <p>설치 프로그램 자체는 일반적인 흐름으로 진행하면 충분합니다. 먼저 setup wizard가 오류 없이 끝나는지 확인하는 것이 중요합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.1.3-3.png" alt="MiKTeX 설치 화면">
-    <figcaption>MiKTeX 설치는 일반적인 installer 흐름으로 시작합니다.</figcaption>
+    <img src="/assets/images/1.1.3-3.png" alt="MiKTeX setup wizard 완료 화면">
+    <figcaption>MiKTeX setup wizard가 오류 없이 끝나야 합니다.</figcaption>
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>설치가 끝나면 setup wizard에서 멈추지 말고 MiKTeX Console까지 열어 다음 점검으로 넘어갑니다.</p>
+    <p>설치 후에는 MiKTeX Console에서 <code>latexmk</code>를 검색해, 설치 대상이 보이는지부터 확인합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.1.3-4.png" alt="MiKTeX 설치 단계">
-    <figcaption>설치를 마친 뒤 MiKTeX Console을 실행합니다.</figcaption>
+    <img src="/assets/images/1.1.3-4.png" alt="MiKTeX Console에서 latexmk를 검색한 화면">
+    <figcaption>MiKTeX Console에서 <code>latexmk</code>를 검색합니다.</figcaption>
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>MiKTeX Console 안에서는 먼저 프로그램이 정상적으로 열리는지부터 확인합니다.</p>
+    <p><code>latexmk</code>가 없으면 MiKTeX가 패키지를 내려받아 설치할 때까지 기다립니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.1.3-5.png" alt="MiKTeX Console">
-    <figcaption>설치가 끝나면 MiKTeX Console을 엽니다.</figcaption>
+    <img src="/assets/images/1.1.3-5.png" alt="MiKTeX 패키지 설치 진행 창">
+    <figcaption>패키지 설치가 끝날 때까지 진행 창을 확인합니다.</figcaption>
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>그다음 <code>latexmk</code>가 보이지 않는지 확인하고, 없으면 Console에서 바로 검색해 설치합니다.</p>
+    <p>나중에 build가 멈춘 것처럼 보이면 MiKTeX 패키지 설치 창이 editor 뒤에 숨어 있는지 먼저 확인하세요.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.1.3-6.png" alt="MiKTeX Console에서 latexmk 검색">
-    <figcaption><code>latexmk</code>가 없다면 Console에서 검색해 설치합니다.</figcaption>
+    <img src="/assets/images/1.1.3-7.png" alt="editor 뒤에 숨어 있는 MiKTeX 패키지 설치 창 미리보기">
+    <figcaption>build가 멈추면 editor 뒤에 MiKTeX 설치 창이 숨어 있지 않은지 확인합니다.</figcaption>
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>이후 package-on-demand를 켜 두면 나중에 필요한 패키지가 빠졌을 때 첫 build를 덜 막히게 만들 수 있습니다.</p>
+    <p>설치 창이 나타나면 누락된 패키지를 설치하도록 허용해야 build가 계속 진행됩니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package-on-demand 확인 창">
-    <figcaption>필요한 패키지가 자동 설치되도록 package-on-demand를 켜 둡니다.</figcaption>
+    <img src="/assets/images/1.1.3-8.png" alt="누락된 패키지에 대한 MiKTeX 설치 대화상자">
+    <figcaption>누락된 패키지를 설치하라는 창이 뜨면 설치를 허용합니다.</figcaption>
   </figure>
 </div>
 
@@ -140,7 +140,7 @@ latexmk -v
 Windows에서는 Perl이 없으면 Strawberry Perl을 설치합니다. macOS와 Linux는 기본 Perl이 있는지 먼저 확인합니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/1.1.3-7.png" alt="Strawberry Perl 다운로드 페이지">
+  <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl 다운로드 페이지">
   <figcaption>Windows에 Perl이 없다면 Strawberry Perl을 함께 설치합니다.</figcaption>
 </figure>
 

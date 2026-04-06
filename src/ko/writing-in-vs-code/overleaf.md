@@ -35,29 +35,29 @@ tags:
 
 ## Professional requirement
 
-이 흐름은 Overleaf Professional의 GitHub 연동 기능을 사용할 수 있다는 전제를 둡니다. 현재 요금제나 workspace에서 이 기능을 쓸 수 없다면, 여기서는 멈추고 로컬 VS Code 흐름을 유지하는 편이 낫습니다.
+이 흐름은 현재 계정이나 workspace에서 Overleaf Professional의 GitHub 연동 기능이 실제로 보인다는 전제를 둡니다. 그 제어 메뉴가 보이지 않으면, 여기서는 멈추고 로컬 VS Code 흐름을 유지하는 편이 낫습니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>먼저 Overleaf project 메뉴와 계정 영역에서 GitHub sync 기능이 실제로 보이는지 확인하세요. 이 기능이 없으면 이후 단계가 이어지지 않습니다.</p>
+    <p>먼저 account 영역을 확인하세요. 여기서는 GitHub 연동 workflow를 쓸 수 있는 professional access와 workspace 맥락이 실제로 잡혀 있는지가 중요합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-1.png" alt="GitHub synchronization options shown in the Overleaf project menu">
-    <figcaption>먼저 Overleaf 안에서 GitHub 연동 흐름을 사용할 수 있는지 확인합니다.</figcaption>
+    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-1.png" alt="professional 상태가 보이는 Overleaf account settings 화면">
+    <figcaption>이 workflow에 필요한 professional access가 account 영역에 잡혀 있는지 확인합니다.</figcaption>
   </figure>
 </div>
 
 ## Link GitHub in Overleaf
 
-repository를 가져오기 전에 Overleaf 안에서 GitHub 계정을 먼저 연결합니다. 이 연결을 한 번 해두면 이후 project에서도 같은 인증 흐름을 재사용하기 쉽습니다.
+repository를 가져오기 전에 Overleaf의 synchronization 설정을 열고, 현재 project에서 GitHub Sync를 사용할 수 있는지 확인합니다. 아직 연결되지 않았다면 이 화면에서 그 상태를 관리합니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>계정 수준의 연결을 먼저 마치면, project마다 인증을 다시 반복하지 않아도 됩니다. 브라우저 기반 작성 환경을 써도 repository 기준 작업 흐름을 유지하는 데 도움이 됩니다.</p>
+    <p>이 화면은 새 연결 마법사라기보다 상태 확인과 관리 지점에 가깝습니다. 현재 account나 project에서 GitHub Sync가 실제로 가능한지가 핵심입니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-2.png" alt="Overleaf account settings page for linking GitHub">
-    <figcaption>repository를 import하기 전에 Overleaf 계정에서 GitHub를 먼저 연결합니다.</figcaption>
+    <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-2.png" alt="GitHub Sync 사용 가능 여부가 보이는 Overleaf synchronization 화면">
+    <figcaption>이 synchronization 화면에서 GitHub Sync를 사용할 수 있는지 확인합니다.</figcaption>
   </figure>
 </div>
 

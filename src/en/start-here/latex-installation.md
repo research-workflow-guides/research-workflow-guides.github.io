@@ -66,51 +66,51 @@ This guide doesn't compare MiKTeX with TeX Live. The steps here assume you're co
 
 <div class="doc-step-pair">
   <div>
-    <p>The installer itself is straightforward. The first checkpoint is simply that the setup flow starts normally.</p>
+    <p>The installer itself is straightforward. The first real checkpoint is that the setup wizard reaches its completion screen without errors.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.1.3-3.png" alt="MiKTeX installer window">
-    <figcaption>The standard installer flow starts here.</figcaption>
+    <img src="/assets/images/1.1.3-3.png" alt="MiKTeX setup wizard completion screen">
+    <figcaption>The MiKTeX setup wizard should complete without errors.</figcaption>
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>Once the installer finishes, the next important action is to launch MiKTeX Console rather than stopping at the setup wizard.</p>
+    <p>After setup, search for <code>latexmk</code> in MiKTeX Console and confirm that the package is available for installation.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.1.3-4.png" alt="MiKTeX installation steps">
-    <figcaption>Finish the normal setup steps, then launch MiKTeX Console.</figcaption>
+    <img src="/assets/images/1.1.3-4.png" alt="MiKTeX Console package search for latexmk">
+    <figcaption>Search for <code>latexmk</code> in MiKTeX Console.</figcaption>
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>Inside MiKTeX Console, start by confirming that the application opens normally after installation.</p>
+    <p>If <code>latexmk</code> is missing, let MiKTeX install it and wait for the package operation to finish.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.1.3-5.png" alt="MiKTeX Console">
-    <figcaption>Open MiKTeX Console after the installer finishes.</figcaption>
+    <img src="/assets/images/1.1.3-5.png" alt="MiKTeX package installation progress window">
+    <figcaption>Wait for the package installation to finish.</figcaption>
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>Then search for <code>latexmk</code> and install it if the package is missing from the local setup.</p>
+    <p>If a build seems to pause later, look for the MiKTeX package-install prompt. On Windows it can appear behind the editor or as a small hidden dialog preview.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.1.3-6.png" alt="MiKTeX Console package search for latexmk">
-    <figcaption>Search for and install <code>latexmk</code> if it is missing.</figcaption>
+    <img src="/assets/images/1.1.3-7.png" alt="VS Code with a hidden MiKTeX package installation prompt preview">
+    <figcaption>If the build pauses, check whether a MiKTeX package-install dialog is waiting behind the editor.</figcaption>
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>Keep package-on-demand enabled so later document builds can add missing packages instead of blocking the workflow.</p>
+    <p>When the package dialog appears, allow MiKTeX to install the missing package so the build can continue.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package-on-demand confirmation dialog">
-    <figcaption>Keep package-on-demand enabled so missing packages can install as needed.</figcaption>
+    <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package installation dialog for a missing package">
+    <figcaption>Allow MiKTeX to install the missing package when prompted.</figcaption>
   </figure>
 </div>
 
@@ -140,7 +140,7 @@ latexmk -v
 On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, verify that Perl is already available before you proceed.
 
 <figure class="image-frame">
-  <img src="/assets/images/1.1.3-7.png" alt="Strawberry Perl download page">
+  <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl download page">
   <figcaption>Strawberry Perl is the standard fallback for Windows.</figcaption>
 </figure>
 
