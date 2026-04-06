@@ -32,7 +32,67 @@ Create snippets only for patterns you type constantly:
 
 If a snippet is used once a month, it probably does not belong in the core set.
 
+<div class="doc-step-pair">
+  <div>
+    <p>Start from the Command Palette and open the user snippet flow instead of creating random JSON files by hand.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/snippets/configure-user-snippets.png" alt="VS Code Command Palette showing Snippets Configure User Snippets">
+    <figcaption>Use <strong>Configure User Snippets</strong> to begin the snippet setup flow.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>Then search for the LaTeX snippet target so the snippet file is attached to the language you actually use for manuscript work.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/snippets/search-latex-snippet-target.png" alt="VS Code snippet target search with latex typed in the filter box">
+    <figcaption>Search for the LaTeX snippet target before creating or opening a snippet file.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>If a LaTeX snippet file already exists, open that existing file instead of scattering duplicate snippet files across the system.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/snippets/choose-latex-json.png" alt="VS Code prompt showing latex.json as the existing LaTeX snippets file">
+    <figcaption>Choose the existing <code>latex.json</code> snippet file when it is already available.</figcaption>
+  </figure>
+</div>
+
 ## Example snippet
+
+<div class="doc-step-pair">
+  <div>
+    <p>If you need to inspect the files directly, the Windows example below shows the <code>%APPDATA%\\Code\\User\\snippets</code> folder where user snippets are stored.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/snippets/snippets-folder-path.png" alt="Windows File Explorer showing the AppData Code User snippets path">
+    <figcaption>The user snippet files live in the VS Code <code>snippets</code> folder.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>Inside that folder, confirm that the LaTeX snippet file exists and is the file you plan to keep editing.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/snippets/latex-snippet-file.png" alt="Windows File Explorer showing the latex snippet file inside the VS Code snippets folder">
+    <figcaption>Check that the LaTeX snippet file is present in the snippets folder.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>Once the file is open, keep the snippet set short and readable so future edits stay easy.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/snippets/edit-latex-json.png" alt="VS Code editor with latex.json open for snippet editing">
+    <figcaption>Edit <code>latex.json</code> directly once you know it is the correct snippet file.</figcaption>
+  </figure>
+</div>
 
 ```json
 {
@@ -56,4 +116,3 @@ Large snippet files become their own maintenance burden. Start with a small set 
 ## Self-check
 
 Confirm that your snippets speed up common LaTeX patterns and that you still understand the structure they expand into.
-

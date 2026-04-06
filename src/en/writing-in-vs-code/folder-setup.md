@@ -27,9 +27,49 @@ Open the whole project folder in VS Code, not just a single `.tex` file.
 
 When the root folder is open, LaTeX Workshop, search, file references, and source control all see the same workspace boundary.
 
+<div class="doc-step-pair">
+  <div>
+    <p>If VS Code still opens to an empty window, start from <strong>Open Folder</strong> rather than from a single recent file.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/connect-open-folder-button.png" alt="VS Code empty window with the Open Folder button visible">
+    <figcaption>Begin by opening a folder, not by working from an empty window.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>In the folder picker, choose the actual project root that contains the manuscript and its supporting files.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/connect-select-project-folder.png" alt="Windows folder picker with the Seed document project folder selected">
+    <figcaption>Select the project root you intend to build from.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>If VS Code shows a trust prompt, allow the workspace only when it is your own project folder and you want the editor features fully enabled.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/connect-trust-folder.png" alt="VS Code trust prompt asking whether to trust the authors of the opened folder">
+    <figcaption>Trust the project folder so the full workspace features can load.</figcaption>
+  </figure>
+</div>
+
 ## Keep one stable folder shape
 
 Keep one predictable structure for the working project:
+
+<div class="doc-step-pair">
+  <div>
+    <p>After the folder opens, the Explorer should show one stable workspace tree rather than scattered files from different locations.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/connect-workspace-ready.png" alt="VS Code open project workspace after the folder is loaded">
+    <figcaption>The working result is one open project workspace with the manuscript files inside it.</figcaption>
+  </figure>
+</div>
 
 - root folder for the repository or paper project
 - a main `.tex` file near the root or in one clearly named subfolder
@@ -46,4 +86,3 @@ If LaTeX Workshop cannot find the main file, the problem is often the folder you
 ## Self-check
 
 Confirm that the Explorer shows the whole project, the main `.tex` file is inside that tree, and builds are running against the intended root.
-

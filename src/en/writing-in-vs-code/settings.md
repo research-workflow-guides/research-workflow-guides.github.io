@@ -27,9 +27,49 @@ Avoid building a giant `settings.json` on day one. A smaller file is easier to u
 
 Focus on build stability, auto-clean behavior, and predictable PDF preview.
 
+<div class="doc-step-pair">
+  <div>
+    <p>Start from the Command Palette and open your user settings. This keeps the first changes explicit and easy to undo.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/settings/open-user-settings.png" alt="VS Code Command Palette showing Preferences Open User Settings">
+    <figcaption>Open the user settings before changing LaTeX-related defaults.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>If you prefer to inspect the settings files directly, first locate the VS Code <code>Code/User</code> folder for your operating system. The screenshot below shows the Windows location.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/settings/code-user-folder.png" alt="Windows File Explorer opened to the VS Code Code User folder">
+    <figcaption>The user-level VS Code settings live in the <code>Code/User</code> folder.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>Inside that folder, confirm where <code>settings.json</code> and <code>keybindings.json</code> live so you know what file you are editing.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="Windows File Explorer showing settings and keybindings files inside the VS Code user folder">
+    <figcaption>Look for <code>settings</code> and <code>keybindings</code> in the VS Code user folder.</figcaption>
+  </figure>
+</div>
+
 ## Useful defaults
 
 The most practical early settings are:
+
+<div class="doc-step-pair">
+  <div>
+    <p>Inside Settings, narrow the view to LaTeX Workshop before you start changing values. This keeps you focused on the settings that actually affect the writing loop.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/settings/search-latex-workshop-settings.png" alt="VS Code Settings filtered to LaTeX Workshop extension settings">
+    <figcaption>Filter the settings view to LaTeX Workshop before editing values.</figcaption>
+  </figure>
+</div>
 
 - keep PDF preview behavior stable
 - choose a clear cleanup policy
