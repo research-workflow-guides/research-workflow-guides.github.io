@@ -23,13 +23,13 @@ tags:
 ---
 ## What a conflict means
 
-A conflict usually appears when two sets of changes touch the same lines or the same small region of a file.
+A conflict appears when two sets of changes touch the same lines or the same small region of a file.
 
 Git stops and asks you to decide what the final text should be.
 
 <div class="doc-step-pair">
   <div>
-    <p>A common first sign is a push warning telling you that the remote changed and you need to pull first.</p>
+    <p>A common first sign is a push warning: the remote changed and you need to pull first.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/conflict-push-warning.png" alt="VS Code warning that a push was rejected and a pull is required">
@@ -39,7 +39,7 @@ Git stops and asks you to decide what the final text should be.
 
 <div class="doc-step-pair">
   <div>
-    <p>After that warning appears, the Source Control menu is usually where the merge flow begins.</p>
+    <p>After that warning, start the merge flow from the Source Control menu.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/conflict-pull-menu.png" alt="VS Code source control menu with Pull highlighted after a push warning">
@@ -51,7 +51,7 @@ Git stops and asks you to decide what the final text should be.
 
 Use the VS Code Merge Editor or the conflict markers directly. Read the surrounding lines, decide what should remain, and keep the final text consistent.
 
-Do not rush to accept everything from one side unless that really is the correct outcome.
+Do not accept everything from one side unless that is the correct outcome.
 
 <figure class="image-frame">
   <img src="/assets/images/legacy/github-workflow/conflict-merge-state.png" alt="VS Code source control panel during a merge with merge changes shown">

@@ -32,7 +32,7 @@ cd <repository-folder>
 
 <div class="doc-step-pair">
   <div>
-    <p>First copy the repository URL from GitHub so the clone target is explicit before you open any local workflow.</p>
+    <p>Copy the repository URL from GitHub before opening any local workflow.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-copy-url.png" alt="GitHub repository page with the clone URL copied">
@@ -42,7 +42,7 @@ cd <repository-folder>
 
 <div class="doc-step-pair">
   <div>
-    <p>Then start the clone flow in VS Code if you prefer not to paste the command manually into the terminal.</p>
+    <p>You can also start the clone flow directly from VS Code instead of pasting the command in the terminal.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-command.png" alt="VS Code source control panel with Clone Repository">
@@ -56,7 +56,7 @@ Move the working files into the cloned folder instead of trying to push from an 
 
 <div class="doc-step-pair">
   <div>
-    <p>Choose the destination folder for the clone before you move any project files around.</p>
+    <p>Choose a destination folder for the clone before moving any project files.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="Folder selection dialog for choosing a clone destination">
@@ -87,7 +87,7 @@ If the default branch is not `main`, use the branch name GitHub created for the 
 
 <div class="doc-step-pair">
   <div>
-    <p>Once the files are inside the clone, start by writing a clear initial commit message.</p>
+    <p>With the files inside the clone, write a clear initial commit message.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
@@ -97,7 +97,7 @@ If the default branch is not `main`, use the branch name GitHub created for the 
 
 <div class="doc-step-pair">
   <div>
-    <p>Then publish that first history with the normal push flow, including the combined commit-and-push action if your interface offers it.</p>
+    <p>Publish the first commit with a normal push — or use the combined commit-and-push if your interface offers it.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu showing Commit & Push">

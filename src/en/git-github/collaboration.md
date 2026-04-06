@@ -23,7 +23,7 @@ tags:
 ---
 ## Agree on a shared rhythm
 
-Teams do better when everyone uses the same basic expectations:
+Teams stay coordinated when everyone shares the same basic expectations:
 
 - pull before major work
 - commit coherent units
@@ -35,7 +35,7 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
 
 <div class="doc-step-pair">
   <div>
-    <p>Before shared work begins, start from repository settings so you can manage access from the right place.</p>
+    <p>Before shared work begins, open repository settings to manage access.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="GitHub repository page with the Settings tab highlighted">
@@ -45,7 +45,7 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
 
 <div class="doc-step-pair">
   <div>
-    <p>Then open the access page to confirm who already has repository access before you send new invitations.</p>
+    <p>Open the access page to see who already has repository access.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access page">

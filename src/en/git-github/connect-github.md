@@ -23,11 +23,11 @@ tags:
 ---
 ## Sign in from VS Code
 
-Before you start GitHub authentication, open the actual project folder in VS Code. It is easier to finish the sign-in flow and keep working if the same workspace is already open.
+Before GitHub authentication, open the project folder in VS Code. Finishing the sign-in flow is simpler when the workspace is already open.
 
 <div class="doc-step-pair">
   <div>
-    <p>If VS Code still shows an empty window, start by using <strong>Open Folder</strong> instead of trying to connect GitHub from a blank workspace.</p>
+    <p>If VS Code shows an empty window, use <strong>Open Folder</strong> before starting the GitHub sign-in flow.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-open-folder-button.png" alt="VS Code empty window with the Open Folder button visible">
@@ -37,7 +37,7 @@ Before you start GitHub authentication, open the actual project folder in VS Cod
 
 <div class="doc-step-pair">
   <div>
-    <p>In the folder picker, choose the manuscript or project folder that you want to keep under version control.</p>
+    <p>In the folder picker, choose the manuscript or project folder you are putting under version control.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-select-project-folder.png" alt="Windows folder picker with the Seed document project folder selected">
@@ -59,7 +59,7 @@ Once the folder is open, use the Accounts menu or Source Control prompts in VS C
 
 ## Complete the browser flow
 
-VS Code usually opens a browser page for authorization. Finish that flow with the same GitHub account you prepared in the previous step.
+VS Code opens a browser page for authorization. Finish that flow with the GitHub account you prepared in the previous step.
 
 <div class="doc-step-pair">
   <div>
@@ -73,11 +73,11 @@ VS Code usually opens a browser page for authorization. Finish that flow with th
 
 ## Confirm the connection
 
-Return to VS Code and confirm that you are back inside the same project workspace. Then check the Accounts menu or Git-related prompts to make sure the correct GitHub account is now recognized.
+Return to VS Code and confirm the project workspace is open. Check the Accounts menu or Git-related prompts to verify the correct GitHub account is recognized.
 
 <div class="doc-step-pair">
   <div>
-    <p>The expected result is an open project workspace where you can keep working without being sent back to an empty start screen.</p>
+    <p>The workspace should be open and ready to continue from — not reset to an empty start screen.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-workspace-ready.png" alt="VS Code open project workspace after the folder is loaded">

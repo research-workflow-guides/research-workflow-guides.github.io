@@ -23,15 +23,15 @@ tags:
 ---
 ## Choose the repository shape
 
-For the first workflow, one private repository for one working project is enough. Avoid adding extra files or automation before the first push succeeds.
+One private repository for one project is enough for the first workflow. Avoid adding extra files or automation until after the first push.
 
 ## Create an empty private repository
 
-Use GitHub to create a new private repository with a clear project name. You do not need to add a README, `.gitignore`, or license if you want the first local push flow to stay explicit.
+Create a new private repository with a clear project name. Skip the README, `.gitignore`, and license to keep the first push flow explicit.
 
 <div class="doc-step-pair">
   <div>
-    <p>From your profile, move to the repositories list before you try to create anything new.</p>
+    <p>From your profile, open the repositories list first.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="GitHub profile with the Repositories tab highlighted">
@@ -61,7 +61,7 @@ Use GitHub to create a new private repository with a clear project name. You do 
 
 <div class="doc-step-pair">
   <div>
-    <p>After creation, the expected result is an empty repository page that is ready for the first clone and push.</p>
+    <p>After creation, you should see an empty repository page ready for the first clone and push.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="Empty GitHub repository page after creation">

@@ -30,7 +30,7 @@ git status
 git pull
 ```
 
-If you know nobody else changed the repository, the pull may do nothing. That is fine.
+If nobody else changed the repository, the pull does nothing — that is expected.
 
 <figure class="image-frame">
   <img src="/assets/images/legacy/github-workflow/pull-menu.png" alt="VS Code source control menu with Pull highlighted">
@@ -39,7 +39,7 @@ If you know nobody else changed the repository, the pull may do nothing. That is
 
 ## Use a daily sync loop
 
-The loop is usually:
+The loop is:
 
 1. pull when the remote may have changed
 2. work locally

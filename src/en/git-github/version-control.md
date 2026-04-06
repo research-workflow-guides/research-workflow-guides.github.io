@@ -35,7 +35,7 @@ You do not need every Git concept at once. These states are enough to understand
 
 ## Check status often
 
-`git status` is the safest command to run when you feel unsure.
+`git status` is the right command when you feel unsure.
 
 ```bash
 git status
@@ -51,7 +51,7 @@ Use `.gitignore` to keep those files out of commits. The goal is not to hide rea
 
 <div class="doc-step-pair">
   <div>
-    <p>Start by identifying the heavy local folder or generated files that should never leave your computer.</p>
+    <p>Identify the heavy local folders or generated files that should never enter version control.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/example-folder.png" alt="Example project tree with a heavy folder">

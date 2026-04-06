@@ -23,11 +23,11 @@ tags:
 ---
 ## Create or confirm the account
 
-Use one GitHub account that you can keep for research work. Avoid splitting the first workflow across several temporary accounts.
+Use one GitHub account for research work. Avoid splitting the workflow across temporary accounts.
 
 <div class="doc-step-pair">
   <div>
-    <p>Start from the main GitHub homepage so you know you are entering the standard account flow.</p>
+    <p>Start from the main GitHub homepage.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.4-1.png" alt="GitHub homepage">
@@ -37,7 +37,7 @@ Use one GitHub account that you can keep for research work. Avoid splitting the 
 
 <div class="doc-step-pair">
   <div>
-    <p>If you do not already have an account, move into the standard sign-up flow from there.</p>
+    <p>If you do not already have an account, sign up from that page.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.4-2.png" alt="GitHub sign-up page">
@@ -47,7 +47,7 @@ Use one GitHub account that you can keep for research work. Avoid splitting the 
 
 ## Turn on basic security
 
-At minimum, make sure the account has a strong password and a recovery path you can actually access. If available, enable two-factor authentication before the repository becomes important.
+At minimum, set a strong password and a recovery path you control. Enable two-factor authentication if available.
 
 ## Prepare a usable profile
 
