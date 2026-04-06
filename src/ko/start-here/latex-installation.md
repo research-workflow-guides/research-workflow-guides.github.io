@@ -1,14 +1,14 @@
 ---
 layout: layouts/doc.njk
 title: LaTeX 설치
-description: MiKTeX를 설치하고 기본 LaTeX 도구 체인이 동작하는지 확인합니다.
+description: MiKTeX를 설치하고 기본 LaTeX 도구 체인이 준비됐는지 확인합니다.
 lang: ko
 section: start-here
 order: 1
 permalink: /ko/start-here/latex-installation/
 translationKey: start-here-latex-installation
 eyebrow: Step 1
-lead: MiKTeX를 설치하고, 필요한 패키지가 자동으로 들어오도록 두고, 기본 toolchain이 준비됐는지 확인합니다.
+lead: MiKTeX를 설치하고, 필요 시 패키지가 자동으로 설치되도록 설정한 뒤, 기본 도구 체인이 준비됐는지 확인합니다.
 meta:
   - label: 기본 배포판
     value: MiKTeX
@@ -30,9 +30,9 @@ tags:
 ---
 ## 왜 MiKTeX인가
 
-이 가이드에서는 처음 설치 부담이 비교적 낮고, 작업 중 필요한 패키지를 바로 설치하기 쉬운 MiKTeX를 기본 배포판으로 둡니다.
+이 가이드의 기본 배포판은 MiKTeX입니다. 초기 설치 부담이 적고, 처음 사용자에게 익숙하며, 필요한 패키지를 작업 중에 설치할 수 있습니다.
 
-여기서는 TeX Live 비교보다 "가장 빨리 첫 build를 통과하는 경로"를 우선합니다.
+이 가이드는 MiKTeX와 TeX Live를 비교하지 않습니다. 여기서는 MiKTeX를 계속 사용한다고 가정합니다.
 
 [MiKTeX 공식 다운로드](https://miktex.org/download)
 
@@ -146,4 +146,4 @@ Windows에서는 Perl이 없으면 Strawberry Perl을 설치합니다. macOS와 
 
 ## 점검
 
-MiKTeX Console이 열리고, `latexmk -v`가 동작하며, 필요하다면 `perl --version`도 정상 출력되면 다음 단계로 넘어갑니다.
+MiKTeX Console이 정상적으로 열리고 `latexmk -v`가 오류 없이 실행되는지 확인합니다. Perl 기반 도구를 사용한다면 `perl --version`도 확인합니다.

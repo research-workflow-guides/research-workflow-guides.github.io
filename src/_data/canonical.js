@@ -178,7 +178,7 @@ const pages = [
     order: 1,
     group: "steps",
     title: "LaTeX 설치",
-    description: "MiKTeX를 설치하고 기본 LaTeX 도구 체인이 동작하는지 확인합니다.",
+    description: "MiKTeX를 설치하고 기본 LaTeX 도구 체인이 준비됐는지 확인합니다.",
     translationKey: "start-here-latex-installation",
     status: "core"
   },
@@ -204,7 +204,7 @@ const pages = [
     order: 2,
     group: "steps",
     title: "VS Code 설치",
-    description: "VS Code와 LaTeX Workshop을 설치해 기본 작성 환경을 준비합니다.",
+    description: "VS Code를 설치하고 LaTeX Workshop 확장을 추가합니다.",
     translationKey: "start-here-vs-code-installation",
     status: "core"
   },
@@ -230,7 +230,7 @@ const pages = [
     order: 3,
     group: "steps",
     title: "Project Template",
-    description: "starter project를 열고 첫 PDF build가 동작하는지 확인합니다.",
+    description: "starter project를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.",
     translationKey: "start-here-project-template",
     status: "core"
   },
