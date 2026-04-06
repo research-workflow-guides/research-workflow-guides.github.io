@@ -14,7 +14,8 @@
   --radius-lg: 24px;
   --radius-md: 18px;
   --radius-sm: 12px;
-  --wrap: min(1120px, calc(100% - 2rem));
+  --gutter: clamp(1rem, 3.6vw, 1.35rem);
+  --wrap: min(1120px, calc(100% - (var(--gutter) * 2)));
 }
 
 * {
@@ -176,6 +177,7 @@ h3 {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.08;
+  overflow-wrap: break-word;
 }
 
 h1 {
@@ -431,6 +433,10 @@ li {
   padding: 2rem 0 4rem;
 }
 
+.content-shell > * {
+  min-width: 0;
+}
+
 .page-sidebar {
   display: grid;
   gap: 1rem;
@@ -469,6 +475,7 @@ li {
 .doc-content {
   display: grid;
   gap: 1rem;
+  min-width: 0;
 }
 
 .breadcrumb {
@@ -494,9 +501,14 @@ li {
   box-shadow: var(--shadow);
 }
 
+.doc-hero > * {
+  min-width: 0;
+}
+
 .lead {
   margin: 0.85rem 0 0;
   color: var(--muted);
+  overflow-wrap: break-word;
 }
 
 .intro-grid,
