@@ -762,7 +762,19 @@ li {
   background: rgba(248, 245, 239, 0.8);
 }
 
-.doc-section-grid,
+.doc-section-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  margin: 1rem 0 1.25rem;
+}
+
+.doc-section-grid > .image-frame {
+  justify-self: start;
+  width: min(100%, 54rem);
+}
+
 .intro-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.95fr);
