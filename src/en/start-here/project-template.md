@@ -26,7 +26,7 @@ tags:
 Use the starter repository as your project template source.
 
 1. Open the starter repository and download the ZIP archive from GitHub.
-2. Extract the archive and keep the folder intact — you'll open the entire project folder in VS Code.
+2. Extract the archive and keep the folder intact — you will open the entire project folder in VS Code.
 
 [Starter repository: research-workflow-guides/seed-documents](https://github.com/research-workflow-guides/seed-documents)
 
@@ -42,7 +42,7 @@ Use the starter repository as your project template source.
 
 <div class="doc-step-pair">
   <div>
-    <p>Then open the GitHub code menu and choose the ZIP download path for that repository.</p>
+    <p>Then open the GitHub code menu and select the ZIP download option for that repository.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/github-code-btn.svg" alt="GitHub Code button">

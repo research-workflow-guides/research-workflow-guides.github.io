@@ -56,7 +56,7 @@ The Command Palette is the fastest place to discover which commands deserve a sh
 
 Once the daily loop is clear, turn the most repeated actions into keyboard shortcuts.
 
-Two or three good bindings are usually more valuable than a long personal map you cannot remember.
+Two or three good bindings are usually more valuable than a long keymap you cannot remember.
 
 <div class="doc-step-pair">
   <div>

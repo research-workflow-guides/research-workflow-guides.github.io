@@ -23,7 +23,7 @@ tags:
 ---
 ## Install Git
 
-Use the official installer or the package manager standard on your platform. The goal is to make the `git` command available in the terminal and in VS Code.
+Use the official installer or the standard package manager for your platform. The goal is to make the `git` command available in the terminal and in VS Code.
 
 <div class="doc-step-pair">
   <div>

@@ -23,7 +23,7 @@ tags:
 ---
 ## Sign in from VS Code
 
-Before GitHub authentication, open the project folder in VS Code. Finishing the sign-in flow is simpler when the workspace is already open.
+Before starting the GitHub sign-in, open the project folder in VS Code. Finishing the sign-in flow is simpler when the workspace is already open.
 
 <div class="doc-step-pair">
   <div>
@@ -87,4 +87,4 @@ Return to VS Code and confirm the project workspace is open. Check the Accounts 
 
 ## Before proceeding
 
-If the project folder is open in VS Code and GitHub-related prompts stop restarting from scratch, proceed to repository creation.
+If the project folder is open in VS Code and GitHub no longer prompts you to sign in, proceed to repository creation.

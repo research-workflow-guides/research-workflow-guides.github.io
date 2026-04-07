@@ -47,7 +47,7 @@ It tells you what changed, what is staged, and what still needs attention.
 
 Some files do not belong in version control, such as generated auxiliary files, local caches, or machine-specific clutter.
 
-Use `.gitignore` to keep those files out of commits. The goal is not to hide real work. The goal is to stop noisy local artifacts from polluting the history.
+Use `.gitignore` to keep those files out of the repository. The goal is not to hide real work. The goal is to stop noisy local artifacts from polluting the history.
 
 <div class="doc-step-pair">
   <div>

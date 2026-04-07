@@ -29,8 +29,6 @@ tags:
 
 MiKTeX is the default distribution for this guide. It starts lightweight, works well for first-time users, and installs missing packages as you need them.
 
-Use MiKTeX for this installation guide.
-
 ## Download MiKTeX
 
 <div class="doc-step-pair">
@@ -46,7 +44,7 @@ Use MiKTeX for this installation guide.
 
 <div class="doc-step-pair">
   <div>
-    <p>Then move to the download page and choose the installer that matches your operating system.</p>
+    <p>On the download page, choose the installer that matches your operating system.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-2.png" alt="MiKTeX download page">

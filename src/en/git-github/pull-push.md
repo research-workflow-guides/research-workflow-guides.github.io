@@ -30,7 +30,7 @@ git status
 git pull
 ```
 
-If nobody else changed the repository, the pull does nothing — that is expected.
+If nobody else has changed the repository, the pull does nothing — that is expected.
 
 <figure class="image-frame">
   <img src="/assets/images/legacy/github-workflow/pull-menu.png" alt="VS Code source control menu with Pull highlighted">

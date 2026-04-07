@@ -38,7 +38,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>Then move to the download page and choose the installer that matches your operating system.</p>
+    <p>On the download page, choose the installer that matches your operating system.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-2.png" alt="VS Code download page">
