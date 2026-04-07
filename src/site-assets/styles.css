@@ -1,14 +1,14 @@
 :root {
   --bg: #ffffff;
-  --bg-alt: #fafafa;
-  --paper: #fafafa;
+  --bg-alt: rgba(245, 245, 245, 0.99);
+  --paper: #ffffff;
   --paper-strong: #ffffff;
   --ink: #1f2431;
   --muted: #5f6777;
   --line: rgba(42, 55, 78, 0.16);
   --line-strong: rgba(31, 36, 49, 0.28);
-  --brand: #183d5d;
-  --brand-soft: #2e5a84;
+  --brand: #1C1C1E;
+  --brand-soft: #212121;
   --accent: #9d6f2e;
   --accent-soft: #f0e1c8;
   --shadow: 0 20px 50px rgba(36, 46, 67, 0.12);
@@ -73,7 +73,7 @@ pre {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(18px);
-  background: rgba(245, 245, 245, 0.95);
+  background: rgba(245, 245, 245, 0.50);
   border-bottom: 1px solid rgba(31, 36, 49, 0.08);
 }
 
@@ -115,7 +115,7 @@ pre {
 .lang-switch, .site-nav a.lang-switch {
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
-  background: #ffffff;
+  background: rgba(245, 245, 245, 0.99);
   width: 92px;
   text-align: center;
   display: inline-block;
@@ -899,14 +899,14 @@ li.section--git-github > .rail-link-section.is-current {
   overflow-x: auto;
   padding: 1rem;
   border-radius: var(--radius-md);
-  background: #182331;
+  background: #1C1C1E;
   color: #f7f7f2;
 }
 
 .site-footer {
   margin-top: 2rem;
   border-top: 1px solid rgba(31, 36, 49, 0.08);
-  background: rgba(248, 245, 239, 0.8);
+  background: rgba(245, 245, 245, 0.99);
 }
 
 .doc-step-pair,
@@ -984,7 +984,7 @@ li.section--git-github > .rail-link-section.is-current {
 }
 
 .code-box {
-  background: #182331;
+  background: #1C1C1E;
   color: #f7f7f2;
 }
 
