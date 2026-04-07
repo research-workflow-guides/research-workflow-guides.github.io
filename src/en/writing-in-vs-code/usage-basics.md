@@ -40,10 +40,10 @@ Frequent checks also prevent small errors from accumulating unnoticed.
 
 ## Use SyncTeX both ways
 
-LaTeX Workshop is most useful when you jump from source to PDF and back again.
+LaTeX Workshop is most useful when you jump between source and PDF in both directions.
 
-- from source to the corresponding PDF location
-- from the PDF click position back to the corresponding source line
+- jump from source to the corresponding location in the PDF
+- jump from a position in the PDF back to the corresponding source line
 
 This is especially helpful once a paper becomes long and navigation slows down.
 
