@@ -16,8 +16,8 @@ toc:
     label: Create an empty private repository
   - id: keep-the-first-repository-simple
     label: Keep it simple
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -73,6 +73,6 @@ Create a new private repository with a clear project name. Skip the README, `.gi
 
 The point of the first repository is to understand the connection between local files and remote history. Complexity can come later.
 
-## Self-check
+## Before proceeding
 
 If the private repository exists on GitHub and is still empty, you are ready to clone it locally.

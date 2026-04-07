@@ -16,8 +16,8 @@ toc:
     label: Turn on basic security
   - id: prepare-a-usable-profile
     label: Prepare a usable profile
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -53,6 +53,6 @@ At minimum, set a strong password and a recovery path you control. Enable two-fa
 
 Make sure the account has a stable username, a readable display name, and a verified email address. These details make collaboration less confusing later.
 
-## Self-check
+## Before proceeding
 
 If you can sign in reliably, receive GitHub email, and see a stable username on your profile, continue to the VS Code connection step.

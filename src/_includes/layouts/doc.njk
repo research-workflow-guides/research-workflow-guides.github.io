@@ -12,7 +12,7 @@ pageClass: page-doc
   <article class="doc-content panel" data-pagefind-body>
     {% include "components/breadcrumbs.njk" %}
 
-    <section class="doc-hero">
+    <section class="doc-hero{% if not meta %} doc-hero-simple{% endif %}">
       <div>
         {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
         <h1>{{ title }}</h1>

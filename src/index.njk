@@ -10,9 +10,9 @@ pageClass: page-landing
 ---
 <main>
   <section class="landing-hero">
+    <h1 class="wrap hero-h1">Choose a language, then follow a research workflow built for real writing and collaboration.</h1>
     <div class="wrap hero-grid">
       <div class="hero-copy-block">
-        <h1>Choose a language, then follow a research workflow built for real writing and collaboration.</h1>
         <p class="hero-copy">
           This guidebook is for researchers working with LaTeX, VS Code, Git, and GitHub.
           Start from the language you use most, move through local setup, and continue into
@@ -31,7 +31,7 @@ pageClass: page-landing
         {% endif %}
         <dl class="updates-list">
           {% for item in updates.completed %}
-            {% if loop.index <= 2 %}
+            {% if loop.index <= 1 %}
               <div>
                 <dt>{{ item.date }}</dt>
                 <dd>
@@ -57,9 +57,9 @@ pageClass: page-landing
       </div>
       <div class="feature-grid">
         {% for section in navigation.sections %}
-          <a class="feature-card panel" href="{{ section.url.en }}">
+          <a class="feature-card panel card--{{ section.key }}" href="{{ section.url.en }}">
             <div class="card-logo-row">
-              {% if section.key == "start-here" %}
+              {% if section.key == "initial-setup" %}
                 <img class="card-logo" src="/assets/images/LaTeX_project_logo_bird.svg.png" alt="LaTeX">
                 <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
               {% elif section.key == "writing-in-vs-code" %}
@@ -69,7 +69,6 @@ pageClass: page-landing
                 <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
               {% endif %}
             </div>
-            <p class="card-kicker">{{ section.kicker.en }}</p>
             <h3>{{ section.title.en }}</h3>
             <p>{{ section.summary.en }}</p>
           </a>

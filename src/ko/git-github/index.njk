@@ -4,15 +4,6 @@ title: Git & GitHub
 description: Git과 GitHub 워크플로우를 위한 카테고리 홈.
 lang: ko
 pageClass: page-section
-toc:
-  - id: preparation
-    label: 준비
-  - id: first-remote-workflow
-    label: 첫 GitHub 작업
-  - id: repeat-workflow
-    label: 일상 작업
-  - id: collaboration-and-exceptions
-    label: 협업
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
@@ -25,44 +16,59 @@ toc:
 
     <section class="doc-hero doc-hero-simple">
       <div>
-        <p class="eyebrow">카테고리</p>
         <h1>Git &amp; GitHub</h1>
         <p class="lead">project template이 로컬에서 동작하는 상태라면 여기서 시작합니다.</p>
       </div>
     </section>
 
-    <section id="preparation" class="doc-section">
+    <section class="doc-section">
       <h2>준비</h2>
-      <div class="stack-list">
+      <div class="feature-grid feature-grid-compact">
         {% for doc in grouped.preparation %}
-          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Step {{ loop.index }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
         {% endfor %}
       </div>
     </section>
 
-    <section id="first-remote-workflow" class="doc-section">
+    <section class="doc-section">
       <h2>첫 GitHub 작업</h2>
-      <div class="stack-list">
+      <div class="feature-grid feature-grid-compact">
         {% for doc in grouped["first-github-workflow"] %}
-          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Step {{ loop.index + 2 }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
         {% endfor %}
       </div>
     </section>
 
-    <section id="repeat-workflow" class="doc-section">
+    <section class="doc-section">
       <h2>일상 작업</h2>
-      <div class="stack-list">
+      <div class="feature-grid feature-grid-compact">
         {% for doc in grouped["daily-workflow"] %}
-          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Topic {{ loop.index }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
         {% endfor %}
       </div>
     </section>
 
-    <section id="collaboration-and-exceptions" class="doc-section">
+    <section class="doc-section">
       <h2>협업</h2>
-      <div class="stack-list">
+      <div class="feature-grid feature-grid-compact">
         {% for doc in grouped.collaboration %}
-          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Topic {{ loop.index + 2 }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
         {% endfor %}
       </div>
     </section>

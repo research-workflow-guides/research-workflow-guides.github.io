@@ -10,14 +10,14 @@ translationKey: git-version-control
 eyebrow: Step 7
 lead: 침착한 Git 사용은 파일 상태를 구분하고, repository에 들어가면 안 되는 파일을 아는 데서 시작합니다.
 toc:
-  - id: learn-the-basic-file-states
+  - id: 기본-파일-상태
     label: 기본 파일 상태
-  - id: check-status-often
+  - id: status-자주-확인
     label: status 자주 확인
-  - id: ignore-local-clutter
+  - id: 로컬-잡파일-무시
     label: 로컬 잡파일 무시
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -99,6 +99,6 @@ git status
   </figure>
 </div>
 
-## 점검
+## 넘어가기 전
 
 `git status`를 보고 어떤 파일이 commit 준비가 됐는지, 어떤 파일이 로컬 잡파일인지, 어떤 파일이 ignore 대상인지 설명할 수 있으면 충분합니다.

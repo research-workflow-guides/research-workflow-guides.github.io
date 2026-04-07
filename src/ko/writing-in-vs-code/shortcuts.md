@@ -10,14 +10,14 @@ translationKey: writing-shortcuts
 eyebrow: Topic 4
 lead: shortcut 체계를 크게 만들 필요는 없습니다. 매일 반복하는 명령만 빠르게 닿게 두면 충분합니다.
 toc:
-  - id: start-with-command-palette-names
+  - id: 명령-이름부터-익히기
     label: 명령 이름부터 익히기
-  - id: promote-repeat-actions
+  - id: 반복-동작-shortcut-만들기
     label: 반복 동작 shortcut 만들기
-  - id: keep-the-list-small
+  - id: 목록을-작게-유지
     label: 목록을 작게 유지
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -92,6 +92,6 @@ tags:
 
 드물게 쓰는 명령은 그대로 Command Palette에 두고, 키보드 공간은 매 세션 시간을 절약하는 동작에만 씁니다.
 
-## 점검
+## 넘어가기 전
 
 매일 쓰는 명령이 바로 닿고, shortcut 목록이 아직 외울 수 있을 만큼 짧다면 다음으로 넘어갑니다.

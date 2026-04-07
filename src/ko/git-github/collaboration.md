@@ -10,14 +10,14 @@ translationKey: git-collaboration
 eyebrow: Step 8
 lead: 작은 팀 협업은 repository 리듬이 단조롭고, 명시적이며, 다시 회복하기 쉬울수록 잘 굴러갑니다.
 toc:
-  - id: agree-on-a-shared-rhythm
+  - id: 공통-리듬-합의
     label: 공통 리듬 합의
-  - id: communicate-before-surprise-pushes
+  - id: 갑작스러운-변화-전에-공유
     label: 갑작스러운 변화 전에 공유
-  - id: keep-history-readable
+  - id: 읽히는-이력-유지
     label: 읽히는 이력 유지
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -87,6 +87,6 @@ tags:
 
 명확한 commit message와 작은 작업 단위는 협업을 훨씬 차분하게 만듭니다. 완벽한 history보다 "다른 사람이 따라 읽을 수 있는 history"가 더 중요합니다.
 
-## 점검
+## 넘어가기 전
 
 협업자가 repository에 어떤 변화가 언제 올라올지 대략 예측할 수 있다면 좋은 협업 리듬이 만들어진 것입니다.

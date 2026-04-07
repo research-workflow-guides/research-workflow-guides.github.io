@@ -10,14 +10,14 @@ translationKey: writing-settings
 eyebrow: Topic 2
 lead: 설정은 작고 오래 버티는 것부터 시작합니다. build, preview, cleanup이 예측 가능하게 돌아가면 충분합니다.
 toc:
-  - id: start-with-a-small-settings-file
+  - id: 작은-settings부터-시작
     label: 작은 settings부터 시작
-  - id: useful-latex-workshop-defaults
+  - id: 유용한-기본-설정
     label: 유용한 기본 설정
-  - id: example-settings
+  - id: 예시-settings
     label: 예시 settings
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -91,6 +91,6 @@ tags:
 
 이 값들이 유일한 정답은 아니지만, 시작점으로는 충분히 안정적입니다.
 
-## 점검
+## 넘어가기 전
 
 저장 후 동작이 의도와 맞고, PDF preview가 원하는 위치에서 열리며, cleanup이 필요한 파일을 지우지 않는다면 다음 문서로 넘어갑니다.

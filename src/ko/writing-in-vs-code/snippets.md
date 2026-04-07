@@ -10,14 +10,14 @@ translationKey: writing-snippets
 eyebrow: Topic 5
 lead: snippet은 문서 구조를 가리지 않으면서 반복 입력만 줄여줄 때 가장 유용합니다.
 toc:
-  - id: start-with-high-frequency-patterns
+  - id: 자주-쓰는-패턴부터
     label: 자주 쓰는 패턴부터
-  - id: example-snippet
+  - id: 예시-snippet
     label: 예시 snippet
-  - id: avoid-oversized-snippet-libraries
+  - id: 너무-큰-snippet-모음-피하기
     label: 너무 큰 snippet 모음 피하기
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -113,6 +113,6 @@ prefix는 짧지만 기억하기 쉬운 쪽이 좋습니다.
 
 snippet 파일이 너무 커지면 그것 자체가 관리 대상이 됩니다. 먼저 믿고 쓸 수 있는 작은 집합으로 시작하고, 반복 입력이 실제로 시간을 잡아먹는다고 느껴질 때만 추가합니다.
 
-## 점검
+## 넘어가기 전
 
 snippet이 자주 쓰는 LaTeX 패턴을 빨라지게 만들고, 전개된 구조도 여전히 이해할 수 있다면 이 문서의 목적은 충분히 달성된 것입니다.

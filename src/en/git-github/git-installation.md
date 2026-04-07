@@ -16,8 +16,8 @@ toc:
     label: Set your identity
   - id: verify-the-install
     label: Verify the install
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -85,6 +85,6 @@ git config --global --list
 
 Confirm that Git responds normally and that your name and email are visible.
 
-## Self-check
+## Before proceeding
 
 If `git --version` works and your global identity is set correctly, move on to the GitHub account step.

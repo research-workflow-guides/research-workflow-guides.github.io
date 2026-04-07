@@ -3,28 +3,25 @@ layout: layouts/doc.njk
 title: LaTeX Installation
 description: Install MiKTeX and verify the base LaTeX toolchain is working.
 lang: en
-section: start-here
+section: initial-setup
 order: 1
-permalink: /en/start-here/latex-installation/
-translationKey: start-here-latex-installation
+permalink: /en/initial-setup/latex-installation/
+translationKey: initial-setup-latex-installation
 eyebrow: Step 1
 lead: Install MiKTeX, enable on-demand package installation, and verify the base toolchain is ready.
-meta:
-  - label: Default distribution
-    value: MiKTeX
-  - label: Goal
-    value: Reach a working LaTeX installation with latexmk available.
 toc:
   - id: why-miktex
     label: Why MiKTeX
+  - id: download-miktex
+    label: Download MiKTeX
   - id: install-miktex
     label: Install MiKTeX
   - id: platform-notes
     label: Platform notes
   - id: perl-requirement
     label: Perl requirement
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -34,11 +31,12 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
 
 Use MiKTeX for this installation guide.
 
-[Official MiKTeX downloads](https://miktex.org/download)
+## Download MiKTeX
 
 <div class="doc-step-pair">
   <div>
     <p>Download it from the MiKTeX website.</p>
+    <p><a href="https://miktex.org/download">Official MiKTeX downloads</a></p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-1.png" alt="MiKTeX homepage">
@@ -175,6 +173,6 @@ On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, veri
   <figcaption>Strawberry Perl is the standard fallback for Windows.</figcaption>
 </figure>
 
-## Before you move on
+## Before proceeding
 
 Confirm that MiKTeX Console opens and `latexmk -v` runs without errors. If your workflow uses Perl-based tools, verify `perl --version` as well.

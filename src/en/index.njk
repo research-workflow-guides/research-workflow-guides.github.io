@@ -20,7 +20,7 @@ pageClass: page-home
           Start with Initial Setup if you are beginning from zero. If your environment is already working, use the left rail to jump straight to the section you need.
         </p>
         <div class="button-row">
-          <a class="button button-primary" href="/en/start-here/">Start with Initial Setup</a>
+          <a class="button button-primary" href="/en/initial-setup/">Start with Initial Setup</a>
           <a class="text-link" href="/">Back to language landing</a>
         </div>
       </div>
@@ -44,7 +44,7 @@ pageClass: page-home
       <h2>Sections</h2>
       <div class="feature-grid">
         {% for section in navigation.sections %}
-          <a class="feature-card panel" href="{{ section.url.en }}">
+          <a class="feature-card panel card--{{ section.key }}" href="{{ section.url.en }}">
             <p class="card-kicker">{{ section.kicker.en }}</p>
             <h3>{{ section.title.en }}</h3>
             <p>{{ section.summary.en }}</p>

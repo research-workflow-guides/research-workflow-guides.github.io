@@ -7,7 +7,12 @@ module.exports = function (eleventyConfig) {
     linkify: true,
     typographer: true
   }).use(markdownItAnchor, {
-    permalink: false
+    permalink: false,
+    slugify: (s) =>
+      s.trim().toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9가-힣-]/g, '')
+        .replace(/-+/g, '-')
   });
 
   eleventyConfig.setLibrary("md", markdown);

@@ -10,14 +10,14 @@ translationKey: git-git-installation
 eyebrow: Step 1
 lead: 먼저 Git을 설치하고, 이후 commit에 계속 따라갈 이름과 이메일을 설정합니다.
 toc:
-  - id: install-git
+  - id: git-설치
     label: Git 설치
-  - id: set-your-identity
+  - id: identity-설정
     label: identity 설정
-  - id: verify-the-install
+  - id: 설치-확인
     label: 설치 확인
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -85,6 +85,6 @@ git config --global --list
 
 Git이 정상 응답하고, 이름과 이메일이 보이면 기본 설치는 끝난 것입니다.
 
-## 점검
+## 넘어가기 전
 
 `git --version`이 동작하고 global identity가 올바르게 설정되어 있으면 다음 단계로 넘어갑니다.

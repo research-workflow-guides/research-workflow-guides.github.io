@@ -3,19 +3,19 @@ layout: layouts/doc.njk
 title: VS Code 설치
 description: VS Code를 설치하고 LaTeX Workshop 확장을 추가합니다.
 lang: ko
-section: start-here
+section: initial-setup
 order: 2
-permalink: /ko/start-here/vs-code-installation/
-translationKey: start-here-vs-code-installation
+permalink: /ko/initial-setup/vs-code-installation/
+translationKey: initial-setup-vs-code-installation
 eyebrow: Step 2
 lead: VS Code를 설치하고 LaTeX Workshop 확장을 추가해 첫 project를 열 준비를 마칩니다.
 toc:
-  - id: install-vs-code
+  - id: vs-code-설치
     label: VS Code 설치
-  - id: install-latex-workshop
+  - id: latex-workshop-설치
     label: LaTeX Workshop 설치
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -74,6 +74,6 @@ tags:
   </figure>
 </div>
 
-## 점검
+## 넘어가기 전
 
 VS Code가 정상적으로 열리고, LaTeX Workshop이 설치되어 있으며, Command Palette에서 LaTeX Workshop 관련 명령이 보이면 다음 단계로 넘어갑니다.

@@ -39,8 +39,18 @@ body {
     radial-gradient(circle at top right, rgba(24, 61, 93, 0.14), transparent 30%),
     linear-gradient(180deg, #f8f5ef 0%, #f2ede4 100%);
   color: var(--ink);
-  font-family: "Source Sans 3", "Noto Sans KR", sans-serif;
+  font-family: "Noto Serif KR", serif;
   line-height: 1.7;
+}
+/* Korean font overrides */
+[data-page-lang="ko"] {
+  font-family: "Noto Serif KR", serif;
+}
+
+[data-page-lang] h1,
+[data-page-lang] h2,
+[data-page-lang] h3 {
+  letter-spacing: 0;
 }
 
 img {
@@ -110,6 +120,44 @@ pre {
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
   background: rgba(24, 61, 93, 0.08);
+  width: 92px;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/* Top nav section accent colors */
+.nav-section--initial-setup > a {
+  color: #2aaf92;
+}
+
+.nav-section--writing-in-vs-code > a {
+  color: #2563eb;
+}
+
+.nav-section--git-github > a {
+  color: #1e3a8a;
+}
+
+.nav-section--initial-setup > a:hover,
+.nav-section--initial-setup > a:focus-visible,
+.nav-section--initial-setup > a:active,
+.nav-section--initial-setup > a[aria-current] {
+  color: #2aaf92;
+}
+
+.nav-section--writing-in-vs-code > a:hover,
+.nav-section--writing-in-vs-code > a:focus-visible,
+.nav-section--writing-in-vs-code > a:active,
+.nav-section--writing-in-vs-code > a[aria-current] {
+  color: #2563eb;
+}
+
+.nav-section--git-github > a:hover,
+.nav-section--git-github > a:focus-visible,
+.nav-section--git-github > a:active,
+.nav-section--git-github > a[aria-current] {
+  color: #1e3a8a;
 }
 
 .nav-dropdown {
@@ -185,25 +233,25 @@ h2,
 h3 {
   margin: 0;
   color: var(--ink);
-  font-family: "Fraunces", serif;
-  font-weight: 600;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
   line-height: 1.08;
   overflow-wrap: break-word;
 }
 
 h1 {
   font-size: clamp(2.6rem, 5vw, 4.8rem);
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
 }
 
 h2 {
   font-size: clamp(1.8rem, 3vw, 2.8rem);
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
 }
 
 h3 {
   font-size: 1.3rem;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 p,
@@ -250,11 +298,15 @@ li {
   padding: 1.8rem;
 }
 
+.hero-h1 {
+  padding-bottom: 1rem;
+}
+
 .hero-panel {
   display: flex;
   flex-direction: column;
-  align-self: start;
-  margin-top: 2.8rem;
+  align-self: end;
+  margin-top: 3rem;
 }
 
 .hero-panel .text-link {
@@ -405,6 +457,45 @@ li {
 .feature-card h3,
 .language-card h2 {
   margin-bottom: 0.6rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+/* Section accent colors */
+.feature-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  display: block;
+  height: 4px;
+  margin: -1.35rem -1.35rem 1.2rem;
+  background: #e5e0d8;
+}
+
+.card--initial-setup::before {
+  background: linear-gradient(90deg, #2aaf92, #4dd9b8);
+}
+
+.section--initial-setup .feature-card:not([class*="card--"])::before {
+  background: linear-gradient(90deg, #2aaf92, #4dd9b8);
+}
+
+.section--writing-in-vs-code .feature-card:not([class*="card--"])::before {
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+.section--git-github .feature-card:not([class*="card--"])::before {
+  background: linear-gradient(90deg, #1e3a8a, #3b6fd4);
+}
+
+.card--writing-in-vs-code::before {
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+.card--git-github::before {
+  background: linear-gradient(90deg, #1e3a8a, #3b6fd4);
 }
 
 .link-row a {
@@ -447,7 +538,7 @@ li {
 .sidebar-title {
   margin: 0 0 0.85rem;
   font-weight: 700;
-  color: var(--brand);
+  color: var(--accent);
 }
 
 .sidebar-links {
@@ -503,6 +594,18 @@ li {
   font-weight: 700;
 }
 
+li.section--initial-setup > .rail-link-section {
+  color: #2aaf92;
+}
+
+li.section--writing-in-vs-code > .rail-link-section {
+  color: #2563eb;
+}
+
+li.section--git-github > .rail-link-section {
+  color: #1e3a8a;
+}
+
 .rail-link-page {
   font-weight: 600;
 }
@@ -513,8 +616,8 @@ li {
   color: var(--accent);
   font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-transform: none;
 }
 
 .rail-group + .rail-group {
@@ -527,13 +630,39 @@ li {
 
 .rail-link:hover,
 .rail-link:focus-visible,
+.rail-link:active,
 .rail-link.is-current {
   color: var(--brand);
+}
+
+li.section--initial-setup > .rail-link-section:hover,
+li.section--initial-setup > .rail-link-section:focus-visible,
+li.section--initial-setup > .rail-link-section:active,
+li.section--initial-setup > .rail-link-section.is-current {
+  color: #2aaf92;
+}
+
+li.section--writing-in-vs-code > .rail-link-section:hover,
+li.section--writing-in-vs-code > .rail-link-section:focus-visible,
+li.section--writing-in-vs-code > .rail-link-section:active,
+li.section--writing-in-vs-code > .rail-link-section.is-current {
+  color: #2563eb;
+}
+
+li.section--git-github > .rail-link-section:hover,
+li.section--git-github > .rail-link-section:focus-visible,
+li.section--git-github > .rail-link-section:active,
+li.section--git-github > .rail-link-section.is-current {
+  color: #1e3a8a;
 }
 
 .rail-link-page.is-current,
 .rail-link-section.is-current {
   font-weight: 700;
+}
+
+.rail-link-page.is-current {
+  color: var(--ink);
 }
 
 .doc-content {
@@ -675,6 +804,10 @@ li {
 
 .doc-section {
   margin-top: 2rem;
+}
+
+.doc-section h2 {
+  margin-bottom: 1.2rem;
 }
 
 .stack-list {

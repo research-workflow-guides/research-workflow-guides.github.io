@@ -10,14 +10,14 @@ translationKey: git-create-repository
 eyebrow: Step 4
 lead: 첫 push 흐름을 단순하게 유지하려면 먼저 비어 있는 private repository부터 만듭니다.
 toc:
-  - id: choose-the-repository-shape
+  - id: 저장소-형태-정하기
     label: 저장소 형태 정하기
-  - id: create-an-empty-private-repository
+  - id: 비어-있는-private-repository-만들기
     label: 비어 있는 private repository 만들기
-  - id: keep-the-first-repository-simple
+  - id: 처음은-단순하게
     label: 처음은 단순하게
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -73,6 +73,6 @@ tags:
 
 첫 저장소의 목적은 로컬 파일과 원격 이력이 어떻게 연결되는지 이해하는 것입니다. 복잡한 구조는 나중에 추가해도 충분합니다.
 
-## 점검
+## 넘어가기 전
 
 GitHub에 private repository가 만들어졌고 아직 비어 있다면 이제 로컬 clone 단계로 넘어갈 수 있습니다.

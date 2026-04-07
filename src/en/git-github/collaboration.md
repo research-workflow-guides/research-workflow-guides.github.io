@@ -16,8 +16,8 @@ toc:
     label: Communicate before surprises
   - id: keep-history-readable
     label: Keep history readable
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -87,6 +87,6 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
 
 Clear commit messages and smaller work units make collaboration calmer. The goal is not perfect history. The goal is history another person can follow.
 
-## Self-check
+## Before proceeding
 
 If your collaborators can predict how and when changes will appear in the repository, the workflow is in a good place.

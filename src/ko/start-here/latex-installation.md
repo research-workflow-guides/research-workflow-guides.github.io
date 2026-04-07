@@ -3,28 +3,25 @@ layout: layouts/doc.njk
 title: LaTeX 설치
 description: MiKTeX를 설치하고 기본 LaTeX 도구 체인이 준비됐는지 확인합니다.
 lang: ko
-section: start-here
+section: initial-setup
 order: 1
-permalink: /ko/start-here/latex-installation/
-translationKey: start-here-latex-installation
+permalink: /ko/initial-setup/latex-installation/
+translationKey: initial-setup-latex-installation
 eyebrow: Step 1
 lead: MiKTeX를 설치하고, 필요 시 패키지가 자동으로 설치되도록 설정한 뒤, 기본 도구 체인이 준비됐는지 확인합니다.
-meta:
-  - label: 기본 배포판
-    value: MiKTeX
-  - label: 목표
-    value: latexmk가 동작하는 기본 LaTeX 환경 만들기
 toc:
-  - id: why-miktex
+  - id: 왜-miktex인가
     label: 왜 MiKTeX인가
-  - id: install-miktex
+  - id: miktex-다운로드
+    label: MiKTeX 다운로드
+  - id: miktex-설치
     label: MiKTeX 설치
-  - id: platform-notes
+  - id: 운영체제별-메모
     label: 운영체제별 메모
-  - id: perl-requirement
+  - id: perl-확인
     label: Perl 확인
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -34,11 +31,12 @@ tags:
 
 이 가이드에서는 MiKTeX로 설치합니다.
 
-[MiKTeX 공식 다운로드](https://miktex.org/download)
+## MiKTeX 다운로드
 
 <div class="doc-step-pair">
   <div>
     <p>먼저 MiKTeX 공식 홈페이지에 들어가서 올바른 배포판 사이트에 와 있는지부터 확인합니다.</p>
+    <p><a href="https://miktex.org/download">MiKTeX 공식 다운로드</a></p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-1.png" alt="MiKTeX 홈페이지">
@@ -175,6 +173,6 @@ Windows에서는 Perl이 없으면 Strawberry Perl을 설치합니다. macOS와 
   <figcaption>Windows에 Perl이 없다면 Strawberry Perl을 함께 설치합니다.</figcaption>
 </figure>
 
-## 점검
+## 넘어가기 전
 
 MiKTeX Console이 정상적으로 열리고 `latexmk -v`가 오류 없이 실행되는지 확인합니다. Perl 기반 도구를 사용한다면 `perl --version`도 확인합니다.

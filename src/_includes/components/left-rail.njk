@@ -25,7 +25,7 @@
         {% set groupedSectionPages = section.groupedPages[currentLang] %}
         {% set sectionExpanded = isLanguageHome or currentSection == section.key %}
         {% set sectionCurrent = currentUrl == sectionUrl or currentSection == section.key %}
-        <li class="rail-section{% if sectionExpanded %} is-expanded{% endif %}">
+        <li class="rail-section section--{{ section.key }}{% if sectionExpanded %} is-expanded{% endif %}">
           <a
             class="rail-link rail-link-section{% if sectionCurrent %} is-current{% endif %}"
             href="{{ sectionUrl }}"
@@ -35,7 +35,7 @@
           </a>
 
           {% if sectionExpanded %}
-            {% if currentUrl == sectionUrl and toc and toc.length and section.key != "writing-in-vs-code" %}
+            {% if currentUrl == sectionUrl and toc and toc.length and section.key != "writing-in-vs-code" and section.key != "git-github" and section.key != "initial-setup" %}
               <ul class="rail-subtree rail-subtree-headings">
                 {% for item in toc %}
                   <li><a class="rail-link rail-link-heading" href="#{{ item.id }}">{{ item.label }}</a></li>
@@ -43,10 +43,10 @@
               </ul>
             {% endif %}
 
-            {% if section.key == "writing-in-vs-code" and groupedSectionPages and groupedSectionPages.length %}
+            {% if (section.key == "writing-in-vs-code" or section.key == "git-github" or section.key == "initial-setup") and groupedSectionPages and groupedSectionPages.length %}
               <ul class="rail-subtree rail-subtree-groups">
                 {% for group in groupedSectionPages %}
-                  {% set groupAnchor = "core-documents" if group.key == "main-topics" else "optional-documents" %}
+                  {% if section.key == "initial-setup" %}{% set groupAnchor = "core-route" %}{% elif group.key == "main-topics" %}{% set groupAnchor = "core-documents" %}{% else %}{% set groupAnchor = "optional-documents" %}{% endif %}
                   <li class="rail-group">
                     <a class="rail-link rail-link-group" href="{{ sectionUrl }}#{{ groupAnchor }}">{{ group.label }}</a>
                     <ul class="rail-subtree rail-subtree-pages">

@@ -16,8 +16,8 @@ toc:
     label: Example snippet
   - id: avoid-oversized-snippet-libraries
     label: Avoid oversized libraries
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -113,6 +113,6 @@ Keep prefixes short but memorable.
 
 Large snippet files become their own maintenance burden. Start with a small set that you trust, then add entries only when repeated typing is clearly wasting time.
 
-## Self-check
+## Before proceeding
 
 Confirm that your snippets speed up common LaTeX patterns and that you still understand the structure they expand into.

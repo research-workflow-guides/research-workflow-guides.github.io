@@ -10,14 +10,14 @@ translationKey: git-pull-push
 eyebrow: Step 6
 lead: 일상적인 원격 작업 흐름은 작게 유지합니다. 필요하면 먼저 pull하고, 의미 있는 단위로 commit한 뒤, 준비되면 push합니다.
 toc:
-  - id: start-by-checking-the-current-state
+  - id: 현재-상태-확인
     label: 현재 상태 확인
-  - id: use-a-small-daily-sync-loop
+  - id: 일상-sync-루프
     label: 일상 sync 루프
-  - id: keep-commits-coherent
+  - id: commit-단위-유지
     label: commit 단위 유지
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -70,6 +70,6 @@ git pull
   </figure>
 </div>
 
-## 점검
+## 넘어가기 전
 
 언제 pull하고, 언제 commit하고, 언제 push하는지 즉흥적으로 판단하지 않고 설명할 수 있으면 기본 sync 루프는 자리 잡은 것입니다.

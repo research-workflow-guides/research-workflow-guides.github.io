@@ -24,8 +24,8 @@ toc:
     label: Compile the diff file
   - id: review-the-generated-pdf
     label: Review the PDF
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -129,7 +129,7 @@ Open the compiled PDF and confirm the marked changes are clear enough to send.
   </figure>
 </div>
 
-## Before you move on
+## Before proceeding
 
 Confirm that all of the following are true:
 

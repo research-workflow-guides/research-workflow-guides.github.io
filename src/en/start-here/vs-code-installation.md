@@ -3,10 +3,10 @@ layout: layouts/doc.njk
 title: VS Code Installation
 description: Install VS Code and add the LaTeX Workshop extension.
 lang: en
-section: start-here
+section: initial-setup
 order: 2
-permalink: /en/start-here/vs-code-installation/
-translationKey: start-here-vs-code-installation
+permalink: /en/initial-setup/vs-code-installation/
+translationKey: initial-setup-vs-code-installation
 eyebrow: Step 2
 lead: Install VS Code, add the LaTeX Workshop extension, and confirm the editor is ready for the first project.
 toc:
@@ -14,8 +14,8 @@ toc:
     label: Install VS Code
   - id: install-latex-workshop
     label: Install LaTeX Workshop
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -74,6 +74,6 @@ tags:
   </figure>
 </div>
 
-## Before you move on
+## Before proceeding
 
 Confirm that VS Code opens, the extension is installed, and LaTeX Workshop commands appear in the Command Palette.

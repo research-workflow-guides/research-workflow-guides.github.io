@@ -16,8 +16,8 @@ toc:
     label: Use preview early
   - id: use-synctex-both-ways
     label: Use SyncTeX both ways
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -47,6 +47,6 @@ LaTeX Workshop is most useful when you jump from source to PDF and back again.
 
 This is especially helpful once a paper becomes long and navigation slows down.
 
-## Self-check
+## Before proceeding
 
 Confirm that you can edit, build, preview, and jump between source and PDF without pausing to rediscover the interface.

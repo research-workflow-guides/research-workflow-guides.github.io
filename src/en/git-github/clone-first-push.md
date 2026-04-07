@@ -16,8 +16,8 @@ toc:
     label: Copy the project into the clone
   - id: make-the-first-commit-and-push
     label: First commit and push
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -105,6 +105,6 @@ If the default branch is not `main`, use the branch name GitHub created for the 
   </figure>
 </div>
 
-## Self-check
+## Before proceeding
 
 If GitHub now shows the project files and your local repository is clean after the push, the first remote publication worked.

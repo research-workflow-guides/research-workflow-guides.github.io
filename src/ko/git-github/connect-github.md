@@ -10,14 +10,14 @@ translationKey: git-connect-github
 eyebrow: Step 3
 lead: VS Code 안에서 GitHub에 로그인해 repository 작업이 같은 작업 환경 안에서 이어지게 만듭니다.
 toc:
-  - id: sign-in-from-vs-code
+  - id: vs-code에서-로그인
     label: VS Code에서 로그인
-  - id: complete-the-browser-flow
+  - id: 브라우저-인증-완료
     label: 브라우저 인증 완료
-  - id: confirm-the-connection
+  - id: 연결-확인
     label: 연결 확인
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -85,6 +85,6 @@ VS Code로 돌아와 project workspace가 열려 있는지 확인합니다. Acco
   </figure>
 </div>
 
-## 점검
+## 넘어가기 전
 
 project 폴더가 VS Code에 열린 상태로 유지되고 GitHub 관련 안내가 처음부터 반복되지 않으면 저장소 생성 단계로 넘어갑니다.

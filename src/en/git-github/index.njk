@@ -4,15 +4,6 @@ title: Git & GitHub
 description: English category home for Git and GitHub workflows.
 lang: en
 pageClass: page-section
-toc:
-  - id: preparation
-    label: Preparation
-  - id: first-remote-workflow
-    label: First GitHub workflow
-  - id: repeat-workflow
-    label: Daily workflow
-  - id: collaboration-and-exceptions
-    label: Collaboration
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
@@ -25,44 +16,59 @@ toc:
 
     <section class="doc-hero doc-hero-simple">
       <div>
-        <p class="eyebrow">Category</p>
         <h1>Git &amp; GitHub</h1>
         <p class="lead">Start here after your project template is compiling locally.</p>
       </div>
     </section>
 
-    <section id="preparation" class="doc-section">
+    <section class="doc-section">
       <h2>Preparation</h2>
-      <div class="stack-list">
+      <div class="feature-grid feature-grid-compact">
         {% for doc in grouped.preparation %}
-          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Step {{ loop.index }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
         {% endfor %}
       </div>
     </section>
 
-    <section id="first-remote-workflow" class="doc-section">
+    <section class="doc-section">
       <h2>First GitHub workflow</h2>
-      <div class="stack-list">
+      <div class="feature-grid feature-grid-compact">
         {% for doc in grouped["first-github-workflow"] %}
-          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Step {{ loop.index + 2 }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
         {% endfor %}
       </div>
     </section>
 
-    <section id="repeat-workflow" class="doc-section">
+    <section class="doc-section">
       <h2>Daily workflow</h2>
-      <div class="stack-list">
+      <div class="feature-grid feature-grid-compact">
         {% for doc in grouped["daily-workflow"] %}
-          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Topic {{ loop.index }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
         {% endfor %}
       </div>
     </section>
 
-    <section id="collaboration-and-exceptions" class="doc-section">
+    <section class="doc-section">
       <h2>Collaboration</h2>
-      <div class="stack-list">
+      <div class="feature-grid feature-grid-compact">
         {% for doc in grouped.collaboration %}
-          <a class="stack-item text-link" href="{{ doc.url }}"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p></a>
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Topic {{ loop.index + 2 }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
         {% endfor %}
       </div>
     </section>

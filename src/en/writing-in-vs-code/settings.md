@@ -16,8 +16,8 @@ toc:
     label: Useful defaults
   - id: example-settings
     label: Example settings
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -90,6 +90,6 @@ Do not customize everything at once. Add one change only when you feel the daily
 
 This is not the only valid setup. It is simply a calm starting point.
 
-## Self-check
+## Before proceeding
 
 Confirm that saving a file behaves as expected, PDF preview opens in the place you want, and cleanup does not remove files you still need.

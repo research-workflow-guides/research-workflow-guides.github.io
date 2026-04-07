@@ -16,8 +16,8 @@ toc:
     label: Complete the browser flow
   - id: confirm-the-connection
     label: Confirm the connection
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -85,6 +85,6 @@ Return to VS Code and confirm the project workspace is open. Check the Accounts 
   </figure>
 </div>
 
-## Self-check
+## Before proceeding
 
 If the project folder is open in VS Code and GitHub-related prompts stop restarting from scratch, proceed to repository creation.

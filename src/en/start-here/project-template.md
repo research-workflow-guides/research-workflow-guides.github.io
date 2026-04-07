@@ -3,10 +3,10 @@ layout: layouts/doc.njk
 title: Project Template
 description: Download a starter project, build it once, and confirm the environment is ready.
 lang: en
-section: start-here
+section: initial-setup
 order: 3
-permalink: /en/start-here/project-template/
-translationKey: start-here-project-template
+permalink: /en/initial-setup/project-template/
+translationKey: initial-setup-project-template
 eyebrow: Step 3
 lead: Download the starter project, open it in VS Code, and run one build to confirm the full toolchain works.
 toc:
@@ -16,8 +16,8 @@ toc:
     label: Open the project
   - id: run-the-first-build
     label: Run the first build
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -61,6 +61,6 @@ Use the starter repository as your project template source.
 2. Open the PDF preview and confirm the document compiles without errors.
 3. This is your final setup checkpoint. If the template builds cleanly, your distribution, editor, and extension are all working together.
 
-## Before you move on
+## Before proceeding
 
 Confirm that the starter file opens in VS Code, the build completes without errors, and a PDF preview appears.

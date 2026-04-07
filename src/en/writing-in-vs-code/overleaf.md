@@ -22,8 +22,8 @@ toc:
     label: Work in Overleaf
   - id: push-changes-back-to-github
     label: Push back to GitHub
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -123,7 +123,7 @@ When browser-side edits are ready, push them back to the repository via the GitH
   </figure>
 </div>
 
-## Before you move on
+## Before proceeding
 
 Confirm that all of the following are true:
 

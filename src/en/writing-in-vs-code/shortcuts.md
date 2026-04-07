@@ -16,8 +16,8 @@ toc:
     label: Promote repeat actions
   - id: keep-the-list-small
     label: Keep the list small
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -92,6 +92,6 @@ Two or three good bindings are usually more valuable than a long personal map yo
 
 If a shortcut is rarely used, leave it in the Command Palette. Reserve keyboard space for actions that save real time every writing session.
 
-## Self-check
+## Before proceeding
 
 Confirm that the commands you use every day are easy to reach and that your shortcut list is still short enough to remember.

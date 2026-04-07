@@ -4,6 +4,7 @@ title: Initial Setup
 description: Use these three steps to reach your first successful compile.
 lang: en
 pageClass: page-section
+permalink: /en/initial-setup/
 toc:
   - id: core-route
     label: Steps
@@ -12,7 +13,7 @@ toc:
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
-{% set docs = canonical.groupedDocs.en["start-here"].steps %}
+{% set docs = canonical.groupedDocs.en["initial-setup"].steps %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -21,8 +22,7 @@ toc:
 
     <section class="doc-hero doc-hero-simple">
       <div>
-        <p class="eyebrow">Getting Started</p>
-        <h1>Start Here</h1>
+        <h1>Initial Setup</h1>
         <p class="lead">Follow three steps to get your LaTeX environment running and complete your first successful build.</p>
       </div>
     </section>

@@ -16,8 +16,8 @@ toc:
     label: Use a daily sync loop
   - id: keep-commits-coherent
     label: Keep commits coherent
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -70,6 +70,6 @@ A good commit collects one understandable change. It does not need to be huge. I
   </figure>
 </div>
 
-## Self-check
+## Before proceeding
 
 If you can explain when to pull, when to commit, and when to push without improvising, your daily sync loop is ready.

@@ -4,6 +4,7 @@ title: Initial Setup
 description: 첫 compile 성공까지 이어지는 Initial Setup 카테고리 홈.
 lang: ko
 pageClass: page-section
+permalink: /ko/initial-setup/
 toc:
   - id: core-route
     label: 세 단계
@@ -12,7 +13,7 @@ toc:
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
-{% set docs = canonical.groupedDocs.ko["start-here"].steps %}
+{% set docs = canonical.groupedDocs.ko["initial-setup"].steps %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -21,8 +22,7 @@ toc:
 
     <section class="doc-hero doc-hero-simple">
       <div>
-        <p class="eyebrow">시작하기</p>
-        <h1>Start Here</h1>
+        <h1>Initial Setup</h1>
         <p class="lead">세 단계를 따라 LaTeX 환경을 구성하고 첫 번째 빌드를 성공시킵니다.</p>
       </div>
     </section>

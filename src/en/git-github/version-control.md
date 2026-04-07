@@ -16,8 +16,8 @@ toc:
     label: Check status often
   - id: ignore-local-clutter
     label: Ignore local clutter
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -99,6 +99,6 @@ Use `.gitignore` to keep those files out of commits. The goal is not to hide rea
   </figure>
 </div>
 
-## Self-check
+## Before proceeding
 
 If you can look at `git status` and explain which files are ready to commit, which are still local clutter, and which should be ignored, this page has done its job.

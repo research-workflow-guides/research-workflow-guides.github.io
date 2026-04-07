@@ -16,8 +16,8 @@ toc:
     label: Keep one stable folder shape
   - id: common-mistakes
     label: Common mistakes
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -83,6 +83,6 @@ Do not start from the Downloads folder, a temporary ZIP preview, or a deeply nes
 
 If LaTeX Workshop cannot find the main file, the problem is often the folder you opened rather than the extension itself.
 
-## Self-check
+## Before proceeding
 
 Confirm that the Explorer shows the whole project, the main `.tex` file is inside that tree, and builds are running against the intended root.

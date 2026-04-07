@@ -10,14 +10,14 @@ translationKey: git-github-account-setup
 eyebrow: Step 2
 lead: repository 호스팅과 협업에 계속 사용할 GitHub 계정을 하나 정리합니다.
 toc:
-  - id: create-or-confirm-the-account
+  - id: 계정-만들기-또는-확인
     label: 계정 만들기 또는 확인
-  - id: turn-on-basic-security
+  - id: 기본-보안-설정
     label: 기본 보안 설정
-  - id: prepare-a-usable-profile
+  - id: 프로필-정리
     label: 프로필 정리
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -53,6 +53,6 @@ tags:
 
 username, display name, verified email이 안정적으로 보이게 맞춥니다. 이런 기본 정보가 협업 때 혼란을 많이 줄여줍니다.
 
-## 점검
+## 넘어가기 전
 
 문제 없이 로그인할 수 있고, GitHub 메일을 받을 수 있으며, 프로필에 안정적인 username이 보이면 다음 단계로 넘어갑니다.

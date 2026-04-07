@@ -8,16 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+KR:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="/site-assets/styles.css?v={{ build.assetVersion }}">
   </head>
-  <body class="{{ pageClass or '' }}" data-page-lang="{{ lang or '' }}">
-    {% set currentPageMeta = canonical.pagesByUrl[page.url] %}
-    {% set currentPageUi = canonical.pageUi[page.url] %}
-    {% set currentLang = currentPageMeta.lang if currentPageMeta and currentPageMeta.lang != "root" else lang %}
-    {% set currentSection = currentPageUi.activeSection if currentPageUi else activeSection %}
+  {% set currentPageMeta = canonical.pagesByUrl[page.url] %}
+  {% set currentPageUi = canonical.pageUi[page.url] %}
+  {% set currentLang = currentPageMeta.lang if currentPageMeta and currentPageMeta.lang != "root" else lang %}
+  {% set currentSection = currentPageUi.activeSection if currentPageUi else activeSection %}
+  <body class="{{ pageClass or '' }}{% if currentSection %} section--{{ currentSection }}{% endif %}" data-page-lang="{{ lang or '' }}">
     {% set currentLangSwitch = currentPageUi.langSwitch if currentPageUi else langSwitch %}
     <header class="site-header" data-pagefind-ignore="all">
       <div class="wrap site-header-inner">
@@ -81,7 +81,7 @@
           </button>
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
             {% for section in navigation.sections %}
-              <div class="nav-dropdown">
+              <div class="nav-dropdown nav-section--{{ section.key }}">
                 <a
                   href="{{ section.url[currentLang] }}"
                   {% if currentSection == section.key %}aria-current="page"{% endif %}

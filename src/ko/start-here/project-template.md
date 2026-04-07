@@ -3,21 +3,21 @@ layout: layouts/doc.njk
 title: Project Template
 description: starter project를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.
 lang: ko
-section: start-here
+section: initial-setup
 order: 3
-permalink: /ko/start-here/project-template/
-translationKey: start-here-project-template
+permalink: /ko/initial-setup/project-template/
+translationKey: initial-setup-project-template
 eyebrow: Step 3
 lead: starter project를 내려받아 VS Code에서 열고, 빌드를 한 번 실행해 전체 도구 체인이 동작하는지 확인합니다.
 toc:
-  - id: download-the-starter-archive
+  - id: template-받기
     label: template 받기
-  - id: open-the-project-in-vs-code
+  - id: project-열기
     label: project 열기
-  - id: run-the-first-build
+  - id: 첫-build-실행
     label: 첫 build 실행
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -61,6 +61,6 @@ project template source로 starter repository를 사용합니다.
 2. PDF preview를 열고 문서가 오류 없이 컴파일되는지 확인합니다.
 3. 이 단계가 마지막 설치 점검입니다. template이 오류 없이 빌드되면 배포판, 에디터, 확장이 모두 함께 작동하는 것입니다.
 
-## 점검
+## 넘어가기 전
 
 starter 문서가 VS Code에서 열리고, 오류 없이 build가 완료되며, PDF preview가 나타나면 다음으로 넘어갑니다.

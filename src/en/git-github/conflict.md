@@ -16,8 +16,8 @@ toc:
     label: Resolve one file carefully
   - id: finish-the-merge-cleanly
     label: Finish the merge cleanly
-  - id: before-you-move-on
-    label: Self-check
+  - id: before-proceeding
+    label: Before proceeding
 tags:
   - doc
 ---
@@ -62,6 +62,6 @@ Do not accept everything from one side unless that is the correct outcome.
 
 After resolving the file, confirm the conflict markers are gone, stage the file, and finish the merge commit or re-run the normal commit flow.
 
-## Self-check
+## Before proceeding
 
 If you can explain what the final file should say and the repository returns to a clean state afterward, the conflict has been handled correctly.

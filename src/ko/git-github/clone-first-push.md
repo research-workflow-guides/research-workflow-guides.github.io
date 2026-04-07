@@ -10,14 +10,14 @@ translationKey: git-clone-first-push
 eyebrow: Step 5
 lead: 먼저 비어 있는 repository를 clone한 뒤, 그 clone 폴더 안으로 working project를 넣고 첫 push를 합니다.
 toc:
-  - id: clone-the-empty-repository
+  - id: 빈-저장소-clone
     label: 빈 저장소 clone
-  - id: copy-the-project-into-the-clone
+  - id: clone-안으로-project-넣기
     label: clone 안으로 project 넣기
-  - id: make-the-first-commit-and-push
+  - id: 첫-commit과-push
     label: 첫 commit과 push
-  - id: before-you-move-on
-    label: 점검
+  - id: 넘어가기-전
+    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -105,6 +105,6 @@ git push origin main
   </figure>
 </div>
 
-## 점검
+## 넘어가기 전
 
 GitHub 페이지에 project 파일이 보이고, push 뒤 local repository가 clean 상태라면 첫 원격 게시 흐름이 완료된 것입니다.
