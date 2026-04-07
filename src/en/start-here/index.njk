@@ -8,8 +8,6 @@ permalink: /en/initial-setup/
 toc:
   - id: core-route
     label: Steps
-  - id: readiness
-    label: Before moving on
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
@@ -37,24 +35,6 @@ toc:
             <p>{{ doc.description }}</p>
           </a>
         {% endfor %}
-      </div>
-    </section>
-
-    <section id="readiness" class="doc-section">
-      <h2>Before moving on</h2>
-      <div class="stack-list">
-        <article class="stack-item">
-          <h3>Follow the installation order</h3>
-          <p>Install the distribution first, then the editor, then the starter project.</p>
-        </article>
-        <article class="stack-item">
-          <h3>Start with one template</h3>
-          <p>Getting a clean first build matters more than exploring different setup options.</p>
-        </article>
-        <article class="stack-item">
-          <h3>Confirm the PDF before moving on</h3>
-          <p>The next section assumes your compile loop is already working.</p>
-        </article>
       </div>
     </section>
 

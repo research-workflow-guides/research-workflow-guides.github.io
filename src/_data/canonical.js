@@ -14,8 +14,8 @@ const sectionDefinitions = [
       ko: "도구 체인을 맞추고 첫 compile 성공까지 도달합니다."
     },
     kicker: {
-      en: "Foundation",
-      ko: "Foundation"
+      en: "Chapter 1",
+      ko: "Chapter 1"
     },
     groups: [
       {
@@ -42,8 +42,8 @@ const sectionDefinitions = [
       ko: "일상적인 편집, build, preview, revision 루프로 넘어갑니다."
     },
     kicker: {
-      en: "Practice",
-      ko: "Practice"
+      en: "Chapter 2",
+      ko: "Chapter 2"
     },
     groups: [
       {
@@ -77,8 +77,8 @@ const sectionDefinitions = [
       ko: "저장소를 연결하고 작업을 공개하며 협업 흐름을 안정적으로 운영합니다."
     },
     kicker: {
-      en: "Collaboration",
-      ko: "Collaboration"
+      en: "Chapter 3",
+      ko: "Chapter 3"
     },
     groups: [
       {

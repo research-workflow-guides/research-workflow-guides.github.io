@@ -1,8 +1,8 @@
 :root {
-  --bg: #f4f1ea;
-  --bg-alt: #ece7dc;
-  --paper: rgba(255, 252, 247, 0.92);
-  --paper-strong: #fffdf8;
+  --bg: #ffffff;
+  --bg-alt: #fafafa;
+  --paper: #fafafa;
+  --paper-strong: #ffffff;
   --ink: #1f2431;
   --muted: #5f6777;
   --line: rgba(42, 55, 78, 0.16);
@@ -20,8 +20,7 @@
 }
 
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box;\n  color: var(--ink);\n}
 
 html,
 body {
@@ -34,10 +33,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at top left, rgba(157, 111, 46, 0.14), transparent 28%),
-    radial-gradient(circle at top right, rgba(24, 61, 93, 0.14), transparent 30%),
-    linear-gradient(180deg, #f8f5ef 0%, #f2ede4 100%);
+  background: #ffffff;
   color: var(--ink);
   font-family: "Noto Serif KR", serif;
   line-height: 1.7;
@@ -77,7 +73,7 @@ pre {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(18px);
-  background: rgba(251, 248, 241, 0.82);
+  background: rgba(245, 245, 245, 0.95);
   border-bottom: 1px solid rgba(31, 36, 49, 0.08);
 }
 
@@ -90,7 +86,7 @@ pre {
 }
 
 .brand {
-  color: var(--brand);
+  color: var(--ink);
   font-family: "Fraunces", serif;
   font-size: clamp(1.05rem, 2vw, 1.3rem);
   font-weight: 600;
@@ -116,14 +112,15 @@ pre {
   color: var(--brand);
 }
 
-.lang-switch {
+.lang-switch, .site-nav a.lang-switch {
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
-  background: rgba(24, 61, 93, 0.08);
+  background: #ffffff;
   width: 92px;
   text-align: center;
   display: inline-block;
   box-sizing: border-box;
+  color: var(--ink);
 }
 
 /* Top nav section accent colors */
@@ -337,14 +334,14 @@ li {
 }
 
 .button-primary {
-  color: #fff;
-  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-soft) 100%);
+  color: var(--ink);
+  background: var(--bg);
 }
 
 .button-secondary {
   border: 1px solid rgba(24, 61, 93, 0.16);
-  background: rgba(255, 252, 247, 0.86);
-  color: var(--brand);
+  background: var(--bg);
+  color: var(--ink);
 }
 
 .text-link {
