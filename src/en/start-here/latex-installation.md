@@ -20,6 +20,8 @@ toc:
     label: Platform notes
   - id: perl-requirement
     label: Perl requirement
+  - id: on-demand-packages
+    label: On-demand packages
   - id: before-proceeding
     label: Before proceeding
 tags:
@@ -90,26 +92,6 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </figure>
 </div>
 
-<div class="doc-step-pair">
-  <div>
-    <p>If a build seems to pause later, look for the MiKTeX package-install prompt. On Windows it can appear behind the editor or as a small hidden dialog preview.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.1.3-7.png" alt="VS Code with a hidden MiKTeX package installation prompt preview">
-    <figcaption>If the build pauses, check whether a MiKTeX package-install dialog is waiting behind the editor.</figcaption>
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>When the package dialog appears, allow MiKTeX to install the missing package so the build can continue.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package installation dialog for a missing package">
-    <figcaption>Allow MiKTeX to install the missing package when prompted.</figcaption>
-  </figure>
-</div>
-
 ## Platform notes
 
 ### Windows
@@ -170,6 +152,30 @@ On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, veri
   <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl download page">
   <figcaption>Strawberry Perl is the standard fallback for Windows.</figcaption>
 </figure>
+
+## On-demand packages
+
+When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On Windows the dialog can appear behind the editor or as a small taskbar preview — look for it before assuming the build has hung.
+
+<div class="doc-step-pair">
+  <div>
+    <p>If a build seems to pause, look for the MiKTeX package-install prompt. On Windows it can appear behind the editor or as a small hidden dialog preview.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-7.png" alt="VS Code with a hidden MiKTeX package installation prompt preview">
+    <figcaption>If the build pauses, check whether a MiKTeX package-install dialog is waiting behind the editor.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>When the package dialog appears, allow MiKTeX to install the missing package so the build can continue.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package installation dialog for a missing package">
+    <figcaption>Allow MiKTeX to install the missing package when prompted.</figcaption>
+  </figure>
+</div>
 
 ## Before proceeding
 

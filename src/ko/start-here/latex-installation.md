@@ -20,6 +20,8 @@ toc:
     label: 운영체제별 메모
   - id: perl-확인
     label: Perl 확인
+  - id: 패키지-자동-설치
+    label: 패키지 자동 설치
   - id: 넘어가기-전
     label: 넘어가기 전
 tags:
@@ -92,26 +94,6 @@ tags:
   </figure>
 </div>
 
-<div class="doc-step-pair">
-  <div>
-    <p>나중에 build가 멈춘 것처럼 보이면 MiKTeX 패키지 설치 창이 editor 뒤에 숨어 있는지 먼저 확인하세요.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.1.3-7.png" alt="editor 뒤에 숨어 있는 MiKTeX 패키지 설치 창 미리보기">
-    <figcaption>build가 멈추면 editor 뒤에 MiKTeX 설치 창이 숨어 있지 않은지 확인합니다.</figcaption>
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>설치 창이 나타나면 누락된 패키지를 설치하도록 허용해야 build가 계속 진행됩니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.1.3-8.png" alt="누락된 패키지에 대한 MiKTeX 설치 대화상자">
-    <figcaption>누락된 패키지를 설치하라는 창이 뜨면 설치를 허용합니다.</figcaption>
-  </figure>
-</div>
-
 ## 운영체제별 메모
 
 ### Windows
@@ -172,6 +154,30 @@ Windows에서는 Perl이 없으면 Strawberry Perl을 설치합니다. macOS와 
   <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl 다운로드 페이지">
   <figcaption>Windows에 Perl이 없다면 Strawberry Perl을 함께 설치합니다.</figcaption>
 </figure>
+
+## 패키지 자동 설치
+
+MiKTeX는 컴파일 중 필요한 패키지를 자동으로 설치합니다. build가 멈춘 것처럼 보이면 editor 뒤에 MiKTeX 설치 창이 숨어 있는지 먼저 확인하세요.
+
+<div class="doc-step-pair">
+  <div>
+    <p>build가 멈춘 것처럼 보이면 MiKTeX 패키지 설치 창이 editor 뒤에 숨어 있는지 확인하세요.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-7.png" alt="editor 뒤에 숨어 있는 MiKTeX 패키지 설치 창 미리보기">
+    <figcaption>build가 멈추면 editor 뒤에 MiKTeX 설치 창이 숨어 있지 않은지 확인합니다.</figcaption>
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>설치 창이 나타나면 누락된 패키지를 설치하도록 허용해야 build가 계속 진행됩니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-8.png" alt="누락된 패키지에 대한 MiKTeX 설치 대화상자">
+    <figcaption>누락된 패키지를 설치하라는 창이 뜨면 설치를 허용합니다.</figcaption>
+  </figure>
+</div>
 
 ## 넘어가기 전
 
