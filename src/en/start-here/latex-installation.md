@@ -21,7 +21,7 @@ toc:
   - id: perl-requirement
     label: Perl requirement
   - id: on-demand-packages
-    label: On-demand packages
+    label: Package auto-installation
   - id: before-proceeding
     label: Before proceeding
 tags:
@@ -153,7 +153,7 @@ On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, veri
   <figcaption>Strawberry Perl is the standard fallback for Windows.</figcaption>
 </figure>
 
-## On-demand packages
+## Package auto-installation
 
 When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On Windows the dialog can appear behind the editor or as a small taskbar preview — look for it before assuming the build has hung.
 
