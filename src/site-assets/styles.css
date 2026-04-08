@@ -396,7 +396,7 @@ li {
 }
 
 .hero-panel-title {
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
   margin: 0.4rem 0 0.5rem;
   line-height: 1.15;
 }
@@ -454,7 +454,7 @@ li {
 .feature-card h3,
 .language-card h2 {
   margin-bottom: 0.6rem;
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
 }
 
 /* Section accent colors */
@@ -696,6 +696,10 @@ li.section--git-github > .rail-link-section.is-current {
   grid-template-columns: 1fr;
 }
 
+.doc-hero h1 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
 .meta-list {
   display: grid;
   gap: 0.85rem;
@@ -805,6 +809,7 @@ li.section--git-github > .rail-link-section.is-current {
 
 .doc-section h2 {
   margin-bottom: 1.2rem;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
 }
 
 .stack-list {
@@ -831,6 +836,10 @@ li.section--git-github > .rail-link-section.is-current {
 .callout-card {
   margin-top: 2rem;
   padding: 1.35rem;
+}
+
+.callout-card h2 {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
 }
 
 .page-home .doc-content {
@@ -870,6 +879,10 @@ li.section--git-github > .rail-link-section.is-current {
 .prose h3 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
+}
+
+.prose h2 {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
 }
 
 .prose p,
