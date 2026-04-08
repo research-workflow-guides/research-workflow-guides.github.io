@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Git & GitHub
+title: Git과 GitHub
 description: Git과 GitHub 워크플로우를 위한 카테고리 홈.
 lang: ko
 pageClass: page-section
@@ -16,17 +16,17 @@ pageClass: page-section
 
     <section class="doc-hero doc-hero-simple">
       <div>
-        <h1>Git &amp; GitHub</h1>
+        <h1>Git과 GitHub</h1>
         <p class="lead">project template이 로컬에서 동작하는 상태라면 여기서 시작합니다.</p>
       </div>
     </section>
 
-    <section class="doc-section">
+    <section id="preparation" class="doc-section">
       <h2>준비</h2>
       <div class="feature-grid feature-grid-compact">
         {% for doc in grouped.preparation %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Step {{ loop.index }}</p>
+            <p class="card-kicker">단계 {{ loop.index }}</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>
@@ -34,12 +34,12 @@ pageClass: page-section
       </div>
     </section>
 
-    <section class="doc-section">
+    <section id="first-github-workflow" class="doc-section">
       <h2>첫 GitHub 작업</h2>
       <div class="feature-grid feature-grid-compact">
         {% for doc in grouped["first-github-workflow"] %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Step {{ loop.index + 2 }}</p>
+            <p class="card-kicker">단계 {{ loop.index + 2 }}</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>
@@ -47,12 +47,12 @@ pageClass: page-section
       </div>
     </section>
 
-    <section class="doc-section">
+    <section id="daily-workflow" class="doc-section">
       <h2>일상 작업</h2>
       <div class="feature-grid feature-grid-compact">
         {% for doc in grouped["daily-workflow"] %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Topic {{ loop.index }}</p>
+            <p class="card-kicker">주제 {{ loop.index }}</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>
@@ -60,12 +60,12 @@ pageClass: page-section
       </div>
     </section>
 
-    <section class="doc-section">
+    <section id="collaboration" class="doc-section">
       <h2>협업</h2>
       <div class="feature-grid feature-grid-compact">
         {% for doc in grouped.collaboration %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Topic {{ loop.index + 2 }}</p>
+            <p class="card-kicker">주제 {{ loop.index + 2 }}</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>

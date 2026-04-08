@@ -1,13 +1,13 @@
 ---
 layout: layouts/doc.njk
-title: Settings
+title: 설정
 description: VS Code와 LaTeX Workshop의 기본 설정을 정리해 반복 작업을 안정화합니다.
 lang: ko
 section: writing-in-vs-code
 order: 2
 permalink: /ko/writing-in-vs-code/settings/
 translationKey: writing-settings
-eyebrow: Topic 2
+eyebrow: 주제 2
 lead: 설정은 작고 오래 버티는 것부터 시작합니다. build, preview, cleanup이 예측 가능하게 돌아가면 충분합니다.
 toc:
   - id: 작은-settings부터-시작

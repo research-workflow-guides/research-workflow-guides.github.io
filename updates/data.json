@@ -9,21 +9,30 @@
       "description": "Starter LaTeX file pack download guide. Includes seed document, check document, keybindings, snippets, and settings.",
       "date": "2026-04-04",
       "status": "completed",
-      "url": "../section-1/basic-doc-pack/"
+      "links": {
+        "en": "../part-1/basic-doc-pack/",
+        "ko": "../ko/part-1/basic-doc-pack/"
+      }
     },
     {
       "title": "1.4 GitHub Sign Up",
       "description": "GitHub account creation guide with a tip on GitHub Desktop.",
       "date": "2026-04-04",
       "status": "completed",
-      "url": "../section-1/github/"
+      "links": {
+        "en": "../en/git-github/github-account-setup/",
+        "ko": "../ko/git-github/github-account-setup/"
+      }
     },
     {
       "title": "1.3 Git Installation",
       "description": "Git installation guide for Windows and macOS. Includes default editor configuration.",
       "date": "2026-04-04",
       "status": "completed",
-      "url": "../section-1/git/"
+      "links": {
+        "en": "../en/git-github/git-installation/",
+        "ko": "../ko/git-github/git-installation/"
+      }
     },
     {
       "title": "Language split (EN / KO)",
@@ -37,42 +46,56 @@
       "description": "VS Code installation guide with required and optional extensions for LaTeX workflow.",
       "date": "2026-04-04",
       "status": "completed",
-      "url": "../section-1/vs-code/"
+      "links": {
+        "en": "../en/initial-setup/vs-code-installation/",
+        "ko": "../ko/initial-setup/vs-code-installation/"
+      }
     },
     {
       "title": "1.1.3 Option 3: MiKTeX (Windows only)",
       "description": "MiKTeX installation guide — the distribution used in this course. Includes latexmk and Strawberry Perl setup.",
       "date": "2026-04-04",
       "status": "completed",
-      "url": "../section-1/installation/option-3/"
+      "links": {
+        "en": "../en/initial-setup/latex-installation/",
+        "ko": "../ko/initial-setup/latex-installation/"
+      }
     },
     {
       "title": "1.1.2 Option 2: TeX Live (slow/full)",
       "description": "Full TeX Live installation guide using the network installer for the complete package set.",
       "date": "2026-04-04",
       "status": "completed",
-      "url": "../section-1/installation/option-2/"
+      "links": {
+        "en": "../part-1/installation/option-2/"
+      }
     },
     {
       "title": "1.1.1 Option 1: TeX Live (fast)",
       "description": "Step-by-step guide for the recommended quick TeX Live installation via install-tl-windows.exe.",
       "date": "2026-04-04",
       "status": "completed",
-      "url": "../section-1/installation/option-1/"
+      "links": {
+        "en": "../part-1/installation/option-1/"
+      }
     },
     {
       "title": "1.1 LaTeX Installation",
       "description": "Overview of three LaTeX installation options: TeX Live (fast), TeX Live (slow), and MiKTeX.",
       "date": "2026-04-03",
       "status": "completed",
-      "url": "../section-1/installation/"
+      "links": {
+        "en": "../part-1/installation/"
+      }
     },
     {
       "title": "2.2.8 Gitignore",
       "description": "First migrated content page. Excludes files/folders from GitHub commits using .gitignore.",
       "date": "2026-04-02",
       "status": "completed",
-      "url": "../section-2/usage/vs-code-github/gitignore/"
+      "links": {
+        "en": "../part-2/usage/vs-code-github/gitignore/"
+      }
     },
     {
       "title": "Site skeleton",

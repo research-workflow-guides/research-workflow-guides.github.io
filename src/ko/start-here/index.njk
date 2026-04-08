@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: Initial Setup
-description: 첫 compile 성공까지 이어지는 Initial Setup 카테고리 홈.
+title: 초기 설정
+description: 첫 compile 성공까지 이어지는 초기 설정 카테고리 홈.
 lang: ko
 pageClass: page-section
 permalink: /ko/initial-setup/
@@ -20,7 +20,7 @@ toc:
 
     <section class="doc-hero doc-hero-simple">
       <div>
-        <h1>Initial Setup</h1>
+        <h1>초기 설정</h1>
         <p class="lead">세 단계를 따라 LaTeX 환경을 구성하고 첫 번째 빌드를 성공시킵니다.</p>
       </div>
     </section>
@@ -30,7 +30,7 @@ toc:
       <div class="feature-grid feature-grid-compact">
         {% for doc in docs %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Step {{ doc.order }}</p>
+            <p class="card-kicker">단계 {{ doc.order }}</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>
@@ -39,10 +39,10 @@ toc:
     </section>
 
     <section class="callout-card">
-      <p class="eyebrow">Next</p>
-      <h2>다음은 Work in VS Code</h2>
+      <p class="eyebrow">다음</p>
+      <h2>다음은 VS Code에서 작업하기</h2>
       <p>첫 빌드가 성공하면 VS Code의 일상적인 편집 워크플로우로 넘어갑니다.</p>
-      <a class="text-link" href="/ko/writing-in-vs-code/">Writing in VS Code로 이동</a>
+      <a class="text-link" href="/ko/writing-in-vs-code/">VS Code에서 작업하기로 이동</a>
     </section>
   </article>
 </main>

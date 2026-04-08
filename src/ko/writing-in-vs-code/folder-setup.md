@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 1
 permalink: /ko/writing-in-vs-code/folder-setup/
 translationKey: writing-folder-setup
-eyebrow: Topic 1
+eyebrow: 주제 1
 lead: 파일 하나가 아니라 project 전체 폴더를 VS Code에서 엽니다. root 위치를 고정하고 항상 올바른 위치에서 build합니다.
 toc:
   - id: project-root-열기

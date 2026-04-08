@@ -8,6 +8,7 @@ langSwitch:
   label: English
 pageClass: page-landing
 ---
+{% set currentUpdates = updates.completedByLang.ko %}
 <main>
   <section class="landing-hero">
     <h1 class="wrap hero-h1">설치부터 GitHub 협업까지 이어지는 연구 워크플로우를 구축하세요.</h1>
@@ -23,12 +24,12 @@ pageClass: page-landing
       </div>
 
       <aside class="hero-panel panel">
-        <p class="eyebrow">Recent Updates</p>
+        <p class="eyebrow">{{ ui.ko.recentUpdates }}</p>
         {% if updates.currentBuild %}
           <h2 class="hero-panel-title">{{ updates.currentBuild.title }}</h2>
         {% endif %}
         <dl class="updates-list">
-          {% for item in updates.completed %}
+          {% for item in currentUpdates %}
             {% if loop.index <= 1 %}
               <div>
                 <dt>{{ item.date }}</dt>
@@ -43,7 +44,7 @@ pageClass: page-landing
             {% endif %}
           {% endfor %}
         </dl>
-        <a class="text-link" href="/updates/">More updates →</a>
+        <a class="text-link" href="/updates/">{{ ui.ko.moreUpdates }}</a>
       </aside>
     </div>
   </section>
@@ -51,7 +52,7 @@ pageClass: page-landing
   <section class="editorial-band">
     <div class="wrap">
       <div class="section-heading">
-        <h2>Route Map</h2>
+        <h2>안내 경로</h2>
       </div>
       <div class="feature-grid">
         {% for section in navigation.sections %}

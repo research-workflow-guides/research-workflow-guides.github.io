@@ -1,13 +1,13 @@
 ---
 layout: layouts/doc.njk
-title: Snippets
+title: 스니펫
 description: 자주 쓰는 LaTeX 조각을 snippet으로 묶어 반복 입력을 줄입니다.
 lang: ko
 section: writing-in-vs-code
 order: 5
 permalink: /ko/writing-in-vs-code/snippets/
 translationKey: writing-snippets
-eyebrow: Topic 5
+eyebrow: 주제 5
 lead: snippet은 문서 구조를 가리지 않으면서 반복 입력만 줄여줄 때 가장 유용합니다.
 toc:
   - id: 자주-쓰는-패턴부터

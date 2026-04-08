@@ -16,6 +16,7 @@
   {% set currentPageMeta = canonical.pagesByUrl[page.url] %}
   {% set currentPageUi = canonical.pageUi[page.url] %}
   {% set currentLang = currentPageMeta.lang if currentPageMeta and currentPageMeta.lang != "root" else lang %}
+  {% set currentUi = ui[currentLang if currentLang == "ko" else "en"] %}
   {% set currentSection = currentPageUi.activeSection if currentPageUi else activeSection %}
   <body class="{{ pageClass or '' }}{% if currentSection %} section--{{ currentSection }}{% endif %}" data-page-lang="{{ lang or '' }}">
     {% set currentLangSwitch = currentPageUi.langSwitch if currentPageUi else langSwitch %}
@@ -31,7 +32,7 @@
             aria-controls="primary-nav"
             data-menu-toggle
           >
-            Menu
+            {{ currentUi.menu }}
           </button>
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
             {% for item in navigation.legacy.en %}
@@ -54,7 +55,7 @@
             aria-controls="primary-nav"
             data-menu-toggle
           >
-            Menu
+            {{ currentUi.menu }}
           </button>
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
             {% for item in navigation.legacy.koSection %}
@@ -77,7 +78,7 @@
             aria-controls="primary-nav"
             data-menu-toggle
           >
-            Menu
+            {{ currentUi.menu }}
           </button>
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
             {% for section in navigation.sections %}
@@ -115,12 +116,12 @@
           <p class="footer-brand">{{ site.name }}</p>
           {% set latestFooterDate = git.latestCommitDate or (updates.latest.date if updates.latest else null) %}
           {% if latestFooterDate %}
-            <p class="footer-update">Latest update: {{ latestFooterDate }}</p>
+            <p class="footer-update">{{ currentUi.latestUpdate }} {{ latestFooterDate }}</p>
           {% endif %}
         </div>
         <div class="footer-meta">
           <p>&copy; 2026 {{ site.authorLine }}</p>
-          <a href="{{ site.oldVersionUrl }}">Old Version</a>
+          <a href="{{ site.oldVersionUrl }}">{{ currentUi.oldVersion }}</a>
         </div>
       </div>
     </footer>

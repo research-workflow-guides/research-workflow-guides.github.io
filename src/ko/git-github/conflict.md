@@ -1,13 +1,13 @@
 ---
 layout: layouts/doc.njk
-title: Conflict
+title: 충돌 해결
 description: 같은 파일 충돌을 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.
 lang: ko
 section: git-github
 order: 9
 permalink: /ko/git-github/conflict/
 translationKey: git-conflict
-eyebrow: Step 9
+eyebrow: 단계 9
 lead: conflict는 재난이 아니라, 겹치는 수정 중 어떤 최종 텍스트를 남길지 Git이 도움을 요청하는 상태입니다.
 toc:
   - id: conflict의-의미

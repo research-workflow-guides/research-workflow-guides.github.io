@@ -6,6 +6,7 @@ pageClass: page-doc
 {% set breadcrumbs = currentPageUi.breadcrumbs if currentPageUi else breadcrumbs %}
 {% set prevPage = currentPageUi.prevPage if currentPageUi else prevPage %}
 {% set nextPage = currentPageUi.nextPage if currentPageUi else nextPage %}
+{% set currentUi = ui[lang if lang == "ko" else "en"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -38,13 +39,13 @@ pageClass: page-doc
       <section class="page-nav">
         {% if prevPage %}
           <a class="nav-panel" href="{{ prevPage.url }}">
-            <strong>{% if lang == "ko" %}Previous{% else %}Previous{% endif %}</strong>
+            <strong>{{ currentUi.previous }}</strong>
             <span>{{ prevPage.title }}</span>
           </a>
         {% endif %}
         {% if nextPage %}
           <a class="nav-panel" href="{{ nextPage.url }}">
-            <strong>{% if lang == "ko" %}Next{% else %}Next{% endif %}</strong>
+            <strong>{{ currentUi.next }}</strong>
             <span>{{ nextPage.title }}</span>
           </a>
         {% endif %}

@@ -1,13 +1,13 @@
 ---
 layout: layouts/doc.njk
-title: Shortcuts
+title: 단축키
 description: 매일 반복하는 동작을 줄여주는 핵심 shortcut만 정리합니다.
 lang: ko
 section: writing-in-vs-code
 order: 4
 permalink: /ko/writing-in-vs-code/shortcuts/
 translationKey: writing-shortcuts
-eyebrow: Topic 4
+eyebrow: 주제 4
 lead: shortcut 체계를 크게 만들 필요는 없습니다. 매일 반복하는 명령만 빠르게 닿게 두면 충분합니다.
 toc:
   - id: 명령-이름부터-익히기
