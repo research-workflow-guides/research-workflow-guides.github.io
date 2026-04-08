@@ -44,6 +44,7 @@ Use the starter repository as your project template source.
   <div>
     <p>Then open the GitHub code menu and select the ZIP download option for that repository.</p>
   </div>
+  <!-- TODO: This asset currently shows only the Code button. Either soften the copy/caption to "open the Code menu" or replace it with a screenshot that shows the expanded Download ZIP option. -->
   <figure class="image-frame">
     <img src="/assets/images/github-code-btn.svg" alt="GitHub Code button">
     <figcaption>Open the GitHub code menu and choose the ZIP download path.</figcaption>
@@ -52,6 +53,7 @@ Use the starter repository as your project template source.
 
 ## Open the project in VS Code
 
+<!-- TODO: Align this section with the planning spec. Do not explain Check document and Seed document as separate roles. Rewrite this around one compile-ready template, open `main.tex`, and use that same file for the first compile check. -->
 1. Open the extracted folder in VS Code as a project, not as a single file.
 2. Use `seed-document/seed-document.tex` as your starting point.
 

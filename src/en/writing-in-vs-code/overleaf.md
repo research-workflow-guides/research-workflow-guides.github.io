@@ -35,6 +35,7 @@ This is not a general Overleaf introduction and does not replace the local Git a
 
 ## Professional requirement
 
+<!-- TODO: Restructure this page around the current Overleaf flow: Premium availability, Link GitHub in Account Settings, Import from GitHub, and Use Integrations to sync. Update the surrounding screenshots/captions to match that structure. -->
 This workflow requires the GitHub-connected features in Overleaf Professional. If your plan does not include that integration, stay with the local VS Code workflow.
 
 <div class="doc-step-pair">

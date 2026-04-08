@@ -44,6 +44,7 @@ project template source로 starter repository를 사용합니다.
   <div>
     <p>그다음 GitHub의 code 메뉴를 열고 ZIP 다운로드 경로를 선택합니다.</p>
   </div>
+  <!-- TODO: This asset currently shows only the Code button. Either soften the copy/caption to "open the Code menu" or replace it with a screenshot that shows the expanded Download ZIP option. -->
   <figure class="image-frame">
     <img src="/assets/images/github-code-btn.svg" alt="GitHub Code 버튼">
     <figcaption>GitHub code 메뉴에서 ZIP 다운로드 경로를 선택합니다.</figcaption>
@@ -52,6 +53,7 @@ project template source로 starter repository를 사용합니다.
 
 ## project 열기
 
+<!-- TODO: Align this section with the planning spec. Do not explain Check document and Seed document as separate roles. Rewrite this around one compile-ready template, open `main.tex`, and use that same file for the first compile check. -->
 1. VS Code에서 압축을 푼 폴더 전체를 project로 엽니다.
 2. `seed-document/seed-document.tex`를 시작점으로 사용합니다.
 

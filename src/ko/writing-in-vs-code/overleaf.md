@@ -35,6 +35,7 @@ tags:
 
 ## Professional requirement
 
+<!-- TODO: Restructure this page around the current Overleaf flow: Premium availability, Link GitHub in Account Settings, Import from GitHub, and Use Integrations to sync. Update the surrounding screenshots/captions to match that structure. -->
 이 흐름은 Overleaf Professional의 GitHub 연동 기능을 필요로 합니다. 해당 기능을 사용할 수 없다면 로컬 VS Code 흐름을 유지합니다.
 
 <div class="doc-step-pair">
