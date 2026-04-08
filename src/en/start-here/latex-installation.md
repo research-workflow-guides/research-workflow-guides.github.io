@@ -59,7 +59,7 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
 1. Download the installer from the official MiKTeX download page for your platform.
 2. Finish the normal installer flow, then open MiKTeX Console once after installation.
 3. Run updates in MiKTeX Console before moving on, so the package database is current.
-4. Keep package installation on demand enabled, since that is the working assumption of this guide.
+4. Keep on-demand package installation enabled, since that is the working assumption of this guide.
 5. Confirm that `latexmk` is available. If it is missing, install it through MiKTeX Console before continuing.
 
 <div class="doc-step-pair">
@@ -155,11 +155,11 @@ On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, veri
 
 ## Package auto-installation
 
-When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On Windows the dialog can appear behind the editor or as a small taskbar preview — look for it before assuming the build has hung.
+When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On Windows, the dialog can appear behind the editor or as a small taskbar preview — look for it before assuming the build has hung.
 
 <div class="doc-step-pair">
   <div>
-    <p>If a build seems to pause, look for the MiKTeX package-install prompt. On Windows it can appear behind the editor or as a small hidden dialog preview.</p>
+    <p>If a build seems to pause, look for the MiKTeX package-install prompt. On Windows, it can appear behind the editor or as a small taskbar preview.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-7.png" alt="VS Code with a hidden MiKTeX package installation prompt preview">
