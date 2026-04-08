@@ -20,8 +20,8 @@ The new Eleventy source lives under `src/`. Legacy static paths such as `section
 
 ## Authors
 
-- 권기웅(Kwon, Kiwoong), Department of Mathematics, TU Darmstadt, Germany, kwon@mathematik.tu-darmstadt.de
 - 정기엽(Jung, Kiyuob), Department of Mathematics, Michigan State University, kyjung@msu.edu, [homepage](https://sites.google.com/view/kiyuob-jung)
+- 권기웅(Kwon, Kiwoong), Department of Mathematics, TU Darmstadt, Germany, kwon@mathematik.tu-darmstadt.de
 
 ## Old Version
 
