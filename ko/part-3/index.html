@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Git &amp; GitHub | Research Workflow Guidebook</title>
+    <meta
+      name="description"
+      content="Git과 GitHub 워크플로우를 위한 카테고리 홈."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap site-header-inner">
+        <a class="brand" href="/ko/">Research Workflow Guidebook</a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="/ko/initial-setup/">Start Here</a>
+          <a href="/ko/writing-in-vs-code/">Writing in VS Code</a>
+          <a href="/ko/part-3/">Git &amp; GitHub</a>
+          <a class="lang-switch" href="/part-3/">English</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content-shell">
+      <aside class="page-sidebar">
+        <section class="toc-card" aria-labelledby="toc-title">
+          <p id="toc-title" class="toc-title">단계</p>
+          <a href="#prep">준비</a>
+          <a href="#first-remote">처음 원격 워크플로우</a>
+          <a href="#repeat">반복 작업</a>
+          <a href="#collab">공동 작업과 예외</a>
+        </section>
+      </aside>
+
+      <article class="doc-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/ko/">한국어 홈</a><span>/</span>
+          <span>Git &amp; GitHub</span>
+        </nav>
+
+        <section class="doc-hero">
+          <p class="eyebrow">카테고리</p>
+          <h1>Git &amp; GitHub</h1>
+          <p class="lead">project template이 로컬에서 이미 동작하는 상태를 전제로 시작한다.</p>
+        </section>
+
+        <section id="prep" class="doc-section">
+          <h2>준비</h2>
+          <div class="stack-list">
+            <article class="doc-item"><h3>Git Installation</h3><p class="subtle">Git 설치와 기본 identity 설정</p></article>
+            <article class="doc-item"><h3>GitHub Account Setup</h3><p class="subtle">GitHub 계정 생성과 기본 상태 점검</p></article>
+          </div>
+        </section>
+
+        <section id="first-remote" class="doc-section">
+          <h2>처음 원격 워크플로우</h2>
+          <div class="stack-list">
+            <article class="doc-item"><h3>Connect GitHub</h3><p class="subtle">VS Code에서 GitHub 계정을 연결한다.</p></article>
+            <article class="doc-item"><h3>Create Repository</h3><p class="subtle">첫 empty private repository를 만든다.</p></article>
+            <article class="doc-item"><h3>Clone + First Push</h3><p class="subtle">clone 후 starter project를 넣고 첫 push를 완료한다.</p></article>
+          </div>
+        </section>
+
+        <section id="repeat" class="doc-section">
+          <h2>반복 작업</h2>
+          <div class="stack-list">
+            <article class="doc-item"><h3>Pull &amp; Push</h3><p class="subtle">문제를 일으키지 않는 routine sync 흐름</p></article>
+            <article class="doc-item"><h3>Version Control</h3><p class="subtle">tracked, staged, committed, ignored 상태 이해</p></article>
+          </div>
+        </section>
+
+        <section id="collab" class="doc-section">
+          <h2>공동 작업과 예외</h2>
+          <div class="stack-list">
+            <article class="doc-item"><h3>Collaboration</h3><p class="subtle">shared private repo를 작은 팀이 함께 운영한다.</p></article>
+            <article class="doc-item"><h3>Conflict</h3><p class="subtle">같은 텍스트 파일 충돌을 Merge Editor로 해결한다.</p></article>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        &copy; 2026 Kiwoong Kwon, Kiyuob Jung
+      </div>
+    </footer>
+  </body>
+</html>

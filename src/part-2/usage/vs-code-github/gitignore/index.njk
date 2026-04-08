@@ -1,0 +1,119 @@
+---
+layout: layouts/doc.njk
+title: "2.2.8 Gitignore"
+description: "Exclude specific files or folders from GitHub commits with a .gitignore file."
+lang: en
+navStyle: legacy-en
+activeSection: part-2
+permalink: /part-2/usage/vs-code-github/gitignore/
+langSwitch:
+  url: /ko/
+  label: 한국어
+eyebrow: Part 2.2.8
+lead: Exclude specific files or folders from GitHub commits with a <code>.gitignore</code> file.
+breadcrumbs:
+  - title: Home
+    url: /
+  - title: Part 2
+    url: /part-2/
+  - title: 2.2.8 Gitignore
+toc:
+  - id: overview
+    label: Overview
+  - id: step-1
+    label: Step 1
+  - id: step-2
+    label: Step 2
+  - id: step-3
+    label: Step 3
+  - id: tip
+    label: Why it may not work
+meta:
+  - label: Topic
+    value: Ignoring files in Git
+  - label: Source type
+    value: Migrated from original Google Sites page
+prevPage:
+  title: Part 2 Usage
+  url: /part-2/
+nextPage:
+  title: Updates
+  url: /updates/
+---
+<section id="overview" class="doc-section">
+  <div class="intro-grid">
+    <div class="copy-card">
+      <p class="korean-line">특정 파일 혹은 폴더를 GitHub에 커밋하고 싶지 않을 때는 <code>.gitignore</code> 파일을 생성하면 됩니다.</p>
+      <p class="korean-line">다음과 같이 <code>heavy</code>라는 폴더 안에 있는 모든 자료를 커밋하고 싶지 않다고 합시다.</p>
+      <p>You can create a <code>.gitignore</code> file to exclude specific files or folders from your GitHub commits.</p>
+      <div class="code-box">
+        <pre><code>heavy/</code></pre>
+        <p class="small-note">Typical entry for the example shown on the source page.</p>
+      </div>
+    </div>
+    <figure class="image-frame">
+      <img src="/assets/images/gitignore/example-folder.png" alt="Example project tree showing the heavy folder">
+      <figcaption>Example project state before adding <code>.gitignore</code>.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="step-1" class="doc-section">
+  <div class="doc-section-grid">
+    <div>
+      <p class="step-label">Step 1</p>
+      <p class="korean-line"><code>.gitignore</code>을 최상위 폴더에 생성하세요.</p>
+      <p>Create a <code>.gitignore</code> file in the root folder.</p>
+    </div>
+    <figure class="image-frame">
+      <img src="/assets/images/gitignore/step1-root-file.png" alt="A new .gitignore file in the project root">
+      <figcaption>The file should sit in the project root.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="step-2" class="doc-section">
+  <div class="doc-section-grid">
+    <div>
+      <p class="step-label">Step 2</p>
+      <p class="korean-line">해당 폴더의 이름을 입력하고 저장하세요. 그러면 해당 폴더에 회색 음영이 칠해지는 것을 확인할 수 있습니다.</p>
+      <p>Type the folder name and save it. You will then see that the folder is grayed out.</p>
+    </div>
+    <div class="figure-stack">
+      <figure class="image-frame">
+        <img src="/assets/images/gitignore/step2-ignore-entry.png" alt="A .gitignore file containing heavy">
+        <figcaption>Add the folder name to <code>.gitignore</code> and save it.</figcaption>
+      </figure>
+      <figure class="image-frame">
+        <img src="/assets/images/gitignore/step2-gray-folder.png" alt="VS Code showing the ignored folder grayed out">
+        <figcaption>The ignored folder becomes visually dimmed in the explorer.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="step-3" class="doc-section">
+  <div class="doc-section-grid">
+    <div>
+      <p class="step-label">Step 3</p>
+      <p class="korean-line">커밋을 해보면 GitHub에 올라가지 않은 것을 확인할 수 있습니다.</p>
+      <p>If you try committing, you will see that it has not been uploaded to GitHub.</p>
+    </div>
+    <figure class="image-frame">
+      <img src="/assets/images/gitignore/step3-commit-result.png" alt="GitHub repository where the ignored folder is absent">
+      <figcaption>The ignored folder does not appear in the GitHub repository.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="tip" class="callout-card">
+  <p class="eyebrow">Tip</p>
+  <h2>Why does it not work?</h2>
+  <p class="korean-line"><code>.gitignore</code>는 Git에 한 번도 올라가지 않은 파일에만 적용됩니다. 이미 <code>add</code>나 <code>commit</code>한 적이 있다면 무시되지 않습니다.</p>
+  <p><code>.gitignore</code> works only on untracked files. It ignores neither staged nor committed files. You need to remove already tracked files from the cache.</p>
+  <div class="code-box">
+    <pre><code>git rm -r --cached heavy</code></pre>
+    <p class="small-note">Example command for a folder that was already tracked earlier.</p>
+  </div>
+  <p class="source-note">Source page: <a href="https://sites.google.com/view/a-30-year-journey/section-2-usage/2-2-vs-code-github/2-2-8-gitignore?authuser=0">A 30-Year Journey - 2.2.8 Gitignore</a></p>
+</section>

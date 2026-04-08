@@ -24,14 +24,14 @@ module.exports = {
         url: "/"
       },
       {
-        key: "section-1",
-        label: "Section 1",
-        url: "/section-1/"
+        key: "part-1",
+        label: "Part 1",
+        url: "/part-1/"
       },
       {
-        key: "section-2",
-        label: "Section 2",
-        url: "/section-2/"
+        key: "part-2",
+        label: "Part 2",
+        url: "/part-2/"
       },
       {
         key: "updates",
@@ -46,9 +46,9 @@ module.exports = {
         url: "/ko/"
       },
       {
-        key: "section-1",
-        label: "섹션 1",
-        url: "/section-1/"
+        key: "part-1",
+        label: "파트 1",
+        url: "/part-1/"
       }
     ]
   }
