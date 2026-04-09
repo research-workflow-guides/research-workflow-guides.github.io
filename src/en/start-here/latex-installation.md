@@ -40,7 +40,7 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-1.png" alt="MiKTeX homepage">
-    <figcaption>Download it from the MiKTeX website.</figcaption>
+
   </figure>
 </div>
 
@@ -50,7 +50,7 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-2.png" alt="MiKTeX download page">
-    <figcaption>Choose the download page that matches your platform.</figcaption>
+
   </figure>
 </div>
 
@@ -68,7 +68,7 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-3.png" alt="MiKTeX setup wizard completion screen">
-    <figcaption>The MiKTeX setup wizard should complete without errors.</figcaption>
+
   </figure>
 </div>
 
@@ -78,7 +78,7 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-4.png" alt="MiKTeX Console package search for latexmk">
-    <figcaption>Search for <code>latexmk</code> in MiKTeX Console.</figcaption>
+
   </figure>
 </div>
 
@@ -88,7 +88,7 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-5.png" alt="MiKTeX package installation progress window">
-    <figcaption>Wait for the package installation to finish.</figcaption>
+
   </figure>
 </div>
 
@@ -150,7 +150,7 @@ On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, veri
 
 <figure class="image-frame">
   <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl download page">
-  <figcaption>Strawberry Perl is the standard fallback for Windows.</figcaption>
+
 </figure>
 
 ## Package auto-installation
@@ -163,7 +163,7 @@ When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-7.png" alt="VS Code with a hidden MiKTeX package installation prompt preview">
-    <figcaption>If the build pauses, check whether a MiKTeX package-install dialog is waiting behind the editor.</figcaption>
+
   </figure>
 </div>
 
@@ -173,7 +173,7 @@ When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package installation dialog for a missing package">
-    <figcaption>Allow MiKTeX to install the missing package when prompted.</figcaption>
+
   </figure>
 </div>
 

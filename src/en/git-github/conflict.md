@@ -7,7 +7,7 @@ section: git-github
 order: 9
 permalink: /en/git-github/conflict/
 translationKey: git-conflict
-eyebrow: Step 9
+eyebrow: Topic 4
 lead: A conflict is not a disaster. It simply means Git needs help choosing between overlapping edits.
 toc:
   - id: what-a-conflict-means
@@ -33,7 +33,7 @@ Git stops and asks you to decide what the final text should be.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/conflict-push-warning.png" alt="VS Code warning that a push was rejected and a pull is required">
-    <figcaption>A rejected push often means the remote changed and you need to pull before continuing.</figcaption>
+
   </figure>
 </div>
 
@@ -43,7 +43,7 @@ Git stops and asks you to decide what the final text should be.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/conflict-pull-menu.png" alt="VS Code source control menu with Pull highlighted after a push warning">
-    <figcaption>Start the merge by pulling the remote changes into your local repository.</figcaption>
+
   </figure>
 </div>
 
@@ -55,7 +55,7 @@ Do not accept everything from one side unless that is the correct outcome.
 
 <figure class="image-frame">
   <img src="/assets/images/legacy/github-workflow/conflict-merge-state.png" alt="VS Code source control panel during a merge with merge changes shown">
-  <figcaption>While conflicts remain, the repository stays in a merge-in-progress state until you resolve each one.</figcaption>
+
 </figure>
 
 ## Finish the merge cleanly

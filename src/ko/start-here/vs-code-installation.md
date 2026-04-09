@@ -32,7 +32,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-1.png" alt="VS Code 홈페이지">
-    <figcaption>VS Code 공식 홈페이지에서 시작합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -42,7 +42,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-2.png" alt="VS Code 다운로드 페이지">
-    <figcaption>운영체제에 맞는 설치 파일을 선택합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -60,7 +60,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-3.png" alt="LaTeX Workshop가 보이는 VS Code Extensions 패널">
-    <figcaption>Extensions 패널에서 <strong>LaTeX Workshop</strong>를 검색합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -70,7 +70,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-4.png" alt="설치가 완료된 VS Code 화면">
-    <figcaption>설치가 끝나면 VS Code가 첫 project 작업을 받을 준비가 됩니다.</figcaption>
+
   </figure>
 </div>
 

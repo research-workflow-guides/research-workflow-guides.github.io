@@ -45,7 +45,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-1.png" alt="Example earlier manuscript file saved as old_version.tex">
-    <figcaption>이전 원고 상태를 <code>old_version.tex</code>로 준비합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -59,7 +59,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-2.png" alt="latexdiff 실행 전에 현재 원고 파일을 따로 준비한 화면">
-    <figcaption>현재 원고를 이전 버전과 분리된 비교 파일로 준비합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -77,7 +77,7 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="VS Code command palette에서 Create New Terminal을 선택하는 화면">
-    <figcaption>diff 명령을 실행하기 전에 manuscript project에서 terminal을 엽니다.</figcaption>
+
   </figure>
 </div>
 
@@ -87,7 +87,7 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-4.png" alt="latexdiff command executed in a terminal to produce diff_version.tex">
-    <figcaption><code>latexdiff</code>를 실행해 <code>diff_version.tex</code>를 생성합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -101,7 +101,7 @@ compile하기 전에 `diff_version.tex`를 열고 정상적으로 생성됐는�
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-5.png" alt="project 안에 생성된 diff_version 파일이 보이는 화면">
-    <figcaption>생성된 diff 파일이 project 안에 나타나는지 먼저 확인합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -125,7 +125,7 @@ latexmk -pdf diff_version.tex
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-6.png" alt="Compiled revision PDF with highlighted manuscript changes">
-    <figcaption>완성된 revision PDF는 삽입과 삭제를 읽기 쉽게 보여줘야 합니다.</figcaption>
+
   </figure>
 </div>
 

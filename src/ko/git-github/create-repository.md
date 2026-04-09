@@ -7,7 +7,7 @@ section: git-github
 order: 4
 permalink: /ko/git-github/create-repository/
 translationKey: git-create-repository
-eyebrow: 4단계
+eyebrow: 주제 2
 lead: 첫 push 흐름을 단순하게 유지하려면 먼저 비어 있는 private repository부터 만듭니다.
 toc:
   - id: 저장소-형태-정하기
@@ -35,7 +35,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="Repositories 탭이 강조된 GitHub profile 화면">
-    <figcaption>GitHub profile에서 repositories 목록으로 이동합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -45,7 +45,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="New 버튼이 강조된 GitHub repositories 페이지">
-    <figcaption><strong>New</strong> 버튼으로 저장소 생성 화면을 엽니다.</figcaption>
+
   </figure>
 </div>
 
@@ -56,7 +56,7 @@ tags:
   <!-- TODO: Retake this screenshot and the following empty-repo screenshot with a private repository example. Keep the captions explicitly aligned with a private repository flow. -->
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="GitHub 저장소 생성 폼">
-    <figcaption>repository 이름과 공개 범위를 정해 생성 폼을 채웁니다.</figcaption>
+
   </figure>
 </div>
 
@@ -66,7 +66,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="생성 직후의 비어 있는 GitHub 저장소 페이지">
-    <figcaption>생성 직후 비어 있는 저장소 페이지가 보이면 정상입니다.</figcaption>
+
   </figure>
 </div>
 

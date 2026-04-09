@@ -862,10 +862,18 @@ function buildPrevNext(page) {
   } else {
     const nextSection = getNextSection(page.section);
     if (nextSection) {
-      nextPage = {
-        title: nextSection.title[page.lang],
-        url: nextSection.url[page.lang]
-      };
+      const nextSectionFirstPage = nextSection.pages[page.lang][0];
+      if (nextSectionFirstPage) {
+        nextPage = {
+          title: nextSectionFirstPage.title,
+          url: nextSectionFirstPage.url
+        };
+      } else {
+        nextPage = {
+          title: nextSection.title[page.lang],
+          url: nextSection.url[page.lang]
+        };
+      }
     }
   }
 

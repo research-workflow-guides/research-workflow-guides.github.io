@@ -7,7 +7,7 @@ section: git-github
 order: 1
 permalink: /ko/git-github/git-installation/
 translationKey: git-git-installation
-eyebrow: 1단계
+eyebrow: 주제 1
 lead: 먼저 Git을 설치하고, 이후 commit에 계속 따라갈 이름과 이메일을 설정합니다.
 toc:
   - id: git-설치
@@ -31,7 +31,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-1.png" alt="Git 홈페이지">
-    <figcaption>Git 공식 홈페이지에서 시작합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -41,7 +41,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-2.png" alt="Git 다운로드 페이지">
-    <figcaption>운영체제에 맞는 설치 파일을 선택합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -51,7 +51,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-3.png" alt="Git 설치 진행">
-    <figcaption>Git installer는 일반적인 setup 흐름으로 진행됩니다.</figcaption>
+
   </figure>
 </div>
 
@@ -61,7 +61,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-4.png" alt="Git 설치 완료">
-    <figcaption>설치가 끝나면 터미널에서 버전을 확인합니다.</figcaption>
+
   </figure>
 </div>
 

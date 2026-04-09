@@ -7,9 +7,11 @@ section: git-github
 order: 6
 permalink: /en/git-github/pull-push/
 translationKey: git-pull-push
-eyebrow: Step 6
+eyebrow: Topic 1
 lead: "Keep the daily remote workflow small: pull before work if needed, commit coherent changes, then push when the work unit is ready."
 toc:
+  - id: key-terms
+    label: Key terms
   - id: start-by-checking-the-current-state
     label: Check the current state
   - id: use-a-small-daily-sync-loop
@@ -21,6 +23,24 @@ toc:
 tags:
   - doc
 ---
+
+<figure class="image-frame">
+  <img src="/assets/images/3-topic-1-1.PNG" alt="Pull and push workflow overview">
+</figure>
+
+## Key terms
+
+<dl>
+  <dt>Stage</dt>
+  <dd>The process of preparing changes to be included in a commit, before actually committing them.</dd>
+  <dt>Commit</dt>
+  <dd>The operation of saving changes to the local Git repository.</dd>
+  <dt>Push</dt>
+  <dd>The action of transferring commits from the local Git repository to a remote repository.</dd>
+  <dt>Pull</dt>
+  <dd>The action of fetching commits from a remote repository and merging them into the local branch.</dd>
+</dl>
+
 ## Check the current state
 
 Before large edits, look at the repository state.
@@ -34,7 +54,7 @@ If nobody else has changed the repository, the pull does nothing — that is exp
 
 <figure class="image-frame">
   <img src="/assets/images/legacy/github-workflow/pull-menu.png" alt="VS Code source control menu with Pull highlighted">
-  <figcaption>The pull action is usually available from the Source Control menu in VS Code.</figcaption>
+
 </figure>
 
 ## Use a daily sync loop
@@ -56,7 +76,7 @@ A good commit collects one understandable change. It does not need to be huge. I
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
-    <figcaption>A visible commit message helps keep the history readable later.</figcaption>
+
   </figure>
 </div>
 
@@ -66,7 +86,7 @@ A good commit collects one understandable change. It does not need to be huge. I
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu with Commit & Push highlighted">
-    <figcaption>After the commit is ready, push it to keep the remote history aligned.</figcaption>
+
   </figure>
 </div>
 

@@ -7,7 +7,7 @@ section: git-github
 order: 2
 permalink: /ko/git-github/github-account-setup/
 translationKey: git-github-account-setup
-eyebrow: 2단계
+eyebrow: 주제 2
 lead: repository 호스팅과 협업에 계속 사용할 GitHub 계정을 하나 정리합니다.
 toc:
   - id: 계정-만들기-또는-확인
@@ -31,7 +31,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.4-1.png" alt="GitHub 홈페이지">
-    <figcaption>GitHub 메인 페이지에서 시작합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -41,7 +41,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.4-2.png" alt="GitHub 회원가입 페이지">
-    <figcaption>계정이 없다면 기본 회원가입 흐름으로 진행합니다.</figcaption>
+
   </figure>
 </div>
 

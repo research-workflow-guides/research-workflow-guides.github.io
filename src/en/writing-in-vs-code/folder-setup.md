@@ -16,6 +16,8 @@ toc:
     label: Keep one stable folder shape
   - id: common-mistakes
     label: Common mistakes
+  - id: run-the-first-build
+    label: Run the first build
   - id: before-proceeding
     label: Before proceeding
 tags:
@@ -33,7 +35,7 @@ When the root folder is open, LaTeX Workshop, search, file references, and sourc
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-open-folder-button.png" alt="VS Code empty window with the Open Folder button visible">
-    <figcaption>Begin by opening a folder, not by working from an empty window.</figcaption>
+
   </figure>
 </div>
 
@@ -43,7 +45,7 @@ When the root folder is open, LaTeX Workshop, search, file references, and sourc
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-select-project-folder.png" alt="Windows folder picker with the Seed document project folder selected">
-    <figcaption>Select the project root you intend to build from.</figcaption>
+
   </figure>
 </div>
 
@@ -53,7 +55,7 @@ When the root folder is open, LaTeX Workshop, search, file references, and sourc
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-trust-folder.png" alt="VS Code trust prompt asking whether to trust the authors of the opened folder">
-    <figcaption>Trust the project folder so the full workspace features can load.</figcaption>
+
   </figure>
 </div>
 
@@ -67,7 +69,7 @@ Keep one predictable structure for the working project:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-workspace-ready.png" alt="VS Code open project workspace after the folder is loaded">
-    <figcaption>The working result is one open project workspace with the manuscript files inside it.</figcaption>
+
   </figure>
 </div>
 
@@ -83,6 +85,12 @@ Do not start from the Downloads folder, a temporary ZIP preview, or a deeply nes
 
 If LaTeX Workshop cannot find the main file, the problem is often the folder you opened rather than the extension itself.
 
+## Run the first build
+
+1. Trigger the build from LaTeX Workshop rather than from a manual terminal command.
+2. Open the PDF preview and confirm the document compiles without errors.
+3. If the template builds cleanly, your distribution, editor, and extension are all working together.
+
 ## Before proceeding
 
-Confirm that the Explorer shows the whole project, the main `.tex` file is inside that tree, and builds are running against the intended root.
+Confirm that the Explorer shows the whole project, the main `.tex` file is inside that tree, and the first build completes without errors.

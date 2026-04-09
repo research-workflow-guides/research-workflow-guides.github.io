@@ -33,7 +33,7 @@ Focus on build stability, auto-clean behavior, and predictable PDF preview.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/open-user-settings.png" alt="VS Code Command Palette showing Preferences Open User Settings">
-    <figcaption>Open the user settings before changing LaTeX-related defaults.</figcaption>
+
   </figure>
 </div>
 
@@ -43,7 +43,7 @@ Focus on build stability, auto-clean behavior, and predictable PDF preview.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/code-user-folder.png" alt="Windows File Explorer opened to the VS Code Code User folder">
-    <figcaption>The user-level VS Code settings live in the <code>Code/User</code> folder.</figcaption>
+
   </figure>
 </div>
 
@@ -53,7 +53,7 @@ Focus on build stability, auto-clean behavior, and predictable PDF preview.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="Windows File Explorer showing settings and keybindings files inside the VS Code user folder">
-    <figcaption>Look for <code>settings</code> and <code>keybindings</code> in the VS Code user folder.</figcaption>
+
   </figure>
 </div>
 
@@ -67,7 +67,7 @@ The most practical early settings are:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/search-latex-workshop-settings.png" alt="VS Code Settings filtered to LaTeX Workshop extension settings">
-    <figcaption>Filter the settings view to LaTeX Workshop before editing values.</figcaption>
+
   </figure>
 </div>
 

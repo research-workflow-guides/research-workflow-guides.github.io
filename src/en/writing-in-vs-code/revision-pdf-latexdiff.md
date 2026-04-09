@@ -45,7 +45,7 @@ Save the earlier manuscript as `old_version.tex`. This should be the specific ve
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-1.png" alt="Example manuscript file saved as old_version.tex before running latexdiff">
-    <figcaption>Prepare the earlier manuscript state as <code>old_version.tex</code>.</figcaption>
+
   </figure>
 </div>
 
@@ -59,7 +59,7 @@ Save the current manuscript state as `revised_version.tex`. The two files should
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-2.png" alt="Current manuscript file prepared separately before running latexdiff">
-    <figcaption>Keep the current manuscript as a separate comparison file before running the diff.</figcaption>
+
   </figure>
 </div>
 
@@ -77,7 +77,7 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="VS Code command palette with the Create New Terminal action">
-    <figcaption>Open a terminal from the manuscript project before running the diff command.</figcaption>
+
   </figure>
 </div>
 
@@ -87,7 +87,7 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-4.png" alt="Terminal output after running latexdiff to produce diff_version.tex">
-    <figcaption>Run <code>latexdiff</code> to generate <code>diff_version.tex</code>.</figcaption>
+
   </figure>
 </div>
 
@@ -101,7 +101,7 @@ Before compiling, open `diff_version.tex` and confirm it was generated correctly
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-5.png" alt="Project folder showing the generated diff_version file">
-    <figcaption>Confirm that the generated diff file appears in the project.</figcaption>
+
   </figure>
 </div>
 
@@ -125,7 +125,7 @@ Open the compiled PDF and confirm the marked changes are clear enough to send.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-6.png" alt="Compiled revision PDF showing highlighted manuscript changes">
-    <figcaption>The compiled revision PDF should make insertions and deletions easy to review.</figcaption>
+
   </figure>
 </div>
 

@@ -38,7 +38,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/open-keyboard-shortcuts.png" alt="Preferences Open Keyboard Shortcuts가 보이는 VS Code Command Palette">
-    <figcaption>custom binding을 넣기 전에 Keyboard Shortcuts 화면을 엽니다.</figcaption>
+
   </figure>
 </div>
 
@@ -48,7 +48,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/latex-workshop-shortcuts-list.png" alt="LaTeX Workshop 명령으로 필터링된 VS Code Keyboard Shortcuts 화면">
-    <figcaption>shortcut 목록을 LaTeX Workshop 명령으로 먼저 좁힙니다.</figcaption>
+
   </figure>
 </div>
 
@@ -64,7 +64,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="하나의 LaTeX Workshop command로 더 좁혀진 VS Code Keyboard Shortcuts 화면">
-    <figcaption>하나의 구체적인 명령까지 좁혀서 binding 대상을 정합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -74,7 +74,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/select-shortcut-command.png" alt="선택한 명령에 새 keybinding을 입력하는 VS Code Keyboard Shortcuts 화면">
-    <figcaption>먼저 명령을 고른 뒤, 그 명령에 쓸 shortcut을 입력합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -84,7 +84,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="LaTeX Workshop SyncTeX from cursor 명령이 보이는 VS Code Keyboard Shortcuts 화면">
-    <figcaption><strong>SyncTeX from cursor</strong> 같은 반복 동작부터 shortcut 후보로 잡습니다.</figcaption>
+
   </figure>
 </div>
 

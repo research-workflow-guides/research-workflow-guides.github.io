@@ -44,7 +44,7 @@ This workflow requires the GitHub-connected features in Overleaf Professional. I
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-1.png" alt="Overleaf account settings showing professional status">
-    <figcaption>Check the account area for the professional access this workflow relies on.</figcaption>
+
   </figure>
 </div>
 
@@ -58,7 +58,7 @@ Before importing a repository, open Overleaf's synchronization settings and conf
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-2.png" alt="Overleaf project synchronization page showing GitHub Sync availability">
-    <figcaption>Use the synchronization page to confirm that GitHub Sync is available for the project.</figcaption>
+
   </figure>
 </div>
 
@@ -72,7 +72,7 @@ Import from GitHub rather than uploading a ZIP. This keeps one repository histor
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-3.png" alt="Overleaf import dialog with GitHub repository source">
-    <figcaption>Begin from the GitHub import path rather than from a blank project or ZIP upload.</figcaption>
+
   </figure>
 </div>
 
@@ -82,7 +82,7 @@ Import from GitHub rather than uploading a ZIP. This keeps one repository histor
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-4.png" alt="Overleaf dialog for selecting a GitHub repository to import">
-    <figcaption>Select the repository that already contains the working manuscript.</figcaption>
+
   </figure>
 </div>
 
@@ -96,7 +96,7 @@ Once imported, treat Overleaf as a focused writing surface, not a separate proje
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-5.png" alt="Overleaf editor with the imported LaTeX project open">
-    <figcaption>After import, work in the same manuscript structure rather than creating a separate browser-only version.</figcaption>
+
   </figure>
 </div>
 
@@ -110,7 +110,7 @@ When browser-side edits are ready, push them back to the repository via the GitH
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-6.png" alt="Overleaf GitHub integration menu for syncing project changes">
-    <figcaption>Open the GitHub sync controls when you are ready to send browser edits back to the repository.</figcaption>
+
   </figure>
 </div>
 
@@ -120,7 +120,7 @@ When browser-side edits are ready, push them back to the repository via the GitH
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-7.png" alt="Overleaf confirmation flow for pushing project changes to GitHub">
-    <figcaption>Finish the push-back flow so the repository history stays current.</figcaption>
+
   </figure>
 </div>
 

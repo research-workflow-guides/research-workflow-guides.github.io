@@ -32,7 +32,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-1.png" alt="VS Code homepage">
-    <figcaption>Download it from the VS Code website.</figcaption>
+
   </figure>
 </div>
 
@@ -42,7 +42,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-2.png" alt="VS Code download page">
-    <figcaption>Choose the installer that matches your platform.</figcaption>
+
   </figure>
 </div>
 
@@ -60,7 +60,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-3.png" alt="VS Code extensions panel with LaTeX Workshop">
-    <figcaption>Search for <strong>LaTeX Workshop</strong> in the Extensions panel.</figcaption>
+
   </figure>
 </div>
 
@@ -70,7 +70,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-4.png" alt="VS Code with installation complete">
-    <figcaption>Once installed, VS Code is ready for the first project workflow.</figcaption>
+
   </figure>
 </div>
 
