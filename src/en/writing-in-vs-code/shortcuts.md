@@ -38,7 +38,7 @@ The Command Palette is the fastest place to discover which commands deserve a sh
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/open-keyboard-shortcuts.png" alt="VS Code Command Palette showing Preferences Open Keyboard Shortcuts">
-    <figcaption>Open the Keyboard Shortcuts view before assigning custom bindings.</figcaption>
+
   </figure>
 </div>
 
@@ -48,7 +48,7 @@ The Command Palette is the fastest place to discover which commands deserve a sh
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/latex-workshop-shortcuts-list.png" alt="VS Code Keyboard Shortcuts filtered to LaTeX Workshop commands">
-    <figcaption>Filter the shortcut list to LaTeX Workshop commands.</figcaption>
+
   </figure>
 </div>
 
@@ -64,7 +64,7 @@ Two or three good bindings are usually more valuable than a long keymap you cann
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="VS Code Keyboard Shortcuts view filtered to one environment-related LaTeX Workshop command">
-    <figcaption>Narrow the shortcut list to one concrete command before assigning a key.</figcaption>
+
   </figure>
 </div>
 
@@ -74,7 +74,7 @@ Two or three good bindings are usually more valuable than a long keymap you cann
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/select-shortcut-command.png" alt="VS Code Keyboard Shortcuts view with one command selected for keybinding entry">
-    <figcaption>Select a command and then enter the shortcut you want to use for it.</figcaption>
+
   </figure>
 </div>
 
@@ -84,7 +84,7 @@ Two or three good bindings are usually more valuable than a long keymap you cann
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="VS Code Keyboard Shortcuts view showing LaTeX Workshop SyncTeX from cursor command">
-    <figcaption>Use repeated actions like <strong>SyncTeX from cursor</strong> as shortcut candidates.</figcaption>
+
   </figure>
 </div>
 

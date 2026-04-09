@@ -7,7 +7,7 @@ section: git-github
 order: 4
 permalink: /en/git-github/create-repository/
 translationKey: git-create-repository
-eyebrow: Step 4
+eyebrow: Topic 2
 lead: Start from an empty private repository so the first push stays simple and the initial history is easy to understand.
 toc:
   - id: choose-the-repository-shape
@@ -35,7 +35,7 @@ Create a new private repository with a clear project name. Skip the README, `.gi
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="GitHub profile with the Repositories tab highlighted">
-    <figcaption>Open the repository list from your GitHub profile.</figcaption>
+
   </figure>
 </div>
 
@@ -45,7 +45,7 @@ Create a new private repository with a clear project name. Skip the README, `.gi
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="GitHub repositories page with the New button highlighted">
-    <figcaption>Use the <strong>New</strong> button to begin the repository form.</figcaption>
+
   </figure>
 </div>
 
@@ -56,7 +56,7 @@ Create a new private repository with a clear project name. Skip the README, `.gi
   <!-- TODO: Retake this screenshot and the following empty-repo screenshot with a private repository example. Keep the captions explicitly aligned with a private repository flow. -->
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="GitHub create repository form">
-    <figcaption>Fill out the repository form with a project name and privacy setting.</figcaption>
+
   </figure>
 </div>
 
@@ -66,7 +66,7 @@ Create a new private repository with a clear project name. Skip the README, `.gi
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="Empty GitHub repository page after creation">
-    <figcaption>An empty repository page is the expected result before the first clone and push.</figcaption>
+
   </figure>
 </div>
 

@@ -179,7 +179,7 @@ pre {
   border-radius: var(--radius-sm);
   padding: 0.5rem 0 0.4rem;
   z-index: 200;
-  box-shadow: var(--shadow);
+
 }
 
 .nav-dropdown:hover .dropdown-menu {
@@ -275,7 +275,7 @@ li {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--paper);
-  box-shadow: var(--shadow);
+
 }
 
 .landing-hero,
@@ -970,7 +970,11 @@ li.section--git-github > .rail-link-section.is-current {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.84);
-  box-shadow: var(--shadow);
+
+}
+
+li > .image-frame {
+  margin-bottom: 1.2rem;
 }
 
 .image-frame figcaption {

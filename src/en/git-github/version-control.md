@@ -7,7 +7,7 @@ section: git-github
 order: 7
 permalink: /en/git-github/version-control/
 translationKey: git-version-control
-eyebrow: Step 7
+eyebrow: Topic 2
 lead: Calm Git use comes from recognizing file states and knowing which files should never enter the repository.
 toc:
   - id: learn-the-basic-file-states
@@ -55,7 +55,7 @@ Use `.gitignore` to keep those files out of the repository. The goal is not to h
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/example-folder.png" alt="Example project tree with a heavy folder">
-    <figcaption>Start by identifying the local folder or generated files that should stay out of Git.</figcaption>
+
   </figure>
 </div>
 
@@ -65,7 +65,7 @@ Use `.gitignore` to keep those files out of the repository. The goal is not to h
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/step1-root-file.png" alt="A new .gitignore file in the project root">
-    <figcaption>Create the <code>.gitignore</code> file in the project root.</figcaption>
+
   </figure>
 </div>
 
@@ -75,7 +75,7 @@ Use `.gitignore` to keep those files out of the repository. The goal is not to h
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/step2-ignore-entry.png" alt="A .gitignore file containing an ignore rule">
-    <figcaption>Add the folder name or pattern to <code>.gitignore</code>.</figcaption>
+
   </figure>
 </div>
 
@@ -85,7 +85,7 @@ Use `.gitignore` to keep those files out of the repository. The goal is not to h
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/step2-gray-folder.png" alt="Ignored folder shown dimmed in VS Code">
-    <figcaption>The ignored folder becomes visually dimmed in the explorer.</figcaption>
+
   </figure>
 </div>
 
@@ -95,7 +95,7 @@ Use `.gitignore` to keep those files out of the repository. The goal is not to h
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/step3-commit-result.png" alt="GitHub repository where the ignored folder is absent">
-    <figcaption>Ignored files stay out of the repository view after commit and push.</figcaption>
+
   </figure>
 </div>
 

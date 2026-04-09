@@ -33,7 +33,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/open-user-settings.png" alt="Preferences Open User Settings가 보이는 VS Code Command Palette">
-    <figcaption>LaTeX 관련 설정을 바꾸기 전에 user settings를 엽니다.</figcaption>
+
   </figure>
 </div>
 
@@ -43,7 +43,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/code-user-folder.png" alt="VS Code Code User 폴더가 열린 Windows 파일 탐색기">
-    <figcaption>user-level VS Code 설정은 <code>Code/User</code> 폴더 아래에 있습니다.</figcaption>
+
   </figure>
 </div>
 
@@ -53,7 +53,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="VS Code user 폴더 안의 settings와 keybindings 파일">
-    <figcaption><code>settings</code>와 <code>keybindings</code> 파일 위치를 같이 확인해둡니다.</figcaption>
+
   </figure>
 </div>
 
@@ -67,7 +67,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/search-latex-workshop-settings.png" alt="LaTeX Workshop 설정으로 필터링된 VS Code Settings 화면">
-    <figcaption>먼저 Settings를 LaTeX Workshop 기준으로 필터링합니다.</figcaption>
+
   </figure>
 </div>
 

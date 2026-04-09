@@ -31,7 +31,6 @@ tags:
 
 이 가이드의 기본 배포판은 MiKTeX입니다. 초기 설치 부담이 적고, 처음 사용자에게 익숙하며, 필요한 패키지를 작업 중에 설치할 수 있습니다.
 
-이 가이드에서는 MiKTeX로 설치합니다.
 
 ## MiKTeX 다운로드
 
@@ -42,17 +41,17 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-1.png" alt="MiKTeX 홈페이지">
-    <figcaption>MiKTeX 공식 홈페이지에서 시작합니다.</figcaption>
+
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>그다음 다운로드 페이지로 이동해서 현재 운영체제에 맞는 설치 파일을 고릅니다.</p>
+    <p>그 다음 다운로드 페이지로 이동해서 현재 운영체제에 맞는 설치 파일을 고릅니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-2.png" alt="MiKTeX 다운로드 페이지">
-    <figcaption>운영체제에 맞는 다운로드 페이지로 이동합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -70,7 +69,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-3.png" alt="MiKTeX setup wizard 완료 화면">
-    <figcaption>MiKTeX setup wizard가 오류 없이 끝나야 합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -80,7 +79,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-4.png" alt="MiKTeX Console에서 latexmk를 검색한 화면">
-    <figcaption>MiKTeX Console에서 <code>latexmk</code>를 검색합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -90,7 +89,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-5.png" alt="MiKTeX 패키지 설치 진행 창">
-    <figcaption>패키지 설치가 끝날 때까지 진행 창을 확인합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -152,7 +151,7 @@ Windows에서는 Perl이 없으면 Strawberry Perl을 설치합니다. macOS와 
 
 <figure class="image-frame">
   <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl 다운로드 페이지">
-  <figcaption>Windows에 Perl이 없다면 Strawberry Perl을 함께 설치합니다.</figcaption>
+
 </figure>
 
 ## 패키지 자동 설치
@@ -165,7 +164,7 @@ MiKTeX는 컴파일 중 필요한 패키지를 자동으로 설치합니다. bui
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-7.png" alt="editor 뒤에 숨어 있는 MiKTeX 패키지 설치 창 미리보기">
-    <figcaption>build가 멈추면 editor 뒤에 MiKTeX 설치 창이 숨어 있지 않은지 확인합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -175,7 +174,7 @@ MiKTeX는 컴파일 중 필요한 패키지를 자동으로 설치합니다. bui
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-8.png" alt="누락된 패키지에 대한 MiKTeX 설치 대화상자">
-    <figcaption>누락된 패키지를 설치하라는 창이 뜨면 설치를 허용합니다.</figcaption>
+
   </figure>
 </div>
 

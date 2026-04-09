@@ -38,7 +38,7 @@ If a snippet is used once a month, it probably does not belong in the core set.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/snippets/configure-user-snippets.png" alt="VS Code Command Palette showing Snippets Configure User Snippets">
-    <figcaption>Use <strong>Configure User Snippets</strong> to begin the snippet setup flow.</figcaption>
+
   </figure>
 </div>
 
@@ -48,7 +48,7 @@ If a snippet is used once a month, it probably does not belong in the core set.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/snippets/search-latex-snippet-target.png" alt="VS Code snippet target search with latex typed in the filter box">
-    <figcaption>Search for the LaTeX snippet target before creating or opening a snippet file.</figcaption>
+
   </figure>
 </div>
 
@@ -58,7 +58,7 @@ If a snippet is used once a month, it probably does not belong in the core set.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/snippets/choose-latex-json.png" alt="VS Code prompt showing latex.json as the existing LaTeX snippets file">
-    <figcaption>Choose the existing <code>latex.json</code> snippet file when it is already available.</figcaption>
+
   </figure>
 </div>
 
@@ -70,7 +70,7 @@ If a snippet is used once a month, it probably does not belong in the core set.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/snippets/snippets-folder-path.png" alt="Windows File Explorer showing the AppData Code User snippets path">
-    <figcaption>The user snippet files live in the VS Code <code>snippets</code> folder.</figcaption>
+
   </figure>
 </div>
 
@@ -80,7 +80,7 @@ If a snippet is used once a month, it probably does not belong in the core set.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/snippets/latex-snippet-file.png" alt="Windows File Explorer showing the latex snippet file inside the VS Code snippets folder">
-    <figcaption>Check that the LaTeX snippet file is present in the snippets folder.</figcaption>
+
   </figure>
 </div>
 
@@ -90,7 +90,7 @@ If a snippet is used once a month, it probably does not belong in the core set.
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/snippets/edit-latex-json.png" alt="VS Code editor with latex.json open for snippet editing">
-    <figcaption>Edit <code>latex.json</code> directly once you know it is the correct snippet file.</figcaption>
+
   </figure>
 </div>
 

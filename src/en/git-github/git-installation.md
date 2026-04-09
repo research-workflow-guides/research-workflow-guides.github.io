@@ -7,7 +7,7 @@ section: git-github
 order: 1
 permalink: /en/git-github/git-installation/
 translationKey: git-git-installation
-eyebrow: Step 1
+eyebrow: Topic 1
 lead: Install Git first, then set the name and email that should follow your commits across projects.
 toc:
   - id: install-git
@@ -31,7 +31,7 @@ Use the official installer or the standard package manager for your platform. Th
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-1.png" alt="Git homepage">
-    <figcaption>Start from the official Git homepage.</figcaption>
+
   </figure>
 </div>
 
@@ -41,7 +41,7 @@ Use the official installer or the standard package manager for your platform. Th
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-2.png" alt="Git download page">
-    <figcaption>Choose the installer for your operating system.</figcaption>
+
   </figure>
 </div>
 
@@ -51,7 +51,7 @@ Use the official installer or the standard package manager for your platform. Th
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-3.png" alt="Git installer steps">
-    <figcaption>The installer runs through a normal sequence of setup screens.</figcaption>
+
   </figure>
 </div>
 
@@ -61,7 +61,7 @@ Use the official installer or the standard package manager for your platform. Th
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-4.png" alt="Git installation complete">
-    <figcaption>Finish the setup and return to the terminal for verification.</figcaption>
+
   </figure>
 </div>
 

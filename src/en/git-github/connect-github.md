@@ -7,7 +7,7 @@ section: git-github
 order: 3
 permalink: /en/git-github/connect-github/
 translationKey: git-connect-github
-eyebrow: Step 3
+eyebrow: Topic 1
 lead: Sign in to GitHub from inside VS Code so repository actions can open in the same working environment.
 toc:
   - id: sign-in-from-vs-code
@@ -31,7 +31,7 @@ Before starting the GitHub sign-in, open the project folder in VS Code. Finishin
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-open-folder-button.png" alt="VS Code empty window with the Open Folder button visible">
-    <figcaption>Open the working folder before you start the GitHub sign-in flow.</figcaption>
+
   </figure>
 </div>
 
@@ -41,7 +41,7 @@ Before starting the GitHub sign-in, open the project folder in VS Code. Finishin
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-select-project-folder.png" alt="Windows folder picker with the Seed document project folder selected">
-    <figcaption>Choose the project folder you want to use with Git and GitHub.</figcaption>
+
   </figure>
 </div>
 
@@ -51,7 +51,7 @@ Before starting the GitHub sign-in, open the project folder in VS Code. Finishin
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-trust-folder.png" alt="VS Code trust prompt asking whether to trust the authors of the opened folder">
-    <figcaption>Trust the folder so the full workspace features can load.</figcaption>
+
   </figure>
 </div>
 
@@ -67,7 +67,7 @@ VS Code opens a browser page for authorization. Finish that flow with the GitHub
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-confirm-access.png" alt="GitHub browser confirmation screen shown during VS Code authorization">
-    <figcaption>Finish the GitHub confirmation step in the browser.</figcaption>
+
   </figure>
 </div>
 
@@ -81,7 +81,7 @@ Return to VS Code and confirm the project workspace is open. Check the Accounts 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-workspace-ready.png" alt="VS Code open project workspace after the folder is loaded">
-    <figcaption>After the browser step, return to the opened project workspace.</figcaption>
+
   </figure>
 </div>
 

@@ -7,7 +7,7 @@ section: git-github
 order: 7
 permalink: /ko/git-github/version-control/
 translationKey: git-version-control
-eyebrow: 7단계
+eyebrow: 주제 2
 lead: 침착한 Git 사용은 파일 상태를 구분하고, repository에 들어가면 안 되는 파일을 아는 데서 시작합니다.
 toc:
   - id: 기본-파일-상태
@@ -55,7 +55,7 @@ git status
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/example-folder.png" alt="heavy 폴더가 있는 예시 project 구조">
-    <figcaption>먼저 Git에 올리고 싶지 않은 로컬 폴더나 생성 파일을 정합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -65,7 +65,7 @@ git status
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/step1-root-file.png" alt="project 최상위의 .gitignore 파일">
-    <figcaption><code>.gitignore</code>는 project 최상위에 둡니다.</figcaption>
+
   </figure>
 </div>
 
@@ -75,7 +75,7 @@ git status
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/step2-ignore-entry.png" alt=".gitignore에 ignore 규칙이 적힌 화면">
-    <figcaption><code>.gitignore</code>에 폴더 이름이나 패턴을 추가합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -85,7 +85,7 @@ git status
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/step2-gray-folder.png" alt="VS Code에서 흐리게 보이는 ignored 폴더">
-    <figcaption>ignored 폴더는 explorer에서 흐리게 보일 수 있습니다.</figcaption>
+
   </figure>
 </div>
 
@@ -95,7 +95,7 @@ git status
   </div>
   <figure class="image-frame">
     <img src="/assets/images/gitignore/step3-commit-result.png" alt="GitHub 저장소에서 보이지 않는 ignored 폴더">
-    <figcaption>ignored 파일은 commit과 push 뒤에도 GitHub 저장소에 나타나지 않습니다.</figcaption>
+
   </figure>
 </div>
 

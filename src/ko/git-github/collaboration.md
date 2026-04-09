@@ -7,7 +7,7 @@ section: git-github
 order: 8
 permalink: /ko/git-github/collaboration/
 translationKey: git-collaboration
-eyebrow: 8단계
+eyebrow: 주제 3
 lead: 작은 팀 협업은 repository 리듬이 단조롭고, 명시적이며, 다시 회복하기 쉬울수록 잘 굴러갑니다.
 toc:
   - id: 공통-리듬-합의
@@ -39,7 +39,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="Settings 탭이 강조된 GitHub 저장소 화면">
-    <figcaption>먼저 repository settings로 이동합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -49,7 +49,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access 페이지">
-    <figcaption>access 페이지에서 현재 collaborator 상태를 확인할 수 있습니다.</figcaption>
+
   </figure>
 </div>
 
@@ -59,7 +59,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="GitHub collaborator 검색 창">
-    <figcaption>username이나 email로 collaborator를 검색합니다.</figcaption>
+
   </figure>
 </div>
 
@@ -69,7 +69,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="GitHub collaborator 추가 확인 창">
-    <figcaption>올바른 collaborator를 선택한 뒤 초대를 보냅니다.</figcaption>
+
   </figure>
 </div>
 
@@ -79,7 +79,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="pending invite가 보이는 GitHub access 페이지">
-    <figcaption>상대가 수락하기 전까지는 pending invitation 상태가 정상입니다.</figcaption>
+
   </figure>
 </div>
 

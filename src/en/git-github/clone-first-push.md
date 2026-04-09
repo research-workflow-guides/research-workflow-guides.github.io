@@ -7,7 +7,7 @@ section: git-github
 order: 5
 permalink: /en/git-github/clone-first-push/
 translationKey: git-clone-first-push
-eyebrow: Step 5
+eyebrow: Topic 3
 lead: Clone the empty repository first, then bring the working project into that clone and make the initial push from there.
 toc:
   - id: clone-the-empty-repository
@@ -36,7 +36,7 @@ cd <repository-folder>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-copy-url.png" alt="GitHub repository page with the clone URL copied">
-    <figcaption>Copy the repository URL from the GitHub code menu.</figcaption>
+
   </figure>
 </div>
 
@@ -46,7 +46,7 @@ cd <repository-folder>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-command.png" alt="VS Code source control panel with Clone Repository">
-    <figcaption>VS Code can start the clone flow directly from the Source Control panel.</figcaption>
+
   </figure>
 </div>
 
@@ -60,7 +60,7 @@ Move the working files into the cloned folder instead of trying to push from an 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="Folder selection dialog for choosing a clone destination">
-    <figcaption>Select a clear destination folder for the cloned repository.</figcaption>
+
   </figure>
 </div>
 
@@ -70,7 +70,7 @@ Move the working files into the cloned folder instead of trying to push from an 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-open-repo.png" alt="VS Code after opening the cloned repository">
-    <figcaption>Open the cloned repository before you copy your project files into it.</figcaption>
+
   </figure>
 </div>
 
@@ -91,7 +91,7 @@ If the default branch is not `main`, use the branch name GitHub created for the 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
-    <figcaption>Write the initial commit message before publishing.</figcaption>
+
   </figure>
 </div>
 
@@ -101,7 +101,7 @@ If the default branch is not `main`, use the branch name GitHub created for the 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu showing Commit & Push">
-    <figcaption>Use the combined commit-and-push flow if that matches your interface.</figcaption>
+
   </figure>
 </div>
 
