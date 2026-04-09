@@ -1,7 +1,7 @@
 ---
 layout: layouts/doc.njk
 title: GitHub 계정 준비
-description: 저장소 작업과 협업에 사용할 GitHub 계정을 준비합니다.
+description: repository 작업과 협업에 사용할 GitHub 계정을 준비합니다.
 lang: ko
 section: git-github
 order: 2
@@ -23,7 +23,7 @@ tags:
 ---
 ## 계정 만들기 또는 확인
 
-연구 작업용 GitHub 계정 하나를 정합니다. workflow를 여러 임시 계정에 나누면 관리가 어려워집니다.
+연구 작업용 GitHub 계정 하나를 정합니다. 작업 흐름을 여러 임시 계정에 나누면 관리가 어려워집니다.
 
 <div class="doc-step-pair">
   <div>

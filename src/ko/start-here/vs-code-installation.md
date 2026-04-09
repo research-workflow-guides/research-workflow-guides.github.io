@@ -8,7 +8,7 @@ order: 2
 permalink: /ko/initial-setup/vs-code-installation/
 translationKey: initial-setup-vs-code-installation
 eyebrow: 2단계
-lead: VS Code를 설치하고 LaTeX Workshop 확장을 추가해 첫 project를 열 준비를 마칩니다.
+lead: VS Code를 설치하고 LaTeX Workshop 확장을 추가해 첫 프로젝트를 열 준비를 마칩니다.
 toc:
   - id: vs-code-설치
     label: VS Code 설치

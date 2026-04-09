@@ -11,7 +11,7 @@ const sectionDefinitions = [
     },
     summary: {
       en: "Set up the toolchain and reach the first successful compile.",
-      ko: "도구 체인을 맞추고 첫 compile 성공까지 도달합니다."
+      ko: "도구 체인을 맞추고 첫 빌드 성공까지 도달합니다."
     },
     kicker: {
       en: "Part 1",
@@ -39,7 +39,7 @@ const sectionDefinitions = [
     },
     summary: {
       en: "Move into the daily edit, build, preview, and revision loop.",
-      ko: "일상적인 편집, build, preview, revision 루프로 넘어갑니다."
+      ko: "일상적인 편집, 빌드, 미리보기, 교정 루프로 넘어갑니다."
     },
     kicker: {
       en: "Part 2",
@@ -74,7 +74,7 @@ const sectionDefinitions = [
     },
     summary: {
       en: "Connect repositories, publish work, and collaborate without drama.",
-      ko: "저장소를 연결하고 작업을 공개하며 협업 흐름을 안정적으로 운영합니다."
+      ko: "repository를 연결하고 작업을 게시하며 협업 흐름을 안정적으로 운영합니다."
     },
     kicker: {
       en: "Part 3",
@@ -230,7 +230,7 @@ const pages = [
     order: 3,
     group: "steps",
     title: "프로젝트 템플릿",
-    description: "starter project를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.",
+    description: "시작용 프로젝트를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.",
     translationKey: "initial-setup-project-template",
     status: "core"
   },
@@ -274,7 +274,7 @@ const pages = [
     order: 1,
     group: "main-topics",
     title: "폴더 열기",
-    description: "올바른 project root를 열고 VS Code 작업 공간 구조를 안정적으로 유지합니다.",
+    description: "올바른 프로젝트 루트를 열고 VS Code 작업 공간 구조를 안정적으로 유지합니다.",
     translationKey: "writing-folder-setup",
     status: "core"
   },
@@ -326,7 +326,7 @@ const pages = [
     order: 3,
     group: "main-topics",
     title: "기본 사용법",
-    description: "수정, build, preview, SyncTeX 루프를 일상적으로 반복하는 방법을 정리합니다.",
+    description: "수정, 빌드, 미리보기, SyncTeX 루프를 일상적으로 반복하는 방법을 정리합니다.",
     translationKey: "writing-usage-basics",
     status: "core"
   },
@@ -352,7 +352,7 @@ const pages = [
     order: 4,
     group: "main-topics",
     title: "단축키",
-    description: "매일 반복하는 동작을 줄여주는 핵심 shortcut만 정리합니다.",
+    description: "매일 반복하는 동작을 줄여주는 핵심 단축키만 정리합니다.",
     translationKey: "writing-shortcuts",
     status: "core"
   },
@@ -417,7 +417,8 @@ const pages = [
     order: 7,
     group: "optional-topics",
     title: "latexdiff로 revision PDF 만들기",
-    description: "old TeX와 revised TeX를 비교해 latexdiff로 review PDF를 만드는 흐름을 정리합니다.",
+    title: "latexdiff로 검토용 PDF 만들기",
+    description: "이전 TeX와 수정본 TeX를 비교해 latexdiff로 검토용 PDF를 만드는 흐름을 정리합니다.",
     translationKey: "writing-revision-pdf-latexdiff",
     status: "optional"
   },
@@ -430,7 +431,7 @@ const pages = [
     order: 5,
     group: "main-topics",
     title: "Snippets",
-    description: "자주 쓰는 LaTeX 조각을 snippet으로 묶어 반복 입력을 줄입니다.",
+    description: "자주 쓰는 LaTeX 조각을 snippets로 묶어 반복 입력을 줄입니다.",
     translationKey: "writing-snippets",
     status: "core"
   },
@@ -500,7 +501,7 @@ const pages = [
     order: 2,
     group: "preparation",
     title: "GitHub 계정 준비",
-    description: "저장소 작업과 협업에 사용할 GitHub 계정을 준비합니다.",
+    description: "repository 작업과 협업에 사용할 GitHub 계정을 준비합니다.",
     translationKey: "git-github-account-setup",
     status: "core"
   },
@@ -526,7 +527,7 @@ const pages = [
     order: 3,
     group: "first-github-workflow",
     title: "GitHub 연결",
-    description: "첫 저장소를 만들기 전에 VS Code 안에서 GitHub 계정을 연결합니다.",
+    description: "첫 repository를 만들기 전에 VS Code 안에서 GitHub 계정을 연결합니다.",
     translationKey: "git-connect-github",
     status: "core"
   },
@@ -551,8 +552,8 @@ const pages = [
     slug: "create-repository",
     order: 4,
     group: "first-github-workflow",
-    title: "저장소 만들기",
-    description: "로컬 project를 올리기 전에 첫 private repository를 만듭니다.",
+    title: "Repository 만들기",
+    description: "프로젝트 파일을 올리기 전에 첫 private repository를 만듭니다.",
     translationKey: "git-create-repository",
     status: "core"
   },
@@ -577,8 +578,8 @@ const pages = [
     slug: "clone-first-push",
     order: 5,
     group: "first-github-workflow",
-    title: "클론 후 첫 푸시",
-    description: "빈 저장소를 clone한 뒤 project 파일을 넣고 첫 commit을 push합니다.",
+    title: "Clone 후 첫 Push",
+    description: "빈 repository를 clone한 뒤 프로젝트 파일을 넣고 첫 commit을 push합니다.",
     translationKey: "git-clone-first-push",
     status: "core"
   },
@@ -604,7 +605,7 @@ const pages = [
     order: 6,
     group: "daily-workflow",
     title: "Pull과 Push",
-    description: "로컬 작업과 원격 이력을 맞추는 기본 sync 루프를 반복합니다.",
+    description: "local 작업과 remote history를 맞추는 기본 동기화 루프를 반복합니다.",
     translationKey: "git-pull-push",
     status: "core"
   },
@@ -681,8 +682,8 @@ const pages = [
     slug: "conflict",
     order: 9,
     group: "collaboration",
-    title: "충돌 해결",
-    description: "같은 파일 충돌을 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.",
+    title: "Conflict 해결",
+    description: "같은 파일 conflict를 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.",
     translationKey: "git-conflict",
     status: "core"
   }

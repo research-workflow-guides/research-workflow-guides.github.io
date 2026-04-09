@@ -1,14 +1,14 @@
 ---
 layout: layouts/doc.njk
 title: Pull과 Push
-description: 로컬 작업과 원격 이력을 맞추는 기본 sync 루프를 반복합니다.
+description: local 작업과 remote history를 맞추는 기본 동기화 루프를 반복합니다.
 lang: ko
 section: git-github
 order: 6
 permalink: /ko/git-github/pull-push/
 translationKey: git-pull-push
 eyebrow: 6단계
-lead: 일상적인 원격 작업 흐름은 작게 유지합니다. 필요하면 먼저 pull하고, 의미 있는 단위로 commit한 뒤, 준비되면 push합니다.
+lead: 일상적인 remote 작업 흐름은 작게 유지합니다. 필요하면 먼저 pull하고, 의미 있는 단위로 commit한 뒤, 준비되면 push합니다.
 toc:
   - id: 현재-상태-확인
     label: 현재 상태 확인
@@ -42,7 +42,7 @@ git pull
 기본 루프는 다음과 같습니다.
 
 1. remote 변경 가능성이 있으면 pull
-2. 로컬에서 작업
+2. 파일을 수정하며 작업
 3. 의미 있는 단위로 stage와 commit
 4. 새 commit을 push
 
@@ -66,10 +66,10 @@ git pull
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 강조된 VS Code 메뉴">
-    <figcaption>commit이 준비되면 push로 원격 history를 맞춥니다.</figcaption>
+    <figcaption>commit이 준비되면 push로 remote history를 맞춥니다.</figcaption>
   </figure>
 </div>
 
 ## 넘어가기 전
 
-언제 pull하고, 언제 commit하고, 언제 push하는지 즉흥적으로 판단하지 않고 설명할 수 있으면 기본 sync 루프는 자리 잡은 것입니다.
+언제 pull하고, 언제 commit하고, 언제 push하는지 즉흥적으로 판단하지 않고 설명할 수 있으면 기본 동기화 루프는 자리 잡은 것입니다.

@@ -51,7 +51,7 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.3-3.png" alt="Git 설치 진행">
-    <figcaption>Git installer는 일반적인 setup 흐름으로 진행됩니다.</figcaption>
+    <figcaption>Git 설치 프로그램은 일반적인 설치 흐름으로 진행됩니다.</figcaption>
   </figure>
 </div>
 

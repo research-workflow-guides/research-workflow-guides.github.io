@@ -35,21 +35,21 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>협업을 시작하기 전에 repository settings를 열어 접근을 관리합니다.</p>
+    <p>협업을 시작하기 전에 repository의 Settings 탭을 열어 access를 관리합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="Settings 탭이 강조된 GitHub 저장소 화면">
-    <figcaption>먼저 repository settings로 이동합니다.</figcaption>
+    <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="Settings 탭이 강조된 GitHub repository 화면">
+    <figcaption>먼저 repository의 Settings 탭으로 이동합니다.</figcaption>
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>access 페이지를 열어 현재 collaborator를 확인합니다.</p>
+    <p>Access 페이지를 열어 현재 collaborator를 확인합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access 페이지">
-    <figcaption>access 페이지에서 현재 collaborator 상태를 확인할 수 있습니다.</figcaption>
+    <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository Access 페이지">
+    <figcaption>Access 페이지에서 현재 collaborator 상태를 확인할 수 있습니다.</figcaption>
   </figure>
 </div>
 
