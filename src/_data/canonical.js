@@ -7,7 +7,7 @@ const sectionDefinitions = [
     },
     title: {
       en: "Initial Setup",
-      ko: "Initial Setup"
+      ko: "초기 설정"
     },
     summary: {
       en: "Set up the toolchain and reach the first successful compile.",
@@ -15,7 +15,7 @@ const sectionDefinitions = [
     },
     kicker: {
       en: "Part 1",
-      ko: "Part 1"
+      ko: "파트 1"
     },
     groups: [
       {
@@ -35,7 +35,7 @@ const sectionDefinitions = [
     },
     title: {
       en: "Work in VS Code",
-      ko: "Work in VS Code"
+      ko: "VS Code에서 작업하기"
     },
     summary: {
       en: "Move into the daily edit, build, preview, and revision loop.",
@@ -43,7 +43,7 @@ const sectionDefinitions = [
     },
     kicker: {
       en: "Part 2",
-      ko: "Part 2"
+      ko: "파트 2"
     },
     groups: [
       {
@@ -70,7 +70,7 @@ const sectionDefinitions = [
     },
     title: {
       en: "Git & GitHub",
-      ko: "Git & GitHub"
+      ko: "Git과 GitHub"
     },
     summary: {
       en: "Connect repositories, publish work, and collaborate without drama.",
@@ -78,7 +78,7 @@ const sectionDefinitions = [
     },
     kicker: {
       en: "Part 3",
-      ko: "Part 3"
+      ko: "파트 3"
     },
     groups: [
       {
@@ -152,7 +152,7 @@ const pages = [
     pageType: "category-home",
     lang: "ko",
     section: "initial-setup",
-    title: "Initial Setup",
+    title: "초기 설정",
     translationKey: "category-initial-setup",
     status: "core"
   },
@@ -229,7 +229,7 @@ const pages = [
     slug: "project-template",
     order: 3,
     group: "steps",
-    title: "Project Template",
+    title: "프로젝트 템플릿",
     description: "starter project를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.",
     translationKey: "initial-setup-project-template",
     status: "core"
@@ -248,7 +248,7 @@ const pages = [
     pageType: "category-home",
     lang: "ko",
     section: "writing-in-vs-code",
-    title: "Work in VS Code",
+    title: "VS Code에서 작업하기",
     translationKey: "category-writing-in-vs-code",
     status: "core"
   },
@@ -299,7 +299,7 @@ const pages = [
     slug: "settings",
     order: 2,
     group: "main-topics",
-    title: "Settings",
+    title: "설정",
     description: "VS Code와 LaTeX Workshop의 기본 설정을 정리해 반복 작업을 안정화합니다.",
     translationKey: "writing-settings",
     status: "core"
@@ -351,7 +351,7 @@ const pages = [
     slug: "shortcuts",
     order: 4,
     group: "main-topics",
-    title: "Shortcuts",
+    title: "단축키",
     description: "매일 반복하는 동작을 줄여주는 핵심 shortcut만 정리합니다.",
     translationKey: "writing-shortcuts",
     status: "core"
@@ -448,7 +448,7 @@ const pages = [
     pageType: "category-home",
     lang: "ko",
     section: "git-github",
-    title: "Git & GitHub",
+    title: "Git과 GitHub",
     translationKey: "category-git-github",
     status: "core"
   },
@@ -577,7 +577,7 @@ const pages = [
     slug: "clone-first-push",
     order: 5,
     group: "first-github-workflow",
-    title: "Clone + First Push",
+    title: "클론 후 첫 푸시",
     description: "빈 저장소를 clone한 뒤 project 파일을 넣고 첫 commit을 push합니다.",
     translationKey: "git-clone-first-push",
     status: "core"
@@ -603,7 +603,7 @@ const pages = [
     slug: "pull-push",
     order: 6,
     group: "daily-workflow",
-    title: "Pull & Push",
+    title: "Pull과 Push",
     description: "로컬 작업과 원격 이력을 맞추는 기본 sync 루프를 반복합니다.",
     translationKey: "git-pull-push",
     status: "core"
@@ -629,7 +629,7 @@ const pages = [
     slug: "version-control",
     order: 7,
     group: "daily-workflow",
-    title: "Version Control",
+    title: "버전 관리",
     description: "tracked, staged, committed, ignored 상태를 구분해 안정적으로 작업합니다.",
     translationKey: "git-version-control",
     status: "core"
@@ -655,7 +655,7 @@ const pages = [
     slug: "collaboration",
     order: 8,
     group: "collaboration",
-    title: "Collaboration",
+    title: "협업",
     description: "작은 팀이 함께 써도 흐름이 흐트러지지 않는 협업 방식을 정리합니다.",
     translationKey: "git-collaboration",
     status: "core"
@@ -681,7 +681,7 @@ const pages = [
     slug: "conflict",
     order: 9,
     group: "collaboration",
-    title: "Conflict",
+    title: "충돌 해결",
     description: "같은 파일 충돌을 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.",
     translationKey: "git-conflict",
     status: "core"
@@ -805,7 +805,7 @@ function buildBreadcrumbs(page) {
     return [];
   }
 
-  const crumbs = [{ title: "Home", url: "/" }];
+  const crumbs = [{ title: page.lang === "ko" ? "홈" : "Home", url: "/" }];
   const section = sections.find((item) => item.key === page.section);
 
   if (section) {

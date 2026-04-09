@@ -7,6 +7,7 @@ langSwitch:
   label: 한국어
 pageClass: page-doc
 ---
+{% set currentUpdates = updates.completedByLang.en %}
 <main class="content-shell">
   <aside class="page-sidebar">
     <nav class="toc-card panel" aria-label="On this page">
@@ -33,7 +34,7 @@ pageClass: page-doc
     <section id="completed" class="doc-section">
       <h2>Completed</h2>
       {% set byDate = {} %}
-      {% for item in updates.completed %}
+      {% for item in currentUpdates %}
         <div class="info-card" style="margin-bottom:0.75rem;">
           <p class="muted" style="font-size:0.9rem; margin:0 0 0.3rem;">{{ item.date }}</p>
           <p style="margin:0; font-weight:600;">

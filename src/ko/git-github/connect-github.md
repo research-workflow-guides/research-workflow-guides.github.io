@@ -7,7 +7,7 @@ section: git-github
 order: 3
 permalink: /ko/git-github/connect-github/
 translationKey: git-connect-github
-eyebrow: Step 3
+eyebrow: 3단계
 lead: VS Code 안에서 GitHub에 로그인해 repository 작업이 같은 작업 환경 안에서 이어지게 만듭니다.
 toc:
   - id: vs-code에서-로그인

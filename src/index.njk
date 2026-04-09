@@ -8,6 +8,7 @@ langSwitch:
   label: 한국어
 pageClass: page-landing
 ---
+{% set currentUpdates = updates.completedByLang.en %}
 <main>
   <section class="landing-hero">
     <h1 class="wrap hero-h1">Choose a language, then follow a research workflow built for real writing and collaboration.</h1>
@@ -25,12 +26,12 @@ pageClass: page-landing
       </div>
 
       <aside class="hero-panel panel">
-        <p class="eyebrow">Recent Updates</p>
+        <p class="eyebrow">{{ ui.en.recentUpdates }}</p>
         {% if updates.currentBuild %}
           <h2 class="hero-panel-title">{{ updates.currentBuild.title }}</h2>
         {% endif %}
         <dl class="updates-list">
-          {% for item in updates.completed %}
+          {% for item in currentUpdates %}
             {% if loop.index <= 1 %}
               <div>
                 <dt>{{ item.date }}</dt>
@@ -45,7 +46,7 @@ pageClass: page-landing
             {% endif %}
           {% endfor %}
         </dl>
-        <a class="text-link" href="/updates/">More updates →</a>
+        <a class="text-link" href="/updates/">{{ ui.en.moreUpdates }}</a>
       </aside>
     </div>
   </section>

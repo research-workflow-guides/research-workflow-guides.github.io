@@ -1,13 +1,13 @@
 ---
 layout: layouts/doc.njk
-title: Collaboration
+title: 협업
 description: 작은 팀이 함께 써도 흐름이 흐트러지지 않는 협업 방식을 정리합니다.
 lang: ko
 section: git-github
 order: 8
 permalink: /ko/git-github/collaboration/
 translationKey: git-collaboration
-eyebrow: Step 8
+eyebrow: 8단계
 lead: 작은 팀 협업은 repository 리듬이 단조롭고, 명시적이며, 다시 회복하기 쉬울수록 잘 굴러갑니다.
 toc:
   - id: 공통-리듬-합의

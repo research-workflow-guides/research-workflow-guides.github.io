@@ -1,13 +1,13 @@
 ---
 layout: layouts/doc.njk
-title: Project Template
+title: 프로젝트 템플릿
 description: starter project를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.
 lang: ko
 section: initial-setup
 order: 3
 permalink: /ko/initial-setup/project-template/
 translationKey: initial-setup-project-template
-eyebrow: Step 3
+eyebrow: 3단계
 lead: starter project를 내려받아 VS Code에서 열고, 빌드를 한 번 실행해 전체 도구 체인이 동작하는지 확인합니다.
 toc:
   - id: template-받기

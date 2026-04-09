@@ -46,7 +46,17 @@
             {% if (section.key == "writing-in-vs-code" or section.key == "git-github" or section.key == "initial-setup") and groupedSectionPages and groupedSectionPages.length %}
               <ul class="rail-subtree rail-subtree-groups">
                 {% for group in groupedSectionPages %}
-                  {% if section.key == "initial-setup" %}{% set groupAnchor = "core-route" %}{% elif group.key == "main-topics" %}{% set groupAnchor = "core-documents" %}{% else %}{% set groupAnchor = "optional-documents" %}{% endif %}
+                  {% if section.key == "initial-setup" %}
+                    {% set groupAnchor = "core-route" %}
+                  {% elif section.key == "writing-in-vs-code" %}
+                    {% if group.key == "main-topics" %}
+                      {% set groupAnchor = "core-documents" %}
+                    {% else %}
+                      {% set groupAnchor = "optional-documents" %}
+                    {% endif %}
+                  {% else %}
+                    {% set groupAnchor = group.key %}
+                  {% endif %}
                   <li class="rail-group">
                     <a class="rail-link rail-link-group" href="{{ sectionUrl }}#{{ groupAnchor }}">{{ group.label }}</a>
                     <ul class="rail-subtree rail-subtree-pages">
