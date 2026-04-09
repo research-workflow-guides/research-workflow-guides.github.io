@@ -7,7 +7,7 @@ section: git-github
 order: 7
 permalink: /ko/git-github/version-control/
 translationKey: git-version-control
-eyebrow: 단계 7
+eyebrow: 7단계
 lead: 침착한 Git 사용은 파일 상태를 구분하고, repository에 들어가면 안 되는 파일을 아는 데서 시작합니다.
 toc:
   - id: 기본-파일-상태

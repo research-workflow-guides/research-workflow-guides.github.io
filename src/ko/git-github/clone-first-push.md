@@ -7,7 +7,7 @@ section: git-github
 order: 5
 permalink: /ko/git-github/clone-first-push/
 translationKey: git-clone-first-push
-eyebrow: 단계 5
+eyebrow: 5단계
 lead: 먼저 비어 있는 repository를 clone한 뒤, 그 clone 폴더 안으로 working project를 넣고 첫 push를 합니다.
 toc:
   - id: 빈-저장소-clone

@@ -26,7 +26,7 @@ pageClass: page-section
       <div class="feature-grid feature-grid-compact">
         {% for doc in grouped.preparation %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">단계 {{ loop.index }}</p>
+            <p class="card-kicker">{{ loop.index }}단계</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>
@@ -39,7 +39,7 @@ pageClass: page-section
       <div class="feature-grid feature-grid-compact">
         {% for doc in grouped["first-github-workflow"] %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">단계 {{ loop.index + 2 }}</p>
+            <p class="card-kicker">{{ loop.index + 2 }}단계</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>

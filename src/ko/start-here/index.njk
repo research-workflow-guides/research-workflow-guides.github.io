@@ -30,7 +30,7 @@ toc:
       <div class="feature-grid feature-grid-compact">
         {% for doc in docs %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">단계 {{ doc.order }}</p>
+            <p class="card-kicker">{{ doc.order }}단계</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>

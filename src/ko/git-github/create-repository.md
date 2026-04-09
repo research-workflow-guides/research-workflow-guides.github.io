@@ -7,7 +7,7 @@ section: git-github
 order: 4
 permalink: /ko/git-github/create-repository/
 translationKey: git-create-repository
-eyebrow: 단계 4
+eyebrow: 4단계
 lead: 첫 push 흐름을 단순하게 유지하려면 먼저 비어 있는 private repository부터 만듭니다.
 toc:
   - id: 저장소-형태-정하기

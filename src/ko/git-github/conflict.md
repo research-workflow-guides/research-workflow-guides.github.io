@@ -7,7 +7,7 @@ section: git-github
 order: 9
 permalink: /ko/git-github/conflict/
 translationKey: git-conflict
-eyebrow: 단계 9
+eyebrow: 9단계
 lead: conflict는 재난이 아니라, 겹치는 수정 중 어떤 최종 텍스트를 남길지 Git이 도움을 요청하는 상태입니다.
 toc:
   - id: conflict의-의미

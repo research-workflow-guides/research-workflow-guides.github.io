@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc.njk
-title: 스니펫
+title: Snippets
 description: 자주 쓰는 LaTeX 조각을 snippet으로 묶어 반복 입력을 줄입니다.
 lang: ko
 section: writing-in-vs-code

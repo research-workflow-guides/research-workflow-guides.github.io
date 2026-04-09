@@ -7,7 +7,7 @@ section: git-github
 order: 1
 permalink: /ko/git-github/git-installation/
 translationKey: git-git-installation
-eyebrow: 단계 1
+eyebrow: 1단계
 lead: 먼저 Git을 설치하고, 이후 commit에 계속 따라갈 이름과 이메일을 설정합니다.
 toc:
   - id: git-설치

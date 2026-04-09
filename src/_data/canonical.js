@@ -429,7 +429,7 @@ const pages = [
     slug: "snippets",
     order: 5,
     group: "main-topics",
-    title: "스니펫",
+    title: "Snippets",
     description: "자주 쓰는 LaTeX 조각을 snippet으로 묶어 반복 입력을 줄입니다.",
     translationKey: "writing-snippets",
     status: "core"

@@ -7,7 +7,7 @@ section: git-github
 order: 6
 permalink: /ko/git-github/pull-push/
 translationKey: git-pull-push
-eyebrow: 단계 6
+eyebrow: 6단계
 lead: 일상적인 원격 작업 흐름은 작게 유지합니다. 필요하면 먼저 pull하고, 의미 있는 단위로 commit한 뒤, 준비되면 push합니다.
 toc:
   - id: 현재-상태-확인

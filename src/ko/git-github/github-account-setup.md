@@ -7,7 +7,7 @@ section: git-github
 order: 2
 permalink: /ko/git-github/github-account-setup/
 translationKey: git-github-account-setup
-eyebrow: 단계 2
+eyebrow: 2단계
 lead: repository 호스팅과 협업에 계속 사용할 GitHub 계정을 하나 정리합니다.
 toc:
   - id: 계정-만들기-또는-확인

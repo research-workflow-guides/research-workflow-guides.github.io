@@ -7,7 +7,7 @@ section: git-github
 order: 8
 permalink: /ko/git-github/collaboration/
 translationKey: git-collaboration
-eyebrow: 단계 8
+eyebrow: 8단계
 lead: 작은 팀 협업은 repository 리듬이 단조롭고, 명시적이며, 다시 회복하기 쉬울수록 잘 굴러갑니다.
 toc:
   - id: 공통-리듬-합의

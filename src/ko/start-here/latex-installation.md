@@ -7,7 +7,7 @@ section: initial-setup
 order: 1
 permalink: /ko/initial-setup/latex-installation/
 translationKey: initial-setup-latex-installation
-eyebrow: 단계 1
+eyebrow: 1단계
 lead: MiKTeX를 설치하고, 필요 시 패키지가 자동으로 설치되도록 설정한 뒤, 기본 도구 체인이 준비됐는지 확인합니다.
 toc:
   - id: 왜-miktex인가
