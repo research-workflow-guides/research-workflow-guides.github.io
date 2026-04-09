@@ -1,14 +1,14 @@
 ---
 layout: layouts/doc.njk
 title: Pull과 Push
-description: local 작업과 remote history를 맞추는 기본 동기화 루프를 반복합니다.
+description: local 작업과 remote history를 맞추는 기본 동기화 루프를 수행합니다.
 lang: ko
 section: git-github
 order: 6
 permalink: /ko/git-github/pull-push/
 translationKey: git-pull-push
 eyebrow: 6단계
-lead: 일상적인 remote 작업 흐름은 작게 유지합니다. 필요하면 먼저 pull하고, 의미 있는 단위로 commit한 뒤, 준비되면 push합니다.
+lead: 일상적인 remote 작업 흐름은 단순하게 유지합니다. 필요하면 먼저 pull하고, 의미 있는 단위로 commit한 뒤, 준비되면 push합니다.
 toc:
   - id: 현재-상태-확인
     label: 현재 상태 확인

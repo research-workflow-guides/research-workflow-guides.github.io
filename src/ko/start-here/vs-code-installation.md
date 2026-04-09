@@ -56,11 +56,11 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>먼저 Extensions 패널에서 <strong>LaTeX Workshop</strong>를 검색해 올바른 확장을 찾습니다.</p>
+    <p>먼저 Extensions 패널에서 <strong>LaTeX Workshop</strong>을 검색해 올바른 확장을 찾습니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-3.png" alt="LaTeX Workshop가 보이는 VS Code Extensions 패널">
-    <figcaption>Extensions 패널에서 <strong>LaTeX Workshop</strong>를 검색합니다.</figcaption>
+    <figcaption>Extensions 패널에서 <strong>LaTeX Workshop</strong>을 검색합니다.</figcaption>
   </figure>
 </div>
 

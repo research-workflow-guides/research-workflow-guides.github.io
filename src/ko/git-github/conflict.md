@@ -51,7 +51,7 @@ Git은 어느 쪽을 최종 텍스트로 남길지 스스로 결정하지 않고
 
 VS Code Merge Editor나 conflict marker를 직접 보면서, 주변 문맥을 읽고 최종 텍스트가 무엇이어야 하는지 판단합니다.
 
-최종 결과가 실제로 그래야 하는 게 아니라면 한쪽을 통째로 받지 않습니다.
+최종 내용이 어느 한쪽과 완전히 같아야 하는 경우가 아니라면 한쪽을 통째로 받지 않습니다.
 
 <figure class="image-frame">
   <img src="/assets/images/legacy/github-workflow/conflict-merge-state.png" alt="merge 진행 중인 VS Code Source Control 상태">

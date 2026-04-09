@@ -71,7 +71,7 @@ Keep one predictable structure for the working project:
   </figure>
 </div>
 
-- root folder for the repository or paper project
+- a root folder for the repository or paper project
 - a main `.tex` file near the root or in one clearly named subfolder
 - figures, bibliography, and supplementary files in stable subfolders
 

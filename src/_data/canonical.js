@@ -605,7 +605,7 @@ const pages = [
     order: 6,
     group: "daily-workflow",
     title: "Pull과 Push",
-    description: "local 작업과 remote history를 맞추는 기본 동기화 루프를 반복합니다.",
+    description: "local 작업과 remote history를 맞추는 기본 동기화 루프를 수행합니다.",
     translationKey: "git-pull-push",
     status: "core"
   },

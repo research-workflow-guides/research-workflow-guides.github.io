@@ -50,7 +50,7 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-2.png" alt="MiKTeX download page">
-    <figcaption>Choose the download page that matches your platform.</figcaption>
+    <figcaption>Choose the installer that matches your platform.</figcaption>
   </figure>
 </div>
 

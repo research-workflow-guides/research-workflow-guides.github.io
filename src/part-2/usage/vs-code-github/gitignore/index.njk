@@ -110,7 +110,7 @@ nextPage:
   <p class="eyebrow">Tip</p>
   <h2>Why does it not work?</h2>
   <p class="korean-line"><code>.gitignore</code>는 Git에 한 번도 올라가지 않은 파일에만 적용됩니다. 이미 <code>add</code>나 <code>commit</code>한 적이 있다면 무시되지 않습니다.</p>
-  <p><code>.gitignore</code> works only on untracked files. It ignores neither staged nor committed files. You need to remove already tracked files from the cache.</p>
+  <p><code>.gitignore</code> works only on untracked files. It has no effect on files that are already staged or committed. You need to remove already tracked files from the cache.</p>
   <div class="code-box">
     <pre><code>git rm -r --cached heavy</code></pre>
     <p class="small-note">Example command for a folder that was already tracked earlier.</p>

@@ -8,7 +8,7 @@ order: 8
 permalink: /en/git-github/collaboration/
 translationKey: git-collaboration
 eyebrow: Step 8
-lead: Small-team collaboration works best when the repository rhythm is boring, explicit, and easy to recover.
+lead: Small-team collaboration works best when the repository rhythm is boring, explicit, and easy to recover from.
 toc:
   - id: agree-on-a-shared-rhythm
     label: Agree on a shared rhythm

@@ -47,7 +47,7 @@ Use one GitHub account for research work. Avoid splitting the workflow across te
 
 ## Turn on basic security
 
-At minimum, set a strong password and a recovery path you control. Enable two-factor authentication if available.
+At a minimum, set a strong password and a recovery path you control. Enable two-factor authentication if available.
 
 ## Prepare a usable profile
 
