@@ -32,11 +32,6 @@ module.exports = {
         key: "part-2",
         label: "Part 2",
         url: "/part-2/"
-      },
-      {
-        key: "updates",
-        label: "Updates",
-        url: "/updates/"
       }
     ],
     koSection: [
