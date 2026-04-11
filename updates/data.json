@@ -66,36 +66,28 @@
       "description": "Full TeX Live installation guide using the network installer for the complete package set.",
       "date": "2026-04-04",
       "status": "completed",
-      "links": {
-        "en": "../part-1/installation/option-2/"
-      }
+      "links": null
     },
     {
       "title": "1.1.1 Option 1: TeX Live (fast)",
       "description": "Step-by-step guide for the recommended quick TeX Live installation via install-tl-windows.exe.",
       "date": "2026-04-04",
       "status": "completed",
-      "links": {
-        "en": "../part-1/installation/option-1/"
-      }
+      "links": null
     },
     {
       "title": "1.1 LaTeX Installation",
       "description": "Overview of three LaTeX installation options: TeX Live (fast), TeX Live (slow), and MiKTeX.",
       "date": "2026-04-03",
       "status": "completed",
-      "links": {
-        "en": "../part-1/installation/"
-      }
+      "links": null
     },
     {
       "title": "2.2.8 Gitignore",
       "description": "First migrated content page. Excludes files/folders from GitHub commits using .gitignore.",
       "date": "2026-04-02",
       "status": "completed",
-      "links": {
-        "en": "../part-2/usage/vs-code-github/gitignore/"
-      }
+      "links": null
     },
     {
       "title": "Site skeleton",
