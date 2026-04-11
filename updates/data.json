@@ -5,13 +5,13 @@
   },
   "items": [
     {
-      "title": "1.5 Basic Document Pack",
-      "description": "Starter LaTeX file pack download guide. Includes seed document, check document, keybindings, snippets, and settings.",
-      "date": "2026-04-04",
+      "title": "Conflict",
+      "description": "Resolve same-file text conflicts without panic and return to the normal loop.",
+      "date": "2026-04-11",
       "status": "completed",
       "links": {
-        "en": "../part-1/basic-doc-pack/",
-        "ko": "../ko/part-1/basic-doc-pack/"
+        "en": "../en/git-github/conflict/",
+        "ko": "../ko/git-github/conflict/"
       }
     },
     {
