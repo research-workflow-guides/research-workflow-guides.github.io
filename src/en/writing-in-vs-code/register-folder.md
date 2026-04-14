@@ -8,7 +8,7 @@ order: 1
 permalink: /en/writing-in-vs-code/register-folder/
 translationKey: writing-folder-setup
 eyebrow: Topic 1
-lead: In VS Code, you work at the folder level, not the file level. A project is not just a .tex file — it also includes figures, code, and other supporting files that VS Code manages together as one folder.
+lead: In VS Code, you work at the folder level, not the file level. A workplace is not just a .tex file — it also includes figures, code, and other supporting files that VS Code manages together as one folder.
 toc:
   - id: open-folder
     label: Open folder
@@ -81,7 +81,7 @@ If LaTeX Workshop cannot find the main file, the problem is often the folder you
 
 <div class="doc-step-pair">
   <div>
-    <p>If you want to open another registered folder, type <kbd>Ctrl</kbd> + <kbd>R</kbd> to select another folder.</p>
+    <p>If you want to open another registered folder, type <kbd>Ctrl</kbd> + <kbd>R</kbd> (macOS: <kbd>Cmd</kbd> + <kbd>R</kbd>) to select another folder.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/2.2.1-6.png" alt="VS Code folder picker opened with Ctrl+R">

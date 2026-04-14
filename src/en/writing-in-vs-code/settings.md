@@ -4,12 +4,18 @@ title: Settings
 description: Set the small VS Code and LaTeX Workshop defaults that keep the writing loop calm.
 lang: en
 section: writing-in-vs-code
-order: 2
+order: 3
 permalink: /en/writing-in-vs-code/settings/
 translationKey: writing-settings
 eyebrow: Topic 2
 lead: Keep the settings small and durable. You only need the defaults that make build, preview, and cleanup predictable.
 toc:
+  - id: start-with-command-palette-names
+    label: Start with command names
+  - id: promote-repeat-actions
+    label: Promote repeat actions
+  - id: keep-the-list-small
+    label: Keep the list small
   - id: start-with-a-small-settings-file
     label: Start with a small settings file
   - id: useful-latex-workshop-defaults
@@ -21,6 +27,77 @@ toc:
 tags:
   - doc
 ---
+## Start with command names
+
+Before binding keys, learn the command names you actually use:
+
+- build LaTeX project
+- view PDF
+- SyncTeX from cursor
+- clean auxiliary files
+
+The Command Palette is the fastest place to discover which commands deserve a shortcut.
+
+<div class="doc-step-pair">
+  <div>
+    <p>Open the keyboard shortcuts view first. This is the cleanest place to see what VS Code already exposes before you add anything new.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/shortcuts/open-keyboard-shortcuts.png" alt="VS Code Command Palette showing Preferences Open Keyboard Shortcuts">
+
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>Then filter the list to LaTeX Workshop commands so the actions you care about are easier to compare.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/shortcuts/latex-workshop-shortcuts-list.png" alt="VS Code Keyboard Shortcuts filtered to LaTeX Workshop commands">
+
+  </figure>
+</div>
+
+## Promote repeat actions
+
+Once the daily loop is clear, turn the most repeated actions into keyboard shortcuts.
+
+Two or three good bindings are usually more valuable than a long keymap you cannot remember.
+
+<div class="doc-step-pair">
+  <div>
+    <p>If the list is still too broad, search for one exact command before binding it. The screenshot below shows one command-focused search example.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="VS Code Keyboard Shortcuts view filtered to one environment-related LaTeX Workshop command">
+
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>After choosing the command, enter the key combination you actually want to remember. The important step is picking a repeat action first, then adding the key.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/shortcuts/select-shortcut-command.png" alt="VS Code Keyboard Shortcuts view with one command selected for keybinding entry">
+
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>A good example is <strong>SyncTeX from cursor</strong>, because it is useful often enough to justify a shortcut in a long manuscript.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="VS Code Keyboard Shortcuts view showing LaTeX Workshop SyncTeX from cursor command">
+
+  </figure>
+</div>
+
+## Keep the list small
+
+If a shortcut is rarely used, leave it in the Command Palette. Reserve keyboard space for actions that save real time every writing session.
+
 ## Start with a small settings file
 
 Avoid building a giant `settings.json` on day one. A smaller file is easier to understand, debug, and carry to the next project.

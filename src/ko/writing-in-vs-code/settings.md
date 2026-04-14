@@ -4,12 +4,18 @@ title: 설정
 description: VS Code와 LaTeX Workshop의 기본 설정을 정리해 반복 작업을 안정화합니다.
 lang: ko
 section: writing-in-vs-code
-order: 2
+order: 3
 permalink: /ko/writing-in-vs-code/settings/
 translationKey: writing-settings
 eyebrow: 주제 2
 lead: 설정은 작고 오래 버티는 것부터 시작합니다. build, preview, cleanup이 예측 가능하게 돌아가면 충분합니다.
 toc:
+  - id: 명령-이름부터-익히기
+    label: 명령 이름부터 익히기
+  - id: 반복-동작-shortcut-만들기
+    label: 반복 동작 shortcut 만들기
+  - id: 목록을-작게-유지
+    label: 목록을 작게 유지
   - id: 작은-settings부터-시작
     label: 작은 settings부터 시작
   - id: 유용한-기본-설정
@@ -21,6 +27,77 @@ toc:
 tags:
   - doc
 ---
+## 명령 이름부터 익히기
+
+키를 바로 묶기 전에, 실제로 자주 쓰는 명령 이름부터 익힙니다.
+
+- LaTeX project build
+- PDF 보기
+- cursor 위치에서 SyncTeX
+- auxiliary file 정리
+
+어떤 명령이 shortcut 가치가 있는지는 Command Palette에서 가장 빨리 파악할 수 있습니다.
+
+<div class="doc-step-pair">
+  <div>
+    <p>먼저 Keyboard Shortcuts 화면을 엽니다. 이미 있는 명령을 한 번에 보고, 무엇을 바꿀지 판단하기 가장 쉽습니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/shortcuts/open-keyboard-shortcuts.png" alt="Preferences Open Keyboard Shortcuts가 보이는 VS Code Command Palette">
+
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>그다음 LaTeX Workshop 명령으로 목록을 좁히면, 실제로 자주 쓰는 writing 관련 동작을 훨씬 빠르게 고를 수 있습니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/shortcuts/latex-workshop-shortcuts-list.png" alt="LaTeX Workshop 명령으로 필터링된 VS Code Keyboard Shortcuts 화면">
+
+  </figure>
+</div>
+
+## 반복 동작 shortcut 만들기
+
+일상 루프가 분명해지면 가장 자주 반복하는 동작만 shortcut으로 올립니다.
+
+두세 개의 좋은 binding이, 기억도 안 나는 긴 개인 key map보다 훨씬 낫습니다.
+
+<div class="doc-step-pair">
+  <div>
+    <p>목록이 여전히 넓다면, 원하는 명령 이름으로 더 좁혀서 정확히 한 동작만 보이게 만듭니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="하나의 LaTeX Workshop command로 더 좁혀진 VS Code Keyboard Shortcuts 화면">
+
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>명령을 고른 뒤에는 실제로 기억해서 쓸 수 있는 키 조합을 넣습니다. 중요한 건 "자주 쓰는 동작을 먼저 고른 뒤" 키를 넣는 순서입니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/shortcuts/select-shortcut-command.png" alt="선택한 명령에 새 keybinding을 입력하는 VS Code Keyboard Shortcuts 화면">
+
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p><strong>SyncTeX from cursor</strong>처럼 긴 문서에서 자주 반복되는 동작은 shortcut 후보로 특히 적합합니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="LaTeX Workshop SyncTeX from cursor 명령이 보이는 VS Code Keyboard Shortcuts 화면">
+
+  </figure>
+</div>
+
+## 목록을 작게 유지
+
+드물게 쓰는 명령은 그대로 Command Palette에 두고, 키보드 공간은 매 세션 시간을 절약하는 동작에만 씁니다.
+
 ## 작은 settings부터 시작
 
 처음부터 `settings.json`을 길게 만들 필요는 없습니다. 파일이 작을수록 이해하고 수정하기 쉽고, 다음 project로 옮기기도 편합니다.
