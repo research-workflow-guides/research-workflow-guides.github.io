@@ -8,7 +8,7 @@ order: 1
 permalink: /en/writing-in-vs-code/register-folder/
 translationKey: writing-folder-setup
 eyebrow: Topic 1
-lead: In VS Code, you work at the folder level, not the file level. A workplace is not just a .tex file — it also includes figures, code, and other supporting files that VS Code manages together as one folder.
+lead: In VS Code, you work at the folder level, not the file level. A workspace is not just a .tex file — it also includes figures, code, and other supporting files that VS Code manages together as one folder.
 toc:
   - id: open-folder
     label: Open folder
