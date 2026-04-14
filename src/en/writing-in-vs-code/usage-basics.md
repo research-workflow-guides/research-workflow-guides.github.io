@@ -4,7 +4,7 @@ title: Usage Basics
 description: Practice the edit, build, preview, and SyncTeX loop until it feels routine.
 lang: en
 section: writing-in-vs-code
-order: 3
+order: 4
 permalink: /en/writing-in-vs-code/usage-basics/
 translationKey: writing-usage-basics
 eyebrow: Topic 3
