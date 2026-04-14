@@ -4,7 +4,7 @@ title: 기본 사용법
 description: 수정, build, preview, SyncTeX 루프를 일상적으로 반복하는 방법을 정리합니다.
 lang: ko
 section: writing-in-vs-code
-order: 3
+order: 4
 permalink: /ko/writing-in-vs-code/usage-basics/
 translationKey: writing-usage-basics
 eyebrow: 주제 3

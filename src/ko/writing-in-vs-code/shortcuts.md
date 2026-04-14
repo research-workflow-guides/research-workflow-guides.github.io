@@ -4,93 +4,111 @@ title: 단축키
 description: 매일 반복하는 동작을 줄여주는 핵심 shortcut만 정리합니다.
 lang: ko
 section: writing-in-vs-code
-order: 4
+order: 2
 permalink: /ko/writing-in-vs-code/shortcuts/
 translationKey: writing-shortcuts
-eyebrow: 주제 4
+eyebrow: 주제 2
 lead: shortcut 체계를 크게 만들 필요는 없습니다. 매일 반복하는 명령만 빠르게 닿게 두면 충분합니다.
 toc:
-  - id: 명령-이름부터-익히기
-    label: 명령 이름부터 익히기
-  - id: 반복-동작-shortcut-만들기
-    label: 반복 동작 shortcut 만들기
-  - id: 목록을-작게-유지
-    label: 목록을 작게 유지
+  - id: command-palette
+    label: Command Palette
+  - id: 기본-단축키
+    label: 기본 단축키
+  - id: snippets
+    label: Snippets
   - id: 넘어가기-전
     label: 넘어가기 전
 tags:
   - doc
 ---
-## 명령 이름부터 익히기
-
-키를 바로 묶기 전에, 실제로 자주 쓰는 명령 이름부터 익힙니다.
-
-- LaTeX project build
-- PDF 보기
-- cursor 위치에서 SyncTeX
-- auxiliary file 정리
-
-어떤 명령이 shortcut 가치가 있는지는 Command Palette에서 가장 빨리 파악할 수 있습니다.
+## Command Palette
 
 <div class="doc-step-pair">
   <div>
-    <p>먼저 Keyboard Shortcuts 화면을 엽니다. 이미 있는 명령을 한 번에 보고, 무엇을 바꿀지 판단하기 가장 쉽습니다.</p>
+    <p><strong>Command Palette</strong>는 VS Code의 모든 명령을 이름으로 실행할 수 있는 입력창입니다. 메뉴를 탐색하는 대신 원하는 명령을 바로 입력해서 실행합니다.</p>
+    <p><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)로 엽니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/open-keyboard-shortcuts.png" alt="Preferences Open Keyboard Shortcuts가 보이는 VS Code Command Palette">
+    <img src="/assets/images/palette.png" alt="VS Code Command Palette">
 
   </figure>
 </div>
 
-<div class="doc-step-pair">
-  <div>
-    <p>그다음 LaTeX Workshop 명령으로 목록을 좁히면, 실제로 자주 쓰는 writing 관련 동작을 훨씬 빠르게 고를 수 있습니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/latex-workshop-shortcuts-list.png" alt="LaTeX Workshop 명령으로 필터링된 VS Code Keyboard Shortcuts 화면">
+## 기본 단축키
 
-  </figure>
-</div>
+- <kbd>Alt</kbd>+<i class="fa-solid fa-arrow-pointer"></i> Click (macOS: <kbd>⌘</kbd>+<i class="fa-solid fa-arrow-pointer"></i> Click)
 
-## 반복 동작 shortcut 만들기
+  커서를 동시에 여러 군데 클릭할 수 있습니다.
 
-일상 루프가 분명해지면 가장 자주 반복하는 동작만 shortcut으로 올립니다.
+- <kbd>Ctrl</kbd>+<kbd>/</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>/</kbd>)
 
-두세 개의 좋은 binding이, 기억도 안 나는 긴 개인 key map보다 훨씬 낫습니다.
+  커서가 있는 줄을 주석으로 처리하거나 취소합니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p>목록이 여전히 넓다면, 원하는 명령 이름으로 더 좁혀서 정확히 한 동작만 보이게 만듭니다. 아래 이미지는 그런 검색 예시입니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="하나의 LaTeX Workshop command로 더 좁혀진 VS Code Keyboard Shortcuts 화면">
+- <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd>)
 
-  </figure>
-</div>
+  입력 중인 수식을 실시간으로 보여줍니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p>명령을 고른 뒤에는 실제로 기억해서 쓸 수 있는 키 조합을 넣습니다. 중요한 건 “자주 쓰는 동작을 먼저 고른 뒤” 키를 넣는 순서입니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/select-shortcut-command.png" alt="선택한 명령에 새 keybinding을 입력하는 VS Code Keyboard Shortcuts 화면">
+- <kbd>Ctrl</kbd>+<kbd>S</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>S</kbd>) or <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>⌘</kbd>+<kbd>B</kbd>)
 
-  </figure>
-</div>
+  LaTeX 코드를 컴파일합니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p><strong>SyncTeX from cursor</strong>처럼 긴 문서에서 자주 반복되는 동작은 shortcut 후보로 특히 적합합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="LaTeX Workshop SyncTeX from cursor 명령이 보이는 VS Code Keyboard Shortcuts 화면">
+- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd>)
 
-  </figure>
-</div>
+  새 terminal을 엽니다.
 
-## 목록을 작게 유지
+- <kbd>Ctrl</kbd>+<kbd>R</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>R</kbd>)
 
-드물게 쓰는 명령은 그대로 Command Palette에 두고, 키보드 공간은 매 세션 시간을 절약하는 동작에만 씁니다.
+  등록된 폴더를 엽니다.
+
+- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>)
+
+  새 VS Code 창을 엽니다.
+
+## Snippets
+
+VS Code <strong>snippets</strong>를 사용하면 짧은 prefix를 입력해 긴 LaTeX 명령이나 수식을 즉시 삽입할 수 있습니다. 반복 입력 없이 복잡한 수식을 다루는 가장 효율적인 방법입니다.
+
+- <kbd>@</kbd>+<kbd>a</kbd>
+
+  <code>&#92;alpha</code>
+
+- <kbd>@</kbd>+<kbd>A</kbd>
+
+  <code>&#92;Alpha</code>
+
+- <kbd>@</kbd>+<kbd>6</kbd>
+
+  <code>&#92;partial</code>
+
+- <kbd>@</kbd>+<kbd>(</kbd>
+
+  <code>&#92;left( &#92;right)</code>
+
+- <kbd>@</kbd>+<kbd>{</kbd>
+
+  <code>&#92;left&#92;{ &#92;right&#92;}</code>
+
+- <kbd>@</kbd>+<kbd>[</kbd>
+
+  <code>&#92;left[ &#92;right]</code>
+
+
+<kbd>Tab</kbd> 키를 이용하면 snippet 안의 미리 정해진 위치($1, $2 등)를 순서대로 이동할 수 있습니다. 방향키 없이 분자, 분모, 괄호 내용을 빠르게 채울 수 있습니다.
+
+- <kbd>@</kbd>+<kbd>/</kbd> → <kbd>Tab</kbd> → 분자 입력 → <kbd>Tab</kbd> → 분모 입력
+
+  <code>&#92;frac{$1}{$2}</code>
+
+- <kbd>@</kbd>+<kbd>S</kbd> → <kbd>Tab</kbd> → 아래끝 입력 → <kbd>Tab</kbd> → 위끝 입력
+
+  <code>&#92;sum_{$1}^{$2}</code>
+
+- <kbd>@</kbd>+<kbd>I</kbd> → <kbd>Tab</kbd> → 아래끝 입력 → <kbd>Tab</kbd> → 위끝 입력
+
+  <code>&#92;int_{$1}^{$2}</code>
+
+
+직접 snippet을 만들 수도 있습니다. 자세한 내용은 [VS Code 공식 문서](https://code.visualstudio.com/docs/editing/userdefinedsnippets)를 참고하세요. custom snippet 만드는 방법은 이 가이드의 뒷부분에서 다룹니다.
 
 ## 넘어가기 전
 
