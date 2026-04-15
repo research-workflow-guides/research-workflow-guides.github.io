@@ -4,7 +4,7 @@ title: Overleaf
 description: Use Overleaf Professional as a GitHub-connected writing bridge when local VS Code is not the whole workflow.
 lang: en
 section: writing-in-vs-code
-order: 6
+order: 7
 permalink: /en/writing-in-vs-code/overleaf/
 translationKey: writing-overleaf
 eyebrow: Optional

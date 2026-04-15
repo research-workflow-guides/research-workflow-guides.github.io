@@ -4,7 +4,7 @@ title: Overleaf
 description: Overleaf Professional을 GitHub와 연결해 보조 작성 환경으로 사용하는 흐름을 정리합니다.
 lang: ko
 section: writing-in-vs-code
-order: 6
+order: 7
 permalink: /ko/writing-in-vs-code/overleaf/
 translationKey: writing-overleaf
 eyebrow: 선택

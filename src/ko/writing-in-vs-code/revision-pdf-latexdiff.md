@@ -4,7 +4,7 @@ title: latexdiff로 revision PDF 만들기
 description: old TeX와 revised TeX를 비교해 latexdiff로 review PDF를 만드는 흐름을 정리합니다.
 lang: ko
 section: writing-in-vs-code
-order: 7
+order: 8
 permalink: /ko/writing-in-vs-code/revision-pdf-latexdiff/
 translationKey: writing-revision-pdf-latexdiff
 eyebrow: 선택
