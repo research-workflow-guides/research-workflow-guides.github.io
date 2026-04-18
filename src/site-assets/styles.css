@@ -519,6 +519,26 @@ li {
   background: linear-gradient(90deg, #1e3a8a, #3b6fd4);
 }
 
+.doc-content.panel::before {
+  content: '';
+  display: block;
+  height: 4px;
+  margin: -1.6rem -1.6rem 1.2rem;
+  background: #e5e0d8;
+}
+
+.section--initial-setup .doc-content.panel::before {
+  background: linear-gradient(90deg, #2aaf92, #4dd9b8);
+}
+
+.section--writing-in-vs-code .doc-content.panel::before {
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+.section--git-github .doc-content.panel::before {
+  background: linear-gradient(90deg, #1e3a8a, #3b6fd4);
+}
+
 .link-row a {
   color: var(--brand);
   font-weight: 700;
@@ -689,6 +709,7 @@ li.section--git-github > .rail-link-section.is-current {
 .doc-content {
   padding: 1.6rem;
   min-width: 0;
+  overflow: hidden;
 }
 
 .breadcrumb {
@@ -1195,6 +1216,11 @@ li > .image-frame {
   .search-panel,
   .callout-card {
     padding: 1.1rem;
+  }
+
+  .feature-card::before,
+  .doc-content.panel::before {
+    margin: -1.1rem -1.1rem 1.2rem;
   }
 
   .footer-inner {
