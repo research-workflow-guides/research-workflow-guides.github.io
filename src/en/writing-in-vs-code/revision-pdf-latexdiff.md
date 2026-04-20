@@ -4,7 +4,7 @@ title: Generate a Revision PDF with latexdiff
 description: Compare an old TeX file with a revised one and compile a review PDF with latexdiff.
 lang: en
 section: writing-in-vs-code
-order: 7
+order: 8
 permalink: /en/writing-in-vs-code/revision-pdf-latexdiff/
 translationKey: writing-revision-pdf-latexdiff
 eyebrow: Optional
