@@ -3,10 +3,10 @@ layout: layouts/doc.njk
 title: Overleaf
 description: 협업자가 VS Code 대신 Overleaf를 사용한다면, Overleaf와 GitHub를 연결해 VS Code에서 작업할 수 있습니다.
 lang: ko
-section: writing-in-vs-code
+section: git-github
 order: 6
-permalink: /ko/writing-in-vs-code/overleaf/
-translationKey: writing-overleaf
+permalink: /ko/git-github/overleaf/
+translationKey: git-overleaf
 eyebrow: 선택
 lead: 작업 공간을 GitHub 저장소로 유지하고 Overleaf에 연결합니다. 협업자가 GitHub를 직접 사용할 필요는 없습니다. 단, pull과 push를 포함한 동기화 작업은 본인 또는 협업자가 Overleaf에서 직접 수동으로 처리해야 합니다.
 toc:
