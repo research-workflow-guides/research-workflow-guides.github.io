@@ -307,6 +307,14 @@ li {
   padding: 4.5rem 0 2.4rem;
 }
 
+.landing-hero .lead {
+  color: var(--ink);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
@@ -326,7 +334,7 @@ li {
 .hero-panel {
   display: flex;
   flex-direction: column;
-  align-self: end;
+  align-self: start;
   margin-top: 3rem;
 }
 
