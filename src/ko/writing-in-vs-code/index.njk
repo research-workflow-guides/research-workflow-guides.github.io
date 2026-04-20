@@ -48,7 +48,11 @@ toc:
         {% for doc in optionalDocs %}
           <a class="feature-card panel" href="{{ doc.url }}">
             <p class="card-kicker">선택</p>
-            <h3>{{ doc.title }}</h3>
+            {% if doc.logo %}
+              <img src="{{ doc.logo }}" alt="{{ doc.title }}" style="height:clamp(28px,4vw,44px);width:auto;max-width:100%;display:block;margin-bottom:0.75rem">
+            {% else %}
+              <h3>{{ doc.title }}</h3>
+            {% endif %}
             <p>{{ doc.description }}</p>
           </a>
         {% endfor %}

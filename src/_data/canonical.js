@@ -378,8 +378,9 @@ const pages = [
     order: 6,
     group: "optional-topics",
     title: "Overleaf",
-    description: "Use Overleaf Professional as a GitHub-connected writing bridge when local VS Code is not the whole workflow.",
+    description: "If your collaborator uses Overleaf instead of VS Code, you can still work in VS Code by connecting Overleaf and GitHub.",
     translationKey: "writing-overleaf",
+    logo: "/assets/images/overleaf-logo.png",
     status: "optional"
   },
   {
@@ -391,8 +392,9 @@ const pages = [
     order: 6,
     group: "optional-topics",
     title: "Overleaf",
-    description: "Overleaf Professional을 GitHub와 연결해 보조 작성 환경으로 사용하는 흐름을 정리합니다.",
+    description: "협업자가 VS Code 대신 Overleaf를 사용한다면, Overleaf와 GitHub를 연결해 VS Code에서 작업할 수 있습니다.",
     translationKey: "writing-overleaf",
+    logo: "/assets/images/overleaf-logo.png",
     status: "optional"
   },
   {

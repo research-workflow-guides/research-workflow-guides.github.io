@@ -1,20 +1,18 @@
 ---
 layout: layouts/doc.njk
 title: Overleaf
-description: Use Overleaf Professional as a GitHub-connected writing bridge when local VS Code is not the whole workflow.
+description: If your collaborator uses Overleaf instead of VS Code, you can still work in VS Code by connecting Overleaf and GitHub.
 lang: en
 section: writing-in-vs-code
 order: 6
 permalink: /en/writing-in-vs-code/overleaf/
 translationKey: writing-overleaf
 eyebrow: Optional
-lead: Use Overleaf Professional only when you need a browser-based writing bridge that still stays connected to the GitHub repository.
+lead: Maintain the workspace as a GitHub repository and connect it to Overleaf. Your collaborator does not need to use GitHub directly. However, sync tasks such as pulling and pushing must be handled manually by you or your collaborator in Overleaf.
 toc:
-  - id: what-this-page-is-for
-    label: Purpose
-  - id: professional-requirement
-    label: Professional requirement
-  - id: link-github-in-overleaf
+  - id: professional-subscription
+    label: Professional subscription
+  - id: link-github
     label: Link GitHub
   - id: import-from-github
     label: Import from GitHub
@@ -27,13 +25,7 @@ toc:
 tags:
   - doc
 ---
-## What this page is for
-
-Use this page only when local VS Code is not the whole workflow. Keep GitHub as the source of truth and use Overleaf as a writing bridge for collaboration or remote editing.
-
-This is not a general Overleaf introduction and does not replace the local Git and VS Code flow.
-
-## Professional requirement
+## Professional subscription
 
 <!-- TODO: Restructure this page around the current Overleaf flow: Premium availability, Link GitHub in Account Settings, Import from GitHub, and Use Integrations to sync. Update the surrounding screenshots/captions to match that structure. -->
 This workflow requires the GitHub-connected features in Overleaf Professional. If your plan does not include that integration, stay with the local VS Code workflow.
@@ -48,13 +40,12 @@ This workflow requires the GitHub-connected features in Overleaf Professional. I
   </figure>
 </div>
 
-## Link GitHub in Overleaf
+## Link GitHub
 
-Before importing a repository, open Overleaf's synchronization settings and confirm that GitHub Sync is available for the current project. Connect at the account level once and reuse it for later projects — this avoids re-authorizing for every new paper.
+Go to Account Settings and complete the GitHub Sync setup under Project Synchronisation. You can ignore Git integration for now.
 
 <div class="doc-step-pair">
   <div>
-    <p>This screen is mainly a status and management checkpoint. What matters is whether GitHub Sync is available here for the account or project you plan to use.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-2.png" alt="Overleaf project synchronization page showing GitHub Sync availability">
@@ -64,11 +55,10 @@ Before importing a repository, open Overleaf's synchronization settings and conf
 
 ## Import from GitHub
 
-Import from GitHub rather than uploading a ZIP. This keeps one repository history and avoids a disconnected browser-only project.
+Import from GitHub to keep a single repository history instead of creating a disconnected browser-only project.
 
 <div class="doc-step-pair">
   <div>
-    <p>Start from the GitHub import path, not from a blank project or ZIP upload.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-3.png" alt="Overleaf import dialog with GitHub repository source">
@@ -78,7 +68,7 @@ Import from GitHub rather than uploading a ZIP. This keeps one repository histor
 
 <div class="doc-step-pair">
   <div>
-    <p>Select the repository that already contains the working manuscript — this keeps Overleaf and local VS Code pointed at the same history.</p>
+    <p>Choose a repository and click the "Import to Overleaf" button.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-4.png" alt="Overleaf dialog for selecting a GitHub repository to import">
@@ -88,11 +78,10 @@ Import from GitHub rather than uploading a ZIP. This keeps one repository histor
 
 ## Work in Overleaf
 
-Once imported, treat Overleaf as a focused writing surface, not a separate project structure. Keep the same `main.tex`, folder layout, and manuscript files that already work locally.
+Once the import is complete, you will see the following screen. Collaborators connected to the account can now work in Overleaf.
 
 <div class="doc-step-pair">
   <div>
-    <p>Edit and review inside Overleaf only when the browser workflow is the real convenience. Do not restructure files differently from the local project unless the whole team agrees.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-5.png" alt="Overleaf editor with the imported LaTeX project open">
@@ -102,7 +91,7 @@ Once imported, treat Overleaf as a focused writing surface, not a separate proje
 
 ## Push changes back to GitHub
 
-When browser-side edits are ready, push them back to the repository via the GitHub integration. Return to the local workflow for the next round of writing.
+If there are changes in Overleaf or Git, click the GitHub button under Integrations to sync.
 
 <div class="doc-step-pair">
   <div>
@@ -116,7 +105,6 @@ When browser-side edits are ready, push them back to the repository via the GitH
 
 <div class="doc-step-pair">
   <div>
-    <p>Finish the push-back flow so the repository stays current and local VS Code work stays aligned.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-optional/overleaf/2.3.1-7.png" alt="Overleaf confirmation flow for pushing project changes to GitHub">
