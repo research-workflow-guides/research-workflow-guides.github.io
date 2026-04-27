@@ -405,8 +405,8 @@ const pages = [
     slug: "revision-pdf-latexdiff",
     order: 7,
     group: "optional-topics",
-    title: "Generate a Revision PDF with latexdiff",
-    description: "Compare an old TeX file with a revised one and compile a review PDF with latexdiff.",
+    title: "Generate a redlined PDF",
+    description: "Compare an old TeX file with a revised TeX file and compile a redlined PDF.",
     translationKey: "writing-revision-pdf-latexdiff",
     status: "optional"
   },
@@ -418,8 +418,8 @@ const pages = [
     slug: "revision-pdf-latexdiff",
     order: 7,
     group: "optional-topics",
-    title: "latexdiff로 revision PDF 만들기",
-    description: "old TeX와 revised TeX를 비교해 latexdiff로 review PDF를 만드는 흐름을 정리합니다.",
+    title: "수정 사항이 표시된 PDF 만들기",
+    description: "이전 TeX 파일과 현재 TeX 파일을 비교해 수정 사항이 표시된 PDF를 만듭니다.",
     translationKey: "writing-revision-pdf-latexdiff",
     status: "optional"
   },
