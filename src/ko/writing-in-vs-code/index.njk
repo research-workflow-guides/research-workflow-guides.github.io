@@ -43,12 +43,16 @@ toc:
 
     <section id="optional-documents" class="doc-section">
       <h2>선택 문서</h2>
-      <p class="subtle">외부 작성 환경 연동이나 review PDF가 필요할 때만 이 문서들을 사용합니다.</p>
+      <p class="subtle">revision 제출용 review PDF가 필요할 때만 이 문서를 사용합니다.</p>
       <div class="feature-grid feature-grid-compact">
         {% for doc in optionalDocs %}
           <a class="feature-card panel" href="{{ doc.url }}">
             <p class="card-kicker">선택</p>
-            <h3>{{ doc.title }}</h3>
+            {% if doc.logo %}
+              <img src="{{ doc.logo }}" alt="{{ doc.title }}" style="height:clamp(28px,4vw,44px);width:auto;max-width:100%;display:block;margin-bottom:0.75rem">
+            {% else %}
+              <h3>{{ doc.title }}</h3>
+            {% endif %}
             <p>{{ doc.description }}</p>
           </a>
         {% endfor %}
