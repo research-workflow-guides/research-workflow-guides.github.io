@@ -1,36 +1,25 @@
 ---
 layout: layouts/doc.njk
-title: Snippets
+title: 세팅 파일
 description: 자주 쓰는 LaTeX 조각을 snippet으로 묶어 반복 입력을 줄입니다.
 lang: ko
 section: writing-in-vs-code
-order: 5
+order: 4
 permalink: /ko/writing-in-vs-code/snippets/
 translationKey: writing-snippets
-eyebrow: 주제 5
+eyebrow: 주제 4
 lead: snippet은 문서 구조를 가리지 않으면서 반복 입력만 줄여줄 때 가장 유용합니다.
 toc:
-  - id: 자주-쓰는-패턴부터
-    label: 자주 쓰는 패턴부터
+  - id: 세팅-파일-찾기
+    label: 세팅 파일 찾기
   - id: 예시-snippet
     label: 예시 snippet
-  - id: 너무-큰-snippet-모음-피하기
-    label: 너무 큰 snippet 모음 피하기
   - id: 넘어가기-전
     label: 넘어가기 전
 tags:
   - doc
 ---
-## 자주 쓰는 패턴부터
-
-snippet은 정말 자주 타이핑하는 패턴에만 먼저 만듭니다.
-
-- theorem 환경
-- aligned equation block
-- figure, table 기본 껍데기
-- 반복되는 문서 scaffold
-
-한 달에 한 번 쓸까 말까 한 패턴은 core snippet 집합에 넣지 않아도 됩니다.
+## 세팅 파일 찾기
 
 <div class="doc-step-pair">
   <div>
@@ -64,6 +53,12 @@ snippet은 정말 자주 타이핑하는 패턴에만 먼저 만듭니다.
 
 ## 예시 snippet
 
+기본 문서팩에서 [제공된](https://github.com/research-workflow-guides/setting) `latex.json` 파일을 사용할 수 있습니다. 파일이 위치할 경로는 사용자의 OS에 따라 다릅니다.
+
+- **Windows**: `%APPDATA%\Code\User\snippets`
+- **macOS**: `$HOME/Library/Application Support/Code/User/snippets`
+- **Linux**: `$HOME/.config/Code/User/snippets`
+
 <div class="doc-step-pair">
   <div>
     <p>파일 위치를 직접 확인하고 싶다면, Windows 기준으로는 <code>%APPDATA%\\Code\\User\\snippets</code> 아래에서 user snippet 파일을 찾을 수 있습니다.</p>
@@ -94,24 +89,7 @@ snippet은 정말 자주 타이핑하는 패턴에만 먼저 만듭니다.
   </figure>
 </div>
 
-```json
-{
-  "align environment": {
-    "prefix": "ali",
-    "body": [
-      "\\begin{align}",
-      "  $1",
-      "\\end{align}"
-    ]
-  }
-}
-```
-
 prefix는 짧지만 기억하기 쉬운 쪽이 좋습니다.
-
-## 너무 큰 snippet 모음 피하기
-
-snippet 파일이 너무 커지면 그것 자체가 관리 대상이 됩니다. 먼저 믿고 쓸 수 있는 작은 집합으로 시작하고, 반복 입력이 실제로 시간을 잡아먹는다고 느껴질 때만 추가합니다.
 
 ## 넘어가기 전
 

@@ -7,12 +7,15 @@ pageClass: page-section
 toc:
   - id: core-documents
     label: 주요 문서
+  - id: snippets-documents
+    label: 나만의 snippets
   - id: optional-documents
     label: 선택 문서
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
 {% set docs = canonical.groupedDocs.ko["writing-in-vs-code"]["main-topics"] %}
+{% set snippetsDocs = canonical.groupedDocs.ko["writing-in-vs-code"]["snippets"] %}
 {% set optionalDocs = canonical.groupedDocs.ko["writing-in-vs-code"]["optional-topics"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
@@ -32,6 +35,19 @@ toc:
       <h2>주요 문서</h2>
       <div class="feature-grid feature-grid-compact">
         {% for doc in docs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">주제 {{ doc.order }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="snippets-documents" class="doc-section">
+      <h2>나만의 snippets</h2>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in snippetsDocs %}
           <a class="feature-card panel" href="{{ doc.url }}">
             <p class="card-kicker">주제 {{ doc.order }}</p>
             <h3>{{ doc.title }}</h3>

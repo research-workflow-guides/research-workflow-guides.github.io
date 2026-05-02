@@ -54,6 +54,13 @@ const sectionDefinitions = [
         }
       },
       {
+        key: "snippets",
+        label: {
+          en: "Personal snippets",
+          ko: "나만의 snippets"
+        }
+      },
+      {
         key: "optional-topics",
         label: {
           en: "Optional topics",
@@ -305,32 +312,6 @@ const pages = [
     status: "core"
   },
   {
-    url: "/en/writing-in-vs-code/usage-basics/",
-    pageType: "document",
-    lang: "en",
-    section: "writing-in-vs-code",
-    slug: "usage-basics",
-    order: 4,
-    group: "main-topics",
-    title: "Usage Basics",
-    description: "Practice the edit, build, preview, and SyncTeX loop until it feels routine.",
-    translationKey: "writing-usage-basics",
-    status: "core"
-  },
-  {
-    url: "/ko/writing-in-vs-code/usage-basics/",
-    pageType: "document",
-    lang: "ko",
-    section: "writing-in-vs-code",
-    slug: "usage-basics",
-    order: 4,
-    group: "main-topics",
-    title: "기본 사용법",
-    description: "수정, build, preview, SyncTeX 루프를 일상적으로 반복하는 방법을 정리합니다.",
-    translationKey: "writing-usage-basics",
-    status: "core"
-  },
-  {
     url: "/en/writing-in-vs-code/shortcuts/",
     pageType: "document",
     lang: "en",
@@ -362,11 +343,24 @@ const pages = [
     lang: "en",
     section: "writing-in-vs-code",
     slug: "snippets",
-    order: 5,
-    group: "main-topics",
-    title: "Snippets",
+    order: 4,
+    group: "snippets",
+    title: "Setting file",
     description: "Use a small snippet set to speed up repetitive LaTeX typing without overengineering.",
     translationKey: "writing-snippets",
+    status: "core"
+  },
+  {
+    url: "/en/writing-in-vs-code/syntax/",
+    pageType: "document",
+    lang: "en",
+    section: "writing-in-vs-code",
+    slug: "syntax",
+    order: 5,
+    group: "snippets",
+    title: "Syntax",
+    description: "Reference the LaTeX syntax patterns you reach for most often while writing.",
+    translationKey: "writing-syntax",
     status: "core"
   },
   {
@@ -429,11 +423,24 @@ const pages = [
     lang: "ko",
     section: "writing-in-vs-code",
     slug: "snippets",
-    order: 5,
-    group: "main-topics",
-    title: "Snippets",
+    order: 4,
+    group: "snippets",
+    title: "세팅 파일",
     description: "자주 쓰는 LaTeX 조각을 snippet으로 묶어 반복 입력을 줄입니다.",
     translationKey: "writing-snippets",
+    status: "core"
+  },
+  {
+    url: "/ko/writing-in-vs-code/syntax/",
+    pageType: "document",
+    lang: "ko",
+    section: "writing-in-vs-code",
+    slug: "syntax",
+    order: 5,
+    group: "snippets",
+    title: "문법",
+    description: "글을 쓸 때 자주 사용하는 LaTeX 문법 패턴을 정리합니다.",
+    translationKey: "writing-syntax",
     status: "core"
   },
   {
@@ -835,7 +842,7 @@ function buildPrevNext(page) {
   const section = sections.find((item) => item.key === page.section);
   let sequence = section.pages[page.lang];
 
-  if (page.section === "writing-in-vs-code" && page.group === "main-topics") {
+  if (page.section === "writing-in-vs-code" && (page.group === "main-topics" || page.group === "snippets")) {
     sequence = sequence.filter((item) => item.status === "core");
   }
 

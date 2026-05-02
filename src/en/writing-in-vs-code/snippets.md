@@ -1,36 +1,25 @@
 ---
 layout: layouts/doc.njk
-title: Snippets
+title: Setting file
 description: Use a small snippet set to speed up repetitive LaTeX typing without overengineering.
 lang: en
 section: writing-in-vs-code
-order: 5
+order: 4
 permalink: /en/writing-in-vs-code/snippets/
 translationKey: writing-snippets
-eyebrow: Topic 5
+eyebrow: Topic 4
 lead: Snippets are useful when they remove repetition without hiding the structure of the document.
 toc:
-  - id: start-with-high-frequency-patterns
-    label: Start with high-frequency patterns
+  - id: finding-the-setting-file
+    label: Finding the setting file
   - id: example-snippet
     label: Example snippet
-  - id: avoid-oversized-snippet-libraries
-    label: Avoid oversized libraries
   - id: before-proceeding
     label: Before proceeding
 tags:
   - doc
 ---
-## Start with high-frequency patterns
-
-Create snippets only for patterns you type constantly:
-
-- theorem environments
-- aligned equation blocks
-- common figure or table shells
-- repeated document scaffolding
-
-If a snippet is used once a month, it probably does not belong in the core set.
+## Finding the setting file
 
 <div class="doc-step-pair">
   <div>
@@ -64,6 +53,12 @@ If a snippet is used once a month, it probably does not belong in the core set.
 
 ## Example snippet
 
+You can use the `latex.json` file from the default document pack [provided here](https://github.com/research-workflow-guides/setting). The path where it lives depends on your operating system:
+
+- **Windows**: `%APPDATA%\Code\User\snippets`
+- **macOS**: `$HOME/Library/Application Support/Code/User/snippets`
+- **Linux**: `$HOME/.config/Code/User/snippets`
+
 <div class="doc-step-pair">
   <div>
     <p>If you need to inspect the files directly, the Windows example below shows the <code>%APPDATA%\\Code\\User\\snippets</code> folder where user snippets are stored.</p>
@@ -93,25 +88,6 @@ If a snippet is used once a month, it probably does not belong in the core set.
 
   </figure>
 </div>
-
-```json
-{
-  "align environment": {
-    "prefix": "ali",
-    "body": [
-      "\\begin{align}",
-      "  $1",
-      "\\end{align}"
-    ]
-  }
-}
-```
-
-Keep prefixes short but memorable.
-
-## Avoid oversized libraries
-
-Large snippet files become their own maintenance burden. Start with a small set that you trust, then add entries only when repeated typing is clearly wasting time.
 
 ## Before proceeding
 

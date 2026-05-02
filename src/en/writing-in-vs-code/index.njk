@@ -7,12 +7,15 @@ pageClass: page-section
 toc:
   - id: core-documents
     label: Main topics
+  - id: snippets-documents
+    label: Personal snippets
   - id: optional-documents
     label: Optional topics
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
 {% set docs = canonical.groupedDocs.en["writing-in-vs-code"]["main-topics"] %}
+{% set snippetsDocs = canonical.groupedDocs.en["writing-in-vs-code"]["snippets"] %}
 {% set optionalDocs = canonical.groupedDocs.en["writing-in-vs-code"]["optional-topics"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
@@ -32,6 +35,19 @@ toc:
       <h2>Main topics</h2>
       <div class="feature-grid feature-grid-compact">
         {% for doc in docs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Topic {{ doc.order }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="snippets-documents" class="doc-section">
+      <h2>Personal snippets</h2>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in snippetsDocs %}
           <a class="feature-card panel" href="{{ doc.url }}">
             <p class="card-kicker">Topic {{ doc.order }}</p>
             <h3>{{ doc.title }}</h3>
