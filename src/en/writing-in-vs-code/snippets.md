@@ -60,9 +60,6 @@ You can use the `latex.json` file from the default document pack [provided here]
 - **Linux**: `$HOME/.config/Code/User/snippets`
 
 <div class="doc-step-pair">
-  <div>
-    <p>If you need to inspect the files directly, the Windows example below shows the <code>%APPDATA%\\Code\\User\\snippets</code> folder where user snippets are stored.</p>
-  </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/snippets/snippets-folder-path.png" alt="Windows File Explorer showing the AppData Code User snippets path">
 

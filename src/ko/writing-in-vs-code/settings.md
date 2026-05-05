@@ -14,10 +14,8 @@ toc:
     label: 명령 이름부터 익히기
   - id: 반복-동작-shortcut-만들기
     label: 반복 동작 shortcut 만들기
-  - id: 목록을-작게-유지
-    label: 목록을 작게 유지
-  - id: 작은-settings부터-시작
-    label: 작은 settings부터 시작
+  - id: 설정-파일-찾기
+    label: 설정 파일 찾기
   - id: 유용한-기본-설정
     label: 유용한 기본 설정
   - id: 예시-settings
@@ -94,15 +92,7 @@ tags:
   </figure>
 </div>
 
-## 목록을 작게 유지
-
-드물게 쓰는 명령은 그대로 Command Palette에 두고, 키보드 공간은 매 세션 시간을 절약하는 동작에만 씁니다.
-
-## 작은 settings부터 시작
-
-처음부터 `settings.json`을 길게 만들 필요는 없습니다. 파일이 작을수록 이해하고 수정하기 쉽고, 다음 project로 옮기기도 편합니다.
-
-우선은 build 안정성, 자동 정리, PDF preview 위치 정도만 맞추면 충분합니다.
+## 설정 파일 찾기
 
 <div class="doc-step-pair">
   <div>
@@ -116,7 +106,13 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>설정 파일을 직접 보고 싶다면 먼저 VS Code의 <code>Code/User</code> 폴더 위치를 확인합니다. 아래 이미지는 Windows 기준 예시입니다.</p>
+    <p>설정 파일을 직접 보고 싶다면 먼저 VS Code의 <code>Code/User</code> 폴더 위치를 확인합니다. 아래 이미지는 Windows 기준 예시입니다. 운영체제별 위치는 다음과 같습니다.</p>
+
+    <ul>
+      <li>Windows: <code>%APPDATA%\Code\User</code></li>
+      <li>macOS: <code>$HOME/Library/Application Support/Code/User</code></li>
+      <li>Linux: <code>$HOME/.config/Code/User</code></li>
+    </ul>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/code-user-folder.png" alt="VS Code Code User 폴더가 열린 Windows 파일 탐색기">
@@ -126,7 +122,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>그 안에서 <code>settings.json</code>과 <code>keybindings.json</code> 위치를 같이 확인해두면, 나중에 어떤 파일을 편집하는지 헷갈리지 않습니다.</p>
+    <p>그 안에서 <code>settings.json</code>과 <code>keybindings.json</code> 위치를 같이 확인해두면, 나중에 어떤 파일을 편집하는지 헷갈리지 않습니다. 기본 document pack에서 제공하는 <code>settings.json</code>과 <code>keybindings.json</code> 파일은 <a href="https://github.com/research-workflow-guides/setting">여기</a>에서 다운받을 수 있습니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="VS Code user 폴더 안의 settings와 keybindings 파일">
@@ -153,9 +149,9 @@ tags:
 - cleanup 정책
 - 기본 recipe 선택
 
-처음부터 모든 것을 바꾸지 말고, 실제 작업 루프에서 불편이 느껴질 때 한 항목씩 추가합니다.
-
 ## 예시 settings
+
+아래 항목을 `settings.json` 파일에 추가하거나, 이미 설정이 있다면 기존 object 안에 합쳐 넣습니다.
 
 ```json
 {
@@ -165,8 +161,6 @@ tags:
   "latex-workshop.latex.recipe.default": "lastUsed"
 }
 ```
-
-이 값들이 유일한 정답은 아니지만, 시작점으로는 충분히 안정적입니다.
 
 ## 넘어가기 전
 
