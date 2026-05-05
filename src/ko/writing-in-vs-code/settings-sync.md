@@ -29,15 +29,17 @@ Settings Sync는 VS Code 작업 환경을 여러 기기에서 동기화해 주�
 
 VS Code를 새로 설치하거나 다른 PC에서 작업할 때, 이전 환경을 빠르게 복원하고 싶을 때 유용합니다. 한 번 설정해 두면 `settings`, `keyboard shortcuts`, `snippets`, `extensions`, `profiles`를 처음부터 다시 맞출 필요가 없습니다.
 
-공식 문서 기준으로 다음 항목을 동기화할 수 있습니다.
+공식 문서는 `settings`, `keyboard shortcuts`, `user snippets`, `user tasks`, `UI State`, `extensions`, `profiles`를 동기화 항목으로 설명합니다. VS Code 1.117.0의 실제 Settings Sync 선택 화면에는 다음 항목이 보입니다.
 
 - `Settings`
 - `Keyboard Shortcuts`
-- `User Snippets`
-- `User Tasks`
+- `Snippets`
+- `Tasks`
+- `MCP Servers`
 - `UI State`
 - `Extensions`
 - `Profiles`
+- `Prompts and Instructions`
 
 처음에는 이 항목들을 세세하게 조정하기보다 기본 설정 그대로 시작해도 충분합니다.
 
@@ -45,26 +47,18 @@ VS Code를 새로 설치하거나 다른 PC에서 작업할 때, 이전 환경�
 
 Settings Sync를 켜는 방법은 간단합니다.
 
-1. VS Code 왼쪽 아래의 Accounts 또는 Manage 메뉴를 엽니다.
-2. `Backup and Sync Settings...`를 선택합니다.
-3. 계정 선택 창에서 `Sign in with GitHub`를 선택합니다.
-4. 브라우저에서 GitHub 로그인을 완료하고 VS Code로 돌아옵니다.
+1. `Cmd+Shift+P`로 Command Palette를 엽니다.
+2. `Settings Sync: Backup and Sync Settings...`를 실행합니다.
+3. 기본 동기화 항목을 그대로 두고 `Sign in`을 선택합니다.
+4. 계정 선택 창에서 `Sign in with GitHub`를 선택합니다.
+5. 브라우저에서 GitHub 로그인을 완료하고 VS Code로 돌아옵니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>먼저 Manage 메뉴에서 <code>Backup and Sync Settings...</code>를 선택합니다.</p>
+    <p>Command Palette에서 <code>Settings Sync: Backup and Sync Settings...</code>를 실행합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/settings-sync/backup-and-sync-settings.png" alt="Backup and Sync Settings가 선택된 VS Code Manage 메뉴 예시 화면">
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>계정을 고르는 화면에서는 <code>Sign in with GitHub</code>를 선택합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/settings-sync/sign-in-with-github.png" alt="Sign in with GitHub가 선택된 VS Code 계정 선택 예시 화면">
+    <img src="/assets/images/settings-sync/backup-and-sync-settings.png" alt="Settings Sync Backup and Sync Settings 명령이 보이는 VS Code Command Palette 실제 화면">
   </figure>
 </div>
 
@@ -83,20 +77,20 @@ Settings Sync를 처음 켜면 동기화할 항목 목록이 표시됩니다.
   </figure>
 </div>
 
+<div class="doc-step-pair">
+  <div>
+    <p><code>Sign in</code>을 누른 뒤 계정 선택 화면에서 <code>Sign in with GitHub</code>를 선택합니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/settings-sync/sign-in-with-github.png" alt="Sign in with GitHub가 선택된 VS Code 계정 선택 실제 화면">
+  </figure>
+</div>
+
 ## 다른 PC에서 같은 환경 이어받기
 
 다른 PC에 VS Code를 설치한 뒤 같은 GitHub 계정으로 로그인하면, 저장해 둔 작업 환경을 불러올 수 있습니다.
 
-이때 VS Code는 클라우드 설정을 현재 기기에 어떻게 적용할지 묻습니다. `Merge` 또는 `Replace Local` 중 선택할 수 있으며, 완전히 새로 설치한 환경이라면 보통 `Replace Local`이 가장 간단합니다.
-
-<div class="doc-step-pair">
-  <div>
-    <p>새로 설치한 VS Code라면 보존해야 할 local 설정이 거의 없으므로 <code>Replace Local</code>이 가장 단순합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/settings-sync/merge-or-replace.png" alt="Replace Local이 선택된 VS Code Settings Sync 적용 방식 예시 화면">
-  </figure>
-</div>
+이때 VS Code는 클라우드 설정을 현재 기기에 어떻게 적용할지 물을 수 있습니다. `Merge`는 현재 기기의 설정과 클라우드 설정을 합치고, `Replace Local`은 현재 기기의 local 설정을 클라우드 설정으로 덮어씁니다. 보존해야 할 local 설정이 있는지 먼저 확인한 뒤 선택합니다.
 
 ## 참고 문서
 

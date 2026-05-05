@@ -29,15 +29,17 @@ Settings Sync keeps your VS Code setup aligned across machines.
 
 It is useful when you reinstall VS Code or move to another computer and want your old setup back quickly. Once it is enabled, you do not need to rebuild `settings`, `keyboard shortcuts`, `snippets`, `extensions`, and `profiles` from scratch.
 
-According to the official documentation, Settings Sync can synchronize the following items:
+The official documentation lists settings, keyboard shortcuts, user snippets, user tasks, UI State, extensions, and profiles. In VS Code 1.117.0, the Settings Sync picker shows these items:
 
 - `Settings`
 - `Keyboard Shortcuts`
-- `User Snippets`
-- `User Tasks`
+- `Snippets`
+- `Tasks`
+- `MCP Servers`
 - `UI State`
 - `Extensions`
 - `Profiles`
+- `Prompts and Instructions`
 
 At first, it is usually enough to leave these options at the default selection and start there.
 
@@ -45,26 +47,18 @@ At first, it is usually enough to leave these options at the default selection a
 
 The process is straightforward.
 
-1. Open the Accounts or Manage menu in the lower-left corner of VS Code.
-2. Choose `Backup and Sync Settings...`.
-3. In the account picker, choose `Sign in with GitHub`.
-4. Finish the GitHub sign-in flow in the browser and return to VS Code.
+1. Open the Command Palette with `Cmd+Shift+P`.
+2. Run `Settings Sync: Backup and Sync Settings...`.
+3. Keep the default sync items selected and choose `Sign in`.
+4. In the account picker, choose `Sign in with GitHub`.
+5. Finish the GitHub sign-in flow in the browser and return to VS Code.
 
 <div class="doc-step-pair">
   <div>
-    <p>Start from the Manage menu and choose <code>Backup and Sync Settings...</code>.</p>
+    <p>Run <code>Settings Sync: Backup and Sync Settings...</code> from the Command Palette.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/settings-sync/backup-and-sync-settings.png" alt="Example VS Code Manage menu with Backup and Sync Settings selected">
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>When VS Code asks for an account, choose <code>Sign in with GitHub</code>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/settings-sync/sign-in-with-github.png" alt="Example VS Code account picker with Sign in with GitHub selected">
+    <img src="/assets/images/settings-sync/backup-and-sync-settings.png" alt="VS Code Command Palette showing Settings Sync Backup and Sync Settings">
   </figure>
 </div>
 
@@ -83,20 +77,20 @@ For this guide, there is no need to customize that list. In most cases, the defa
   </figure>
 </div>
 
+<div class="doc-step-pair">
+  <div>
+    <p>After selecting <code>Sign in</code>, choose <code>Sign in with GitHub</code>.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/settings-sync/sign-in-with-github.png" alt="Example VS Code account picker with Sign in with GitHub selected">
+  </figure>
+</div>
+
 ## Restore the same setup on another machine
 
 After installing VS Code on another machine, sign in with the same GitHub account to bring back the saved setup.
 
-At that point, VS Code may ask how to apply the cloud settings on the current machine. You can choose `Merge` or `Replace Local`. On a fresh installation, `Replace Local` is usually the simplest choice.
-
-<div class="doc-step-pair">
-  <div>
-    <p>On a fresh installation, <code>Replace Local</code> is usually the clearest choice because the local setup does not contain work you need to preserve.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/settings-sync/merge-or-replace.png" alt="Example VS Code Settings Sync dialog with Replace Local selected">
-  </figure>
-</div>
+At that point, VS Code may ask how to apply the cloud settings on the current machine. `Merge` keeps local settings and combines them with the cloud copy. `Replace Local` overwrites the local setup with the cloud copy, so use it only when the current VS Code installation does not contain local settings you need to preserve.
 
 ## References
 
