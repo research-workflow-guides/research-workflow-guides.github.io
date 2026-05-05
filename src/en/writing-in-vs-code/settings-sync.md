@@ -1,0 +1,101 @@
+---
+layout: layouts/doc.njk
+title: Sync Your VS Code Setup
+description: Turn on Settings Sync with GitHub and keep the same VS Code setup across multiple machines.
+lang: en
+section: writing-in-vs-code
+order: 6
+permalink: /en/writing-in-vs-code/settings-sync/
+translationKey: writing-settings-sync
+eyebrow: Optional
+lead: If you enable Settings Sync with your GitHub account, you can reinstall VS Code or move to another machine without rebuilding the same setup from scratch.
+toc:
+  - id: what-settings-sync-is
+    label: What Settings Sync is
+  - id: turn-on-settings-sync-with-github
+    label: Turn on Settings Sync with GitHub
+  - id: leave-the-sync-options-at-the-defaults
+    label: Leave the sync options at the defaults
+  - id: restore-the-same-setup-on-another-machine
+    label: Restore the same setup on another machine
+  - id: references
+    label: References
+tags:
+  - doc
+---
+## What Settings Sync is
+
+Settings Sync keeps your VS Code setup aligned across machines.
+
+It is useful when you reinstall VS Code or move to another computer and want your old setup back quickly. Once it is enabled, you do not need to rebuild `settings`, `keyboard shortcuts`, `snippets`, `extensions`, and `profiles` from scratch.
+
+The official documentation lists settings, keyboard shortcuts, user snippets, user tasks, UI State, extensions, and profiles. In VS Code 1.117.0, the Settings Sync picker shows these items:
+
+- `Settings`
+- `Keyboard Shortcuts`
+- `Snippets`
+- `Tasks`
+- `MCP Servers`
+- `UI State`
+- `Extensions`
+- `Profiles`
+- `Prompts and Instructions`
+
+At first, it is usually enough to leave these options at the default selection and start there.
+
+## Turn on Settings Sync with GitHub
+
+The process is straightforward.
+
+1. Open the Command Palette with `Cmd+Shift+P`.
+2. Run `Settings Sync: Backup and Sync Settings...`.
+3. Keep the default sync items selected and choose `Sign in`.
+4. In the account picker, choose `Sign in with GitHub`.
+5. Finish the GitHub sign-in flow in the browser and return to VS Code.
+
+<div class="doc-step-pair">
+  <div>
+    <p>Run <code>Settings Sync: Backup and Sync Settings...</code> from the Command Palette.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/settings-sync/backup-and-sync-settings.png" alt="VS Code Command Palette showing Settings Sync Backup and Sync Settings">
+  </figure>
+</div>
+
+## Leave the sync options at the defaults
+
+When you first turn on Settings Sync, VS Code shows the list of items that can be synchronized.
+
+For this guide, there is no need to customize that list. In most cases, the default checked state is enough to restore the same working environment without extra adjustment.
+
+<div class="doc-step-pair">
+  <div>
+    <p>Keep the default checked items unless you already know that one category should stay local.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/settings-sync/sync-options-defaults.png" alt="Example VS Code Settings Sync item list with default options checked">
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>After selecting <code>Sign in</code>, choose <code>Sign in with GitHub</code>.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/settings-sync/sign-in-with-github.png" alt="Example VS Code account picker with Sign in with GitHub selected">
+  </figure>
+</div>
+
+## Restore the same setup on another machine
+
+After installing VS Code on another machine, sign in with the same GitHub account to bring back the saved setup.
+
+At that point, VS Code may ask how to apply the cloud settings on the current machine. `Merge` keeps local settings and combines them with the cloud copy. `Replace Local` overwrites the local setup with the cloud copy, so use it only when the current VS Code installation does not contain local settings you need to preserve.
+
+## References
+
+This page is based on the following documentation.
+
+- [VS Code Settings Sync](https://code.visualstudio.com/docs/configure/settings-sync)
+- [VS Code Profiles](https://code.visualstudio.com/docs/configure/profiles)
+- [GitHub authentication](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)

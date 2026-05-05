@@ -364,6 +364,19 @@ const pages = [
     status: "core"
   },
   {
+    url: "/en/writing-in-vs-code/settings-sync/",
+    pageType: "document",
+    lang: "en",
+    section: "writing-in-vs-code",
+    slug: "settings-sync",
+    order: 6,
+    group: "optional-topics",
+    title: "Sync Your VS Code Setup",
+    description: "Turn on Settings Sync with GitHub and keep the same VS Code setup across multiple machines.",
+    translationKey: "writing-settings-sync",
+    status: "optional"
+  },
+  {
     url: "/en/git-github/overleaf/",
     pageType: "document",
     lang: "en",
@@ -442,6 +455,19 @@ const pages = [
     description: "글을 쓸 때 자주 사용하는 LaTeX 문법 패턴을 정리합니다.",
     translationKey: "writing-syntax",
     status: "core"
+  },
+  {
+    url: "/ko/writing-in-vs-code/settings-sync/",
+    pageType: "document",
+    lang: "ko",
+    section: "writing-in-vs-code",
+    slug: "settings-sync",
+    order: 6,
+    group: "optional-topics",
+    title: "VS Code 작업 환경 동기화",
+    description: "GitHub 계정으로 Settings Sync를 켜고 여러 PC에서 같은 VS Code 환경을 유지합니다.",
+    translationKey: "writing-settings-sync",
+    status: "optional"
   },
   {
     url: "/en/git-github/",
