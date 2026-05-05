@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 3
 permalink: /en/writing-in-vs-code/settings/
 translationKey: writing-settings
-eyebrow: Topic 2
+eyebrow: Step 3
 lead: Keep the settings small and durable. You only need the defaults that make build, preview, and cleanup predictable.
 toc:
   - id: start-with-command-names

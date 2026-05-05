@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 5
 permalink: /en/writing-in-vs-code/syntax/
 translationKey: writing-syntax
-eyebrow: Topic 5
+eyebrow: Topic 2
 lead: Learn the LaTeX pattern first, then save the repeated typing as a VS Code snippet.
 toc:
   - id: read-the-two-layers

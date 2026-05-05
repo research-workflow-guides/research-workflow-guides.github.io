@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 4
 permalink: /ko/writing-in-vs-code/snippets/
 translationKey: writing-snippets
-eyebrow: 주제 4
+eyebrow: 주제 1
 lead: snippet은 문서 구조를 가리지 않으면서 반복 입력만 줄여줄 때 가장 유용합니다.
 toc:
   - id: 세팅-파일-찾기

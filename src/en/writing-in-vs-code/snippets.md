@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 4
 permalink: /en/writing-in-vs-code/snippets/
 translationKey: writing-snippets
-eyebrow: Topic 4
+eyebrow: Topic 1
 lead: Snippets are useful when they remove repetition without hiding the structure of the document.
 toc:
   - id: finding-the-setting-file

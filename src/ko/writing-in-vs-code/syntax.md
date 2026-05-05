@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 5
 permalink: /ko/writing-in-vs-code/syntax/
 translationKey: writing-syntax
-eyebrow: 주제 5
+eyebrow: 주제 2
 lead: 먼저 LaTeX 패턴을 이해하고, 반복 입력은 VS Code snippet으로 저장합니다.
 toc:
   - id: 두-층으로-읽기

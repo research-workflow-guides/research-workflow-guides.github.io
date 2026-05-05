@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 3
 permalink: /ko/writing-in-vs-code/settings/
 translationKey: writing-settings
-eyebrow: 주제 2
+eyebrow: 3단계
 lead: 설정은 작고 오래 버티는 것부터 시작합니다. build, preview, cleanup이 예측 가능하게 돌아가면 충분합니다.
 toc:
   - id: 명령-이름부터-익히기
