@@ -10,8 +10,12 @@ translationKey: writing-syntax
 eyebrow: Topic 2
 lead: Learn the LaTeX pattern first, then save the repeated typing as a VS Code snippet.
 toc:
-  - id: read-the-two-layers
-    label: Read the two layers
+  - id: comparing-latex-and-json
+    label: Comparing LaTeX and JSON
+  - id: math-delimiters
+    label: Math delimiters
+  - id: math-structures
+    label: Math structures
   - id: display-equations
     label: Display equations
   - id: alignments
@@ -22,16 +26,16 @@ toc:
     label: Cases and piecewise definitions
   - id: figures
     label: Figures
-  - id: inline-math-shortcuts
-    label: Inline math shortcuts
+  - id: texts
+    label: Texts
   - id: before-proceeding
     label: Before proceeding
 tags:
   - doc
 ---
-## Read the two layers
+## Comparing LaTeX and JSON
 
-Each example below has two parts:
+Each example below compares the LaTeX source with the JSON snippet syntax:
 
 - **LaTeX code**: the source you want to appear in your `.tex` file after the snippet expands.
 - **Snippet syntax**: the JSON entry you put inside `latex.json`.
@@ -49,6 +53,73 @@ The main difference is escaping. In LaTeX source, a command uses one backslash. 
 Use `$1`, `$2`, and `$3` for tab stops. Use `$0` for the final cursor position. Use `${1:label}` when you want editable placeholder text.
 
 When you add more than one snippet to `latex.json`, keep all entries inside the outer `{ ... }` object and separate neighboring entries with commas.
+
+## Math delimiters
+
+Use these LaTeX patterns for common math delimiters.
+
+```latex
+\left\| x \right\|
+\left\vert x \right\vert
+\left\langle x \right\rangle
+```
+
+Put these snippet entries in `latex.json`.
+
+```json
+"norm": {
+  "prefix": "@11",
+  "body": "\\left\\| $1 \\right\\| $0"
+},
+"absolute value": {
+  "prefix": "@1",
+  "body": "\\left\\vert $1 \\right\\vert $0"
+},
+"angle brackets": {
+  "prefix": "@<",
+  "body": "\\left\\langle $1 \\right\\rangle $0"
+}
+```
+
+## Math structures
+
+Use this LaTeX pattern for a 2x2 matrix.
+
+```latex
+\begin{bmatrix}
+    a & b \\
+    c & d
+\end{bmatrix}
+```
+
+Put this snippet entry in `latex.json`.
+
+```json
+"2x2 Matrix": {
+  "prefix": "mtx2",
+  "body": [
+    "\\begin{bmatrix}",
+    "    ${1:a} & ${2:b} \\\\",
+    "    ${3:c} & ${4:d}",
+    "\\end{bmatrix}$0"
+  ]
+}
+```
+
+Use this LaTeX pattern for an integral.
+
+```latex
+\int_{a}^{b}  f(x)  \, dx
+```
+
+Put this snippet entry in `latex.json`.
+
+```json
+"Integration": {
+  "prefix": "int",
+  "body": "\\int_{${1:a}}^{${2:b}}  ${3:f(x)}  \\, d${4:x} $0"
+}
+```
 
 ## Display equations
 
@@ -121,8 +192,7 @@ Put this snippet entry in `latex.json`.
     "\\begin{align*}",
     "    $1",
     "    &${2:=} $3   \\\\",
-    "    &${4:=} $5   \\\\",
-    "    &${6:=} $7",
+    "    &${4:=} $5",
     "\\end{align*}",
     "",
     "$0"
@@ -151,8 +221,7 @@ Put this snippet entry in `latex.json`.
     "\\begin{align}",
     "    $1",
     "    &${2:=} $3    \\label{ag:${4:first-step}}    \\\\",
-    "    &${5:=} $6    \\label{ag:${7:second-step}}    \\\\",
-    "    &${8:=} $9    \\label{ag:${10:third-step}}",
+    "    &${5:=} $6    \\label{ag:${7:second-step}}",
     "\\end{align}",
     "",
     "$0"
@@ -187,18 +256,6 @@ Put this snippet entry in `latex.json`.
 ```
 
 The same pattern works for definitions, propositions, lemmas, and corollaries. Change the environment name, prefix, and label prefix together.
-
-```json
-"Lemma": {
-  "prefix": "lem",
-  "body": [
-    "\\begin{lemma}    \\label{lem:${1:technical-step}}",
-    "    $0",
-    "\\end{lemma}",
-    ""
-  ]
-}
-```
 
 Use this LaTeX pattern for a proof.
 
@@ -244,42 +301,10 @@ Put this snippet entry in `latex.json`.
   "prefix": "css2",
   "body": [
     "\\begin{equation*}",
-    "    ${1:}",
+    "    ${1:f(x)}",
     "    \\begin{cases}",
     "        $2    &    \\text{${3:if} } $4,    \\\\",
     "        $5    &    \\text{${6:if} } $7",
-    "    \\end{cases}",
-    "\\end{equation*}",
-    "$0"
-  ]
-}
-```
-
-Use this LaTeX pattern for a three-case definition.
-
-```latex
-\begin{equation*}
-    f(x) =
-    \begin{cases}
-        ...    &    \text{if } ...,    \\
-        ...    &    \text{if } ...,    \\
-        ...    &    \text{if } ...
-    \end{cases}
-\end{equation*}
-```
-
-Put this snippet entry in `latex.json`.
-
-```json
-"Three cases": {
-  "prefix": "css3",
-  "body": [
-    "\\begin{equation*}",
-    "    ${1:}",
-    "    \\begin{cases}",
-    "        $2    &    \\text{${3:if} } $4,    \\\\",
-    "        $5    &    \\text{${6:if} } $7,    \\\\",
-    "        $8    &    \\text{${9:if} } $10",
     "    \\end{cases}",
     "\\end{equation*}",
     "$0"
@@ -296,7 +321,7 @@ Use this LaTeX pattern for a figure.
 ```latex
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\linewidth]{figure-file}
+    \includegraphics[width=0.8\linewidth]{figure-filename}
     \caption{Caption text}
     \label{fig:main-figure}
 \end{figure}
@@ -310,8 +335,8 @@ Put this snippet entry in `latex.json`.
   "body": [
     "\\begin{figure}[htbp]",
     "    \\centering",
-    "    \\includegraphics[width=${1:0.8}\\linewidth]{${2:write the file name}}",
-    "    \\caption{$3}",
+    "    \\includegraphics[width=${1:0.8}\\linewidth]{${2:figure-filename}}",
+    "    \\caption{${3:Caption text}}",
     "    \\label{fig:${4:main-figure}}",
     "\\end{figure}",
     "",
@@ -322,43 +347,14 @@ Put this snippet entry in `latex.json`.
 
 The first placeholder controls the width. The second chooses the file. The third writes the caption. The fourth sets the figure label.
 
-## Inline math shortcuts
+## Texts
 
-Inline snippets can use a single JSON string instead of an array. Use this LaTeX pattern for an integral.
-
-```latex
-\int_{a}^{b}  f(x)  \, dx
-```
-
-Put this snippet entry in `latex.json`.
-
-```json
-"Integration": {
-  "prefix": "int",
-  "body": "\\int_{$1}^{$2}  $3  \\, d${4:x} $0"
-}
-```
-
-Use this LaTeX pattern for a norm.
-
-```latex
-\left\| x \right\|
-```
-
-Put this snippet entry in `latex.json`.
-
-```json
-"norm": {
-  "prefix": "@11",
-  "body": "\\left\\| $1 \\right\\| $0"
-}
-```
-
-Use this LaTeX pattern for accented mathematical terminology.
+Use these LaTeX patterns for common text snippets.
 
 ```latex
 Fr\'echet
-G\^ateaux
+\mathbb{R}
+\qquad\text{and}\qquad
 ```
 
 Put these snippet entries in `latex.json`.
@@ -368,9 +364,17 @@ Put these snippet entries in `latex.json`.
   "prefix": "Fre",
   "body": "Fr\\'echet$0"
 },
-"Gateaux": {
-  "prefix": "Gat",
-  "body": "G\\^ateaux$0"
+"Real numbers": {
+  "prefix": "R",
+  "body": "\\mathbb{R}$0"
+},
+"And in line": {
+  "prefix": "qqand",
+  "body": [
+    "",
+    "\\qquad\\text{${1:and}}\\qquad",
+    "$0"
+  ]
 }
 ```
 

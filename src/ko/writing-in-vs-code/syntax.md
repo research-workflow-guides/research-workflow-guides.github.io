@@ -10,8 +10,12 @@ translationKey: writing-syntax
 eyebrow: 주제 2
 lead: 먼저 LaTeX 패턴을 이해하고, 반복 입력은 VS Code snippet으로 저장합니다.
 toc:
-  - id: 두-층으로-읽기
-    label: 두 층으로 읽기
+  - id: comparing-latex-and-json
+    label: LaTeX과 JSON 비교
+  - id: math-delimiters
+    label: 수식 구분자
+  - id: math-structures
+    label: 수식
   - id: 표시-수식
     label: 표시 수식
   - id: 정렬-수식
@@ -22,16 +26,16 @@ toc:
     label: cases와 조각별 정의
   - id: 그림
     label: 그림
-  - id: 인라인-수식-shortcut
-    label: 인라인 수식 shortcut
+  - id: texts
+    label: Texts
   - id: 넘어가기-전
     label: 넘어가기 전
 tags:
   - doc
 ---
-## 두 층으로 읽기
+## LaTeX과 JSON 비교
 
-아래 예시는 항상 두 층으로 나누어 봅니다.
+아래 예시는 LaTeX source와 JSON snippet syntax를 비교해서 봅니다.
 
 - **LaTeX 코드**: snippet이 펼쳐진 뒤 `.tex` 파일에 실제로 들어가야 하는 source입니다.
 - **Snippet 문법**: `latex.json` 안에 넣는 JSON entry입니다.
@@ -49,6 +53,73 @@ tags:
 `$1`, `$2`, `$3`는 tab stop입니다. `$0`은 마지막 cursor 위치입니다. `${1:label}`처럼 쓰면 수정 가능한 placeholder text를 만들 수 있습니다.
 
 `latex.json`에 snippet을 여러 개 넣을 때는 모든 entry를 바깥 `{ ... }` object 안에 두고, 이웃한 entry 사이를 comma로 구분합니다.
+
+## 수식 구분자
+
+자주 쓰는 수식 구분자에는 다음 LaTeX 패턴을 씁니다.
+
+```latex
+\left\| x \right\|
+\left\vert x \right\vert
+\left\langle x \right\rangle
+```
+
+`latex.json`에는 다음 snippet entry들을 넣습니다.
+
+```json
+"norm": {
+  "prefix": "@11",
+  "body": "\\left\\| $1 \\right\\| $0"
+},
+"absolute value": {
+  "prefix": "@1",
+  "body": "\\left\\vert $1 \\right\\vert $0"
+},
+"angle brackets": {
+  "prefix": "@<",
+  "body": "\\left\\langle $1 \\right\\rangle $0"
+}
+```
+
+## 수식
+
+2x2 matrix에는 다음 LaTeX 패턴을 씁니다.
+
+```latex
+\begin{bmatrix}
+    a & b \\
+    c & d
+\end{bmatrix}
+```
+
+`latex.json`에는 다음 snippet entry를 넣습니다.
+
+```json
+"2x2 Matrix": {
+  "prefix": "mtx2",
+  "body": [
+    "\\begin{bmatrix}",
+    "    ${1:a} & ${2:b} \\\\",
+    "    ${3:c} & ${4:d}",
+    "\\end{bmatrix}$0"
+  ]
+}
+```
+
+Integral에는 다음 LaTeX 패턴을 씁니다.
+
+```latex
+\int_{a}^{b}  f(x)  \, dx
+```
+
+`latex.json`에는 다음 snippet entry를 넣습니다.
+
+```json
+"Integration": {
+  "prefix": "int",
+  "body": "\\int_{${1:a}}^{${2:b}}  ${3:f(x)}  \\, d${4:x} $0"
+}
+```
 
 ## 표시 수식
 
@@ -121,8 +192,7 @@ tags:
     "\\begin{align*}",
     "    $1",
     "    &${2:=} $3   \\\\",
-    "    &${4:=} $5   \\\\",
-    "    &${6:=} $7",
+    "    &${4:=} $5",
     "\\end{align*}",
     "",
     "$0"
@@ -151,8 +221,7 @@ Snippet 문법의 `\\\\`는 LaTeX 파일에서는 `\\`가 됩니다. 이것이 `
     "\\begin{align}",
     "    $1",
     "    &${2:=} $3    \\label{ag:${4:first-step}}    \\\\",
-    "    &${5:=} $6    \\label{ag:${7:second-step}}    \\\\",
-    "    &${8:=} $9    \\label{ag:${10:third-step}}",
+    "    &${5:=} $6    \\label{ag:${7:second-step}}",
     "\\end{align}",
     "",
     "$0"
@@ -187,18 +256,6 @@ Snippet 문법의 `\\\\`는 LaTeX 파일에서는 `\\`가 됩니다. 이것이 `
 ```
 
 definition, proposition, lemma, corollary도 같은 구조로 만들 수 있습니다. environment 이름, prefix, label prefix를 함께 바꾸면 됩니다.
-
-```json
-"Lemma": {
-  "prefix": "lem",
-  "body": [
-    "\\begin{lemma}    \\label{lem:${1:technical-step}}",
-    "    $0",
-    "\\end{lemma}",
-    ""
-  ]
-}
-```
 
 증명에는 다음 LaTeX 패턴을 씁니다.
 
@@ -244,42 +301,10 @@ Label prefix는 의미가 보이게 유지합니다. `thm:`, `lem:`, `prop:`, `d
   "prefix": "css2",
   "body": [
     "\\begin{equation*}",
-    "    ${1:}",
+    "    ${1:f(x)}",
     "    \\begin{cases}",
     "        $2    &    \\text{${3:if} } $4,    \\\\",
     "        $5    &    \\text{${6:if} } $7",
-    "    \\end{cases}",
-    "\\end{equation*}",
-    "$0"
-  ]
-}
-```
-
-세 가지 경우로 나뉘는 정의에는 다음 LaTeX 패턴을 씁니다.
-
-```latex
-\begin{equation*}
-    f(x) =
-    \begin{cases}
-        ...    &    \text{if } ...,    \\
-        ...    &    \text{if } ...,    \\
-        ...    &    \text{if } ...
-    \end{cases}
-\end{equation*}
-```
-
-`latex.json`에는 다음 snippet entry를 넣습니다.
-
-```json
-"Three cases": {
-  "prefix": "css3",
-  "body": [
-    "\\begin{equation*}",
-    "    ${1:}",
-    "    \\begin{cases}",
-    "        $2    &    \\text{${3:if} } $4,    \\\\",
-    "        $5    &    \\text{${6:if} } $7,    \\\\",
-    "        $8    &    \\text{${9:if} } $10",
     "    \\end{cases}",
     "\\end{equation*}",
     "$0"
@@ -296,7 +321,7 @@ Figure에는 다음 LaTeX 패턴을 씁니다.
 ```latex
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\linewidth]{figure-file}
+    \includegraphics[width=0.8\linewidth]{figure-filename}
     \caption{Caption text}
     \label{fig:main-figure}
 \end{figure}
@@ -310,8 +335,8 @@ Figure에는 다음 LaTeX 패턴을 씁니다.
   "body": [
     "\\begin{figure}[htbp]",
     "    \\centering",
-    "    \\includegraphics[width=${1:0.8}\\linewidth]{${2:write the file name}}",
-    "    \\caption{$3}",
+    "    \\includegraphics[width=${1:0.8}\\linewidth]{${2:figure-filename}}",
+    "    \\caption{${3:Caption text}}",
     "    \\label{fig:${4:main-figure}}",
     "\\end{figure}",
     "",
@@ -322,43 +347,14 @@ Figure에는 다음 LaTeX 패턴을 씁니다.
 
 첫 번째 placeholder는 width를 조절합니다. 두 번째는 파일 이름입니다. 세 번째는 caption입니다. 네 번째는 figure label입니다.
 
-## 인라인 수식 shortcut
+## Texts
 
-Inline snippet은 배열 대신 하나의 JSON string으로도 만들 수 있습니다. Integral에는 다음 LaTeX 패턴을 씁니다.
-
-```latex
-\int_{a}^{b}  f(x)  \, dx
-```
-
-`latex.json`에는 다음 snippet entry를 넣습니다.
-
-```json
-"Integration": {
-  "prefix": "int",
-  "body": "\\int_{$1}^{$2}  $3  \\, d${4:x} $0"
-}
-```
-
-Norm에는 다음 LaTeX 패턴을 씁니다.
-
-```latex
-\left\| x \right\|
-```
-
-`latex.json`에는 다음 snippet entry를 넣습니다.
-
-```json
-"norm": {
-  "prefix": "@11",
-  "body": "\\left\\| $1 \\right\\| $0"
-}
-```
-
-Accent가 들어간 수학 용어에는 다음 LaTeX 패턴을 씁니다.
+자주 쓰는 text snippet에는 다음 LaTeX 패턴을 씁니다.
 
 ```latex
 Fr\'echet
-G\^ateaux
+\mathbb{R}
+\qquad\text{and}\qquad
 ```
 
 `latex.json`에는 다음 snippet entry들을 넣습니다.
@@ -368,9 +364,17 @@ G\^ateaux
   "prefix": "Fre",
   "body": "Fr\\'echet$0"
 },
-"Gateaux": {
-  "prefix": "Gat",
-  "body": "G\\^ateaux$0"
+"Real numbers": {
+  "prefix": "R",
+  "body": "\\mathbb{R}$0"
+},
+"And in line": {
+  "prefix": "qqand",
+  "body": [
+    "",
+    "\\qquad\\text{${1:and}}\\qquad",
+    "$0"
+  ]
 }
 ```
 
