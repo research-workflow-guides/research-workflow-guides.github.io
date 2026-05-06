@@ -36,7 +36,6 @@ cd <repository-folder>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-copy-url.png" alt="clone URL이 복사된 GitHub 저장소 화면">
-    <figcaption>GitHub Code 메뉴에서 repository URL을 복사합니다.</figcaption>
 
   </figure>
 </div>
@@ -47,7 +46,6 @@ cd <repository-folder>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-command.png" alt="Clone Repository가 보이는 VS Code Source Control 패널">
-    <figcaption>VS Code Source Control 패널에서 clone 흐름을 시작할 수 있습니다.</figcaption>
 
   </figure>
 </div>
@@ -62,7 +60,6 @@ cd <repository-folder>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="clone 위치를 고르는 폴더 선택 창">
-    <figcaption>clone을 둘 폴더를 먼저 선택합니다.</figcaption>
 
   </figure>
 </div>
@@ -73,7 +70,6 @@ cd <repository-folder>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-open-repo.png" alt="clone된 저장소가 열린 VS Code 화면">
-    <figcaption>clone이 열린 뒤 그 안에 프로젝트 파일을 옮깁니다.</figcaption>
 
   </figure>
 </div>
@@ -95,7 +91,6 @@ git push origin main
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="commit message가 입력된 VS Code Source Control 패널">
-    <figcaption>먼저 첫 commit message를 적습니다.</figcaption>
 
   </figure>
 </div>
@@ -106,7 +101,6 @@ git push origin main
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 보이는 VS Code 메뉴">
-    <figcaption>필요하다면 VS Code의 Commit & Push 흐름을 그대로 써도 됩니다.</figcaption>
 
   </figure>
 </div>

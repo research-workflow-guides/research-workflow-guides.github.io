@@ -31,7 +31,6 @@ GitHub 인증 전에 VS Code에서 프로젝트 폴더를 먼저 엽니다. 작�
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-open-folder-button.png" alt="Open Folder 버튼이 보이는 빈 VS Code 창">
-    <figcaption>GitHub 로그인 전에 먼저 작업 폴더를 엽니다.</figcaption>
 
   </figure>
 </div>
@@ -42,7 +41,6 @@ GitHub 인증 전에 VS Code에서 프로젝트 폴더를 먼저 엽니다. 작�
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-select-project-folder.png" alt="Seed document project 폴더가 선택된 Windows 폴더 선택 창">
-    <figcaption>Git과 GitHub에 연결할 프로젝트 폴더를 선택합니다.</figcaption>
 
   </figure>
 </div>
@@ -53,7 +51,6 @@ GitHub 인증 전에 VS Code에서 프로젝트 폴더를 먼저 엽니다. 작�
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-trust-folder.png" alt="열린 폴더를 신뢰할지 묻는 VS Code trust prompt">
-    <figcaption>작업 공간 기능이 정상적으로 열리도록 폴더를 신뢰합니다.</figcaption>
 
   </figure>
 </div>
@@ -70,7 +67,6 @@ VS Code가 브라우저 인증 페이지를 엽니다. 이전 단계에서 준�
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-confirm-access.png" alt="VS Code 인증 과정에서 표시되는 GitHub 브라우저 확인 화면">
-    <figcaption>브라우저에서 GitHub 확인 단계를 마칩니다.</figcaption>
 
   </figure>
 </div>
@@ -85,7 +81,6 @@ VS Code로 돌아와 프로젝트 작업 공간이 열려 있는지 확인합니
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-workspace-ready.png" alt="프로젝트 폴더가 열린 상태의 VS Code workspace">
-    <figcaption>브라우저 인증 뒤에는 다시 열린 프로젝트 작업 공간으로 돌아옵니다.</figcaption>
 
   </figure>
 </div>

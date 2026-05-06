@@ -39,7 +39,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="Settings 탭이 강조된 GitHub repository 화면">
-    <figcaption>먼저 repository의 Settings 탭으로 이동합니다.</figcaption>
   </figure>
 </div>
 
@@ -49,7 +48,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository Access 페이지">
-    <figcaption>Access 페이지에서 현재 collaborator 상태를 확인할 수 있습니다.</figcaption>
   </figure>
 </div>
 
@@ -59,7 +57,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="GitHub collaborator 검색 창">
-    <figcaption>username이나 email로 collaborator를 검색합니다.</figcaption>
   </figure>
 </div>
 
@@ -69,7 +66,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="GitHub collaborator 추가 확인 창">
-    <figcaption>올바른 collaborator를 선택한 뒤 초대를 보냅니다.</figcaption>
   </figure>
 </div>
 
@@ -79,7 +75,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="pending invite가 보이는 GitHub access 페이지">
-    <figcaption>상대가 수락하기 전까지는 pending invitation 상태가 정상입니다.</figcaption>
   </figure>
 </div>
 

@@ -31,7 +31,6 @@ Use one GitHub account for research work. Avoid splitting the workflow across te
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.4-1.png" alt="GitHub homepage">
-    <figcaption>Start from the main GitHub homepage.</figcaption>
   </figure>
 </div>
 
@@ -41,7 +40,6 @@ Use one GitHub account for research work. Avoid splitting the workflow across te
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.4-2.png" alt="GitHub sign-up page">
-    <figcaption>Create the account from the standard sign-up flow if you do not already have one.</figcaption>
   </figure>
 </div>
 
