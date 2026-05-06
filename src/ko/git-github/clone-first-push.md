@@ -1,19 +1,19 @@
 ---
 layout: layouts/doc.njk
 title: 클론 후 첫 푸시
-description: 빈 저장소를 clone한 뒤 project 파일을 넣고 첫 commit을 push합니다.
+description: 빈 저장소를 clone한 뒤 프로젝트 파일을 넣고 첫 commit을 push합니다.
 lang: ko
 section: git-github
 order: 5
 permalink: /ko/git-github/clone-first-push/
 translationKey: git-clone-first-push
 eyebrow: 주제 3
-lead: 먼저 비어 있는 repository를 clone한 뒤, 그 clone 폴더 안으로 working project를 넣고 첫 push를 합니다.
+lead: 먼저 비어 있는 repository를 clone한 뒤, 그 clone 폴더 안으로 작업 중인 프로젝트를 넣고 첫 push를 합니다.
 toc:
   - id: 빈-저장소-clone
     label: 빈 저장소 clone
-  - id: clone-안으로-project-넣기
-    label: clone 안으로 project 넣기
+  - id: clone-안으로-프로젝트-넣기
+    label: clone 안으로 프로젝트 넣기
   - id: 첫-commit과-push
     label: 첫 commit과 push
   - id: 넘어가기-전
@@ -50,13 +50,13 @@ cd <repository-folder>
   </figure>
 </div>
 
-## clone 안으로 project 넣기
+## clone 안으로 프로젝트 넣기
 
 이미 작업 중인 파일들을 clone 폴더 안으로 옮깁니다. 전혀 다른 디렉터리에서 무리하게 push하려고 하기보다, 처음부터 remote와 local repository 이력을 같은 루트에서 맞추는 편이 더 안정적입니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>project 파일을 옮기기 전에 clone을 둘 위치를 먼저 정합니다.</p>
+    <p>프로젝트 파일을 옮기기 전에 clone을 둘 위치를 먼저 정합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="clone 위치를 고르는 폴더 선택 창">
@@ -66,7 +66,7 @@ cd <repository-folder>
 
 <div class="doc-step-pair">
   <div>
-    <p>clone이 열린 뒤에야 그 안으로 project 파일을 옮겨 넣어 remote와 local 이력을 같은 루트에서 맞춥니다.</p>
+    <p>clone이 열린 뒤에야 그 안으로 프로젝트 파일을 옮겨 넣어 remote와 local 이력을 같은 루트에서 맞춥니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/clone-open-repo.png" alt="clone된 저장소가 열린 VS Code 화면">
@@ -97,7 +97,7 @@ git push origin main
 
 <div class="doc-step-pair">
   <div>
-    <p>일반 push 흐름으로 첫 commit을 올립니다. VS Code의 commit-and-push 동작이 있다면 그대로 써도 됩니다.</p>
+    <p>일반 push 흐름으로 첫 commit을 올립니다. VS Code의 Commit & Push 동작이 있다면 그대로 써도 됩니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 보이는 VS Code 메뉴">
@@ -107,4 +107,4 @@ git push origin main
 
 ## 넘어가기 전
 
-GitHub 페이지에 project 파일이 보이고, push 뒤 local repository가 clean 상태라면 첫 원격 게시 흐름이 완료된 것입니다.
+GitHub 페이지에 프로젝트 파일이 보이고, push 뒤 local repository가 clean 상태라면 첫 게시 흐름이 완료된 것입니다.

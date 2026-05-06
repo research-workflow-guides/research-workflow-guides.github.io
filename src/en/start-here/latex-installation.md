@@ -40,7 +40,6 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-1.png" alt="MiKTeX homepage">
-
   </figure>
 </div>
 
@@ -50,7 +49,6 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-2.png" alt="MiKTeX download page">
-
   </figure>
 </div>
 
@@ -68,7 +66,6 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-3.png" alt="MiKTeX setup wizard completion screen">
-
   </figure>
 </div>
 
@@ -78,7 +75,6 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-4.png" alt="MiKTeX Console package search for latexmk">
-
   </figure>
 </div>
 
@@ -88,7 +84,6 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-5.png" alt="MiKTeX package installation progress window">
-
   </figure>
 </div>
 
@@ -150,7 +145,6 @@ On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, veri
 
 <figure class="image-frame">
   <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl download page">
-
 </figure>
 
 ## Package auto-installation
@@ -163,7 +157,6 @@ When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-7.png" alt="VS Code with a hidden MiKTeX package installation prompt preview">
-
   </figure>
 </div>
 
@@ -173,7 +166,6 @@ When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package installation dialog for a missing package">
-
   </figure>
 </div>
 

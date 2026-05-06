@@ -31,25 +31,23 @@ tags:
 
 ## 갑작스러운 변화 전에 공유
 
-파일 대량 이름 변경, 폴더 구조 재정리, 공유 섹션 대폭 수정처럼 큰 변화가 예정되어 있다면 먼저 팀에 알립니다. 협업의 대부분의 고통은 Git 자체보다 "예상하지 못한 변화"에서 옵니다.
+파일 대량 이름 변경, 폴더 구조 재정리, 공유 섹션 대폭 수정처럼 큰 변화가 예정되어 있다면 먼저 팀에 알립니다. 협업에서 겪는 고통의 대부분은 Git 자체보다 "예상하지 못한 변화"에서 옵니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>협업을 시작하기 전에 repository settings를 열어 접근을 관리합니다.</p>
+    <p>협업을 시작하기 전에 repository의 Settings 탭을 열어 access를 관리합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="Settings 탭이 강조된 GitHub 저장소 화면">
-
+    <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="Settings 탭이 강조된 GitHub repository 화면">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>access 페이지를 열어 현재 collaborator를 확인합니다.</p>
+    <p>Access 페이지를 열어 현재 collaborator를 확인합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access 페이지">
-
+    <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository Access 페이지">
   </figure>
 </div>
 
@@ -59,7 +57,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="GitHub collaborator 검색 창">
-
   </figure>
 </div>
 
@@ -69,7 +66,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="GitHub collaborator 추가 확인 창">
-
   </figure>
 </div>
 
@@ -79,7 +75,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="pending invite가 보이는 GitHub access 페이지">
-
   </figure>
 </div>
 

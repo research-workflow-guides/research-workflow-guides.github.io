@@ -1,7 +1,7 @@
 ---
 layout: layouts/doc.njk
 title: 폴더 등록
-description: VS Code에서 폴더를 열어 workspace로 등록합니다.
+description: VS Code에서 폴더를 열어 작업 공간으로 등록합니다.
 lang: ko
 section: writing-in-vs-code
 order: 1
@@ -14,8 +14,8 @@ toc:
     label: 폴더 열기
   - id: 자주-생기는-실수
     label: 자주 생기는 실수
-  - id: 첫-build-실행
-    label: 첫 build 실행
+  - id: 첫-빌드-실행
+    label: 첫 빌드 실행
   - id: 다른-폴더-열기
     label: 다른 폴더 열기
   - id: 넘어가기-전
@@ -47,7 +47,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>이렇게 연 폴더를 <strong>workspace</strong>라고 합니다. 위 그림에서는 Seed document 폴더가 workspace입니다. trust prompt가 나오면 본인 폴더일 때만 허용합니다.</p>
+    <p>이렇게 연 폴더를 <strong>workspace</strong>라고 합니다. 위 그림에서는 Seed document 폴더가 작업 공간입니다. trust prompt가 나오면 본인 폴더일 때만 허용합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-trust-folder.png" alt="열린 폴더를 신뢰할지 묻는 VS Code trust prompt">
@@ -71,10 +71,10 @@ Downloads 폴더, ZIP 임시 미리보기, 또는 실제 폴더보다 더 안쪽
 
 LaTeX Workshop이 main file을 찾지 못한다면, 확장 문제보다 잘못 열린 폴더가 원인인 경우가 많습니다.
 
-## 첫 build 실행
+## 첫 빌드 실행
 
-1. 터미널 명령 대신 LaTeX Workshop으로 build를 실행합니다.
-2. PDF preview를 열고 문서가 오류 없이 컴파일되는지 확인합니다.
+1. 터미널 명령 대신 LaTeX Workshop으로 빌드를 실행합니다.
+2. PDF 미리보기를 열고 문서가 오류 없이 컴파일되는지 확인합니다.
 3. template이 오류 없이 빌드되면 배포판, 에디터, 확장이 모두 함께 작동하는 것입니다.
 
 ## 다른 폴더 열기
@@ -91,4 +91,4 @@ LaTeX Workshop이 main file을 찾지 못한다면, 확장 문제보다 잘못 �
 
 ## 넘어가기 전
 
-Explorer에 폴더 전체가 보이고, main  파일이 그 안에 있으며, 첫 build가 오류 없이 완료되면 다음으로 넘어갑니다.
+Explorer에 폴더 전체가 보이고, main 파일이 그 안에 있으며, 첫 빌드가 오류 없이 완료되면 다음으로 넘어갑니다.

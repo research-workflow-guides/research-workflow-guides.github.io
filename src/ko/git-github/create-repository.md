@@ -1,7 +1,7 @@
 ---
 layout: layouts/doc.njk
 title: 저장소 만들기
-description: 로컬 project를 올리기 전에 첫 private repository를 만듭니다.
+description: 프로젝트 파일을 올리기 전에 첫 private repository를 만듭니다.
 lang: ko
 section: git-github
 order: 4
@@ -23,7 +23,7 @@ tags:
 ---
 ## 저장소 형태 정하기
 
-첫 workflow에서는 project 하나에 private repository 하나면 충분합니다. 첫 push가 끝나기 전에는 파일이나 자동화를 추가하지 않습니다.
+첫 workflow에서는 프로젝트 하나에 private repository 하나면 충분합니다. 첫 push가 끝나기 전에는 파일이나 자동화를 추가하지 않습니다.
 
 ## 비어 있는 private repository 만들기
 
@@ -31,7 +31,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>profile에서 repositories 목록을 먼저 엽니다.</p>
+    <p>profile에서 Repositories 목록을 먼저 엽니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="Repositories 탭이 강조된 GitHub profile 화면">
@@ -41,7 +41,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>그다음 repositories 페이지의 <strong>New</strong> 버튼을 눌러 저장소 생성 화면으로 들어갑니다.</p>
+    <p>그다음 Repositories 페이지의 <strong>New</strong> 버튼을 눌러 저장소 생성 화면으로 들어갑니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="New 버튼이 강조된 GitHub repositories 페이지">

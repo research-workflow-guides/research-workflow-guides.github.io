@@ -41,7 +41,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-1.png" alt="MiKTeX 홈페이지">
-
   </figure>
 </div>
 
@@ -51,7 +50,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-2.png" alt="MiKTeX 다운로드 페이지">
-
   </figure>
 </div>
 
@@ -69,7 +67,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-3.png" alt="MiKTeX setup wizard 완료 화면">
-
   </figure>
 </div>
 
@@ -79,7 +76,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-4.png" alt="MiKTeX Console에서 latexmk를 검색한 화면">
-
   </figure>
 </div>
 
@@ -89,7 +85,6 @@ tags:
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-5.png" alt="MiKTeX 패키지 설치 진행 창">
-
   </figure>
 </div>
 
@@ -151,7 +146,6 @@ Windows에서는 Perl이 없으면 Strawberry Perl을 설치합니다. macOS와 
 
 <figure class="image-frame">
   <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl 다운로드 페이지">
-
 </figure>
 
 ## 패키지 자동 설치
@@ -164,7 +158,6 @@ MiKTeX는 컴파일 중 필요한 패키지를 자동으로 설치합니다. bui
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-7.png" alt="editor 뒤에 숨어 있는 MiKTeX 패키지 설치 창 미리보기">
-
   </figure>
 </div>
 
@@ -174,7 +167,6 @@ MiKTeX는 컴파일 중 필요한 패키지를 자동으로 설치합니다. bui
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-8.png" alt="누락된 패키지에 대한 MiKTeX 설치 대화상자">
-
   </figure>
 </div>
 

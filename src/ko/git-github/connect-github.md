@@ -23,7 +23,7 @@ tags:
 ---
 ## VS Code에서 로그인
 
-GitHub 인증 전에 VS Code에서 project 폴더를 먼저 엽니다. workspace가 열린 상태에서 로그인하면 이후 작업을 이어가기 쉽습니다.
+GitHub 인증 전에 VS Code에서 프로젝트 폴더를 먼저 엽니다. 작업 공간이 열린 상태에서 로그인하면 이후 작업을 이어가기 쉽습니다.
 
 <div class="doc-step-pair">
   <div>
@@ -37,7 +37,7 @@ GitHub 인증 전에 VS Code에서 project 폴더를 먼저 엽니다. workspace
 
 <div class="doc-step-pair">
   <div>
-    <p>폴더 선택 창에서 version control로 관리할 manuscript 또는 project 폴더를 고릅니다.</p>
+    <p>폴더 선택 창에서 version control로 관리할 원고 또는 프로젝트 폴더를 고릅니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-select-project-folder.png" alt="Seed document project 폴더가 선택된 Windows 폴더 선택 창">
@@ -73,11 +73,11 @@ VS Code가 브라우저 인증 페이지를 엽니다. 이전 단계에서 준�
 
 ## 연결 확인
 
-VS Code로 돌아와 project workspace가 열려 있는지 확인합니다. Accounts 메뉴나 Git 관련 안내에서 올바른 GitHub 계정이 인식되는지 확인합니다.
+VS Code로 돌아와 프로젝트 작업 공간이 열려 있는지 확인합니다. Accounts 메뉴나 Git 관련 안내에서 올바른 GitHub 계정이 인식되는지 확인합니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>workspace가 열려 있고 작업을 이어갈 수 있는 상태여야 합니다. 빈 시작 화면으로 돌아왔다면 연결이 아직 끝나지 않은 것입니다.</p>
+    <p>작업 공간이 열려 있고 작업을 이어갈 수 있는 상태여야 합니다. 빈 시작 화면으로 돌아왔다면 연결이 아직 끝나지 않은 것입니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/connect-workspace-ready.png" alt="프로젝트 폴더가 열린 상태의 VS Code workspace">
@@ -87,4 +87,4 @@ VS Code로 돌아와 project workspace가 열려 있는지 확인합니다. Acco
 
 ## 넘어가기 전
 
-project 폴더가 VS Code에 열린 상태로 유지되고 GitHub 관련 안내가 처음부터 반복되지 않으면 저장소 생성 단계로 넘어갑니다.
+프로젝트 폴더가 VS Code에 열린 상태로 유지되고 GitHub 관련 안내가 처음부터 반복되지 않으면 저장소 생성 단계로 넘어갑니다.
