@@ -31,7 +31,7 @@ Use one GitHub account for research work. Avoid splitting the workflow across te
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.4-1.png" alt="GitHub homepage">
-
+    <figcaption>Start from the main GitHub homepage.</figcaption>
   </figure>
 </div>
 
@@ -41,13 +41,13 @@ Use one GitHub account for research work. Avoid splitting the workflow across te
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.4-2.png" alt="GitHub sign-up page">
-
+    <figcaption>Create the account from the standard sign-up flow if you do not already have one.</figcaption>
   </figure>
 </div>
 
 ## Turn on basic security
 
-At minimum, set a strong password and a recovery path you control. Enable two-factor authentication if available.
+At a minimum, set a strong password and a recovery path you control. Enable two-factor authentication if available.
 
 ## Prepare a usable profile
 

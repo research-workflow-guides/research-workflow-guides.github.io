@@ -1,14 +1,14 @@
 ---
 layout: layouts/doc.njk
 title: 프로젝트 템플릿
-description: starter project를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.
+description: 시작용 프로젝트를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.
 lang: ko
 section: initial-setup
 order: 3
 permalink: /ko/initial-setup/project-template/
 translationKey: initial-setup-project-template
 eyebrow: 3단계
-lead: 프로젝트 템플릿 다운로드 하기.
+lead: 시작용 프로젝트를 내려받아 VS Code에서 열고, 빌드를 한 번 실행해 전체 도구 체인이 동작하는지 확인합니다.
 toc:
   - id: template-받기
     label: 템플릿 다운로드하기
@@ -38,4 +38,4 @@ tags:
 
 ## 넘어가기 전
 
-archive가 정상적으로 내려받아졌고, 압축을 푼 폴더에 project 파일이 온전히 들어 있는지 확인합니다.
+압축 파일이 정상적으로 내려받아졌고, 압축을 푼 폴더에 프로젝트 파일이 온전히 들어 있는지 확인합니다.

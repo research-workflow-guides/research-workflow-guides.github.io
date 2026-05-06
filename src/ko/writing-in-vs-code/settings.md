@@ -8,12 +8,12 @@ order: 3
 permalink: /ko/writing-in-vs-code/settings/
 translationKey: writing-settings
 eyebrow: 3단계
-lead: 설정은 작고 오래 버티는 것부터 시작합니다. build, preview, cleanup이 예측 가능하게 돌아가면 충분합니다.
+lead: 설정은 작고 오래 버티는 것부터 시작합니다. 빌드, 미리보기, 자동 정리가 예측 가능하게 돌아가면 충분합니다.
 toc:
   - id: 명령-이름부터-익히기
     label: 명령 이름부터 익히기
-  - id: 반복-동작-shortcut-만들기
-    label: 반복 동작 shortcut 만들기
+  - id: 반복-동작-단축키-만들기
+    label: 반복 동작 단축키 만들기
   - id: 설정-파일-찾기
     label: 설정 파일 찾기
   - id: 유용한-기본-설정
@@ -29,12 +29,12 @@ tags:
 
 키를 바로 묶기 전에, 실제로 자주 쓰는 명령 이름부터 익힙니다.
 
-- LaTeX project build
+- LaTeX 프로젝트 빌드
 - PDF 보기
 - cursor 위치에서 SyncTeX
 - auxiliary file 정리
 
-어떤 명령이 shortcut 가치가 있는지는 Command Palette에서 가장 빨리 파악할 수 있습니다.
+어떤 명령이 단축키로 둘 가치가 있는지는 Command Palette에서 가장 빨리 파악할 수 있습니다.
 
 <div class="doc-step-pair">
   <div>
@@ -56,9 +56,9 @@ tags:
   </figure>
 </div>
 
-## 반복 동작 shortcut 만들기
+## 반복 동작 단축키 만들기
 
-일상 루프가 분명해지면 가장 자주 반복하는 동작만 shortcut으로 올립니다.
+일상 루프가 분명해지면 가장 자주 반복하는 동작만 단축키로 올립니다.
 
 두세 개의 좋은 binding이, 기억도 안 나는 긴 개인 key map보다 훨씬 낫습니다.
 
@@ -84,7 +84,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p><strong>SyncTeX from cursor</strong>처럼 긴 문서에서 자주 반복되는 동작은 shortcut 후보로 특히 적합합니다.</p>
+    <p><strong>SyncTeX from cursor</strong>처럼 긴 문서에서 자주 반복되는 동작은 단축키 후보로 특히 적합합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="LaTeX Workshop SyncTeX from cursor 명령이 보이는 VS Code Keyboard Shortcuts 화면">
@@ -136,7 +136,7 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>Settings 화면에서는 먼저 LaTeX Workshop으로 범위를 좁혀서, writing loop에 실제로 영향을 주는 항목만 봅니다.</p>
+    <p>Settings 화면에서는 먼저 LaTeX Workshop으로 범위를 좁혀서, 작성 루프에 실제로 영향을 주는 항목만 봅니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/search-latex-workshop-settings.png" alt="LaTeX Workshop 설정으로 필터링된 VS Code Settings 화면">
@@ -144,9 +144,9 @@ tags:
   </figure>
 </div>
 
-- 저장 후 build 동작 방식
-- PDF preview 표시 방식
-- cleanup 정책
+- 저장 후 빌드 동작 방식
+- PDF 미리보기 표시 방식
+- 자동 정리 정책
 - 기본 recipe 선택
 
 ## 예시 settings
@@ -164,4 +164,4 @@ tags:
 
 ## 넘어가기 전
 
-저장 후 동작이 의도와 맞고, PDF preview가 원하는 위치에서 열리며, cleanup이 필요한 파일을 지우지 않는다면 다음 문서로 넘어갑니다.
+저장 후 동작이 의도와 맞고, PDF 미리보기가 원하는 위치에서 열리며, 자동 정리가 필요한 파일을 지우지 않는다면 다음 문서로 넘어갑니다.

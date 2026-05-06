@@ -1,14 +1,14 @@
 ---
 layout: layouts/doc.njk
 title: 단축키
-description: 매일 반복하는 동작을 줄여주는 핵심 shortcut만 정리합니다.
+description: 매일 반복하는 동작을 줄여주는 핵심 단축키만 정리합니다.
 lang: ko
 section: writing-in-vs-code
 order: 2
 permalink: /ko/writing-in-vs-code/shortcuts/
 translationKey: writing-shortcuts
 eyebrow: 2단계
-lead: shortcut 체계를 크게 만들 필요는 없습니다. 매일 반복하는 명령만 빠르게 닿게 두면 충분합니다.
+lead: 단축키 체계를 크게 만들 필요는 없습니다. 매일 반복하는 명령만 빠르게 닿게 두면 충분합니다.
 toc:
   - id: command-palette
     label: Command Palette
@@ -112,4 +112,4 @@ VS Code <strong>snippets</strong>를 사용하면 짧은 prefix를 입력해 긴
 
 ## 넘어가기 전
 
-매일 쓰는 명령이 바로 닿고, shortcut 목록이 아직 외울 수 있을 만큼 짧다면 다음으로 넘어갑니다.
+매일 쓰는 명령이 바로 닿고, 단축키 목록이 아직 외울 수 있을 만큼 짧다면 다음으로 넘어갑니다.
