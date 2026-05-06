@@ -47,18 +47,5 @@ pageClass: page-section
         {% endfor %}
       </div>
     </section>
-
-    <section id="branch" class="doc-section">
-      <h2>Branch</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in grouped.branch %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">주제 {{ loop.index + 1 }}</p>
-            <h3>{{ doc.title }}</h3>
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
   </article>
 </main>

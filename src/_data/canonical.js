@@ -136,13 +136,6 @@ const sectionDefinitions = [
           en: "Collaboration",
           ko: "협업"
         }
-      },
-      {
-        key: "branch",
-        label: {
-          en: "Branch",
-          ko: "Branch"
-        }
       }
     ]
   }
@@ -592,9 +585,9 @@ const pages = [
     section: "git-github",
     slug: "connect-github",
     order: 3,
-    group: "first-github-workflow",
+    group: "preparation",
     title: "Connect GitHub",
-    description: "Connect the GitHub account inside VS Code before you create the first repository.",
+    description: "Set your Git name and email in the VS Code terminal before repository work begins.",
     translationKey: "git-connect-github",
     status: "core"
   },
@@ -605,9 +598,9 @@ const pages = [
     section: "git-github",
     slug: "connect-github",
     order: 3,
-    group: "first-github-workflow",
+    group: "preparation",
     title: "GitHub 연결",
-    description: "첫 저장소를 만들기 전에 VS Code 안에서 GitHub 계정을 연결합니다.",
+    description: "repository 작업을 시작하기 전에 VS Code 터미널에서 Git 이름과 이메일을 설정합니다.",
     translationKey: "git-connect-github",
     status: "core"
   },
@@ -645,7 +638,7 @@ const pages = [
     slug: "clone-first-push",
     order: 5,
     group: "first-github-workflow",
-    title: "Clone + First Push",
+    title: "Clone",
     description: "Clone the empty repository, add the project files, and publish the first commit.",
     translationKey: "git-clone-first-push",
     status: "core"
@@ -658,7 +651,7 @@ const pages = [
     slug: "clone-first-push",
     order: 5,
     group: "first-github-workflow",
-    title: "클론 후 첫 푸시",
+    title: "클론",
     description: "빈 저장소를 clone한 뒤 project 파일을 넣고 첫 commit을 push합니다.",
     translationKey: "git-clone-first-push",
     status: "core"
@@ -744,26 +737,26 @@ const pages = [
     status: "core"
   },
   {
-    url: "/en/collaboration/conflict/",
+    url: "/en/git-github/conflict/",
     pageType: "document",
     lang: "en",
-    section: "collaboration",
+    section: "git-github",
     slug: "conflict",
-    order: 2,
-    group: "branch",
+    order: 8,
+    group: "daily-workflow",
     title: "Conflict",
     description: "Resolve same-file text conflicts without panic and return to the normal loop.",
     translationKey: "git-conflict",
     status: "core"
   },
   {
-    url: "/ko/collaboration/conflict/",
+    url: "/ko/git-github/conflict/",
     pageType: "document",
     lang: "ko",
-    section: "collaboration",
+    section: "git-github",
     slug: "conflict",
-    order: 2,
-    group: "branch",
+    order: 8,
+    group: "daily-workflow",
     title: "충돌 해결",
     description: "같은 파일 충돌을 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.",
     translationKey: "git-conflict",

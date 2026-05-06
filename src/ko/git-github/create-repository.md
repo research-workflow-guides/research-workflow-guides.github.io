@@ -14,8 +14,6 @@ toc:
     label: 저장소 형태 정하기
   - id: 비어-있는-private-repository-만들기
     label: 비어 있는 private repository 만들기
-  - id: 처음은-단순하게
-    label: 처음은 단순하게
   - id: 넘어가기-전
     label: 넘어가기 전
 tags:
@@ -69,10 +67,6 @@ tags:
 
   </figure>
 </div>
-
-## 처음은 단순하게
-
-첫 저장소의 목적은 로컬 파일과 원격 이력이 어떻게 연결되는지 이해하는 것입니다. 복잡한 구조는 나중에 추가해도 충분합니다.
 
 ## 넘어가기 전
 

@@ -68,7 +68,7 @@
                             href="{{ item.url }}"
                             {% if itemCurrent %}aria-current="page"{% endif %}
                           >
-                            {{ item.title }}
+                            {{ title if itemCurrent else item.title }}
                           </a>
 
                           {% if itemCurrent and toc and toc.length %}
@@ -94,7 +94,7 @@
                       href="{{ item.url }}"
                       {% if itemCurrent %}aria-current="page"{% endif %}
                     >
-                      {{ item.title }}
+                      {{ title if itemCurrent else item.title }}
                     </a>
 
                     {% if itemCurrent and toc and toc.length %}

@@ -1,90 +1,116 @@
 ---
 layout: layouts/doc.njk
 title: Connect GitHub
-description: Connect the GitHub account inside VS Code before you create the first repository.
+description: Set the Git identity VS Code will use and know what to do if GitHub asks for browser sign-in.
 lang: en
 section: git-github
 order: 3
 permalink: /en/git-github/connect-github/
 translationKey: git-connect-github
-eyebrow: Topic 1
-lead: Sign in to GitHub from inside VS Code so repository actions can open in the same working environment.
+eyebrow: Step 3
+lead: Open the VS Code terminal, set your global Git name and email, and confirm the settings before creating a repository.
 toc:
-  - id: sign-in-from-vs-code
-    label: Sign in from VS Code
-  - id: complete-the-browser-flow
-    label: Complete the browser flow
-  - id: confirm-the-connection
-    label: Confirm the connection
+  - id: open-the-terminal
+    label: Open the terminal
+  - id: set-name-and-email
+    label: Set name and email
+  - id: verify-the-configuration
+    label: Verify the configuration
+  - id: sign-in-when-prompted
+    label: Sign in when prompted
   - id: before-proceeding
     label: Before proceeding
 tags:
   - doc
 ---
-## Sign in from VS Code
+## Open the terminal
 
-Before starting the GitHub sign-in, open the project folder in VS Code. Finishing the sign-in flow is simpler when the workspace is already open.
+Use the Command Palette to open a fresh terminal inside VS Code.
 
 <div class="doc-step-pair">
   <div>
-    <p>If VS Code shows an empty window, use <strong>Open Folder</strong> before starting the GitHub sign-in flow.</p>
+    <p>Open the Command Palette, search for <strong>terminal</strong>, and select <strong>Terminal: Create New Terminal</strong>. Open it with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/connect-open-folder-button.png" alt="VS Code empty window with the Open Folder button visible">
-
+    <img src="/assets/images/2.2.1-1%20(1).png" alt="VS Code Command Palette with Terminal: Create New Terminal selected">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>In the folder picker, choose the manuscript or project folder you are putting under version control.</p>
+    <p>After the command runs, confirm that the integrated terminal appears at the bottom of VS Code.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/connect-select-project-folder.png" alt="Windows folder picker with the Seed document project folder selected">
+    <img src="/assets/images/2.2.1-2%20(1).png" alt="VS Code integrated terminal opened">
+  </figure>
+</div>
 
+## Set name and email
+
+Set the name and email that Git will attach to commits made from this machine.
+
+```bash
+git config --global user.name "NAME"
+git config --global user.email "EMAIL"
+```
+
+<div class="doc-step-pair">
+  <div>
+    <p>Run the name command first. Replace <code>NAME</code> with the name you want to appear in your commit history.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/2.2.1-3%20(1).png" alt="VS Code terminal with git config global user.name command">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>When VS Code asks whether you trust the folder, accept it only if this is your own working folder so Git and extension features can run normally.</p>
+    <p>Then run the email command. Use the email address that belongs to the GitHub account you prepared.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/connect-trust-folder.png" alt="VS Code trust prompt asking whether to trust the authors of the opened folder">
-
+    <img src="/assets/images/2.2.1-4%20(1).png" alt="VS Code terminal with git config global user.email command">
   </figure>
 </div>
 
-Once the folder is open, use the Accounts menu or Source Control prompts in VS Code to start GitHub sign-in.
+## Verify the configuration
 
-## Complete the browser flow
+Check the saved configuration before moving on.
 
-VS Code opens a browser page for authorization. Finish that flow with the GitHub account you prepared in the previous step.
+```bash
+git config --list
+```
 
 <div class="doc-step-pair">
   <div>
-    <p>GitHub can show a confirmation screen like this before access is granted to VS Code. Complete the prompt with your normal GitHub verification method.</p>
+    <p>Run <code>git config --list</code> in the same terminal.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/connect-confirm-access.png" alt="GitHub browser confirmation screen shown during VS Code authorization">
-
+    <img src="/assets/images/2.2.1-5%20(1).png" alt="VS Code terminal with git config list command">
   </figure>
 </div>
 
-## Confirm the connection
+<div class="doc-step-pair">
+  <div>
+    <p>In the output, confirm that <code>user.name</code> and <code>user.email</code> match what you entered. You only need to do this setup once on the same machine.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/2.2.1-6%20(1).png" alt="VS Code terminal output showing user.name and user.email in git config list">
+  </figure>
+</div>
 
-Return to VS Code and confirm the project workspace is open. Check the Accounts menu or Git-related prompts to verify the correct GitHub account is recognized.
+## Sign in when prompted
+
+At some point VS Code may ask you to sign in to GitHub. If you see a prompt with <strong>Sign in with your browser</strong>, click it and complete the GitHub login in the browser.
 
 <div class="doc-step-pair">
   <div>
-    <p>The workspace should be open and ready to continue from — not reset to an empty start screen.</p>
+    <p>Use the browser sign-in option for the normal GitHub login flow.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/connect-workspace-ready.png" alt="VS Code open project workspace after the folder is loaded">
-
+    <img src="/assets/images/connecting-github.png" alt="VS Code Connect to GitHub dialog with Sign in with your browser highlighted">
   </figure>
 </div>
 
 ## Before proceeding
 
-If the project folder is open in VS Code and GitHub no longer prompts you to sign in, proceed to repository creation.
+If <code>git config --list</code> shows the correct name and email, and any GitHub sign-in prompt has been completed, continue to repository creation.

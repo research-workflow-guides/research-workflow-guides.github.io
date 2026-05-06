@@ -1096,6 +1096,10 @@ li.section--collaboration > .rail-link-section.is-current {
 
 }
 
+.image-frame img {
+  margin-inline: auto;
+}
+
 li > .image-frame {
   margin-bottom: 1.2rem;
 }

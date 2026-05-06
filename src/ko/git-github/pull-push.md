@@ -18,6 +18,8 @@ toc:
     label: 일상 sync 루프
   - id: commit-단위-유지
     label: commit 단위 유지
+  - id: 첫-commit과-push
+    label: 첫 commit과 push
   - id: 넘어가기-전
     label: 넘어가기 전
 tags:
@@ -86,6 +88,37 @@ git pull
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 강조된 VS Code 메뉴">
+
+  </figure>
+</div>
+
+## 첫 commit과 push
+
+```bash
+git status
+git add .
+git commit -m "Initial project import"
+git push origin main
+```
+
+기본 branch 이름이 `main`이 아니라면 GitHub가 만든 branch 이름을 사용합니다.
+
+<div class="doc-step-pair">
+  <div>
+    <p>파일이 clone 안에 들어갔다면 첫 commit message를 작성합니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="commit message가 입력된 VS Code Source Control 패널">
+
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>일반 push 흐름으로 첫 commit을 올립니다. VS Code의 Commit & Push 동작이 있다면 그대로 써도 됩니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 보이는 VS Code 메뉴">
 
   </figure>
 </div>
