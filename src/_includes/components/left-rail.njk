@@ -35,7 +35,7 @@
           </a>
 
           {% if sectionExpanded %}
-            {% if currentUrl == sectionUrl and toc and toc.length and section.key != "writing-in-vs-code" and section.key != "git-github" and section.key != "initial-setup" %}
+            {% if currentUrl == sectionUrl and toc and toc.length and section.key != "writing-in-vs-code" and section.key != "git-github" and section.key != "initial-setup" and section.key != "collaboration" %}
               <ul class="rail-subtree rail-subtree-headings">
                 {% for item in toc %}
                   <li><a class="rail-link rail-link-heading" href="#{{ item.id }}">{{ item.label }}</a></li>
@@ -43,7 +43,7 @@
               </ul>
             {% endif %}
 
-            {% if (section.key == "writing-in-vs-code" or section.key == "git-github" or section.key == "initial-setup") and groupedSectionPages and groupedSectionPages.length %}
+            {% if (section.key == "writing-in-vs-code" or section.key == "git-github" or section.key == "initial-setup" or section.key == "collaboration") and groupedSectionPages and groupedSectionPages.length %}
               <ul class="rail-subtree rail-subtree-groups">
                 {% for group in groupedSectionPages %}
                   {% if section.key == "initial-setup" %}

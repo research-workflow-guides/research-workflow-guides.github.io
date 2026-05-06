@@ -3,9 +3,9 @@ layout: layouts/doc.njk
 title: Overleaf
 description: If your collaborator uses Overleaf instead of VS Code, you can still work in VS Code by connecting Overleaf and GitHub.
 lang: en
-section: git-github
-order: 6
-permalink: /en/git-github/overleaf/
+section: collaboration
+order: 3
+permalink: /en/collaboration/overleaf/
 translationKey: git-overleaf
 eyebrow: Optional
 lead: Maintain the workspace as a GitHub repository and connect it to Overleaf. Your collaborator does not need to use GitHub directly. However, sync tasks such as pulling and pushing must be handled manually by you or your collaborator in Overleaf.

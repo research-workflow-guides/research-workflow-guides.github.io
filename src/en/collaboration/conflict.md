@@ -3,11 +3,11 @@ layout: layouts/doc.njk
 title: Conflict
 description: Resolve same-file text conflicts without panic and return to the normal loop.
 lang: en
-section: git-github
-order: 9
-permalink: /en/git-github/conflict/
+section: collaboration
+order: 2
+permalink: /en/collaboration/conflict/
 translationKey: git-conflict
-eyebrow: Topic 4
+eyebrow: Topic 2
 lead: A conflict is not a disaster. It simply means Git needs help choosing between overlapping edits.
 toc:
   - id: what-a-conflict-means

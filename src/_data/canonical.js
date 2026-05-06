@@ -80,8 +80,8 @@ const sectionDefinitions = [
       ko: "Git과 GitHub"
     },
     summary: {
-      en: "Connect repositories, publish work, and collaborate without drama.",
-      ko: "저장소를 연결하고 작업을 공개하며 협업 흐름을 안정적으로 운영합니다."
+      en: "Connect repositories, publish work, and keep local and remote history aligned.",
+      ko: "저장소를 연결하고 작업을 공개하며 로컬과 원격 이력을 안정적으로 맞춥니다."
     },
     kicker: {
       en: "Part 3",
@@ -108,12 +108,40 @@ const sectionDefinitions = [
           en: "Daily workflow",
           ko: "일상 작업"
         }
-      },
+      }
+    ]
+  },
+  {
+    key: "collaboration",
+    url: {
+      en: "/en/collaboration/",
+      ko: "/ko/collaboration/"
+    },
+    title: {
+      en: "Collaboration",
+      ko: "협업"
+    },
+    summary: {
+      en: "Move from solo repository habits into predictable small-team collaboration.",
+      ko: "혼자 쓰는 repository 흐름에서 예측 가능한 팀 협업으로 넘어갑니다."
+    },
+    kicker: {
+      en: "Part 4",
+      ko: "파트 4"
+    },
+    groups: [
       {
         key: "collaboration",
         label: {
           en: "Collaboration",
           ko: "협업"
+        }
+      },
+      {
+        key: "branch",
+        label: {
+          en: "Branch",
+          ko: "Branch"
         }
       }
     ]
@@ -377,12 +405,12 @@ const pages = [
     status: "optional"
   },
   {
-    url: "/en/git-github/overleaf/",
+    url: "/en/collaboration/overleaf/",
     pageType: "document",
     lang: "en",
-    section: "git-github",
+    section: "collaboration",
     slug: "overleaf",
-    order: 10,
+    order: 3,
     group: "collaboration",
     title: "Overleaf",
     description: "If your collaborator uses Overleaf instead of VS Code, you can still work in VS Code by connecting Overleaf and GitHub.",
@@ -391,12 +419,12 @@ const pages = [
     status: "optional"
   },
   {
-    url: "/ko/git-github/overleaf/",
+    url: "/ko/collaboration/overleaf/",
     pageType: "document",
     lang: "ko",
-    section: "git-github",
+    section: "collaboration",
     slug: "overleaf",
-    order: 10,
+    order: 3,
     group: "collaboration",
     title: "Overleaf",
     description: "협업자가 VS Code 대신 Overleaf를 사용한다면, Overleaf와 GitHub를 연결해 VS Code에서 작업할 수 있습니다.",
@@ -485,6 +513,24 @@ const pages = [
     section: "git-github",
     title: "Git과 GitHub",
     translationKey: "category-git-github",
+    status: "core"
+  },
+  {
+    url: "/en/collaboration/",
+    pageType: "category-home",
+    lang: "en",
+    section: "collaboration",
+    title: "GitHub",
+    translationKey: "category-collaboration",
+    status: "core"
+  },
+  {
+    url: "/ko/collaboration/",
+    pageType: "category-home",
+    lang: "ko",
+    section: "collaboration",
+    title: "GitHub",
+    translationKey: "category-collaboration",
     status: "core"
   },
   {
@@ -670,52 +716,54 @@ const pages = [
     status: "core"
   },
   {
-    url: "/en/git-github/collaboration/",
+    url: "/en/collaboration/collaboration/",
     pageType: "document",
     lang: "en",
-    section: "git-github",
+    section: "collaboration",
     slug: "collaboration",
-    order: 8,
+    order: 1,
     group: "collaboration",
-    title: "Collaboration",
+    title: "GitHub",
     description: "Use a small-team repository workflow that stays readable and predictable.",
     translationKey: "git-collaboration",
+    logo: "/assets/images/GitHub_Lockup_Black.png",
     status: "core"
   },
   {
-    url: "/ko/git-github/collaboration/",
+    url: "/ko/collaboration/collaboration/",
     pageType: "document",
     lang: "ko",
-    section: "git-github",
+    section: "collaboration",
     slug: "collaboration",
-    order: 8,
+    order: 1,
     group: "collaboration",
-    title: "협업",
+    title: "GitHub",
     description: "작은 팀이 함께 써도 흐름이 흐트러지지 않는 협업 방식을 정리합니다.",
     translationKey: "git-collaboration",
+    logo: "/assets/images/GitHub_Lockup_Black.png",
     status: "core"
   },
   {
-    url: "/en/git-github/conflict/",
+    url: "/en/collaboration/conflict/",
     pageType: "document",
     lang: "en",
-    section: "git-github",
+    section: "collaboration",
     slug: "conflict",
-    order: 9,
-    group: "collaboration",
+    order: 2,
+    group: "branch",
     title: "Conflict",
     description: "Resolve same-file text conflicts without panic and return to the normal loop.",
     translationKey: "git-conflict",
     status: "core"
   },
   {
-    url: "/ko/git-github/conflict/",
+    url: "/ko/collaboration/conflict/",
     pageType: "document",
     lang: "ko",
-    section: "git-github",
+    section: "collaboration",
     slug: "conflict",
-    order: 9,
-    group: "collaboration",
+    order: 2,
+    group: "branch",
     title: "충돌 해결",
     description: "같은 파일 충돌을 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.",
     translationKey: "git-conflict",
