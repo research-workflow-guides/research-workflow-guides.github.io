@@ -133,8 +133,8 @@ const sectionDefinitions = [
       {
         key: "collaboration",
         label: {
-          en: "Collaboration",
-          ko: "협업"
+          en: "Platforms",
+          ko: "플랫폼"
         }
       }
     ]
