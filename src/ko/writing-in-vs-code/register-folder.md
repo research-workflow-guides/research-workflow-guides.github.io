@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 1
 permalink: /ko/writing-in-vs-code/register-folder/
 translationKey: writing-folder-setup
-eyebrow: 주제 1
+eyebrow: 1단계
 lead: VS Code에서는 폴더 단위로 작업을 합니다. 프로젝트는 .tex 파일 하나가 아니라, 그림·코드 등 관련 파일을 포함한 하나의 폴더입니다.
 toc:
   - id: 폴더-열기

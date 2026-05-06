@@ -969,6 +969,29 @@ li.section--git-github > .rail-link-section.is-current {
   color: #f7f7f2;
 }
 
+.prose pre[data-code-label] {
+  position: relative;
+  padding-top: 2.35rem;
+}
+
+.prose pre[data-code-label]::before {
+  content: attr(data-code-label);
+  position: absolute;
+  top: 0.65rem;
+  left: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid rgba(247, 247, 242, 0.18);
+  border-radius: 999px;
+  background: rgba(247, 247, 242, 0.1);
+  color: rgba(247, 247, 242, 0.78);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.2;
+  text-transform: lowercase;
+}
+
 .site-footer {
   margin-top: 2rem;
   border-top: 1px solid rgba(31, 36, 49, 0.08);

@@ -7,18 +7,16 @@ section: writing-in-vs-code
 order: 3
 permalink: /en/writing-in-vs-code/settings/
 translationKey: writing-settings
-eyebrow: Topic 2
+eyebrow: Step 3
 lead: Keep the settings small and durable. You only need the defaults that make build, preview, and cleanup predictable.
 toc:
-  - id: start-with-command-palette-names
+  - id: start-with-command-names
     label: Start with command names
   - id: promote-repeat-actions
     label: Promote repeat actions
-  - id: keep-the-list-small
-    label: Keep the list small
-  - id: start-with-a-small-settings-file
-    label: Start with a small settings file
-  - id: useful-latex-workshop-defaults
+  - id: find-your-settings-files
+    label: Find your settings files
+  - id: useful-defaults
     label: Useful defaults
   - id: example-settings
     label: Example settings
@@ -94,15 +92,7 @@ Two or three good bindings are usually more valuable than a long keymap you cann
   </figure>
 </div>
 
-## Keep the list small
-
-If a shortcut is rarely used, leave it in the Command Palette. Reserve keyboard space for actions that save real time every writing session.
-
-## Start with a small settings file
-
-Avoid building a giant `settings.json` on day one. A smaller file is easier to understand, debug, and carry to the next project.
-
-Focus on build stability, auto-clean behavior, and predictable PDF preview.
+## Find your settings files
 
 <div class="doc-step-pair">
   <div>
@@ -116,7 +106,13 @@ Focus on build stability, auto-clean behavior, and predictable PDF preview.
 
 <div class="doc-step-pair">
   <div>
-    <p>If you prefer to inspect the settings files directly, first locate the VS Code <code>Code/User</code> folder for your operating system. The screenshot below shows the Windows location.</p>
+    <p>If you prefer to inspect the settings files directly, first locate the VS Code <code>Code/User</code> folder for your operating system. The screenshot below shows the Windows location. The path where it lives depends on your operating system:</p>
+
+    <ul>
+      <li>Windows: <code>%APPDATA%\Code\User</code></li>
+      <li>macOS: <code>$HOME/Library/Application Support/Code/User</code></li>
+      <li>Linux: <code>$HOME/.config/Code/User</code></li>
+    </ul>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/code-user-folder.png" alt="Windows File Explorer opened to the VS Code Code User folder">
@@ -126,7 +122,7 @@ Focus on build stability, auto-clean behavior, and predictable PDF preview.
 
 <div class="doc-step-pair">
   <div>
-    <p>Inside that folder, confirm where <code>settings.json</code> and <code>keybindings.json</code> live so you know what file you are editing.</p>
+    <p>Inside that folder, confirm where <code>settings.json</code> and <code>keybindings.json</code> live so you know what file you are editing. You can use the <code>settings.json</code> and <code>keybindings.json</code> files from the default document pack provided <a href="https://github.com/research-workflow-guides/setting">here</a>.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="Windows File Explorer showing settings and keybindings files inside the VS Code user folder">
@@ -152,9 +148,9 @@ The most practical early settings are:
 - choose a clear cleanup policy
 - avoid experimental recipes until the default recipe works
 
-Do not customize everything at once. Add one change only when you feel the daily loop is too slow or too fragile.
-
 ## Example settings
+
+Add these entries to your `settings.json` file, or merge them into the existing object if the file already has settings.
 
 ```json
 {
@@ -164,8 +160,6 @@ Do not customize everything at once. Add one change only when you feel the daily
   "latex-workshop.latex.recipe.default": "lastUsed"
 }
 ```
-
-This is not the only valid setup. It is simply a calm starting point.
 
 ## Before proceeding
 

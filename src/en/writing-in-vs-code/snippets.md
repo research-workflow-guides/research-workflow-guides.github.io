@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 4
 permalink: /en/writing-in-vs-code/snippets/
 translationKey: writing-snippets
-eyebrow: Topic 4
+eyebrow: Topic 1
 lead: Snippets are useful when they remove repetition without hiding the structure of the document.
 toc:
   - id: finding-the-setting-file
@@ -60,9 +60,6 @@ You can use the `latex.json` file from the default document pack [provided here]
 - **Linux**: `$HOME/.config/Code/User/snippets`
 
 <div class="doc-step-pair">
-  <div>
-    <p>If you need to inspect the files directly, the Windows example below shows the <code>%APPDATA%\\Code\\User\\snippets</code> folder where user snippets are stored.</p>
-  </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/snippets/snippets-folder-path.png" alt="Windows File Explorer showing the AppData Code User snippets path">
 

@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 2
 permalink: /en/writing-in-vs-code/shortcuts/
 translationKey: writing-shortcuts
-eyebrow: Topic 2
+eyebrow: Step 2
 lead: You do not need a large shortcut system. Keep only the commands you reach for every day.
 toc:
   - id: command-palette

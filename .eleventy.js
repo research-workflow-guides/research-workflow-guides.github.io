@@ -1,11 +1,77 @@
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
-module.exports = function (eleventyConfig) {
+function escapeHtml(value) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+module.exports = async function (eleventyConfig) {
+  const { createHighlighter } = await import("shiki");
+  const highlighter = await createHighlighter({
+    themes: ["github-dark"],
+    langs: ["bash", "json", "latex", "powershell", "text"],
+    langAlias: {
+      ps1: "powershell",
+      sh: "bash",
+      tex: "latex"
+    }
+  });
+
+  const codeLabels = {
+    bash: "bash",
+    json: "json",
+    latex: "tex",
+    powershell: "powershell",
+    ps1: "powershell",
+    sh: "bash",
+    tex: "tex"
+  };
+
+  const normalizeCodeLang = (lang) => {
+    const normalized = (lang || "").trim().toLowerCase();
+    if (normalized === "ps1") {
+      return "powershell";
+    }
+    if (normalized === "sh") {
+      return "bash";
+    }
+    if (normalized === "tex") {
+      return "latex";
+    }
+    return normalized;
+  };
+
   const markdown = markdownIt({
     html: true,
     linkify: true,
-    typographer: true
+    typographer: true,
+    highlight: (code, lang) => {
+      const originalLang = (lang || "").trim().toLowerCase();
+      const normalizedLang = normalizeCodeLang(originalLang);
+      const label = codeLabels[originalLang] || codeLabels[normalizedLang];
+
+      if (!normalizedLang) {
+        return `<pre><code>${escapeHtml(code)}</code></pre>`;
+      }
+
+      try {
+        const highlighted = highlighter.codeToHtml(code, {
+          lang: normalizedLang,
+          theme: "github-dark"
+        });
+
+        return label
+          ? highlighted.replace("<pre", `<pre data-code-label="${label}"`)
+          : highlighted;
+      } catch {
+        const labelAttr = label ? ` data-code-label="${label}"` : "";
+        return `<pre${labelAttr}><code class="language-${escapeHtml(originalLang)}">${escapeHtml(code)}</code></pre>`;
+      }
+    }
   }).use(markdownItAnchor, {
     permalink: false,
     slugify: (s) =>

@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 2
 permalink: /ko/writing-in-vs-code/shortcuts/
 translationKey: writing-shortcuts
-eyebrow: 주제 2
+eyebrow: 2단계
 lead: shortcut 체계를 크게 만들 필요는 없습니다. 매일 반복하는 명령만 빠르게 닿게 두면 충분합니다.
 toc:
   - id: command-palette
