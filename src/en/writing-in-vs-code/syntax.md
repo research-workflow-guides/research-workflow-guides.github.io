@@ -231,8 +231,8 @@ Use this LaTeX pattern for a two-case definition.
 \begin{equation*}
     f(x) =
     \begin{cases}
-        ...    &    \mbox{if } ...,    \\
-        ...    &    \mbox{if } ...
+        ...    &    \text{if } ...,    \\
+        ...    &    \text{if } ...
     \end{cases}
 \end{equation*}
 ```
@@ -246,8 +246,8 @@ Put this snippet entry in `latex.json`.
     "\\begin{equation*}",
     "    ${1:}",
     "    \\begin{cases}",
-    "        $2    &    \\mbox{${3:if} } $4,    \\\\",
-    "        $5    &    \\mbox{${6:if} } $7",
+    "        $2    &    \\text{${3:if} } $4,    \\\\",
+    "        $5    &    \\text{${6:if} } $7",
     "    \\end{cases}",
     "\\end{equation*}",
     "$0"
@@ -261,9 +261,9 @@ Use this LaTeX pattern for a three-case definition.
 \begin{equation*}
     f(x) =
     \begin{cases}
-        ...    &    \mbox{if } ...,    \\
-        ...    &    \mbox{if } ...,    \\
-        ...    &    \mbox{if } ...
+        ...    &    \text{if } ...,    \\
+        ...    &    \text{if } ...,    \\
+        ...    &    \text{if } ...
     \end{cases}
 \end{equation*}
 ```
@@ -277,9 +277,9 @@ Put this snippet entry in `latex.json`.
     "\\begin{equation*}",
     "    ${1:}",
     "    \\begin{cases}",
-    "        $2    &    \\mbox{${3:if} } $4,    \\\\",
-    "        $5    &    \\mbox{${6:if} } $7,    \\\\",
-    "        $8    &    \\mbox{${9:if} } $10",
+    "        $2    &    \\text{${3:if} } $4,    \\\\",
+    "        $5    &    \\text{${6:if} } $7,    \\\\",
+    "        $8    &    \\text{${9:if} } $10",
     "    \\end{cases}",
     "\\end{equation*}",
     "$0"
@@ -294,9 +294,9 @@ Keep the displayed formula short. If a condition is long, explain it before the 
 Use this LaTeX pattern for a figure.
 
 ```latex
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=1\textwidth]{figure-file}
+    \includegraphics[width=0.8\linewidth]{figure-file}
     \caption{Caption text}
     \label{fig:main-figure}
 \end{figure}
@@ -308,9 +308,9 @@ Put this snippet entry in `latex.json`.
 "Inserting a picture": {
   "prefix": "pct",
   "body": [
-    "\\begin{figure}[h]",
+    "\\begin{figure}[htbp]",
     "    \\centering",
-    "    \\includegraphics[width=${1:1}\\textwidth]{${2:write the file name}}",
+    "    \\includegraphics[width=${1:0.8}\\linewidth]{${2:write the file name}}",
     "    \\caption{$3}",
     "    \\label{fig:${4:main-figure}}",
     "\\end{figure}",

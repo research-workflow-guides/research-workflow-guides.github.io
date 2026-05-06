@@ -231,8 +231,8 @@ Label prefix는 의미가 보이게 유지합니다. `thm:`, `lem:`, `prop:`, `d
 \begin{equation*}
     f(x) =
     \begin{cases}
-        ...    &    \mbox{if } ...,    \\
-        ...    &    \mbox{if } ...
+        ...    &    \text{if } ...,    \\
+        ...    &    \text{if } ...
     \end{cases}
 \end{equation*}
 ```
@@ -246,8 +246,8 @@ Label prefix는 의미가 보이게 유지합니다. `thm:`, `lem:`, `prop:`, `d
     "\\begin{equation*}",
     "    ${1:}",
     "    \\begin{cases}",
-    "        $2    &    \\mbox{${3:if} } $4,    \\\\",
-    "        $5    &    \\mbox{${6:if} } $7",
+    "        $2    &    \\text{${3:if} } $4,    \\\\",
+    "        $5    &    \\text{${6:if} } $7",
     "    \\end{cases}",
     "\\end{equation*}",
     "$0"
@@ -261,9 +261,9 @@ Label prefix는 의미가 보이게 유지합니다. `thm:`, `lem:`, `prop:`, `d
 \begin{equation*}
     f(x) =
     \begin{cases}
-        ...    &    \mbox{if } ...,    \\
-        ...    &    \mbox{if } ...,    \\
-        ...    &    \mbox{if } ...
+        ...    &    \text{if } ...,    \\
+        ...    &    \text{if } ...,    \\
+        ...    &    \text{if } ...
     \end{cases}
 \end{equation*}
 ```
@@ -277,9 +277,9 @@ Label prefix는 의미가 보이게 유지합니다. `thm:`, `lem:`, `prop:`, `d
     "\\begin{equation*}",
     "    ${1:}",
     "    \\begin{cases}",
-    "        $2    &    \\mbox{${3:if} } $4,    \\\\",
-    "        $5    &    \\mbox{${6:if} } $7,    \\\\",
-    "        $8    &    \\mbox{${9:if} } $10",
+    "        $2    &    \\text{${3:if} } $4,    \\\\",
+    "        $5    &    \\text{${6:if} } $7,    \\\\",
+    "        $8    &    \\text{${9:if} } $10",
     "    \\end{cases}",
     "\\end{equation*}",
     "$0"
@@ -294,9 +294,9 @@ Displayed formula는 짧게 유지합니다. 조건이 길다면 display 앞에�
 Figure에는 다음 LaTeX 패턴을 씁니다.
 
 ```latex
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=1\textwidth]{figure-file}
+    \includegraphics[width=0.8\linewidth]{figure-file}
     \caption{Caption text}
     \label{fig:main-figure}
 \end{figure}
@@ -308,9 +308,9 @@ Figure에는 다음 LaTeX 패턴을 씁니다.
 "Inserting a picture": {
   "prefix": "pct",
   "body": [
-    "\\begin{figure}[h]",
+    "\\begin{figure}[htbp]",
     "    \\centering",
-    "    \\includegraphics[width=${1:1}\\textwidth]{${2:write the file name}}",
+    "    \\includegraphics[width=${1:0.8}\\linewidth]{${2:write the file name}}",
     "    \\caption{$3}",
     "    \\label{fig:${4:main-figure}}",
     "\\end{figure}",
