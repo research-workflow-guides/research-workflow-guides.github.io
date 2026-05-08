@@ -4,10 +4,10 @@ title: Conflict
 description: Resolve same-file text conflicts without panic and return to the normal loop.
 lang: en
 section: git-github
-order: 9
+order: 8
 permalink: /en/git-github/conflict/
 translationKey: git-conflict
-eyebrow: Topic 4
+eyebrow: Topic 3
 lead: A conflict is not a disaster. It simply means Git needs help choosing between overlapping edits.
 toc:
   - id: what-a-conflict-means

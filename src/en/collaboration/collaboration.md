@@ -1,13 +1,13 @@
 ---
 layout: layouts/doc.njk
-title: Collaboration
+title: GitHub
 description: Use a small-team repository workflow that stays readable and predictable.
 lang: en
-section: git-github
-order: 8
-permalink: /en/git-github/collaboration/
+section: collaboration
+order: 1
+permalink: /en/collaboration/collaboration/
 translationKey: git-collaboration
-eyebrow: Topic 3
+eyebrow: Topic 1
 lead: Small-team collaboration works best when the repository rhythm is boring, explicit, and easy to recover from.
 toc:
   - id: agree-on-a-shared-rhythm

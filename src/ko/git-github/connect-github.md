@@ -1,90 +1,116 @@
 ---
 layout: layouts/doc.njk
 title: GitHub 연결
-description: 첫 저장소를 만들기 전에 VS Code 안에서 GitHub 계정을 연결합니다.
+description: VS Code에서 사용할 Git identity를 설정하고 GitHub 브라우저 로그인이 나오면 처리합니다.
 lang: ko
 section: git-github
 order: 3
 permalink: /ko/git-github/connect-github/
 translationKey: git-connect-github
-eyebrow: 주제 1
-lead: VS Code 안에서 GitHub에 로그인해 repository 작업이 같은 작업 환경 안에서 이어지게 만듭니다.
+eyebrow: 3단계
+lead: VS Code 터미널을 열고 전역 Git 이름과 이메일을 설정한 뒤, repository를 만들기 전에 저장된 값을 확인합니다.
 toc:
-  - id: vs-code에서-로그인
-    label: VS Code에서 로그인
-  - id: 브라우저-인증-완료
-    label: 브라우저 인증 완료
-  - id: 연결-확인
-    label: 연결 확인
-  - id: 넘어가기-전
+  - id: terminal-open
+    label: 터미널 열기
+  - id: name-email
+    label: 이름과 이메일 설정
+  - id: config-check
+    label: 설정 확인
+  - id: browser-sign-in
+    label: 브라우저 로그인
+  - id: before-proceeding
     label: 넘어가기 전
 tags:
   - doc
 ---
-## VS Code에서 로그인
+<h2 id="terminal-open">터미널 열기</h2>
 
-GitHub 인증 전에 VS Code에서 프로젝트 폴더를 먼저 엽니다. 작업 공간이 열린 상태에서 로그인하면 이후 작업을 이어가기 쉽습니다.
+VS Code 안에서 새 터미널을 엽니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>VS Code가 빈 창이라면 GitHub 로그인보다 먼저 <strong>Open Folder</strong>로 작업 폴더를 엽니다.</p>
+    <p>Command Palette를 열고 <strong>terminal</strong>을 검색한 뒤 <strong>Terminal: Create New Terminal</strong>을 선택합니다. 단축키는 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)입니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/connect-open-folder-button.png" alt="Open Folder 버튼이 보이는 빈 VS Code 창">
-
+    <img src="/assets/images/2.2.1-1%20(1).png" alt="Terminal: Create New Terminal이 선택된 VS Code Command Palette">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>폴더 선택 창에서 version control로 관리할 원고 또는 프로젝트 폴더를 고릅니다.</p>
+    <p>명령을 실행하면 VS Code 아래쪽에 통합 터미널이 열립니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/connect-select-project-folder.png" alt="Seed document project 폴더가 선택된 Windows 폴더 선택 창">
+    <img src="/assets/images/2.2.1-2%20(1).png" alt="VS Code 통합 터미널이 열린 화면">
+  </figure>
+</div>
 
+<h2 id="name-email">이름과 이메일 설정</h2>
+
+이 컴퓨터에서 만드는 commit에 붙을 이름과 이메일을 설정합니다.
+
+```bash
+git config --global user.name "NAME"
+git config --global user.email "EMAIL"
+```
+
+<div class="doc-step-pair">
+  <div>
+    <p>먼저 이름 명령을 실행합니다. <code>NAME</code>에는 commit 기록에 표시할 이름을 넣습니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/2.2.1-3%20(1).png" alt="git config global user.name 명령이 입력된 VS Code 터미널">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>VS Code가 폴더를 신뢰할지 묻는다면, 본인 작업 폴더가 맞을 때만 신뢰를 허용해 Git과 확장 기능이 정상적으로 동작하게 합니다.</p>
+    <p>그 다음 이메일 명령을 실행합니다. 앞에서 준비한 GitHub 계정에 연결된 이메일을 사용합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/connect-trust-folder.png" alt="열린 폴더를 신뢰할지 묻는 VS Code trust prompt">
-
+    <img src="/assets/images/2.2.1-4%20(1).png" alt="git config global user.email 명령이 입력된 VS Code 터미널">
   </figure>
 </div>
 
-폴더가 열린 뒤에는 VS Code의 Accounts 메뉴나 Source Control 관련 안내에서 GitHub 로그인 흐름을 시작합니다.
+<h2 id="config-check">설정 확인</h2>
 
-## 브라우저 인증 완료
+다음 단계로 넘어가기 전에 저장된 설정을 확인합니다.
 
-VS Code가 브라우저 인증 페이지를 엽니다. 이전 단계에서 준비한 GitHub 계정으로 인증을 마칩니다.
+```bash
+git config --list
+```
 
 <div class="doc-step-pair">
   <div>
-    <p>GitHub는 VS Code 접근을 허용하기 전에 이런 확인 화면을 보여줄 수 있습니다. 평소 쓰는 GitHub 인증 방식으로 이 단계를 마칩니다.</p>
+    <p>같은 터미널에서 <code>git config --list</code>를 실행합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/connect-confirm-access.png" alt="VS Code 인증 과정에서 표시되는 GitHub 브라우저 확인 화면">
-
+    <img src="/assets/images/2.2.1-5%20(1).png" alt="git config list 명령이 입력된 VS Code 터미널">
   </figure>
 </div>
-
-## 연결 확인
-
-VS Code로 돌아와 프로젝트 작업 공간이 열려 있는지 확인합니다. Accounts 메뉴나 Git 관련 안내에서 올바른 GitHub 계정이 인식되는지 확인합니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>작업 공간이 열려 있고 작업을 이어갈 수 있는 상태여야 합니다. 빈 시작 화면으로 돌아왔다면 연결이 아직 끝나지 않은 것입니다.</p>
+    <p>출력에서 <code>user.name</code>과 <code>user.email</code>이 방금 입력한 값과 맞는지 확인합니다. 같은 컴퓨터에서는 이 설정을 한 번만 해두면 됩니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/connect-workspace-ready.png" alt="프로젝트 폴더가 열린 상태의 VS Code workspace">
-
+    <img src="/assets/images/2.2.1-6%20(1).png" alt="git config list 출력에서 user.name과 user.email이 보이는 VS Code 터미널">
   </figure>
 </div>
 
-## 넘어가기 전
+<h2 id="browser-sign-in">브라우저 로그인</h2>
 
-프로젝트 폴더가 VS Code에 열린 상태로 유지되고 GitHub 관련 안내가 처음부터 반복되지 않으면 저장소 생성 단계로 넘어갑니다.
+작업 중 VS Code가 GitHub 로그인을 요구할 수 있습니다. <strong>Sign in with your browser</strong>가 보이면 클릭해서 브라우저에서 GitHub 로그인을 완료합니다.
+
+<div class="doc-step-pair">
+  <div>
+    <p>일반적인 GitHub 로그인 흐름에서는 브라우저 로그인 옵션을 사용합니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/connecting-github.png" alt="Sign in with your browser가 강조된 VS Code Connect to GitHub 창">
+  </figure>
+</div>
+
+<h2 id="before-proceeding">넘어가기 전</h2>
+
+<code>git config --list</code>에서 이름과 이메일이 올바르게 보이고, GitHub 로그인 안내가 있다면 완료한 뒤 repository 생성 단계로 넘어갑니다.

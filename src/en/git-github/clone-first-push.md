@@ -1,58 +1,65 @@
 ---
 layout: layouts/doc.njk
-title: Clone + First Push
-description: Clone the empty repository, add the project files, and publish the first commit.
+title: Clone
+description: Choose a clone workflow and open the copied repository in VS Code.
 lang: en
 section: git-github
 order: 5
 permalink: /en/git-github/clone-first-push/
 translationKey: git-clone-first-push
 eyebrow: Topic 3
-lead: Clone the empty repository first, then bring the working project into that clone and make the initial push from there.
+lead: Choose the clone workflow that matches where you are starting from. There are three ways to clone repositories in GitHub.
 toc:
-  - id: clone-the-empty-repository
-    label: Clone the empty repository
-  - id: copy-the-project-into-the-clone
-    label: Copy the project into the clone
-  - id: make-the-first-commit-and-push
-    label: First commit and push
+  - id: first-way
+    label: First way
+  - id: second-way
+    label: Second way
+  - id: third-way
+    label: Third way
+  - id: fork
+    label: Fork
   - id: before-proceeding
     label: Before proceeding
 tags:
   - doc
 ---
-## Clone the empty repository
-
-Start by cloning the repository GitHub created for you.
-
-```bash
-git clone <repository-url>
-cd <repository-folder>
-```
+## First way
 
 <div class="doc-step-pair">
   <div>
-    <p>Copy the repository URL from GitHub before opening any local workflow.</p>
+    <p>Open the Source Control view, choose <strong>Clone Repository</strong>, and select <strong>Clone from GitHub</strong>.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/clone-copy-url.png" alt="GitHub repository page with the clone URL copied">
-
+    <img src="/assets/images/clone-2.png" alt="VS Code welcome screen for starting a clone workflow">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>You can also start the clone flow directly from VS Code instead of pasting the command in the terminal.</p>
+    <p>Search for the repository you want to clone.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/clone-command.png" alt="VS Code source control panel with Clone Repository">
-
+    <img src="/assets/images/clone-3.png" alt="VS Code repository picker with GitHub repositories listed">
   </figure>
 </div>
 
-## Copy the project into the clone
+<div class="doc-step-pair">
+  <div>
+    <p>If VS Code asks for a repository source, choose <strong>Clone from GitHub</strong>.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/clone-4.png" alt="VS Code clone source picker with Clone from GitHub selected">
+  </figure>
+</div>
 
-Move the working files into the cloned folder instead of trying to push from an unrelated directory. This keeps the remote and local repository history aligned from the beginning.
+<div class="doc-step-pair">
+  <div>
+    <p>Select the repository from the GitHub search results.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/clone-5.png" alt="VS Code repository picker with a GitHub repository selected">
+  </figure>
+</div>
 
 <div class="doc-step-pair">
   <div>
@@ -74,37 +81,54 @@ Move the working files into the cloned folder instead of trying to push from an 
   </figure>
 </div>
 
-## First commit and push
+<div class="doc-step-pair">
+  <div>
+    <p>Once the folder cloning is completed successfully, you will be able to see the following screen.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/clone-7.png" alt="VS Code showing the cloned repository open in the Explorer">
+  </figure>
+</div>
+
+## Second way
+
+<div class="doc-step-pair">
+  <div>
+    <p>Copy the repository URL from GitHub.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/clone-1.png" alt="GitHub repository page with the repository URL copy button highlighted">
+
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>You can also paste the repository URL copied from GitHub directly into VS Code.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/clone-6.png" alt="VS Code clone input for pasting a GitHub repository URL">
+
+  </figure>
+</div>
+
+## Third way
+
+Enter these commands in the terminal.
 
 ```bash
-git status
-git add .
-git commit -m "Initial project import"
-git push origin main
+git clone <repository-url>
+cd <repository-folder>
 ```
 
-If the default branch is not `main`, use the branch name GitHub created for the repository.
+## Fork
 
-<div class="doc-step-pair">
-  <div>
-    <p>With the files inside the clone, write a clear initial commit message.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
+If you want to copy someone else's public repository, use <strong>Fork</strong>.
 
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>Publish the first commit with a normal push — or use the combined commit-and-push if your interface offers it.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu showing Commit & Push">
-
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/Fork.png" alt="GitHub repository page with the Fork button highlighted">
+</figure>
 
 ## Before proceeding
 
-If GitHub now shows the project files and your local repository is clean after the push, the first remote publication worked.
+If the cloned repository is open in VS Code and the project files are inside it, continue to the first commit and push workflow.

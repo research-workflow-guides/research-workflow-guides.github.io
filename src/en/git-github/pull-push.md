@@ -18,6 +18,8 @@ toc:
     label: Use a daily sync loop
   - id: keep-commits-coherent
     label: Keep commits coherent
+  - id: first-commit-and-push
+    label: First commit and push
   - id: before-proceeding
     label: Before proceeding
 tags:
@@ -86,6 +88,37 @@ A good commit collects one understandable change. It does not need to be huge. I
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu with Commit & Push highlighted">
+
+  </figure>
+</div>
+
+## First commit and push
+
+```bash
+git status
+git add .
+git commit -m "Initial project import"
+git push origin main
+```
+
+If the default branch is not `main`, use the branch name GitHub created for the repository.
+
+<div class="doc-step-pair">
+  <div>
+    <p>With the files inside the clone, write a clear initial commit message.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
+
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>Publish the first commit with a normal push — or use the combined commit-and-push if your interface offers it.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu showing Commit & Push">
 
   </figure>
 </div>

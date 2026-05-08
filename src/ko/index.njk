@@ -54,7 +54,7 @@ pageClass: page-landing
       <div class="section-heading">
         <h2>안내 경로</h2>
       </div>
-      <div class="feature-grid">
+      <div class="feature-grid route-map-grid">
         {% for section in navigation.sections %}
           <a class="feature-card panel card--{{ section.key }}" href="{{ section.url.ko }}">
             <div class="card-logo-row">
@@ -64,8 +64,12 @@ pageClass: page-landing
               {% elif section.key == "writing-in-vs-code" %}
                 <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
               {% elif section.key == "git-github" %}
-                <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
+                <img class="card-logo" src="/assets/images/git-logo.png" alt="Git">
                 <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
+              {% elif section.key == "collaboration" %}
+                <img class="card-logo" src="/assets/images/git-logo.png" alt="Git">
+                <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
+                <img class="card-logo" src="/assets/images/overleaf-o-logo-primary.jpg" alt="Overleaf">
               {% endif %}
             </div>
             <p class="card-kicker">{{ section.kicker.ko }}</p>

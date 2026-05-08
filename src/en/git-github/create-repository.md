@@ -14,8 +14,6 @@ toc:
     label: Choose the repository shape
   - id: create-an-empty-private-repository
     label: Create an empty private repository
-  - id: keep-the-first-repository-simple
-    label: Keep it simple
   - id: before-proceeding
     label: Before proceeding
 tags:
@@ -69,10 +67,6 @@ Create a new private repository with a clear project name. Skip the README, `.gi
 
   </figure>
 </div>
-
-## Keep it simple
-
-The point of the first repository is to understand the connection between local files and remote history. Complexity can come later.
 
 ## Before proceeding
 

@@ -80,8 +80,8 @@ const sectionDefinitions = [
       ko: "Git과 GitHub"
     },
     summary: {
-      en: "Connect repositories, publish work, and collaborate without drama.",
-      ko: "저장소를 연결하고 작업을 공개하며 협업 흐름을 안정적으로 운영합니다."
+      en: "Connect repositories, publish work, and keep local and remote history aligned.",
+      ko: "저장소를 연결하고 작업을 공개하며 로컬과 원격 이력을 안정적으로 맞춥니다."
     },
     kicker: {
       en: "Part 3",
@@ -108,12 +108,33 @@ const sectionDefinitions = [
           en: "Daily workflow",
           ko: "일상 작업"
         }
-      },
+      }
+    ]
+  },
+  {
+    key: "collaboration",
+    url: {
+      en: "/en/collaboration/",
+      ko: "/ko/collaboration/"
+    },
+    title: {
+      en: "Collaboration",
+      ko: "협업"
+    },
+    summary: {
+      en: "Move from solo repository habits into predictable small-team collaboration.",
+      ko: "혼자 쓰는 repository 흐름에서 예측 가능한 팀 협업으로 넘어갑니다."
+    },
+    kicker: {
+      en: "Part 4",
+      ko: "파트 4"
+    },
+    groups: [
       {
         key: "collaboration",
         label: {
-          en: "Collaboration",
-          ko: "협업"
+          en: "Platforms",
+          ko: "플랫폼"
         }
       }
     ]
@@ -377,12 +398,12 @@ const pages = [
     status: "optional"
   },
   {
-    url: "/en/git-github/overleaf/",
+    url: "/en/collaboration/overleaf/",
     pageType: "document",
     lang: "en",
-    section: "git-github",
+    section: "collaboration",
     slug: "overleaf",
-    order: 10,
+    order: 3,
     group: "collaboration",
     title: "Overleaf",
     description: "If your collaborator uses Overleaf instead of VS Code, you can still work in VS Code by connecting Overleaf and GitHub.",
@@ -391,12 +412,12 @@ const pages = [
     status: "optional"
   },
   {
-    url: "/ko/git-github/overleaf/",
+    url: "/ko/collaboration/overleaf/",
     pageType: "document",
     lang: "ko",
-    section: "git-github",
+    section: "collaboration",
     slug: "overleaf",
-    order: 10,
+    order: 3,
     group: "collaboration",
     title: "Overleaf",
     description: "협업자가 VS Code 대신 Overleaf를 사용한다면, Overleaf와 GitHub를 연결해 VS Code에서 작업할 수 있습니다.",
@@ -488,6 +509,24 @@ const pages = [
     status: "core"
   },
   {
+    url: "/en/collaboration/",
+    pageType: "category-home",
+    lang: "en",
+    section: "collaboration",
+    title: "GitHub",
+    translationKey: "category-collaboration",
+    status: "core"
+  },
+  {
+    url: "/ko/collaboration/",
+    pageType: "category-home",
+    lang: "ko",
+    section: "collaboration",
+    title: "GitHub",
+    translationKey: "category-collaboration",
+    status: "core"
+  },
+  {
     url: "/en/git-github/git-installation/",
     pageType: "document",
     lang: "en",
@@ -546,9 +585,9 @@ const pages = [
     section: "git-github",
     slug: "connect-github",
     order: 3,
-    group: "first-github-workflow",
+    group: "preparation",
     title: "Connect GitHub",
-    description: "Connect the GitHub account inside VS Code before you create the first repository.",
+    description: "Set your Git name and email in the VS Code terminal before repository work begins.",
     translationKey: "git-connect-github",
     status: "core"
   },
@@ -559,9 +598,9 @@ const pages = [
     section: "git-github",
     slug: "connect-github",
     order: 3,
-    group: "first-github-workflow",
+    group: "preparation",
     title: "GitHub 연결",
-    description: "첫 저장소를 만들기 전에 VS Code 안에서 GitHub 계정을 연결합니다.",
+    description: "repository 작업을 시작하기 전에 VS Code 터미널에서 Git 이름과 이메일을 설정합니다.",
     translationKey: "git-connect-github",
     status: "core"
   },
@@ -599,7 +638,7 @@ const pages = [
     slug: "clone-first-push",
     order: 5,
     group: "first-github-workflow",
-    title: "Clone + First Push",
+    title: "Clone",
     description: "Clone the empty repository, add the project files, and publish the first commit.",
     translationKey: "git-clone-first-push",
     status: "core"
@@ -612,7 +651,7 @@ const pages = [
     slug: "clone-first-push",
     order: 5,
     group: "first-github-workflow",
-    title: "클론 후 첫 푸시",
+    title: "클론",
     description: "빈 저장소를 clone한 뒤 project 파일을 넣고 첫 commit을 push합니다.",
     translationKey: "git-clone-first-push",
     status: "core"
@@ -670,29 +709,31 @@ const pages = [
     status: "core"
   },
   {
-    url: "/en/git-github/collaboration/",
+    url: "/en/collaboration/collaboration/",
     pageType: "document",
     lang: "en",
-    section: "git-github",
+    section: "collaboration",
     slug: "collaboration",
-    order: 8,
+    order: 1,
     group: "collaboration",
-    title: "Collaboration",
+    title: "GitHub",
     description: "Use a small-team repository workflow that stays readable and predictable.",
     translationKey: "git-collaboration",
+    logo: "/assets/images/GitHub_Lockup_Black.png",
     status: "core"
   },
   {
-    url: "/ko/git-github/collaboration/",
+    url: "/ko/collaboration/collaboration/",
     pageType: "document",
     lang: "ko",
-    section: "git-github",
+    section: "collaboration",
     slug: "collaboration",
-    order: 8,
+    order: 1,
     group: "collaboration",
-    title: "협업",
+    title: "GitHub",
     description: "작은 팀이 함께 써도 흐름이 흐트러지지 않는 협업 방식을 정리합니다.",
     translationKey: "git-collaboration",
+    logo: "/assets/images/GitHub_Lockup_Black.png",
     status: "core"
   },
   {
@@ -701,8 +742,8 @@ const pages = [
     lang: "en",
     section: "git-github",
     slug: "conflict",
-    order: 9,
-    group: "collaboration",
+    order: 8,
+    group: "daily-workflow",
     title: "Conflict",
     description: "Resolve same-file text conflicts without panic and return to the normal loop.",
     translationKey: "git-conflict",
@@ -714,8 +755,8 @@ const pages = [
     lang: "ko",
     section: "git-github",
     slug: "conflict",
-    order: 9,
-    group: "collaboration",
+    order: 8,
+    group: "daily-workflow",
     title: "충돌 해결",
     description: "같은 파일 충돌을 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.",
     translationKey: "git-conflict",
