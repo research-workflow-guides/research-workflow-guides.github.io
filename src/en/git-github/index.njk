@@ -50,10 +50,10 @@ pageClass: page-section
 
     <section id="daily-workflow" class="doc-section">
       <h2>Daily workflow</h2>
-      <div class="feature-grid feature-grid-compact">
+      <div class="feature-grid feature-grid-compact feature-grid-equal-cards">
         {% for doc in grouped["daily-workflow"] %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Topic {{ loop.index }}</p>
+            <p class="card-kicker">{% if doc.status == "optional" %}Optional{% else %}Topic {{ loop.index }}{% endif %}</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>

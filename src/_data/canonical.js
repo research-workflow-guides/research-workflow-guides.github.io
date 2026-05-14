@@ -691,7 +691,7 @@ const pages = [
     order: 7,
     group: "daily-workflow",
     title: "Version Control",
-    description: "Understand tracked, staged, committed, and ignored states well enough to stay calm.",
+    description: "Understand tracked, modified, staged, and committed states well enough to stay calm.",
     translationKey: "git-version-control",
     status: "core"
   },
@@ -748,6 +748,32 @@ const pages = [
     description: "Resolve same-file text conflicts without panic and return to the normal loop.",
     translationKey: "git-conflict",
     status: "core"
+  },
+  {
+    url: "/en/git-github/gitignore/",
+    pageType: "document",
+    lang: "en",
+    section: "git-github",
+    slug: "gitignore",
+    order: 9,
+    group: "daily-workflow",
+    title: "Gitignore",
+    description: "Exclude files and folders when you push to GitHub.",
+    translationKey: "git-gitignore",
+    status: "optional"
+  },
+  {
+    url: "/ko/git-github/gitignore/",
+    pageType: "document",
+    lang: "ko",
+    section: "git-github",
+    slug: "gitignore",
+    order: 9,
+    group: "daily-workflow",
+    title: "Gitignore",
+    description: "특정 파일이나 폴더를 GitHub 커밋에서 제외합니다.",
+    translationKey: "git-gitignore",
+    status: "optional"
   },
   {
     url: "/ko/git-github/conflict/",

@@ -87,7 +87,7 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
       <tr style="background:#f0e1c8">
         <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Code</th>
         <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Value</th>
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:left">동작</th>
+        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">동작</th>
       </tr>
     </thead>
     <tbody>

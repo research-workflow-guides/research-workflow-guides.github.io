@@ -32,16 +32,34 @@ tags:
 
 ## Key terms
 
-<dl>
-  <dt>Stage</dt>
-  <dd>The process of preparing changes to be included in a commit, before actually committing them.</dd>
-  <dt>Commit</dt>
-  <dd>The operation of saving changes to the local Git repository.</dd>
-  <dt>Push</dt>
-  <dd>The action of transferring commits from the local Git repository to a remote repository.</dd>
-  <dt>Pull</dt>
-  <dd>The action of fetching commits from a remote repository and merging them into the local branch.</dd>
-</dl>
+<div style="display:flex;justify-content:center;margin:1.25rem 0">
+  <table style="border-collapse:collapse;min-width:32rem">
+    <thead>
+      <tr style="background:#f0e1c8">
+        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Term</th>
+        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#ffffff">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Stage</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The process of preparing changes to be included in a commit, before actually committing them.</td>
+      </tr>
+      <tr style="background:#fdf7ef">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Commit</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The operation of saving changes to the local Git repository.</td>
+      </tr>
+      <tr style="background:#ffffff">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Push</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The action of transferring commits from the local Git repository to a remote repository.</td>
+      </tr>
+      <tr style="background:#fdf7ef">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Pull</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The action of fetching commits from a remote repository and merging them into the local branch.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Check the current state
 

@@ -10,18 +10,16 @@ translationKey: git-collaboration
 eyebrow: Topic 1
 lead: Small-team collaboration works best when the repository rhythm is boring, explicit, and easy to recover from.
 toc:
-  - id: agree-on-a-shared-rhythm
-    label: Agree on a shared rhythm
-  - id: communicate-before-surprise-pushes
-    label: Communicate before surprises
-  - id: keep-history-readable
-    label: Keep history readable
+  - id: collaboration-guidelines
+    label: Collaboration Guidelines
+  - id: invite-collaborators
+    label: Invite collaborators
   - id: before-proceeding
     label: Before proceeding
 tags:
   - doc
 ---
-## Agree on a shared rhythm
+## Collaboration Guidelines
 
 Teams stay coordinated when everyone shares the same basic expectations:
 
@@ -29,22 +27,31 @@ Teams stay coordinated when everyone shares the same basic expectations:
 - commit coherent units
 - push regularly instead of hoarding changes
 
-## Communicate before surprises
-
 If you are about to rename many files, reorganize a folder, or rewrite a shared section, tell the other collaborators first. Most collaboration pain comes from surprise, not from Git itself.
+
+## Invite collaborators
 
 <div class="doc-step-pair">
   <div>
-    <p>Before shared work begins, open repository settings to manage access.</p>
+    <p>Select the Settings tab in the repository where you want to invite a collaborator.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-settings-tab.png" alt="GitHub repository page with the Settings tab highlighted">
+    <img src="/assets/images/2.2.5-100.png" alt="GitHub repository page with the Settings tab highlighted">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>Open the access page to see who already has repository access.</p>
+    <p>In the Settings sidebar, choose Collaborators under Access.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/2.2.5-101.png" alt="GitHub repository settings page with Collaborators highlighted">
+  </figure>
+</div>
+
+<div class="doc-step-pair">
+  <div>
+    <p>Click the Add people button.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access page">
@@ -53,7 +60,7 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
 
 <div class="doc-step-pair">
   <div>
-    <p>The invitation flow starts by searching for the collaborator by username or email.</p>
+    <p>Search for the collaborator by username or email.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="Search field for adding a collaborator on GitHub">
@@ -77,10 +84,6 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
     <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="GitHub access page showing a pending collaborator invitation">
   </figure>
 </div>
-
-## Keep history readable
-
-Clear commit messages and smaller work units make collaboration calmer. The goal is not perfect history. The goal is history another person can follow.
 
 ## Before proceeding
 

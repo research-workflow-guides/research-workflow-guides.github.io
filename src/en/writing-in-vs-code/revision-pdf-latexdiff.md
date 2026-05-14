@@ -87,7 +87,7 @@ By changing the number in `--math-markup=<number>`, you can adjust how precisely
       <tr style="background:#f0e1c8">
         <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Code</th>
         <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Value</th>
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:left">Behavior</th>
+        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Behavior</th>
       </tr>
     </thead>
     <tbody>

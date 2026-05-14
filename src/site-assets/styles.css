@@ -434,6 +434,14 @@ li {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.feature-grid-equal-cards {
+  grid-auto-rows: 1fr;
+}
+
+.feature-grid-equal-cards .feature-card {
+  height: 100%;
+}
+
 .feature-card,
 .language-card {
   display: block;

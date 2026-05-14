@@ -32,16 +32,34 @@ tags:
 
 ## 용어 정리
 
-<dl>
-  <dt>Stage</dt>
-  <dd>변경 사항을 커밋에 포함시키기 전에 준비하는 작업.</dd>
-  <dt>Commit</dt>
-  <dd>로컬 Git 저장소에 변경 사항을 저장하는 작업.</dd>
-  <dt>Push</dt>
-  <dd>로컬 Git 저장소에 있는 커밋을 원격 저장소로 전송하는 작업.</dd>
-  <dt>Pull</dt>
-  <dd>원격 저장소에 있는 커밋을 가져와 로컬 브랜치에 병합하는 작업.</dd>
-</dl>
+<div style="display:flex;justify-content:center;margin:1.25rem 0">
+  <table style="border-collapse:collapse;min-width:32rem">
+    <thead>
+      <tr style="background:#f0e1c8">
+        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">용어</th>
+        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">의미</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#ffffff">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Stage</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">변경 사항을 커밋에 포함시키기 전에 준비하는 작업.</td>
+      </tr>
+      <tr style="background:#fdf7ef">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Commit</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">로컬 Git 저장소에 변경 사항을 저장하는 작업.</td>
+      </tr>
+      <tr style="background:#ffffff">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Push</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">로컬 Git 저장소에 있는 커밋을 원격 저장소로 전송하는 작업.</td>
+      </tr>
+      <tr style="background:#fdf7ef">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Pull</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">원격 저장소에 있는 커밋을 가져와 로컬 브랜치에 병합하는 작업.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## 현재 상태 확인
 
