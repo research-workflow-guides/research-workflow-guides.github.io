@@ -1024,6 +1024,37 @@ li.section--collaboration > .rail-link-section.is-current {
   color: #f7f7f2;
 }
 
+.prose .code-block-wrapper {
+  position: relative;
+  margin: 0 0 1rem;
+}
+
+.prose .code-block-wrapper pre {
+  margin: 0;
+  padding-right: 5.25rem;
+}
+
+.code-copy-button {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.75rem;
+  z-index: 1;
+  padding: 0.22rem 0.58rem;
+  border: 1px solid rgba(247, 247, 242, 0.2);
+  border-radius: 999px;
+  background: rgba(247, 247, 242, 0.1);
+  color: rgba(247, 247, 242, 0.86);
+  font: 500 0.72rem/1.2 "IBM Plex Mono", monospace;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.code-copy-button:hover,
+.code-copy-button:focus-visible {
+  background: rgba(247, 247, 242, 0.18);
+  color: #ffffff;
+}
+
 .prose pre[data-code-label] {
   position: relative;
   padding-top: 2.35rem;

@@ -173,8 +173,79 @@ function setupSearch() {
   });
 }
 
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text);
+  }
+
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.top = "-9999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  try {
+    document.execCommand("copy");
+    return Promise.resolve();
+  } catch (error) {
+    return Promise.reject(error);
+  } finally {
+    textarea.remove();
+  }
+}
+
+function setupCodeCopyButtons() {
+  const isKorean = document.body.dataset.pageLang === "ko";
+  const copyLabel = "Copy";
+  const copiedLabel = "Copied";
+  const errorLabel = "Error";
+
+  document.querySelectorAll(".prose pre").forEach((pre) => {
+    if (pre.closest(".code-block-wrapper")) {
+      return;
+    }
+
+    const code = pre.querySelector("code");
+
+    if (!code) {
+      return;
+    }
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "code-block-wrapper";
+    pre.parentNode.insertBefore(wrapper, pre);
+    wrapper.appendChild(pre);
+
+    const button = document.createElement("button");
+    button.className = "code-copy-button";
+    button.type = "button";
+    button.textContent = copyLabel;
+    button.setAttribute("aria-label", isKorean ? "코드 복사하기" : "Copy code");
+
+    button.addEventListener("click", async () => {
+      try {
+        await copyText(code.textContent);
+        button.textContent = copiedLabel;
+        window.setTimeout(() => {
+          button.textContent = copyLabel;
+        }, 1600);
+      } catch (error) {
+        button.textContent = errorLabel;
+        window.setTimeout(() => {
+          button.textContent = copyLabel;
+        }, 1600);
+      }
+    });
+
+    wrapper.appendChild(button);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   setupDisclosure("[data-menu-toggle]", ".site-nav");
   setupDisclosure("[data-toc-toggle]", "[data-toc-panel]");
   setupSearch();
+  setupCodeCopyButtons();
 });

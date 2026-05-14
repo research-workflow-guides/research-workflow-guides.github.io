@@ -115,6 +115,12 @@ By changing the number in `--math-markup=<number>`, you can adjust how precisely
   </table>
 </div>
 
+If you run into an encoding problem, enter the following command instead:
+
+```bash
+latexdiff --math-markup=0 old_version.tex revised_version.tex | Out-File -Encoding utf8 diff_version.tex
+```
+
 After running latexdiff in the terminal, `diff_version.tex` will be generated.
 
 <div class="doc-step-pair">

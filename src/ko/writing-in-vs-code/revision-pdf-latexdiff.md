@@ -115,6 +115,12 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
   </table>
 </div>
 
+인코딩 문제가 있다면 다음 명령어를 입력하세요:
+
+```bash
+latexdiff --math-markup=0 old_version.tex revised_version.tex | Out-File -Encoding utf8 diff_version.tex
+```
+
 terminal에서 latexdiff를 실행하고 나면, `diff_version.tex` 파일이 생성됩니다.
 
 <div class="doc-step-pair">
