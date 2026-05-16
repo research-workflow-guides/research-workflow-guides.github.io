@@ -12,14 +12,18 @@ lead: "Keep the daily remote workflow small: pull before work if needed, commit 
 toc:
   - id: key-terms
     label: Key terms
-  - id: pull-before-work
-    label: Pull before work
-  - id: use-a-small-daily-sync-loop
-    label: Use a daily sync loop
-  - id: keep-commits-coherent
-    label: Keep commits coherent
-  - id: first-commit-and-push
-    label: First commit and push
+  - id: pull-first-way
+    label: Pull (first way)
+  - id: pull-second-way
+    label: Pull (second way)
+  - id: pull-third-way
+    label: Pull (third way)
+  - id: push-first-way
+    label: Push (first way)
+  - id: push-second-way
+    label: Push (second way)
+  - id: push-third-way
+    label: Push (third way)
   - id: before-proceeding
     label: Before proceeding
 tags:
@@ -61,82 +65,95 @@ tags:
   </table>
 </div>
 
-## Pull before work
+## Pull (first way)
+
+Let's learn how to download what's uploaded to GitHub to the registered folder.
+
+Click the button on the right and select 'Pull' in Source Control.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-10.png" alt="VS Code Source Control pull menu">
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-11%20(1).png" alt="VS Code Source Control menu with Pull highlighted">
+</figure>
+
+When the pull is successfully completed, you will be able to see the following screen.
+
+If nobody else has changed the repository, the pull does nothing — that is expected.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-12.png" alt="VS Code Source Control after pull completes">
+</figure>
+
+## Pull (second way)
+
+Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then enter the following command:
 
 ```bash
 git pull
 ```
 
-If nobody else has changed the repository, the pull does nothing — that is expected.
+## Pull (third way)
+
+You can also perform Pull commands from the Command Palette with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on macOS.
 
 <figure class="image-frame">
-  <img src="/assets/images/legacy/github-workflow/pull-menu.png" alt="VS Code source control menu with Pull highlighted">
-
+  <img src="/assets/images/2.2.3-10%20(2).png" alt="VS Code Command Palette pull command">
 </figure>
 
-## Use a daily sync loop
+## Push (first way)
 
-The loop is:
+You can upload the changes to GitHub by staging them, committing, and then pushing.
 
-1. pull when the remote may have changed
-2. work locally
-3. stage and commit one coherent unit
-4. push the new commit
+Click the '+' button in Source Control.
 
-## Keep commits coherent
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-1.png" alt="VS Code Source Control plus button for staging changes">
+</figure>
 
-A good commit collects one understandable change. It does not need to be huge. It only needs to make sense when you read the history later.
+You will see the Staged Changes appear.
 
-<div class="doc-step-pair">
-  <div>
-    <p>Write a short message that names the unit of work before you publish anything to the remote.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-2.png" alt="VS Code source control panel with staged changes">
+</figure>
 
-  </figure>
-</div>
+Enter the commit message.
 
-<div class="doc-step-pair">
-  <div>
-    <p>After the commit is ready, push it so the remote history stays aligned with your local work.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu with Commit & Push highlighted">
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-3.png" alt="VS Code source control panel with a commit message entered">
+</figure>
 
-  </figure>
-</div>
+Click the button on the right.
 
-## First commit and push
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-5.png" alt="VS Code Source Control commit button menu">
+</figure>
+
+Select 'Commit & Push'.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-6.png" alt="VS Code Source Control Commit & Push option">
+</figure>
+
+## Push (second way)
+
+Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then enter the following command:
 
 ```bash
-git status
 git add .
-git commit -m "Initial project import"
-git push origin main
+git commit -m "Describe your change"
+git push
 ```
 
-If the default branch is not `main`, use the branch name GitHub created for the repository.
+## Push (third way)
 
-<div class="doc-step-pair">
-  <div>
-    <p>With the files inside the clone, write a clear initial commit message.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="VS Code source control panel with a commit message entered">
+You can also perform Push commands from the Command Palette with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on macOS.
 
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>Publish the first commit with a normal push — or use the combined commit-and-push if your interface offers it.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="VS Code commit menu showing Commit & Push">
-
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-11%20(2).png" alt="VS Code Command Palette push command">
+</figure>
 
 ## Before proceeding
 

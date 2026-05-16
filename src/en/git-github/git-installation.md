@@ -69,6 +69,8 @@ Use the official installer or the standard package manager for your platform. Th
 
 Git records a display name and email address in your commits. Set them once before you begin repository work.
 
+Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then enter the following command:
+
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"

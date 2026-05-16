@@ -69,6 +69,8 @@ tags:
 
 Git commit에는 표시 이름과 이메일이 기록됩니다. repository 작업을 시작하기 전에 한 번 설정합니다.
 
+Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 터미널을 엽니다. 그런 다음 다음 명령어를 입력하세요:
+
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"

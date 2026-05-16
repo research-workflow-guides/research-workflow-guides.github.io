@@ -12,14 +12,18 @@ lead: 일상적인 원격 작업 흐름은 작게 유지합니다. 필요하면 
 toc:
   - id: 용어-정리
     label: 용어 정리
-  - id: 작업-전-pull
-    label: 작업 전 pull
-  - id: 일상-sync-루프
-    label: 일상 sync 루프
-  - id: commit-단위-유지
-    label: commit 단위 유지
-  - id: 첫-commit과-push
-    label: 첫 commit과 push
+  - id: pull-첫-번째-방법
+    label: Pull (첫 번째 방법)
+  - id: pull-두-번째-방법
+    label: Pull (두 번째 방법)
+  - id: pull-세-번째-방법
+    label: Pull (세 번째 방법)
+  - id: push-첫-번째-방법
+    label: Push (첫 번째 방법)
+  - id: push-두-번째-방법
+    label: Push (두 번째 방법)
+  - id: push-세-번째-방법
+    label: Push (세 번째 방법)
   - id: 넘어가기-전
     label: 넘어가기 전
 tags:
@@ -61,82 +65,95 @@ tags:
   </table>
 </div>
 
-## 작업 전 pull
+## Pull (첫 번째 방법)
+
+GitHub에 업로드 되어 있는 것을 등록된 폴더로 다운로드하는 것을 배워보도록 하겠습니다.
+
+Source Control에서 오른쪽 버튼을 클릭하고 'Pull'을 선택하세요.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-10.png" alt="VS Code Source Control Pull 메뉴">
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-11%20(1).png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
+</figure>
+
+Pull이 성공적으로 완료되면 다음과 같은 화면을 확인할 수 있습니다.
+
+아무도 remote를 바꾸지 않았다면 pull은 아무 일도 하지 않습니다. 그것도 정상입니다.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-12.png" alt="Pull 완료 후 VS Code Source Control 화면">
+</figure>
+
+## Pull (두 번째 방법)
+
+Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 터미널을 엽니다. 그런 다음 다음 명령어를 입력하세요:
 
 ```bash
 git pull
 ```
 
-아무도 remote를 바꾸지 않았다면 pull은 아무 일도 하지 않습니다. 그것도 정상입니다.
+## Pull (세 번째 방법)
+
+Command Palette에서도 Pull 명령을 실행할 수 있습니다. Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>를 사용하세요.
 
 <figure class="image-frame">
-  <img src="/assets/images/legacy/github-workflow/pull-menu.png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
-
+  <img src="/assets/images/2.2.3-10%20(2).png" alt="VS Code Command Palette Pull 명령">
 </figure>
 
-## 일상 sync 루프
+## Push (첫 번째 방법)
 
-기본 루프는 다음과 같습니다.
+변경된 사항을 Stage하고 Commit 후에 Push함으로써 GitHub에 업로드할 수 있습니다.
 
-1. remote 변경 가능성이 있으면 pull
-2. 로컬에서 작업
-3. 의미 있는 단위로 stage와 commit
-4. 새 commit을 push
+Source Control에서 Changes의 '+'버튼을 클릭하세요.
 
-## commit 단위 유지
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-1.png" alt="VS Code Source Control Changes의 plus 버튼">
+</figure>
 
-좋은 commit은 "이력이 나중에 읽혀도 이해되는 한 덩어리 변화"입니다. 거대할 필요는 없고, 읽었을 때 무슨 변화인지 분명하면 충분합니다.
+Staged Changes가 생긴 것을 확인할 수 있습니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p>먼저 짧은 commit message로 지금 작업 단위를 분명하게 붙잡아 둡니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="commit message가 입력된 VS Code 화면">
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-2.png" alt="Staged Changes가 생긴 VS Code Source Control 화면">
+</figure>
 
-  </figure>
-</div>
+Commit message를 입력하세요.
 
-<div class="doc-step-pair">
-  <div>
-    <p>그다음 push를 실행해 local에서 만든 commit을 remote history와 다시 맞춥니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 강조된 VS Code 메뉴">
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-3.png" alt="commit message가 입력된 VS Code Source Control 화면">
+</figure>
 
-  </figure>
-</div>
+오른쪽 버튼을 클릭하세요.
 
-## 첫 commit과 push
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-5.png" alt="VS Code Source Control commit 버튼 메뉴">
+</figure>
+
+'Commit & Push'를 선택하세요.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-6.png" alt="VS Code Source Control Commit & Push 선택지">
+</figure>
+
+## Push (두 번째 방법)
+
+Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 터미널을 엽니다. 그런 다음 다음 명령어를 입력하세요:
 
 ```bash
-git status
 git add .
-git commit -m "Initial project import"
-git push origin main
+git commit -m "Describe your change"
+git push
 ```
 
-기본 branch 이름이 `main`이 아니라면 GitHub가 만든 branch 이름을 사용합니다.
+## Push (세 번째 방법)
 
-<div class="doc-step-pair">
-  <div>
-    <p>파일이 clone 안에 들어갔다면 첫 commit message를 작성합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/commit-message.png" alt="commit message가 입력된 VS Code Source Control 패널">
+Command Palette에서도 Push 명령을 실행할 수 있습니다. Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>를 사용하세요.
 
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>일반 push 흐름으로 첫 commit을 올립니다. VS Code의 Commit & Push 동작이 있다면 그대로 써도 됩니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/commit-and-push.png" alt="Commit & Push가 보이는 VS Code 메뉴">
-
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-11%20(2).png" alt="VS Code Command Palette Push 명령">
+</figure>
 
 ## 넘어가기 전
 

@@ -36,15 +36,7 @@ If they are different, pushing or pulling will result in a conflict (refer to th
   </figure>
 </div>
 
-<div class="doc-step-pair">
-  <div>
-    <p>After that warning, click 'Cancel'. Execute the command "pull".</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/2.2.3-11%20(1).png" alt="VS Code source control menu with Pull highlighted after a push warning">
-
-  </figure>
-</div>
+After that warning, click 'Cancel'. Execute the command "pull".
 
 <div class="doc-step-pair">
   <div>

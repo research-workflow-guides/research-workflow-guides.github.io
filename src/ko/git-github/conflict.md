@@ -36,15 +36,7 @@ Push가 무사히 이루어지려면 'GitHub에 업로드되어 있는 파일'�
   </figure>
 </div>
 
-<div class="doc-step-pair">
-  <div>
-    <p>'Cancel'을 클릭하고 Pull을 진행하세요.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/2.2.3-11%20(1).png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
-
-  </figure>
-</div>
+'Cancel'을 클릭하고 Pull을 진행하세요.
 
 <div class="doc-step-pair">
   <div>
