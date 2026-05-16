@@ -51,8 +51,14 @@
                   {% elif section.key == "writing-in-vs-code" %}
                     {% if group.key == "main-topics" %}
                       {% set groupAnchor = "core-documents" %}
-                    {% else %}
+                    {% elif group.key == "snippets" %}
+                      {% set groupAnchor = "snippets-documents" %}
+                    {% elif group.key == "reference" %}
+                      {% set groupAnchor = "reference-documents" %}
+                    {% elif group.key == "optional-topics" %}
                       {% set groupAnchor = "optional-documents" %}
+                    {% else %}
+                      {% set groupAnchor = group.key %}
                     {% endif %}
                   {% else %}
                     {% set groupAnchor = group.key %}

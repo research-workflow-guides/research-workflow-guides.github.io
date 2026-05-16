@@ -39,6 +39,7 @@ Use the Command Palette to open a fresh terminal inside VS Code.
 <div class="doc-step-pair">
   <div>
     <p>After the command runs, confirm that the integrated terminal appears at the bottom of VS Code.</p>
+    <p>You can also open a new terminal directly with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/2.2.1-2%20(1).png" alt="VS Code integrated terminal opened">

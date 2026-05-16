@@ -4,7 +4,7 @@ title: 수정 사항이 표시된 PDF 만들기
 description: 이전 TeX 파일과 현재 TeX 파일을 비교해 수정 사항이 표시된 PDF를 만듭니다.
 lang: ko
 section: writing-in-vs-code
-order: 7
+order: 9
 permalink: /ko/writing-in-vs-code/revision-pdf-latexdiff/
 translationKey: writing-revision-pdf-latexdiff
 eyebrow: 선택
