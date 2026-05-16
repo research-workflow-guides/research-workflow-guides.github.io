@@ -12,8 +12,8 @@ lead: conflict는 재난이 아니라, 겹치는 수정 중 어떤 최종 텍스
 toc:
   - id: conflict의-의미
     label: conflict의 의미
-  - id: 파일-하나씩-해결
-    label: 파일 하나씩 해결
+  - id: 세-가지-선택지
+    label: 세 가지 선택지
   - id: merge-마무리
     label: merge 마무리
   - id: 넘어가기-전
@@ -23,13 +23,12 @@ tags:
 ---
 ## conflict의 의미
 
-conflict는 두 수정이 같은 줄이나 같은 영역을 동시에 건드릴 때 생깁니다.
+Push가 무사히 이루어지려면 'GitHub에 업로드되어 있는 파일'과 '수정을 시작할 때 Local에 있던 파일'이 같아야 합니다.
 
-Git은 어느 쪽을 최종 텍스트로 남길지 스스로 결정하지 않고 멈춰 섭니다.
+그렇지 않은 경우에 push를 하면 충돌(conflict)이 발생합니다(아래 사진 참고). 이를 해결하는 방법을 배워보도록 하겠습니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>처음 신호는 push 경고입니다. remote가 먼저 바뀌었으니 pull부터 하라는 뜻입니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/conflict-push-warning.png" alt="먼저 pull하라는 VS Code push 경고">
@@ -39,28 +38,76 @@ Git은 어느 쪽을 최종 텍스트로 남길지 스스로 결정하지 않고
 
 <div class="doc-step-pair">
   <div>
-    <p>경고 후에는 Source Control 메뉴에서 merge 흐름을 시작합니다.</p>
+    <p>'Cancel'을 클릭하고 Pull을 진행하세요.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/conflict-pull-menu.png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
+    <img src="/assets/images/2.2.3-11%20(1).png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
 
   </figure>
 </div>
 
-## 파일 하나씩 해결
+<div class="doc-step-pair">
+  <div>
+    <p>그러면 Stage가 취소되면서 아래와 같은 화면을 확인할 수 있습니다. 초록색 상자 안에는 Local에서 수정한 내용을 보여주고, 파란색 상자 안에는 GitHub의 내용을 보여줍니다.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/2.2.4-4.png" alt="conflict 중 staging이 취소된 VS Code Source Control 화면">
 
-VS Code Merge Editor나 conflict marker를 직접 보면서, 주변 문맥을 읽고 최종 텍스트가 무엇이어야 하는지 판단합니다.
+  </figure>
+</div>
 
-최종 결과가 실제로 그래야 하는 게 아니라면 한쪽을 통째로 받지 않습니다.
+## 세 가지 선택지
+
+세 가지 선택지가 있고, 원하는 것을 클릭하면 됩니다:
+
+**Accept Current Change:** Local에서 수정한 내용만 받아들이고 GitHub의 내용은 삭제합니다.
+
+**Accept Incoming Change:** Local에서 수정한 내용은 삭제하고 GitHub의 내용만 받아들입니다.
+
+**Accept Both Changes:** Local과 GitHub의 내용을 모두 받아들입니다. 가장 안전합니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/legacy/github-workflow/conflict-merge-state.png" alt="merge 진행 중인 VS Code Source Control 상태">
+  <img src="/assets/images/2.2.4-5.png" alt="Accept Current Change, Accept Incoming Change, Accept Both Changes 선택지가 보이는 VS Code conflict 화면">
+
+</figure>
+
+예를 들어, 'Accept Both Changes'를 클릭하면 오른쪽과 같은 화면을 확인할 수 있습니다. 이제 컴파일(혹은 저장)을 실행하세요.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-6.png" alt="Accept Both Changes가 강조된 VS Code conflict 화면">
+
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-7.png" alt="두 conflict 변경 사항을 모두 반영한 뒤의 VS Code 화면">
 
 </figure>
 
 ## merge 마무리
 
-충돌을 해결한 뒤에는 marker가 사라졌는지 확인하고, 파일을 stage한 다음 merge commit 또는 평소 commit 흐름을 마무리합니다.
+Source Control에서 'Merge Changes'의 '+' 버튼을 클릭하고, 'Changes'에서도 '+' 버튼을 클릭하세요. 그러면 오른쪽 화면처럼 모든 변경 사항이 Stage된 것을 확인할 수 있습니다.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-8.png" alt="Merge Changes를 stage할 수 있는 VS Code Source Control 화면">
+
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-9.png" alt="Changes를 stage할 수 있는 VS Code Source Control 화면">
+
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-10.png" alt="모든 conflict 변경 사항이 staged 상태가 된 VS Code Source Control 화면">
+
+</figure>
+
+Commit & Push를 진행하세요. 이로써 충돌이 해결되었습니다.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-11.png" alt="Commit & Push가 강조된 VS Code Source Control 메뉴">
+
+</figure>
 
 ## 넘어가기 전
 

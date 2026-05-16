@@ -12,10 +12,10 @@ lead: A conflict is not a disaster. It simply means Git needs help choosing betw
 toc:
   - id: what-a-conflict-means
     label: What a conflict means
-  - id: resolve-one-file-carefully
-    label: Resolve one file carefully
-  - id: finish-the-merge-cleanly
-    label: Finish the merge cleanly
+  - id: three-options
+    label: Three options
+  - id: finish-the-merge
+    label: Finish the merge
   - id: before-proceeding
     label: Before proceeding
 tags:
@@ -23,13 +23,12 @@ tags:
 ---
 ## What a conflict means
 
-A conflict appears when two sets of changes touch the same lines or the same small region of a file.
+A conflict appears when two sets of changes touch the same lines or the same small region of a file. For a push or pull to succeed cleanly, the file on GitHub and the local file you started editing from should match.
 
-Git stops and asks you to decide what the final text should be.
+If they are different, pushing or pulling will result in a conflict (refer to the picture below). Git stops and asks you to decide what the final text should be. Let's learn how to resolve this issue.
 
 <div class="doc-step-pair">
   <div>
-    <p>A common first sign is a push warning: the remote changed and you need to pull first.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/conflict-push-warning.png" alt="VS Code warning that a push was rejected and a pull is required">
@@ -39,28 +38,76 @@ Git stops and asks you to decide what the final text should be.
 
 <div class="doc-step-pair">
   <div>
-    <p>After that warning, start the merge flow from the Source Control menu.</p>
+    <p>After that warning, click 'Cancel'. Execute the command "pull".</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/conflict-pull-menu.png" alt="VS Code source control menu with Pull highlighted after a push warning">
+    <img src="/assets/images/2.2.3-11%20(1).png" alt="VS Code source control menu with Pull highlighted after a push warning">
 
   </figure>
 </div>
 
-## Resolve one file carefully
+<div class="doc-step-pair">
+  <div>
+    <p>Then you will be able to see the following screen where the staging will be canceled. The green box displays the modifications made locally, while the blue box displays the content from GitHub.</p>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/2.2.4-4.png" alt="VS Code source control panel after staging is canceled during a merge conflict">
 
-Use the VS Code Merge Editor or the conflict markers directly. Read the surrounding lines, decide what should remain, and keep the final text consistent.
+  </figure>
+</div>
 
-Do not accept everything from one side unless that is the correct outcome.
+## Three options
+
+There are three options, and you can click the one you prefer:
+
+**Accept Current Change:** Only the modifications made locally will be accepted, and the content on GitHub will be discarded.
+
+**Accept Incoming Change:** The modifications made locally will be discarded, and only the content on GitHub will be accepted.
+
+**Accept Both Changes:** Both the local and GitHub contents will be accepted. This is the safest option.
 
 <figure class="image-frame">
-  <img src="/assets/images/legacy/github-workflow/conflict-merge-state.png" alt="VS Code source control panel during a merge with merge changes shown">
+  <img src="/assets/images/2.2.4-5.png" alt="VS Code conflict options for accepting current, incoming, or both changes">
 
 </figure>
 
-## Finish the merge cleanly
+For example, if you click on 'Accept Both Changes', you will be able to see a screen similar to the one on the right. Now, execute the compilation (or saving).
 
-After resolving the file, confirm the conflict markers are gone, stage the file, and finish the merge commit or re-run the normal commit flow.
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-6.png" alt="VS Code conflict editor with Accept Both Changes highlighted">
+
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-7.png" alt="VS Code editor after both conflict changes are accepted">
+
+</figure>
+
+## Finish the merge
+
+In the source control, click on the '+' button in 'Merge Changes', and also click on the '+' button in 'Changes'. Then you will be able to see that all the changes have been staged, just like the screen on the right.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-8.png" alt="VS Code Source Control with Merge Changes ready to stage">
+
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-9.png" alt="VS Code Source Control with Changes ready to stage">
+
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-10.png" alt="VS Code Source Control after all conflict changes are staged">
+
+</figure>
+
+Proceed with the command "Commit & Push". Thus, the conflict has been resolved.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.4-11.png" alt="VS Code Source Control menu with Commit & Push highlighted">
+
+</figure>
 
 ## Before proceeding
 
