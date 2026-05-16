@@ -816,7 +816,7 @@ const pages = [
     slug: "changes",
     order: 10,
     group: "daily-workflow",
-    title: "Stash Changes",
+    title: "Changes",
     description: "Temporarily save local changes without committing them.",
     translationKey: "git-stash",
     status: "optional"

@@ -1,9 +1,19 @@
 {
   "currentBuild": {
-    "title": "Migration in progress",
-    "summary": "Core English and Korean paths are now being reorganized under shared templates, Markdown documents, and a search-ready static build."
+    "title": "Migration is done.",
+    "summary": "Core English and Korean paths have been reorganized under shared templates, Markdown documents, and a search-ready static build."
   },
   "items": [
+    {
+      "title": "Overleaf",
+      "description": "Overleaf collaboration workflow is available.",
+      "date": "2026-05-16",
+      "status": "completed",
+      "links": {
+        "en": "/en/collaboration/overleaf/",
+        "ko": "/ko/collaboration/overleaf/"
+      }
+    },
     {
       "title": "Conflict",
       "description": "Resolve same-file text conflicts without panic and return to the normal loop.",
