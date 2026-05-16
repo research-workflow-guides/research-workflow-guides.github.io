@@ -19,10 +19,17 @@ const sectionDefinitions = [
     },
     groups: [
       {
-        key: "steps",
+        key: "installation",
         label: {
-          en: "Steps",
-          ko: "세 단계"
+          en: "Installation",
+          ko: "설치"
+        }
+      },
+      {
+        key: "project-template",
+        label: {
+          en: "Project Template",
+          ko: "프로젝트 템플릿"
         }
       }
     ]
@@ -191,7 +198,7 @@ const pages = [
     section: "initial-setup",
     slug: "latex-installation",
     order: 1,
-    group: "steps",
+    group: "installation",
     title: "LaTeX Installation",
     description: "Install MiKTeX and verify the base LaTeX toolchain is working.",
     translationKey: "initial-setup-latex-installation",
@@ -204,7 +211,7 @@ const pages = [
     section: "initial-setup",
     slug: "latex-installation",
     order: 1,
-    group: "steps",
+    group: "installation",
     title: "LaTeX 설치",
     description: "MiKTeX를 설치하고 기본 LaTeX 도구 체인이 준비됐는지 확인합니다.",
     translationKey: "initial-setup-latex-installation",
@@ -217,11 +224,37 @@ const pages = [
     section: "initial-setup",
     slug: "vs-code-installation",
     order: 2,
-    group: "steps",
+    group: "installation",
     title: "VS Code Installation",
     description: "Install VS Code and add the LaTeX Workshop extension.",
     translationKey: "initial-setup-vs-code-installation",
     status: "core"
+  },
+  {
+    url: "/en/initial-setup/extension/",
+    pageType: "document",
+    lang: "en",
+    section: "initial-setup",
+    slug: "extension",
+    order: 2.5,
+    group: "installation",
+    title: "Extension",
+    description: "Add extra useful VS Code extensions.",
+    translationKey: "initial-setup-extension",
+    status: "optional"
+  },
+  {
+    url: "/ko/initial-setup/extension/",
+    pageType: "document",
+    lang: "ko",
+    section: "initial-setup",
+    slug: "extension",
+    order: 2.5,
+    group: "installation",
+    title: "Extension",
+    description: "유용한 VS Code extension을 소개합니다.",
+    translationKey: "initial-setup-extension",
+    status: "optional"
   },
   {
     url: "/ko/initial-setup/vs-code-installation/",
@@ -230,7 +263,7 @@ const pages = [
     section: "initial-setup",
     slug: "vs-code-installation",
     order: 2,
-    group: "steps",
+    group: "installation",
     title: "VS Code 설치",
     description: "VS Code를 설치하고 LaTeX Workshop 확장을 추가합니다.",
     translationKey: "initial-setup-vs-code-installation",
@@ -243,7 +276,7 @@ const pages = [
     section: "initial-setup",
     slug: "project-template",
     order: 3,
-    group: "steps",
+    group: "project-template",
     title: "Project Template",
     description: "Open the starter project, run the first build, and confirm the full toolchain works.",
     translationKey: "initial-setup-project-template",
@@ -256,7 +289,7 @@ const pages = [
     section: "initial-setup",
     slug: "project-template",
     order: 3,
-    group: "steps",
+    group: "project-template",
     title: "프로젝트 템플릿",
     description: "starter project를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.",
     translationKey: "initial-setup-project-template",
@@ -688,11 +721,37 @@ const pages = [
     lang: "en",
     section: "git-github",
     slug: "version-control",
-    order: 7,
+    order: 8,
     group: "daily-workflow",
     title: "Version Control",
     description: "Understand tracked, modified, staged, and committed states well enough to stay calm.",
     translationKey: "git-version-control",
+    status: "core"
+  },
+  {
+    url: "/en/git-github/git-status/",
+    pageType: "document",
+    lang: "en",
+    section: "git-github",
+    slug: "git-status",
+    order: 7,
+    group: "daily-workflow",
+    title: "Git status",
+    description: "Check what changed before you stage, commit, or push.",
+    translationKey: "git-status",
+    status: "core"
+  },
+  {
+    url: "/ko/git-github/git-status/",
+    pageType: "document",
+    lang: "ko",
+    section: "git-github",
+    slug: "git-status",
+    order: 7,
+    group: "daily-workflow",
+    title: "Git status",
+    description: "stage, commit, push 전에 무엇이 바뀌었는지 확인합니다.",
+    translationKey: "git-status",
     status: "core"
   },
   {
@@ -701,10 +760,10 @@ const pages = [
     lang: "ko",
     section: "git-github",
     slug: "version-control",
-    order: 7,
+    order: 8,
     group: "daily-workflow",
     title: "버전 관리",
-    description: "tracked, staged, committed, ignored 상태를 구분해 안정적으로 작업합니다.",
+    description: "tracked, modified, staged, committed 상태를 구분해 안정적으로 작업합니다.",
     translationKey: "git-version-control",
     status: "core"
   },
@@ -742,7 +801,7 @@ const pages = [
     lang: "en",
     section: "git-github",
     slug: "conflict",
-    order: 8,
+    order: 9,
     group: "daily-workflow",
     title: "Conflict",
     description: "Resolve same-file text conflicts without panic and return to the normal loop.",
@@ -755,7 +814,7 @@ const pages = [
     lang: "en",
     section: "git-github",
     slug: "gitignore",
-    order: 9,
+    order: 10,
     group: "daily-workflow",
     title: "Gitignore",
     description: "Exclude files and folders when you push to GitHub.",
@@ -768,7 +827,7 @@ const pages = [
     lang: "ko",
     section: "git-github",
     slug: "gitignore",
-    order: 9,
+    order: 10,
     group: "daily-workflow",
     title: "Gitignore",
     description: "특정 파일이나 폴더를 GitHub 커밋에서 제외합니다.",
@@ -781,7 +840,7 @@ const pages = [
     lang: "ko",
     section: "git-github",
     slug: "conflict",
-    order: 8,
+    order: 9,
     group: "daily-workflow",
     title: "충돌 해결",
     description: "같은 파일 충돌을 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.",

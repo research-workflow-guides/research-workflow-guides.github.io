@@ -4,7 +4,7 @@ title: Gitignore
 description: 특정 파일이나 폴더를 GitHub 커밋에서 제외합니다.
 lang: ko
 section: git-github
-order: 9
+order: 10
 permalink: /ko/git-github/gitignore/
 translationKey: git-gitignore
 eyebrow: 선택

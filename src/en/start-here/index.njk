@@ -6,12 +6,15 @@ lang: en
 pageClass: page-section
 permalink: /en/initial-setup/
 toc:
-  - id: core-route
-    label: Steps
+  - id: installation
+    label: Installation
+  - id: project-template
+    label: Project Template
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
-{% set docs = canonical.groupedDocs.en["initial-setup"].steps %}
+{% set installationDocs = canonical.groupedDocs.en["initial-setup"].installation %}
+{% set projectTemplateDocs = canonical.groupedDocs.en["initial-setup"]["project-template"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -26,12 +29,25 @@ toc:
       </div>
     </section>
 
-    <section id="core-route" class="doc-section">
-      <h2>Steps</h2>
+    <section id="installation" class="doc-section">
+      <h2>Installation</h2>
       <div class="feature-grid feature-grid-compact">
-        {% for doc in docs %}
+        {% for doc in installationDocs %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Step {{ doc.order }}</p>
+            <p class="card-kicker">{% if doc.status == "optional" %}Optional{% else %}Step {{ doc.order }}{% endif %}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="project-template" class="doc-section">
+      <h2>Project Template</h2>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in projectTemplateDocs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">Optional</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>

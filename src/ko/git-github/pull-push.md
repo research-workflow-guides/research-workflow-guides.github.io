@@ -12,8 +12,8 @@ lead: 일상적인 원격 작업 흐름은 작게 유지합니다. 필요하면 
 toc:
   - id: 용어-정리
     label: 용어 정리
-  - id: 현재-상태-확인
-    label: 현재 상태 확인
+  - id: 작업-전-pull
+    label: 작업 전 pull
   - id: 일상-sync-루프
     label: 일상 sync 루프
   - id: commit-단위-유지
@@ -61,12 +61,9 @@ tags:
   </table>
 </div>
 
-## 현재 상태 확인
-
-큰 수정을 시작하기 전에 repository 상태를 먼저 봅니다.
+## 작업 전 pull
 
 ```bash
-git status
 git pull
 ```
 

@@ -12,8 +12,8 @@ lead: "Keep the daily remote workflow small: pull before work if needed, commit 
 toc:
   - id: key-terms
     label: Key terms
-  - id: start-by-checking-the-current-state
-    label: Check the current state
+  - id: pull-before-work
+    label: Pull before work
   - id: use-a-small-daily-sync-loop
     label: Use a daily sync loop
   - id: keep-commits-coherent
@@ -61,12 +61,9 @@ tags:
   </table>
 </div>
 
-## Check the current state
-
-Before large edits, look at the repository state.
+## Pull before work
 
 ```bash
-git status
 git pull
 ```
 

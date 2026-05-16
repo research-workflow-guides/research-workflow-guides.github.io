@@ -47,7 +47,7 @@
               <ul class="rail-subtree rail-subtree-groups">
                 {% for group in groupedSectionPages %}
                   {% if section.key == "initial-setup" %}
-                    {% set groupAnchor = "core-route" %}
+                    {% set groupAnchor = group.key %}
                   {% elif section.key == "writing-in-vs-code" %}
                     {% if group.key == "main-topics" %}
                       {% set groupAnchor = "core-documents" %}

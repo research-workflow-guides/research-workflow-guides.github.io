@@ -4,10 +4,10 @@ title: 충돌 해결
 description: 같은 파일 충돌을 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.
 lang: ko
 section: git-github
-order: 8
+order: 9
 permalink: /ko/git-github/conflict/
 translationKey: git-conflict
-eyebrow: 주제 3
+eyebrow: 주제 4
 lead: conflict는 재난이 아니라, 겹치는 수정 중 어떤 최종 텍스트를 남길지 Git이 도움을 요청하는 상태입니다.
 toc:
   - id: conflict의-의미
@@ -60,11 +60,30 @@ Push가 무사히 이루어지려면 'GitHub에 업로드되어 있는 파일'�
 
 세 가지 선택지가 있고, 원하는 것을 클릭하면 됩니다:
 
-**Accept Current Change:** Local에서 수정한 내용만 받아들이고 GitHub의 내용은 삭제합니다.
-
-**Accept Incoming Change:** Local에서 수정한 내용은 삭제하고 GitHub의 내용만 받아들입니다.
-
-**Accept Both Changes:** Local과 GitHub의 내용을 모두 받아들입니다. 가장 안전합니다.
+<div style="display:flex;justify-content:center;margin:1.25rem 0">
+  <table style="border-collapse:collapse;min-width:32rem">
+    <thead>
+      <tr style="background:#f0e1c8">
+        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">선택지</th>
+        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">의미</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#ffffff">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Accept Current Change</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">Local에서 수정한 내용만 받아들이고 GitHub의 내용은 삭제합니다.</td>
+      </tr>
+      <tr style="background:#fdf7ef">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Accept Incoming Change</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">Local에서 수정한 내용은 삭제하고 GitHub의 내용만 받아들입니다.</td>
+      </tr>
+      <tr style="background:#ffffff">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Accept Both Changes</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">Local과 GitHub의 내용을 모두 받아들입니다. 가장 안전합니다.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <figure class="image-frame">
   <img src="/assets/images/2.2.4-5.png" alt="Accept Current Change, Accept Incoming Change, Accept Both Changes 선택지가 보이는 VS Code conflict 화면">

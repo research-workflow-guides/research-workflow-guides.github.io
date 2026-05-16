@@ -4,10 +4,10 @@ title: Conflict
 description: Resolve same-file text conflicts without panic and return to the normal loop.
 lang: en
 section: git-github
-order: 8
+order: 9
 permalink: /en/git-github/conflict/
 translationKey: git-conflict
-eyebrow: Topic 3
+eyebrow: Topic 4
 lead: A conflict is not a disaster. It simply means Git needs help choosing between overlapping edits.
 toc:
   - id: what-a-conflict-means
@@ -60,11 +60,30 @@ If they are different, pushing or pulling will result in a conflict (refer to th
 
 There are three options, and you can click the one you prefer:
 
-**Accept Current Change:** Only the modifications made locally will be accepted, and the content on GitHub will be discarded.
-
-**Accept Incoming Change:** The modifications made locally will be discarded, and only the content on GitHub will be accepted.
-
-**Accept Both Changes:** Both the local and GitHub contents will be accepted. This is the safest option.
+<div style="display:flex;justify-content:center;margin:1.25rem 0">
+  <table style="border-collapse:collapse;min-width:32rem">
+    <thead>
+      <tr style="background:#f0e1c8">
+        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Option</th>
+        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">What happens</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#ffffff">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Accept Current Change</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">Only the modifications made locally will be accepted, and the content on GitHub will be discarded.</td>
+      </tr>
+      <tr style="background:#fdf7ef">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Accept Incoming Change</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The modifications made locally will be discarded, and only the content on GitHub will be accepted.</td>
+      </tr>
+      <tr style="background:#ffffff">
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Accept Both Changes</code></td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">Both the local and GitHub contents will be accepted. This is the safest option.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <figure class="image-frame">
   <img src="/assets/images/2.2.4-5.png" alt="VS Code conflict options for accepting current, incoming, or both changes">

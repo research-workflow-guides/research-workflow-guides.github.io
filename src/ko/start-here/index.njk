@@ -6,12 +6,15 @@ lang: ko
 pageClass: page-section
 permalink: /ko/initial-setup/
 toc:
-  - id: core-route
-    label: 세 단계
+  - id: installation
+    label: 설치
+  - id: project-template
+    label: 프로젝트 템플릿
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
-{% set docs = canonical.groupedDocs.ko["initial-setup"].steps %}
+{% set installationDocs = canonical.groupedDocs.ko["initial-setup"].installation %}
+{% set projectTemplateDocs = canonical.groupedDocs.ko["initial-setup"]["project-template"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -26,12 +29,25 @@ toc:
       </div>
     </section>
 
-    <section id="core-route" class="doc-section">
-      <h2>세 단계</h2>
+    <section id="installation" class="doc-section">
+      <h2>설치</h2>
       <div class="feature-grid feature-grid-compact">
-        {% for doc in docs %}
+        {% for doc in installationDocs %}
           <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">{{ doc.order }}단계</p>
+            <p class="card-kicker">{% if doc.status == "optional" %}선택{% else %}{{ doc.order }}단계{% endif %}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="project-template" class="doc-section">
+      <h2>프로젝트 템플릿</h2>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in projectTemplateDocs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">선택</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>
