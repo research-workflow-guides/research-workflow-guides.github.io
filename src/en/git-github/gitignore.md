@@ -4,7 +4,7 @@ title: Gitignore
 description: Exclude files and folders when you push to GitHub.
 lang: en
 section: git-github
-order: 10
+order: 11
 permalink: /en/git-github/gitignore/
 translationKey: git-gitignore
 eyebrow: Optional

@@ -20,8 +20,6 @@ toc:
     label: Review of changes
   - id: to-reset-to-an-old-version
     label: To reset to an old version
-  - id: stash
-    label: Stash
   - id: before-proceeding
     label: Before proceeding
 tags:
@@ -184,22 +182,6 @@ Since Version Control can be complex, it is advisable to start with cautious use
 
 [Git Tools - Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified)
 
-## Stash
-
-If you want to temporarily save your changes, you can use the 'stash' feature in Source Control. Stashing can be useful for version control purposes.
-
-To create a stash, click on 'Stash'.
-
-<figure class="image-frame">
-  <img src="/assets/images/stash-1.png" alt="VS Code Source Control stash command">
-</figure>
-
-To apply a stash, click on 'Apply Stash'.
-
-<figure class="image-frame">
-  <img src="/assets/images/stash-2.png" alt="VS Code Source Control apply stash command">
-</figure>
-
 ## Before proceeding
 
-Git Graph, reset, and stash are useful when you need to inspect or manage version history. Before changing history or restoring saved work, check that your Source Control state is clean and make sure you understand which changes will be kept.
+Git Graph and reset are useful when you need to inspect or manage version history. Before changing history, check that your Source Control state is clean and make sure you understand which changes will be kept.

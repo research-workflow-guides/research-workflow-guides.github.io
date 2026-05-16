@@ -20,8 +20,6 @@ toc:
     label: 변경사항 확인
   - id: to-reset-to-an-old-version
     label: 옛날 버전으로 돌아가기
-  - id: stash
-    label: Stash
   - id: 넘어가기-전
     label: 넘어가기 전
 tags:
@@ -188,22 +186,6 @@ Version Control은 과정이 복잡하기 때문에 처음에는 신중히 "Hard
 
 [Git 도구 - Reset 명확히 알고 가기](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0)
 
-## Stash
-
-변경 사항(changes)를 임시로 저장하고 싶을 경우, source control에서 'stash'를 이용하세요. Stash는 버전 관리에 사용될 수 있습니다.
-
-Stash를 만들려면 'Stash'를 클릭하세요.
-
-<figure class="image-frame">
-  <img src="/assets/images/stash-1.png" alt="VS Code Source Control Stash 명령">
-</figure>
-
-Stash를 불러오려면 'Apply Stash'를 클릭하세요.
-
-<figure class="image-frame">
-  <img src="/assets/images/stash-2.png" alt="VS Code Source Control Apply Stash 명령">
-</figure>
-
 ## 넘어가기 전
 
-Git Graph, reset, stash는 version history를 확인하거나 관리할 때 유용합니다. 기록을 되돌리거나 임시 저장한 작업을 다시 불러오기 전에는 Source Control 상태가 깨끗한지 확인하고, 어떤 변경 사항이 남는지 먼저 이해한 뒤 진행하세요.
+Git Graph와 reset은 version history를 확인하거나 관리할 때 유용합니다. 기록을 되돌리기 전에는 Source Control 상태가 깨끗한지 확인하고, 어떤 변경 사항이 남는지 먼저 이해한 뒤 진행하세요.
