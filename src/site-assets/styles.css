@@ -17,7 +17,7 @@
   --radius-sm: 12px;
   --gutter: clamp(1rem, 3.6vw, 1.35rem);
   --wrap: min(1160px, calc(100% - (var(--gutter) * 2)));
-  --nav-control-font-size: clamp(0.72rem, calc(0.48rem + 1.12vw), 1rem);
+  --nav-control-font-size: clamp(0.9rem, calc(0.76rem + 0.48vw), 1rem);
   --nav-control-width: clamp(52px, calc(25px + 8.4vw), 92px);
   --nav-control-padding-block: clamp(0.26rem, calc(0.12rem + 0.55vw), 0.45rem);
   --nav-control-padding-inline: clamp(0.2rem, calc(-0.1rem + 1.2vw), 0.8rem);
@@ -417,12 +417,14 @@ kbd {
 .menu-toggle,
 .sidebar-toggle {
   display: none;
-  border: 1px solid rgba(24, 61, 93, 0.14);
-  background: rgba(255, 253, 248, 0.85);
+  border: 0;
+  background: rgba(245, 245, 245, 0.99);
   color: var(--brand);
   border-radius: 999px;
-  padding: 0.7rem 0.95rem;
+  padding: var(--nav-control-padding-block) var(--nav-control-padding-inline);
   font: inherit;
+  font-family: "NanumSquareRound", "Fraunces", serif;
+  font-size: var(--nav-control-font-size);
   font-weight: 600;
   cursor: pointer;
 }
@@ -440,6 +442,11 @@ kbd {
   line-height: inherit;
   text-align: center;
   white-space: nowrap;
+}
+
+.sidebar-toggle {
+  padding-inline: clamp(0.85rem, 2.5vw, 1.25rem);
+  min-width: max-content;
 }
 
 .eyebrow,
