@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc.njk
-title: Bibtex
+title: BibTeX
 description: Manage references in a .bib file and cite sources from your manuscript.
 lang: en
 section: writing-in-vs-code

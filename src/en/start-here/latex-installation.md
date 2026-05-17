@@ -20,7 +20,7 @@ toc:
     label: Platform notes
   - id: perl-requirement
     label: Perl requirement
-  - id: on-demand-packages
+  - id: package-auto-installation
     label: Package auto-installation
   - id: before-proceeding
     label: Before proceeding

@@ -10,11 +10,11 @@ translationKey: writing-syntax
 eyebrow: 주제 2
 lead: 먼저 LaTeX 패턴을 이해하고, 반복 입력은 VS Code snippet으로 저장합니다.
 toc:
-  - id: comparing-latex-and-json
+  - id: latex과-json-비교
     label: LaTeX과 JSON 비교
-  - id: math-delimiters
+  - id: 수식-구분자
     label: 수식 구분자
-  - id: math-structures
+  - id: 수식
     label: 수식
   - id: 표시-수식
     label: 표시 수식

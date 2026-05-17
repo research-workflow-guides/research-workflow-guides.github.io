@@ -10,11 +10,11 @@ translationKey: writing-jabref
 eyebrow: 선택
 lead: JabRef는 BibTeX 파일을 정리하고 편집하는 데 사용할 수 있는 reference manager입니다.
 toc:
-  - id: download-jabref
+  - id: jabref-다운로드
     label: JabRef 다운로드
   - id: official-tutorial
     label: Official Tutorial
-  - id: before-proceeding
+  - id: 넘어가기-전
     label: 넘어가기 전
 tags:
   - doc

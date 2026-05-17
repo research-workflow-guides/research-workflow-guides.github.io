@@ -51,7 +51,6 @@ Create a new private repository with a clear project name. Skip the README, `.gi
   <div>
     <p>Choose a clear name, keep the repository private, and fill out only the basic form fields for the first run.</p>
   </div>
-  <!-- TODO: Retake this screenshot and the following empty-repo screenshot with a private repository example. Keep the captions explicitly aligned with a private repository flow. -->
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="GitHub create repository form">
 

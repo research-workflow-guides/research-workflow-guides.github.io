@@ -51,7 +51,6 @@ tags:
   <div>
     <p>repository 이름과 private 설정만 먼저 정하고, 첫 흐름에서는 기본 폼만 간단히 채우는 편이 가장 단순합니다.</p>
   </div>
-  <!-- TODO: Retake this screenshot and the following empty-repo screenshot with a private repository example. Keep the captions explicitly aligned with a private repository flow. -->
   <figure class="image-frame">
     <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="GitHub 저장소 생성 폼">
 

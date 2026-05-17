@@ -44,11 +44,11 @@ tags:
 
   커서가 있는 줄을 주석으로 처리하거나 취소합니다.
 
-- <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd>)
 
   입력 중인 수식을 실시간으로 보여줍니다.
 
-- <kbd>Ctrl</kbd>+<kbd>S</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>S</kbd>) or <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>⌘</kbd>+<kbd>B</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>S</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>S</kbd>) or <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>B</kbd>)
 
   LaTeX 코드를 컴파일합니다.
 

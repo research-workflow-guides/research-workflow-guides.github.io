@@ -10,7 +10,7 @@ translationKey: initial-setup-project-template
 eyebrow: Step 3
 lead: Download the starter project.
 toc:
-  - id: download-the-starter-archive
+  - id: download-the-template
     label: Download the template
   - id: before-proceeding
     label: Before proceeding

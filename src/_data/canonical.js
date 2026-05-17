@@ -292,7 +292,7 @@ const pages = [
     order: 3,
     group: "project-template",
     title: "Project Template",
-    description: "Open the starter project, run the first build, and confirm the full toolchain works.",
+    description: "Download a starter project, build it once, and confirm the environment is ready.",
     translationKey: "initial-setup-project-template",
     status: "core"
   },
@@ -305,7 +305,7 @@ const pages = [
     order: 3,
     group: "project-template",
     title: "프로젝트 템플릿",
-    description: "starter project를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.",
+    description: "시작용 프로젝트를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.",
     translationKey: "initial-setup-project-template",
     status: "core"
   },
@@ -349,7 +349,7 @@ const pages = [
     order: 1,
     group: "main-topics",
     title: "폴더 등록",
-    description: "VS Code에서 폴더를 열어 workspace로 등록합니다.",
+    description: "VS Code에서 폴더를 열어 작업 공간으로 등록합니다.",
     translationKey: "writing-folder-setup",
     status: "core"
   },
@@ -401,7 +401,7 @@ const pages = [
     order: 2,
     group: "main-topics",
     title: "단축키",
-    description: "매일 반복하는 동작을 줄여주는 핵심 shortcut만 정리합니다.",
+    description: "매일 반복하는 동작을 줄여주는 핵심 단축키만 정리합니다.",
     translationKey: "writing-shortcuts",
     status: "core"
   },
@@ -439,7 +439,7 @@ const pages = [
     slug: "bibliography-citation",
     order: 6,
     group: "reference",
-    title: "Bibtex",
+    title: "BibTeX",
     description: "Manage references in a .bib file and cite sources from your manuscript.",
     translationKey: "writing-bibliography-citation",
     status: "core"
@@ -450,7 +450,7 @@ const pages = [
     lang: "en",
     section: "writing-in-vs-code",
     slug: "jabref",
-    order: 9,
+    order: 7,
     group: "reference",
     title: "JabRef",
     description: "JabRef is a graphical application for managing bibliographical databases.",
@@ -636,7 +636,7 @@ const pages = [
     slug: "bibliography-citation",
     order: 6,
     group: "reference",
-    title: "Bibtex",
+    title: "BibTeX",
     description: ".bib 파일에서 reference를 관리하고 manuscript에서 source를 cite합니다.",
     translationKey: "writing-bibliography-citation",
     status: "core"
@@ -764,7 +764,7 @@ const pages = [
     order: 3,
     group: "preparation",
     title: "Connect GitHub",
-    description: "Set your Git name and email in the VS Code terminal before repository work begins.",
+    description: "Set the Git identity VS Code will use and know what to do if GitHub asks for browser sign-in.",
     translationKey: "git-connect-github",
     status: "core"
   },
@@ -777,7 +777,7 @@ const pages = [
     order: 3,
     group: "preparation",
     title: "GitHub 연결",
-    description: "repository 작업을 시작하기 전에 VS Code 터미널에서 Git 이름과 이메일을 설정합니다.",
+    description: "VS Code에서 사용할 Git identity를 설정하고 GitHub 브라우저 로그인이 나오면 처리합니다.",
     translationKey: "git-connect-github",
     status: "core"
   },
@@ -803,7 +803,7 @@ const pages = [
     order: 4,
     group: "first-github-workflow",
     title: "저장소 만들기",
-    description: "로컬 project를 올리기 전에 첫 private repository를 만듭니다.",
+    description: "프로젝트 파일을 올리기 전에 첫 private repository를 만듭니다.",
     translationKey: "git-create-repository",
     status: "core"
   },
@@ -816,7 +816,7 @@ const pages = [
     order: 5,
     group: "first-github-workflow",
     title: "Clone",
-    description: "Clone the empty repository, add the project files, and publish the first commit.",
+    description: "Choose a clone workflow and open the copied repository in VS Code.",
     translationKey: "git-clone-first-push",
     status: "core"
   },
@@ -829,7 +829,7 @@ const pages = [
     order: 5,
     group: "first-github-workflow",
     title: "클론",
-    description: "빈 저장소를 clone한 뒤 project 파일을 넣고 첫 commit을 push합니다.",
+    description: "clone 방법을 고르고 복사한 repository를 VS Code에서 엽니다.",
     translationKey: "git-clone-first-push",
     status: "core"
   },

@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc.njk
-title: Bibtex
+title: BibTeX
 description: .bib 파일에서 reference를 관리하고 manuscript에서 source를 cite합니다.
 lang: ko
 section: writing-in-vs-code

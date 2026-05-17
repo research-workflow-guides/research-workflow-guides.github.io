@@ -4,13 +4,13 @@ title: Gitignore
 description: 특정 파일이나 폴더를 GitHub 커밋에서 제외합니다.
 lang: ko
 section: git-github
-order: 11
+order: 12
 permalink: /ko/git-github/gitignore/
 translationKey: git-gitignore
 eyebrow: 선택
 lead: "<code>.gitignore</code>를 사용하면 GitHub에 올리지 않을 파일과 폴더를 정리할 수 있습니다."
 toc:
-  - id: ignore-local-clutter
+  - id: 로컬-잡파일-무시
     label: 로컬 잡파일 무시
   - id: 이미-올라간-잡파일들
     label: 이미 올라간 잡파일들

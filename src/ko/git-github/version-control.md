@@ -10,15 +10,15 @@ translationKey: git-version-control
 eyebrow: 주제 3
 lead: Git graph를 이용하여 버전 관리하는 방법을 배워보도록 하겠습니다.
 toc:
-  - id: add-extension
+  - id: extension-추가하기
     label: Extension 추가하기
   - id: git-graph
     label: Git Graph
-  - id: interface
+  - id: 인터페이스
     label: 인터페이스
-  - id: review-of-changes
+  - id: 변경사항-확인review-of-changes
     label: 변경사항 확인
-  - id: to-reset-to-an-old-version
+  - id: 옛날-버전으로-돌아가기
     label: 옛날 버전으로 돌아가기
   - id: 넘어가기-전
     label: 넘어가기 전

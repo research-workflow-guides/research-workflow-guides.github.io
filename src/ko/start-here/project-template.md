@@ -10,7 +10,7 @@ translationKey: initial-setup-project-template
 eyebrow: 3단계
 lead: 시작용 프로젝트를 내려받아 VS Code에서 열고, 빌드를 한 번 실행해 전체 도구 체인이 동작하는지 확인합니다.
 toc:
-  - id: template-받기
+  - id: 템플릿-다운로드하기
     label: 템플릿 다운로드하기
   - id: 넘어가기-전
     label: 넘어가기 전

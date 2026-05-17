@@ -16,7 +16,7 @@ toc:
     label: Prepare revised version
   - id: run-latexdiff
     label: Run latexdiff
-  - id: compile-the-diff-file
+  - id: compile-the-redlined-file
     label: Compile the redlined file
   - id: before-proceeding
     label: Before proceeding

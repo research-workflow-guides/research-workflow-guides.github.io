@@ -10,15 +10,15 @@ translationKey: writing-revision-pdf-latexdiff
 eyebrow: 선택
 lead: 지도교수, 공동저자, 또는 reviewer에게 두 원고 버전 사이의 변경 사항이 명확히 표시된 PDF를 전달해야 할 때 사용합니다.
 toc:
-  - id: prepare-old-version
+  - id: 이전-버전-준비
     label: 이전 버전 준비
-  - id: prepare-revised-version
+  - id: 수정-버전-준비
     label: 수정 버전 준비
-  - id: run-latexdiff
+  - id: latexdiff-실행
     label: latexdiff 실행
-  - id: compile-the-diff-file
+  - id: 수정-사항-파일-컴파일
     label: 수정 사항 파일 컴파일
-  - id: before-proceeding
+  - id: 확인-사항
     label: 확인 사항
 tags:
   - doc

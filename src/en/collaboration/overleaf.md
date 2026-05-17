@@ -19,7 +19,7 @@ toc:
   - id: work-in-overleaf
     label: Work in Overleaf
   - id: push-changes-back-to-github
-    label: Push back to GitHub
+    label: Push changes back to GitHub
   - id: before-proceeding
     label: Before proceeding
 tags:
@@ -27,7 +27,6 @@ tags:
 ---
 ## Professional subscription
 
-<!-- TODO: Restructure this page around the current Overleaf flow: Premium availability, Link GitHub in Account Settings, Import from GitHub, and Use Integrations to sync. Update the surrounding screenshots/captions to match that structure. -->
 This workflow requires the GitHub-connected features in Overleaf Professional. If your plan does not include that integration, stay with the local VS Code workflow.
 
 <div class="doc-step-pair">
