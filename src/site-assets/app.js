@@ -1,4 +1,5 @@
 let pagefindModulePromise;
+let localSearchIndexPromise;
 
 function setupDisclosure(buttonSelector, panelSelector) {
   const buttons = document.querySelectorAll(buttonSelector);
@@ -37,6 +38,20 @@ function getPagefind() {
   return pagefindModulePromise;
 }
 
+function getLocalSearchIndex() {
+  if (!localSearchIndexPromise) {
+    localSearchIndexPromise = fetch("/search-index.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Search index not found");
+        }
+        return response.json();
+      });
+  }
+
+  return localSearchIndexPromise;
+}
+
 function clearNode(node) {
   while (node.firstChild) {
     node.removeChild(node.firstChild);
@@ -59,7 +74,7 @@ function buildResultCard(result, languageLabel) {
 
   const excerpt = document.createElement("p");
   excerpt.className = "search-hit-excerpt";
-  excerpt.innerHTML = result.excerpt || result.meta && result.meta.description || "";
+  excerpt.textContent = result.excerpt || result.meta && result.meta.description || "";
 
   article.appendChild(tag);
   article.appendChild(title);
@@ -90,6 +105,77 @@ function appendSearchGroup(container, title, results) {
   container.appendChild(section);
 }
 
+function normalizeSearchText(value) {
+  return String(value || "").toLowerCase();
+}
+
+function buildSearchSnippet(content, query) {
+  const text = String(content || "").replace(/\s+/g, " ").trim();
+  const lowerText = normalizeSearchText(text);
+  const terms = normalizeSearchText(query).split(/\s+/).filter(Boolean);
+  const firstMatch = terms
+    .map((term) => lowerText.indexOf(term))
+    .filter((index) => index >= 0)
+    .sort((left, right) => left - right)[0];
+
+  if (firstMatch === undefined) {
+    return text.slice(0, 180);
+  }
+
+  const start = Math.max(0, firstMatch - 70);
+  const end = Math.min(text.length, firstMatch + 150);
+  const prefix = start > 0 ? "..." : "";
+  const suffix = end < text.length ? "..." : "";
+
+  return `${prefix}${text.slice(start, end)}${suffix}`;
+}
+
+async function searchLocalIndex(query) {
+  const pages = await getLocalSearchIndex();
+  const terms = normalizeSearchText(query).split(/\s+/).filter(Boolean);
+
+  return pages
+    .map((page) => {
+      const title = normalizeSearchText(page.title);
+      const description = normalizeSearchText(page.description);
+      const content = normalizeSearchText(page.content);
+      const haystack = `${title} ${description} ${content}`;
+
+      if (!terms.every((term) => haystack.includes(term))) {
+        return null;
+      }
+
+      const score = terms.reduce((total, term) => {
+        let nextScore = total;
+
+        if (title.includes(term)) {
+          nextScore += 20;
+        }
+        if (description.includes(term)) {
+          nextScore += 8;
+        }
+        if (content.includes(term)) {
+          nextScore += 2;
+        }
+
+        return nextScore;
+      }, 0);
+
+      return {
+        url: page.url,
+        meta: {
+          title: page.title,
+          description: page.description
+        },
+        excerpt: buildSearchSnippet(page.content || page.description, query),
+        score
+      };
+    })
+    .filter(Boolean)
+    .sort((left, right) => right.score - left.score)
+    .slice(0, 18);
+}
+
 async function runSearch(root, query) {
   const lang = root.dataset.searchLang;
   const input = root.querySelector("[data-search-input]");
@@ -100,23 +186,15 @@ async function runSearch(root, query) {
   clearNode(resultsNode);
 
   if (query.trim().length < 2) {
-    status.textContent =
-      lang === "ko"
-        ? "두 글자 이상 입력하면 검색이 시작됩니다."
-        : "Search starts after two or more characters.";
+    status.textContent = "";
+    input.setAttribute("aria-busy", "false");
     return;
   }
 
   status.textContent = lang === "ko" ? "검색 중..." : "Searching...";
 
   try {
-    const pagefind = await getPagefind();
-    const response = await pagefind.search(query);
-    const matches = await Promise.all(
-      response.results.slice(0, 12).map(async (result) => {
-        return result.data();
-      })
-    );
+    const matches = await searchLocalIndex(query);
 
     const sameLang = matches.filter((result) => result.url.startsWith(sameLangPrefix));
     const otherLang = matches.filter((result) => !result.url.startsWith(sameLangPrefix));
@@ -144,8 +222,8 @@ async function runSearch(root, query) {
   } catch (error) {
     status.textContent =
       lang === "ko"
-        ? "검색 인덱스를 찾지 못했습니다. `npm run build` 후 `npm run pagefind`를 실행해주세요."
-        : "Search index not found. Run `npm run build` and then `npm run pagefind`.";
+        ? "검색 인덱스를 찾지 못했습니다. `npm run build`를 실행해주세요."
+        : "Search index not found. Run `npm run build`.";
   }
 
   input.setAttribute("aria-busy", "false");
@@ -169,6 +247,76 @@ function setupSearch() {
       timer = window.setTimeout(() => {
         runSearch(root, query);
       }, 180);
+    });
+  });
+}
+
+function updateHeaderSearchPanelSize(panel) {
+  const nav = document.getElementById("primary-nav");
+  const shell = panel.closest("[data-header-search-panel]");
+
+  if (!nav || !shell || window.matchMedia("(max-width: 760px)").matches) {
+    panel.style.removeProperty("--header-search-left");
+    panel.style.removeProperty("--header-search-width");
+    return;
+  }
+
+  const navRect = nav.getBoundingClientRect();
+  const shellRect = shell.getBoundingClientRect();
+
+  panel.style.setProperty("--header-search-left", `${Math.max(0, navRect.left - shellRect.left)}px`);
+  panel.style.setProperty("--header-search-width", `${navRect.width}px`);
+}
+
+function setupHeaderSearch() {
+  const buttons = document.querySelectorAll("[data-header-search-toggle]");
+
+  buttons.forEach((button) => {
+    const panelId = button.getAttribute("aria-controls");
+    const shell = panelId ? document.getElementById(panelId) : null;
+    const panel = shell ? shell.querySelector(".header-search-panel") : null;
+    const input = shell ? shell.querySelector("[data-search-input]") : null;
+
+    if (!shell || !panel || !input) {
+      return;
+    }
+
+    function setOpen(isOpen) {
+      button.setAttribute("aria-expanded", String(isOpen));
+      shell.dataset.open = String(isOpen);
+
+      if (isOpen) {
+        updateHeaderSearchPanelSize(panel);
+        window.setTimeout(() => input.focus(), 0);
+      }
+    }
+
+    button.addEventListener("click", () => {
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
+        setOpen(false);
+        button.focus();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (
+        button.getAttribute("aria-expanded") === "true" &&
+        !shell.contains(event.target) &&
+        !button.contains(event.target)
+      ) {
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (button.getAttribute("aria-expanded") === "true") {
+        updateHeaderSearchPanelSize(panel);
+      }
     });
   });
 }
@@ -247,5 +395,6 @@ document.addEventListener("DOMContentLoaded", function () {
   setupDisclosure("[data-menu-toggle]", ".site-nav");
   setupDisclosure("[data-toc-toggle]", "[data-toc-panel]");
   setupSearch();
+  setupHeaderSearch();
   setupCodeCopyButtons();
 });

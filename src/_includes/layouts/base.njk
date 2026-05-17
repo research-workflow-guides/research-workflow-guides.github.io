@@ -47,6 +47,15 @@
             {% if currentLangSwitch %}
               <a class="lang-switch" href="{{ currentLangSwitch.url }}">{{ currentLangSwitch.label }}</a>
             {% endif %}
+            <button
+              class="nav-search-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-search-panel"
+              data-header-search-toggle
+            >
+              {{ "검색" if currentLang == "ko" else "Search" }}
+            </button>
           </nav>
         {% elif navStyle == "legacy-ko-section" %}
           <button
@@ -70,6 +79,15 @@
             {% if currentLangSwitch %}
               <a class="lang-switch" href="{{ currentLangSwitch.url }}">{{ currentLangSwitch.label }}</a>
             {% endif %}
+            <button
+              class="nav-search-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-search-panel"
+              data-header-search-toggle
+            >
+              {{ "검색" if currentLang == "ko" else "Search" }}
+            </button>
           </nav>
         {% elif currentLang %}
           <button
@@ -98,6 +116,15 @@
             {% if currentLangSwitch %}
               <a class="lang-switch" href="{{ currentLangSwitch.url }}">{{ currentLangSwitch.label }}</a>
             {% endif %}
+            <button
+              class="nav-search-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-search-panel"
+              data-header-search-toggle
+            >
+              {{ "검색" if currentLang == "ko" else "Search" }}
+            </button>
           </nav>
         {% else %}
           <nav class="site-nav site-nav-root" aria-label="Primary">
@@ -107,6 +134,29 @@
           </nav>
         {% endif %}
       </div>
+      {% if currentLang == "en" or currentLang == "ko" %}
+        <div id="site-search-panel" class="wrap header-search-shell" data-header-search-panel data-open="false">
+          <section class="header-search-panel" data-search-root data-search-lang="{{ currentLang }}" data-pagefind-ignore="all">
+            <label class="search-label" for="site-search-input">
+              {% if currentLang == "ko" %}
+                문서 검색
+              {% else %}
+                Search the docs
+              {% endif %}
+            </label>
+            <input
+              id="site-search-input"
+              class="search-input"
+              type="search"
+              autocomplete="off"
+              placeholder="{% if currentLang == 'ko' %}예: GitHub, LaTeX, branch{% else %}e.g. GitHub, LaTeX, branch{% endif %}"
+              data-search-input
+            >
+            <p class="search-status" data-search-status></p>
+            <div class="search-results" data-search-results></div>
+          </section>
+        </div>
+      {% endif %}
     </header>
 
     {{ content | safe }}
