@@ -512,6 +512,19 @@ const pages = [
     status: "core"
   },
   {
+    url: "/ko/collaboration/branch/",
+    pageType: "document",
+    lang: "ko",
+    section: "collaboration",
+    slug: "branch",
+    order: 2,
+    group: "git-for-collaboration",
+    title: "Branch",
+    description: "브랜치를 사용해 작업을 분리하고, 작업 맥락을 바꾸며, main 흐름을 방해하지 않고 협업합니다.",
+    translationKey: "git-branch",
+    status: "core"
+  },
+  {
     url: "/en/collaboration/merge/",
     pageType: "document",
     lang: "en",
@@ -525,6 +538,19 @@ const pages = [
     status: "core"
   },
   {
+    url: "/ko/collaboration/merge/",
+    pageType: "document",
+    lang: "ko",
+    section: "collaboration",
+    slug: "merge",
+    order: 3,
+    group: "git-for-collaboration",
+    title: "Merge",
+    description: "분리된 branch의 작업이 준비되었을 때 main으로 다시 합칩니다.",
+    translationKey: "git-merge",
+    status: "core"
+  },
+  {
     url: "/en/collaboration/pull-request/",
     pageType: "document",
     lang: "en",
@@ -534,6 +560,19 @@ const pages = [
     group: "git-for-collaboration",
     title: "Pull Request",
     description: "Review branch changes on GitHub before merging them into the main project history.",
+    translationKey: "git-pull-request",
+    status: "core"
+  },
+  {
+    url: "/ko/collaboration/pull-request/",
+    pageType: "document",
+    lang: "ko",
+    section: "collaboration",
+    slug: "pull-request",
+    order: 4,
+    group: "git-for-collaboration",
+    title: "Pull Request",
+    description: "Branch 변경 사항을 main 이력에 merge하기 전에 GitHub에서 검토합니다.",
     translationKey: "git-pull-request",
     status: "core"
   },
@@ -800,7 +839,7 @@ const pages = [
     lang: "en",
     section: "git-github",
     slug: "pull-push",
-    order: 6,
+    order: 7,
     group: "daily-workflow",
     title: "Pull & Push",
     description: "Repeat one clean sync loop so local work and remote history stay aligned.",
@@ -813,7 +852,7 @@ const pages = [
     lang: "ko",
     section: "git-github",
     slug: "pull-push",
-    order: 6,
+    order: 7,
     group: "daily-workflow",
     title: "Pull과 Push",
     description: "로컬 작업과 원격 이력을 맞추는 기본 sync 루프를 반복합니다.",
@@ -839,7 +878,7 @@ const pages = [
     lang: "en",
     section: "git-github",
     slug: "git-status",
-    order: 7,
+    order: 6,
     group: "daily-workflow",
     title: "Git status",
     description: "Check what changed before you stage, commit, or push.",
@@ -852,7 +891,7 @@ const pages = [
     lang: "ko",
     section: "git-github",
     slug: "git-status",
-    order: 7,
+    order: 6,
     group: "daily-workflow",
     title: "Git status",
     description: "stage, commit, push 전에 무엇이 바뀌었는지 확인합니다.",
@@ -950,6 +989,19 @@ const pages = [
     title: "소스 컨트롤",
     description: "VS Code Source Control에서 변경 사항을 stash하거나 discard합니다.",
     translationKey: "git-source-control",
+    status: "optional"
+  },
+  {
+    url: "/ko/git-github/recovery/",
+    pageType: "document",
+    lang: "ko",
+    section: "git-github",
+    slug: "recovery",
+    order: 11,
+    group: "daily-workflow",
+    title: "복구",
+    description: "commit된 작업을 복구하고, 로컬 실수를 되돌리며, 안전하게 알고 있는 Git 상태로 돌아갑니다.",
+    translationKey: "git-recovery",
     status: "optional"
   },
   {

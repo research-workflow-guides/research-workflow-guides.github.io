@@ -4,10 +4,10 @@ title: Git status
 description: Check what changed before you stage, commit, or push.
 lang: en
 section: git-github
-order: 7
+order: 6
 permalink: /en/git-github/git-status/
 translationKey: git-status
-eyebrow: Topic 2
+eyebrow: Topic 1
 lead: Check what changed before you stage, commit, or push.
 toc:
   - id: check-the-current-state

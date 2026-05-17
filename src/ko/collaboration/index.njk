@@ -47,5 +47,31 @@ pageClass: page-section
         {% endfor %}
       </div>
     </section>
+
+    <section id="git-for-collaboration" class="doc-section">
+      <h2>협업을 위한 Git</h2>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in grouped["git-for-collaboration"] %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            {% if doc.status == "optional" %}
+              <p class="card-kicker">선택</p>
+              {% if doc.logo %}
+                <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
+              {% else %}
+                <h3>{{ doc.title }}</h3>
+              {% endif %}
+            {% else %}
+              <p class="card-kicker">주제 {{ doc.order }}</p>
+              {% if doc.logo %}
+                <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
+              {% else %}
+                <h3>{{ doc.title }}</h3>
+              {% endif %}
+            {% endif %}
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
   </article>
 </main>
