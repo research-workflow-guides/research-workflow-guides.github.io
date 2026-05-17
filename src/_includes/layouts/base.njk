@@ -116,17 +116,13 @@
 
     <footer class="site-footer" data-pagefind-ignore="all">
       <div class="wrap footer-inner">
-        <div>
-          <p class="footer-brand">{{ site.name }}</p>
-          {% set latestFooterDate = git.latestCommitDate or (updates.latest.date if updates.latest else null) %}
-          {% if latestFooterDate %}
-            <p class="footer-update">{{ currentUi.latestUpdate }} {{ latestFooterDate }}</p>
-          {% endif %}
-        </div>
-        <div class="footer-meta">
-          <p>&copy; 2026 {{ site.authorLine }}</p>
-          <a href="{{ site.oldVersionUrl }}">{{ currentUi.oldVersion }}</a>
-        </div>
+        <p class="footer-brand">{{ site.name }}</p>
+        <p class="footer-copy">&copy; 2026 {{ site.authorLine }}</p>
+        {% set latestFooterDate = git.latestCommitDate or (updates.latest.date if updates.latest else null) %}
+        {% if latestFooterDate %}
+          <p class="footer-update">{{ currentUi.latestUpdate }} {{ latestFooterDate | dateDots }}</p>
+        {% endif %}
+        <a class="footer-old-version" href="{{ site.oldVersionUrl }}">{{ currentUi.oldVersion }}</a>
       </div>
     </footer>
 
