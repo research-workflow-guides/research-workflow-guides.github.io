@@ -14,26 +14,13 @@ pageClass: page-landing
     <h1 class="wrap hero-h1">효율적인 연구 작업 흐름</h1>
     <p class="wrap lead">LaTeX, VS Code, GitHub로 효율적인 연구 환경을 구축하세요.</p>
     <div class="wrap hero-grid">
-      <div class="hero-copy-block">
-        <p class="hero-copy">
-          LaTeX, VS Code, Git, GitHub를 활용하는 연구자를 위한 가이드북입니다. 환경 설치부터 일상적인 작성 루프, 저장소 협업까지 단계별로 정리했습니다.
-        </p>
-        <div class="button-row">
-          <a class="button button-secondary" href="/">English</a>
-          <a class="button button-primary" href="/ko/">한국어</a>
-        </div>
-      </div>
-
       <aside class="hero-panel panel">
         <p class="eyebrow">{{ ui.ko.recentUpdates }}</p>
-        {% if updates.currentBuild %}
-          <h2 class="hero-panel-title">{{ updates.currentBuild.title }}</h2>
-        {% endif %}
         <dl class="updates-list">
           {% for item in currentUpdates %}
             {% if loop.index <= 1 %}
               <div>
-                <dt>{{ item.date }}</dt>
+                <dt class="update-heading">({{ item.date | dateDots }}) {{ item.title }}</dt>
                 <dd>
                   {% if item.linkItems %}
                     <ul class="update-link-list">
@@ -65,7 +52,8 @@ pageClass: page-landing
           <a class="feature-card panel card--{{ section.key }}" href="{{ section.url.ko }}">
             <div class="card-logo-row">
               {% if section.key == "initial-setup" %}
-                <img class="card-logo" src="/assets/images/LaTeX_project_logo_bird.svg.png" alt="LaTeX">
+                <img class="card-logo card-logo--latex-full" src="/assets/images/LaTeX_project_logo_bird.svg.png" alt="LaTeX">
+                <img class="card-logo card-logo--latex-compact" src="/assets/images/latex-project-logo_288x288.png" alt="LaTeX">
                 <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
               {% elif section.key == "writing-in-vs-code" %}
                 <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">

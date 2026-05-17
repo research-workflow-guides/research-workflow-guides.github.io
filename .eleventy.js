@@ -115,6 +115,10 @@ module.exports = async function (eleventyConfig) {
     return value.endsWith("/") ? value : `${value}/`;
   });
 
+  eleventyConfig.addFilter("dateDots", function (value) {
+    return value ? String(value).replaceAll("-", ".") : "";
+  });
+
   return {
     dir: {
       input: "src",

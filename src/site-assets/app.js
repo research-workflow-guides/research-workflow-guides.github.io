@@ -308,6 +308,7 @@ function setupSearch() {
 function updateHeaderSearchPanelSize(panel) {
   const nav = document.getElementById("primary-nav");
   const shell = panel.closest("[data-header-search-panel]");
+  const button = shell ? document.querySelector(`[aria-controls="${shell.id}"][data-header-search-toggle]`) : null;
 
   if (!nav || !shell || window.matchMedia("(max-width: 760px)").matches) {
     panel.style.removeProperty("--header-search-left");
@@ -316,10 +317,13 @@ function updateHeaderSearchPanelSize(panel) {
   }
 
   const navRect = nav.getBoundingClientRect();
+  const buttonRect = button ? button.getBoundingClientRect() : navRect;
   const shellRect = shell.getBoundingClientRect();
+  const left = Math.min(navRect.left, buttonRect.left);
+  const right = Math.max(navRect.right, buttonRect.right);
 
-  panel.style.setProperty("--header-search-left", `${Math.max(0, navRect.left - shellRect.left)}px`);
-  panel.style.setProperty("--header-search-width", `${navRect.width}px`);
+  panel.style.setProperty("--header-search-left", `${Math.max(0, left - shellRect.left)}px`);
+  panel.style.setProperty("--header-search-width", `${Math.min(shellRect.width, right - left)}px`);
 }
 
 function setupHeaderSearch() {

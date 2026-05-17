@@ -26,15 +26,6 @@
         <a class="brand" href="/">{{ site.name }}</a>
 
         {% if navStyle == "legacy-en" %}
-          <button
-            class="menu-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="primary-nav"
-            data-menu-toggle
-          >
-            {{ currentUi.menu }}
-          </button>
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
             {% for item in navigation.legacy.en %}
               <a
@@ -44,29 +35,8 @@
                 {{ item.label }}
               </a>
             {% endfor %}
-            {% if currentLangSwitch %}
-              <a class="lang-switch" href="{{ currentLangSwitch.url }}">{{ currentLangSwitch.label }}</a>
-            {% endif %}
-            <button
-              class="nav-search-button"
-              type="button"
-              aria-expanded="false"
-              aria-controls="site-search-panel"
-              data-header-search-toggle
-            >
-              {{ "검색" if currentLang == "ko" else "Search" }}
-            </button>
           </nav>
         {% elif navStyle == "legacy-ko-section" %}
-          <button
-            class="menu-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="primary-nav"
-            data-menu-toggle
-          >
-            {{ currentUi.menu }}
-          </button>
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
             {% for item in navigation.legacy.koSection %}
               <a
@@ -76,29 +46,8 @@
                 {{ item.label }}
               </a>
             {% endfor %}
-            {% if currentLangSwitch %}
-              <a class="lang-switch" href="{{ currentLangSwitch.url }}">{{ currentLangSwitch.label }}</a>
-            {% endif %}
-            <button
-              class="nav-search-button"
-              type="button"
-              aria-expanded="false"
-              aria-controls="site-search-panel"
-              data-header-search-toggle
-            >
-              {{ "검색" if currentLang == "ko" else "Search" }}
-            </button>
           </nav>
         {% elif currentLang %}
-          <button
-            class="menu-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="primary-nav"
-            data-menu-toggle
-          >
-            {{ currentUi.menu }}
-          </button>
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
             {% for section in navigation.sections %}
               <div class="nav-dropdown nav-section--{{ section.key }}">
@@ -113,6 +62,16 @@
                 </div>
               </div>
             {% endfor %}
+          </nav>
+        {% else %}
+          <nav class="site-nav site-nav-root" aria-label="Primary">
+            {% for language in navigation.languages %}
+              <a href="{{ language.url }}">{{ language.label }}</a>
+            {% endfor %}
+          </nav>
+        {% endif %}
+        {% if currentLang == "en" or currentLang == "ko" %}
+          <div class="header-actions">
             {% if currentLangSwitch %}
               <a class="lang-switch" href="{{ currentLangSwitch.url }}">{{ currentLangSwitch.label }}</a>
             {% endif %}
@@ -125,13 +84,7 @@
             >
               {{ "검색" if currentLang == "ko" else "Search" }}
             </button>
-          </nav>
-        {% else %}
-          <nav class="site-nav site-nav-root" aria-label="Primary">
-            {% for language in navigation.languages %}
-              <a href="{{ language.url }}">{{ language.label }}</a>
-            {% endfor %}
-          </nav>
+          </div>
         {% endif %}
       </div>
       {% if currentLang == "en" or currentLang == "ko" %}
