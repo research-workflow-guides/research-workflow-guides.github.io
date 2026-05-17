@@ -133,7 +133,7 @@ const sectionDefinitions = [
     },
     title: {
       en: "Collaboration",
-      ko: "협업"
+      ko: "공동 작업하기"
     },
     summary: {
       en: "Move from solo repository habits into predictable small-team collaboration.",
@@ -155,7 +155,7 @@ const sectionDefinitions = [
         key: "git-for-collaboration",
         label: {
           en: "Git for collaboration",
-          ko: "Git 협업"
+          ko: "공동 작업을 위한 Git"
         }
       }
     ]
