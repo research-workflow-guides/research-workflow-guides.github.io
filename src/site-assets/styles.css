@@ -23,6 +23,42 @@
   --nav-control-padding-inline: clamp(0.2rem, calc(-0.1rem + 1.2vw), 0.8rem);
 }
 
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("/assets/fonts/nanum-square-round/NanumSquareRoundL.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF;
+}
+
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("/assets/fonts/nanum-square-round/NanumSquareRoundR.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF;
+}
+
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("/assets/fonts/nanum-square-round/NanumSquareRoundB.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF;
+}
+
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("/assets/fonts/nanum-square-round/NanumSquareRoundEB.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -45,13 +81,48 @@ body {
 }
 /* Korean font overrides */
 [data-page-lang="ko"] {
-  font-family: "Noto Serif KR", serif;
+  font-family: "NanumSquareRound", "Noto Serif KR", serif;
+  word-break: keep-all;
 }
 
 [data-page-lang] h1,
 [data-page-lang] h2,
 [data-page-lang] h3 {
   letter-spacing: 0;
+}
+
+[data-page-lang="ko"] h1,
+[data-page-lang="ko"] h2,
+[data-page-lang="ko"] h3,
+[data-page-lang="ko"] .landing-hero .lead,
+[data-page-lang="ko"] .updates-list .update-heading,
+[data-page-lang="ko"] .feature-card h3,
+[data-page-lang="ko"] .language-card h2,
+[data-page-lang="ko"] .hero-panel-title {
+  font-family: "NanumSquareRound", "Fraunces", serif;
+}
+
+[data-page-lang="ko"] .brand {
+  font-family: "Fraunces", serif;
+}
+
+[data-page-lang="ko"] .site-nav a,
+[data-page-lang="ko"] .lang-switch,
+[data-page-lang="ko"] .nav-search-button,
+[data-page-lang="ko"] .button,
+[data-page-lang="ko"] .text-link {
+  font-family: "NanumSquareRound", "Noto Serif KR", serif;
+}
+
+[data-page-lang="ko"] .eyebrow,
+[data-page-lang="ko"] .card-kicker,
+[data-page-lang="ko"] .search-hit-tag {
+  font-family: "NanumSquareRound", "Noto Serif KR", serif;
+  letter-spacing: 0.03em;
+}
+
+[data-page-lang="ko"] .updates-list dd {
+  font-family: "NanumSquareRound", "Noto Serif KR", serif;
 }
 
 img {
@@ -386,7 +457,7 @@ h2,
 h3 {
   margin: 0;
   color: var(--ink);
-  font-family: Arial, sans-serif;
+  font-family: "Fraunces", serif;
   font-weight: 700;
   line-height: 1.08;
   overflow-wrap: break-word;
@@ -442,7 +513,7 @@ li {
 .landing-hero .lead {
   color: var(--ink);
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-  font-family: Arial, sans-serif;
+  font-family: "Fraunces", serif;
   font-weight: 400;
   max-width: none;
   margin: 0 auto;
@@ -583,7 +654,7 @@ li {
 }
 
 .updates-list {
-  margin: 0.35rem 0 0;
+  margin: 0;
   display: grid;
   gap: 0.35rem;
 }
@@ -595,15 +666,22 @@ li {
 }
 
 .updates-list .update-heading {
+  display: block;
   color: var(--ink);
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
   font-weight: 700;
-  white-space: nowrap;
+  line-height: 1.08;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .updates-list dd {
-  margin: 0.05rem 0 0;
+  margin: 0.6rem 0 0;
+  font-family: "Noto Serif KR", serif;
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 .updates-list dd a {
@@ -622,7 +700,7 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 0.85rem;
+  font-size: inherit;
 }
 
 .update-link-list li {
@@ -1601,6 +1679,10 @@ li > .image-frame {
 }
 
 @media (max-width: 1000px) {
+  .updates-list .update-heading {
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
+  }
+
   .route-map-grid {
     gap: 0.75rem;
   }
@@ -1666,6 +1748,14 @@ li > .image-frame {
 }
 
 @media (max-width: 560px) {
+  .updates-list .update-heading {
+    font-size: clamp(0.92rem, 4vw, 1.02rem);
+  }
+
+  .updates-list dd {
+    font-size: 0.9rem;
+  }
+
   .route-map-grid .feature-card {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     column-gap: 0.7rem;
