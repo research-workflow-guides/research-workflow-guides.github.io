@@ -520,6 +520,10 @@ li {
   line-height: 1.35;
 }
 
+.responsive-break {
+  display: inline;
+}
+
 .hero-grid {
   display: block;
   margin-top: 1.8rem;
@@ -1640,7 +1644,17 @@ li > .image-frame {
   }
 
   .landing-hero .hero-h1 {
-    font-size: clamp(1.45rem, calc(0.22rem + 5.35vw), 2.6rem);
+    font-size: clamp(1.1rem, 5vw, 2.2rem);
+    white-space: nowrap;
+  }
+
+  .landing-hero .lead {
+    font-size: var(--nav-control-font-size);
+    line-height: 1.45;
+  }
+
+  .responsive-break {
+    display: block;
   }
 
   .hero-copy-block {
