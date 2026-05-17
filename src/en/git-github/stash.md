@@ -1,15 +1,17 @@
 ---
 layout: layouts/doc.njk
-title: Changes
-description: Temporarily save local changes and apply them again when needed.
+title: Source control
+description: Use VS Code Source Control to stash or discard local changes.
 lang: en
 section: git-github
 order: 10
-permalink: /en/git-github/changes/
+permalink: /en/git-github/source-control/
 translationKey: git-stash
 eyebrow: Optional
 lead: Manage local changes by saving them for later or discarding them when they are no longer needed.
 toc:
+  - id: open-changes
+    label: Open changes
   - id: stash
     label: Stash
   - id: discard-changes
@@ -17,6 +19,28 @@ toc:
 tags:
   - doc
 ---
+## Open changes
+
+Open the Source Control view to see files that have changed since the last commit.
+
+<figure class="image-frame">
+  <img src="/assets/images/source-control-1.png" alt="VS Code Source Control view showing changed files">
+</figure>
+
+The number on the Source Control icon and next to Changes shows how many files currently have changes.
+
+Click a file under Changes to inspect what changed.
+
+<figure class="image-frame">
+  <img src="/assets/images/source-control-2.png" alt="Changed file selected in VS Code Source Control">
+</figure>
+
+VS Code opens a comparison view. The left side shows the previous version, and the right side shows the current working tree. Red highlights show removed or previous content, while green highlights show added or current content.
+
+<figure class="image-frame">
+  <img src="/assets/images/source-control-3.png" alt="VS Code comparison view showing old and current file versions">
+</figure>
+
 ## Stash
 
 If you want to temporarily save your changes, you can use the 'stash' feature in Source Control. Stashing can be useful for version control purposes.
