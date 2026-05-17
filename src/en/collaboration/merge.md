@@ -18,6 +18,8 @@ toc:
     label: Merge into main
   - id: push-the-merge
     label: Push the merge
+  - id: pull-from-different-branches
+    label: Pull from different branches
   - id: before-proceeding
     label: Before proceeding
 tags:
@@ -72,6 +74,60 @@ git push origin main
 ```
 
 If the merged branch is no longer needed, you can delete it after confirming that the important work is now on `main`.
+
+## Pull from different branches
+
+Sometimes you are working on one branch, such as `new-contents`, but you need to bring in the latest work from `main`. In that case, first make sure you are on the branch that should receive the changes.
+
+For example, while you are on `new-contents`, run:
+
+```bash
+git pull origin main
+```
+
+This pulls the latest `main` branch from GitHub and merges it into the branch you are currently using.
+
+<figure class="image-frame">
+  <img src="/assets/images/pull-different-branch-1.png" alt="Terminal running git pull origin main while on another branch">
+</figure>
+
+If the two branches changed the same file, Git may stop and ask you to resolve a conflict. VS Code then shows the merge state in Source Control.
+
+<figure class="image-frame">
+  <img src="/assets/images/pull-different-branch-2.png" alt="VS Code Source Control showing merge changes after pulling main into another branch">
+</figure>
+
+After you resolve the conflict and stage the files, click `Continue` to create the merge commit.
+
+<figure class="image-frame">
+  <img src="/assets/images/pull-different-branch-3.png" alt="VS Code Source Control Continue button after staged merge changes">
+</figure>
+
+VS Code prepares a merge commit message. You can keep the default message or replace it with a short message that explains the merge.
+
+<figure class="image-frame">
+  <img src="/assets/images/pull-different-branch-4.png" alt="VS Code Source Control commit message after pulling main into a branch">
+</figure>
+
+Then sync or push the branch so GitHub receives the merge commit.
+
+<figure class="image-frame">
+  <img src="/assets/images/pull-different-branch-5.png" alt="VS Code Source Control Sync Changes button after merge commit">
+</figure>
+
+VS Code may warn that the action will pull and push commits for the current branch. Confirm only if you are ready to update that branch on GitHub.
+
+<figure class="image-frame">
+  <img src="/assets/images/pull-different-branch-6.png" alt="VS Code confirmation dialog before syncing branch commits">
+</figure>
+
+After the sync finishes, Git Graph shows the merge commit on the current branch.
+
+<figure class="image-frame">
+  <img src="/assets/images/pull-different-branch-7.png" alt="Git Graph showing a merge commit after pulling main into another branch">
+</figure>
+
+Remember that plain `git pull` pulls from the upstream branch of your current branch. To pull from `main` while staying on another branch, specify `origin main`.
 
 ## Before proceeding
 
