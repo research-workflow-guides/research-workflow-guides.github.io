@@ -483,6 +483,22 @@ li {
   text-decoration: underline;
 }
 
+.update-link-list {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.update-link-list li {
+  display: inline;
+}
+
+.update-link-list li:not(:last-child)::after {
+  content: ", ";
+  color: var(--text);
+}
+
 .card-logo-row {
   display: flex;
   align-items: center;

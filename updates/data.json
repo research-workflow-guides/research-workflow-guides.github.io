@@ -1,9 +1,92 @@
 {
   "currentBuild": {
-    "title": "Migration is done.",
-    "summary": "Core English and Korean paths have been reorganized under shared templates, Markdown documents, and a search-ready static build."
+    "title": "New contents are added.",
+    "summary": "New writing, GitHub, and collaboration pages have been added to the guidebook."
   },
   "items": [
+    {
+      "title": "New contents are added.",
+      "description": "New writing, GitHub, and collaboration pages are available.",
+      "date": "2026-05-17",
+      "status": "completed",
+      "linkItems": [
+        {
+          "title": "BibTeX",
+          "links": {
+            "en": "/en/writing-in-vs-code/bibliography-citation/",
+            "ko": "/ko/writing-in-vs-code/bibliography-citation/"
+          }
+        },
+        {
+          "title": "JabRef",
+          "links": {
+            "en": "/en/writing-in-vs-code/jabref/",
+            "ko": "/ko/writing-in-vs-code/jabref/"
+          }
+        },
+        {
+          "title": "Sync Your VS Code Setup",
+          "titles": {
+            "en": "Sync Your VS Code Setup",
+            "ko": "VS Code 작업 환경 동기화"
+          },
+          "links": {
+            "en": "/en/writing-in-vs-code/settings-sync/",
+            "ko": "/ko/writing-in-vs-code/settings-sync/"
+          }
+        },
+        {
+          "title": "git status",
+          "links": {
+            "en": "/en/git-github/git-status/",
+            "ko": "/ko/git-github/git-status/"
+          }
+        },
+        {
+          "title": "source control",
+          "titles": {
+            "en": "source control",
+            "ko": "소스 컨트롤"
+          },
+          "links": {
+            "en": "/en/git-github/source-control/",
+            "ko": "/ko/git-github/source-control/"
+          }
+        },
+        {
+          "title": "recovery",
+          "titles": {
+            "en": "recovery",
+            "ko": "복구"
+          },
+          "links": {
+            "en": "/en/git-github/recovery/",
+            "ko": "/ko/git-github/recovery/"
+          }
+        },
+        {
+          "title": "branch",
+          "links": {
+            "en": "/en/collaboration/branch/",
+            "ko": "/ko/collaboration/branch/"
+          }
+        },
+        {
+          "title": "merge",
+          "links": {
+            "en": "/en/collaboration/merge/",
+            "ko": "/ko/collaboration/merge/"
+          }
+        },
+        {
+          "title": "pull request",
+          "links": {
+            "en": "/en/collaboration/pull-request/",
+            "ko": "/ko/collaboration/pull-request/"
+          }
+        }
+      ]
+    },
     {
       "title": "Overleaf",
       "description": "Overleaf collaboration workflow is available.",

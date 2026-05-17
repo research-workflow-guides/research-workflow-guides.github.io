@@ -33,12 +33,50 @@ function resolveLink(links, lang) {
   return links[lang] || links.en || null;
 }
 
+function resolveTitle(item, lang) {
+  if (!item.titles) {
+    return item.title;
+  }
+
+  return item.titles[lang] || item.titles.en || item.title;
+}
+
+function normalizeLinkItems(linkItems) {
+  if (!Array.isArray(linkItems)) {
+    return null;
+  }
+
+  const normalizedItems = linkItems
+    .map((item) => {
+      const links = normalizeLinks(item.links, item.url);
+
+      if (!links) {
+        return null;
+      }
+
+      return {
+        ...item,
+        links,
+        urlsByLang: {
+          en: resolveLink(links, "en"),
+          ko: resolveLink(links, "ko")
+        },
+        url: resolveLink(links, "en")
+      };
+    })
+    .filter(Boolean);
+
+  return normalizedItems.length ? normalizedItems : null;
+}
+
 const normalized = data.items.map((item) => {
   const links = normalizeLinks(item.links, item.url);
+  const linkItems = normalizeLinkItems(item.linkItems);
 
   return {
     ...item,
     links,
+    linkItems,
     urlsByLang: {
       en: resolveLink(links, "en"),
       ko: resolveLink(links, "ko")
@@ -54,7 +92,15 @@ const completed = normalized
 function withResolvedUrl(items, lang) {
   return items.map((item) => ({
     ...item,
-    url: resolveLink(item.links, lang)
+    title: resolveTitle(item, lang),
+    url: resolveLink(item.links, lang),
+    linkItems: item.linkItems
+      ? item.linkItems.map((linkItem) => ({
+          ...linkItem,
+          title: resolveTitle(linkItem, lang),
+          url: resolveLink(linkItem.links, lang)
+        }))
+      : null
   }));
 }
 
