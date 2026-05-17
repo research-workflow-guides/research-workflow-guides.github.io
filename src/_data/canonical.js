@@ -914,15 +914,15 @@ const pages = [
     status: "core"
   },
   {
-    url: "/en/git-github/changes/",
+    url: "/en/git-github/source-control/",
     pageType: "document",
     lang: "en",
     section: "git-github",
-    slug: "changes",
+    slug: "source-control",
     order: 10,
     group: "daily-workflow",
-    title: "Changes",
-    description: "Temporarily save local changes without committing them.",
+    title: "Source control",
+    description: "Use VS Code Source Control to stash or discard local changes.",
     translationKey: "git-stash",
     status: "optional"
   },
@@ -940,15 +940,15 @@ const pages = [
     status: "optional"
   },
   {
-    url: "/ko/git-github/stash/",
+    url: "/ko/git-github/source-control/",
     pageType: "document",
     lang: "ko",
     section: "git-github",
-    slug: "stash",
+    slug: "source-control",
     order: 10,
     group: "daily-workflow",
-    title: "변경 사항",
-    description: "commit하지 않은 변경 사항을 임시로 저장합니다.",
+    title: "소스 컨트롤",
+    description: "VS Code Source Control에서 변경 사항을 stash하거나 discard합니다.",
     translationKey: "git-stash",
     status: "optional"
   },
