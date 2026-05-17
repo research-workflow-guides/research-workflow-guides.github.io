@@ -923,7 +923,7 @@ const pages = [
     group: "daily-workflow",
     title: "Source control",
     description: "Use VS Code Source Control to stash or discard local changes.",
-    translationKey: "git-stash",
+    translationKey: "git-source-control",
     status: "optional"
   },
   {
@@ -949,7 +949,7 @@ const pages = [
     group: "daily-workflow",
     title: "소스 컨트롤",
     description: "VS Code Source Control에서 변경 사항을 stash하거나 discard합니다.",
-    translationKey: "git-stash",
+    translationKey: "git-source-control",
     status: "optional"
   },
   {
