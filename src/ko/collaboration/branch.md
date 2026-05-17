@@ -18,8 +18,6 @@ toc:
     label: Branch 목록 확인하기
   - id: branch-이동하기
     label: Branch 이동하기
-  - id: 다른-branch에서-pull하기
-    label: 다른 branch에서 pull하기
   - id: branch-삭제하기
     label: Branch 삭제하기
   - id: 넘어가기-전
@@ -88,60 +86,6 @@ git switch draft-section
 Branch를 이동하기 전에 현재 변경 사항을 commit하거나 stash하세요. commit하지 않은 변경 사항이 덮어써질 수 있다면 Git이 branch 이동을 멈출 수 있습니다.
 
 Branch를 이동하는 것은 작업을 삭제하는 것이 아닙니다. 현재 폴더가 보여주는 commit과, 다음 commit이 추가될 위치를 바꾸는 것입니다.
-
-## 다른 branch에서 pull하기
-
-예를 들어 `new-contents` branch에서 작업 중인데 `main`의 최신 작업을 가져와야 할 때가 있습니다. 이 경우 먼저 변경 사항을 받을 branch에 있는지 확인합니다.
-
-예를 들어 `new-contents`에 있는 상태에서 다음을 실행합니다.
-
-```bash
-git pull origin main
-```
-
-이 명령어는 GitHub의 최신 `main` branch를 가져와 현재 사용 중인 branch에 merge합니다.
-
-<figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-1.png" alt="다른 branch에서 git pull origin main을 실행하는 terminal">
-</figure>
-
-두 branch가 같은 파일의 같은 부분을 수정했다면 Git이 멈추고 conflict 해결을 요청할 수 있습니다. 이때 VS Code의 Source Control에 merge 상태가 표시됩니다.
-
-<figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-2.png" alt="main을 다른 branch로 pull한 뒤 VS Code Source Control에 표시된 merge changes">
-</figure>
-
-Conflict를 해결하고 파일을 stage한 뒤 `Continue`를 클릭하면 merge commit을 만들 수 있습니다.
-
-<figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-3.png" alt="merge changes가 stage된 뒤 VS Code Source Control의 Continue 버튼">
-</figure>
-
-VS Code가 merge commit message를 준비합니다. 기본 message를 그대로 사용하거나, merge 내용을 설명하는 짧은 message로 바꿀 수 있습니다.
-
-<figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-4.png" alt="branch에 main을 pull한 뒤 VS Code Source Control에 표시된 commit message">
-</figure>
-
-그다음 sync하거나 push해서 GitHub에도 merge commit이 올라가게 합니다.
-
-<figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-5.png" alt="merge commit 뒤 VS Code Source Control의 Sync Changes 버튼">
-</figure>
-
-VS Code가 현재 branch의 commit을 pull하고 push한다고 경고할 수 있습니다. GitHub의 해당 branch를 업데이트할 준비가 되었을 때만 확인하세요.
-
-<figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-6.png" alt="branch commit을 sync하기 전 VS Code 확인 창">
-</figure>
-
-Sync가 끝나면 Git Graph에서 현재 branch에 merge commit이 표시됩니다.
-
-<figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-7.png" alt="main을 다른 branch에 pull한 뒤 Git Graph에 표시된 merge commit">
-</figure>
-
-단순히 `git pull`만 입력하면 현재 branch의 upstream branch에서 pull합니다. 다른 branch에 머무른 채 `main`에서 pull하려면 `origin main`을 명시하세요.
 
 ## Branch 삭제하기
 
