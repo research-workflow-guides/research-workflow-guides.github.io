@@ -9,6 +9,8 @@ toc:
     label: Main topics
   - id: snippets-documents
     label: Personal snippets
+  - id: reference-documents
+    label: Reference
   - id: optional-documents
     label: Optional topics
 ---
@@ -16,6 +18,7 @@ toc:
 {% set breadcrumbs = pageUi.breadcrumbs %}
 {% set docs = canonical.groupedDocs.en["writing-in-vs-code"]["main-topics"] %}
 {% set snippetsDocs = canonical.groupedDocs.en["writing-in-vs-code"]["snippets"] %}
+{% set referenceDocs = canonical.groupedDocs.en["writing-in-vs-code"]["reference"] %}
 {% set optionalDocs = canonical.groupedDocs.en["writing-in-vs-code"]["optional-topics"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
@@ -50,6 +53,19 @@ toc:
         {% for doc in snippetsDocs %}
           <a class="feature-card panel" href="{{ doc.url }}">
             <p class="card-kicker">Topic {{ loop.index }}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="reference-documents" class="doc-section">
+      <h2>Reference</h2>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in referenceDocs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">{% if doc.status == "optional" %}Optional{% else %}Topic {{ doc.order - 3 }}{% endif %}</p>
             <h3>{{ doc.title }}</h3>
             <p>{{ doc.description }}</p>
           </a>

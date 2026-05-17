@@ -68,6 +68,13 @@ const sectionDefinitions = [
         }
       },
       {
+        key: "reference",
+        label: {
+          en: "Reference",
+          ko: "참고문헌"
+        }
+      },
+      {
         key: "optional-topics",
         label: {
           en: "Optional topics",
@@ -142,6 +149,13 @@ const sectionDefinitions = [
         label: {
           en: "Platforms",
           ko: "플랫폼"
+        }
+      },
+      {
+        key: "git-for-collaboration",
+        label: {
+          en: "Git for collaboration",
+          ko: "Git 협업"
         }
       }
     ]
@@ -418,12 +432,38 @@ const pages = [
     status: "core"
   },
   {
+    url: "/en/writing-in-vs-code/bibliography-citation/",
+    pageType: "document",
+    lang: "en",
+    section: "writing-in-vs-code",
+    slug: "bibliography-citation",
+    order: 6,
+    group: "reference",
+    title: "Bibtex",
+    description: "Manage references in a .bib file and cite sources from your manuscript.",
+    translationKey: "writing-bibliography-citation",
+    status: "core"
+  },
+  {
+    url: "/en/writing-in-vs-code/jabref/",
+    pageType: "document",
+    lang: "en",
+    section: "writing-in-vs-code",
+    slug: "jabref",
+    order: 9,
+    group: "reference",
+    title: "JabRef",
+    description: "JabRef is a graphical application for managing bibliographical databases.",
+    translationKey: "writing-jabref",
+    status: "optional"
+  },
+  {
     url: "/en/writing-in-vs-code/settings-sync/",
     pageType: "document",
     lang: "en",
     section: "writing-in-vs-code",
     slug: "settings-sync",
-    order: 6,
+    order: 8,
     group: "optional-topics",
     title: "Sync Your VS Code Setup",
     description: "Turn on Settings Sync with GitHub and keep the same VS Code setup across multiple machines.",
@@ -459,12 +499,90 @@ const pages = [
     status: "optional"
   },
   {
+    url: "/en/collaboration/branch/",
+    pageType: "document",
+    lang: "en",
+    section: "collaboration",
+    slug: "branch",
+    order: 2,
+    group: "git-for-collaboration",
+    title: "Branch",
+    description: "Use branches to separate work, switch contexts, and collaborate without disturbing the main line.",
+    translationKey: "git-branch",
+    status: "core"
+  },
+  {
+    url: "/ko/collaboration/branch/",
+    pageType: "document",
+    lang: "ko",
+    section: "collaboration",
+    slug: "branch",
+    order: 2,
+    group: "git-for-collaboration",
+    title: "Branch",
+    description: "브랜치를 사용해 작업을 분리하고, 작업 맥락을 바꾸며, main 흐름을 방해하지 않고 협업합니다.",
+    translationKey: "git-branch",
+    status: "core"
+  },
+  {
+    url: "/en/collaboration/merge/",
+    pageType: "document",
+    lang: "en",
+    section: "collaboration",
+    slug: "merge",
+    order: 3,
+    group: "git-for-collaboration",
+    title: "Merge",
+    description: "Combine a finished branch back into main when the separate work is ready.",
+    translationKey: "git-merge",
+    status: "core"
+  },
+  {
+    url: "/ko/collaboration/merge/",
+    pageType: "document",
+    lang: "ko",
+    section: "collaboration",
+    slug: "merge",
+    order: 3,
+    group: "git-for-collaboration",
+    title: "Merge",
+    description: "분리된 branch의 작업이 준비되었을 때 main으로 다시 합칩니다.",
+    translationKey: "git-merge",
+    status: "core"
+  },
+  {
+    url: "/en/collaboration/pull-request/",
+    pageType: "document",
+    lang: "en",
+    section: "collaboration",
+    slug: "pull-request",
+    order: 4,
+    group: "git-for-collaboration",
+    title: "Pull Request",
+    description: "Review branch changes on GitHub before merging them into the main project history.",
+    translationKey: "git-pull-request",
+    status: "core"
+  },
+  {
+    url: "/ko/collaboration/pull-request/",
+    pageType: "document",
+    lang: "ko",
+    section: "collaboration",
+    slug: "pull-request",
+    order: 4,
+    group: "git-for-collaboration",
+    title: "Pull Request",
+    description: "Branch 변경 사항을 main 이력에 merge하기 전에 GitHub에서 검토합니다.",
+    translationKey: "git-pull-request",
+    status: "core"
+  },
+  {
     url: "/en/writing-in-vs-code/revision-pdf-latexdiff/",
     pageType: "document",
     lang: "en",
     section: "writing-in-vs-code",
     slug: "revision-pdf-latexdiff",
-    order: 7,
+    order: 9,
     group: "optional-topics",
     title: "Generate a redlined PDF",
     description: "Compare an old TeX file with a revised TeX file and compile a redlined PDF.",
@@ -477,7 +595,7 @@ const pages = [
     lang: "ko",
     section: "writing-in-vs-code",
     slug: "revision-pdf-latexdiff",
-    order: 7,
+    order: 9,
     group: "optional-topics",
     title: "수정 사항이 표시된 PDF 만들기",
     description: "이전 TeX 파일과 현재 TeX 파일을 비교해 수정 사항이 표시된 PDF를 만듭니다.",
@@ -511,12 +629,38 @@ const pages = [
     status: "core"
   },
   {
+    url: "/ko/writing-in-vs-code/bibliography-citation/",
+    pageType: "document",
+    lang: "ko",
+    section: "writing-in-vs-code",
+    slug: "bibliography-citation",
+    order: 6,
+    group: "reference",
+    title: "Bibtex",
+    description: ".bib 파일에서 reference를 관리하고 manuscript에서 source를 cite합니다.",
+    translationKey: "writing-bibliography-citation",
+    status: "core"
+  },
+  {
+    url: "/ko/writing-in-vs-code/jabref/",
+    pageType: "document",
+    lang: "ko",
+    section: "writing-in-vs-code",
+    slug: "jabref",
+    order: 7,
+    group: "reference",
+    title: "JabRef",
+    description: "JabRef는 BibTeX과 같은 문헌 데이터베이스를 관리하는 그래픽 어플리케이션입니다.",
+    translationKey: "writing-jabref",
+    status: "optional"
+  },
+  {
     url: "/ko/writing-in-vs-code/settings-sync/",
     pageType: "document",
     lang: "ko",
     section: "writing-in-vs-code",
     slug: "settings-sync",
-    order: 6,
+    order: 8,
     group: "optional-topics",
     title: "VS Code 작업 환경 동기화",
     description: "GitHub 계정으로 Settings Sync를 켜고 여러 PC에서 같은 VS Code 환경을 유지합니다.",
@@ -695,7 +839,7 @@ const pages = [
     lang: "en",
     section: "git-github",
     slug: "pull-push",
-    order: 6,
+    order: 7,
     group: "daily-workflow",
     title: "Pull & Push",
     description: "Repeat one clean sync loop so local work and remote history stay aligned.",
@@ -708,7 +852,7 @@ const pages = [
     lang: "ko",
     section: "git-github",
     slug: "pull-push",
-    order: 6,
+    order: 7,
     group: "daily-workflow",
     title: "Pull과 Push",
     description: "로컬 작업과 원격 이력을 맞추는 기본 sync 루프를 반복합니다.",
@@ -734,7 +878,7 @@ const pages = [
     lang: "en",
     section: "git-github",
     slug: "git-status",
-    order: 7,
+    order: 6,
     group: "daily-workflow",
     title: "Git status",
     description: "Check what changed before you stage, commit, or push.",
@@ -747,7 +891,7 @@ const pages = [
     lang: "ko",
     section: "git-github",
     slug: "git-status",
-    order: 7,
+    order: 6,
     group: "daily-workflow",
     title: "Git status",
     description: "stage, commit, push 전에 무엇이 바뀌었는지 확인합니다.",
@@ -818,7 +962,20 @@ const pages = [
     group: "daily-workflow",
     title: "Source control",
     description: "Use VS Code Source Control to stash or discard local changes.",
-    translationKey: "git-stash",
+    translationKey: "git-source-control",
+    status: "optional"
+  },
+  {
+    url: "/en/git-github/recovery/",
+    pageType: "document",
+    lang: "en",
+    section: "git-github",
+    slug: "recovery",
+    order: 11,
+    group: "daily-workflow",
+    title: "Recovery",
+    description: "Recover committed work, undo local mistakes, and return safely to a known Git state.",
+    translationKey: "git-recovery",
     status: "optional"
   },
   {
@@ -831,7 +988,20 @@ const pages = [
     group: "daily-workflow",
     title: "소스 컨트롤",
     description: "VS Code Source Control에서 변경 사항을 stash하거나 discard합니다.",
-    translationKey: "git-stash",
+    translationKey: "git-source-control",
+    status: "optional"
+  },
+  {
+    url: "/ko/git-github/recovery/",
+    pageType: "document",
+    lang: "ko",
+    section: "git-github",
+    slug: "recovery",
+    order: 11,
+    group: "daily-workflow",
+    title: "복구",
+    description: "commit된 작업을 복구하고, 로컬 실수를 되돌리며, 안전하게 알고 있는 Git 상태로 돌아갑니다.",
+    translationKey: "git-recovery",
     status: "optional"
   },
   {
@@ -840,7 +1010,7 @@ const pages = [
     lang: "en",
     section: "git-github",
     slug: "gitignore",
-    order: 11,
+    order: 12,
     group: "daily-workflow",
     title: "Gitignore",
     description: "Exclude files and folders when you push to GitHub.",
@@ -853,7 +1023,7 @@ const pages = [
     lang: "ko",
     section: "git-github",
     slug: "gitignore",
-    order: 11,
+    order: 12,
     group: "daily-workflow",
     title: "Gitignore",
     description: "특정 파일이나 폴더를 GitHub 커밋에서 제외합니다.",
@@ -1024,8 +1194,8 @@ function buildPrevNext(page) {
     sequence = sequence.filter((item) => item.status === "core");
   }
 
-  if (page.section === "writing-in-vs-code" && page.group === "optional-topics") {
-    sequence = sequence.filter((item) => item.group === "optional-topics");
+  if (page.section === "writing-in-vs-code" && (page.group === "reference" || page.group === "optional-topics")) {
+    sequence = sequence.filter((item) => item.group === page.group);
   }
 
   const index = sequence.findIndex((item) => item.url === page.url);

@@ -4,7 +4,7 @@ title: Generate a redlined PDF
 description: Compare an old TeX file with a revised TeX file and compile a redlined PDF.
 lang: en
 section: writing-in-vs-code
-order: 7
+order: 9
 permalink: /en/writing-in-vs-code/revision-pdf-latexdiff/
 translationKey: writing-revision-pdf-latexdiff
 eyebrow: Optional

@@ -4,10 +4,10 @@ title: Pull & Push
 description: Repeat one clean sync loop so local work and remote history stay aligned.
 lang: en
 section: git-github
-order: 6
+order: 7
 permalink: /en/git-github/pull-push/
 translationKey: git-pull-push
-eyebrow: Topic 1
+eyebrow: Topic 2
 lead: "Keep the daily remote workflow small: pull before work if needed, commit coherent changes, then push when the work unit is ready."
 toc:
   - id: key-terms

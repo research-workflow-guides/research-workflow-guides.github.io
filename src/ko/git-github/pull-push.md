@@ -4,10 +4,10 @@ title: Pull과 Push
 description: 로컬 작업과 원격 이력을 맞추는 기본 sync 루프를 반복합니다.
 lang: ko
 section: git-github
-order: 6
+order: 7
 permalink: /ko/git-github/pull-push/
 translationKey: git-pull-push
-eyebrow: 주제 1
+eyebrow: 주제 2
 lead: 일상적인 원격 작업 흐름은 작게 유지합니다. 필요하면 먼저 pull하고, 의미 있는 단위로 commit한 뒤, 준비되면 push합니다.
 toc:
   - id: 용어-정리

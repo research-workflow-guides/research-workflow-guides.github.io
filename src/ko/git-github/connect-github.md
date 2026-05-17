@@ -39,6 +39,7 @@ VS Code 안에서 새 터미널을 엽니다.
 <div class="doc-step-pair">
   <div>
     <p>명령을 실행하면 VS Code 아래쪽에 통합 터미널이 열립니다.</p>
+    <p>Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 터미널을 바로 열 수도 있습니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/2.2.1-2%20(1).png" alt="VS Code 통합 터미널이 열린 화면">

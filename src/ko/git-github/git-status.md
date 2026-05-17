@@ -4,10 +4,10 @@ title: Git status
 description: stage, commit, push 전에 무엇이 바뀌었는지 확인합니다.
 lang: ko
 section: git-github
-order: 7
+order: 6
 permalink: /ko/git-github/git-status/
 translationKey: git-status
-eyebrow: 주제 2
+eyebrow: 주제 1
 lead: stage, commit, push 전에 무엇이 바뀌었는지 확인합니다.
 toc:
   - id: 현재-상태-확인
