@@ -14,6 +14,8 @@ toc:
     label: What a branch means
   - id: create-a-branch
     label: Create a branch
+  - id: list-branches
+    label: List branches
   - id: switch-branches
     label: Switch branches
   - id: remove-branches
@@ -53,6 +55,24 @@ git switch -c draft-section
 ```
 
 Use a short branch name that describes the task, such as `fix-conflict-notes`, `revise-introduction`, or `add-results-table`.
+
+## List branches
+
+To see the local branches in the repository, run:
+
+```bash
+git branch
+```
+
+The branch you are currently using appears with `*` beside it.
+
+To see both local branches and remote branches from GitHub, run:
+
+```bash
+git branch -a
+```
+
+This is useful when you are not sure whether a branch exists only on your computer or also exists on GitHub.
 
 ## Switch branches
 
