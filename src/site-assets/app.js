@@ -58,9 +58,46 @@ function clearNode(node) {
   }
 }
 
-function buildResultCard(result, languageLabel) {
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function appendHighlightedText(parent, text, query) {
+  const source = String(text || "");
+  const terms = normalizeSearchText(query).split(/\s+/).filter(Boolean);
+
+  if (!terms.length) {
+    parent.textContent = source;
+    return;
+  }
+
+  const pattern = new RegExp(`(${terms.map(escapeRegExp).join("|")})`, "gi");
+  let lastIndex = 0;
+
+  source.replace(pattern, (match, _term, offset) => {
+    if (offset > lastIndex) {
+      parent.appendChild(document.createTextNode(source.slice(lastIndex, offset)));
+    }
+
+    const mark = document.createElement("mark");
+    mark.className = "search-highlight";
+    mark.textContent = match;
+    parent.appendChild(mark);
+    lastIndex = offset + match.length;
+    return match;
+  });
+
+  if (lastIndex < source.length) {
+    parent.appendChild(document.createTextNode(source.slice(lastIndex)));
+  }
+}
+
+function buildResultCard(result, languageLabel, query) {
   const article = document.createElement("article");
   article.className = "search-hit";
+  article.tabIndex = 0;
+  article.setAttribute("role", "link");
+  article.setAttribute("aria-label", result.meta && result.meta.title ? result.meta.title : result.url);
 
   const tag = document.createElement("p");
   tag.className = "search-hit-tag";
@@ -69,21 +106,36 @@ function buildResultCard(result, languageLabel) {
   const title = document.createElement("h3");
   const link = document.createElement("a");
   link.href = result.url;
-  link.textContent = result.meta && result.meta.title ? result.meta.title : result.url;
+  appendHighlightedText(link, result.meta && result.meta.title ? result.meta.title : result.url, query);
   title.appendChild(link);
 
   const excerpt = document.createElement("p");
   excerpt.className = "search-hit-excerpt";
-  excerpt.textContent = result.excerpt || result.meta && result.meta.description || "";
+  appendHighlightedText(excerpt, result.excerpt || result.meta && result.meta.description || "", query);
 
   article.appendChild(tag);
   article.appendChild(title);
   article.appendChild(excerpt);
 
+  article.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      return;
+    }
+
+    window.location.href = result.url;
+  });
+
+  article.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      window.location.href = result.url;
+    }
+  });
+
   return article;
 }
 
-function appendSearchGroup(container, title, results) {
+function appendSearchGroup(container, title, results, query) {
   if (!results.length) {
     return;
   }
@@ -99,7 +151,7 @@ function appendSearchGroup(container, title, results) {
   }
 
   results.forEach((result) => {
-    section.appendChild(buildResultCard(result, getLanguageLabel(result.url)));
+    section.appendChild(buildResultCard(result, getLanguageLabel(result.url), query));
   });
 
   container.appendChild(section);
@@ -212,12 +264,14 @@ async function runSearch(root, query) {
     appendSearchGroup(
       resultsNode,
       sameLang.length && otherLang.length ? (lang === "ko" ? "현재 언어 결과" : "Current language results") : "",
-      sameLang
+      sameLang,
+      query
     );
     appendSearchGroup(
       resultsNode,
       sameLang.length && otherLang.length ? (lang === "ko" ? "다른 언어 결과" : "Other language results") : "",
-      otherLang
+      otherLang,
+      query
     );
   } catch (error) {
     status.textContent =

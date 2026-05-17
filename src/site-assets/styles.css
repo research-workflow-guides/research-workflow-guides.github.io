@@ -972,6 +972,16 @@ li.section--collaboration > .rail-link-section.is-current {
   border-radius: var(--radius-md);
   border: 1px solid rgba(24, 61, 93, 0.12);
   background: rgba(255, 255, 255, 0.76);
+  cursor: pointer;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.search-hit:hover,
+.search-hit:focus-visible {
+  border-color: rgba(157, 111, 46, 0.45);
+  box-shadow: 0 12px 26px rgba(36, 46, 67, 0.1);
+  transform: translateY(-1px);
+  outline: none;
 }
 
 .search-hit h3 {
@@ -986,6 +996,13 @@ li.section--collaboration > .rail-link-section.is-current {
 .search-hit-excerpt {
   margin: 0;
   color: var(--muted);
+}
+
+.search-highlight {
+  padding: 0 0.08em;
+  border-radius: 0.18em;
+  background: #fff08a;
+  color: inherit;
 }
 
 .doc-section {
