@@ -1618,9 +1618,11 @@ li > .image-frame {
 
 @media (max-width: 540px) {
   .site-header {
-    --nav-control-width: 68px;
-    --nav-control-padding-block: 0.38rem;
-    --nav-control-padding-inline: 0.55rem;
+    --nav-control-font-size: clamp(0.72rem, calc(0.55rem + 1.1vw), 0.9rem);
+    --nav-control-width: clamp(52px, calc(27px + 7.6vw), 68px);
+    --nav-control-padding-block: clamp(0.24rem, calc(-0.04rem + 1.24vw), 0.38rem);
+    --nav-control-padding-inline: clamp(0.18rem, calc(-0.56rem + 3.3vw), 0.55rem);
+    --mobile-nav-gap: clamp(0.8rem, calc(-1.06rem + 9.5vw), 2.15rem);
   }
 
   .site-header-inner {
@@ -1669,8 +1671,8 @@ li > .image-frame {
 
 @media (max-width: 540px) {
   .site-header-inner {
-    grid-template-columns: max-content max-content auto;
-    column-gap: 0.85rem;
+    grid-template-columns: max-content minmax(0, 1fr) var(--nav-control-width);
+    column-gap: clamp(0.45rem, 2.5vw, 0.85rem);
     row-gap: 0.55rem;
   }
 
@@ -1709,6 +1711,7 @@ li > .image-frame {
   .site-nav > *:nth-child(2) {
     grid-column: 2;
     grid-row: 2;
+    margin-left: var(--mobile-nav-gap);
   }
 
   .site-nav > *:nth-child(3) {
@@ -1719,13 +1722,14 @@ li > .image-frame {
   .site-nav > *:nth-child(4) {
     grid-column: 2;
     grid-row: 3;
+    margin-left: var(--mobile-nav-gap);
   }
 }
 
 @media (max-width: 389px) {
   .site-header-inner {
-    grid-template-columns: max-content max-content auto;
-    column-gap: 0.85rem;
+    grid-template-columns: max-content minmax(0, 1fr) var(--nav-control-width);
+    column-gap: clamp(0.45rem, 2.5vw, 0.85rem);
     row-gap: 0.55rem;
   }
 
@@ -1760,6 +1764,7 @@ li > .image-frame {
   .site-nav > *:nth-child(2) {
     grid-column: 2;
     grid-row: 2;
+    margin-left: var(--mobile-nav-gap);
   }
 
   .site-nav > *:nth-child(3) {
@@ -1770,22 +1775,11 @@ li > .image-frame {
   .site-nav > *:nth-child(4) {
     grid-column: 2;
     grid-row: 3;
+    margin-left: var(--mobile-nav-gap);
   }
 }
 
 @media (max-width: 400px) {
-  .site-header {
-    --nav-control-font-size: clamp(0.7rem, 3.2vw, 0.82rem);
-    --nav-control-width: clamp(52px, 15.2vw, 60px);
-    --nav-control-padding-block: clamp(0.24rem, 1.15vw, 0.32rem);
-    --nav-control-padding-inline: clamp(0.18rem, 1vw, 0.38rem);
-  }
-
-  .site-header-inner {
-    grid-template-columns: max-content minmax(0, 1fr) var(--nav-control-width);
-    column-gap: clamp(0.45rem, 2.5vw, 0.65rem);
-  }
-
   .site-nav a {
     font-size: var(--nav-control-font-size);
     white-space: nowrap;
