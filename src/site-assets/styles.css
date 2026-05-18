@@ -1840,13 +1840,13 @@ li > .image-frame {
 }
 
 @media (min-width: 751px) and (max-width: 1000px) {
-  .section--initial-setup.page-section .doc-section .feature-grid-compact {
+  .page-section .doc-section .feature-grid-compact {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 500px) and (max-width: 750px) {
-  .section--initial-setup.page-section .doc-section .feature-grid-compact {
+  .page-section .doc-section .feature-grid-compact {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
