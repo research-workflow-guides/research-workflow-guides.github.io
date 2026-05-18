@@ -1821,6 +1821,12 @@ li > .image-frame {
 
 }
 
+@media (min-width: 701px) and (max-width: 1000px) {
+  .route-map-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 560px) {
   .footer-inner {
     grid-template-columns: minmax(0, 1fr);
@@ -1841,7 +1847,9 @@ li > .image-frame {
   .updates-list .update-heading {
     font-size: clamp(1rem, 2.2vw, 1.15rem);
   }
+}
 
+@media (max-width: 700px) {
   .route-map-grid {
     gap: 0.75rem;
   }
@@ -1849,6 +1857,7 @@ li > .image-frame {
   .route-map-grid .feature-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    --route-accent-height: clamp(3px, 0.65vw, 4px);
     column-gap: clamp(0.8rem, 2.6vw, 1.3rem);
     row-gap: 0.12rem;
     align-items: center;
@@ -1857,7 +1866,8 @@ li > .image-frame {
 
   .route-map-grid .feature-card::before {
     grid-column: 1 / -1;
-    margin: calc(-1.35rem - 5px) -1.5rem 0.9rem;
+    height: var(--route-accent-height);
+    margin: calc(-1.35rem - var(--route-accent-height)) -1.5rem 0.9rem;
   }
 
   .route-map-grid .card-logo-row {
@@ -1917,13 +1927,14 @@ li > .image-frame {
 
   .route-map-grid .feature-card {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    --route-accent-height: clamp(2px, 0.8vw, 3px);
     column-gap: 0.7rem;
     padding: 1.15rem 1.25rem;
   }
 
   .route-map-grid .feature-card::before {
-    height: 8px;
-    margin: calc(-1.15rem - 4px) -1.25rem 0.75rem;
+    height: var(--route-accent-height);
+    margin: calc(-1.15rem - var(--route-accent-height)) -1.25rem 0.75rem;
   }
 
   .route-map-grid .card-logo-row {
