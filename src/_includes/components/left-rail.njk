@@ -4,7 +4,7 @@
 {% set currentLang = currentPageMeta.lang if currentPageMeta and currentPageMeta.lang != "root" else lang %}
 {% set currentSection = currentPageUi.activeSection if currentPageUi else activeSection %}
 {% set isLanguageHome = currentPageMeta and currentPageMeta.pageType == "language-home" %}
-{% set navigationLabel = "목차" if currentLang == "ko" else "Contents" %}
+{% set navigationLabel = "목차 열기" if currentLang == "ko" else "Open contents" %}
 <aside class="page-sidebar" data-pagefind-ignore="all">
   <button
     class="sidebar-toggle"

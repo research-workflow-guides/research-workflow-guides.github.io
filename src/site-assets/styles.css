@@ -1055,7 +1055,7 @@ li.section--collaboration > .rail-link-section.is-current {
 }
 
 .doc-hero h1 {
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(1.45rem, calc(1.15rem + 1.45vw), 2.35rem);
 }
 
 .meta-list {
@@ -1770,6 +1770,30 @@ li > .image-frame {
   .site-nav > *:nth-child(4) {
     grid-column: 2;
     grid-row: 3;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-header {
+    --nav-control-font-size: clamp(0.7rem, 3.2vw, 0.82rem);
+    --nav-control-width: clamp(52px, 15.2vw, 60px);
+    --nav-control-padding-block: clamp(0.24rem, 1.15vw, 0.32rem);
+    --nav-control-padding-inline: clamp(0.18rem, 1vw, 0.38rem);
+  }
+
+  .site-header-inner {
+    grid-template-columns: max-content minmax(0, 1fr) var(--nav-control-width);
+    column-gap: clamp(0.45rem, 2.5vw, 0.65rem);
+  }
+
+  .site-nav a {
+    font-size: var(--nav-control-font-size);
+    white-space: nowrap;
+  }
+
+  .site-nav > *:nth-child(2),
+  .site-nav > *:nth-child(4) {
+    justify-self: start;
   }
 }
 
