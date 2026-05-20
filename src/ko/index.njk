@@ -64,6 +64,9 @@ pageClass: page-landing
                 <img class="card-logo" src="/assets/images/git-logo.png" alt="Git">
                 <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
                 <img class="card-logo" src="/assets/images/overleaf-o-logo-primary.jpg" alt="Overleaf">
+              {% elif section.key == "python" %}
+                <img class="card-logo card-logo--python-full" src="/assets/images/python-logo-long.png" alt="Python">
+                <img class="card-logo card-logo--python-compact" src="/assets/images/python-logo-short.png" alt="Python">
               {% endif %}
             </div>
             <p class="card-kicker">{{ section.kicker.ko }}</p>

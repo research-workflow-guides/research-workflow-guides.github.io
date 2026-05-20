@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Python
+description: Python으로 분석, 자동화, 연구용 스크립트 작업을 시작합니다.
+lang: ko
+pageClass: page-section
+permalink: /ko/python/
+toc:
+  - id: installation
+    label: 설치
+---
+{% set pageUi = canonical.pageUi[page.url] %}
+{% set breadcrumbs = pageUi.breadcrumbs %}
+{% set pythonDocs = canonical.groupedDocs.ko.python["python-basics"] %}
+<main class="content-shell">
+  {% include "components/left-rail.njk" %}
+
+  <article class="doc-content panel" data-pagefind-body>
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="doc-hero doc-hero-simple">
+      <div>
+        <p class="eyebrow">파트 5</p>
+        <h1>Python</h1>
+        <p class="lead">Python으로 분석, 자동화, 연구용 스크립트 작업을 시작합니다.</p>
+      </div>
+    </section>
+
+    <section id="installation" class="doc-section">
+      <h2>설치</h2>
+      <div class="feature-grid feature-grid-compact">
+        {% for doc in pythonDocs %}
+          <a class="feature-card panel" href="{{ doc.url }}">
+            <p class="card-kicker">{% if doc.status == "optional" %}선택{% else %}Step {{ doc.order }}{% endif %}</p>
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  </article>
+</main>
