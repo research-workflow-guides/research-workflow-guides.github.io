@@ -50,16 +50,19 @@
         {% elif currentLang %}
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
             {% for section in navigation.sections %}
-              <div class="nav-dropdown nav-section--{{ section.key }}">
+              {% set sectionNavPages = section.pages[currentLang] %}
+              <div class="nav-dropdown{% if sectionNavPages and sectionNavPages.length %} has-menu{% endif %} nav-section--{{ section.key }}">
                 <a
                   href="{{ section.url[currentLang] }}"
                   {% if currentSection == section.key %}aria-current="page"{% endif %}
                 >{{ section.title[currentLang] }}</a>
-                <div class="dropdown-menu">
-                  {% for docPage in section.pages[currentLang] %}
-                    <a href="{{ docPage.url }}">{{ docPage.title }}</a>
-                  {% endfor %}
-                </div>
+                {% if sectionNavPages and sectionNavPages.length %}
+                  <div class="dropdown-menu">
+                    {% for docPage in sectionNavPages %}
+                      <a href="{{ docPage.url }}">{{ docPage.title }}</a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
               </div>
             {% endfor %}
           </nav>

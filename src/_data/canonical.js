@@ -159,6 +159,34 @@ const sectionDefinitions = [
         }
       }
     ]
+  },
+  {
+    key: "python",
+    url: {
+      en: "/en/python/",
+      ko: "/ko/python/"
+    },
+    title: {
+      en: "Python",
+      ko: "Python"
+    },
+    summary: {
+      en: "Use Python for reproducible analysis, automation, and research scripts.",
+      ko: "Python으로 분석, 자동화, 연구용 스크립트 작업을 시작합니다."
+    },
+    kicker: {
+      en: "Part 5",
+      ko: "파트 5"
+    },
+    groups: [
+      {
+        key: "python-basics",
+        label: {
+          en: "Python Basics",
+          ko: "Python 기초"
+        }
+      }
+    ]
   }
 ];
 
@@ -702,6 +730,76 @@ const pages = [
     title: "GitHub",
     translationKey: "category-collaboration",
     status: "core"
+  },
+  {
+    url: "/en/python/",
+    pageType: "category-home",
+    lang: "en",
+    section: "python",
+    title: "Python",
+    translationKey: "category-python",
+    status: "core"
+  },
+  {
+    url: "/ko/python/",
+    pageType: "category-home",
+    lang: "ko",
+    section: "python",
+    title: "Python",
+    translationKey: "category-python",
+    status: "core"
+  },
+  {
+    url: "/en/python/python-installation/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "python-installation",
+    order: 1,
+    group: "python-basics",
+    title: "Installation",
+    description: "Download the Python installer that matches your operating system.",
+    translationKey: "python-installation",
+    status: "core"
+  },
+  {
+    url: "/ko/python/python-installation/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "python-installation",
+    order: 1,
+    group: "python-basics",
+    title: "Installation",
+    description: "사용하는 OS에 맞는 Python 설치 파일을 내려받아 설치합니다.",
+    translationKey: "python-installation",
+    status: "core"
+  },
+  {
+    url: "/en/python/virtual-environment/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "virtual-environment",
+    order: 2,
+    group: "python-basics",
+    title: "Create a virtual environment",
+    description: "Create a project-local .venv and install packages such as NumPy.",
+    translationKey: "python-virtual-environment",
+    status: "optional"
+  },
+  {
+    url: "/ko/python/virtual-environment/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "virtual-environment",
+    order: 2,
+    group: "python-basics",
+    title: "가상 환경 만들기",
+    description: "프로젝트 안에 .venv를 만들고 NumPy 같은 패키지를 설치합니다.",
+    translationKey: "python-virtual-environment",
+    status: "optional"
   },
   {
     url: "/en/git-github/git-installation/",
