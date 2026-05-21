@@ -17,6 +17,8 @@ toc:
     label: Python Extension
   - id: jupyter-extension
     label: Jupyter Extension
+  - id: 주요-패키지-설치
+    label: 주요 패키지 설치
 tags:
   - doc
 ---
@@ -52,3 +54,45 @@ VS Code에서 Jupyter notebook을 사용하려면 다음 extension을 설치하�
 <figure class="image-frame">
   <img src="/assets/images/python-installation-3.png" alt="VS Code Jupyter extension">
 </figure>
+
+## 주요 패키지 설치
+
+Python 설치가 끝나면 터미널에서 패키지를 전역으로 설치할 수 있습니다. 먼저 NumPy를 설치합니다.
+
+Windows PowerShell에서는 다음 명령어를 사용합니다.
+
+```powershell
+py -m pip install numpy
+```
+
+macOS 또는 Linux에서는 다음 명령어를 사용합니다.
+
+```bash
+python3 -m pip install numpy
+```
+
+Jupyter Notebook 셀 안에서는 `%pip`로 NumPy를 설치할 수 있습니다.
+
+```python
+%pip install numpy
+```
+
+이 방식은 notebook 셀에서만 사용합니다. `.py` 파일에서는 설치 명령어를 쓰는 것이 아니라, 설치된 패키지를 `import numpy as np`처럼 불러와서 사용합니다.
+
+여러 개의 라이브러리를 한 번에 설치할 수도 있습니다. 예를 들어 Matplotlib과 Pandas는 다음처럼 설치합니다.
+
+```powershell
+py -m pip install matplotlib pandas
+```
+
+macOS 또는 Linux에서는 다음 명령어를 사용합니다.
+
+```bash
+python3 -m pip install matplotlib pandas
+```
+
+Jupyter Notebook에서도 `%pip install package1 package2`처럼 한 셀에서 여러 패키지를 이어서 설치할 수 있습니다.
+
+```python
+%pip install matplotlib pandas
+```

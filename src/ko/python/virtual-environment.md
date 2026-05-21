@@ -89,13 +89,13 @@ python -c "import sys; print(sys.executable)"
 
 Windows에서는 보통 다음처럼 끝납니다.
 
-```text
+```output
 \.venv\Scripts\python.exe
 ```
 
 macOS 또는 Linux에서는 보통 다음처럼 끝납니다.
 
-```text
+```output
 /.venv/bin/python
 ```
 
@@ -116,11 +116,26 @@ python -m pip install --upgrade pip
 python -m pip install numpy
 ```
 
+Windows에서 `python` 명령어가 인식되지 않을 때는 `py`로 실행되는 경우가 있습니다. `py`는 Windows용 Python Launcher라서, Python이 PATH에 없어도 설치된 Python을 찾아 실행합니다. 다만 `.venv`에 설치하려면 먼저 `py`가 이 프로젝트의 `.venv`를 가리키는지 확인하세요.
+
+```powershell
+py -c "import sys; print(sys.executable)"
+```
+
+출력된 경로에 `.venv\Scripts\python.exe`가 들어 있을 때만 다음처럼 `py`를 사용하세요.
+
+```powershell
+py -m pip install --upgrade pip
+py -m pip install numpy
+```
+
 NumPy가 정상적으로 설치됐는지 확인합니다.
 
 ```powershell
 python -c "import numpy as np; print(np.__version__)"
 ```
+
+`py`로 설치했다면 확인할 때도 `py -c "import numpy as np; print(np.__version__)"`를 사용하면 됩니다.
 
 다른 프로젝트 패키지도 같은 방식으로 설치하면 됩니다. 연구용 패키지는 전역 Python에 바로 설치하지 말고 프로젝트마다 `.venv`를 만들어 관리하는 편이 안정적입니다.
 

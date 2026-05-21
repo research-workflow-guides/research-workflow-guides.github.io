@@ -50,14 +50,10 @@ Use the Command Palette to open a fresh terminal inside VS Code.
 
 Set the name and email that Git will attach to commits made from this machine.
 
-```bash
-git config --global user.name "NAME"
-git config --global user.email "EMAIL"
-```
-
 <div class="doc-step-pair">
   <div>
     <p>Run the name command first. Replace <code>NAME</code> with the name you want to appear in your commit history.</p>
+    <pre data-code-label="bash"><code>git config --global user.name "NAME"</code></pre>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/2.2.1-3%20(1).png" alt="VS Code terminal with git config global user.name command">
@@ -67,6 +63,7 @@ git config --global user.email "EMAIL"
 <div class="doc-step-pair">
   <div>
     <p>Then run the email command. Use the email address that belongs to the GitHub account you prepared.</p>
+    <pre data-code-label="bash"><code>git config --global user.email "EMAIL"</code></pre>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/2.2.1-4%20(1).png" alt="VS Code terminal with git config global user.email command">

@@ -50,14 +50,10 @@ VS Code 안에서 새 터미널을 엽니다.
 
 이 컴퓨터에서 만드는 commit에 붙을 이름과 이메일을 설정합니다.
 
-```bash
-git config --global user.name "NAME"
-git config --global user.email "EMAIL"
-```
-
 <div class="doc-step-pair">
   <div>
     <p>먼저 이름 명령을 실행합니다. <code>NAME</code>에는 commit 기록에 표시할 이름을 넣습니다.</p>
+    <pre data-code-label="bash"><code>git config --global user.name "NAME"</code></pre>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/2.2.1-3%20(1).png" alt="git config global user.name 명령이 입력된 VS Code 터미널">
@@ -67,6 +63,7 @@ git config --global user.email "EMAIL"
 <div class="doc-step-pair">
   <div>
     <p>그 다음 이메일 명령을 실행합니다. 앞에서 준비한 GitHub 계정에 연결된 이메일을 사용합니다.</p>
+    <pre data-code-label="bash"><code>git config --global user.email "EMAIL"</code></pre>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/2.2.1-4%20(1).png" alt="git config global user.email 명령이 입력된 VS Code 터미널">

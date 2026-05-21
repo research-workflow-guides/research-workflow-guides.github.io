@@ -13,8 +13,9 @@ module.exports = async function (eleventyConfig) {
   const { createHighlighter } = await import("shiki");
   const highlighter = await createHighlighter({
     themes: ["github-dark"],
-    langs: ["bash", "json", "latex", "powershell", "text"],
+    langs: ["bash", "json", "latex", "powershell", "python", "text"],
     langAlias: {
+      py: "python",
       ps1: "powershell",
       sh: "bash",
       tex: "latex"
@@ -25,7 +26,10 @@ module.exports = async function (eleventyConfig) {
     bash: "bash",
     json: "json",
     latex: "tex",
+    output: "output",
     powershell: "powershell",
+    py: "python",
+    python: "python",
     ps1: "powershell",
     sh: "bash",
     tex: "tex"
@@ -35,6 +39,12 @@ module.exports = async function (eleventyConfig) {
     const normalized = (lang || "").trim().toLowerCase();
     if (normalized === "ps1") {
       return "powershell";
+    }
+    if (normalized === "py") {
+      return "python";
+    }
+    if (normalized === "output") {
+      return "text";
     }
     if (normalized === "sh") {
       return "bash";

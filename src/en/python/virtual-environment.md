@@ -89,13 +89,13 @@ The output should point inside your project `.venv` folder.
 
 On Windows, it should end like this:
 
-```text
+```output
 \.venv\Scripts\python.exe
 ```
 
 On macOS or Linux, it should end like this:
 
-```text
+```output
 /.venv/bin/python
 ```
 
@@ -116,11 +116,26 @@ python -m pip install --upgrade pip
 python -m pip install numpy
 ```
 
+On Windows, `py` is the Python Launcher. If `python` is not recognized, first check that `py` points to this project's `.venv`:
+
+```powershell
+py -c "import sys; print(sys.executable)"
+```
+
+Use `py` only if the printed path contains `.venv\Scripts\python.exe`. Then install packages with:
+
+```powershell
+py -m pip install --upgrade pip
+py -m pip install numpy
+```
+
 Check that NumPy is available:
 
 ```powershell
 python -c "import numpy as np; print(np.__version__)"
 ```
+
+If you installed with `py`, use `py -c "import numpy as np; print(np.__version__)"` for this check.
 
 Use this pattern for other project packages as well. Create one `.venv` per project instead of installing research dependencies globally.
 

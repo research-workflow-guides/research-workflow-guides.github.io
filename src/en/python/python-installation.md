@@ -17,6 +17,8 @@ toc:
     label: Python Extension
   - id: jupyter-extension
     label: Jupyter Extension
+  - id: install-common-packages
+    label: Install common packages
 tags:
   - doc
 ---
@@ -52,3 +54,45 @@ To work with Jupyter notebooks in VS Code, install the following extension.
 <figure class="image-frame">
   <img src="/assets/images/python-installation-3.png" alt="Jupyter extension for Visual Studio Code">
 </figure>
+
+## Install common packages
+
+After Python is installed, you can install a package globally from a terminal. Start with NumPy:
+
+On Windows PowerShell:
+
+```powershell
+py -m pip install numpy
+```
+
+On macOS or Linux:
+
+```bash
+python3 -m pip install numpy
+```
+
+In a Jupyter Notebook cell, install NumPy with `%pip`:
+
+```python
+%pip install numpy
+```
+
+This is for notebook cells only. In a `.py` file, use packages with `import`, such as `import numpy as np`, after they are installed.
+
+You can also install multiple libraries in one command. For example, install Matplotlib and Pandas like this:
+
+```powershell
+py -m pip install matplotlib pandas
+```
+
+On macOS or Linux:
+
+```bash
+python3 -m pip install matplotlib pandas
+```
+
+Jupyter Notebook also supports installing multiple packages in one cell with the same `%pip install package1 package2` pattern.
+
+```python
+%pip install matplotlib pandas
+```
