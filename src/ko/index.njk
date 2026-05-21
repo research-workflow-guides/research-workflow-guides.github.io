@@ -9,35 +9,25 @@ langSwitch:
 pageClass: page-landing
 ---
 {% set currentUpdates = updates.completedByLang.ko %}
+{% set latestUpdate = currentUpdates[0] %}
 <main>
   <section class="landing-hero">
     <h1 class="wrap hero-h1">효율적인 연구 작업 흐름</h1>
     <p class="wrap lead">LaTeX, VS Code, GitHub로 효율적인 연구 환경을 구축하세요.</p>
     <div class="wrap hero-grid">
       <aside class="hero-panel panel">
-        <p class="eyebrow">{{ ui.ko.recentUpdates }}</p>
-        <dl class="updates-list">
-          {% for item in currentUpdates %}
-            {% if loop.index <= 1 %}
-              <div>
-                <dt class="update-heading">({{ item.date | dateDots }}) {{ item.title }}</dt>
-                <dd>
-                  {% if item.linkItems %}
-                    <ul class="update-link-list">
-                      {% for linkItem in item.linkItems %}
-                        <li><a href="{{ linkItem.url }}">{{ linkItem.title }}</a></li>
-                      {% endfor %}
-                    </ul>
-                  {% elif item.url %}
-                    <a href="{{ item.url }}">{{ item.title }}</a>
-                  {% else %}
-                    {{ item.title }}
-                  {% endif %}
-                </dd>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </dl>
+        <div class="updates-panel-header">
+          <p class="eyebrow">{{ ui.ko.recentUpdates }}</p>
+          <a class="updates-more-link" href="/ko/updates/">{{ ui.ko.moreUpdates }}</a>
+        </div>
+        {% if latestUpdate %}
+          <dl class="updates-list">
+            <div>
+              {% set item = latestUpdate %}
+              {% include "components/update-entry.njk" %}
+            </div>
+          </dl>
+        {% endif %}
       </aside>
     </div>
   </section>
@@ -88,9 +78,9 @@ pageClass: page-landing
         <p class="eyebrow">Discussions</p>
         <p class="discussion-heading">질문, 제안, 피드백</p>
         <ul class="discussion-list">
-          <li>이 guide에서 다루는 workflow에 대해 질문할 수 있습니다. <span>(tag: question)</span></li>
-          <li>문서 개선 사항을 제안할 수 있습니다. <span>(tag: suggestion)</span></li>
-          <li>설명이 불분명하거나 빠진 단계를 보고할 수 있습니다. <span>(tag: bug)</span></li>
+          <li>이 guide에서 다루는 workflow에 대해 질문할 수 있습니다.</li>
+          <li>문서 개선 사항을 제안할 수 있습니다.</li>
+          <li>설명이 불분명하거나 빠진 단계를 보고할 수 있습니다.</li>
         </ul>
         <p class="discussion-copy">시작하려면 이 카드를 클릭해 Discussions 페이지를 여세요.</p>
       </a>

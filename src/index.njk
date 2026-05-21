@@ -9,35 +9,25 @@ langSwitch:
 pageClass: page-landing
 ---
 {% set currentUpdates = updates.completedByLang.en %}
+{% set latestUpdate = currentUpdates[0] %}
 <main>
   <section class="landing-hero">
     <h1 class="wrap hero-h1">Efficient Research Workflow</h1>
     <p class="wrap lead">Build an efficient research workspace <span class="responsive-break">with LaTeX, VS Code, and GitHub</span></p>
     <div class="wrap hero-grid">
       <aside class="hero-panel panel">
-        <p class="eyebrow">{{ ui.en.recentUpdates }}</p>
-        <dl class="updates-list">
-          {% for item in currentUpdates %}
-            {% if loop.index <= 1 %}
-              <div>
-                <dt class="update-heading">({{ item.date | dateDots }}) {{ item.title }}</dt>
-                <dd>
-                  {% if item.linkItems %}
-                    <ul class="update-link-list">
-                      {% for linkItem in item.linkItems %}
-                        <li><a href="{{ linkItem.url }}">{{ linkItem.title }}</a></li>
-                      {% endfor %}
-                    </ul>
-                  {% elif item.url %}
-                    <a href="{{ item.url }}">{{ item.title }}</a>
-                  {% else %}
-                    {{ item.title }}
-                  {% endif %}
-                </dd>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </dl>
+        <div class="updates-panel-header">
+          <p class="eyebrow">{{ ui.en.recentUpdates }}</p>
+          <a class="updates-more-link" href="/en/updates/">{{ ui.en.moreUpdates }}</a>
+        </div>
+        {% if latestUpdate %}
+          <dl class="updates-list">
+            <div>
+              {% set item = latestUpdate %}
+              {% include "components/update-entry.njk" %}
+            </div>
+          </dl>
+        {% endif %}
       </aside>
     </div>
   </section>
@@ -88,9 +78,9 @@ pageClass: page-landing
         <p class="eyebrow">Discussions</p>
         <p class="discussion-heading">Questions, suggestions, and feedback</p>
         <ul class="discussion-list">
-          <li>Ask questions about the workflow covered in this guide. <span>(tag: question)</span></li>
-          <li>Suggest improvements to the documentation. <span>(tag: suggestion)</span></li>
-          <li>Report unclear explanations or missing steps. <span>(tag: bug)</span></li>
+          <li>Ask questions about the workflow covered in this guide.</li>
+          <li>Suggest improvements to the documentation.</li>
+          <li>Report unclear explanations or missing steps.</li>
         </ul>
         <p class="discussion-copy">To get started, click this card to open the Discussions page.</p>
       </a>

@@ -770,7 +770,7 @@ const pages = [
     slug: "python-installation",
     order: 1,
     group: "python-basics",
-    title: "Installation",
+    title: "설치",
     description: "사용하는 OS에 맞는 Python 설치 파일을 내려받아 설치합니다.",
     translationKey: "python-installation",
     status: "core"
@@ -783,7 +783,7 @@ const pages = [
     slug: "virtual-environment",
     order: 2,
     group: "python-basics",
-    title: "Create a virtual environment",
+    title: "Virtual environment",
     description: "Create a project-local .venv and install packages such as NumPy.",
     translationKey: "python-virtual-environment",
     status: "optional"

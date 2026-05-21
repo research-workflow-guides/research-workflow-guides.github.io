@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+title: 업데이트
+description: Research Workflow Guidebook의 최근 업데이트 내역입니다.
+lang: ko
+langSwitch:
+  url: /en/updates/
+  label: English
+pageClass: page-updates
+permalink: /ko/updates/
+---
+{% set currentUpdates = updates.completedByLang.ko %}
+<main class="content-shell updates-shell">
+  <article class="doc-content panel" data-pagefind-body>
+    <nav class="breadcrumb" aria-label="경로">
+      <a href="/ko/">Home</a>
+      <span>/</span>
+      <span>업데이트</span>
+    </nav>
+
+    <section class="doc-hero doc-hero-simple">
+      <div>
+        <p class="eyebrow">최근 업데이트</p>
+        <h1>업데이트</h1>
+        <p class="lead">새로 추가되거나 수정된 guidebook 내용을 시간순으로 정리합니다.</p>
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <dl class="updates-list updates-list-full">
+        {% for item in currentUpdates %}
+          <div class="update-entry">
+            {% include "components/update-entry.njk" %}
+          </div>
+        {% endfor %}
+      </dl>
+    </section>
+  </article>
+</main>

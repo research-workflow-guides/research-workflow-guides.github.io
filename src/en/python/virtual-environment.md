@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc.njk
-title: Create a virtual environment
+title: Virtual environment
 description: Create a project-local .venv and install packages such as NumPy.
 lang: en
 section: python

@@ -1,0 +1,14 @@
+<dt class="update-heading">({{ item.date | dateDots }}) {{ item.title }}</dt>
+<dd>
+  {% if item.linkItems %}
+    <ul class="update-link-list">
+      {% for linkItem in item.linkItems %}
+        <li><a href="{{ linkItem.url }}">{{ linkItem.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% elif item.url %}
+    <a href="{{ item.url }}">{{ item.title }}</a>
+  {% else %}
+    {{ item.title }}
+  {% endif %}
+</dd>

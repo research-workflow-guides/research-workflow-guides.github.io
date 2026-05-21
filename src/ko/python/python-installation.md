@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc.njk
-title: Installation
+title: 설치
 description: 사용하는 OS에 맞는 Python 설치 파일을 내려받아 설치합니다.
 lang: ko
 section: python
