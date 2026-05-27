@@ -10,33 +10,25 @@ translationKey: initial-setup-latex-installation
 eyebrow: Step 1
 lead: Install MiKTeX, enable on-demand package installation, and verify the base toolchain is ready.
 toc:
-  - id: why-miktex
-    label: Why MiKTeX
   - id: download-miktex
     label: Download MiKTeX
   - id: install-miktex
     label: Install MiKTeX
-  - id: platform-notes
-    label: Platform notes
-  - id: perl-requirement
-    label: Perl requirement
+  - id: perl-installation
+    label: Perl Installation
   - id: package-auto-installation
     label: Package auto-installation
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
-## Why MiKTeX
-
-MiKTeX is the default distribution for this guide. It starts lightweight, works well for first-time users, and installs missing packages as you need them.
-
 ## Download MiKTeX
 
 <div class="doc-step-pair">
   <div>
-    <p>Download it from the MiKTeX website.</p>
-    <p><a href="https://miktex.org/download">Official MiKTeX downloads</a></p>
+    <div class="doc-action-row">
+      <p>Download it from the MiKTeX website.</p>
+      <a class="doc-action-link" href="https://miktex.org/download">Official MiKTeX downloads</a>
+    </div>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-1.png" alt="MiKTeX homepage">
@@ -59,6 +51,10 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
 3. Run updates in MiKTeX Console before moving on, so the package database is current.
 4. Keep on-demand package installation enabled, since that is the working assumption of this guide.
 5. Confirm that `latexmk` is available. If it is missing, install it through MiKTeX Console before continuing.
+
+Linux is supported, but setup details vary by distribution. Follow the **official MiKTeX Linux installation docs** for distro-specific steps.
+
+<p><a class="doc-action-link" href="https://miktex.org/howto/install-miktex-unx">MiKTeX Linux install docs</a></p>
 
 <div class="doc-step-pair">
   <div>
@@ -87,14 +83,20 @@ MiKTeX is the default distribution for this guide. It starts lightweight, works 
   </figure>
 </div>
 
-## Platform notes
+## Perl Installation
+
+`latexmk` and later `latexdiff`-style workflows depend on Perl-based tools. Operating-system-specific installation and verification steps are below.
 
 ### Windows
 
 For this guide, treat Windows as the default path. Install MiKTeX first, then **install Strawberry Perl as a required dependency** so later `latexmk`/`latexdiff` workflows do not fail because Perl is missing.
 
-- Strawberry Perl (official): <https://strawberryperl.com/>
-- After install, open a new terminal and verify:
+<div class="doc-action-row">
+  <p>Open the official Strawberry Perl site and install it before running the checks.</p>
+  <a class="doc-action-link" href="https://strawberryperl.com/">Strawberry Perl</a>
+</div>
+
+After install, open a new terminal and verify:
 
 ```powershell
 perl --version
@@ -102,9 +104,13 @@ where perl
 latexmk -v
 ```
 
-### macOS
+<figure class="image-frame">
+  <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl download page">
+</figure>
 
-Use the official MiKTeX installer for macOS. macOS environments usually expose Perl already (`/usr/bin/perl`), but you should verify from Terminal before moving on.
+### macOS / Linux
+
+macOS environments usually expose Perl already (`/usr/bin/perl`), while Linux varies by distribution. In both environments, verify from Terminal before moving on.
 
 ```bash
 perl --version
@@ -113,39 +119,6 @@ latexmk -v
 ```
 
 If `perl` is not found, install a Perl runtime first, then rerun the checks.
-
-### Linux
-
-Linux is supported, but setup details vary by distribution. Follow MiKTeX’s **official Linux installation page** for your distro and package manager, then verify the toolchain with commands below.
-
-- MiKTeX Linux install docs (official): <https://miktex.org/howto/install-miktex-unx>
-
-Recommended post-install checks:
-
-```bash
-perl --version
-which perl
-latexmk -v
-miktex --version
-```
-
-If `latexmk` is missing, install it from MiKTeX Console or your distro/MiKTeX package flow, then re-check.
-
-## Perl requirement
-
-
-`latexmk` and `latexdiff`-style workflows both depend on Perl.
-
-```bash
-perl --version
-latexmk -v
-```
-
-On Windows, install Strawberry Perl if Perl is missing. On macOS and Linux, verify that Perl is already available before you proceed.
-
-<figure class="image-frame">
-  <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl download page">
-</figure>
 
 ## Package auto-installation
 
@@ -168,7 +141,3 @@ When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On
     <img src="/assets/images/1.1.3-8.png" alt="MiKTeX package installation dialog for a missing package">
   </figure>
 </div>
-
-## Before proceeding
-
-Confirm that MiKTeX Console opens and `latexmk -v` runs without errors. If your workflow uses Perl-based tools, verify `perl --version` as well.

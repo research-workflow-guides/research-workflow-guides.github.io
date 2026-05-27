@@ -16,8 +16,6 @@ toc:
     label: Basic shortcuts
   - id: snippets
     label: Snippets
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -108,8 +106,9 @@ You can use the <kbd>Tab</kbd> key to jump between predefined positions (e.g., $
   <code>&#92;int_{$1}^{$2}</code>
 
 
-You can also define your own snippets. See the [VS Code documentation](https://code.visualstudio.com/docs/editing/userdefinedsnippets) for details. We will cover how to create custom snippets later in this guide.
-
-## Before proceeding
+<div class="doc-action-row">
+  <p>You can also define your own snippets. We will cover how to create custom snippets later in this guide.</p>
+  <a class="doc-action-link" href="https://code.visualstudio.com/docs/editing/userdefinedsnippets">VS Code documentation</a>
+</div>
 
 Confirm that the commands you use every day are easy to reach and that your shortcut list is still short enough to remember.

@@ -20,8 +20,6 @@ toc:
     label: Push the merge
   - id: pull-from-different-branches
     label: Pull from different branches
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -43,13 +41,13 @@ Before merging, commit or stash your current changes. The merge should start fro
 
 Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then move to the branch that should receive the finished work:
 
-```bash
+```shell
 git switch main
 ```
 
 Then download the latest version of `main`:
 
-```bash
+```shell
 git pull
 ```
 
@@ -57,7 +55,7 @@ git pull
 
 Merge the finished branch into the branch you are currently using:
 
-```bash
+```shell
 git merge draft-section
 ```
 
@@ -69,7 +67,7 @@ If Git can combine the changes automatically, the merge will finish immediately.
 
 After the merge succeeds, upload the updated `main` branch to GitHub:
 
-```bash
+```shell
 git push origin main
 ```
 
@@ -81,7 +79,7 @@ Sometimes you are working on one branch, such as `new-contents`, but you need to
 
 For example, while you are on `new-contents`, run:
 
-```bash
+```shell
 git pull origin main
 ```
 
@@ -128,7 +126,5 @@ After the sync finishes, Git Graph shows the merge commit on the current branch.
 </figure>
 
 Remember that plain `git pull` pulls from the upstream branch of your current branch. To pull from `main` while staying on another branch, specify `origin main`.
-
-## Before proceeding
 
 Merge only when you know which branch should receive the changes. If other people need to review the work before it becomes part of `main`, use a Pull Request instead of merging directly.

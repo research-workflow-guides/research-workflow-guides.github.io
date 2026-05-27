@@ -14,8 +14,6 @@ toc:
     label: 저장소 형태 정하기
   - id: 비어-있는-private-repository-만들기
     label: 비어 있는 private repository 만들기
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -66,7 +64,5 @@ tags:
 
   </figure>
 </div>
-
-## 넘어가기 전
 
 GitHub에 private repository가 만들어졌고 아직 비어 있다면 이제 로컬 clone 단계로 넘어갈 수 있습니다.

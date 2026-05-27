@@ -96,6 +96,8 @@ At that point, VS Code may ask how to apply the cloud settings on the current ma
 
 This page is based on the following documentation.
 
-- [VS Code Settings Sync](https://code.visualstudio.com/docs/configure/settings-sync)
-- [VS Code Profiles](https://code.visualstudio.com/docs/configure/profiles)
-- [GitHub authentication](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
+<div class="doc-action-links">
+  <a class="doc-action-link" href="https://code.visualstudio.com/docs/configure/settings-sync">VS Code Settings Sync</a>
+  <a class="doc-action-link" href="https://code.visualstudio.com/docs/configure/profiles">VS Code Profiles</a>
+  <a class="doc-action-link" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github">GitHub authentication</a>
+</div>

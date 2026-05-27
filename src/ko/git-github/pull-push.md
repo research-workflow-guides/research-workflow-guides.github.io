@@ -24,8 +24,6 @@ toc:
     label: Push (두 번째 방법)
   - id: push-세-번째-방법
     label: Push (세 번째 방법)
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -91,7 +89,7 @@ Pull이 성공적으로 완료되면 다음과 같은 화면을 확인할 수 �
 
 Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 터미널을 엽니다. 그런 다음 다음 명령어를 입력하세요:
 
-```bash
+```shell
 git pull
 ```
 
@@ -141,7 +139,7 @@ Commit message를 입력하세요.
 
 Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 터미널을 엽니다. 그런 다음 다음 명령어를 입력하세요:
 
-```bash
+```shell
 git add .
 git commit -m "Describe your change"
 git push
@@ -154,7 +152,5 @@ Command Palette에서도 Push 명령을 실행할 수 있습니다. Windows에�
 <figure class="image-frame">
   <img src="/assets/images/2.2.3-11%20(2).png" alt="VS Code Command Palette Push 명령">
 </figure>
-
-## 넘어가기 전
 
 언제 pull하고, 언제 commit하고, 언제 push하는지 즉흥적으로 판단하지 않고 설명할 수 있으면 기본 sync 루프는 자리 잡은 것입니다.

@@ -16,8 +16,6 @@ toc:
     label: identity 설정
   - id: 설치-확인
     label: 설치 확인
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -71,7 +69,7 @@ Git commit에는 표시 이름과 이메일이 기록됩니다. repository 작�
 
 Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 터미널을 엽니다. 그런 다음 다음 명령어를 입력하세요:
 
-```bash
+```shell
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
@@ -80,13 +78,11 @@ git config --global user.email "you@example.com"
 
 아래 명령을 실행합니다.
 
-```bash
+```shell
 git --version
 git config --global --list
 ```
 
 Git이 정상 응답하고, 이름과 이메일이 보이면 기본 설치는 끝난 것입니다.
-
-## 넘어가기 전
 
 `git --version`이 동작하고 global identity가 올바르게 설정되어 있으면 다음 단계로 넘어갑니다.

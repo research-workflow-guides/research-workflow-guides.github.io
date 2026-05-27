@@ -1429,6 +1429,63 @@ li.section--python > .rail-link-section.is-current {
   color: var(--brand);
 }
 
+.prose .doc-action-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.prose .doc-action-row p {
+  margin: 0;
+}
+
+.prose .doc-action-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+.prose .doc-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.55rem;
+  margin-top: 0.15rem;
+  padding: 0.55rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: none;
+  color: var(--bg);
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.prose .doc-action-link:hover,
+.prose .doc-action-link:focus-visible {
+  background: #835a1f;
+  box-shadow: none;
+  color: var(--bg);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+  .prose .doc-action-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .prose .doc-action-link {
+    justify-self: start;
+  }
+}
+
 .prose img,
 .prose table,
 .prose iframe,
@@ -1485,6 +1542,8 @@ li.section--python > .rail-link-section.is-current {
   position: absolute;
   top: 0.65rem;
   left: 0.75rem;
+  z-index: 1;
+  display: inline-block;
   padding: 0.15rem 0.5rem;
   border: 1px solid rgba(247, 247, 242, 0.18);
   border-radius: 999px;

@@ -18,8 +18,6 @@ toc:
     label: Run latexdiff
   - id: compile-the-redlined-file
     label: Compile the redlined file
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -51,6 +49,11 @@ Prepare a revised TeX file. For example, the name of the revised file is `Check_
 
 ## Run latexdiff
 
+<div class="doc-action-row">
+  <p>Use the official latexdiff documentation when you need upstream details about command options or troubleshooting.</p>
+  <a class="doc-action-link" href="https://github.com/ftilmann/latexdiff">Official documentation</a>
+</div>
+
 <div class="doc-step-pair">
   <div>
     <p>Open the terminal in the manuscript directory where both TeX inputs are available.</p>
@@ -65,7 +68,7 @@ Prepare a revised TeX file. For example, the name of the revised file is `Check_
   <div>
     <p>Then run <code>latexdiff</code> to generate <code>diff_version.tex</code>. Enter the following command in the terminal:</p>
 
-```bash
+```shell
 latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 ```
 
@@ -117,7 +120,7 @@ By changing the number in `--math-markup=<number>`, you can adjust how precisely
 
 If you run into an encoding problem, enter the following command instead:
 
-```bash
+```powershell
 latexdiff --math-markup=0 old_version.tex revised_version.tex | Out-File -Encoding utf8 diff_version.tex
 ```
 
@@ -136,7 +139,7 @@ After running latexdiff in the terminal, `diff_version.tex` will be generated.
 
 Compile the generated TeX file:
 
-```bash
+```shell
 latexmk -pdf diff_version.tex
 ```
 
@@ -149,8 +152,6 @@ latexmk -pdf diff_version.tex
 
   </figure>
 </div>
-
-## Before proceeding
 
 Confirm that all of the following are true:
 

@@ -26,9 +26,11 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>Open the official Python download page and choose the installer that matches your operating system.</p>
+    <div class="doc-action-row">
+      <p>Open the official Python download page and choose the installer that matches your operating system.</p>
+      <a class="doc-action-link" href="https://www.python.org/downloads/">Official Python downloads</a>
+    </div>
     <p>If the page detects your system automatically, use that download button. Otherwise, choose the correct Windows, macOS, or Linux option from the download page.</p>
-    <p><a href="https://www.python.org/downloads/">Official Python downloads</a></p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/python-installation-1.png" alt="Python downloads page">
@@ -37,9 +39,10 @@ tags:
 
 ## Python Extension
 
-To use Python in VS Code, install the following extension.
-
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+<div class="doc-action-row">
+  <p>To use Python in VS Code, install the following extension.</p>
+  <a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Visual Studio Marketplace</a>
+</div>
 
 <figure class="image-frame">
   <img src="/assets/images/python-installation-2.png" alt="Python extension for Visual Studio Code">
@@ -47,9 +50,10 @@ To use Python in VS Code, install the following extension.
 
 ## Jupyter Extension
 
-To work with Jupyter notebooks in VS Code, install the following extension.
-
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+<div class="doc-action-row">
+  <p>To work with Jupyter notebooks in VS Code, install the following extension.</p>
+  <a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Visual Studio Marketplace</a>
+</div>
 
 <figure class="image-frame">
   <img src="/assets/images/python-installation-3.png" alt="Jupyter extension for Visual Studio Code">
@@ -57,27 +61,15 @@ To work with Jupyter notebooks in VS Code, install the following extension.
 
 ## Install common packages
 
-After Python is installed, you can install a package globally from a terminal. Start with NumPy:
+After Python is installed, you can install packages from a terminal or a Jupyter Notebook cell. Start with NumPy, then install multiple packages at once when needed.
 
-On Windows PowerShell:
+### Windows
+
+Use `py` in Windows PowerShell. Start by installing NumPy.
 
 ```powershell
 py -m pip install numpy
 ```
-
-On macOS or Linux:
-
-```bash
-python3 -m pip install numpy
-```
-
-In a Jupyter Notebook cell, install NumPy with `%pip`:
-
-```python
-%pip install numpy
-```
-
-This is for notebook cells only. In a `.py` file, use packages with `import`, such as `import numpy as np`, after they are installed.
 
 You can also install multiple libraries in one command. For example, install Matplotlib and Pandas like this:
 
@@ -85,14 +77,32 @@ You can also install multiple libraries in one command. For example, install Mat
 py -m pip install matplotlib pandas
 ```
 
-On macOS or Linux:
+### macOS / Linux
+
+Use `python3` in a macOS or Linux terminal. Start by installing NumPy.
+
+```bash
+python3 -m pip install numpy
+```
+
+You can also install multiple libraries in one command. For example, install Matplotlib and Pandas like this:
 
 ```bash
 python3 -m pip install matplotlib pandas
 ```
 
-Jupyter Notebook also supports installing multiple packages in one cell with the same `%pip install package1 package2` pattern.
+### Jupyter Notebook
 
-```python
+Use `%pip` inside a Jupyter Notebook cell. Start by installing NumPy.
+
+```python-jupyter
+%pip install numpy
+```
+
+You can also install multiple libraries in one cell. For example, install Matplotlib and Pandas like this:
+
+```python-jupyter
 %pip install matplotlib pandas
 ```
+
+This is for notebook cells only. In a `.py` file, use installed packages with `import`, such as `import numpy as np`.

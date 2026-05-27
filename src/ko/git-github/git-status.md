@@ -14,8 +14,6 @@ toc:
     label: 현재 상태 확인
   - id: 기본-파일-상태
     label: 기본 파일 상태
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -23,7 +21,7 @@ tags:
 
 Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 터미널을 엽니다. 그런 다음 다음 명령어를 입력하세요:
 
-```bash
+```shell
 git status
 ```
 
@@ -69,7 +67,5 @@ git status
     </tbody>
   </table>
 </div>
-
-## 넘어가기 전
 
 기본 파일 상태를 구분할 수 있으면 `git status`를 더 의식적으로 사용할 준비가 된 것입니다.

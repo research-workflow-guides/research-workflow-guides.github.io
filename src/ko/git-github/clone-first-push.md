@@ -18,8 +18,6 @@ toc:
     label: 세 번째 방법
   - id: fork
     label: Fork
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -116,7 +114,7 @@ tags:
 
 터미널에 다음 명령을 입력하세요.
 
-```bash
+```shell
 git clone <repository-url>
 cd <repository-folder>
 ```
@@ -128,7 +126,5 @@ cd <repository-folder>
 <figure class="image-frame">
   <img src="/assets/images/Fork.png" alt="Fork 버튼이 강조된 GitHub repository 화면">
 </figure>
-
-## 넘어가기 전
 
 clone된 repository가 VS Code에 열려 있고 프로젝트 파일이 그 안에 들어갔다면 첫 commit과 push 흐름으로 넘어갑니다.

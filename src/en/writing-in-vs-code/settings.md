@@ -20,8 +20,6 @@ toc:
     label: Useful defaults
   - id: example-settings
     label: Example settings
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -122,7 +120,10 @@ Two or three good bindings are usually more valuable than a long keymap you cann
 
 <div class="doc-step-pair">
   <div>
-    <p>Inside that folder, confirm where <code>settings.json</code> and <code>keybindings.json</code> live so you know what file you are editing. You can use the <code>settings.json</code> and <code>keybindings.json</code> files from the default document pack provided <a href="https://github.com/research-workflow-guides/setting">here</a>.</p>
+    <div class="doc-action-row">
+      <p>Inside that folder, confirm where <code>settings.json</code> and <code>keybindings.json</code> live so you know what file you are editing. You can use the <code>settings.json</code> and <code>keybindings.json</code> files from the default document pack.</p>
+      <a class="doc-action-link" href="https://github.com/research-workflow-guides/setting">Default document pack</a>
+    </div>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="Windows File Explorer showing settings and keybindings files inside the VS Code user folder">
@@ -160,7 +161,5 @@ Add these entries to your `settings.json` file, or merge them into the existing 
   "latex-workshop.latex.recipe.default": "lastUsed"
 }
 ```
-
-## Before proceeding
 
 Confirm that saving a file behaves as expected, PDF preview opens in the place you want, and cleanup does not remove files you still need.

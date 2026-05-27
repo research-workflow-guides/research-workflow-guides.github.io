@@ -16,8 +16,10 @@ module.exports = async function (eleventyConfig) {
     langs: ["bash", "json", "latex", "powershell", "python", "text"],
     langAlias: {
       py: "python",
+      "python-jupyter": "python",
       ps1: "powershell",
       sh: "bash",
+      shell: "bash",
       tex: "latex"
     }
   });
@@ -30,8 +32,10 @@ module.exports = async function (eleventyConfig) {
     powershell: "powershell",
     py: "python",
     python: "python",
+    "python-jupyter": "python (jupyter notebook)",
     ps1: "powershell",
     sh: "bash",
+    shell: "shell",
     tex: "tex"
   };
 
@@ -43,10 +47,13 @@ module.exports = async function (eleventyConfig) {
     if (normalized === "py") {
       return "python";
     }
+    if (normalized === "python-jupyter") {
+      return "python";
+    }
     if (normalized === "output") {
       return "text";
     }
-    if (normalized === "sh") {
+    if (normalized === "sh" || normalized === "shell") {
       return "bash";
     }
     if (normalized === "tex") {

@@ -18,8 +18,6 @@ toc:
     label: Verify the configuration
   - id: sign-in-when-prompted
     label: Sign in when prompted
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -74,7 +72,7 @@ Set the name and email that Git will attach to commits made from this machine.
 
 Check the saved configuration before moving on.
 
-```bash
+```shell
 git config --list
 ```
 
@@ -108,7 +106,5 @@ At some point VS Code may ask you to sign in to GitHub. If you see a prompt with
     <img src="/assets/images/connecting-github.png" alt="VS Code Connect to GitHub dialog with Sign in with your browser highlighted">
   </figure>
 </div>
-
-## Before proceeding
 
 If <code>git config --list</code> shows the correct name and email, and any GitHub sign-in prompt has been completed, continue to repository creation.

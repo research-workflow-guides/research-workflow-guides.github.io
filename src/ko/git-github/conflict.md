@@ -16,8 +16,6 @@ toc:
     label: 세 가지 선택지
   - id: merge-마무리
     label: merge 마무리
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -119,7 +117,5 @@ Commit & Push를 진행하세요. 이로써 충돌이 해결되었습니다.
   <img src="/assets/images/2.2.4-11.png" alt="Commit & Push가 강조된 VS Code Source Control 메뉴">
 
 </figure>
-
-## 넘어가기 전
 
 최종 파일 내용이 무엇이어야 하는지 설명할 수 있고, 그 뒤 repository가 다시 clean 상태로 돌아오면 conflict 처리는 올바르게 끝난 것입니다.

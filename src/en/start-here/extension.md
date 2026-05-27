@@ -29,7 +29,7 @@ tags:
 ---
 ## Code Spell Checker
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Visual Studio Marketplace</a></p>
 
 <figure class="image-frame">
   <img src="/assets/images/extension-1.png" alt="Code Spell Checker extension">
@@ -37,7 +37,7 @@ tags:
 
 ## Bookmarks
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks">Visual Studio Marketplace</a></p>
 
 <figure class="image-frame">
   <img src="/assets/images/extension-2.png" alt="Bookmarks extension">
@@ -45,7 +45,7 @@ tags:
 
 ## Todo Tree
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=gruntfuggly.todo-tree)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=gruntfuggly.todo-tree">Visual Studio Marketplace</a></p>
 
 <figure class="image-frame">
   <img src="/assets/images/extension-3.png" alt="Todo Tree extension">
@@ -53,7 +53,7 @@ tags:
 
 ## Code Ace Jumper
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=lucax88x.codeacejumper)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=lucax88x.codeacejumper">Visual Studio Marketplace</a></p>
 
 <figure class="image-frame">
   <img src="/assets/images/extension-4.png" alt="Code Ace Jumper extension">
@@ -61,7 +61,7 @@ tags:
 
 ## Markdown All in One
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Visual Studio Marketplace</a></p>
 
 <figure class="image-frame">
   <img src="/assets/images/extension-5.png" alt="Markdown All in One extension">
@@ -69,7 +69,7 @@ tags:
 
 ## Python
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Visual Studio Marketplace</a></p>
 
 <figure class="image-frame">
   <img src="/assets/images/extension-6.png" alt="Python extension">
@@ -77,7 +77,7 @@ tags:
 
 ## Julia
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=julialang.language-julia">Visual Studio Marketplace</a></p>
 
 <figure class="image-frame">
   <img src="/assets/images/extension-7.png" alt="Julia extension">

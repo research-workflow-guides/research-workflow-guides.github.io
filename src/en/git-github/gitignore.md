@@ -14,8 +14,6 @@ toc:
     label: Ignore local clutter
   - id: already-uploaded-clutter-files
     label: Already uploaded clutter files
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -91,12 +89,10 @@ This is also useful for large files, such as datasets or generated outputs, that
 
 If you want to remove an already uploaded file or folder from GitHub while keeping it on your computer, enter the following command in the terminal.
 
-```bash
+```shell
 git rm -r --cached <file-or-folder-name>
 git commit -m "Stop tracking ignored files"
 git push
 ```
-
-## Before proceeding
 
 Check that the files or folders you want to exclude are listed in `.gitignore`, grayed out in VS Code, and absent from GitHub after commit and push. If a file still appears in Git, confirm whether it was already tracked before the ignore rule was added.

@@ -28,8 +28,6 @@ toc:
     label: Figures
   - id: texts
     label: Texts
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -379,7 +377,5 @@ Put these snippet entries in `latex.json`.
 ```
 
 For short inline snippets, choose prefixes that do not appear inside ordinary words. A convenient shortcut is only useful if it does not expand by accident.
-
-## Before proceeding
 
 Build snippets from LaTeX code you already understand. The snippet should save repeated typing, not hide syntax that you still need to inspect and edit.

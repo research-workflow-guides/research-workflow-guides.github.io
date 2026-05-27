@@ -18,8 +18,6 @@ toc:
     label: Discard Changes
   - id: undo-local-commits
     label: Undo local commits
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -91,7 +89,7 @@ For example, after making a mistaken commit, Source Control may show a `Sync Cha
 
 To undo only the latest local commit, run:
 
-```bash
+```shell
 git reset --mixed HEAD~1
 ```
 
@@ -109,17 +107,15 @@ After the reset, the files appear under Changes again.
 
 To undo the latest two local commits, change the number:
 
-```bash
+```shell
 git reset --mixed HEAD~2
 ```
 
 Use this only for commits that have not been pushed yet. If the commit has already been pushed or shared with others, do not reset it unless you understand the consequences.
 
-## Before proceeding
-
 Before you discard changes, apply a stash, or reset a local commit, check the current state first:
 
-```bash
+```shell
 git status
 ```
 

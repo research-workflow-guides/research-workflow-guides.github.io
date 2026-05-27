@@ -14,17 +14,15 @@ toc:
     label: VS Code 설치
   - id: latex-workshop-설치
     label: LaTeX Workshop 설치
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
 ## VS Code 설치
 
-1. 운영체제에 맞는 VS Code 설치 파일을 다운로드합니다.
-2. 설치 후 VS Code를 실행해 오류 없이 열리는지 확인합니다.
-
-[VS Code 공식 다운로드](https://code.visualstudio.com/Download)
+<div class="doc-action-row">
+  <p>운영체제에 맞는 VS Code 설치 파일을 다운로드한 뒤, 설치 후 VS Code가 오류 없이 열리는지 확인합니다.</p>
+  <a class="doc-action-link" href="https://code.visualstudio.com/Download">VS Code 공식 다운로드</a>
+</div>
 
 <div class="doc-step-pair">
   <div>
@@ -50,7 +48,7 @@ tags:
 2. **LaTeX Workshop**을 검색해 James Yu가 배포한 확장을 설치합니다.
 3. 설치 후 VS Code를 잠시 열어 두어 확장이 완전히 등록되도록 합니다.
 
-[VS Code Marketplace의 LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">VS Code Marketplace의 LaTeX Workshop</a></p>
 
 <div class="doc-step-pair">
   <div>
@@ -69,7 +67,5 @@ tags:
     <img src="/assets/images/1.2-4.png" alt="설치가 완료된 VS Code 화면">
   </figure>
 </div>
-
-## 넘어가기 전
 
 VS Code가 정상적으로 열리고, LaTeX Workshop이 설치되어 있으며, Command Palette에서 LaTeX Workshop 관련 명령이 보이면 다음 단계로 넘어갑니다.

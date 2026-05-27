@@ -18,8 +18,6 @@ toc:
     label: Discard Changes
   - id: local-commit-취소하기
     label: Local commit 취소하기
-  - id: before-proceeding
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -91,7 +89,7 @@ Stash를 불러오려면 'Apply Stash'를 클릭하세요.
 
 마지막 local commit 하나만 취소하려면 다음 명령어를 실행하세요.
 
-```bash
+```shell
 git reset --mixed HEAD~1
 ```
 
@@ -109,17 +107,15 @@ Reset 후에는 file들이 다시 Changes 아래에 나타납니다.
 
 최근 local commit 2개를 취소하려면 숫자를 바꾸면 됩니다.
 
-```bash
+```shell
 git reset --mixed HEAD~2
 ```
 
 이미 push했거나 다른 사람과 공유한 commit에는 조심해서 사용해야 합니다.
 
-<h2 id="before-proceeding">넘어가기 전</h2>
-
 변경 사항을 discard하거나, stash를 불러오거나, local commit을 reset하기 전에는 먼저 현재 상태를 확인하세요.
 
-```bash
+```shell
 git status
 ```
 

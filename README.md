@@ -4,14 +4,14 @@ This repository is being redesigned as a bilingual Eleventy documentation site f
 
 ## Development
 
-```bash
+```shell
 npm install
 npm run dev
 ```
 
 Build the site:
 
-```bash
+```shell
 npm run build
 npm run pagefind
 ```

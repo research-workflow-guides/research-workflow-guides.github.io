@@ -28,8 +28,6 @@ toc:
     label: 그림
   - id: texts
     label: Texts
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -379,7 +377,5 @@ Fr\'echet
 ```
 
 짧은 inline snippet은 일반 단어 안에서 실수로 확장되지 않도록 prefix를 고르는 것이 중요합니다. 편한 shortcut도 원하지 않을 때 펼쳐지면 오히려 방해가 됩니다.
-
-## 넘어가기 전
 
 Snippet은 이미 이해하고 있는 LaTeX code에서 출발해야 합니다. 목적은 반복 입력을 줄이는 것이지, 나중에 직접 읽고 고쳐야 할 문법을 숨기는 것이 아닙니다.

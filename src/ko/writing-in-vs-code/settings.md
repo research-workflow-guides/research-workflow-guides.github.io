@@ -20,8 +20,6 @@ toc:
     label: 유용한 기본 설정
   - id: 예시-settings
     label: 예시 settings
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -122,7 +120,10 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>그 안에서 <code>settings.json</code>과 <code>keybindings.json</code> 위치를 같이 확인해두면, 나중에 어떤 파일을 편집하는지 헷갈리지 않습니다. 기본 document pack에서 제공하는 <code>settings.json</code>과 <code>keybindings.json</code> 파일은 <a href="https://github.com/research-workflow-guides/setting">여기</a>에서 다운받을 수 있습니다.</p>
+    <div class="doc-action-row">
+      <p>그 안에서 <code>settings.json</code>과 <code>keybindings.json</code> 위치를 같이 확인해두면, 나중에 어떤 파일을 편집하는지 헷갈리지 않습니다. 기본 document pack에서 제공하는 <code>settings.json</code>과 <code>keybindings.json</code> 파일을 사용할 수 있습니다.</p>
+      <a class="doc-action-link" href="https://github.com/research-workflow-guides/setting">기본 document pack</a>
+    </div>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="VS Code user 폴더 안의 settings와 keybindings 파일">
@@ -161,7 +162,5 @@ tags:
   "latex-workshop.latex.recipe.default": "lastUsed"
 }
 ```
-
-## 넘어가기 전
 
 저장 후 동작이 의도와 맞고, PDF 미리보기가 원하는 위치에서 열리며, 자동 정리가 필요한 파일을 지우지 않는다면 다음 문서로 넘어갑니다.

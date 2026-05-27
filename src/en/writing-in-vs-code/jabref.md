@@ -14,19 +14,21 @@ toc:
     label: Download JabRef
   - id: official-tutorial
     label: Official Tutorial
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
 ## Download JabRef
 
-You can download JabRef from the [official website](https://www.jabref.org/). Choose the version that matches your operating system (Windows, Mac, or Linux), then install it on your computer.
+<div class="doc-action-row">
+  <p>You can download JabRef from the official website. Choose the version that matches your operating system (Windows, Mac, or Linux), then install it on your computer.</p>
+  <a class="doc-action-link" href="https://www.jabref.org/">Official JabRef website</a>
+</div>
 
 ## Official Tutorial
 
-You can find the official tutorial here: [JabRef Getting Started](https://docs.jabref.org/getting-started).
-
-## Before proceeding
+<div class="doc-action-row">
+  <p>You can find the official tutorial here.</p>
+  <a class="doc-action-link" href="https://docs.jabref.org/getting-started">JabRef Getting Started</a>
+</div>
 
 After installing JabRef, keep your bibliography file, such as `references.bib`, inside your LaTeX project folder so the manuscript and bibliography stay together.

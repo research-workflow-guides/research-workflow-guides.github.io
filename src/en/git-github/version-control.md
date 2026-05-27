@@ -20,14 +20,12 @@ toc:
     label: Review of changes
   - id: to-reset-to-an-old-version
     label: To reset to an old version
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
 ## Add extension
 
-[Git Graph on Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph on Visual Studio Marketplace</a></p>
 
 <figure class="image-frame">
   <img src="/assets/images/gitgraph.png" alt="Git Graph extension">
@@ -180,8 +178,6 @@ If you are sharing your code with others, it is recommended to use 'revert' inst
 
 Since Version Control can be complex, it is advisable to start with cautious use of the "Hard" option. For more detailed information, please refer to the resources available at the links below.
 
-[Git Tools - Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified)
-
-## Before proceeding
+<p><a class="doc-action-link" href="https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified">Git Tools - Reset Demystified</a></p>
 
 Git Graph and reset are useful when you need to inspect or manage version history. Before changing history, check that your Source Control state is clean and make sure you understand which changes will be kept.

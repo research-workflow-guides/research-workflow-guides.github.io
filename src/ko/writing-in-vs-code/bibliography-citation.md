@@ -22,8 +22,6 @@ toc:
     label: Source cite하기
   - id: bibliography-출력
     label: Bibliography 출력
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -54,7 +52,10 @@ Project root folder에 새 file을 만드세요.
 
 ## BibTeX entry 찾기
 
-[MathSciNet](https://mathscinet-ams-org.proxy1.cl.msu.edu/mathscinet/publications-search), Google Scholar, journal website, publisher page 같은 bibliographic database를 엽니다.
+<div class="doc-action-row">
+  <p>MathSciNet, Google Scholar, journal website, publisher page 같은 bibliographic database를 엽니다.</p>
+  <a class="doc-action-link" href="https://mathscinet-ams-org.proxy1.cl.msu.edu/mathscinet/publications-search">MathSciNet</a>
+</div>
 
 <figure class="image-frame">
   <img src="/assets/images/reference-3.png" alt="MathSciNet publication search page">
@@ -140,8 +141,6 @@ Manuscript를 compile하고 PDF를 확인합니다.
 본문에는 citation이 표시되고, references section에는 cite한 entry가 나타납니다. `reference.bib`에 reference가 들어 있어도 `.tex` 파일에서 cite하지 않으면 PDF에는 나타나지 않습니다.
 
 일부 template은 BibTeX 대신 `biblatex`를 사용합니다. 이 경우 project 상단에는 `\addbibresource{reference.bib}`, 끝부분에는 `\printbibliography` 같은 command를 사용할 수 있습니다. Template이 기대하는 system을 사용하세요.
-
-## 넘어가기 전
 
 Citation을 추가하거나 수정한 뒤에는 manuscript를 다시 compile하고 PDF를 확인하세요.
 

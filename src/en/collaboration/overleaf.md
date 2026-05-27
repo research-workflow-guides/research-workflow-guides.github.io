@@ -20,8 +20,6 @@ toc:
     label: Work in Overleaf
   - id: push-changes-back-to-github
     label: Push changes back to GitHub
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -110,8 +108,6 @@ If there are changes in Overleaf or Git, click the GitHub button under Integrati
 
   </figure>
 </div>
-
-## Before proceeding
 
 Confirm that all of the following are true:
 

@@ -18,8 +18,6 @@ toc:
     label: 첫 빌드 실행
   - id: 다른-폴더-열기
     label: 다른 폴더 열기
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -88,7 +86,5 @@ LaTeX Workshop이 main file을 찾지 못한다면, 확장 문제보다 잘못 �
 
   </figure>
 </div>
-
-## 넘어가기 전
 
 Explorer에 폴더 전체가 보이고, main 파일이 그 안에 있으며, 첫 빌드가 오류 없이 완료되면 다음으로 넘어갑니다.

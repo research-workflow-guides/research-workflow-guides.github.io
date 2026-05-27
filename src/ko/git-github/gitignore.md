@@ -14,8 +14,6 @@ toc:
     label: 로컬 잡파일 무시
   - id: 이미-올라간-잡파일들
     label: 이미 올라간 잡파일들
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -91,12 +89,10 @@ tags:
 
 이미 올라간 파일이나 폴더를 내 컴퓨터에는 남겨두고 GitHub에서만 지우고 싶다면, 터미널에 다음 명령어를 입력하세요.
 
-```bash
+```shell
 git rm -r --cached <file-or-folder-name>
 git commit -m "Stop tracking ignored files"
 git push
 ```
-
-## 넘어가기 전
 
 넘어가기 전에 `.gitignore`에 제외하려는 파일이나 폴더가 적혀 있고, VS Code에서 회색으로 표시되며, commit과 push 후 GitHub에 올라가지 않았는지 확인하세요. 여전히 Git에 보인다면 무시 규칙을 추가하기 전에 이미 Git이 추적하던 파일인지 확인합니다.

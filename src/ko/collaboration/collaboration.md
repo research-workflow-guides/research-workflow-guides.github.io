@@ -14,8 +14,6 @@ toc:
     label: 협업할 때 주의 사항
   - id: 협업-초대하기
     label: 협업 초대하기
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -84,7 +82,5 @@ tags:
     <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="pending invite가 보이는 GitHub access 페이지">
   </figure>
 </div>
-
-## 넘어가기 전
 
 협업자가 repository에 어떤 변화가 언제 올라올지 대략 예측할 수 있다면 좋은 협업 리듬이 만들어진 것입니다.

@@ -20,14 +20,12 @@ toc:
     label: 변경사항 확인
   - id: 옛날-버전으로-돌아가기
     label: 옛날 버전으로 돌아가기
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
 ## Extension 추가하기
 
-[Git Graph on Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph on Visual Studio Marketplace</a></p>
 
 <figure class="image-frame">
   <img src="/assets/images/gitgraph.png" alt="Git Graph extension">
@@ -184,8 +182,6 @@ Version Control은 과정이 복잡하기 때문에 처음에는 신중히 "Hard
 
 보다 자세한 내용은 아래 링크의 자료들을 참고하세요.
 
-[Git 도구 - Reset 명확히 알고 가기](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0)
-
-## 넘어가기 전
+<p><a class="doc-action-link" href="https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0">Git 도구 - Reset 명확히 알고 가기</a></p>
 
 Git Graph와 reset은 version history를 확인하거나 관리할 때 유용합니다. 기록을 되돌리기 전에는 Source Control 상태가 깨끗한지 확인하고, 어떤 변경 사항이 남는지 먼저 이해한 뒤 진행하세요.

@@ -20,8 +20,6 @@ toc:
     label: 삭제된 파일 복구하기
   - id: 이전-commit에서-복구하기
     label: 이전 commit에서 복구하기
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -35,13 +33,13 @@ Git은 컴퓨터의 모든 파일을 자동으로 백업해주는 도구가 아�
 
 tracked 파일을 수정했지만 마지막 commit 상태로 되돌리고 싶다면 `git restore`를 사용합니다.
 
-```bash
+```shell
 git restore path/to/file.tex
 ```
 
 tracked 파일의 현재 로컬 변경 사항을 모두 버리려면 다음을 입력합니다.
 
-```bash
+```shell
 git restore .
 ```
 
@@ -51,7 +49,7 @@ git restore .
 
 `git add`를 너무 일찍 했다면, 수정 내용은 유지한 채 staging area에서만 파일을 내릴 수 있습니다.
 
-```bash
+```shell
 git restore --staged path/to/file.tex
 ```
 
@@ -61,7 +59,7 @@ git restore --staged path/to/file.tex
 
 tracked 파일을 실수로 삭제했다면 마지막 commit 상태에서 복구할 수 있습니다.
 
-```bash
+```shell
 git restore path/to/file.tex
 ```
 
@@ -73,17 +71,15 @@ Git이 이미 알고 있던 파일에만 적용됩니다. 한 번도 commit하�
 
 그다음 선택한 commit에서 해당 파일만 복구합니다.
 
-```bash
+```shell
 git restore --source <commit-hash> path/to/file.tex
 ```
 
 이 방식은 저장소 전체를 reset하는 것보다 안전합니다. 지정한 파일 하나만 복구하기 때문입니다.
 
-## 넘어가기 전
-
 복구 명령어를 실행하기 전에 현재 상태를 확인하세요.
 
-```bash
+```shell
 git status
 ```
 

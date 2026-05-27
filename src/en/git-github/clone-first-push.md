@@ -18,8 +18,6 @@ toc:
     label: Third way
   - id: fork
     label: Fork
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -116,7 +114,7 @@ tags:
 
 Enter these commands in the terminal.
 
-```bash
+```shell
 git clone <repository-url>
 cd <repository-folder>
 ```
@@ -128,7 +126,5 @@ If you want to copy someone else's public repository, use <strong>Fork</strong>.
 <figure class="image-frame">
   <img src="/assets/images/Fork.png" alt="GitHub repository page with the Fork button highlighted">
 </figure>
-
-## Before proceeding
 
 If the cloned repository is open in VS Code and the project files are inside it, continue to the first commit and push workflow.

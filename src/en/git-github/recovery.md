@@ -20,8 +20,6 @@ toc:
     label: Recover deleted files
   - id: restore-from-an-older-commit
     label: Restore from an older commit
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -35,13 +33,13 @@ If a file was never saved, staged, committed, or pushed, Git may not be able to 
 
 If you edited a tracked file and want to return it to the last committed version, use `git restore`.
 
-```bash
+```shell
 git restore path/to/file.tex
 ```
 
 To discard all current local changes in tracked files:
 
-```bash
+```shell
 git restore .
 ```
 
@@ -51,7 +49,7 @@ Use this carefully. The current uncommitted edits will be removed.
 
 If you used `git add` too early, remove the file from the staging area without deleting your edits:
 
-```bash
+```shell
 git restore --staged path/to/file.tex
 ```
 
@@ -61,7 +59,7 @@ This keeps the file changed in your folder, but it is no longer staged for the n
 
 If a tracked file was deleted by mistake, restore it from the last committed version:
 
-```bash
+```shell
 git restore path/to/file.tex
 ```
 
@@ -73,17 +71,15 @@ If you need the version of one file from an older commit, first find the commit 
 
 Then restore that file from the selected commit:
 
-```bash
+```shell
 git restore --source <commit-hash> path/to/file.tex
 ```
 
 This is safer than resetting the whole repository because it restores only the file you name.
 
-## Before proceeding
-
 Before running recovery commands, check the current state:
 
-```bash
+```shell
 git status
 ```
 

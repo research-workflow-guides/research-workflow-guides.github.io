@@ -20,8 +20,6 @@ toc:
     label: Switch branches
   - id: remove-branches
     label: Remove branches
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -43,14 +41,14 @@ Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> o
 
 Create a branch before starting work that should stay separate from `main`.
 
-```bash
+```shell
 git branch draft-section
 git switch draft-section
 ```
 
 You can also create and switch to a new branch in one command:
 
-```bash
+```shell
 git switch -c draft-section
 ```
 
@@ -60,7 +58,7 @@ Use a short branch name that describes the task, such as `fix-conflict-notes`, `
 
 To see the local branches in the repository, run:
 
-```bash
+```shell
 git branch
 ```
 
@@ -68,7 +66,7 @@ The branch you are currently using appears with `*` beside it.
 
 To see both local branches and remote branches from GitHub, run:
 
-```bash
+```shell
 git branch -a
 ```
 
@@ -78,7 +76,7 @@ This is useful when you are not sure whether a branch exists only on your comput
 
 Switching branches means changing which line of work is currently checked out in your folder. After switching, the files in VS Code update to match the selected branch.
 
-```bash
+```shell
 git switch main
 git switch draft-section
 ```
@@ -93,28 +91,26 @@ Remove a branch when the separate line of work is finished, merged, or no longer
 
 You cannot delete the branch you are currently using. First, switch to the branch you want to keep:
 
-```bash
+```shell
 git switch main
 ```
 
 Then delete the local branch:
 
-```bash
+```shell
 git branch -d draft-section
 ```
 
 The `-d` option is the safer choice because Git will stop you if the branch has commits that have not been merged. If you are sure the branch should be discarded, you can force the deletion:
 
-```bash
+```shell
 git branch -D draft-section
 ```
 
 If the branch was already pushed to GitHub, delete the remote branch separately:
 
-```bash
+```shell
 git push origin --delete draft-section
 ```
-
-## Before proceeding
 
 Use branches for work that should stay isolated until it is ready to share. Before merging or deleting a branch, make sure the important commits have been pushed or merged into the branch you want to keep.

@@ -16,8 +16,6 @@ toc:
     label: 기본 단축키
   - id: snippets
     label: Snippets
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -108,8 +106,9 @@ VS Code <strong>snippets</strong>를 사용하면 짧은 prefix를 입력해 긴
   <code>&#92;int_{$1}^{$2}</code>
 
 
-직접 snippet을 만들 수도 있습니다. 자세한 내용은 [VS Code 공식 문서](https://code.visualstudio.com/docs/editing/userdefinedsnippets)를 참고하세요. custom snippet 만드는 방법은 이 가이드의 뒷부분에서 다룹니다.
-
-## 넘어가기 전
+<div class="doc-action-row">
+  <p>직접 snippet을 만들 수도 있습니다. custom snippet 만드는 방법은 이 가이드의 뒷부분에서 다룹니다.</p>
+  <a class="doc-action-link" href="https://code.visualstudio.com/docs/editing/userdefinedsnippets">VS Code 공식 문서</a>
+</div>
 
 매일 쓰는 명령이 바로 닿고, 단축키 목록이 아직 외울 수 있을 만큼 짧다면 다음으로 넘어갑니다.

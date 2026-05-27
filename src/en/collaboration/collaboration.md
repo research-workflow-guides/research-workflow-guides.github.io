@@ -14,8 +14,6 @@ toc:
     label: Collaboration Guidelines
   - id: invite-collaborators
     label: Invite collaborators
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -84,7 +82,5 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
     <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="GitHub access page showing a pending collaborator invitation">
   </figure>
 </div>
-
-## Before proceeding
 
 If your collaborators can predict how and when changes will appear in the repository, the workflow is in a good place.

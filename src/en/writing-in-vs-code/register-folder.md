@@ -18,8 +18,6 @@ toc:
     label: Run the first build
   - id: open-another-folder
     label: Open another folder
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -88,7 +86,5 @@ If LaTeX Workshop cannot find the main file, the problem is often the folder you
 
   </figure>
 </div>
-
-## Before proceeding
 
 Confirm that the Explorer shows the whole project, the main `.tex` file is inside that tree, and the first build completes without errors.

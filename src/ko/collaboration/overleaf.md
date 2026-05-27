@@ -20,8 +20,6 @@ toc:
     label: Overleaf에서 작업하기
   - id: push-changes-back-to-github
     label: GitHub과 동기화하기
-  - id: before-you-move-on
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -111,8 +109,6 @@ Overleaf이나 Git에서 변경사항이 생겼으면 아래의 Integrations 안
 
   </figure>
 </div>
-
-<h2 id="before-you-move-on">넘어가기 전</h2>
 
 아래 항목이 모두 맞는지 확인하세요.
 

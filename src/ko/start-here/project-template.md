@@ -12,8 +12,6 @@ lead: 시작용 프로젝트를 내려받아 VS Code에서 열고, 빌드를 한
 toc:
   - id: 템플릿-다운로드하기
     label: 템플릿 다운로드하기
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -22,7 +20,7 @@ tags:
 
 1. GitHub에서 seed-documents 리파지토리를 엽니다.
 
-   [seed-documents 리파지토리 →](https://github.com/research-workflow-guides/seed-documents)
+   <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">seed-documents 리파지토리</a></p>
 
 2. 아래 버튼을 클릭해 ZIP archive를 다운로드합니다.
 
@@ -35,7 +33,5 @@ tags:
 <figure class="image-frame">
   <img src="/assets/images/1.5-1.png" alt="GitHub의 starter repository">
 </figure>
-
-## 넘어가기 전
 
 압축 파일이 정상적으로 내려받아졌고, 압축을 푼 폴더에 프로젝트 파일이 온전히 들어 있는지 확인합니다.

@@ -14,8 +14,6 @@ toc:
     label: Finding the setting file
   - id: example-snippet
     label: Example snippet
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -53,7 +51,10 @@ tags:
 
 ## Example snippet
 
-You can use the `latex.json` file from the default document pack [provided here](https://github.com/research-workflow-guides/setting). The path where it lives depends on your operating system:
+<div class="doc-action-row">
+  <p>You can use the <code>latex.json</code> file from the default document pack. The path where it lives depends on your operating system:</p>
+  <a class="doc-action-link" href="https://github.com/research-workflow-guides/setting">Default document pack</a>
+</div>
 
 - **Windows**: `%APPDATA%\Code\User\snippets`
 - **macOS**: `$HOME/Library/Application Support/Code/User/snippets`
@@ -85,7 +86,5 @@ You can use the `latex.json` file from the default document pack [provided here]
 
   </figure>
 </div>
-
-## Before proceeding
 
 Confirm that your snippets speed up common LaTeX patterns and that you still understand the structure they expand into.

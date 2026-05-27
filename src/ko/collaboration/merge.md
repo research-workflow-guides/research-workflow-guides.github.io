@@ -20,8 +20,6 @@ toc:
     label: merge 후 push하기
   - id: 다른-branch에서-pull하기
     label: 다른 branch에서 pull하기
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -43,13 +41,13 @@ Merge하기 전에는 현재 변경 사항을 commit하거나 stash하세요. Me
 
 Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 terminal을 여세요. 그다음 완료된 작업을 받을 branch로 이동합니다.
 
-```bash
+```shell
 git switch main
 ```
 
 그다음 `main`의 최신 버전을 내려받습니다.
 
-```bash
+```shell
 git pull
 ```
 
@@ -57,7 +55,7 @@ git pull
 
 완료된 branch를 현재 사용 중인 branch로 merge합니다.
 
-```bash
+```shell
 git merge draft-section
 ```
 
@@ -69,7 +67,7 @@ Git이 변경 사항을 자동으로 합칠 수 있으면 merge는 바로 끝납
 
 Merge가 성공하면 업데이트된 `main` branch를 GitHub에 올립니다.
 
-```bash
+```shell
 git push origin main
 ```
 
@@ -81,7 +79,7 @@ Merge된 branch가 더 이상 필요하지 않다면 중요한 작업이 `main`�
 
 예를 들어 `new-contents`에 있는 상태에서 다음을 실행합니다.
 
-```bash
+```shell
 git pull origin main
 ```
 
@@ -128,7 +126,5 @@ Sync가 끝나면 Git Graph에서 현재 branch에 merge commit이 표시됩니�
 </figure>
 
 단순히 `git pull`만 입력하면 현재 branch의 upstream branch에서 pull합니다. 다른 branch에 머무른 채 `main`에서 pull하려면 `origin main`을 명시하세요.
-
-## 넘어가기 전
 
 어떤 branch가 변경 사항을 받아야 하는지 확실할 때만 merge하세요. 다른 사람이 작업을 확인한 뒤 `main`에 포함해야 한다면 직접 merge하는 대신 Pull Request를 사용하세요.

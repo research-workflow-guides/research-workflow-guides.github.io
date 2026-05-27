@@ -16,8 +16,6 @@ toc:
     label: 기본 보안 설정
   - id: 프로필-정리
     label: 프로필 정리
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -52,7 +50,5 @@ tags:
 ## 프로필 정리
 
 username, display name, verified email이 안정적으로 보이게 맞춥니다. 이런 기본 정보가 협업 때 혼란을 많이 줄여줍니다.
-
-## 넘어가기 전
 
 문제 없이 로그인할 수 있고, GitHub 메일을 받을 수 있으며, 프로필에 안정적인 username이 보이면 다음 단계로 넘어갑니다.

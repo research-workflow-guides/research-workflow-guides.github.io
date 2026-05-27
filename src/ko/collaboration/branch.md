@@ -20,8 +20,6 @@ toc:
     label: Branch 이동하기
   - id: branch-삭제하기
     label: Branch 삭제하기
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -43,14 +41,14 @@ Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에
 
 `main`과 분리해서 진행해야 하는 작업을 시작하기 전에 branch를 만듭니다.
 
-```bash
+```shell
 git branch draft-section
 git switch draft-section
 ```
 
 새 branch를 만들고 바로 이동하려면 다음 명령어를 사용할 수도 있습니다.
 
-```bash
+```shell
 git switch -c draft-section
 ```
 
@@ -60,7 +58,7 @@ Branch 이름은 작업을 설명하는 짧은 이름으로 만드세요. 예를
 
 repository 안의 local branch를 확인하려면 다음을 입력합니다.
 
-```bash
+```shell
 git branch
 ```
 
@@ -68,7 +66,7 @@ git branch
 
 GitHub에 있는 remote branch까지 함께 확인하려면 다음을 입력합니다.
 
-```bash
+```shell
 git branch -a
 ```
 
@@ -78,7 +76,7 @@ git branch -a
 
 Branch를 이동한다는 것은 현재 폴더에서 어떤 작업 흐름을 보고 있는지 바꾸는 것입니다. 이동 후에는 VS Code 안의 파일들이 선택한 branch 상태에 맞게 바뀝니다.
 
-```bash
+```shell
 git switch main
 git switch draft-section
 ```
@@ -93,28 +91,26 @@ Branch를 이동하는 것은 작업을 삭제하는 것이 아닙니다. 현재
 
 현재 사용 중인 branch는 삭제할 수 없습니다. 먼저 유지할 branch로 이동합니다.
 
-```bash
+```shell
 git switch main
 ```
 
 그다음 local branch를 삭제합니다.
 
-```bash
+```shell
 git branch -d draft-section
 ```
 
 `-d` 옵션은 더 안전한 선택입니다. merge되지 않은 commit이 있으면 Git이 삭제를 막아줍니다. 정말 버릴 branch라면 강제로 삭제할 수 있습니다.
 
-```bash
+```shell
 git branch -D draft-section
 ```
 
 이미 GitHub에 push한 branch라면 remote branch도 따로 삭제합니다.
 
-```bash
+```shell
 git push origin --delete draft-section
 ```
-
-## 넘어가기 전
 
 아직 공유할 준비가 되지 않은 작업은 branch로 분리하세요. Branch를 merge하거나 삭제하기 전에는 중요한 commit이 유지할 branch에 push되었거나 merge되었는지 확인하세요.

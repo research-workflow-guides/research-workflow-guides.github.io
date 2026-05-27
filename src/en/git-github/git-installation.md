@@ -16,8 +16,6 @@ toc:
     label: Set your identity
   - id: verify-the-install
     label: Verify the install
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -71,7 +69,7 @@ Git records a display name and email address in your commits. Set them once befo
 
 Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then enter the following command:
 
-```bash
+```shell
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
@@ -80,13 +78,11 @@ git config --global user.email "you@example.com"
 
 Run the following commands:
 
-```bash
+```shell
 git --version
 git config --global --list
 ```
 
 Confirm that Git responds normally and that your name and email are visible.
-
-## Before proceeding
 
 If `git --version` works and your global identity is set correctly, move on to the GitHub account step.

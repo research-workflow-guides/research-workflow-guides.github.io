@@ -20,8 +20,6 @@ toc:
     label: Review the Pull Request
   - id: merge-the-pull-request
     label: Merge the Pull Request
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -37,7 +35,7 @@ Use a Pull Request when another person should review the work, when the change i
 
 Before you can open a Pull Request, the branch must be uploaded to GitHub.
 
-```bash
+```shell
 git push -u origin draft-section
 ```
 
@@ -79,7 +77,7 @@ Use the changed files view to inspect the exact differences before merging. Revi
 
 If someone requests changes, return to the same branch, edit the files, commit the fix, and push again.
 
-```bash
+```shell
 git add .
 git commit -m "Address review comments"
 git push
@@ -93,13 +91,11 @@ When the review is finished and the branch is ready, merge the Pull Request on G
 
 Return to VS Code and update your local `main` branch.
 
-```bash
+```shell
 git switch main
 git pull
 ```
 
 If the branch is no longer needed, delete it after confirming that the merge is complete.
-
-## Before proceeding
 
 Do not treat a Pull Request as just another way to push. Its value is review: checking the branch direction, reading the file differences, discussing the change, and merging only when the work is ready.

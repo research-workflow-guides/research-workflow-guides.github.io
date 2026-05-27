@@ -18,8 +18,6 @@ toc:
     label: 설정 확인
   - id: browser-sign-in
     label: 브라우저 로그인
-  - id: before-proceeding
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -74,7 +72,7 @@ VS Code 안에서 새 터미널을 엽니다.
 
 다음 단계로 넘어가기 전에 저장된 설정을 확인합니다.
 
-```bash
+```shell
 git config --list
 ```
 
@@ -108,7 +106,5 @@ git config --list
     <img src="/assets/images/connecting-github.png" alt="Sign in with your browser가 강조된 VS Code Connect to GitHub 창">
   </figure>
 </div>
-
-<h2 id="before-proceeding">넘어가기 전</h2>
 
 <code>git config --list</code>에서 이름과 이메일이 올바르게 보이고, GitHub 로그인 안내가 있다면 완료한 뒤 repository 생성 단계로 넘어갑니다.

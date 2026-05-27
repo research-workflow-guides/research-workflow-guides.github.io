@@ -22,8 +22,6 @@ toc:
     label: Cite the source
   - id: print-the-bibliography
     label: Print the bibliography
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -54,7 +52,10 @@ Keeping the `.bib` file beside the manuscript makes it easy to track the referen
 
 ## Find a BibTeX entry
 
-Open a bibliographic database such as [MathSciNet](https://mathscinet-ams-org.proxy1.cl.msu.edu/mathscinet/publications-search), Google Scholar, a journal website, or a publisher page.
+<div class="doc-action-row">
+  <p>Open a bibliographic database such as MathSciNet, Google Scholar, a journal website, or a publisher page.</p>
+  <a class="doc-action-link" href="https://mathscinet-ams-org.proxy1.cl.msu.edu/mathscinet/publications-search">MathSciNet</a>
+</div>
 
 <figure class="image-frame">
   <img src="/assets/images/reference-3.png" alt="MathSciNet publication search page">
@@ -140,8 +141,6 @@ Compile the manuscript and check the PDF.
 The citation appears in the manuscript, and the cited entry appears in the references section. If a reference exists in `reference.bib` but is never cited in the `.tex` file, it will not appear in the PDF.
 
 Some templates use `biblatex` instead of BibTeX. In that case, the project may use commands such as `\addbibresource{reference.bib}` near the top and `\printbibliography` near the end. Use the system your template expects.
-
-## Before proceeding
 
 After adding or changing citations, compile the manuscript again and check the PDF.
 

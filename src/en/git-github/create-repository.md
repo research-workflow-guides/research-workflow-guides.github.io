@@ -14,8 +14,6 @@ toc:
     label: Choose the repository shape
   - id: create-an-empty-private-repository
     label: Create an empty private repository
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -66,7 +64,5 @@ Create a new private repository with a clear project name. Skip the README, `.gi
 
   </figure>
 </div>
-
-## Before proceeding
 
 If the private repository exists on GitHub and is still empty, you are ready to clone it locally.

@@ -14,8 +14,6 @@ toc:
     label: 세팅 파일 찾기
   - id: 예시-snippet
     label: 예시 snippet
-  - id: 넘어가기-전
-    label: 넘어가기 전
 tags:
   - doc
 ---
@@ -53,7 +51,10 @@ tags:
 
 ## 예시 snippet
 
-기본 문서팩에서 [제공된](https://github.com/research-workflow-guides/setting) `latex.json` 파일을 사용할 수 있습니다. 파일이 위치할 경로는 사용자의 OS에 따라 다릅니다.
+<div class="doc-action-row">
+  <p>기본 문서팩에서 제공된 <code>latex.json</code> 파일을 사용할 수 있습니다. 파일이 위치할 경로는 사용자의 OS에 따라 다릅니다.</p>
+  <a class="doc-action-link" href="https://github.com/research-workflow-guides/setting">기본 문서팩</a>
+</div>
 
 - **Windows**: `%APPDATA%\Code\User\snippets`
 - **macOS**: `$HOME/Library/Application Support/Code/User/snippets`
@@ -90,7 +91,5 @@ tags:
 </div>
 
 prefix는 짧지만 기억하기 쉬운 쪽이 좋습니다.
-
-## 넘어가기 전
 
 snippet이 자주 쓰는 LaTeX 패턴을 빨라지게 만들고, 전개된 구조도 여전히 이해할 수 있다면 이 문서의 목적은 충분히 달성된 것입니다.

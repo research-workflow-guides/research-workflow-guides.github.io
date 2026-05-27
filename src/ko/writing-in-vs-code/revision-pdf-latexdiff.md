@@ -51,6 +51,11 @@ tags:
 
 ## latexdiff 실행
 
+<div class="doc-action-row">
+  <p>명령 옵션이나 문제 해결에 대한 원문 설명이 필요하면 공식 latexdiff 문서를 확인합니다.</p>
+  <a class="doc-action-link" href="https://github.com/ftilmann/latexdiff">공식 문서</a>
+</div>
+
 <div class="doc-step-pair">
   <div>
     <p>두 TeX 파일이 있는 manuscript 폴더에서 terminal을 엽니다.</p>
@@ -65,7 +70,7 @@ tags:
   <div>
     <p>terminal에서 <code>latexdiff</code>를 실행해 <code>diff_version.tex</code>를 생성합니다. 터미널에 입력해야 할 코드는 다음과 같습니다.</p>
 
-```bash
+```shell
 latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 ```
 
@@ -117,7 +122,7 @@ latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex
 
 인코딩 문제가 있다면 다음 명령어를 입력하세요:
 
-```bash
+```powershell
 latexdiff --math-markup=0 old_version.tex revised_version.tex | Out-File -Encoding utf8 diff_version.tex
 ```
 
@@ -136,7 +141,7 @@ terminal에서 latexdiff를 실행하고 나면, `diff_version.tex` 파일이 �
 
 생성된 TeX 파일을 컴파일합니다.
 
-```bash
+```shell
 latexmk -pdf diff_version.tex
 ```
 

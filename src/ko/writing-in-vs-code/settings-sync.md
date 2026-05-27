@@ -96,6 +96,8 @@ Settings Sync를 처음 켜면 동기화할 항목 목록이 표시됩니다.
 
 아래 문서들을 기준으로 이 페이지를 정리했습니다.
 
-- [VS Code Settings Sync](https://code.visualstudio.com/docs/configure/settings-sync)
-- [VS Code Profiles](https://code.visualstudio.com/docs/configure/profiles)
-- [GitHub authentication](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
+<div class="doc-action-links">
+  <a class="doc-action-link" href="https://code.visualstudio.com/docs/configure/settings-sync">VS Code Settings Sync</a>
+  <a class="doc-action-link" href="https://code.visualstudio.com/docs/configure/profiles">VS Code Profiles</a>
+  <a class="doc-action-link" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github">GitHub authentication</a>
+</div>

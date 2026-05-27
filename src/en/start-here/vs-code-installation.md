@@ -14,17 +14,15 @@ toc:
     label: Install VS Code
   - id: install-latex-workshop
     label: Install LaTeX Workshop
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
 ## Install VS Code
 
-1. Download VS Code from the official download page for your operating system.
-2. Open VS Code after installation and confirm it launches without errors.
-
-[Official VS Code downloads](https://code.visualstudio.com/Download)
+<div class="doc-action-row">
+  <p>Download VS Code from the official download page for your operating system, then open VS Code after installation and confirm it launches without errors.</p>
+  <a class="doc-action-link" href="https://code.visualstudio.com/Download">Official VS Code downloads</a>
+</div>
 
 <div class="doc-step-pair">
   <div>
@@ -52,7 +50,7 @@ tags:
 2. Search for **LaTeX Workshop** and install the extension published by James Yu.
 3. Leave VS Code open for a moment after installation so the extension finishes registering.
 
-[LaTeX Workshop on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop on the VS Code Marketplace</a></p>
 
 <div class="doc-step-pair">
   <div>
@@ -73,7 +71,5 @@ tags:
 
   </figure>
 </div>
-
-## Before proceeding
 
 Confirm that VS Code opens, the extension is installed, and LaTeX Workshop commands appear in the Command Palette.

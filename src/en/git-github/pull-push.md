@@ -24,8 +24,6 @@ toc:
     label: Push (second way)
   - id: push-third-way
     label: Push (third way)
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -91,7 +89,7 @@ If nobody else has changed the repository, the pull does nothing — that is exp
 
 Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then enter the following command:
 
-```bash
+```shell
 git pull
 ```
 
@@ -141,7 +139,7 @@ Select 'Commit & Push'.
 
 Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then enter the following command:
 
-```bash
+```shell
 git add .
 git commit -m "Describe your change"
 git push
@@ -154,7 +152,5 @@ You can also perform Push commands from the Command Palette with <kbd>Ctrl</kbd>
 <figure class="image-frame">
   <img src="/assets/images/2.2.3-11%20(2).png" alt="VS Code Command Palette push command">
 </figure>
-
-## Before proceeding
 
 If you can explain when to pull, when to commit, and when to push without improvising, your daily sync loop is ready.

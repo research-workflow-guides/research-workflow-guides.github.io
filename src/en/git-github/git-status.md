@@ -14,8 +14,6 @@ toc:
     label: Check the current state
   - id: basic-file-states
     label: Basic file states
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -23,7 +21,7 @@ tags:
 
 Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then enter the following command:
 
-```bash
+```shell
 git status
 ```
 
@@ -69,7 +67,5 @@ The most important file states are:
     </tbody>
   </table>
 </div>
-
-## Before proceeding
 
 If you can recognize the basic file states, you are ready to use `git status` more deliberately.

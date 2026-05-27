@@ -16,8 +16,6 @@ toc:
     label: Three options
   - id: finish-the-merge
     label: Finish the merge
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -119,7 +117,5 @@ Proceed with the command "Commit & Push". Thus, the conflict has been resolved.
   <img src="/assets/images/2.2.4-11.png" alt="VS Code Source Control menu with Commit & Push highlighted">
 
 </figure>
-
-## Before proceeding
 
 If you can explain what the final file should say and the repository returns to a clean state afterward, the conflict has been handled correctly.

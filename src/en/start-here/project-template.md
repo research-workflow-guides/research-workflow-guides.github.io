@@ -12,8 +12,6 @@ lead: Download the starter project.
 toc:
   - id: download-the-template
     label: Download the template
-  - id: before-proceeding
-    label: Before proceeding
 tags:
   - doc
 ---
@@ -22,7 +20,7 @@ tags:
 
 1. Open the seed-documents repository in GitHub.
 
-   [seed-documents repository →](https://github.com/research-workflow-guides/seed-documents)
+   <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">seed-documents repository</a></p>
 
 2. Download the ZIP archive from GitHub by clicking the following button.
 
@@ -35,7 +33,5 @@ tags:
 <figure class="image-frame">
   <img src="/assets/images/1.5-1.png" alt="Starter repository on GitHub">
 </figure>
-
-## Before proceeding
 
 Confirm that the archive downloaded cleanly and the extracted folder contains the project files intact.
