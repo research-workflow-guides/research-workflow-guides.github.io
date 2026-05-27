@@ -182,8 +182,8 @@ const sectionDefinitions = [
       {
         key: "python-basics",
         label: {
-          en: "Python Basics",
-          ko: "Python 기초"
+          en: "Installation",
+          ko: "설치"
         }
       }
     ]

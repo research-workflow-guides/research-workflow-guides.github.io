@@ -33,7 +33,7 @@
           </a>
 
           {% if sectionExpanded %}
-            {% if currentUrl == sectionUrl and toc and toc.length and section.key != "writing-in-vs-code" and section.key != "git-github" and section.key != "initial-setup" and section.key != "collaboration" %}
+            {% if currentUrl == sectionUrl and toc and toc.length and section.key != "writing-in-vs-code" and section.key != "git-github" and section.key != "initial-setup" and section.key != "collaboration" and section.key != "python" %}
               <ul class="rail-subtree rail-subtree-headings">
                 {% for item in toc %}
                   <li><a class="rail-link rail-link-heading" href="#{{ item.id }}">{{ item.label }}</a></li>
@@ -41,7 +41,7 @@
               </ul>
             {% endif %}
 
-            {% if (section.key == "writing-in-vs-code" or section.key == "git-github" or section.key == "initial-setup" or section.key == "collaboration") and groupedSectionPages and groupedSectionPages.length %}
+            {% if (section.key == "writing-in-vs-code" or section.key == "git-github" or section.key == "initial-setup" or section.key == "collaboration" or section.key == "python") and groupedSectionPages and groupedSectionPages.length %}
               <ul class="rail-subtree rail-subtree-groups">
                 {% for group in groupedSectionPages %}
                   {% if section.key == "initial-setup" %}
@@ -55,6 +55,12 @@
                       {% set groupAnchor = "reference-documents" %}
                     {% elif group.key == "optional-topics" %}
                       {% set groupAnchor = "optional-documents" %}
+                    {% else %}
+                      {% set groupAnchor = group.key %}
+                    {% endif %}
+                  {% elif section.key == "python" %}
+                    {% if group.key == "python-basics" %}
+                      {% set groupAnchor = "installation" %}
                     {% else %}
                       {% set groupAnchor = group.key %}
                     {% endif %}
