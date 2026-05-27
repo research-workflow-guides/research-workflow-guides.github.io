@@ -1452,17 +1452,21 @@ li.section--python > .rail-link-section.is-current {
 .prose .doc-action-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.45rem;
-  min-height: 2.55rem;
+  max-width: 100%;
+  min-height: 2.25rem;
   margin-top: 0.15rem;
-  padding: 0.55rem 1.1rem;
+  padding: 0.45rem 0.95rem;
   border: 0;
   border-radius: 999px;
   background: var(--accent);
   box-shadow: none;
   color: var(--bg);
-  font-weight: 800;
+  font-size: 0.9rem;
+  font-weight: 700;
   line-height: 1.2;
+  text-align: center;
   text-decoration: none;
   transition: background 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
 }
@@ -1483,6 +1487,9 @@ li.section--python > .rail-link-section.is-current {
 
   .prose .doc-action-link {
     justify-self: start;
+    min-height: 2.1rem;
+    padding: 0.42rem 0.85rem;
+    font-size: 0.82rem;
   }
 }
 
