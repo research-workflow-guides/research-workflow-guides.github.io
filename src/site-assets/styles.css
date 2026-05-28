@@ -1090,7 +1090,7 @@ li {
 @media (min-width: 1001px) {
   .page-sidebar[data-floating="true"] .sidebar-card-rail {
     position: fixed;
-    top: var(--sticky-top, 5.6rem);
+    top: var(--toc-floating-top, var(--sticky-top, 5.6rem));
     left: var(--toc-left);
     width: var(--toc-width);
   }

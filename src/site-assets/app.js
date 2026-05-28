@@ -470,6 +470,7 @@ function setupFloatingToc() {
   const sidebar = document.querySelector(".page-sidebar");
   const panel = document.getElementById("page-navigation");
   const contentPanel = document.querySelector(".doc-content");
+  const header = document.querySelector(".site-header");
   const footer = document.querySelector(".site-footer");
 
   if (!sidebar || !panel) {
@@ -485,29 +486,35 @@ function setupFloatingToc() {
       sidebar.dataset.floating = "false";
       sidebar.style.removeProperty("--toc-left");
       sidebar.style.removeProperty("--toc-width");
+      sidebar.style.removeProperty("--toc-floating-top");
       sidebar.style.removeProperty("--toc-max-height");
       return;
     }
 
     const stickyTop = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--sticky-top")) || 96;
+    const headerRect = header ? header.getBoundingClientRect() : null;
+    const headerBottom = headerRect ? Math.max(0, Math.min(headerRect.bottom, stickyTop - 16)) : 0;
+    const floatingTop = Math.max(16, headerBottom + 16);
     const sidebarRect = sidebar.getBoundingClientRect();
     const sidebarTop = sidebar.offsetTop;
-    const shouldFloat = window.scrollY >= sidebarTop - stickyTop;
+    const shouldFloat = window.scrollY >= sidebarTop - floatingTop;
 
     sidebar.dataset.floating = String(shouldFloat);
 
     if (shouldFloat) {
-      const viewportMaxHeight = window.innerHeight - stickyTop - 16;
-      const contentMaxHeight = contentPanel ? contentPanel.getBoundingClientRect().bottom - stickyTop : viewportMaxHeight;
-      const footerMaxHeight = footer ? footer.getBoundingClientRect().top - stickyTop - 16 : viewportMaxHeight;
+      const viewportMaxHeight = window.innerHeight - floatingTop - 16;
+      const contentMaxHeight = contentPanel ? contentPanel.getBoundingClientRect().bottom - floatingTop : viewportMaxHeight;
+      const footerMaxHeight = footer ? footer.getBoundingClientRect().top - floatingTop - 16 : viewportMaxHeight;
       const maxHeight = Math.max(0, Math.floor(Math.min(viewportMaxHeight, contentMaxHeight, footerMaxHeight)));
 
       sidebar.style.setProperty("--toc-left", `${Math.round(sidebarRect.left)}px`);
       sidebar.style.setProperty("--toc-width", `${Math.round(sidebarRect.width)}px`);
+      sidebar.style.setProperty("--toc-floating-top", `${Math.round(floatingTop)}px`);
       sidebar.style.setProperty("--toc-max-height", `${maxHeight}px`);
     } else {
       sidebar.style.removeProperty("--toc-left");
       sidebar.style.removeProperty("--toc-width");
+      sidebar.style.removeProperty("--toc-floating-top");
       sidebar.style.removeProperty("--toc-max-height");
     }
   }
@@ -553,24 +560,25 @@ function setupPageTocSpy() {
   }
 
   const links = Array.from(toc.querySelectorAll(".rail-link-heading[href^='#']"));
+  const sectionLinks = links.filter((link) => !link.classList.contains("rail-link-heading-sub"));
   const currentPageLink = toc.querySelector(".rail-link-page.is-current");
   const linksById = new Map();
 
-  links.forEach((link) => {
+  sectionLinks.forEach((link) => {
     const id = decodeURIComponent(link.hash.slice(1));
     if (id) {
       linksById.set(id, link);
     }
   });
 
-  const headings = Array.from(content.querySelectorAll("h2[id], h3[id]"))
+  const headings = Array.from(content.querySelectorAll("h2[id]"))
     .filter((heading) => linksById.has(heading.id));
 
   if (currentPageLink) {
     window.requestAnimationFrame(() => scrollTocLinkIntoView(currentPageLink));
   }
 
-  if (!links.length || !headings.length) {
+  if (!sectionLinks.length || !headings.length) {
     return;
   }
 
@@ -586,18 +594,6 @@ function setupPageTocSpy() {
     });
   }
 
-  function getParentHeadingLink(link) {
-    const childList = link.closest(".rail-subtree-heading-children");
-    const parentItem = childList ? childList.parentElement : null;
-
-    if (!parentItem) {
-      return null;
-    }
-
-    return Array.from(parentItem.children)
-      .find((child) => child.classList && child.classList.contains("rail-link-heading")) || null;
-  }
-
   function setActiveHeading(id) {
     const activeLink = linksById.get(id);
     if (!activeLink) {
@@ -609,11 +605,6 @@ function setupPageTocSpy() {
       clearActiveLinks();
       activeLink.classList.add("is-active");
       activeLink.setAttribute("aria-current", "location");
-
-      const parentLink = getParentHeadingLink(activeLink);
-      if (parentLink) {
-        parentLink.classList.add("is-active-parent");
-      }
     }
 
     scrollTocLinkIntoView(activeLink);
