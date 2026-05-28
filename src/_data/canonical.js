@@ -185,6 +185,27 @@ const sectionDefinitions = [
           en: "Installation",
           ko: "설치"
         }
+      },
+      {
+        key: "backends",
+        label: {
+          en: "Backends",
+          ko: "Backends"
+        }
+      },
+      {
+        key: "visualization",
+        label: {
+          en: "Visualization",
+          ko: "시각화"
+        }
+      },
+      {
+        key: "acceleration",
+        label: {
+          en: "Acceleration",
+          ko: "가속"
+        }
       }
     ]
   }
@@ -776,12 +797,38 @@ const pages = [
     status: "core"
   },
   {
+    url: "/en/python/libraries/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "libraries",
+    order: 2,
+    group: "python-basics",
+    title: "Libraries",
+    description: "Install common Python libraries from a terminal or a Jupyter Notebook cell.",
+    translationKey: "python-libraries",
+    status: "core"
+  },
+  {
+    url: "/ko/python/libraries/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "libraries",
+    order: 2,
+    group: "python-basics",
+    title: "라이브러리",
+    description: "터미널이나 Jupyter Notebook 셀에서 자주 쓰는 Python 라이브러리를 설치합니다.",
+    translationKey: "python-libraries",
+    status: "core"
+  },
+  {
     url: "/en/python/virtual-environment/",
     pageType: "document",
     lang: "en",
     section: "python",
     slug: "virtual-environment",
-    order: 2,
+    order: 3,
     group: "python-basics",
     title: "Virtual environment",
     description: "Create a project-local .venv and install packages such as NumPy.",
@@ -794,12 +841,246 @@ const pages = [
     lang: "ko",
     section: "python",
     slug: "virtual-environment",
-    order: 2,
+    order: 3,
     group: "python-basics",
     title: "가상 환경 만들기",
     description: "프로젝트 안에 .venv를 만들고 NumPy 같은 패키지를 설치합니다.",
     translationKey: "python-virtual-environment",
     status: "optional"
+  },
+  {
+    url: "/en/python/numpy/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "numpy",
+    order: 4,
+    group: "backends",
+    title: "NumPy",
+    description: "Use NumPy arrays for small numerical workflows and data preparation.",
+    translationKey: "python-numpy",
+    status: "core"
+  },
+  {
+    url: "/ko/python/numpy/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "numpy",
+    order: 4,
+    group: "backends",
+    title: "NumPy",
+    description: "작은 수치 계산과 데이터 준비에 NumPy array를 사용합니다.",
+    translationKey: "python-numpy",
+    status: "core"
+  },
+  {
+    url: "/en/python/jax/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "jax",
+    order: 5,
+    group: "backends",
+    title: "JAX",
+    description: "Use JAX when array code needs gradients, compilation, or accelerator support.",
+    translationKey: "python-jax",
+    status: "core"
+  },
+  {
+    url: "/ko/python/jax/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "jax",
+    order: 5,
+    group: "backends",
+    title: "JAX",
+    description: "gradient, compile, accelerator 지원이 필요한 array 코드에 JAX를 사용합니다.",
+    translationKey: "python-jax",
+    status: "core"
+  },
+  {
+    url: "/en/python/pytorch/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "pytorch",
+    order: 6,
+    group: "backends",
+    title: "PyTorch",
+    description: "Use PyTorch tensors for machine learning experiments and GPU-backed computation.",
+    translationKey: "python-pytorch",
+    status: "core"
+  },
+  {
+    url: "/ko/python/pytorch/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "pytorch",
+    order: 6,
+    group: "backends",
+    title: "PyTorch",
+    description: "machine learning 실험과 GPU 기반 계산에 PyTorch tensor를 사용합니다.",
+    translationKey: "python-pytorch",
+    status: "core"
+  },
+  {
+    url: "/en/python/two-dimensions/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "two-dimensions",
+    order: 7,
+    group: "visualization",
+    title: "Two dimensions",
+    description: "Create basic two-dimensional plots with Matplotlib.",
+    translationKey: "python-two-dimensions",
+    status: "core"
+  },
+  {
+    url: "/ko/python/two-dimensions/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "two-dimensions",
+    order: 7,
+    group: "visualization",
+    title: "2차원 시각화",
+    description: "Matplotlib으로 기본 2차원 그래프를 만듭니다.",
+    translationKey: "python-two-dimensions",
+    status: "core"
+  },
+  {
+    url: "/en/python/three-dimensions/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "three-dimensions",
+    order: 8,
+    group: "visualization",
+    title: "Three dimensions",
+    description: "Create simple three-dimensional plots for surfaces and trajectories.",
+    translationKey: "python-three-dimensions",
+    status: "core"
+  },
+  {
+    url: "/ko/python/three-dimensions/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "three-dimensions",
+    order: 8,
+    group: "visualization",
+    title: "3차원 시각화",
+    description: "surface나 trajectory를 위한 간단한 3차원 그래프를 만듭니다.",
+    translationKey: "python-three-dimensions",
+    status: "core"
+  },
+  {
+    url: "/en/python/gif-animation/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "gif-animation",
+    order: 9,
+    group: "visualization",
+    title: "GIF animation",
+    description: "Export short Matplotlib animations as GIF files.",
+    translationKey: "python-gif-animation",
+    status: "core"
+  },
+  {
+    url: "/ko/python/gif-animation/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "gif-animation",
+    order: 9,
+    group: "visualization",
+    title: "GIF animation",
+    description: "짧은 Matplotlib animation을 GIF 파일로 저장합니다.",
+    translationKey: "python-gif-animation",
+    status: "core"
+  },
+  {
+    url: "/en/python/numba/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "numba",
+    order: 10,
+    group: "acceleration",
+    title: "Numba",
+    description: "Use Numba to speed up numerical Python loops with just-in-time compilation.",
+    translationKey: "python-numba",
+    status: "core"
+  },
+  {
+    url: "/ko/python/numba/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "numba",
+    order: 10,
+    group: "acceleration",
+    title: "Numba",
+    description: "just-in-time compilation으로 numerical Python loop를 빠르게 실행합니다.",
+    translationKey: "python-numba",
+    status: "core"
+  },
+  {
+    url: "/en/python/process-pool-executor/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "process-pool-executor",
+    order: 11,
+    group: "acceleration",
+    title: "ProcessPoolExecutor",
+    description: "Use multiple CPU processes for independent Python tasks.",
+    translationKey: "python-process-pool-executor",
+    status: "core"
+  },
+  {
+    url: "/ko/python/process-pool-executor/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "process-pool-executor",
+    order: 11,
+    group: "acceleration",
+    title: "ProcessPoolExecutor",
+    description: "서로 독립적인 Python 작업을 여러 CPU process로 나누어 실행합니다.",
+    translationKey: "python-process-pool-executor",
+    status: "core"
+  },
+  {
+    url: "/en/python/cuda/",
+    pageType: "document",
+    lang: "en",
+    section: "python",
+    slug: "cuda",
+    order: 12,
+    group: "acceleration",
+    title: "CUDA",
+    description: "Use CUDA-capable GPUs when the workload is large enough to benefit from GPU execution.",
+    translationKey: "python-cuda",
+    status: "core"
+  },
+  {
+    url: "/ko/python/cuda/",
+    pageType: "document",
+    lang: "ko",
+    section: "python",
+    slug: "cuda",
+    order: 12,
+    group: "acceleration",
+    title: "CUDA",
+    description: "GPU 실행이 이득이 될 만큼 큰 작업에 CUDA-capable GPU를 사용합니다.",
+    translationKey: "python-cuda",
+    status: "core"
   },
   {
     url: "/en/git-github/git-installation/",

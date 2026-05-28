@@ -17,8 +17,6 @@ toc:
     label: Python Extension
   - id: jupyter-extension
     label: Jupyter Extension
-  - id: 주요-패키지-설치
-    label: 주요 패키지 설치
 tags:
   - doc
 ---
@@ -36,6 +34,32 @@ tags:
     <img src="/assets/images/python-installation-1.png" alt="Python 다운로드 페이지">
   </figure>
 </div>
+
+### Windows
+
+다음과 같이 Python 설치 여부와 설치 경로를 Windows PowerShell에서 확인할 수 있습니다.
+
+```powershell
+py -0p
+py --version
+py -c "import sys; print(sys.executable)"
+```
+
+`py -0p`는 Windows Python Launcher가 찾은 Python 버전과 각 실행 파일 경로를 보여줍니다. `*` 표시는 `py`가 기본으로 선택하는 Python입니다. `py --version`은 기본 Python 버전을 확인합니다. 마지막 명령은 `py`가 실제로 사용하는 Python 경로를 출력합니다.
+
+여러 Python 버전이 설치되어 있고 Python 3.14를 명시적으로 지정해야 한다면 `py` 대신 `py -3.14`를 사용합니다.
+
+### macOS / Linux
+
+Python 3.14를 기준으로 다음과 같이 Python 설치 여부와 설치 경로를 터미널에서 확인할 수 있습니다.
+
+```bash
+python3 --version
+which python3
+python3 -c "import sys; print(sys.executable)"
+```
+
+`python3 --version`은 설치된 Python 버전을 확인합니다. `which python3`는 shell이 찾은 `python3` 명령의 경로를 보여줍니다. 마지막 명령은 그 `python3` 명령이 실제로 사용하는 Python 실행 파일 경로를 출력합니다.
 
 ## Python Extension
 
@@ -58,51 +82,3 @@ tags:
 <figure class="image-frame">
   <img src="/assets/images/python-installation-3.png" alt="VS Code Jupyter extension">
 </figure>
-
-## 주요 패키지 설치
-
-Python 설치가 끝나면 터미널이나 Jupyter Notebook 셀에서 패키지를 설치할 수 있습니다. 먼저 NumPy를 설치하고, 필요하면 여러 패키지를 한 번에 설치합니다.
-
-### Windows
-
-Windows PowerShell에서는 `py` 명령어를 사용합니다. 먼저 NumPy를 설치합니다.
-
-```powershell
-py -m pip install numpy
-```
-
-Jupyter Notebook에서도 한 셀에서 여러 패키지를 이어서 설치할 수 있습니다. 예를 들어 Matplotlib과 Pandas는 다음처럼 설치합니다.
-
-```powershell
-py -m pip install matplotlib pandas
-```
-
-### macOS / Linux
-
-macOS 또는 Linux 터미널에서는 `python3` 명령어를 사용합니다. 먼저 NumPy를 설치합니다.
-
-```bash
-python3 -m pip install numpy
-```
-
-여러 개의 라이브러리를 한 번에 설치할 수도 있습니다. 예를 들어 Matplotlib과 Pandas는 다음처럼 설치합니다.
-
-```bash
-python3 -m pip install matplotlib pandas
-```
-
-### Jupyter Notebook
-
-Jupyter Notebook 셀 안에서는 `%pip`를 사용합니다. 먼저 NumPy를 설치합니다.
-
-```python-jupyter
-%pip install numpy
-```
-
-여러 개의 라이브러리를 한 번에 설치할 수도 있습니다. 예를 들어 Matplotlib과 Pandas는 다음처럼 설치합니다.
-
-```python-jupyter
-%pip install matplotlib pandas
-```
-
-이 방식은 notebook 셀에서만 사용합니다. `.py` 파일에서는 설치 명령어를 쓰는 것이 아니라, 설치된 패키지를 `import numpy as np`처럼 불러와서 사용합니다.

@@ -4,7 +4,7 @@ title: Virtual environment
 description: Create a project-local .venv and install packages such as NumPy.
 lang: en
 section: python
-order: 2
+order: 3
 group: python-basics
 permalink: /en/python/virtual-environment/
 translationKey: python-virtual-environment

@@ -17,8 +17,6 @@ toc:
     label: Python Extension
   - id: jupyter-extension
     label: Jupyter Extension
-  - id: install-common-packages
-    label: Install common packages
 tags:
   - doc
 ---
@@ -36,6 +34,32 @@ tags:
     <img src="/assets/images/python-installation-1.png" alt="Python downloads page">
   </figure>
 </div>
+
+### Windows
+
+You can check whether Python is installed and where it is installed from Windows PowerShell.
+
+```powershell
+py -0p
+py --version
+py -c "import sys; print(sys.executable)"
+```
+
+`py -0p` lists the Python versions detected by the Windows Python Launcher and shows each executable path. The `*` mark shows the default Python selected by `py`. `py --version` checks the default Python version. The final command prints the exact Python executable used by `py`.
+
+If several Python versions are installed and you need to target Python 3.14 explicitly, replace `py` with `py -3.14`.
+
+### macOS / Linux
+
+Using Python 3.14 as the baseline, you can check whether Python is installed and where it is installed from the terminal.
+
+```bash
+python3 --version
+which python3
+python3 -c "import sys; print(sys.executable)"
+```
+
+`python3 --version` checks the installed Python version. `which python3` shows the command path found by the shell. The final command prints the exact Python executable used by that `python3` command.
 
 ## Python Extension
 
@@ -58,51 +82,3 @@ tags:
 <figure class="image-frame">
   <img src="/assets/images/python-installation-3.png" alt="Jupyter extension for Visual Studio Code">
 </figure>
-
-## Install common packages
-
-After Python is installed, you can install packages from a terminal or a Jupyter Notebook cell. Start with NumPy, then install multiple packages at once when needed.
-
-### Windows
-
-Use `py` in Windows PowerShell. Start by installing NumPy.
-
-```powershell
-py -m pip install numpy
-```
-
-You can also install multiple libraries in one command. For example, install Matplotlib and Pandas like this:
-
-```powershell
-py -m pip install matplotlib pandas
-```
-
-### macOS / Linux
-
-Use `python3` in a macOS or Linux terminal. Start by installing NumPy.
-
-```bash
-python3 -m pip install numpy
-```
-
-You can also install multiple libraries in one command. For example, install Matplotlib and Pandas like this:
-
-```bash
-python3 -m pip install matplotlib pandas
-```
-
-### Jupyter Notebook
-
-Use `%pip` inside a Jupyter Notebook cell. Start by installing NumPy.
-
-```python-jupyter
-%pip install numpy
-```
-
-You can also install multiple libraries in one cell. For example, install Matplotlib and Pandas like this:
-
-```python-jupyter
-%pip install matplotlib pandas
-```
-
-This is for notebook cells only. In a `.py` file, use installed packages with `import`, such as `import numpy as np`.

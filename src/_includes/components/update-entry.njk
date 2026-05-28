@@ -1,6 +1,19 @@
 <dt class="update-heading">({{ item.date | dateDots }}) {{ item.title }}</dt>
 <dd>
-  {% if item.linkItems %}
+  {% if item.linkGroups %}
+    <div class="update-link-groups">
+      {% for group in item.linkGroups %}
+        <div class="update-link-group">
+          <span class="update-link-group-label">{{ group.title }}</span>
+          <ul class="update-link-list">
+            {% for linkItem in group.linkItems %}
+              <li><a href="{{ linkItem.url }}">{{ linkItem.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  {% elif item.linkItems %}
     <ul class="update-link-list">
       {% for linkItem in item.linkItems %}
         <li><a href="{{ linkItem.url }}">{{ linkItem.title }}</a></li>

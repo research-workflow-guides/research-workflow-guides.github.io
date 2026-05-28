@@ -69,14 +69,39 @@ function normalizeLinkItems(linkItems) {
   return normalizedItems.length ? normalizedItems : null;
 }
 
+function normalizeLinkGroups(linkGroups) {
+  if (!Array.isArray(linkGroups)) {
+    return null;
+  }
+
+  const normalizedGroups = linkGroups
+    .map((group) => {
+      const linkItems = normalizeLinkItems(group.linkItems);
+
+      if (!linkItems) {
+        return null;
+      }
+
+      return {
+        ...group,
+        linkItems
+      };
+    })
+    .filter(Boolean);
+
+  return normalizedGroups.length ? normalizedGroups : null;
+}
+
 const normalized = data.items.map((item) => {
   const links = normalizeLinks(item.links, item.url);
   const linkItems = normalizeLinkItems(item.linkItems);
+  const linkGroups = normalizeLinkGroups(item.linkGroups);
 
   return {
     ...item,
     links,
     linkItems,
+    linkGroups,
     urlsByLang: {
       en: resolveLink(links, "en"),
       ko: resolveLink(links, "ko")
@@ -99,6 +124,17 @@ function withResolvedUrl(items, lang) {
           ...linkItem,
           title: resolveTitle(linkItem, lang),
           url: resolveLink(linkItem.links, lang)
+        }))
+      : null,
+    linkGroups: item.linkGroups
+      ? item.linkGroups.map((group) => ({
+          ...group,
+          title: resolveTitle(group, lang),
+          linkItems: group.linkItems.map((linkItem) => ({
+            ...linkItem,
+            title: resolveTitle(linkItem, lang),
+            url: resolveLink(linkItem.links, lang)
+          }))
         }))
       : null
   }));
