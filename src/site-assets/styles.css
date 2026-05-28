@@ -778,6 +778,27 @@ li {
   color: var(--text);
 }
 
+.update-link-groups {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.update-link-group {
+  font-size: inherit;
+}
+
+.update-link-group-label {
+  color: var(--muted);
+  font-size: 0.86em;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.update-link-group-label::after {
+  content: ": ";
+}
+
 .updates-shell {
   grid-template-columns: minmax(0, 1fr);
 }
@@ -802,6 +823,11 @@ li {
 
 .discussions-band {
   padding-top: 0;
+}
+
+.discussions-band .wrap {
+  display: grid;
+  gap: 1rem;
 }
 
 .discussions-card {
@@ -1623,7 +1649,29 @@ li.section--python > .rail-link-section.is-current {
 }
 
 .image-frame img {
+  display: block;
+  height: auto;
   margin-inline: auto;
+}
+
+.image-frame--gif-result,
+.image-frame--plot-result {
+  width: min(100%, 32rem);
+  margin-inline: auto;
+}
+
+.image-frame--gif-result img,
+.image-frame--plot-result img {
+  width: 100%;
+}
+
+.math-inline {
+  font-family: "Times New Roman", Cambria, "Cambria Math", serif;
+  white-space: nowrap;
+}
+
+.math-inline var {
+  font-style: italic;
 }
 
 li > .image-frame {

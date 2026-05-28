@@ -4,7 +4,7 @@ title: ProcessPoolExecutor
 description: 서로 독립적인 Python 작업을 여러 CPU process로 나누어 실행합니다.
 lang: ko
 section: python
-order: 10
+order: 11
 group: acceleration
 permalink: /ko/python/process-pool-executor/
 translationKey: python-process-pool-executor

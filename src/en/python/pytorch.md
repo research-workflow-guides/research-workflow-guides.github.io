@@ -4,7 +4,7 @@ title: PyTorch
 description: Use PyTorch tensors for machine learning experiments and GPU-backed computation.
 lang: en
 section: python
-order: 5
+order: 6
 group: backends
 permalink: /en/python/pytorch/
 translationKey: python-pytorch
@@ -23,8 +23,8 @@ tags:
 ## When to use PyTorch
 
 <div class="doc-action-row">
-  <p>Use the official PyTorch repository when you need source code, issues, releases, or development details.</p>
-  <a class="doc-action-link" href="https://github.com/pytorch/pytorch">Official repository</a>
+  <p>Use the official PyTorch site when you need installation notes, documentation, or ecosystem information.</p>
+  <a class="doc-action-link" href="https://pytorch.org/">Official PyTorch site</a>
 </div>
 
 Use PyTorch when your workflow involves neural networks, tensor operations on a GPU, or model training loops.

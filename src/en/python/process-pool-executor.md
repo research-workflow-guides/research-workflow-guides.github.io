@@ -4,7 +4,7 @@ title: ProcessPoolExecutor
 description: Use multiple CPU processes for independent Python tasks.
 lang: en
 section: python
-order: 10
+order: 11
 group: acceleration
 permalink: /en/python/process-pool-executor/
 translationKey: python-process-pool-executor

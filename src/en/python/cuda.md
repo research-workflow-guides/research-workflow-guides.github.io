@@ -4,7 +4,7 @@ title: CUDA
 description: Use CUDA-capable GPUs when the workload is large enough to benefit from GPU execution.
 lang: en
 section: python
-order: 11
+order: 12
 group: acceleration
 permalink: /en/python/cuda/
 translationKey: python-cuda

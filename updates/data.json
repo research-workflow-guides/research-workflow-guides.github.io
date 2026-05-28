@@ -1,9 +1,121 @@
 {
   "currentBuild": {
-    "title": "New contents are added.",
-    "summary": "New writing, GitHub, and collaboration pages have been added to the guidebook."
+    "title": "More Part 5 Python content has been added.",
+    "summary": "New Python library, backend, visualization, and acceleration pages have been added to the guidebook."
   },
   "items": [
+    {
+      "title": "More Part 5 Python content has been added.",
+      "titles": {
+        "en": "More Part 5 Python content has been added.",
+        "ko": "Part 5 Python 내용이 더 추가되었습니다."
+      },
+      "description": "New Python library, backend, visualization, and acceleration pages are available.",
+      "date": "2026-05-28",
+      "status": "completed",
+      "linkGroups": [
+        {
+          "title": "Available",
+          "titles": {
+            "en": "Available",
+            "ko": "공개됨"
+          },
+          "linkItems": [
+            {
+              "title": "Libraries",
+              "titles": {
+                "en": "Libraries",
+                "ko": "라이브러리"
+              },
+              "links": {
+                "en": "/en/python/libraries/",
+                "ko": "/ko/python/libraries/"
+              }
+            },
+            {
+              "title": "Two dimensions",
+              "titles": {
+                "en": "Two dimensions",
+                "ko": "2차원 시각화"
+              },
+              "links": {
+                "en": "/en/python/two-dimensions/",
+                "ko": "/ko/python/two-dimensions/"
+              }
+            },
+            {
+              "title": "Three dimensions",
+              "titles": {
+                "en": "Three dimensions",
+                "ko": "3차원 시각화"
+              },
+              "links": {
+                "en": "/en/python/three-dimensions/",
+                "ko": "/ko/python/three-dimensions/"
+              }
+            },
+            {
+              "title": "GIF animation",
+              "links": {
+                "en": "/en/python/gif-animation/",
+                "ko": "/ko/python/gif-animation/"
+              }
+            }
+          ]
+        },
+        {
+          "title": "In progress",
+          "titles": {
+            "en": "In progress",
+            "ko": "작성 중"
+          },
+          "linkItems": [
+            {
+              "title": "NumPy",
+              "links": {
+                "en": "/en/python/numpy/",
+                "ko": "/ko/python/numpy/"
+              }
+            },
+            {
+              "title": "JAX",
+              "links": {
+                "en": "/en/python/jax/",
+                "ko": "/ko/python/jax/"
+              }
+            },
+            {
+              "title": "PyTorch",
+              "links": {
+                "en": "/en/python/pytorch/",
+                "ko": "/ko/python/pytorch/"
+              }
+            },
+            {
+              "title": "Numba",
+              "links": {
+                "en": "/en/python/numba/",
+                "ko": "/ko/python/numba/"
+              }
+            },
+            {
+              "title": "ProcessPoolExecutor",
+              "links": {
+                "en": "/en/python/process-pool-executor/",
+                "ko": "/ko/python/process-pool-executor/"
+              }
+            },
+            {
+              "title": "CUDA",
+              "links": {
+                "en": "/en/python/cuda/",
+                "ko": "/ko/python/cuda/"
+              }
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Part 5 Python is started.",
       "titles": {

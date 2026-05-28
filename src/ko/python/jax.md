@@ -4,7 +4,7 @@ title: JAX
 description: gradient, compile, accelerator 지원이 필요한 array 코드에 JAX를 사용합니다.
 lang: ko
 section: python
-order: 4
+order: 5
 group: backends
 permalink: /ko/python/jax/
 translationKey: python-jax
@@ -23,8 +23,8 @@ tags:
 ## JAX를 쓸 때
 
 <div class="doc-action-row">
-  <p>Source code, issue, release, development 정보를 확인해야 할 때는 JAX 공식 repository를 사용합니다.</p>
-  <a class="doc-action-link" href="https://github.com/jax-ml/jax">공식 repository</a>
+  <p>설치 안내, API detail, 예제를 확인해야 할 때는 JAX 공식 문서를 사용합니다.</p>
+  <a class="doc-action-link" href="https://docs.jax.dev/en/latest/">공식 문서</a>
 </div>
 
 같은 array workflow에서 gradient, just-in-time compilation, accelerator 기반 계산이 필요할 때 JAX를 사용합니다.

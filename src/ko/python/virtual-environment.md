@@ -4,7 +4,7 @@ title: 가상 환경 만들기
 description: 프로젝트 안에 .venv를 만들고 NumPy 같은 패키지를 설치합니다.
 lang: ko
 section: python
-order: 2
+order: 3
 group: python-basics
 permalink: /ko/python/virtual-environment/
 translationKey: python-virtual-environment

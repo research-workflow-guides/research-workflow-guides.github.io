@@ -4,7 +4,7 @@ title: CUDA
 description: GPU 실행이 이득이 될 만큼 큰 작업에 CUDA-capable GPU를 사용합니다.
 lang: ko
 section: python
-order: 11
+order: 12
 group: acceleration
 permalink: /ko/python/cuda/
 translationKey: python-cuda

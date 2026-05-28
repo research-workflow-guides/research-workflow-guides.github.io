@@ -4,7 +4,7 @@ title: Numba
 description: just-in-time compilation으로 numerical Python loop를 빠르게 실행합니다.
 lang: ko
 section: python
-order: 9
+order: 10
 group: acceleration
 permalink: /ko/python/numba/
 translationKey: python-numba

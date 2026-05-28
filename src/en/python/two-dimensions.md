@@ -4,39 +4,53 @@ title: Two dimensions
 description: Create basic two-dimensional plots with Matplotlib.
 lang: en
 section: python
-order: 6
+order: 7
 group: visualization
 permalink: /en/python/two-dimensions/
 translationKey: python-two-dimensions
 eyebrow: Visualization 1
 lead: Two-dimensional plots are the default way to inspect trends, comparisons, and numerical output.
 toc:
-  - id: when-to-use-2d-plots
-    label: When to use 2D plots
+  - id: install-required-library
+    label: Install required library
   - id: minimal-example
     label: Minimal example
-  - id: export-the-figure
-    label: Export the figure
 tags:
   - doc
 ---
-## When to use 2D plots
+## Install required library
 
-Use a two-dimensional plot when you need to inspect one or two quantities clearly: a curve, a scatter plot, or a comparison across conditions.
+<div class="doc-action-row">
+  <p>If <code>Matplotlib</code> is not installed, install it first.</p>
+  <a class="doc-action-link" href="https://matplotlib.org/">Matplotlib documentation</a>
+</div>
+
+On Windows PowerShell:
+
+```powershell
+py -m pip install matplotlib
+```
+
+On macOS or Linux:
+
+```bash
+python3 -m pip install matplotlib
+```
 
 ## Minimal example
 
-This example plots `y = x^2`, creates an `Illustration` folder if needed, saves the figure, and then shows it.
+This example plots <span class="math-inline"><var>y</var> = <var>x</var><sup>2</sup></span>, creates a `figures` folder next to the `.py` file, saves the figure, and then shows it.
 
 ```python
 # Basic packages
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 # save path setting
-import os
-if not os.path.exists('Illustration'):
-    os.makedirs('Illustration')
+script_dir = Path(__file__).resolve().parent
+figures_dir = script_dir / "figures"
+figures_dir.mkdir(exist_ok=True)
 
 # function
 def f(x):
@@ -46,21 +60,26 @@ def f(x):
 x = np.linspace(-10, 10, 400)
 
 # visualization
-plt.figure(figsize=(6, 6))
-plt.plot(x, f(x), label='$y = x^2$', color='blue')
-plt.xlabel('$x$', fontsize=11)
-plt.ylabel('$y$', fontsize=11)
-plt.xlim(-5, 5)
-plt.ylim(-5, 5)
-plt.xticks(fontsize=10)
-plt.yticks(fontsize=10)
-plt.grid()
-plt.legend()
-plt.title('Plot of $y = x^2$', fontsize=11)
-plt.savefig('Illustration/Figure 1.png', dpi=600, bbox_inches='tight')
+fig, ax = plt.subplots(figsize=(6, 6))
+ax.plot(x, f(x), label="$y = x^2$", color="blue")
+ax.set_xlabel("$x$", fontsize=11)
+ax.set_ylabel("$y$", fontsize=11)
+ax.set_xlim(-5, 5)
+ax.set_ylim(-5, 5)
+ax.tick_params(labelsize=10)
+ax.grid()
+ax.legend()
+ax.set_title("Plot of $y = x^2$", fontsize=11)
+
+figure_path = figures_dir / "figure-1.png"
+fig.savefig(figure_path, dpi=600, bbox_inches="tight")
 plt.show()
 ```
 
-## Export the figure
+The script saves the figure as `figures/figure-1.png` next to the `.py` file. This keeps generated figures close to the script that created them.
 
-The script saves the figure as `Illustration/Figure 1.png`. Use a clear folder name and file name so generated figures are easy to reuse later.
+The resulting figure should look like this.
+
+<figure class="image-frame image-frame--plot-result">
+  <img src="/assets/images/2d-figure.png" alt="Two-dimensional plot of y equals x squared">
+</figure>

@@ -4,7 +4,7 @@ title: JAX
 description: Use JAX when array code needs gradients, compilation, or accelerator support.
 lang: en
 section: python
-order: 4
+order: 5
 group: backends
 permalink: /en/python/jax/
 translationKey: python-jax
@@ -23,8 +23,8 @@ tags:
 ## When to use JAX
 
 <div class="doc-action-row">
-  <p>Use the official JAX repository when you need source code, issues, releases, or development details.</p>
-  <a class="doc-action-link" href="https://github.com/jax-ml/jax">Official repository</a>
+  <p>Use the official JAX documentation when you need installation notes, API details, or examples.</p>
+  <a class="doc-action-link" href="https://docs.jax.dev/en/latest/">Official documentation</a>
 </div>
 
 Use JAX when the same array workflow needs gradients, just-in-time compilation, or accelerator-backed computation.

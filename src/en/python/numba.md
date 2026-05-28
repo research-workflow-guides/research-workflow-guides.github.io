@@ -4,7 +4,7 @@ title: Numba
 description: Use Numba to speed up numerical Python loops with just-in-time compilation.
 lang: en
 section: python
-order: 9
+order: 10
 group: acceleration
 permalink: /en/python/numba/
 translationKey: python-numba

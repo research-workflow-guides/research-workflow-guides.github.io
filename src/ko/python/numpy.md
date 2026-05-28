@@ -4,7 +4,7 @@ title: NumPy
 description: 작은 수치 계산과 데이터 준비에 NumPy array를 사용합니다.
 lang: ko
 section: python
-order: 3
+order: 4
 group: backends
 permalink: /ko/python/numpy/
 translationKey: python-numpy
@@ -23,8 +23,8 @@ tags:
 ## NumPy를 쓸 때
 
 <div class="doc-action-row">
-  <p>Source code, issue, release, development 정보를 확인해야 할 때는 NumPy 공식 repository를 사용합니다.</p>
-  <a class="doc-action-link" href="https://github.com/numpy/numpy">공식 repository</a>
+  <p>설치 안내, 문서, project 정보를 확인해야 할 때는 NumPy 공식 사이트를 사용합니다.</p>
+  <a class="doc-action-link" href="https://numpy.org/">NumPy 공식 사이트</a>
 </div>
 
 데이터가 array 형태로 자연스럽게 표현되고, 빠르고 예측 가능한 수치 연산이 필요할 때 NumPy를 사용합니다.

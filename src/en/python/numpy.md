@@ -4,7 +4,7 @@ title: NumPy
 description: Use NumPy arrays for small numerical workflows and data preparation.
 lang: en
 section: python
-order: 3
+order: 4
 group: backends
 permalink: /en/python/numpy/
 translationKey: python-numpy
@@ -23,8 +23,8 @@ tags:
 ## When to use NumPy
 
 <div class="doc-action-row">
-  <p>Use the official NumPy repository when you need source code, issues, releases, or development details.</p>
-  <a class="doc-action-link" href="https://github.com/numpy/numpy">Official repository</a>
+  <p>Use the official NumPy site when you need installation notes, documentation, or project information.</p>
+  <a class="doc-action-link" href="https://numpy.org/">Official NumPy site</a>
 </div>
 
 Use NumPy when your data fits naturally into arrays and you need fast, predictable numerical operations.

@@ -4,7 +4,7 @@ title: PyTorch
 description: machine learning 실험과 GPU 기반 계산에 PyTorch tensor를 사용합니다.
 lang: ko
 section: python
-order: 5
+order: 6
 group: backends
 permalink: /ko/python/pytorch/
 translationKey: python-pytorch
@@ -23,8 +23,8 @@ tags:
 ## PyTorch를 쓸 때
 
 <div class="doc-action-row">
-  <p>Source code, issue, release, development 정보를 확인해야 할 때는 PyTorch 공식 repository를 사용합니다.</p>
-  <a class="doc-action-link" href="https://github.com/pytorch/pytorch">공식 repository</a>
+  <p>설치 안내, 문서, ecosystem 정보를 확인해야 할 때는 PyTorch 공식 사이트를 사용합니다.</p>
+  <a class="doc-action-link" href="https://pytorch.org/">PyTorch 공식 사이트</a>
 </div>
 
 Neural network, GPU tensor operation, model training loop가 workflow에 포함될 때 PyTorch를 사용합니다.

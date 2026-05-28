@@ -4,55 +4,74 @@ title: GIF animation
 description: Export short Matplotlib animations as GIF files.
 lang: en
 section: python
-order: 8
+order: 9
 group: visualization
 permalink: /en/python/gif-animation/
 translationKey: python-gif-animation
 eyebrow: Visualization 3
 lead: GIF animation is useful for showing a short changing process without requiring an interactive viewer.
 toc:
-  - id: when-to-use-gif-animation
-    label: When to use GIF animation
+  - id: install-required-library
+    label: Install required library
   - id: minimal-example
     label: Minimal example
-  - id: working-habit
-    label: Working habit
 tags:
   - doc
 ---
-## When to use GIF animation
+## Install required library
 
-Use a GIF when the change over time is the point: an iteration, a wave, a parameter sweep, or a short simulation.
+<div class="doc-action-row">
+  <p>If <code>Pillow</code> is not installed, install it first.</p>
+  <a class="doc-action-link" href="https://pillow.readthedocs.io/en/stable/">Pillow documentation</a>
+</div>
 
-Keep it short. A small animation is easier to inspect and easier to share.
+On Windows PowerShell:
+
+```powershell
+py -m pip install pillow
+```
+
+On macOS or Linux:
+
+```bash
+python3 -m pip install pillow
+```
 
 ## Minimal example
 
-This example first saves a sequence of PNG frames, then combines those frames into a GIF animation.
+This example first saves a sequence of PNG frames, then combines those frames into a GIF animation. Save the code in a `.py` file; the `figures` and `animations` folders are created next to that file.
 
 ```python
 # Basic packages
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
+from PIL import Image
 
 # save path setting
-illustration_dir = Path("Illustration")
-animation_dir = Path("Animation")
-illustration_dir.mkdir(exist_ok=True)
-animation_dir.mkdir(exist_ok=True)
+script_dir = Path(__file__).resolve().parent
+figures_dir = script_dir / "figures"
+animations_dir = script_dir / "animations"
+figures_dir.mkdir(exist_ok=True)
+animations_dir.mkdir(exist_ok=True)
+
+for frame_path in figures_dir.glob("frame-*.png"):
+    frame_path.unlink()
 
 # function
 def f(x):
     return x**2
 
-# frame generation
-def zoom(x_range=10):
+# ==========
+# Making frames
+# ==========
+def zoom(x_range=10, frame_index=1):
     assert 0 <= x_range <= 10, "Input x_range should be in [0, 10]"
 
     x = np.linspace(-10, 10, 400)
 
     fig, ax = plt.subplots(figsize=(6, 6))
+    fig.subplots_adjust(left=0.14, right=0.96, bottom=0.12, top=0.90)
     ax.plot(x, f(x), label="$y = x^2$", color="blue")
     ax.set_xlabel("$x$", fontsize=11)
     ax.set_ylabel("$y$", fontsize=11)
@@ -63,51 +82,48 @@ def zoom(x_range=10):
     ax.legend(loc="upper right")
     ax.set_title("Plot of $y = x^2$", fontsize=11)
 
-    frame_path = illustration_dir / f"{x_range:.1f}.png"
-    fig.savefig(frame_path, dpi=300, bbox_inches="tight")
+    frame_path = figures_dir / f"frame-{frame_index:03d}.png"
+    fig.savefig(frame_path, dpi=300)
     plt.close(fig)
 
-for x_range in np.arange(0.5, 10.5, 0.5):
-    zoom(x_range)
-```
-
-If `Pillow` or `imageio` is not installed, install them first.
-
-```shell
-python -m pip install pillow imageio
-```
-
-Then create the GIF from the saved frames.
-
-```python
-from pathlib import Path
-
-import imageio.v3 as iio
-from PIL import Image, ImageOps
-
-input_dir = Path("Illustration")
-output_path = Path("Animation") / "Figure 1 - Animation.gif"
+for frame_index, x_range in enumerate(np.arange(10.0, 0.0, -0.5), start=1):
+    zoom(x_range, frame_index)
 
 frame_paths = sorted(
-    input_dir.glob("*.png"),
-    key=lambda path: float(path.stem)
+    figures_dir.glob("frame-*.png")
 )
 
+if not frame_paths:
+    raise FileNotFoundError(f"No PNG frames found in {figures_dir}")
+
+# ====================
+# Making the animation
+# ====================
 frames = []
 for frame_path in frame_paths:
-    image = Image.open(frame_path).convert("RGBA")
-    image_with_border = ImageOps.expand(
-        image,
-        border=20,
-        fill=(0, 0, 0, 0)
-    )
-    frames.append(image_with_border)
+    with Image.open(frame_path) as image:
+        frames.append(image.convert("RGB").copy())
 
-iio.imwrite(output_path, frames, duration=400, loop=0)
+frame_size = frames[0].size
+if any(frame.size != frame_size for frame in frames):
+    raise ValueError("All frames must have the same size.")
+
+frames[0].save(
+    animations_dir / "figure-1-animation.gif",
+    save_all=True,
+    append_images=frames[1:],
+    duration=400,
+    loop=0,
+    disposal=2
+)
 
 print("GIF animation creation completed.")
 ```
 
-## Working habit
+The script saves the PNG frames in `figures/` and the GIF as `animations/figure-1-animation.gif` next to the `.py` file. This keeps generated figures and animations close to the script that created them.
 
-Export and inspect a few still frames first. Once the axes, labels, and limits are right, generate the full frame sequence and build the GIF.
+The resulting animation should look like this.
+
+<figure class="image-frame image-frame--gif-result">
+  <img src="/assets/images/animation.gif" alt="GIF animation showing a zoom into the plot of y equals x squared">
+</figure>

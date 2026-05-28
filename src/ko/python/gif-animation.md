@@ -4,55 +4,74 @@ title: GIF animation
 description: 짧은 Matplotlib animation을 GIF 파일로 저장합니다.
 lang: ko
 section: python
-order: 8
+order: 9
 group: visualization
 permalink: /ko/python/gif-animation/
 translationKey: python-gif-animation
 eyebrow: Visualization 3
 lead: GIF animation은 interactive viewer 없이 짧은 변화 과정을 보여줘야 할 때 유용합니다.
 toc:
-  - id: gif-animation을-쓸-때
-    label: GIF animation을 쓸 때
+  - id: 필요한-라이브러리-설치
+    label: 필요한 라이브러리 설치
   - id: 최소-예제
     label: 최소 예제
-  - id: 작업-습관
-    label: 작업 습관
 tags:
   - doc
 ---
-## GIF animation을 쓸 때
+## 필요한 라이브러리 설치
 
-Iteration, wave, parameter sweep, 짧은 simulation처럼 시간에 따른 변화 자체가 핵심일 때 GIF를 사용합니다.
+<div class="doc-action-row">
+  <p><code>Pillow</code>가 설치되어 있지 않다면 먼저 설치합니다.</p>
+  <a class="doc-action-link" href="https://pillow.readthedocs.io/en/stable/">Pillow 문서</a>
+</div>
 
-짧게 유지하세요. 작은 animation이 확인하기 쉽고 공유하기도 쉽습니다.
+Windows PowerShell에서는 다음 명령어를 사용합니다.
+
+```powershell
+py -m pip install pillow
+```
+
+macOS 또는 Linux에서는 다음 명령어를 사용합니다.
+
+```bash
+python3 -m pip install pillow
+```
 
 ## 최소 예제
 
-아래 예제는 먼저 PNG frame들을 저장하고, 그 frame들을 묶어서 GIF animation을 만듭니다.
+아래 예제는 먼저 PNG frame들을 저장하고, 그 frame들을 묶어서 GIF animation을 만듭니다. 코드를 `.py` 파일로 저장하면 `figures`와 `animations` 폴더가 그 `.py` 파일이 있는 폴더 안에 만들어집니다.
 
 ```python
 # Basic packages
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
+from PIL import Image
 
 # save path setting
-illustration_dir = Path("Illustration")
-animation_dir = Path("Animation")
-illustration_dir.mkdir(exist_ok=True)
-animation_dir.mkdir(exist_ok=True)
+script_dir = Path(__file__).resolve().parent
+figures_dir = script_dir / "figures"
+animations_dir = script_dir / "animations"
+figures_dir.mkdir(exist_ok=True)
+animations_dir.mkdir(exist_ok=True)
+
+for frame_path in figures_dir.glob("frame-*.png"):
+    frame_path.unlink()
 
 # function
 def f(x):
     return x**2
 
-# frame generation
-def zoom(x_range=10):
+# ==========
+# Making frames
+# ==========
+def zoom(x_range=10, frame_index=1):
     assert 0 <= x_range <= 10, "Input x_range should be in [0, 10]"
 
     x = np.linspace(-10, 10, 400)
 
     fig, ax = plt.subplots(figsize=(6, 6))
+    fig.subplots_adjust(left=0.14, right=0.96, bottom=0.12, top=0.90)
     ax.plot(x, f(x), label="$y = x^2$", color="blue")
     ax.set_xlabel("$x$", fontsize=11)
     ax.set_ylabel("$y$", fontsize=11)
@@ -63,51 +82,48 @@ def zoom(x_range=10):
     ax.legend(loc="upper right")
     ax.set_title("Plot of $y = x^2$", fontsize=11)
 
-    frame_path = illustration_dir / f"{x_range:.1f}.png"
-    fig.savefig(frame_path, dpi=300, bbox_inches="tight")
+    frame_path = figures_dir / f"frame-{frame_index:03d}.png"
+    fig.savefig(frame_path, dpi=300)
     plt.close(fig)
 
-for x_range in np.arange(0.5, 10.5, 0.5):
-    zoom(x_range)
-```
-
-`Pillow`나 `imageio`가 설치되어 있지 않다면 먼저 설치합니다.
-
-```shell
-python -m pip install pillow imageio
-```
-
-그다음 저장된 frame들로 GIF를 만듭니다.
-
-```python
-from pathlib import Path
-
-import imageio.v3 as iio
-from PIL import Image, ImageOps
-
-input_dir = Path("Illustration")
-output_path = Path("Animation") / "Figure 1 - Animation.gif"
+for frame_index, x_range in enumerate(np.arange(10.0, 0.0, -0.5), start=1):
+    zoom(x_range, frame_index)
 
 frame_paths = sorted(
-    input_dir.glob("*.png"),
-    key=lambda path: float(path.stem)
+    figures_dir.glob("frame-*.png")
 )
 
+if not frame_paths:
+    raise FileNotFoundError(f"No PNG frames found in {figures_dir}")
+
+# ====================
+# Making the animation
+# ====================
 frames = []
 for frame_path in frame_paths:
-    image = Image.open(frame_path).convert("RGBA")
-    image_with_border = ImageOps.expand(
-        image,
-        border=20,
-        fill=(0, 0, 0, 0)
-    )
-    frames.append(image_with_border)
+    with Image.open(frame_path) as image:
+        frames.append(image.convert("RGB").copy())
 
-iio.imwrite(output_path, frames, duration=400, loop=0)
+frame_size = frames[0].size
+if any(frame.size != frame_size for frame in frames):
+    raise ValueError("All frames must have the same size.")
+
+frames[0].save(
+    animations_dir / "figure-1-animation.gif",
+    save_all=True,
+    append_images=frames[1:],
+    duration=400,
+    loop=0,
+    disposal=2
+)
 
 print("GIF animation creation completed.")
 ```
 
-## 작업 습관
+이 script는 PNG frame들을 `.py` 파일 옆의 `figures/`에 저장하고, GIF를 `animations/figure-1-animation.gif`로 저장합니다. 이렇게 두면 생성된 figure와 animation이 해당 script와 가까운 위치에 남습니다.
 
-먼저 still frame 몇 개를 저장해서 확인합니다. 축, label, limit이 맞는지 확인한 뒤 전체 frame sequence를 만들고 GIF로 묶으세요.
+생성된 animation은 다음처럼 보입니다.
+
+<figure class="image-frame image-frame--gif-result">
+  <img src="/assets/images/animation.gif" alt="y equals x squared plot으로 확대되는 GIF animation">
+</figure>
