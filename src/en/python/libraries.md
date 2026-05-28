@@ -13,59 +13,83 @@ lead: Install the Python libraries you need for numerical work, plotting, and no
 toc:
   - id: install-common-packages
     label: Install common packages
-  - id: windows
-    label: Windows
-  - id: macos-linux
-    label: macOS / Linux
+    children:
+      - id: windows
+        label: Windows
+      - id: macos-linux
+        label: macOS / Linux
   - id: jupyter-notebook
     label: Jupyter Notebook
+    children:
+      - id: jupyter-windows
+        label: Windows
+      - id: jupyter-macos-linux
+        label: macOS / Linux
+      - id: jupyter-install-packages
+        label: Install packages
 tags:
   - doc
 ---
 ## Install common packages
 
-After Python is installed, you can install packages from a terminal or a Jupyter Notebook cell. Start with NumPy, then install multiple packages at once when needed.
+After Python is installed, use `pip` to install packages from a terminal or a Jupyter Notebook cell. The `python -m pip` style keeps `pip` tied to the Python environment you are using.
 
 ### Windows
 
-Use `py` in Windows PowerShell. Start by installing NumPy.
+Use `py -m pip` in Windows PowerShell. First, upgrade `pip`; this also confirms that `pip` is connected to the Python environment you are using.
 
 ```powershell
-py -m pip install numpy
+py -m pip install --upgrade pip
 ```
 
-You can also install multiple libraries in one command. For example, install Matplotlib and Pandas like this:
+Then install multiple common libraries in one command. For example, install NumPy, Matplotlib, and Pandas like this:
 
 ```powershell
-py -m pip install matplotlib pandas
+py -m pip install numpy matplotlib pandas
 ```
 
 ### macOS / Linux
 
-Use `python3` in a macOS or Linux terminal. Start by installing NumPy.
+Use `python3 -m pip` in a macOS or Linux terminal. First, upgrade `pip`; this also confirms that `pip` is connected to the Python environment you are using.
 
 ```bash
-python3 -m pip install numpy
+python3 -m pip install --upgrade pip
 ```
 
-You can also install multiple libraries in one command. For example, install Matplotlib and Pandas like this:
+On some Linux distributions, the system Python may block direct `pip` upgrades. In that case, continue from a virtual environment instead.
+
+Then install multiple common libraries in one command. For example, install NumPy, Matplotlib, and Pandas like this:
 
 ```bash
-python3 -m pip install matplotlib pandas
+python3 -m pip install numpy matplotlib pandas
 ```
 
-### Jupyter Notebook
+## Jupyter Notebook
 
-Use `%pip` inside a Jupyter Notebook cell. Start by installing NumPy.
+If this is a clean Python setup, install Jupyter Notebook and the Python kernel from a terminal first. `ipykernel` connects the installed Python environment to notebook cells.
 
-```python-jupyter
-%pip install numpy
+<h3 id="jupyter-windows">Windows</h3>
+
+In Windows PowerShell, install Jupyter Notebook and `ipykernel` into the Python environment you want to use as the notebook kernel.
+
+```powershell
+py -m pip install notebook ipykernel
 ```
 
-You can also install multiple libraries in one cell. For example, install Matplotlib and Pandas like this:
+<h3 id="jupyter-macos-linux">macOS / Linux</h3>
+
+In a macOS or Linux terminal, install Jupyter Notebook and `ipykernel` into the Python environment you want to use as the notebook kernel.
+
+```bash
+python3 -m pip install notebook ipykernel
+```
+
+<h3 id="jupyter-install-packages">Install packages</h3>
+
+After opening a notebook, use `%pip` inside a Jupyter Notebook cell. `%pip` installs packages into the Python environment used by the current notebook kernel.
 
 ```python-jupyter
-%pip install matplotlib pandas
+%pip install numpy matplotlib pandas
 ```
 
 This is for notebook cells only. In a `.py` file, use installed packages with `import`, such as `import numpy as np`.

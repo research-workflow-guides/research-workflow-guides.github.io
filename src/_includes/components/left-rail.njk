@@ -5,6 +5,20 @@
 {% set currentSection = currentPageUi.activeSection if currentPageUi else activeSection %}
 {% set isLanguageHome = currentPageMeta and currentPageMeta.pageType == "language-home" %}
 {% set navigationLabel = "목차 열기" if currentLang == "ko" else "Open contents" %}
+{% macro renderTocItems(items) %}
+  {% for heading in items %}
+    <li>
+      <a class="rail-link rail-link-heading" href="#{{ heading.id }}">{{ heading.label }}</a>
+      {% if heading.children and heading.children.length %}
+        <ul class="rail-subtree rail-subtree-headings rail-subtree-heading-children">
+          {% for child in heading.children %}
+            <li><a class="rail-link rail-link-heading rail-link-heading-sub" href="#{{ child.id }}">{{ child.label }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+{% endmacro %}
 <aside class="page-sidebar" data-pagefind-ignore="all">
   <button
     class="sidebar-toggle"
@@ -35,9 +49,7 @@
           {% if sectionExpanded %}
             {% if currentUrl == sectionUrl and toc and toc.length and section.key != "writing-in-vs-code" and section.key != "git-github" and section.key != "initial-setup" and section.key != "collaboration" and section.key != "python" %}
               <ul class="rail-subtree rail-subtree-headings">
-                {% for item in toc %}
-                  <li><a class="rail-link rail-link-heading" href="#{{ item.id }}">{{ item.label }}</a></li>
-                {% endfor %}
+                {{ renderTocItems(toc) }}
               </ul>
             {% endif %}
 
@@ -83,9 +95,7 @@
 
                           {% if itemCurrent and toc and toc.length %}
                             <ul class="rail-subtree rail-subtree-headings">
-                              {% for heading in toc %}
-                                <li><a class="rail-link rail-link-heading" href="#{{ heading.id }}">{{ heading.label }}</a></li>
-                              {% endfor %}
+                              {{ renderTocItems(toc) }}
                             </ul>
                           {% endif %}
                         </li>
@@ -109,9 +119,7 @@
 
                     {% if itemCurrent and toc and toc.length %}
                       <ul class="rail-subtree rail-subtree-headings">
-                        {% for heading in toc %}
-                          <li><a class="rail-link rail-link-heading" href="#{{ heading.id }}">{{ heading.label }}</a></li>
-                        {% endfor %}
+                        {{ renderTocItems(toc) }}
                       </ul>
                     {% endif %}
                   </li>

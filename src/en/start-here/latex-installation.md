@@ -16,6 +16,11 @@ toc:
     label: Install MiKTeX
   - id: perl-installation
     label: Perl Installation
+    children:
+      - id: windows
+        label: Windows
+      - id: macos-linux
+        label: macOS / Linux
   - id: package-auto-installation
     label: Package auto-installation
 tags:

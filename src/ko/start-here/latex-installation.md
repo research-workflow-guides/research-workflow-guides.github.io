@@ -16,6 +16,11 @@ toc:
     label: MiKTeX 설치
   - id: perl-설치
     label: Perl 설치
+    children:
+      - id: windows
+        label: Windows
+      - id: macos-linux
+        label: macOS / Linux
   - id: 패키지-자동-설치
     label: 패키지 자동 설치
 tags:
