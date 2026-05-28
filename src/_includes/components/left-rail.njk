@@ -30,105 +30,107 @@
     {{ navigationLabel }}
   </button>
   <section id="page-navigation" class="sidebar-card sidebar-card-rail" data-toc-panel>
-    <ul class="rail-tree">
-      {% for section in navigation.sections %}
-        {% set sectionUrl = section.url[currentLang] %}
-        {% set sectionPages = section.pages[currentLang] %}
-        {% set groupedSectionPages = section.groupedPages[currentLang] %}
-        {% set sectionExpanded = isLanguageHome or currentSection == section.key %}
-        {% set sectionCurrent = currentUrl == sectionUrl or currentSection == section.key %}
-        <li class="rail-section section--{{ section.key }}{% if sectionExpanded %} is-expanded{% endif %}">
-          <a
-            class="rail-link rail-link-section{% if sectionCurrent %} is-current{% endif %}"
-            href="{{ sectionUrl }}"
-            {% if currentUrl == sectionUrl %}aria-current="page"{% endif %}
-          >
-            {{ section.title[lang] }}
-          </a>
+    <div class="sidebar-rail-scroll" data-toc-scroll>
+      <ul class="rail-tree">
+        {% for section in navigation.sections %}
+          {% set sectionUrl = section.url[currentLang] %}
+          {% set sectionPages = section.pages[currentLang] %}
+          {% set groupedSectionPages = section.groupedPages[currentLang] %}
+          {% set sectionExpanded = isLanguageHome or currentSection == section.key %}
+          {% set sectionCurrent = currentUrl == sectionUrl or currentSection == section.key %}
+          <li class="rail-section section--{{ section.key }}{% if sectionExpanded %} is-expanded{% endif %}">
+            <a
+              class="rail-link rail-link-section{% if sectionCurrent %} is-current{% endif %}"
+              href="{{ sectionUrl }}"
+              {% if currentUrl == sectionUrl %}aria-current="page"{% endif %}
+            >
+              {{ section.title[lang] }}
+            </a>
 
-          {% if sectionExpanded %}
-            {% if currentUrl == sectionUrl and toc and toc.length and section.key != "writing-in-vs-code" and section.key != "git-github" and section.key != "initial-setup" and section.key != "collaboration" and section.key != "python" %}
-              <ul class="rail-subtree rail-subtree-headings">
-                {{ renderTocItems(toc) }}
-              </ul>
-            {% endif %}
+            {% if sectionExpanded %}
+              {% if currentUrl == sectionUrl and toc and toc.length and section.key != "writing-in-vs-code" and section.key != "git-github" and section.key != "initial-setup" and section.key != "collaboration" and section.key != "python" %}
+                <ul class="rail-subtree rail-subtree-headings">
+                  {{ renderTocItems(toc) }}
+                </ul>
+              {% endif %}
 
-            {% if (section.key == "writing-in-vs-code" or section.key == "git-github" or section.key == "initial-setup" or section.key == "collaboration" or section.key == "python") and groupedSectionPages and groupedSectionPages.length %}
-              <ul class="rail-subtree rail-subtree-groups">
-                {% for group in groupedSectionPages %}
-                  {% if section.key == "initial-setup" %}
-                    {% set groupAnchor = group.key %}
-                  {% elif section.key == "writing-in-vs-code" %}
-                    {% if group.key == "main-topics" %}
-                      {% set groupAnchor = "core-documents" %}
-                    {% elif group.key == "snippets" %}
-                      {% set groupAnchor = "snippets-documents" %}
-                    {% elif group.key == "reference" %}
-                      {% set groupAnchor = "reference-documents" %}
-                    {% elif group.key == "optional-topics" %}
-                      {% set groupAnchor = "optional-documents" %}
+              {% if (section.key == "writing-in-vs-code" or section.key == "git-github" or section.key == "initial-setup" or section.key == "collaboration" or section.key == "python") and groupedSectionPages and groupedSectionPages.length %}
+                <ul class="rail-subtree rail-subtree-groups">
+                  {% for group in groupedSectionPages %}
+                    {% if section.key == "initial-setup" %}
+                      {% set groupAnchor = group.key %}
+                    {% elif section.key == "writing-in-vs-code" %}
+                      {% if group.key == "main-topics" %}
+                        {% set groupAnchor = "core-documents" %}
+                      {% elif group.key == "snippets" %}
+                        {% set groupAnchor = "snippets-documents" %}
+                      {% elif group.key == "reference" %}
+                        {% set groupAnchor = "reference-documents" %}
+                      {% elif group.key == "optional-topics" %}
+                        {% set groupAnchor = "optional-documents" %}
+                      {% else %}
+                        {% set groupAnchor = group.key %}
+                      {% endif %}
+                    {% elif section.key == "python" %}
+                      {% if group.key == "python-basics" %}
+                        {% set groupAnchor = "installation" %}
+                      {% else %}
+                        {% set groupAnchor = group.key %}
+                      {% endif %}
                     {% else %}
                       {% set groupAnchor = group.key %}
                     {% endif %}
-                  {% elif section.key == "python" %}
-                    {% if group.key == "python-basics" %}
-                      {% set groupAnchor = "installation" %}
-                    {% else %}
-                      {% set groupAnchor = group.key %}
-                    {% endif %}
-                  {% else %}
-                    {% set groupAnchor = group.key %}
-                  {% endif %}
-                  <li class="rail-group">
-                    <a class="rail-link rail-link-group" href="{{ sectionUrl }}#{{ groupAnchor }}">{{ group.label }}</a>
-                    <ul class="rail-subtree rail-subtree-pages">
-                      {% for item in group.pages %}
-                        {% set itemCurrent = currentUrl == item.url %}
-                        <li class="rail-page-item{% if itemCurrent %} is-current{% endif %}">
-                          <a
-                            class="rail-link rail-link-page{% if itemCurrent %} is-current{% endif %}"
-                            href="{{ item.url }}"
-                            {% if itemCurrent %}aria-current="page"{% endif %}
-                          >
-                            {{ title if itemCurrent else item.title }}
-                          </a>
+                    <li class="rail-group">
+                      <a class="rail-link rail-link-group" href="{{ sectionUrl }}#{{ groupAnchor }}">{{ group.label }}</a>
+                      <ul class="rail-subtree rail-subtree-pages">
+                        {% for item in group.pages %}
+                          {% set itemCurrent = currentUrl == item.url %}
+                          <li class="rail-page-item{% if itemCurrent %} is-current{% endif %}">
+                            <a
+                              class="rail-link rail-link-page{% if itemCurrent %} is-current{% endif %}"
+                              href="{{ item.url }}"
+                              {% if itemCurrent %}aria-current="page"{% endif %}
+                            >
+                              {{ title if itemCurrent else item.title }}
+                            </a>
 
-                          {% if itemCurrent and toc and toc.length %}
-                            <ul class="rail-subtree rail-subtree-headings">
-                              {{ renderTocItems(toc) }}
-                            </ul>
-                          {% endif %}
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% elif sectionPages and sectionPages.length %}
-              <ul class="rail-subtree rail-subtree-pages">
-                {% for item in sectionPages %}
-                  {% set itemCurrent = currentUrl == item.url %}
-                  <li class="rail-page-item{% if itemCurrent %} is-current{% endif %}">
-                    <a
-                      class="rail-link rail-link-page{% if itemCurrent %} is-current{% endif %}"
-                      href="{{ item.url }}"
-                      {% if itemCurrent %}aria-current="page"{% endif %}
-                    >
-                      {{ title if itemCurrent else item.title }}
-                    </a>
-
-                    {% if itemCurrent and toc and toc.length %}
-                      <ul class="rail-subtree rail-subtree-headings">
-                        {{ renderTocItems(toc) }}
+                            {% if itemCurrent and toc and toc.length %}
+                              <ul class="rail-subtree rail-subtree-headings">
+                                {{ renderTocItems(toc) }}
+                              </ul>
+                            {% endif %}
+                          </li>
+                        {% endfor %}
                       </ul>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% elif sectionPages and sectionPages.length %}
+                <ul class="rail-subtree rail-subtree-pages">
+                  {% for item in sectionPages %}
+                    {% set itemCurrent = currentUrl == item.url %}
+                    <li class="rail-page-item{% if itemCurrent %} is-current{% endif %}">
+                      <a
+                        class="rail-link rail-link-page{% if itemCurrent %} is-current{% endif %}"
+                        href="{{ item.url }}"
+                        {% if itemCurrent %}aria-current="page"{% endif %}
+                      >
+                        {{ title if itemCurrent else item.title }}
+                      </a>
+
+                      {% if itemCurrent and toc and toc.length %}
+                        <ul class="rail-subtree rail-subtree-headings">
+                          {{ renderTocItems(toc) }}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
             {% endif %}
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </section>
 </aside>

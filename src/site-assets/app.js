@@ -449,10 +449,219 @@ function setupCodeCopyButtons() {
   });
 }
 
+function updateStickyOffset() {
+  const header = document.querySelector(".site-header");
+  const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+  document.documentElement.style.setProperty("--sticky-top", `${headerHeight + 16}px`);
+}
+
+function setupStickyOffset() {
+  updateStickyOffset();
+  window.addEventListener("resize", updateStickyOffset);
+
+  const header = document.querySelector(".site-header");
+  if (header && "ResizeObserver" in window) {
+    const observer = new ResizeObserver(updateStickyOffset);
+    observer.observe(header);
+  }
+}
+
+function setupFloatingToc() {
+  const sidebar = document.querySelector(".page-sidebar");
+  const panel = document.getElementById("page-navigation");
+  const contentPanel = document.querySelector(".doc-content");
+  const footer = document.querySelector(".site-footer");
+
+  if (!sidebar || !panel) {
+    return;
+  }
+
+  let ticking = false;
+
+  function updateFloatingToc() {
+    ticking = false;
+
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      sidebar.dataset.floating = "false";
+      sidebar.style.removeProperty("--toc-left");
+      sidebar.style.removeProperty("--toc-width");
+      sidebar.style.removeProperty("--toc-max-height");
+      return;
+    }
+
+    const stickyTop = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--sticky-top")) || 96;
+    const sidebarRect = sidebar.getBoundingClientRect();
+    const sidebarTop = sidebar.offsetTop;
+    const shouldFloat = window.scrollY >= sidebarTop - stickyTop;
+
+    sidebar.dataset.floating = String(shouldFloat);
+
+    if (shouldFloat) {
+      const viewportMaxHeight = window.innerHeight - stickyTop - 16;
+      const contentMaxHeight = contentPanel ? contentPanel.getBoundingClientRect().bottom - stickyTop : viewportMaxHeight;
+      const footerMaxHeight = footer ? footer.getBoundingClientRect().top - stickyTop - 16 : viewportMaxHeight;
+      const maxHeight = Math.max(0, Math.floor(Math.min(viewportMaxHeight, contentMaxHeight, footerMaxHeight)));
+
+      sidebar.style.setProperty("--toc-left", `${Math.round(sidebarRect.left)}px`);
+      sidebar.style.setProperty("--toc-width", `${Math.round(sidebarRect.width)}px`);
+      sidebar.style.setProperty("--toc-max-height", `${maxHeight}px`);
+    } else {
+      sidebar.style.removeProperty("--toc-left");
+      sidebar.style.removeProperty("--toc-width");
+      sidebar.style.removeProperty("--toc-max-height");
+    }
+  }
+
+  function requestFloatingUpdate() {
+    if (ticking) {
+      return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(updateFloatingToc);
+  }
+
+  updateFloatingToc();
+  window.addEventListener("scroll", requestFloatingUpdate, { passive: true });
+  window.addEventListener("resize", requestFloatingUpdate);
+}
+
+function scrollTocLinkIntoView(link) {
+  const panel = document.querySelector("[data-toc-scroll]") || document.getElementById("page-navigation");
+
+  if (!panel || panel.scrollHeight <= panel.clientHeight) {
+    return;
+  }
+
+  const panelRect = panel.getBoundingClientRect();
+  const linkRect = link.getBoundingClientRect();
+  const inset = 20;
+
+  if (linkRect.top < panelRect.top + inset) {
+    panel.scrollTop -= panelRect.top + inset - linkRect.top;
+  } else if (linkRect.bottom > panelRect.bottom - inset) {
+    panel.scrollTop += linkRect.bottom - (panelRect.bottom - inset);
+  }
+}
+
+function setupPageTocSpy() {
+  const toc = document.getElementById("page-navigation");
+  const content = document.querySelector(".prose");
+
+  if (!toc || !content) {
+    return;
+  }
+
+  const links = Array.from(toc.querySelectorAll(".rail-link-heading[href^='#']"));
+  const linksById = new Map();
+
+  links.forEach((link) => {
+    const id = decodeURIComponent(link.hash.slice(1));
+    if (id) {
+      linksById.set(id, link);
+    }
+  });
+
+  const headings = Array.from(content.querySelectorAll("h2[id], h3[id]"))
+    .filter((heading) => linksById.has(heading.id));
+
+  if (!links.length || !headings.length) {
+    return;
+  }
+
+  let activeId = "";
+  let ticking = false;
+
+  function clearActiveLinks() {
+    links.forEach((link) => {
+      link.classList.remove("is-active", "is-active-parent");
+      if (link.getAttribute("aria-current") === "location") {
+        link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function getParentHeadingLink(link) {
+    const childList = link.closest(".rail-subtree-heading-children");
+    const parentItem = childList ? childList.parentElement : null;
+
+    if (!parentItem) {
+      return null;
+    }
+
+    return Array.from(parentItem.children)
+      .find((child) => child.classList && child.classList.contains("rail-link-heading")) || null;
+  }
+
+  function setActiveHeading(id) {
+    if (id === activeId) {
+      return;
+    }
+
+    const activeLink = linksById.get(id);
+    if (!activeLink) {
+      return;
+    }
+
+    activeId = id;
+    clearActiveLinks();
+    activeLink.classList.add("is-active");
+    activeLink.setAttribute("aria-current", "location");
+
+    const parentLink = getParentHeadingLink(activeLink);
+    if (parentLink) {
+      parentLink.classList.add("is-active-parent");
+    }
+
+    scrollTocLinkIntoView(activeLink);
+  }
+
+  function getCurrentHeading() {
+    const stickyTop = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--sticky-top")) || 96;
+    const targetTop = stickyTop + Math.min(160, window.innerHeight * 0.22);
+    let current = headings[0];
+
+    headings.forEach((heading) => {
+      if (heading.getBoundingClientRect().top <= targetTop) {
+        current = heading;
+      }
+    });
+
+    return current;
+  }
+
+  function updateActiveHeading() {
+    ticking = false;
+    setActiveHeading(getCurrentHeading().id);
+  }
+
+  function requestUpdate() {
+    if (ticking) {
+      return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(updateActiveHeading);
+  }
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      window.setTimeout(requestUpdate, 80);
+    });
+  });
+
+  updateActiveHeading();
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  setupStickyOffset();
+  setupFloatingToc();
   setupDisclosure("[data-menu-toggle]", ".site-nav");
   setupDisclosure("[data-toc-toggle]", "[data-toc-panel]");
   setupSearch();
   setupHeaderSearch();
   setupCodeCopyButtons();
+  setupPageTocSpy();
 });

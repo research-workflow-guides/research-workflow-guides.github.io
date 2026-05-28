@@ -1034,8 +1034,9 @@ li {
 }
 
 .page-sidebar {
-  position: sticky;
-  top: 5.6rem;
+  position: relative;
+  align-self: start;
+  z-index: 5;
 }
 
 .sidebar-card {
@@ -1044,6 +1045,55 @@ li {
 
 .sidebar-card-rail {
   padding: 1rem 1rem 1.1rem;
+  max-height: var(--toc-max-height, calc(100vh - var(--sticky-top, 5.6rem) - 1rem));
+  overflow: hidden;
+}
+
+.sidebar-rail-scroll {
+  max-height: calc(var(--toc-max-height, calc(100vh - var(--sticky-top, 5.6rem) - 1rem)) - 2.1rem);
+  margin-right: 0;
+  padding-right: 0.55rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-color: rgba(31, 36, 49, 0.42) transparent;
+  scrollbar-width: thin;
+}
+
+.sidebar-rail-scroll::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+.sidebar-rail-scroll::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 0.35rem;
+}
+
+.sidebar-rail-scroll::-webkit-scrollbar-thumb {
+  min-height: 2.5rem;
+  border: 0.24rem solid transparent;
+  border-radius: 999px;
+  background-color: rgba(31, 36, 49, 0.42);
+  background-clip: content-box;
+}
+
+.sidebar-rail-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(31, 36, 49, 0.58);
+}
+
+.sidebar-rail-scroll::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+@media (min-width: 1001px) {
+  .page-sidebar[data-floating="true"] .sidebar-card-rail {
+    position: fixed;
+    top: var(--sticky-top, 5.6rem);
+    left: var(--toc-left);
+    width: var(--toc-width);
+  }
 }
 
 .sidebar-title {
@@ -1144,6 +1194,10 @@ li.section--python > .rail-link-section {
 }
 
 .rail-link-heading {
+  position: relative;
+  margin-left: -0.35rem;
+  padding-left: 0.35rem;
+  border-radius: 0.3rem;
   font-size: 0.95rem;
 }
 
@@ -1156,6 +1210,42 @@ li.section--python > .rail-link-section {
   color: var(--muted);
   font-size: 0.88rem;
   font-weight: 500;
+}
+
+.rail-link-heading.is-active,
+.rail-link-heading.is-active-parent {
+  color: var(--ink);
+}
+
+.rail-link-heading.is-active::before {
+  content: "";
+  position: absolute;
+  top: 0.32rem;
+  bottom: 0.32rem;
+  left: -0.48rem;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.section--initial-setup .rail-link-heading.is-active::before {
+  background: #2aaf92;
+}
+
+.section--writing-in-vs-code .rail-link-heading.is-active::before {
+  background: #2563eb;
+}
+
+.section--git-github .rail-link-heading.is-active::before {
+  background: #1e3a8a;
+}
+
+.section--collaboration .rail-link-heading.is-active::before {
+  background: #5b5bd6;
+}
+
+.section--python .rail-link-heading.is-active::before {
+  background: var(--python-yellow-ink);
 }
 
 .rail-link:hover,
@@ -1832,6 +1922,7 @@ li > .image-frame {
 
   .page-sidebar {
     position: static;
+    max-height: none;
   }
 
   .sidebar-toggle {
@@ -1840,11 +1931,21 @@ li > .image-frame {
   }
 
   [data-toc-panel] {
+    position: static;
+    max-height: none;
+    overflow: visible;
     display: none;
   }
 
   [data-toc-panel][data-open="true"] {
     display: block;
+  }
+
+  .sidebar-rail-scroll {
+    max-height: none;
+    margin-right: 0;
+    padding-right: 0;
+    overflow: visible;
   }
 
   .search-panel-top {
