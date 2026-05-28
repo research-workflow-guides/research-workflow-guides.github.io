@@ -14,7 +14,7 @@ toc:
   - id: install-required-library
     label: Install required library
   - id: minimal-example
-    label: Minimal example
+    label: Example
 tags:
   - doc
 ---
@@ -37,7 +37,7 @@ On macOS or Linux:
 python3 -m pip install pillow
 ```
 
-## Minimal example
+## Example
 
 This example first saves a sequence of PNG frames, then combines those frames into a GIF animation. Save the code in a `.py` file; the `figures` and `animations` folders are created next to that file.
 

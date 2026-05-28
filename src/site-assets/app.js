@@ -553,6 +553,7 @@ function setupPageTocSpy() {
   }
 
   const links = Array.from(toc.querySelectorAll(".rail-link-heading[href^='#']"));
+  const currentPageLink = toc.querySelector(".rail-link-page.is-current");
   const linksById = new Map();
 
   links.forEach((link) => {
@@ -564,6 +565,10 @@ function setupPageTocSpy() {
 
   const headings = Array.from(content.querySelectorAll("h2[id], h3[id]"))
     .filter((heading) => linksById.has(heading.id));
+
+  if (currentPageLink) {
+    window.requestAnimationFrame(() => scrollTocLinkIntoView(currentPageLink));
+  }
 
   if (!links.length || !headings.length) {
     return;
@@ -594,23 +599,21 @@ function setupPageTocSpy() {
   }
 
   function setActiveHeading(id) {
-    if (id === activeId) {
-      return;
-    }
-
     const activeLink = linksById.get(id);
     if (!activeLink) {
       return;
     }
 
-    activeId = id;
-    clearActiveLinks();
-    activeLink.classList.add("is-active");
-    activeLink.setAttribute("aria-current", "location");
+    if (id !== activeId) {
+      activeId = id;
+      clearActiveLinks();
+      activeLink.classList.add("is-active");
+      activeLink.setAttribute("aria-current", "location");
 
-    const parentLink = getParentHeadingLink(activeLink);
-    if (parentLink) {
-      parentLink.classList.add("is-active-parent");
+      const parentLink = getParentHeadingLink(activeLink);
+      if (parentLink) {
+        parentLink.classList.add("is-active-parent");
+      }
     }
 
     scrollTocLinkIntoView(activeLink);

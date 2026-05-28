@@ -14,7 +14,7 @@ toc:
   - id: 필요한-라이브러리-설치
     label: 필요한 라이브러리 설치
   - id: 최소-예제
-    label: 최소 예제
+    label: 예제
 tags:
   - doc
 ---
@@ -37,7 +37,7 @@ macOS 또는 Linux에서는 다음 명령어를 사용합니다.
 python3 -m pip install pillow
 ```
 
-## 최소 예제
+## 예제
 
 아래 예제는 먼저 PNG frame들을 저장하고, 그 frame들을 묶어서 GIF animation을 만듭니다. 코드를 `.py` 파일로 저장하면 `figures`와 `animations` 폴더가 그 `.py` 파일이 있는 폴더 안에 만들어집니다.
 

@@ -15,6 +15,8 @@ toc:
     label: Install required library
   - id: minimal-example
     label: Minimal example
+  - id: complete-example
+    label: Complete example
 tags:
   - doc
 ---
@@ -38,6 +40,32 @@ python3 -m pip install matplotlib
 ```
 
 ## Minimal example
+
+This minimal example plots <span class="math-inline"><var>f</var>(<var>x</var>, <var>y</var>) = <var>e</var><sup>-(<var>x</var><sup>2</sup> + <var>y</var><sup>2</sup>)</sup></span> and shows it.
+
+```python
+# Basic packages
+import numpy as np
+import matplotlib.pyplot as plt
+
+# function
+def f(x, y):
+    return np.exp(-(x ** 2 + y ** 2))
+
+# domain
+x = np.linspace(-2.0, 2.0, 80)
+y = np.linspace(-2.0, 2.0, 80)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+# visualization
+fig = plt.figure(figsize=(6, 6))
+ax = fig.add_subplot(projection="3d")
+ax.plot_surface(X, Y, Z, cmap="viridis")
+plt.show()
+```
+
+## Complete example
 
 This example plots <span class="math-inline"><var>f</var>(<var>x</var>, <var>y</var>) = <var>e</var><sup>-(<var>x</var><sup>2</sup> + <var>y</var><sup>2</sup>)</sup></span>, creates a `figures` folder next to the `.py` file, saves the figure, and then shows it.
 

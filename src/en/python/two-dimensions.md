@@ -15,6 +15,8 @@ toc:
     label: Install required library
   - id: minimal-example
     label: Minimal example
+  - id: complete-example
+    label: Complete example
 tags:
   - doc
 ---
@@ -38,6 +40,28 @@ python3 -m pip install matplotlib
 ```
 
 ## Minimal example
+
+This minimal example plots <span class="math-inline"><var>y</var> = <var>x</var><sup>2</sup></span> and shows it.
+
+```python
+# Basic packages
+import numpy as np
+import matplotlib.pyplot as plt
+
+# function
+def f(x):
+    return x**2
+
+# domain
+x = np.linspace(-10, 10, 400)
+
+# visualization
+fig, ax = plt.subplots(figsize=(6, 6))
+ax.plot(x, f(x), label="$y = x^2$", color="blue")
+plt.show()
+```
+
+## Complete example
 
 This example plots <span class="math-inline"><var>y</var> = <var>x</var><sup>2</sup></span>, creates a `figures` folder next to the `.py` file, saves the figure, and then shows it.
 

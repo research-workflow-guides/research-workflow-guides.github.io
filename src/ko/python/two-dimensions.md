@@ -15,6 +15,8 @@ toc:
     label: 필요한 라이브러리 설치
   - id: 최소-예제
     label: 최소 예제
+  - id: 전체-예제
+    label: 전체 예제
 tags:
   - doc
 ---
@@ -38,6 +40,28 @@ python3 -m pip install matplotlib
 ```
 
 ## 최소 예제
+
+아래 최소 예제는 <span class="math-inline"><var>y</var> = <var>x</var><sup>2</sup></span>를 그리고 화면에 표시합니다.
+
+```python
+# Basic packages
+import numpy as np
+import matplotlib.pyplot as plt
+
+# function
+def f(x):
+    return x**2
+
+# domain
+x = np.linspace(-10, 10, 400)
+
+# visualization
+fig, ax = plt.subplots(figsize=(6, 6))
+ax.plot(x, f(x), label="$y = x^2$", color="blue")
+plt.show()
+```
+
+## 전체 예제
 
 아래 예제는 <span class="math-inline"><var>y</var> = <var>x</var><sup>2</sup></span>를 그리고, `.py` 파일 옆에 `figures` 폴더를 만든 뒤 figure를 저장하고 화면에 표시합니다.
 
