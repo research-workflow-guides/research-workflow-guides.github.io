@@ -102,8 +102,6 @@ module.exports = async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/site-assets": "site-assets" });
   eleventyConfig.addPassthroughCopy({ assets: "assets" });
-  eleventyConfig.addPassthroughCopy({ "old-assets": "old-assets" });
-  eleventyConfig.addPassthroughCopy({ "updates/data.json": "updates/data.json" });
 
   eleventyConfig.addCollection("docs", function (collectionApi) {
     return collectionApi.getFilteredByTag("doc").sort((left, right) => {

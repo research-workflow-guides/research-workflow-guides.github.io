@@ -14,8 +14,8 @@ const sectionDefinitions = [
       ko: "도구 체인을 맞추고 첫 compile 성공까지 도달합니다."
     },
     kicker: {
-      en: "Part 1",
-      ko: "파트 1"
+      en: "Setup",
+      ko: "초기 설정"
     },
     groups: [
       {
@@ -49,8 +49,8 @@ const sectionDefinitions = [
       ko: "일상적인 편집, build, preview, revision 루프로 넘어갑니다."
     },
     kicker: {
-      en: "Part 2",
-      ko: "파트 2"
+      en: "Writing",
+      ko: "작성"
     },
     groups: [
       {
@@ -98,8 +98,8 @@ const sectionDefinitions = [
       ko: "저장소를 연결하고 작업을 공개하며 로컬과 원격 이력을 안정적으로 맞춥니다."
     },
     kicker: {
-      en: "Part 3",
-      ko: "파트 3"
+      en: "Git",
+      ko: "Git"
     },
     groups: [
       {
@@ -140,8 +140,8 @@ const sectionDefinitions = [
       ko: "혼자 쓰는 repository 흐름에서 예측 가능한 팀 협업으로 넘어갑니다."
     },
     kicker: {
-      en: "Part 4",
-      ko: "파트 4"
+      en: "Collaboration",
+      ko: "협업"
     },
     groups: [
       {
@@ -175,8 +175,8 @@ const sectionDefinitions = [
       ko: "Python으로 분석, 자동화, 연구용 스크립트 작업을 시작합니다."
     },
     kicker: {
-      en: "Part 5",
-      ko: "파트 5"
+      en: "Python",
+      ko: "Python"
     },
     groups: [
       {
