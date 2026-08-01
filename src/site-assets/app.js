@@ -182,11 +182,12 @@ function buildSearchSnippet(content, query) {
   return `${prefix}${text.slice(start, end)}${suffix}`;
 }
 
-async function searchLocalIndex(query) {
+async function searchLocalIndex(query, lang) {
   const pages = await getLocalSearchIndex();
   const terms = normalizeSearchText(query).split(/\s+/).filter(Boolean);
 
   return pages
+    .filter((page) => page.lang === lang)
     .map((page) => {
       const title = normalizeSearchText(page.title);
       const description = normalizeSearchText(page.description);
@@ -233,8 +234,6 @@ async function runSearch(root, query) {
   const input = root.querySelector("[data-search-input]");
   const status = root.querySelector("[data-search-status]");
   const resultsNode = root.querySelector("[data-search-results]");
-  const sameLangPrefix = `/${lang}/`;
-
   clearNode(resultsNode);
 
   if (query.trim().length < 2) {
@@ -246,31 +245,22 @@ async function runSearch(root, query) {
   status.textContent = lang === "ko" ? "검색 중..." : "Searching...";
 
   try {
-    const matches = await searchLocalIndex(query);
+    const matches = await searchLocalIndex(query, lang);
 
-    const sameLang = matches.filter((result) => result.url.startsWith(sameLangPrefix));
-    const otherLang = matches.filter((result) => !result.url.startsWith(sameLangPrefix));
-
-    if (!sameLang.length && !otherLang.length) {
+    if (!matches.length) {
       status.textContent = lang === "ko" ? "검색 결과가 없습니다." : "No matching results found.";
       return;
     }
 
     status.textContent =
       lang === "ko"
-        ? `${sameLang.length + otherLang.length}개의 결과`
-        : `${sameLang.length + otherLang.length} result${sameLang.length + otherLang.length === 1 ? "" : "s"}`;
+        ? `${matches.length}개의 결과`
+        : `${matches.length} result${matches.length === 1 ? "" : "s"}`;
 
     appendSearchGroup(
       resultsNode,
-      sameLang.length && otherLang.length ? (lang === "ko" ? "현재 언어 결과" : "Current language results") : "",
-      sameLang,
-      query
-    );
-    appendSearchGroup(
-      resultsNode,
-      sameLang.length && otherLang.length ? (lang === "ko" ? "다른 언어 결과" : "Other language results") : "",
-      otherLang,
+      "",
+      matches,
       query
     );
   } catch (error) {

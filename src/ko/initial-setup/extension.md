@@ -20,8 +20,6 @@ toc:
     label: Code Ace Jumper
   - id: markdown-all-in-one
     label: Markdown All in One
-  - id: python
-    label: Python
   - id: julia
     label: Julia
 tags:
@@ -65,14 +63,6 @@ tags:
 
 <figure class="image-frame">
   <img src="/assets/images/extension-5.png" alt="Markdown All in One extension">
-</figure>
-
-## Python
-
-<p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Visual Studio Marketplace</a></p>
-
-<figure class="image-frame">
-  <img src="/assets/images/extension-6.png" alt="Python extension">
 </figure>
 
 ## Julia

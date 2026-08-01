@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="{{ lang or 'en' }}">
+<html lang="{{ lang if lang == 'ko' else 'en' }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
+    <title>{% if page.url == "/" %}{{ site.name }}{% elif title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
     <meta name="description" content="{{ description or site.description }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,8 @@
   </head>
   {% set currentPageMeta = canonical.pagesByUrl[page.url] %}
   {% set currentPageUi = canonical.pageUi[page.url] %}
-  {% set currentLang = currentPageMeta.lang if currentPageMeta and currentPageMeta.lang != "root" else lang %}
+  {% set isRootLanding = currentPageMeta and currentPageMeta.pageType == "root-landing" %}
+  {% set currentLang = currentPageMeta.lang if currentPageMeta and currentPageMeta.lang != "root" else (null if isRootLanding else lang) %}
   {% set currentUi = ui[currentLang if currentLang == "ko" else "en"] %}
   {% set currentSection = currentPageUi.activeSection if currentPageUi else activeSection %}
   <body class="{{ pageClass or '' }}{% if currentSection %} section--{{ currentSection }}{% endif %}" data-page-lang="{{ lang or '' }}">
@@ -90,11 +91,14 @@
       <div class="wrap footer-inner">
         <p class="footer-brand">{{ site.name }}</p>
         <p class="footer-copy">&copy; 2026 {{ site.authorLine }}</p>
-        {% set latestFooterDate = git.latestCommitDate or (updates.latest.date if updates.latest else null) %}
+        {% set latestFooterDate = git.latestCommitDate %}
         {% if latestFooterDate %}
           <p class="footer-update">{{ currentUi.latestUpdate }} {{ latestFooterDate | dateDots }}</p>
         {% endif %}
-        <a class="footer-old-version" href="{{ site.oldVersionUrl }}">{{ currentUi.oldVersion }}</a>
+        <div class="footer-links">
+          <a class="footer-old-version" href="{{ site.oldVersionUrl }}">{{ currentUi.oldVersion }}</a>
+          <a class="footer-support" href="{{ site.sponsorUrl }}">{{ currentUi.support }}</a>
+        </div>
       </div>
     </footer>
 

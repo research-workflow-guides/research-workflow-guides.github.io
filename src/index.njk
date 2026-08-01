@@ -1,97 +1,34 @@
 ---
 layout: layouts/base.njk
 title: Research Workflow Guidebook
-description: Choose a language and follow a research workflow guide from local setup to writing and GitHub collaboration.
+description: Choose a language and learn a practical LaTeX, VS Code, Git, and GitHub workflow.
 lang: en
-langSwitch:
-  url: /ko/
-  label: 한국어
-pageClass: page-landing
+pageClass: page-language-landing
 ---
-{% set currentUpdates = updates.completedByLang.en %}
-{% set latestUpdate = currentUpdates[0] %}
 <main>
   <section class="landing-hero">
-    <h1 class="wrap hero-h1">Efficient Research Workflow</h1>
-    <p class="wrap lead">Build an efficient research workspace <span class="responsive-break">with LaTeX, VS Code, and GitHub</span></p>
-    <div class="wrap hero-grid">
-      <aside class="hero-panel panel">
-        <div class="updates-panel-header">
-          <p class="eyebrow">{{ ui.en.recentUpdates }}</p>
-        </div>
-        {% if latestUpdate %}
-          <dl class="updates-list">
-            <div>
-              {% set item = latestUpdate %}
-              {% include "components/update-entry.njk" %}
-            </div>
-          </dl>
-        {% endif %}
-      </aside>
+    <div class="wrap language-landing-copy">
+      <p class="eyebrow">Bilingual practical guide</p>
+      <h1 class="hero-h1">Research Workflow Guidebook</h1>
+      <p class="lead">Write LaTeX research documents in VS Code and manage them with GitHub.</p>
+      <p class="subtle">Choose a language to follow the workflow from the first compile to small-team collaboration.</p>
     </div>
   </section>
 
   <section class="editorial-band">
     <div class="wrap">
-      <div class="section-heading">
-        <h2>Route Map</h2>
+      <div class="language-grid language-choice-grid">
+        <a class="language-card panel" href="/en/" lang="en">
+          <p class="card-kicker">English</p>
+          <h2>Open the English guide</h2>
+          <p>Follow the complete workflow in English.</p>
+        </a>
+        <a class="language-card panel" href="/ko/" lang="ko">
+          <p class="card-kicker">한국어</p>
+          <h2>한국어 가이드 열기</h2>
+          <p>전체 연구 문서 작업 흐름을 한국어로 확인합니다.</p>
+        </a>
       </div>
-      <div class="feature-grid route-map-grid">
-        {% for section in navigation.sections %}
-          <a class="feature-card panel card--{{ section.key }}" href="{{ section.url.en }}">
-            <div class="card-logo-row">
-              {% if section.key == "initial-setup" %}
-                <img class="card-logo card-logo--latex-full" src="/assets/images/LaTeX_project_logo_bird.svg.png" alt="LaTeX">
-                <img class="card-logo card-logo--latex-compact" src="/assets/images/latex-project-logo_288x288.png" alt="LaTeX">
-                <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
-              {% elif section.key == "writing-in-vs-code" %}
-                <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
-              {% elif section.key == "git-github" %}
-                <img class="card-logo" src="/assets/images/git-logo.png" alt="Git">
-                <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
-              {% elif section.key == "collaboration" %}
-                <img class="card-logo" src="/assets/images/git-logo.png" alt="Git">
-                <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
-                <img class="card-logo" src="/assets/images/overleaf-o-logo-primary.jpg" alt="Overleaf">
-              {% elif section.key == "python" %}
-                <img class="card-logo card-logo--python-full" src="/assets/images/python-logo-long.png" alt="Python">
-                <img class="card-logo card-logo--python-compact" src="/assets/images/python-logo-short.png" alt="Python">
-              {% endif %}
-            </div>
-            <p class="card-kicker">{{ section.kicker.en }}</p>
-            <h3>{{ section.title.en }}</h3>
-            <p>{{ section.summary.en }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section class="editorial-band discussions-band">
-    <div class="wrap">
-      <a
-        class="hero-panel panel discussions-card"
-        href="https://github.com/research-workflow-guides/research-workflow-guides.github.io/discussions"
-        aria-label="Open GitHub Discussions for research-workflow-guides/research-workflow-guides.github.io"
-      >
-        <p class="eyebrow">Discussions</p>
-        <p class="discussion-heading">Questions, suggestions, and feedback</p>
-        <ul class="discussion-list">
-          <li>Ask questions about the workflow covered in this guide.</li>
-          <li>Suggest improvements to the documentation.</li>
-          <li>Report unclear explanations or missing steps.</li>
-        </ul>
-        <p class="discussion-copy">To get started, click this card to open the Discussions page.</p>
-      </a>
-      <a
-        class="hero-panel panel discussions-card sponsor-card"
-        href="https://github.com/sponsors/kyjung2357"
-        aria-label="Open GitHub Sponsors for kyjung2357"
-      >
-        <p class="eyebrow">Support</p>
-        <p class="discussion-heading">Support us</p>
-        <p class="discussion-copy">I'd like to buy the authors a coffee.</p>
-      </a>
     </div>
   </section>
 </main>

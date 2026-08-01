@@ -2,8 +2,9 @@ module.exports = {
   name: "Research Workflow Guidebook",
   shortName: "Guidebook",
   description:
-    "A bilingual editorial documentation site for researchers building practical LaTeX, VS Code, Git, and GitHub workflows.",
+    "A bilingual practical guide for writing LaTeX research documents in VS Code and managing them with GitHub.",
   oldVersionUrl: "https://sites.google.com/view/a-30-year-journey/",
+  sponsorUrl: "https://github.com/sponsors/kyjung2357",
   authorLine: "Kiyuob Jung, Kiwoong Kwon",
   kiwoongAuthor: {
     name: "Kiwoong Kwon",
