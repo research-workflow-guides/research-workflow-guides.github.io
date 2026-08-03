@@ -4,16 +4,16 @@ title: Pull Request
 description: Review branch changes on GitHub before merging them into the main project history.
 lang: en
 section: collaboration
-order: 5
+order: 4
 permalink: /en/collaboration/pull-request/
 translationKey: git-pull-request
-eyebrow: Topic 4
+eyebrow: Topic 3
 lead: A Pull Request is a GitHub review page for branch work before it is merged.
-outcome: A pushed task branch is reviewed in a GitHub Pull Request and merged into main.
+outcome: A pushed task branch is reviewed in a GitHub Pull Request and becomes ready to merge into main.
 prerequisites:
   - The task branch is committed and pushed to GitHub.
   - The base branch and intended reviewers are known.
-completion: GitHub marks the Pull Request as merged and a local pull brings the merge into the local main branch.
+completion: The Pull Request has no unresolved review requests or failing checks and GitHub reports that it is ready to merge.
 commonProblems:
   - Selecting the wrong base branch changes what the Pull Request proposes to merge.
   - New commits after review may require another review before merging.
@@ -32,8 +32,8 @@ toc:
     label: Open a Pull Request
   - id: review-the-pull-request
     label: Review the Pull Request
-  - id: merge-the-pull-request
-    label: Merge the Pull Request
+  - id: prepare-the-pull-request-for-merge
+    label: Prepare the Pull Request for merge
 tags:
   - doc
 ---
@@ -99,17 +99,10 @@ git push
 
 The Pull Request updates automatically after the new commit is pushed to the same branch.
 
-## Merge the Pull Request
+## Prepare the Pull Request for merge
 
-When the review is finished and the branch is ready, merge the Pull Request on GitHub. After the PR is merged, `main` contains the branch work.
+Before merging, confirm that the requested changes have been addressed, required reviewers have approved the work, and automated checks have passed. GitHub should report that the Pull Request is ready to merge.
 
-Return to VS Code and update your local `main` branch.
+Leave the Pull Request open at this point. The next core document explains how to merge the approved PR and update your local `main` branch.
 
-```shell
-git switch main
-git pull
-```
-
-If the branch is no longer needed, delete it after confirming that the merge is complete.
-
-Do not treat a Pull Request as just another way to push. Its value is review: checking the branch direction, reading the file differences, discussing the change, and merging only when the work is ready.
+Do not treat a Pull Request as just another way to push. Its value is review: checking the branch direction, reading the file differences, discussing the change, and deciding that the work is ready before it enters `main`.
