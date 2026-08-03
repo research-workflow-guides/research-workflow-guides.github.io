@@ -1402,6 +1402,101 @@ li.section--collaboration > .rail-link-section.is-current {
   font-size: clamp(1.2rem, 2vw, 1.6rem);
 }
 
+.document-group-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 1.2rem;
+}
+
+.document-group-heading h2,
+.document-group-heading p {
+  margin: 0;
+}
+
+.document-card-optional::before {
+  background: linear-gradient(90deg, #8b95a5, #b8c0cc) !important;
+}
+
+.document-card-troubleshooting::before {
+  background: linear-gradient(90deg, #c46a31, #e4a15f) !important;
+}
+
+.workflow-contract,
+.workflow-checks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.workflow-contract-block,
+.workflow-check-block,
+.verification-card {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(24, 61, 93, 0.12);
+  border-radius: var(--radius-md);
+  background: rgba(24, 61, 93, 0.045);
+}
+
+.workflow-contract-block p:last-child,
+.workflow-check-block p:last-child,
+.workflow-contract-block ul,
+.workflow-check-block ul {
+  margin-bottom: 0;
+}
+
+.workflow-contract-block ul,
+.workflow-check-block ul {
+  padding-left: 1.2rem;
+}
+
+.workflow-completion {
+  border-color: rgba(42, 175, 146, 0.32);
+  background: rgba(42, 175, 146, 0.08);
+}
+
+.verification-card {
+  margin-top: 1rem;
+  background: rgba(196, 106, 49, 0.075);
+}
+
+.verification-card h2 {
+  margin-bottom: 0.9rem;
+  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+}
+
+.verification-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.verification-list div {
+  min-width: 0;
+}
+
+.verification-list dt {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.verification-list dd {
+  margin: 0.15rem 0 0;
+}
+
+@media (max-width: 720px) {
+  .document-group-heading,
+  .workflow-contract,
+  .workflow-checks,
+  .verification-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .stack-list {
   display: grid;
   gap: 0.85rem;

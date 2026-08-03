@@ -9,6 +9,20 @@ permalink: /en/git-github/create-repository/
 translationKey: git-create-repository
 eyebrow: Topic 2
 lead: Start from an empty private repository so the first push stays simple and the initial history is easy to understand.
+outcome: An empty private GitHub repository exists for the manuscript project.
+prerequisites:
+  - The intended GitHub account is signed in.
+  - A unique repository name and visibility choice are decided.
+completion: The repository page shows the chosen name, Private visibility, and no generated README, license, or `.gitignore` commit.
+commonProblems:
+  - Preselecting a README creates remote history that complicates the first push from an existing local project.
+  - Repository visibility should be confirmed before uploading unpublished research material.
+verification:
+  status: needs-review
+  environment: GitHub web interface; screenshots use the desktop Windows browser path.
+  workflow: Creating an empty private repository without generated starter files.
+  lastVerified: Pending a current GitHub UI walkthrough.
+  support: Browser workflow is platform-independent; screenshots document the desktop path only.
 toc:
   - id: choose-the-repository-shape
     label: Choose the repository shape

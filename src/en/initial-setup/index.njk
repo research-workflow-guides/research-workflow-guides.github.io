@@ -1,20 +1,14 @@
 ---
 layout: layouts/base.njk
 title: Get Started
-description: Use these three steps to reach your first successful compile.
+description: Prepare LaTeX and VS Code, then complete the first successful build.
 lang: en
 pageClass: page-section
 permalink: /en/initial-setup/
-toc:
-  - id: installation
-    label: Installation
-  - id: project-template
-    label: Project Template
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
-{% set installationDocs = canonical.groupedDocs.en["initial-setup"].installation %}
-{% set projectTemplateDocs = canonical.groupedDocs.en["initial-setup"]["project-template"] %}
+{% set grouped = canonical.groupedDocs.en["initial-setup"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -25,41 +19,17 @@ toc:
       <div>
         <p class="eyebrow">Step 1</p>
         <h1>Get Started</h1>
-        <p class="lead">Follow three steps to get your LaTeX environment running and complete your first successful build.</p>
+        <p class="lead">Prepare LaTeX and VS Code, open the starter project, and confirm that it produces a PDF.</p>
       </div>
     </section>
 
-    <section id="installation" class="doc-section">
-      <h2>Installation</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in installationDocs %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">{% if doc.status == "optional" %}Optional{% else %}Step {{ doc.order }}{% endif %}</p>
-            <h3>{{ doc.title }}</h3>
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section id="project-template" class="doc-section">
-      <h2>Project Template</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in projectTemplateDocs %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Step 3</p>
-            <h3>{{ doc.title }}</h3>
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
+    {% include "components/document-groups.njk" %}
 
     <section class="callout-card">
-      <p class="eyebrow">Next</p>
-      <h2>After the first compile</h2>
-      <p>Once the first build succeeds, move into the daily editing workflow in VS Code.</p>
-      <a class="text-link" href="/en/writing-in-vs-code/">Go to Write in VS Code</a>
+      <p class="eyebrow">Stage completion</p>
+      <h2>Confirm the first PDF</h2>
+      <p>You are ready to continue when the starter project builds without errors and its PDF opens in VS Code.</p>
+      <a class="text-link" href="/en/writing-in-vs-code/">Continue to Write in VS Code</a>
     </section>
   </article>
 </main>

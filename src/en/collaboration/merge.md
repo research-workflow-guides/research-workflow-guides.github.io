@@ -4,11 +4,19 @@ title: Merge
 description: Combine a finished branch back into main when the separate work is ready.
 lang: en
 section: collaboration
-order: 3
+order: 4
 permalink: /en/collaboration/merge/
 translationKey: git-merge
 eyebrow: Topic 3
 lead: Merging brings work from one branch into another branch, usually from a task branch back into main.
+outcome: The completed task branch history is integrated into the local main branch and pushed to GitHub.
+prerequisites:
+  - The task branch is committed, pushed, and ready to integrate.
+  - The local main branch has been updated from the remote before merging.
+completion: "`git log --oneline --graph` shows the task history in main and `git status` reports main is clean and up to date."
+commonProblems:
+  - Merging while checked out on the wrong branch integrates history in the wrong direction.
+  - A conflict must be resolved and committed before the merge can finish.
 toc:
   - id: what-a-merge-means
     label: What a merge means

@@ -4,7 +4,7 @@ title: Overleaf
 description: 협업자가 VS Code 대신 Overleaf를 사용한다면, Overleaf와 GitHub를 연결해 VS Code에서 작업할 수 있습니다.
 lang: ko
 section: collaboration
-order: 3
+order: 2
 permalink: /ko/collaboration/overleaf/
 translationKey: git-overleaf
 eyebrow: 선택

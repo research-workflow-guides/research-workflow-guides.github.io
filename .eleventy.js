@@ -99,6 +99,9 @@ module.exports = async function (eleventyConfig) {
   });
 
   eleventyConfig.setLibrary("md", markdown);
+  eleventyConfig.addFilter("inlineMarkdown", function (value) {
+    return value ? markdown.renderInline(String(value)) : "";
+  });
 
   eleventyConfig.addPassthroughCopy({ "src/site-assets": "site-assets" });
   eleventyConfig.addPassthroughCopy({ assets: "assets" });

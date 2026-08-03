@@ -4,11 +4,25 @@ title: Pull Request
 description: Review branch changes on GitHub before merging them into the main project history.
 lang: en
 section: collaboration
-order: 4
+order: 5
 permalink: /en/collaboration/pull-request/
 translationKey: git-pull-request
 eyebrow: Topic 4
 lead: A Pull Request is a GitHub review page for branch work before it is merged.
+outcome: A pushed task branch is reviewed in a GitHub Pull Request and merged into main.
+prerequisites:
+  - The task branch is committed and pushed to GitHub.
+  - The base branch and intended reviewers are known.
+completion: GitHub marks the Pull Request as merged and a local pull brings the merge into the local main branch.
+commonProblems:
+  - Selecting the wrong base branch changes what the Pull Request proposes to merge.
+  - New commits after review may require another review before merging.
+verification:
+  status: needs-review
+  environment: GitHub web interface; screenshots document a desktop browser path.
+  workflow: Opening, reviewing, and merging a Pull Request, then updating local main.
+  lastVerified: Pending a current GitHub UI walkthrough.
+  support: Browser workflow is platform-independent; GitHub controls may move over time.
 toc:
   - id: what-a-pull-request-means
     label: What a Pull Request means

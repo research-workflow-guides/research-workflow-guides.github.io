@@ -9,6 +9,14 @@ permalink: /ko/writing-in-vs-code/syntax/
 translationKey: writing-syntax
 eyebrow: 주제 2
 lead: 먼저 LaTeX 패턴을 이해하고, 반복 입력은 VS Code snippet으로 저장합니다.
+outcome: 문서화된 LaTeX 패턴을 사용한 수학 구조와 figure가 원고에 추가되어 PDF에 나타납니다.
+prerequisites:
+  - 내용을 수정하기 전 프로젝트가 정상적으로 build됩니다.
+  - main `.tex` 파일이 VS Code에 열려 있습니다.
+completion: PDF에 새 수식 또는 theorem 구조와 figure가 LaTeX 오류 없이 나타납니다.
+commonProblems:
+  - delimiter나 brace의 짝이 맞지 않으면 문서가 compile되지 않습니다.
+  - figure 경로는 프로젝트 기준 상대 경로이며 실제 파일 이름과 정확히 같아야 합니다.
 toc:
   - id: latex과-json-비교
     label: LaTeX과 JSON 비교

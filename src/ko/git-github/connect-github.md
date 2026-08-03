@@ -9,6 +9,20 @@ permalink: /ko/git-github/connect-github/
 translationKey: git-connect-github
 eyebrow: 3단계
 lead: VS Code 터미널을 열고 전역 Git 이름과 이메일을 설정한 뒤, repository를 만들기 전에 저장된 값을 확인합니다.
+outcome: 의도한 GitHub identity에 맞게 Git을 설정하고 요청 시 browser 인증을 완료할 수 있습니다.
+prerequisites:
+  - Git이 설치되어 VS Code 터미널에서 실행됩니다.
+  - 사용할 GitHub 계정이 있으며 새 계정이 필요하면 선택 문서를 먼저 확인합니다.
+completion: 터미널에 의도한 Git identity가 보이고 인증이 필요한 GitHub 작업에서 미완료 sign-in 요청이 남지 않습니다.
+commonProblems:
+  - Browser의 다른 계정 session 때문에 Git commit identity와 GitHub login 계정이 달라질 수 있습니다.
+  - 인증 창이 VS Code 뒤나 로그인되지 않은 browser window에 열릴 수 있습니다.
+verification:
+  status: needs-review
+  environment: Windows는 상세 VS Code screenshot 경로이며 macOS와 Linux도 같은 identity와 browser sign-in 개념을 사용합니다.
+  workflow: VS Code 터미널, Git identity 설정, GitHub browser 인증.
+  lastVerified: 현재 제품 기준 walkthrough 대기 중.
+  support: 세 운영체제를 지원하며 터미널 단축키와 credential 저장 방식은 플랫폼마다 다릅니다.
 toc:
   - id: terminal-open
     label: 터미널 열기

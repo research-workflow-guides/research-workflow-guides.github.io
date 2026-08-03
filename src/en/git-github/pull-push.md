@@ -9,6 +9,20 @@ permalink: /en/git-github/pull-push/
 translationKey: git-pull-push
 eyebrow: Topic 2
 lead: "Keep the daily remote workflow small: pull before work if needed, commit coherent changes, then push when the work unit is ready."
+outcome: Local and GitHub history contain the same completed commit after one pull and push cycle.
+prerequisites:
+  - The terminal is inside the intended repository and branch.
+  - Local changes have been reviewed and committed before pushing.
+completion: "`git status` reports a clean working tree and the local branch is up to date with its remote branch."
+commonProblems:
+  - Pulling with uncommitted overlapping changes can block the sync and require cleanup first.
+  - A rejected push usually means remote commits must be pulled and reviewed before retrying.
+verification:
+  status: needs-review
+  environment: Command-line behavior applies across platforms; screenshots also show Windows VS Code and GitHub Desktop paths.
+  workflow: Pull and push through Git, VS Code, and GitHub Desktop.
+  lastVerified: Pending a current-product walkthrough.
+  support: Git commands support Windows, macOS, and Linux; graphical controls differ by product and platform.
 toc:
   - id: key-terms
     label: Key terms

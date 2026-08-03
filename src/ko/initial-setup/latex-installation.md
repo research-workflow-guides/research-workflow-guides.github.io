@@ -9,6 +9,20 @@ permalink: /ko/initial-setup/latex-installation/
 translationKey: initial-setup-latex-installation
 eyebrow: 1단계
 lead: MiKTeX를 설치하고, 필요 시 패키지가 자동으로 설치되도록 설정한 뒤, 기본 도구 체인이 준비됐는지 확인합니다.
+outcome: MiKTeX, Perl, latexmk가 설치되어 새 터미널에서 실행됩니다.
+prerequisites:
+  - 컴퓨터에 소프트웨어를 설치할 권한이 필요합니다.
+  - 설치 파일과 LaTeX 패키지를 받을 수 있는 안정적인 인터넷 연결이 필요합니다.
+completion: 새 터미널에서 `perl --version`과 `latexmk -v`가 모두 버전 정보를 출력합니다.
+commonProblems:
+  - 첫 빌드 중 패키지 설치 창이 VS Code 뒤에 숨어 있을 수 있습니다.
+  - 새로 설치한 명령을 사용하려면 터미널을 닫고 다시 열어야 할 수 있습니다.
+verification:
+  status: needs-review
+  environment: Windows는 상세 screenshot 경로이며 macOS와 Linux는 명령 중심으로 안내합니다.
+  workflow: MiKTeX, Perl, latexmk와 필요 패키지 자동 설치.
+  lastVerified: 현재 제품 기준 walkthrough 대기 중.
+  support: Windows 상세 지원, macOS와 Linux는 터미널 확인 중심의 요약 지원.
 toc:
   - id: miktex-다운로드
     label: MiKTeX 다운로드

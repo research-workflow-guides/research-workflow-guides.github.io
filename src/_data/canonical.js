@@ -1,3 +1,39 @@
+const classificationDefinitions = [
+  {
+    key: "core",
+    label: {
+      en: "Core path",
+      ko: "핵심 경로"
+    },
+    summary: {
+      en: "Follow these documents in order to complete this stage.",
+      ko: "이 문서들을 순서대로 따라 이 단계를 완료합니다."
+    }
+  },
+  {
+    key: "optional",
+    label: {
+      en: "Optional guides",
+      ko: "선택 문서"
+    },
+    summary: {
+      en: "Open these guides when they match your tools or working style.",
+      ko: "사용하는 도구나 작업 방식에 필요할 때 선택해서 봅니다."
+    }
+  },
+  {
+    key: "troubleshooting",
+    label: {
+      en: "Troubleshooting",
+      ko: "문제 해결"
+    },
+    summary: {
+      en: "Use these guides when the normal workflow stops or needs recovery.",
+      ko: "기본 작업이 중단되거나 복구가 필요할 때 사용합니다."
+    }
+  }
+];
+
 const sectionDefinitions = [
   {
     key: "initial-setup",
@@ -17,22 +53,7 @@ const sectionDefinitions = [
       en: "Step 1",
       ko: "1단계"
     },
-    groups: [
-      {
-        key: "installation",
-        label: {
-          en: "Installation",
-          ko: "설치"
-        }
-      },
-      {
-        key: "project-template",
-        label: {
-          en: "Project Template",
-          ko: "프로젝트 템플릿"
-        }
-      }
-    ]
+    groups: classificationDefinitions
   },
   {
     key: "writing-in-vs-code",
@@ -52,36 +73,7 @@ const sectionDefinitions = [
       en: "Step 2",
       ko: "2단계"
     },
-    groups: [
-      {
-        key: "main-topics",
-        label: {
-          en: "Main topics",
-          ko: "주요 문서"
-        }
-      },
-      {
-        key: "snippets",
-        label: {
-          en: "Personal snippets",
-          ko: "나만의 snippets"
-        }
-      },
-      {
-        key: "reference",
-        label: {
-          en: "Reference",
-          ko: "참고문헌"
-        }
-      },
-      {
-        key: "optional-topics",
-        label: {
-          en: "Optional topics",
-          ko: "선택 문서"
-        }
-      }
-    ]
+    groups: classificationDefinitions
   },
   {
     key: "git-github",
@@ -101,29 +93,7 @@ const sectionDefinitions = [
       en: "Step 3",
       ko: "3단계"
     },
-    groups: [
-      {
-        key: "preparation",
-        label: {
-          en: "Preparation",
-          ko: "준비"
-        }
-      },
-      {
-        key: "first-github-workflow",
-        label: {
-          en: "First GitHub workflow",
-          ko: "첫 GitHub 작업"
-        }
-      },
-      {
-        key: "daily-workflow",
-        label: {
-          en: "Daily workflow",
-          ko: "일상 작업"
-        }
-      }
-    ]
+    groups: classificationDefinitions
   },
   {
     key: "collaboration",
@@ -143,22 +113,7 @@ const sectionDefinitions = [
       en: "Step 4",
       ko: "4단계"
     },
-    groups: [
-      {
-        key: "collaboration",
-        label: {
-          en: "Platforms",
-          ko: "플랫폼"
-        }
-      },
-      {
-        key: "git-for-collaboration",
-        label: {
-          en: "Git for collaboration",
-          ko: "공동 작업을 위한 Git"
-        }
-      }
-    ]
+    groups: classificationDefinitions
   }
 ];
 
@@ -390,7 +345,7 @@ const pages = [
     title: "Shortcuts",
     description: "Pin the few shortcuts that remove friction from the daily writing loop.",
     translationKey: "writing-shortcuts",
-    status: "core"
+    status: "optional"
   },
   {
     url: "/ko/writing-in-vs-code/shortcuts/",
@@ -403,7 +358,7 @@ const pages = [
     title: "단축키",
     description: "매일 반복하는 동작을 줄여주는 핵심 단축키만 정리합니다.",
     translationKey: "writing-shortcuts",
-    status: "core"
+    status: "optional"
   },
   {
     url: "/en/writing-in-vs-code/snippets/",
@@ -416,7 +371,7 @@ const pages = [
     title: "Setting file",
     description: "Use a small snippet set to speed up repetitive LaTeX typing without overengineering.",
     translationKey: "writing-snippets",
-    status: "core"
+    status: "optional"
   },
   {
     url: "/en/writing-in-vs-code/syntax/",
@@ -613,7 +568,7 @@ const pages = [
     title: "세팅 파일",
     description: "자주 쓰는 LaTeX 조각을 snippet으로 묶어 반복 입력을 줄입니다.",
     translationKey: "writing-snippets",
-    status: "core"
+    status: "optional"
   },
   {
     url: "/ko/writing-in-vs-code/syntax/",
@@ -740,7 +695,7 @@ const pages = [
     title: "GitHub Account Setup",
     description: "Prepare the GitHub account you will use for repositories and collaboration.",
     translationKey: "git-github-account-setup",
-    status: "core"
+    status: "optional"
   },
   {
     url: "/ko/git-github/github-account-setup/",
@@ -753,7 +708,7 @@ const pages = [
     title: "GitHub 계정 준비",
     description: "저장소 작업과 협업에 사용할 GitHub 계정을 준비합니다.",
     translationKey: "git-github-account-setup",
-    status: "core"
+    status: "optional"
   },
   {
     url: "/en/git-github/connect-github/",
@@ -870,7 +825,7 @@ const pages = [
     title: "Version Control",
     description: "Understand tracked, modified, staged, and committed states well enough to stay calm.",
     translationKey: "git-version-control",
-    status: "core"
+    status: "optional"
   },
   {
     url: "/en/git-github/git-status/",
@@ -909,7 +864,7 @@ const pages = [
     title: "버전 관리",
     description: "tracked, modified, staged, committed 상태를 구분해 안정적으로 작업합니다.",
     translationKey: "git-version-control",
-    status: "core"
+    status: "optional"
   },
   {
     url: "/en/collaboration/collaboration/",
@@ -950,7 +905,7 @@ const pages = [
     title: "Conflict",
     description: "Resolve same-file text conflicts without panic and return to the normal loop.",
     translationKey: "git-conflict",
-    status: "core"
+    status: "troubleshooting"
   },
   {
     url: "/en/git-github/source-control/",
@@ -976,7 +931,7 @@ const pages = [
     title: "Recovery",
     description: "Recover committed work, undo local mistakes, and return safely to a known Git state.",
     translationKey: "git-recovery",
-    status: "optional"
+    status: "troubleshooting"
   },
   {
     url: "/ko/git-github/source-control/",
@@ -1002,7 +957,7 @@ const pages = [
     title: "복구",
     description: "commit된 작업을 복구하고, 로컬 실수를 되돌리며, 안전하게 알고 있는 Git 상태로 돌아갑니다.",
     translationKey: "git-recovery",
-    status: "optional"
+    status: "troubleshooting"
   },
   {
     url: "/en/git-github/gitignore/",
@@ -1041,7 +996,7 @@ const pages = [
     title: "충돌 해결",
     description: "같은 파일 충돌을 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.",
     translationKey: "git-conflict",
-    status: "core"
+    status: "troubleshooting"
   }
 ];
 
@@ -1085,7 +1040,7 @@ for (const page of pages) {
 
 const sectionOrder = sectionDefinitions.map((section) => section.key);
 const groupedDocs = { en: {}, ko: {} };
-const publicDocStatuses = new Set(["core", "optional"]);
+const publicDocStatuses = new Set(classificationDefinitions.map((classification) => classification.key));
 
 function isPublicDoc(page) {
   return page.pageType === "document" && publicDocStatuses.has(page.status);
@@ -1105,8 +1060,8 @@ for (const language of ["en", "ko"]) {
 
     const groupMap = {};
 
-    for (const group of section.groups) {
-      groupMap[group.key] = docs.filter((doc) => doc.group === group.key);
+    for (const group of classificationDefinitions) {
+      groupMap[group.key] = docs.filter((doc) => doc.status === group.key);
     }
 
     groupedDocs[language][section.key] = groupMap;
@@ -1126,14 +1081,14 @@ const sections = sectionDefinitions.map((section) => {
       ko: buildPublicDocs(section.key, "ko")
     },
     groupedPages: {
-      en: section.groups
+      en: classificationDefinitions
         .map((group) => ({
           key: group.key,
           label: group.label.en,
           pages: groupedDocs.en[section.key][group.key]
         }))
         .filter((group) => group.pages.length),
-      ko: section.groups
+      ko: classificationDefinitions
         .map((group) => ({
           key: group.key,
           label: group.label.ko,
@@ -1188,15 +1143,7 @@ function buildPrevNext(page) {
   }
 
   const section = sections.find((item) => item.key === page.section);
-  let sequence = section.pages[page.lang];
-
-  if (page.section === "writing-in-vs-code" && (page.group === "main-topics" || page.group === "snippets")) {
-    sequence = sequence.filter((item) => item.status === "core");
-  }
-
-  if (page.section === "writing-in-vs-code" && (page.group === "reference" || page.group === "optional-topics")) {
-    sequence = sequence.filter((item) => item.group === page.group);
-  }
+  const sequence = section.pages[page.lang].filter((item) => item.status === page.status);
 
   const index = sequence.findIndex((item) => item.url === page.url);
   const prevPage = index > 0
@@ -1216,10 +1163,10 @@ function buildPrevNext(page) {
       title: sequence[index + 1].title,
       url: sequence[index + 1].url
     };
-  } else {
+  } else if (page.status === "core") {
     const nextSection = getNextSection(page.section);
     if (nextSection) {
-      const nextSectionFirstPage = nextSection.pages[page.lang][0];
+      const nextSectionFirstPage = nextSection.pages[page.lang].find((item) => item.status === "core");
       if (nextSectionFirstPage) {
         nextPage = {
           title: nextSectionFirstPage.title,
@@ -1260,6 +1207,7 @@ for (const page of pages) {
 }
 
 module.exports = {
+  classifications: classificationDefinitions,
   pages,
   pagesByUrl,
   pageUi,

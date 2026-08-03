@@ -9,6 +9,20 @@ permalink: /ko/git-github/create-repository/
 translationKey: git-create-repository
 eyebrow: 주제 2
 lead: 첫 push 흐름을 단순하게 유지하려면 먼저 비어 있는 private repository부터 만듭니다.
+outcome: 원고 프로젝트에 사용할 비어 있는 private GitHub repository가 생성됩니다.
+prerequisites:
+  - 사용할 GitHub 계정으로 로그인되어 있습니다.
+  - 고유한 repository 이름과 공개 범위를 결정했습니다.
+completion: Repository 화면에 선택한 이름과 Private 표시가 보이고 README, license, `.gitignore` 자동 commit이 없습니다.
+commonProblems:
+  - README를 미리 생성하면 기존 local project의 첫 push 전에 원격 이력이 생깁니다.
+  - 공개되지 않은 연구 자료를 올리기 전에 repository 공개 범위를 다시 확인해야 합니다.
+verification:
+  status: needs-review
+  environment: GitHub web interface이며 screenshot은 Windows desktop browser 경로입니다.
+  workflow: 자동 생성 파일 없이 비어 있는 private repository 만들기.
+  lastVerified: 현재 GitHub UI walkthrough 대기 중.
+  support: Browser workflow는 운영체제와 무관하며 screenshot은 desktop 경로만 설명합니다.
 toc:
   - id: 저장소-형태-정하기
     label: 저장소 형태 정하기

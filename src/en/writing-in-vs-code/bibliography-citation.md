@@ -9,6 +9,14 @@ permalink: /en/writing-in-vs-code/bibliography-citation/
 translationKey: writing-bibliography-citation
 eyebrow: Topic 3
 lead: In LaTeX, it is convenient to organize references in a .bib file. Sources that are not cited in the .tex file do not appear in the compiled PDF, so one .bib file can be shared across multiple papers.
+outcome: A source stored in a `.bib` file appears as an in-text citation and in the compiled bibliography.
+prerequisites:
+  - The manuscript project builds successfully.
+  - A valid BibTeX entry and a unique citation key are available.
+completion: The PDF displays the citation without question marks and includes the cited source in the bibliography.
+commonProblems:
+  - A citation key in the `.tex` file must exactly match the key in the `.bib` file.
+  - Bibliography changes may require more than one build cycle before references resolve.
 toc:
   - id: what-citations-need
     label: What citations need

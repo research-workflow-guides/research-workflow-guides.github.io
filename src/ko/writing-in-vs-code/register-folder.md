@@ -9,6 +9,20 @@ permalink: /ko/writing-in-vs-code/register-folder/
 translationKey: writing-folder-setup
 eyebrow: 1단계
 lead: VS Code에서는 폴더 단위로 작업을 합니다. 프로젝트는 .tex 파일 하나가 아니라, 그림·코드 등 관련 파일을 포함한 하나의 폴더입니다.
+outcome: 원고 프로젝트 전체가 하나의 신뢰할 수 있는 VS Code workspace로 열립니다.
+prerequisites:
+  - main `.tex` 파일과 관련 파일이 들어 있는 압축 해제된 프로젝트 폴더가 필요합니다.
+  - LaTeX Workshop이 정상적으로 설치되어 있어야 합니다.
+completion: Explorer에 프로젝트 tree가 보이고 그 안에 main `.tex` 파일이 있으며 PDF build가 성공합니다.
+commonProblems:
+  - 파일 하나나 하위 폴더만 열면 실제 프로젝트 root가 보이지 않을 수 있습니다.
+  - Workspace Trust는 자신이 알고 관리하는 폴더에서만 허용해야 합니다.
+verification:
+  status: needs-review
+  environment: Windows는 상세 screenshot 경로이며 macOS와 Linux도 같은 Open Folder 흐름을 사용합니다.
+  workflow: VS Code Open Folder, Workspace Trust, Explorer, LaTeX Workshop build.
+  lastVerified: 현재 제품 기준 walkthrough 대기 중.
+  support: Windows 상세 지원, macOS와 Linux는 대응하는 VS Code control로 지원.
 toc:
   - id: 폴더-열기
     label: 폴더 열기

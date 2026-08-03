@@ -1,0 +1,33 @@
+{% for classification in canonical.classifications %}
+  {% set docs = grouped[classification.key] %}
+  {% if docs and docs.length %}
+    <section id="{{ classification.key }}-documents" class="doc-section document-group document-group-{{ classification.key }}">
+      <div class="document-group-heading">
+        <div>
+          <h2>{{ classification.label[lang] }}</h2>
+        </div>
+        <p class="subtle">{{ classification.summary[lang] }}</p>
+      </div>
+      <div class="feature-grid feature-grid-compact feature-grid-equal-cards">
+        {% for doc in docs %}
+          <a class="feature-card panel document-card document-card-{{ classification.key }}" href="{{ doc.url }}">
+            <p class="card-kicker">
+              {% if classification.key == "core" %}
+                {% if lang == "ko" %}{{ loop.index }}단계{% else %}Step {{ loop.index }}{% endif %}
+              {% elif classification.key == "troubleshooting" %}
+                {{ "문제 해결" if lang == "ko" else "Troubleshooting" }}
+              {% else %}
+                {{ "선택" if lang == "ko" else "Optional" }}
+              {% endif %}
+            </p>
+            {% if doc.logo %}
+              <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
+            {% endif %}
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endfor %}

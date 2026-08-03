@@ -4,11 +4,19 @@ title: Merge
 description: 분리된 branch의 작업이 준비되었을 때 main으로 다시 합칩니다.
 lang: ko
 section: collaboration
-order: 3
+order: 4
 permalink: /ko/collaboration/merge/
 translationKey: git-merge
 eyebrow: 주제 3
 lead: Merge는 한 branch의 작업을 다른 branch로 가져오는 과정입니다. 보통 작업 branch를 main으로 다시 합칠 때 사용합니다.
+outcome: 완료된 task branch 이력이 local main에 합쳐지고 GitHub에 push됩니다.
+prerequisites:
+  - Task branch의 작업을 commit하고 push했으며 합칠 준비가 됐습니다.
+  - Merge 전에 local main을 remote에서 최신 상태로 갱신했습니다.
+completion: "`git log --oneline --graph`에 task 이력이 main 안에 보이고 `git status`가 clean하고 최신인 main을 표시합니다."
+commonProblems:
+  - 다른 branch에 checkout된 채 merge하면 이력이 반대 방향으로 합쳐집니다.
+  - Conflict가 있으면 해결하고 commit해야 merge를 끝낼 수 있습니다.
 toc:
   - id: merge의-의미
     label: Merge의 의미

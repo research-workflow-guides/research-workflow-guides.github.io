@@ -4,11 +4,25 @@ title: Pull Request
 description: Branch 변경 사항을 main 이력에 merge하기 전에 GitHub에서 검토합니다.
 lang: ko
 section: collaboration
-order: 4
+order: 5
 permalink: /ko/collaboration/pull-request/
 translationKey: git-pull-request
 eyebrow: 주제 4
 lead: Pull Request는 branch 작업을 merge하기 전에 GitHub에서 검토하는 페이지입니다.
+outcome: Push된 task branch가 GitHub Pull Request에서 검토되고 main에 merge됩니다.
+prerequisites:
+  - Task branch를 commit하고 GitHub에 push했습니다.
+  - Base branch와 요청할 reviewer를 정했습니다.
+completion: GitHub가 Pull Request를 merged로 표시하고 local main에서 pull해 merge commit을 가져옵니다.
+commonProblems:
+  - Base branch를 잘못 선택하면 Pull Request가 제안하는 merge 대상이 달라집니다.
+  - Review 후 새 commit을 추가하면 merge 전에 다시 review가 필요할 수 있습니다.
+verification:
+  status: needs-review
+  environment: GitHub web interface이며 screenshot은 desktop browser 경로입니다.
+  workflow: Pull Request 생성, review, merge와 local main 갱신.
+  lastVerified: 현재 GitHub UI walkthrough 대기 중.
+  support: Browser workflow는 운영체제와 무관하며 GitHub control 위치는 바뀔 수 있습니다.
 toc:
   - id: pull-request의-의미
     label: Pull Request의 의미

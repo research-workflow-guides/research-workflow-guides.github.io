@@ -1,25 +1,14 @@
 ---
 layout: layouts/base.njk
 title: Write in VS Code
-description: English category home for daily writing workflows in VS Code.
+description: Build a repeatable edit, build, preview, and citation workflow in VS Code.
 lang: en
 pageClass: page-section
-toc:
-  - id: core-documents
-    label: Main topics
-  - id: snippets-documents
-    label: Personal snippets
-  - id: reference-documents
-    label: Reference
-  - id: optional-documents
-    label: Optional topics
+permalink: /en/writing-in-vs-code/
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
-{% set docs = canonical.groupedDocs.en["writing-in-vs-code"]["main-topics"] %}
-{% set snippetsDocs = canonical.groupedDocs.en["writing-in-vs-code"]["snippets"] %}
-{% set referenceDocs = canonical.groupedDocs.en["writing-in-vs-code"]["reference"] %}
-{% set optionalDocs = canonical.groupedDocs.en["writing-in-vs-code"]["optional-topics"] %}
+{% set grouped = canonical.groupedDocs.en["writing-in-vs-code"] %}
 <main class="content-shell">
   {% include "components/left-rail.njk" %}
 
@@ -30,72 +19,17 @@ toc:
       <div>
         <p class="eyebrow">Step 2</p>
         <h1>Write in VS Code</h1>
-        <p class="lead">Covers the edit, build, preview, and revision loop for daily work in VS Code.</p>
+        <p class="lead">Open the whole project, establish the daily writing loop, add mathematical content, and manage citations.</p>
       </div>
     </section>
 
-    <section id="core-documents" class="doc-section">
-      <h2>Main topics</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in docs %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Step {{ loop.index }}</p>
-            <h3>{{ doc.title }}</h3>
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section id="snippets-documents" class="doc-section">
-      <h2>Personal snippets</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in snippetsDocs %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Topic {{ loop.index }}</p>
-            <h3>{{ doc.title }}</h3>
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section id="reference-documents" class="doc-section">
-      <h2>Reference</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in referenceDocs %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">{% if doc.status == "optional" %}Optional{% else %}Topic {{ doc.order - 3 }}{% endif %}</p>
-            <h3>{{ doc.title }}</h3>
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section id="optional-documents" class="doc-section">
-      <h2>Optional topics</h2>
-      <p class="subtle">Use these only for supporting workflows such as setup sync or review PDFs.</p>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in optionalDocs %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Optional</p>
-            {% if doc.logo %}
-              <img src="{{ doc.logo }}" alt="{{ doc.title }}" style="height:clamp(28px,4vw,44px);width:auto;max-width:100%;display:block;margin-bottom:0.75rem">
-            {% else %}
-              <h3>{{ doc.title }}</h3>
-            {% endif %}
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
+    {% include "components/document-groups.njk" %}
 
     <section class="callout-card">
-      <p class="eyebrow">Next</p>
-      <h2>Then manage the project with GitHub</h2>
-      <p>Once the writing loop is stable, continue to repository and collaboration workflows.</p>
-      <a class="text-link" href="/en/git-github/">Go to Manage with GitHub</a>
+      <p class="eyebrow">Stage completion</p>
+      <h2>Confirm the writing loop</h2>
+      <p>You are ready to continue when you can edit the manuscript, rebuild the PDF, preview the result, and resolve a citation.</p>
+      <a class="text-link" href="/en/git-github/">Continue to Manage with GitHub</a>
     </section>
   </article>
 </main>

@@ -9,6 +9,14 @@ permalink: /ko/writing-in-vs-code/bibliography-citation/
 translationKey: writing-bibliography-citation
 eyebrow: 주제 3
 lead: LaTeX에서는 .bib 파일에 참고 문헌들을 정리하는 것이 편리합니다. tex 파일에서 인용하지 않는 자료들은 컴파일 된 pdf 파일에서 나타나지 않기 때문에 하나의 .bib 파일을 만들어서 여러 논문들이 공유할 수 있습니다.
+outcome: "`.bib` 파일에 저장한 source가 본문 citation과 compile된 bibliography에 나타납니다."
+prerequisites:
+  - 원고 프로젝트가 정상적으로 build됩니다.
+  - 올바른 BibTeX entry와 고유한 citation key가 준비되어 있습니다.
+completion: PDF에 물음표 없이 citation이 표시되고 bibliography에 인용한 source가 나타납니다.
+commonProblems:
+  - "`.tex` 파일의 citation key는 `.bib` 파일의 key와 정확히 같아야 합니다."
+  - Bibliography 수정 후 reference가 해결되려면 build를 두 번 이상 실행해야 할 수 있습니다.
 toc:
   - id: bibtex에-필요한-것
     label: BibTeX에 필요한 것

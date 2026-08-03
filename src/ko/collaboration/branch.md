@@ -4,11 +4,19 @@ title: Branch
 description: 브랜치를 사용해 작업을 분리하고, 작업 맥락을 바꾸며, main 흐름을 방해하지 않고 협업합니다.
 lang: ko
 section: collaboration
-order: 2
+order: 3
 permalink: /ko/collaboration/branch/
 translationKey: git-branch
 eyebrow: 주제 2
 lead: 브랜치는 협업자가 각자의 작업 흐름에서 수정한 뒤, 준비된 변경 사항을 main 프로젝트 이력으로 다시 합칠 수 있게 해줍니다.
+outcome: 이름을 붙인 task branch가 local에 생성되고 다음 작업을 위한 active branch가 됩니다.
+prerequisites:
+  - Repository가 clean 상태이며 local main branch가 최신입니다.
+  - 하나의 작업을 설명하는 짧은 branch 이름을 정했습니다.
+completion: "`git branch --show-current`가 새 task branch 이름을 출력하고 `git status`가 clean 시작 상태를 표시합니다."
+commonProblems:
+  - 오래된 main에서 branch를 만들면 이전 이력을 그대로 작업에 가져옵니다.
+  - 현재 checkout된 branch는 삭제할 수 없습니다.
 toc:
   - id: branch의-의미
     label: Branch의 의미

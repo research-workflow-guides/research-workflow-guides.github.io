@@ -9,6 +9,20 @@ permalink: /en/initial-setup/latex-installation/
 translationKey: initial-setup-latex-installation
 eyebrow: Step 1
 lead: Install MiKTeX, enable on-demand package installation, and verify the base toolchain is ready.
+outcome: MiKTeX, Perl, and latexmk are installed and available from a new terminal.
+prerequisites:
+  - Permission to install software on the computer.
+  - A stable internet connection for installers and LaTeX packages.
+completion: A new terminal prints version information for both `perl --version` and `latexmk -v`.
+commonProblems:
+  - A package-install prompt may be hidden behind VS Code during the first build.
+  - A newly installed command may require closing and reopening the terminal.
+verification:
+  status: needs-review
+  environment: Windows is the detailed screenshot path; macOS and Linux use command-based guidance.
+  workflow: MiKTeX, Perl, latexmk, and on-demand package installation.
+  lastVerified: Pending a current-product walkthrough.
+  support: Windows detailed; macOS and Linux summary with terminal verification.
 toc:
   - id: download-miktex
     label: Download MiKTeX

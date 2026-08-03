@@ -9,6 +9,20 @@ permalink: /ko/git-github/pull-push/
 translationKey: git-pull-push
 eyebrow: 주제 2
 lead: 일상적인 원격 작업 흐름은 작게 유지합니다. 필요하면 먼저 pull하고, 의미 있는 단위로 commit한 뒤, 준비되면 push합니다.
+outcome: 한 번의 pull과 push 흐름 후 local과 GitHub 이력에 같은 완료 commit이 존재합니다.
+prerequisites:
+  - 터미널이 의도한 repository와 branch 안에 있습니다.
+  - Push 전에 local 변경을 검토하고 commit했습니다.
+completion: "`git status`가 clean working tree와 local branch가 remote branch와 최신 상태임을 표시합니다."
+commonProblems:
+  - 겹치는 local 변경을 commit하지 않은 채 pull하면 sync가 중단될 수 있습니다.
+  - Push가 거절되면 원격 commit을 먼저 pull하고 검토한 뒤 다시 시도해야 합니다.
+verification:
+  status: needs-review
+  environment: Command-line 동작은 모든 플랫폼에 적용되며 screenshot은 Windows VS Code와 GitHub Desktop 경로도 포함합니다.
+  workflow: Git, VS Code, GitHub Desktop의 pull과 push.
+  lastVerified: 현재 제품 기준 walkthrough 대기 중.
+  support: Git 명령은 Windows, macOS, Linux를 지원하며 graphical control은 제품과 플랫폼마다 다릅니다.
 toc:
   - id: 용어-정리
     label: 용어 정리

@@ -9,6 +9,20 @@ permalink: /en/writing-in-vs-code/settings/
 translationKey: writing-settings
 eyebrow: Step 3
 lead: Keep the settings small and durable. You only need the defaults that make build, preview, and cleanup predictable.
+outcome: VS Code exposes a small, predictable set of LaTeX build, preview, and cleanup actions.
+prerequisites:
+  - The manuscript project is open as a VS Code workspace.
+  - LaTeX Workshop is installed and enabled.
+completion: The configured build and preview commands run from the Command Palette and produce the expected PDF.
+commonProblems:
+  - User settings and workspace settings can override each other.
+  - A copied setting may use an outdated LaTeX Workshop command name.
+verification:
+  status: needs-review
+  environment: Windows is the detailed path; macOS and Linux share the same VS Code settings model.
+  workflow: Command Palette discovery, user and workspace settings, build, preview, and cleanup commands.
+  lastVerified: Pending a current-product walkthrough.
+  support: All three operating systems use the same settings model; keyboard labels differ by platform.
 toc:
   - id: start-with-command-names
     label: Start with command names

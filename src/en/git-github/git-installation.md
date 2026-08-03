@@ -9,6 +9,20 @@ permalink: /en/git-github/git-installation/
 translationKey: git-git-installation
 eyebrow: Topic 1
 lead: Install Git first, then set the name and email that should follow your commits across projects.
+outcome: Git is available in a new terminal and the global commit name and email are configured.
+prerequisites:
+  - Permission to install software or use the platform package manager.
+  - The name and email address to record in future commits.
+completion: "`git --version` succeeds and `git config --global --list` shows the intended name and email."
+commonProblems:
+  - A terminal opened before installation may not recognize the new `git` command.
+  - The commit email should match an address accepted by the GitHub account or its no-reply setting.
+verification:
+  status: needs-review
+  environment: Windows is the detailed installer path; macOS and Linux use official platform installation methods.
+  workflow: Git installation, global identity configuration, and terminal verification.
+  lastVerified: Pending a current-product walkthrough.
+  support: Windows detailed; macOS and Linux supported through official package and command checks.
 toc:
   - id: install-git
     label: Install Git

@@ -9,6 +9,14 @@ permalink: /en/git-github/git-status/
 translationKey: git-status
 eyebrow: Topic 1
 lead: Check what changed before you stage, commit, or push.
+outcome: The current branch and every changed, staged, or untracked file can be identified before committing.
+prerequisites:
+  - The terminal is open inside a Git repository.
+  - At least one known file change is available for comparison.
+completion: "`git status` reports the expected branch and the listed files match the changes you intended to make."
+commonProblems:
+  - A “not a git repository” error means the terminal is outside the project repository.
+  - Generated LaTeX files should be reviewed before staging and may belong in `.gitignore`.
 toc:
   - id: check-the-current-state
     label: Check the current state

@@ -9,6 +9,20 @@ permalink: /en/writing-in-vs-code/register-folder/
 translationKey: writing-folder-setup
 eyebrow: Step 1
 lead: In VS Code, you work at the folder level, not the file level. A workspace is not just a .tex file — it also includes figures, code, and other supporting files that VS Code manages together as one folder.
+outcome: The complete manuscript project is open as one trusted VS Code workspace.
+prerequisites:
+  - An extracted project folder containing the main `.tex` file and supporting files.
+  - A working LaTeX Workshop installation.
+completion: Explorer shows the project tree, the main `.tex` file is inside it, and the PDF build succeeds.
+commonProblems:
+  - Opening a single file or a nested child folder can hide the actual project root.
+  - Workspace Trust should only be accepted for a folder you recognize and control.
+verification:
+  status: needs-review
+  environment: Windows is the detailed screenshot path; macOS and Linux use the same Open Folder workflow.
+  workflow: VS Code Open Folder, Workspace Trust, Explorer, and LaTeX Workshop build.
+  lastVerified: Pending a current-product walkthrough.
+  support: Windows detailed; macOS and Linux supported through equivalent VS Code controls.
 toc:
   - id: open-folder
     label: Open folder

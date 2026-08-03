@@ -9,6 +9,14 @@ permalink: /ko/git-github/git-status/
 translationKey: git-status
 eyebrow: 주제 1
 lead: stage, commit, push 전에 무엇이 바뀌었는지 확인합니다.
+outcome: Commit 전에 현재 branch와 changed, staged, untracked 파일을 모두 구분합니다.
+prerequisites:
+  - 터미널이 Git repository 안에서 열려 있습니다.
+  - 비교할 수 있는 의도된 파일 변경이 하나 이상 있습니다.
+completion: "`git status`가 예상한 branch를 표시하고 목록의 파일이 의도한 변경 사항과 일치합니다."
+commonProblems:
+  - “not a git repository” 오류는 터미널이 project repository 밖에 있다는 뜻입니다.
+  - 생성된 LaTeX 파일은 stage 전에 확인하고 필요하면 `.gitignore`에 넣어야 합니다.
 toc:
   - id: 현재-상태-확인
     label: 현재 상태 확인
