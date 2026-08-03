@@ -6,16 +6,16 @@ const sectionDefinitions = [
       ko: "/ko/initial-setup/"
     },
     title: {
-      en: "Initial Setup",
-      ko: "초기 설정"
+      en: "Get Started",
+      ko: "시작하기"
     },
     summary: {
-      en: "Set up the toolchain and reach the first successful compile.",
-      ko: "도구 체인을 맞추고 첫 compile 성공까지 도달합니다."
+      en: "Prepare LaTeX and VS Code, then reach the first successful compile.",
+      ko: "LaTeX와 VS Code를 준비하고 첫 compile에 성공합니다."
     },
     kicker: {
-      en: "Setup",
-      ko: "초기 설정"
+      en: "Step 1",
+      ko: "1단계"
     },
     groups: [
       {
@@ -41,16 +41,16 @@ const sectionDefinitions = [
       ko: "/ko/writing-in-vs-code/"
     },
     title: {
-      en: "Work in VS Code",
-      ko: "VS Code에서 작업하기"
+      en: "Write in VS Code",
+      ko: "VS Code에서 작성하기"
     },
     summary: {
-      en: "Move into the daily edit, build, preview, and revision loop.",
-      ko: "일상적인 편집, build, preview, revision 루프로 넘어갑니다."
+      en: "Edit, build, and preview a LaTeX research document in a repeatable loop.",
+      ko: "LaTeX 연구 문서를 반복적으로 편집하고 build와 preview를 수행합니다."
     },
     kicker: {
-      en: "Writing",
-      ko: "작성"
+      en: "Step 2",
+      ko: "2단계"
     },
     groups: [
       {
@@ -90,16 +90,16 @@ const sectionDefinitions = [
       ko: "/ko/git-github/"
     },
     title: {
-      en: "Git & GitHub",
-      ko: "Git과 GitHub"
+      en: "Manage with GitHub",
+      ko: "GitHub로 관리하기"
     },
     summary: {
-      en: "Connect repositories, publish work, and keep local and remote history aligned.",
-      ko: "저장소를 연결하고 작업을 공개하며 로컬과 원격 이력을 안정적으로 맞춥니다."
+      en: "Record changes with Git and keep local and GitHub history aligned.",
+      ko: "Git으로 변경을 기록하고 local과 GitHub 이력을 맞춥니다."
     },
     kicker: {
-      en: "Git",
-      ko: "Git"
+      en: "Step 3",
+      ko: "3단계"
     },
     groups: [
       {
@@ -132,16 +132,16 @@ const sectionDefinitions = [
       ko: "/ko/collaboration/"
     },
     title: {
-      en: "Collaboration",
-      ko: "공동 작업하기"
+      en: "Collaborate",
+      ko: "함께 작업하기"
     },
     summary: {
-      en: "Move from solo repository habits into predictable small-team collaboration.",
-      ko: "혼자 쓰는 repository 흐름에서 예측 가능한 팀 협업으로 넘어갑니다."
+      en: "Use branches and pull requests for predictable small-team collaboration.",
+      ko: "branch와 pull request로 예측 가능한 소규모 팀 협업을 수행합니다."
     },
     kicker: {
-      en: "Collaboration",
-      ko: "협업"
+      en: "Step 4",
+      ko: "4단계"
     },
     groups: [
       {
@@ -156,55 +156,6 @@ const sectionDefinitions = [
         label: {
           en: "Git for collaboration",
           ko: "공동 작업을 위한 Git"
-        }
-      }
-    ]
-  },
-  {
-    key: "python",
-    url: {
-      en: "/en/python/",
-      ko: "/ko/python/"
-    },
-    title: {
-      en: "Python",
-      ko: "Python"
-    },
-    summary: {
-      en: "Use Python for reproducible analysis, automation, and research scripts.",
-      ko: "Python으로 분석, 자동화, 연구용 스크립트 작업을 시작합니다."
-    },
-    kicker: {
-      en: "Python",
-      ko: "Python"
-    },
-    groups: [
-      {
-        key: "python-basics",
-        label: {
-          en: "Installation",
-          ko: "설치"
-        }
-      },
-      {
-        key: "backends",
-        label: {
-          en: "Backends",
-          ko: "Backends"
-        }
-      },
-      {
-        key: "visualization",
-        label: {
-          en: "Visualization",
-          ko: "시각화"
-        }
-      },
-      {
-        key: "acceleration",
-        label: {
-          en: "Acceleration",
-          ko: "가속"
         }
       }
     ]
@@ -233,7 +184,7 @@ const pages = [
     pageType: "language-home",
     lang: "ko",
     title: "한국어 홈",
-    translationKey: "root",
+    translationKey: "language-home",
     status: "core"
   },
   {
@@ -241,7 +192,7 @@ const pages = [
     pageType: "category-home",
     lang: "en",
     section: "initial-setup",
-    title: "Initial Setup",
+    title: "Get Started",
     translationKey: "category-initial-setup",
     status: "core"
   },
@@ -250,7 +201,7 @@ const pages = [
     pageType: "category-home",
     lang: "ko",
     section: "initial-setup",
-    title: "초기 설정",
+    title: "시작하기",
     translationKey: "category-initial-setup",
     status: "core"
   },
@@ -363,7 +314,7 @@ const pages = [
     pageType: "category-home",
     lang: "en",
     section: "writing-in-vs-code",
-    title: "Work in VS Code",
+    title: "Write in VS Code",
     translationKey: "category-writing-in-vs-code",
     status: "core"
   },
@@ -372,7 +323,7 @@ const pages = [
     pageType: "category-home",
     lang: "ko",
     section: "writing-in-vs-code",
-    title: "VS Code에서 작업하기",
+    title: "VS Code에서 작성하기",
     translationKey: "category-writing-in-vs-code",
     status: "core"
   },
@@ -721,7 +672,7 @@ const pages = [
     pageType: "category-home",
     lang: "en",
     section: "git-github",
-    title: "Git & GitHub",
+    title: "Manage with GitHub",
     translationKey: "category-git-github",
     status: "core"
   },
@@ -730,7 +681,7 @@ const pages = [
     pageType: "category-home",
     lang: "ko",
     section: "git-github",
-    title: "Git과 GitHub",
+    title: "GitHub로 관리하기",
     translationKey: "category-git-github",
     status: "core"
   },
@@ -739,7 +690,7 @@ const pages = [
     pageType: "category-home",
     lang: "en",
     section: "collaboration",
-    title: "GitHub",
+    title: "Collaborate",
     translationKey: "category-collaboration",
     status: "core"
   },
@@ -748,338 +699,8 @@ const pages = [
     pageType: "category-home",
     lang: "ko",
     section: "collaboration",
-    title: "GitHub",
+    title: "함께 작업하기",
     translationKey: "category-collaboration",
-    status: "core"
-  },
-  {
-    url: "/en/python/",
-    pageType: "category-home",
-    lang: "en",
-    section: "python",
-    title: "Python",
-    translationKey: "category-python",
-    status: "core"
-  },
-  {
-    url: "/ko/python/",
-    pageType: "category-home",
-    lang: "ko",
-    section: "python",
-    title: "Python",
-    translationKey: "category-python",
-    status: "core"
-  },
-  {
-    url: "/en/python/python-installation/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "python-installation",
-    order: 1,
-    group: "python-basics",
-    title: "Installation",
-    description: "Download the Python installer that matches your operating system.",
-    translationKey: "python-installation",
-    status: "core"
-  },
-  {
-    url: "/ko/python/python-installation/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "python-installation",
-    order: 1,
-    group: "python-basics",
-    title: "설치",
-    description: "사용하는 OS에 맞는 Python 설치 파일을 내려받아 설치합니다.",
-    translationKey: "python-installation",
-    status: "core"
-  },
-  {
-    url: "/en/python/libraries/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "libraries",
-    order: 2,
-    group: "python-basics",
-    title: "Libraries",
-    description: "Install common Python libraries from a terminal or a Jupyter Notebook cell.",
-    translationKey: "python-libraries",
-    status: "core"
-  },
-  {
-    url: "/ko/python/libraries/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "libraries",
-    order: 2,
-    group: "python-basics",
-    title: "라이브러리",
-    description: "터미널이나 Jupyter Notebook 셀에서 자주 쓰는 Python 라이브러리를 설치합니다.",
-    translationKey: "python-libraries",
-    status: "core"
-  },
-  {
-    url: "/en/python/virtual-environment/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "virtual-environment",
-    order: 3,
-    group: "python-basics",
-    title: "Virtual environment",
-    description: "Create a project-local .venv and install packages such as NumPy.",
-    translationKey: "python-virtual-environment",
-    status: "optional"
-  },
-  {
-    url: "/ko/python/virtual-environment/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "virtual-environment",
-    order: 3,
-    group: "python-basics",
-    title: "가상 환경 만들기",
-    description: "프로젝트 안에 .venv를 만들고 NumPy 같은 패키지를 설치합니다.",
-    translationKey: "python-virtual-environment",
-    status: "optional"
-  },
-  {
-    url: "/en/python/numpy/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "numpy",
-    order: 4,
-    group: "backends",
-    title: "NumPy",
-    description: "Use NumPy arrays for small numerical workflows and data preparation.",
-    translationKey: "python-numpy",
-    status: "core"
-  },
-  {
-    url: "/ko/python/numpy/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "numpy",
-    order: 4,
-    group: "backends",
-    title: "NumPy",
-    description: "작은 수치 계산과 데이터 준비에 NumPy array를 사용합니다.",
-    translationKey: "python-numpy",
-    status: "core"
-  },
-  {
-    url: "/en/python/jax/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "jax",
-    order: 5,
-    group: "backends",
-    title: "JAX",
-    description: "Use JAX when array code needs gradients, compilation, or accelerator support.",
-    translationKey: "python-jax",
-    status: "core"
-  },
-  {
-    url: "/ko/python/jax/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "jax",
-    order: 5,
-    group: "backends",
-    title: "JAX",
-    description: "gradient, compile, accelerator 지원이 필요한 array 코드에 JAX를 사용합니다.",
-    translationKey: "python-jax",
-    status: "core"
-  },
-  {
-    url: "/en/python/pytorch/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "pytorch",
-    order: 6,
-    group: "backends",
-    title: "PyTorch",
-    description: "Use PyTorch tensors for machine learning experiments and GPU-backed computation.",
-    translationKey: "python-pytorch",
-    status: "core"
-  },
-  {
-    url: "/ko/python/pytorch/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "pytorch",
-    order: 6,
-    group: "backends",
-    title: "PyTorch",
-    description: "machine learning 실험과 GPU 기반 계산에 PyTorch tensor를 사용합니다.",
-    translationKey: "python-pytorch",
-    status: "core"
-  },
-  {
-    url: "/en/python/two-dimensions/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "two-dimensions",
-    order: 7,
-    group: "visualization",
-    title: "Two dimensions",
-    description: "Create basic two-dimensional plots with Matplotlib.",
-    translationKey: "python-two-dimensions",
-    status: "core"
-  },
-  {
-    url: "/ko/python/two-dimensions/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "two-dimensions",
-    order: 7,
-    group: "visualization",
-    title: "2차원 시각화",
-    description: "Matplotlib으로 기본 2차원 그래프를 만듭니다.",
-    translationKey: "python-two-dimensions",
-    status: "core"
-  },
-  {
-    url: "/en/python/three-dimensions/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "three-dimensions",
-    order: 8,
-    group: "visualization",
-    title: "Three dimensions",
-    description: "Create simple three-dimensional plots for surfaces and trajectories.",
-    translationKey: "python-three-dimensions",
-    status: "core"
-  },
-  {
-    url: "/ko/python/three-dimensions/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "three-dimensions",
-    order: 8,
-    group: "visualization",
-    title: "3차원 시각화",
-    description: "surface나 trajectory를 위한 간단한 3차원 그래프를 만듭니다.",
-    translationKey: "python-three-dimensions",
-    status: "core"
-  },
-  {
-    url: "/en/python/gif-animation/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "gif-animation",
-    order: 9,
-    group: "visualization",
-    title: "GIF animation",
-    description: "Export short Matplotlib animations as GIF files.",
-    translationKey: "python-gif-animation",
-    status: "core"
-  },
-  {
-    url: "/ko/python/gif-animation/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "gif-animation",
-    order: 9,
-    group: "visualization",
-    title: "GIF animation",
-    description: "짧은 Matplotlib animation을 GIF 파일로 저장합니다.",
-    translationKey: "python-gif-animation",
-    status: "core"
-  },
-  {
-    url: "/en/python/numba/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "numba",
-    order: 10,
-    group: "acceleration",
-    title: "Numba",
-    description: "Use Numba to speed up numerical Python loops with just-in-time compilation.",
-    translationKey: "python-numba",
-    status: "core"
-  },
-  {
-    url: "/ko/python/numba/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "numba",
-    order: 10,
-    group: "acceleration",
-    title: "Numba",
-    description: "just-in-time compilation으로 numerical Python loop를 빠르게 실행합니다.",
-    translationKey: "python-numba",
-    status: "core"
-  },
-  {
-    url: "/en/python/process-pool-executor/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "process-pool-executor",
-    order: 11,
-    group: "acceleration",
-    title: "ProcessPoolExecutor",
-    description: "Use multiple CPU processes for independent Python tasks.",
-    translationKey: "python-process-pool-executor",
-    status: "core"
-  },
-  {
-    url: "/ko/python/process-pool-executor/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "process-pool-executor",
-    order: 11,
-    group: "acceleration",
-    title: "ProcessPoolExecutor",
-    description: "서로 독립적인 Python 작업을 여러 CPU process로 나누어 실행합니다.",
-    translationKey: "python-process-pool-executor",
-    status: "core"
-  },
-  {
-    url: "/en/python/cuda/",
-    pageType: "document",
-    lang: "en",
-    section: "python",
-    slug: "cuda",
-    order: 12,
-    group: "acceleration",
-    title: "CUDA",
-    description: "Use CUDA-capable GPUs when the workload is large enough to benefit from GPU execution.",
-    translationKey: "python-cuda",
-    status: "core"
-  },
-  {
-    url: "/ko/python/cuda/",
-    pageType: "document",
-    lang: "ko",
-    section: "python",
-    slug: "cuda",
-    order: 12,
-    group: "acceleration",
-    title: "CUDA",
-    description: "GPU 실행이 이득이 될 만큼 큰 작업에 CUDA-capable GPU를 사용합니다.",
-    translationKey: "python-cuda",
     status: "core"
   },
   {
@@ -1541,7 +1162,7 @@ function buildBreadcrumbs(page) {
     return [];
   }
 
-  const crumbs = [{ title: page.lang === "ko" ? "홈" : "Home", url: "/" }];
+  const crumbs = [{ title: page.lang === "ko" ? "홈" : "Home", url: homes[page.lang].url }];
   const section = sections.find((item) => item.key === page.section);
 
   if (section) {

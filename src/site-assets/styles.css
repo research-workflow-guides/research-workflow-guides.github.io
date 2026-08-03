@@ -11,9 +11,6 @@
   --brand-soft: #212121;
   --accent: #9d6f2e;
   --accent-soft: #f0e1c8;
-  --python-yellow: #ffd43b;
-  --python-yellow-soft: #ffe873;
-  --python-yellow-ink: #ffd43b;
   --shadow: 0 20px 50px rgba(36, 46, 67, 0.12);
   --radius-lg: 26px;
   --radius-md: 18px;
@@ -351,10 +348,6 @@ kbd {
   color: #5b5bd6;
 }
 
-.nav-section--python > a {
-  color: var(--python-yellow-ink);
-}
-
 .nav-section--initial-setup:hover,
 .nav-section--initial-setup:focus-visible,
 .nav-section--initial-setup:active,
@@ -381,13 +374,6 @@ kbd {
 .nav-section--collaboration:active,
 .nav-section--collaboration[aria-current] {
   color: #5b5bd6;
-}
-
-.nav-section--python:hover,
-.nav-section--python:focus-visible,
-.nav-section--python:active,
-.nav-section--python[aria-current] {
-  color: var(--python-yellow-ink);
 }
 
 .menu-toggle,
@@ -502,6 +488,35 @@ li {
   max-width: none;
   margin: 0 auto;
   line-height: 1.35;
+}
+
+.language-landing-copy,
+.workflow-home-hero .wrap {
+  max-width: 62rem;
+}
+
+.language-landing-copy .subtle {
+  max-width: 46rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.language-choice-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.workflow-home-actions {
+  margin-top: 1.6rem;
+}
+
+.workflow-support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.workflow-support-grid .hero-panel {
+  height: 100%;
 }
 
 .responsive-break {
@@ -839,12 +854,7 @@ li {
   display: block;
 }
 
-.card-logo--python-full {
-  height: 76px;
-}
-
-.card-logo--latex-compact,
-.card-logo--python-compact {
+.card-logo--latex-compact {
   display: none;
 }
 
@@ -909,10 +919,6 @@ li {
   background: linear-gradient(90deg, #5b5bd6, #8b5cf6);
 }
 
-.section--python .feature-card:not([class*="card--"])::before {
-  background: linear-gradient(90deg, var(--python-yellow), var(--python-yellow-soft));
-}
-
 .card--writing-in-vs-code::before {
   background: linear-gradient(90deg, #2563eb, #60a5fa);
 }
@@ -923,10 +929,6 @@ li {
 
 .card--collaboration::before {
   background: linear-gradient(90deg, #5b5bd6, #8b5cf6);
-}
-
-.card--python::before {
-  background: linear-gradient(90deg, var(--python-yellow), var(--python-yellow-soft));
 }
 
 .doc-content.panel::before {
@@ -951,10 +953,6 @@ li {
 
 .section--collaboration .doc-content.panel::before {
   background: linear-gradient(90deg, #5b5bd6, #8b5cf6);
-}
-
-.section--python .doc-content.panel::before {
-  background: linear-gradient(90deg, var(--python-yellow), var(--python-yellow-soft));
 }
 
 .link-row a {
@@ -1123,10 +1121,6 @@ li.section--collaboration > .rail-link-section {
   color: #5b5bd6;
 }
 
-li.section--python > .rail-link-section {
-  color: var(--python-yellow-ink);
-}
-
 .rail-link-page {
   font-weight: 600;
 }
@@ -1196,10 +1190,6 @@ li.section--python > .rail-link-section {
   background: #5b5bd6;
 }
 
-.section--python .rail-link-heading.is-active::before {
-  background: var(--python-yellow-ink);
-}
-
 .rail-link:hover,
 .rail-link:focus-visible,
 .rail-link:active,
@@ -1233,13 +1223,6 @@ li.section--collaboration > .rail-link-section:focus-visible,
 li.section--collaboration > .rail-link-section:active,
 li.section--collaboration > .rail-link-section.is-current {
   color: #5b5bd6;
-}
-
-li.section--python > .rail-link-section:hover,
-li.section--python > .rail-link-section:focus-visible,
-li.section--python > .rail-link-section:active,
-li.section--python > .rail-link-section.is-current {
-  color: var(--python-yellow-ink);
 }
 
 .rail-link-page.is-current,
@@ -1854,13 +1837,19 @@ li > .image-frame {
   grid-area: update;
 }
 
-.footer-old-version {
+.footer-links {
   grid-area: old;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.footer-old-version,
+.footer-support {
   color: var(--brand);
   font-size: var(--nav-control-font-size);
   font-weight: 700;
   text-decoration: none;
-  text-align: right;
 }
 
 @media (max-width: 1000px) {
@@ -2132,6 +2121,10 @@ li > .image-frame {
     white-space: nowrap;
   }
 
+  .workflow-home-hero .hero-h1 {
+    white-space: normal;
+  }
+
   .landing-hero .lead {
     font-size: clamp(0.95rem, 3vw, 1.2rem);
     line-height: 1.45;
@@ -2148,6 +2141,7 @@ li > .image-frame {
 
   .feature-grid,
   .language-grid,
+  .workflow-support-grid,
   .feature-grid-compact,
   .page-nav {
     grid-template-columns: 1fr;
@@ -2196,9 +2190,12 @@ li > .image-frame {
       "old";
   }
 
-  .footer-copy,
-  .footer-old-version {
+  .footer-copy {
     text-align: left;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
   }
 }
 
@@ -2249,18 +2246,8 @@ li > .image-frame {
     display: none;
   }
 
-  .route-map-grid .card-logo--python-full {
-    display: none;
-  }
-
-  .route-map-grid .card-logo--latex-compact,
-  .route-map-grid .card-logo--python-compact {
+  .route-map-grid .card-logo--latex-compact {
     display: block;
-  }
-
-  .route-map-grid .card-logo--python-compact {
-    height: clamp(50px, 8.5vw, 64px);
-    max-width: clamp(42px, 16vw, 58px);
   }
 
   .route-map-grid .card-kicker {
@@ -2313,11 +2300,6 @@ li > .image-frame {
   .route-map-grid .card-logo {
     height: clamp(32px, 9vw, 42px);
     max-width: clamp(34px, 15vw, 58px);
-  }
-
-  .route-map-grid .card-logo--python-compact {
-    height: clamp(44px, 12vw, 56px);
-    max-width: clamp(38px, 14vw, 50px);
   }
 
   .route-map-grid .feature-card h3 {

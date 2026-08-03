@@ -1,63 +1,33 @@
 ---
 layout: layouts/base.njk
-title: Research Workflow Guidebook
-description: 언어를 선택하고, LaTeX부터 GitHub 협업까지 이어지는 연구 워크플로우를 시작하세요.
+title: 한국어 가이드
+description: LaTeX 연구 문서를 VS Code에서 작성하고 GitHub로 관리하세요.
 lang: ko
-langSwitch:
-  url: /
-  label: English
-pageClass: page-landing
+pageClass: page-home
 ---
-{% set currentUpdates = updates.completedByLang.ko %}
-{% set latestUpdate = currentUpdates[0] %}
 <main>
-  <section class="landing-hero">
-    <h1 class="wrap hero-h1">효율적인 연구 작업 흐름</h1>
-    <p class="wrap lead">LaTeX, VS Code, GitHub로 효율적인 연구 환경을 구축하세요.</p>
-    <div class="wrap hero-grid">
-      <aside class="hero-panel panel">
-        <div class="updates-panel-header">
-          <p class="eyebrow">{{ ui.ko.recentUpdates }}</p>
-        </div>
-        {% if latestUpdate %}
-          <dl class="updates-list">
-            <div>
-              {% set item = latestUpdate %}
-              {% include "components/update-entry.njk" %}
-            </div>
-          </dl>
-        {% endif %}
-      </aside>
+  <section class="landing-hero workflow-home-hero">
+    <div class="wrap">
+      <p class="eyebrow">한국어 가이드</p>
+      <h1 class="hero-h1">LaTeX 연구 문서를 VS Code에서 작성하고 GitHub로 관리하세요.</h1>
+      <p class="lead">첫 compile부터 예측 가능한 소규모 팀 협업까지 하나의 실용적인 경로를 따라갑니다.</p>
+      <div class="button-row workflow-home-actions">
+        <a class="button button-primary" href="/ko/initial-setup/">처음부터 시작하기</a>
+        <a class="button button-secondary" href="#workflow-stages">필요한 단계 찾기</a>
+      </div>
     </div>
   </section>
 
-  <section class="editorial-band">
+  <section id="workflow-stages" class="editorial-band">
     <div class="wrap">
       <div class="section-heading">
-        <h2>안내 경로</h2>
+        <p class="eyebrow">Core path</p>
+        <h2>설치부터 협업까지 네 단계</h2>
+        <p>처음부터 순서대로 진행하거나 현재 작업에 필요한 단계로 바로 이동하세요.</p>
       </div>
       <div class="feature-grid route-map-grid">
         {% for section in navigation.sections %}
           <a class="feature-card panel card--{{ section.key }}" href="{{ section.url.ko }}">
-            <div class="card-logo-row">
-              {% if section.key == "initial-setup" %}
-                <img class="card-logo card-logo--latex-full" src="/assets/images/LaTeX_project_logo_bird.svg.png" alt="LaTeX">
-                <img class="card-logo card-logo--latex-compact" src="/assets/images/latex-project-logo_288x288.png" alt="LaTeX">
-                <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
-              {% elif section.key == "writing-in-vs-code" %}
-                <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
-              {% elif section.key == "git-github" %}
-                <img class="card-logo" src="/assets/images/git-logo.png" alt="Git">
-                <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
-              {% elif section.key == "collaboration" %}
-                <img class="card-logo" src="/assets/images/git-logo.png" alt="Git">
-                <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
-                <img class="card-logo" src="/assets/images/overleaf-o-logo-primary.jpg" alt="Overleaf">
-              {% elif section.key == "python" %}
-                <img class="card-logo card-logo--python-full" src="/assets/images/python-logo-long.png" alt="Python">
-                <img class="card-logo card-logo--python-compact" src="/assets/images/python-logo-short.png" alt="Python">
-              {% endif %}
-            </div>
             <p class="card-kicker">{{ section.kicker.ko }}</p>
             <h3>{{ section.title.ko }}</h3>
             <p>{{ section.summary.ko }}</p>
@@ -67,30 +37,21 @@ pageClass: page-landing
     </div>
   </section>
 
-  <section class="editorial-band discussions-band">
-    <div class="wrap">
+  <section class="editorial-band workflow-support-band">
+    <div class="wrap workflow-support-grid">
+      <article class="hero-panel panel">
+        <p class="eyebrow">이미 환경이 준비됐나요?</p>
+        <h2>필요한 작업으로 바로 이동하세요.</h2>
+        <p>상단 메뉴에서 workflow 단계를 선택하거나 검색으로 선택 문서와 문제 해결 문서를 찾을 수 있습니다.</p>
+      </article>
       <a
         class="hero-panel panel discussions-card"
         href="https://github.com/research-workflow-guides/research-workflow-guides.github.io/discussions"
         aria-label="research-workflow-guides/research-workflow-guides.github.io GitHub Discussions 열기"
       >
-        <p class="eyebrow">소통하기</p>
-        <p class="discussion-heading">질문, 제안, 피드백</p>
-        <ul class="discussion-list">
-          <li>이 guide에서 다루는 workflow에 대해 질문할 수 있습니다.</li>
-          <li>문서 개선 사항을 제안할 수 있습니다.</li>
-          <li>설명이 불분명하거나 빠진 단계를 보고할 수 있습니다.</li>
-        </ul>
-        <p class="discussion-copy">시작하려면 이 카드를 클릭해 토론 페이지를 여세요.</p>
-      </a>
-      <a
-        class="hero-panel panel discussions-card sponsor-card"
-        href="https://github.com/sponsors/kyjung2357"
-        aria-label="kyjung2357 GitHub Sponsors 열기"
-      >
-        <p class="eyebrow">후원</p>
-        <p class="discussion-heading">후원하기</p>
-        <p class="discussion-copy">저자들에게 커피를 사주고 싶어요.</p>
+        <p class="eyebrow">Discussions</p>
+        <h2>질문, 제안, 피드백</h2>
+        <p>설명이 불분명하거나 오래됐거나 빠진 단계가 있다면 알려주세요.</p>
       </a>
     </div>
   </section>
