@@ -21,9 +21,9 @@ tags:
 ---
 ## What a conflict means
 
-A conflict appears when two sets of changes touch the same lines or the same small region of a file. For a push or pull to succeed cleanly, the file on GitHub and the local file you started editing from should match.
+If GitHub has changes that are not yet on your computer, VS Code may stop the push and ask you to pull first. Pull brings those GitHub changes into your local project and tries to combine them with your work.
 
-If they are different, pushing or pulling will result in a conflict (refer to the picture below). Git stops and asks you to decide what the final text should be. Let's learn how to resolve this issue.
+If the two versions changed the same part differently and Git cannot combine them automatically, it asks you to choose the final content. This is a conflict.
 
 <div class="doc-step-pair">
   <div>
@@ -33,6 +33,8 @@ If they are different, pushing or pulling will result in a conflict (refer to th
 
   </figure>
 </div>
+
+Before pulling, run `git status`. If it shows uncommitted work, commit that work or temporarily save it with `git stash`.
 
 After that warning, click 'Cancel'. Execute the command "pull".
 
@@ -69,7 +71,7 @@ There are three options, and you can click the one you prefer:
       </tr>
       <tr style="background:#ffffff">
         <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Accept Both Changes</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">Both the local and GitHub contents will be accepted. This is the safest option.</td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">Both versions will be kept. To avoid accidentally discarding either version, the safest workflow is to choose this option first and then have the author review and edit the combined result, removing duplicated or incompatible text.</td>
       </tr>
     </tbody>
   </table>
@@ -80,7 +82,7 @@ There are three options, and you can click the one you prefer:
 
 </figure>
 
-For example, if you click on 'Accept Both Changes', you will be able to see a screen similar to the one on the right. Now, execute the compilation (or saving).
+For example, if you click on 'Accept Both Changes', you will see a screen similar to the one on the right. Before compiling or saving, the author should review the combined code and text, remove duplicated content, and reconcile any incompatible lines. Compile or save only after confirming the intended final result.
 
 <figure class="image-frame">
   <img src="/assets/images/2.2.4-6.png" alt="VS Code conflict editor with Accept Both Changes highlighted">
@@ -91,6 +93,15 @@ For example, if you click on 'Accept Both Changes', you will be able to see a sc
   <img src="/assets/images/2.2.4-7.png" alt="VS Code editor after both conflict changes are accepted">
 
 </figure>
+
+Before staging the resolved file, run:
+
+```shell
+git status
+git diff
+```
+
+Confirm that no conflict markers remain, review the exact combined changes, and compile or build the document. Stage and commit only after these checks pass.
 
 ## Finish the merge
 

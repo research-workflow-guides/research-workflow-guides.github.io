@@ -64,6 +64,9 @@ module.exports = class SearchIndex {
   }
 
   render(data) {
+    const canonicalPages = data.canonical && data.canonical.pagesByUrl
+      ? data.canonical.pagesByUrl
+      : {};
     const pages = data.collections.all
       .filter((item) => {
         return item.url &&
@@ -72,14 +75,22 @@ module.exports = class SearchIndex {
           item.url !== "/ko/" &&
           (item.data.lang === "en" || item.data.lang === "ko");
       })
-      .map((item) => ({
-        title: item.data.title || "",
-        description: item.data.description || "",
-        lang: item.data.lang,
-        section: item.data.section || "",
-        url: item.url,
-        content: stripHtml(item.templateContent)
-      }));
+      .map((item) => {
+        const canonicalPage = canonicalPages[item.url];
+        const classification = canonicalPage && canonicalPage.pageType === "document"
+          ? canonicalPage.status
+          : "";
+
+        return {
+          title: item.data.title || "",
+          description: item.data.description || "",
+          lang: item.data.lang,
+          section: item.data.section || "",
+          classification,
+          url: item.url,
+          content: stripHtml(item.templateContent)
+        };
+      });
 
     return JSON.stringify(pages);
   }

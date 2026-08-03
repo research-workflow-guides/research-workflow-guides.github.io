@@ -31,6 +31,24 @@ function getLanguageLabel(url) {
   return "Other";
 }
 
+function getClassificationLabel(classification, url) {
+  const labels = {
+    en: {
+      core: "Core",
+      optional: "Optional",
+      troubleshooting: "Troubleshooting"
+    },
+    ko: {
+      core: "핵심",
+      optional: "선택",
+      troubleshooting: "문제 해결"
+    }
+  };
+  const lang = url.startsWith("/ko/") ? "ko" : "en";
+
+  return labels[lang][classification] || "";
+}
+
 function getPagefind() {
   if (!pagefindModulePromise) {
     pagefindModulePromise = import("/pagefind/pagefind.js");
@@ -103,6 +121,20 @@ function buildResultCard(result, languageLabel, query) {
   tag.className = "search-hit-tag";
   tag.textContent = languageLabel;
 
+  const meta = document.createElement("div");
+  meta.className = "search-hit-meta";
+  meta.appendChild(tag);
+
+  const classification = result.meta && result.meta.classification;
+  const classificationLabel = getClassificationLabel(classification, result.url);
+
+  if (classificationLabel) {
+    const badge = document.createElement("span");
+    badge.className = `search-hit-status search-hit-status-${classification}`;
+    badge.textContent = classificationLabel;
+    meta.appendChild(badge);
+  }
+
   const title = document.createElement("h3");
   const link = document.createElement("a");
   link.href = result.url;
@@ -113,7 +145,7 @@ function buildResultCard(result, languageLabel, query) {
   excerpt.className = "search-hit-excerpt";
   appendHighlightedText(excerpt, result.excerpt || result.meta && result.meta.description || "", query);
 
-  article.appendChild(tag);
+  article.appendChild(meta);
   article.appendChild(title);
   article.appendChild(excerpt);
 
@@ -218,7 +250,8 @@ async function searchLocalIndex(query, lang) {
         url: page.url,
         meta: {
           title: page.title,
-          description: page.description
+          description: page.description,
+          classification: page.classification
         },
         excerpt: buildSearchSnippet(page.content || page.description, query),
         score
