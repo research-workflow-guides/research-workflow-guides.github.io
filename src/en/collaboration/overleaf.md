@@ -4,7 +4,7 @@ title: Overleaf
 description: If your collaborator uses Overleaf instead of VS Code, you can still work in VS Code by connecting Overleaf and GitHub.
 lang: en
 section: collaboration
-order: 3
+order: 2
 permalink: /en/collaboration/overleaf/
 translationKey: git-overleaf
 eyebrow: Optional

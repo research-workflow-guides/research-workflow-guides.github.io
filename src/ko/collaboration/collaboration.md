@@ -9,6 +9,20 @@ permalink: /ko/collaboration/collaboration/
 translationKey: git-collaboration
 eyebrow: 주제 1
 lead: 작은 팀 협업은 repository 리듬이 단조롭고, 명시적이며, 다시 회복하기 쉬울수록 잘 굴러갑니다.
+outcome: Repository에 공동 작업자가 초대되고 pull, commit, 큰 변경 공유 규칙이 정해집니다.
+prerequisites:
+  - GitHub repository가 있으며 access를 관리할 권한이 있습니다.
+  - 공동 작업자의 GitHub username 또는 email 주소를 알고 있습니다.
+completion: Repository access 설정에 공동 작업자가 나타나고 초대를 수락한 뒤 private repository를 열 수 있습니다.
+commonProblems:
+  - 다른 계정으로 초대하면 공동 작업자가 실제 사용하는 GitHub identity에 access가 생기지 않습니다.
+  - 관리 권한이 없는 사용자는 repository access 설정을 변경할 수 없습니다.
+verification:
+  status: needs-review
+  environment: GitHub web interface이며 screenshot은 desktop browser 경로입니다.
+  workflow: Repository access 설정과 공동 작업자 초대 수락.
+  lastVerified: 현재 GitHub UI walkthrough 대기 중.
+  support: Browser workflow는 운영체제와 무관하며 정확한 메뉴 위치는 바뀔 수 있습니다.
 toc:
   - id: 협업할-때-주의-사항
     label: 협업할 때 주의 사항

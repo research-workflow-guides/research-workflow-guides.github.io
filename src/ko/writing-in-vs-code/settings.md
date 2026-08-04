@@ -9,6 +9,20 @@ permalink: /ko/writing-in-vs-code/settings/
 translationKey: writing-settings
 eyebrow: 3단계
 lead: 설정은 작고 오래 버티는 것부터 시작합니다. 빌드, 미리보기, 자동 정리가 예측 가능하게 돌아가면 충분합니다.
+outcome: VS Code에서 LaTeX build, preview, cleanup 동작을 작고 예측 가능한 설정으로 실행합니다.
+prerequisites:
+  - 원고 프로젝트가 VS Code workspace로 열려 있습니다.
+  - LaTeX Workshop이 설치되어 활성화되어 있습니다.
+completion: 설정한 build와 preview 명령이 Command Palette에서 실행되고 예상한 PDF를 생성합니다.
+commonProblems:
+  - 사용자 설정과 workspace 설정이 서로 다른 값을 덮어쓸 수 있습니다.
+  - 복사한 설정이 오래된 LaTeX Workshop 명령 이름을 사용할 수 있습니다.
+verification:
+  status: needs-review
+  environment: Windows는 상세 경로이며 macOS와 Linux도 같은 VS Code settings model을 사용합니다.
+  workflow: Command Palette, 사용자와 workspace 설정, build, preview, cleanup 명령.
+  lastVerified: 현재 제품 기준 walkthrough 대기 중.
+  support: 세 운영체제가 같은 settings model을 사용하며 키보드 표시는 플랫폼마다 다릅니다.
 toc:
   - id: 명령-이름부터-익히기
     label: 명령 이름부터 익히기

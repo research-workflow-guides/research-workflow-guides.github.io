@@ -11,10 +11,6 @@ pageClass: page-home
       <p class="eyebrow">English guide</p>
       <h1 class="hero-h1">Write LaTeX research documents in VS Code and manage them with GitHub.</h1>
       <p class="lead">Follow one practical path from the first compile to predictable small-team collaboration.</p>
-      <div class="button-row workflow-home-actions">
-        <a class="button button-primary" href="/en/initial-setup/">Start from the beginning</a>
-        <a class="button button-secondary" href="#workflow-stages">Find the stage you need</a>
-      </div>
     </div>
   </section>
 
@@ -28,6 +24,22 @@ pageClass: page-home
       <div class="feature-grid route-map-grid">
         {% for section in navigation.sections %}
           <a class="feature-card panel card--{{ section.key }}" href="{{ section.url.en }}">
+            <div class="card-logo-row">
+              {% if section.key == "initial-setup" %}
+                <img class="card-logo card-logo--latex-full" src="/assets/images/LaTeX_project_logo_bird.svg.png" alt="LaTeX">
+                <img class="card-logo card-logo--latex-compact" src="/assets/images/latex-project-logo_288x288.png" alt="LaTeX">
+                <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
+              {% elif section.key == "writing-in-vs-code" %}
+                <img class="card-logo" src="/assets/images/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code">
+              {% elif section.key == "git-github" %}
+                <img class="card-logo" src="/assets/images/git-logo.png" alt="Git">
+                <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
+              {% elif section.key == "collaboration" %}
+                <img class="card-logo" src="/assets/images/git-logo.png" alt="Git">
+                <img class="card-logo" src="/assets/images/GitHub-Mark.png" alt="GitHub">
+                <img class="card-logo" src="/assets/images/overleaf-o-logo-primary.jpg" alt="Overleaf">
+              {% endif %}
+            </div>
             <p class="card-kicker">{{ section.kicker.en }}</p>
             <h3>{{ section.title.en }}</h3>
             <p>{{ section.summary.en }}</p>
@@ -39,18 +51,13 @@ pageClass: page-home
 
   <section class="editorial-band workflow-support-band">
     <div class="wrap workflow-support-grid">
-      <article class="hero-panel panel">
-        <p class="eyebrow">Already set up?</p>
-        <h2>Go straight to the work you need.</h2>
-        <p>Use the top navigation for a workflow stage, or search for optional and troubleshooting documents.</p>
-      </article>
       <a
         class="hero-panel panel discussions-card"
         href="https://github.com/research-workflow-guides/research-workflow-guides.github.io/discussions"
         aria-label="Open GitHub Discussions for research-workflow-guides/research-workflow-guides.github.io"
       >
         <p class="eyebrow">Discussions</p>
-        <h2>Questions, suggestions, and feedback</h2>
+        <h2 class="discussion-heading">Questions, suggestions, and feedback</h2>
         <p>Tell us when a step is unclear, outdated, or missing.</p>
       </a>
     </div>

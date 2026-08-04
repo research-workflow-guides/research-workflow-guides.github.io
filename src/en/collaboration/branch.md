@@ -4,11 +4,19 @@ title: Branch
 description: Use branches to separate work, switch contexts, and collaborate without disturbing the main line.
 lang: en
 section: collaboration
-order: 2
+order: 3
 permalink: /en/collaboration/branch/
 translationKey: git-branch
 eyebrow: Topic 2
 lead: Branches let collaborators work on separate lines of development before sharing changes back to the main project history.
+outcome: A named task branch exists locally and is the active branch for the next work unit.
+prerequisites:
+  - The repository is clean and the local main branch is up to date.
+  - A short branch name describing one task has been chosen.
+completion: "`git branch --show-current` prints the new task branch name and `git status` reports a clean starting state."
+commonProblems:
+  - Creating a branch from an outdated main branch carries old history into the task.
+  - A branch cannot be deleted while it is the currently checked-out branch.
 toc:
   - id: what-a-branch-means
     label: What a branch means

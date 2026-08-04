@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
-    "pagefind": "pagefind --site _site"
+    "pagefind": "pagefind --site _site",
+    "validate:content": "node scripts/validate-content-contract.js",
+    "validate:site": "node scripts/validate-generated-site.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

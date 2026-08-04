@@ -9,6 +9,20 @@ permalink: /en/git-github/connect-github/
 translationKey: git-connect-github
 eyebrow: Step 3
 lead: Open the VS Code terminal, set your global Git name and email, and confirm the settings before creating a repository.
+outcome: Git is configured for the intended GitHub identity and browser authentication can complete when requested.
+prerequisites:
+  - Git is installed and available in the VS Code terminal.
+  - A GitHub account is available; use the optional account guide if one must be created first.
+completion: The terminal shows the intended Git identity and an authenticated GitHub operation no longer requests unfinished sign-in.
+commonProblems:
+  - The Git commit identity and the GitHub login account can be different if the wrong browser session is active.
+  - Authentication prompts may open behind VS Code or in a browser window that is not signed in.
+verification:
+  status: needs-review
+  environment: Windows is the detailed VS Code screenshot path; macOS and Linux use the same Git identity and browser sign-in concepts.
+  workflow: VS Code terminal, Git identity configuration, and GitHub browser authentication.
+  lastVerified: Pending a current-product walkthrough.
+  support: All three operating systems are supported; terminal shortcuts and credential storage differ by platform.
 toc:
   - id: open-the-terminal
     label: Open the terminal

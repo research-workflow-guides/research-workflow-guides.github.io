@@ -1,9 +1,10 @@
 ---
 layout: layouts/base.njk
 title: Collaborate
-description: English category home for collaboration workflows.
+description: Use branches and pull requests for predictable small-team collaboration.
 lang: en
 pageClass: page-section
+permalink: /en/collaboration/
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
@@ -18,60 +19,17 @@ pageClass: page-section
       <div>
         <p class="eyebrow">Step 4</p>
         <h1>Collaborate</h1>
-        <p class="lead">Move here once the basic Git and GitHub workflow is stable.</p>
+        <p class="lead">Invite collaborators, separate work on a branch, review it in a pull request, and merge it into the shared history.</p>
       </div>
     </section>
 
-    <section id="collaboration" class="doc-section">
-      <h2>Platforms</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in grouped.collaboration %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            {% if doc.status == "optional" %}
-              <p class="card-kicker">Optional</p>
-              {% if doc.logo %}
-                <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
-              {% else %}
-                <h3>{{ doc.title }}</h3>
-              {% endif %}
-            {% else %}
-              <p class="card-kicker">Topic {{ loop.index }}</p>
-              {% if doc.logo %}
-                <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
-              {% else %}
-                <h3>{{ doc.title }}</h3>
-              {% endif %}
-            {% endif %}
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
+    {% include "components/document-groups.njk" %}
 
-    <section id="git-for-collaboration" class="doc-section">
-      <h2>Git for collaboration</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in grouped["git-for-collaboration"] %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            {% if doc.status == "optional" %}
-              <p class="card-kicker">Optional</p>
-              {% if doc.logo %}
-                <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
-              {% else %}
-                <h3>{{ doc.title }}</h3>
-              {% endif %}
-            {% else %}
-              <p class="card-kicker">Topic {{ doc.order }}</p>
-              {% if doc.logo %}
-                <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
-              {% else %}
-                <h3>{{ doc.title }}</h3>
-              {% endif %}
-            {% endif %}
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
+    <section class="callout-card">
+      <p class="eyebrow">Workflow completion</p>
+      <h2>Confirm the shared workflow</h2>
+      <p>The guidebook workflow is complete when a collaborator's branch has been reviewed, merged, and pulled into the local main branch.</p>
+      <a class="text-link" href="/en/">Return to the English workflow</a>
     </section>
   </article>
 </main>

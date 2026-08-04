@@ -1,9 +1,10 @@
 ---
 layout: layouts/base.njk
 title: 함께 작업하기
-description: 협업 워크플로우를 위한 한국어 카테고리 홈.
+description: branch와 pull request로 예측 가능한 소규모 팀 협업을 수행합니다.
 lang: ko
 pageClass: page-section
+permalink: /ko/collaboration/
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
@@ -18,60 +19,17 @@ pageClass: page-section
       <div>
         <p class="eyebrow">4단계</p>
         <h1>함께 작업하기</h1>
-        <p class="lead">기본 Git과 GitHub 흐름이 안정된 뒤 여기로 넘어옵니다.</p>
+        <p class="lead">공동 작업자를 초대하고 branch에서 작업한 뒤 pull request로 검토하고 shared history에 merge합니다.</p>
       </div>
     </section>
 
-    <section id="collaboration" class="doc-section">
-      <h2>플랫폼</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in grouped.collaboration %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            {% if doc.status == "optional" %}
-              <p class="card-kicker">선택</p>
-              {% if doc.logo %}
-                <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
-              {% else %}
-                <h3>{{ doc.title }}</h3>
-              {% endif %}
-            {% else %}
-              <p class="card-kicker">주제 {{ loop.index }}</p>
-              {% if doc.logo %}
-                <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
-              {% else %}
-                <h3>{{ doc.title }}</h3>
-              {% endif %}
-            {% endif %}
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
+    {% include "components/document-groups.njk" %}
 
-    <section id="git-for-collaboration" class="doc-section">
-      <h2>공동 작업을 위한 Git</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in grouped["git-for-collaboration"] %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            {% if doc.status == "optional" %}
-              <p class="card-kicker">선택</p>
-              {% if doc.logo %}
-                <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
-              {% else %}
-                <h3>{{ doc.title }}</h3>
-              {% endif %}
-            {% else %}
-              <p class="card-kicker">주제 {{ doc.order }}</p>
-              {% if doc.logo %}
-                <img class="feature-card-logo" src="{{ doc.logo }}" alt="{{ doc.title }}">
-              {% else %}
-                <h3>{{ doc.title }}</h3>
-              {% endif %}
-            {% endif %}
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
+    <section class="callout-card">
+      <p class="eyebrow">전체 흐름 완료 확인</p>
+      <h2>공동 작업 흐름 확인</h2>
+      <p>공동 작업자의 branch를 검토하고 merge한 뒤 로컬 main에서 pull해 같은 이력을 확인하면 가이드의 전체 흐름을 완료한 것입니다.</p>
+      <a class="text-link" href="/ko/">한국어 작업 흐름으로 돌아가기</a>
     </section>
   </article>
 </main>

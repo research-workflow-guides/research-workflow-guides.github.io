@@ -9,6 +9,20 @@ permalink: /en/collaboration/collaboration/
 translationKey: git-collaboration
 eyebrow: Topic 1
 lead: Small-team collaboration works best when the repository rhythm is boring, explicit, and easy to recover from.
+outcome: The repository has an invited collaborator and a shared rule for pulling, committing, and communicating large changes.
+prerequisites:
+  - A GitHub repository exists and you have permission to manage access.
+  - The collaborator's GitHub username or email address is known.
+completion: The collaborator appears in repository access settings and can open the private repository after accepting the invitation.
+commonProblems:
+  - An invitation sent to the wrong account will not grant access to the collaborator's active GitHub identity.
+  - Repository settings are unavailable to users without administration permission.
+verification:
+  status: needs-review
+  environment: GitHub web interface; screenshots document a desktop browser path.
+  workflow: Repository access settings and collaborator invitation acceptance.
+  lastVerified: Pending a current GitHub UI walkthrough.
+  support: Browser workflow is platform-independent; exact menu placement may change.
 toc:
   - id: collaboration-guidelines
     label: Collaboration Guidelines

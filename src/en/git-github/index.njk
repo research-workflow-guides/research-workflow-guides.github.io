@@ -1,9 +1,10 @@
 ---
 layout: layouts/base.njk
 title: Manage with GitHub
-description: English category home for Git and GitHub workflows.
+description: Record project changes with Git and keep local and GitHub history aligned.
 lang: en
 pageClass: page-section
+permalink: /en/git-github/
 ---
 {% set pageUi = canonical.pageUi[page.url] %}
 {% set breadcrumbs = pageUi.breadcrumbs %}
@@ -18,54 +19,17 @@ pageClass: page-section
       <div>
         <p class="eyebrow">Step 3</p>
         <h1>Manage with GitHub</h1>
-        <p class="lead">Start here once your project template compiles locally.</p>
+        <p class="lead">Prepare Git, connect GitHub, create or clone a repository, then repeat the status, commit, pull, and push loop.</p>
       </div>
     </section>
 
-    <section id="preparation" class="doc-section">
-      <h2>Preparation</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in grouped.preparation %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Step {{ loop.index }}</p>
-            <h3>{{ doc.title }}</h3>
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section id="first-github-workflow" class="doc-section">
-      <h2>First GitHub workflow</h2>
-      <div class="feature-grid feature-grid-compact">
-        {% for doc in grouped["first-github-workflow"] %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">Step {{ loop.index + 3 }}</p>
-            <h3>{{ doc.title }}</h3>
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section id="daily-workflow" class="doc-section">
-      <h2>Daily workflow</h2>
-      <div class="feature-grid feature-grid-compact feature-grid-equal-cards">
-        {% for doc in grouped["daily-workflow"] %}
-          <a class="feature-card panel" href="{{ doc.url }}">
-            <p class="card-kicker">{% if doc.status == "optional" %}Optional{% else %}Topic {{ loop.index }}{% endif %}</p>
-            <h3>{{ doc.title }}</h3>
-            <p>{{ doc.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
+    {% include "components/document-groups.njk" %}
 
     <section class="callout-card">
-      <p class="eyebrow">Next</p>
-      <h2>Then collaborate with the team</h2>
-      <p>Once daily Git workflows are stable, continue to shared repository collaboration.</p>
-      <a class="text-link" href="/en/collaboration/">Go to Collaborate</a>
+      <p class="eyebrow">Stage completion</p>
+      <h2>Confirm local and remote history</h2>
+      <p>You are ready to continue when a local commit is visible on GitHub and a clean pull reports that your branch is up to date.</p>
+      <a class="text-link" href="/en/collaboration/">Continue to Collaborate</a>
     </section>
   </article>
 </main>

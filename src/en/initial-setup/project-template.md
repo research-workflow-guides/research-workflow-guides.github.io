@@ -9,6 +9,20 @@ permalink: /en/initial-setup/project-template/
 translationKey: initial-setup-project-template
 eyebrow: Step 3
 lead: Download the starter project.
+outcome: The starter project is extracted, opened as a folder, and compiled into a PDF.
+prerequisites:
+  - LaTeX, VS Code, and LaTeX Workshop are installed.
+  - The seed-documents ZIP archive can be downloaded from GitHub.
+completion: The starter project builds without errors and its PDF opens in the VS Code preview.
+commonProblems:
+  - Opening the ZIP preview instead of the extracted project folder prevents a normal workspace build.
+  - The first build may pause while MiKTeX installs a missing package.
+verification:
+  status: needs-review
+  environment: Windows is the detailed screenshot path; macOS and Linux use the same repository and build result.
+  workflow: GitHub ZIP download, project extraction, VS Code folder opening, and first PDF build.
+  lastVerified: Pending a current-product walkthrough.
+  support: Windows detailed; macOS and Linux supported by the same file and build checks.
 toc:
   - id: download-the-template
     label: Download the template

@@ -1,79 +1,68 @@
 ---
 layout: layouts/doc.njk
 title: Merge
-description: Combine a finished branch back into main when the separate work is ready.
+description: Merge an approved Pull Request into main and synchronize the local repository.
 lang: en
 section: collaboration
-order: 3
+order: 5
 permalink: /en/collaboration/merge/
 translationKey: git-merge
-eyebrow: Topic 3
-lead: Merging brings work from one branch into another branch, usually from a task branch back into main.
+eyebrow: Topic 4
+lead: Merge the reviewed task branch through its Pull Request, then bring the resulting main history back to your local repository.
+outcome: The approved Pull Request is merged into main on GitHub and the local main branch is synchronized with it.
+prerequisites:
+  - The Pull Request has no unresolved review requests or failing required checks.
+  - The base branch and merge method have been confirmed before merging.
+completion: GitHub marks the Pull Request as merged, and local main is clean and up to date after pulling.
+commonProblems:
+  - Merging before review is complete bypasses the collaboration decision recorded in the Pull Request.
+  - Selecting an unintended merge method can produce a history shape that differs from the repository policy.
 toc:
   - id: what-a-merge-means
     label: What a merge means
-  - id: prepare-the-branches
-    label: Prepare the branches
-  - id: merge-into-main
-    label: Merge into main
-  - id: push-the-merge
-    label: Push the merge
-  - id: pull-from-different-branches
-    label: Pull from different branches
+  - id: confirm-the-pull-request-is-ready
+    label: Confirm the Pull Request is ready
+  - id: merge-the-approved-pull-request
+    label: Merge the approved Pull Request
+  - id: update-local-main
+    label: Update local main
+  - id: bring-main-into-a-task-branch
+    label: Bring main into a task branch
 tags:
   - doc
 ---
 ## What a merge means
 
-A merge combines the commit history from one branch into another branch. In a common workflow, you create a separate branch for a task, finish the work there, and then merge that branch back into `main`.
+A merge combines the commit history from one branch into another branch. In this core workflow, the task branch enters `main` through the reviewed Pull Request created in the previous document.
 
-Merging does not mean copying files by hand. Git compares the branch histories and brings the selected changes into the branch you are currently using.
+Merging does not mean copying files by hand. Git compares branch histories, and GitHub records the review decision and the merge result on the Pull Request.
 
-Use a merge when:
+The same Git operation can also be run directly in a local repository. Direct local merging can be useful for solo work, but it is not the ordered collaboration path because it bypasses the Pull Request review step.
 
-- the branch work is finished
-- you want the changes to become part of `main`
-- you are working alone or the team has agreed that the branch is ready
+## Confirm the Pull Request is ready
 
-## Prepare the branches
+Return to the Pull Request and check the base and compare branches one more time. The base should normally be `main`, and the compare branch should contain the task work.
 
-Before merging, commit or stash your current changes. The merge should start from a clean working state.
+Confirm that requested changes have been addressed, required approvals are present, and required checks have passed. Read the final file diff if commits were added after the last review.
 
-Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then move to the branch that should receive the finished work:
+## Merge the approved Pull Request
+
+Use the merge method allowed by the repository. GitHub may offer a merge commit, squash merge, or rebase merge. If the team has a documented policy, follow it rather than choosing based only on the shortest button label.
+
+Confirm the merge only after GitHub reports that the Pull Request is ready. When the operation finishes, GitHub marks the PR as merged and `main` contains the reviewed changes. Delete the remote task branch only after confirming that the merge completed successfully.
+
+## Update local main
+
+The merge happened on GitHub, so update the local repository before starting new work. Open a terminal, switch to `main`, and pull the merged history.
 
 ```shell
 git switch main
-```
-
-Then download the latest version of `main`:
-
-```shell
 git pull
 ```
 
-## Merge into main
+Run `git status` and, when useful, `git log --oneline --graph` to confirm that local `main` is clean, up to date, and contains the merged work.
 
-Merge the finished branch into the branch you are currently using:
-
-```shell
-git merge draft-section
-```
-
-In this example, `draft-section` is the branch that contains the finished work. `main` is the branch receiving that work.
-
-If Git can combine the changes automatically, the merge will finish immediately. If the same part of a file changed on both branches, Git may stop and ask you to resolve a conflict.
-
-## Push the merge
-
-After the merge succeeds, upload the updated `main` branch to GitHub:
-
-```shell
-git push origin main
-```
-
-If the merged branch is no longer needed, you can delete it after confirming that the important work is now on `main`.
-
-## Pull from different branches
+## Bring main into a task branch
 
 Sometimes you are working on one branch, such as `new-contents`, but you need to bring in the latest work from `main`. In that case, first make sure you are on the branch that should receive the changes.
 

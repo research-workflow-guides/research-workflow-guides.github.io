@@ -9,6 +9,20 @@ permalink: /en/git-github/clone-first-push/
 translationKey: git-clone-first-push
 eyebrow: Topic 3
 lead: Choose the clone workflow that matches where you are starting from. There are three ways to clone repositories in GitHub.
+outcome: The GitHub repository is cloned to a local project folder and opened in VS Code.
+prerequisites:
+  - Git and GitHub authentication are working.
+  - The destination parent folder is known and writable.
+completion: "`git status` runs inside the cloned folder and reports the expected branch without a repository error."
+commonProblems:
+  - Cloning into the wrong parent folder can create an unexpected nested project path.
+  - A browser or VS Code authentication prompt must finish before a private repository can be cloned.
+verification:
+  status: needs-review
+  environment: Windows is the detailed VS Code and GitHub Desktop path; command-line cloning also applies to macOS and Linux.
+  workflow: VS Code, GitHub Desktop, and command-line clone entry points.
+  lastVerified: Pending a current-product walkthrough.
+  support: Windows detailed; macOS supported through equivalent apps; Linux supported through Git and VS Code commands.
 toc:
   - id: first-way
     label: First way

@@ -9,6 +9,20 @@ permalink: /ko/git-github/clone-first-push/
 translationKey: git-clone-first-push
 eyebrow: 주제 3
 lead: 지금 시작하는 위치에 맞는 clone 방법을 고르세요. GitHub repository를 clone하는 방법은 세 가지가 있습니다.
+outcome: GitHub repository가 local project folder에 clone되어 VS Code에 열립니다.
+prerequisites:
+  - Git과 GitHub 인증이 정상적으로 동작합니다.
+  - Clone할 상위 folder의 위치와 쓰기 권한을 확인했습니다.
+completion: "Clone한 folder 안에서 `git status`가 repository 오류 없이 예상한 branch를 표시합니다."
+commonProblems:
+  - 잘못된 상위 folder에서 clone하면 예상하지 않은 중첩 project 경로가 생깁니다.
+  - Private repository를 clone하려면 browser 또는 VS Code 인증을 먼저 완료해야 합니다.
+verification:
+  status: needs-review
+  environment: Windows는 VS Code와 GitHub Desktop 상세 경로이며 command-line clone은 macOS와 Linux에도 적용됩니다.
+  workflow: VS Code, GitHub Desktop, command-line clone 시작 경로.
+  lastVerified: 현재 제품 기준 walkthrough 대기 중.
+  support: Windows 상세 지원, macOS는 대응 앱, Linux는 Git과 VS Code 명령으로 지원.
 toc:
   - id: 첫-번째-방법
     label: 첫 번째 방법

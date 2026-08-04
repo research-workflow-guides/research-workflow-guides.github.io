@@ -7,8 +7,22 @@ section: collaboration
 order: 4
 permalink: /ko/collaboration/pull-request/
 translationKey: git-pull-request
-eyebrow: 주제 4
+eyebrow: 주제 3
 lead: Pull Request는 branch 작업을 merge하기 전에 GitHub에서 검토하는 페이지입니다.
+outcome: Push된 task branch가 GitHub Pull Request에서 검토되고 main에 merge할 준비를 마칩니다.
+prerequisites:
+  - Task branch를 commit하고 GitHub에 push했습니다.
+  - Base branch와 요청할 reviewer를 정했습니다.
+completion: 해결되지 않은 review 요청과 실패한 check가 없고 GitHub가 Pull Request를 merge할 수 있다고 표시합니다.
+commonProblems:
+  - Base branch를 잘못 선택하면 Pull Request가 제안하는 merge 대상이 달라집니다.
+  - Review 후 새 commit을 추가하면 merge 전에 다시 review가 필요할 수 있습니다.
+verification:
+  status: needs-review
+  environment: GitHub web interface이며 screenshot은 desktop browser 경로입니다.
+  workflow: Pull Request 생성, review, merge와 local main 갱신.
+  lastVerified: 현재 GitHub UI walkthrough 대기 중.
+  support: Browser workflow는 운영체제와 무관하며 GitHub control 위치는 바뀔 수 있습니다.
 toc:
   - id: pull-request의-의미
     label: Pull Request의 의미
@@ -18,8 +32,8 @@ toc:
     label: Pull Request 열기
   - id: pull-request-검토하기
     label: Pull Request 검토하기
-  - id: pull-request-merge하기
-    label: Pull Request merge하기
+  - id: pull-request를-merge할-준비하기
+    label: Pull Request를 merge할 준비하기
 tags:
   - doc
 ---
@@ -85,17 +99,10 @@ git push
 
 같은 branch에 새 commit을 push하면 Pull Request는 자동으로 업데이트됩니다.
 
-## Pull Request merge하기
+## Pull Request를 merge할 준비하기
 
-Review가 끝나고 branch가 준비되면 GitHub에서 Pull Request를 merge합니다. PR이 merge되면 `main`에 branch 작업이 포함됩니다.
+Merge하기 전에 요청된 수정 사항을 반영했는지, 필요한 reviewer가 승인했는지, 자동 check가 통과했는지 확인합니다. GitHub가 Pull Request를 merge할 수 있다고 표시해야 합니다.
 
-VS Code로 돌아와 local `main` branch를 업데이트합니다.
+이 시점에서는 Pull Request를 열린 상태로 둡니다. 다음 핵심 문서에서 승인된 PR을 merge하고 local `main`을 업데이트합니다.
 
-```shell
-git switch main
-git pull
-```
-
-Branch가 더 이상 필요하지 않다면 merge가 완료된 것을 확인한 뒤 삭제할 수 있습니다.
-
-Pull Request를 단순히 push하는 다른 방법처럼 다루지 마세요. PR의 핵심은 review입니다. Branch 방향을 확인하고, 파일 차이를 읽고, 변경 사항을 논의한 뒤, 작업이 준비되었을 때 merge하는 것이 목적입니다.
+Pull Request를 단순히 push하는 다른 방법처럼 다루지 마세요. PR의 핵심은 review입니다. Branch 방향을 확인하고, 파일 차이를 읽고, 변경 사항을 논의한 뒤, 작업이 `main`에 들어갈 준비가 되었는지 판단하는 것이 목적입니다.

@@ -21,9 +21,9 @@ tags:
 ---
 ## conflict의 의미
 
-Push가 무사히 이루어지려면 'GitHub에 업로드되어 있는 파일'과 '수정을 시작할 때 Local에 있던 파일'이 같아야 합니다.
+GitHub에 내 컴퓨터에 아직 없는 변경이 있으면 VS Code가 push를 멈추고 먼저 pull하라고 안내할 수 있습니다. Pull은 GitHub의 변경을 내 컴퓨터로 가져와 내가 작업한 내용과 합치는 과정입니다.
 
-그렇지 않은 경우에 push를 하면 충돌(conflict)이 발생합니다(아래 사진 참고). 이를 해결하는 방법을 배워보도록 하겠습니다.
+두 버전에서 같은 부분을 서로 다르게 수정해 Git이 자동으로 합치지 못하면 최종 내용을 직접 고르도록 요청하는데, 이것이 conflict입니다.
 
 <div class="doc-step-pair">
   <div>
@@ -33,6 +33,8 @@ Push가 무사히 이루어지려면 'GitHub에 업로드되어 있는 파일'�
 
   </figure>
 </div>
+
+Pull 전에 `git status`를 실행하세요. commit하지 않은 작업이 보이면 먼저 commit하거나 `git stash`로 잠시 보관합니다.
 
 'Cancel'을 클릭하고 Pull을 진행하세요.
 
@@ -69,7 +71,7 @@ Push가 무사히 이루어지려면 'GitHub에 업로드되어 있는 파일'�
       </tr>
       <tr style="background:#ffffff">
         <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Accept Both Changes</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">Local과 GitHub의 내용을 모두 받아들입니다. 가장 안전합니다.</td>
+        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">두 변경 내용을 모두 남깁니다. 어느 한쪽도 실수로 버리지 않으려면 먼저 이 선택지를 적용한 뒤, 작성자가 합쳐진 결과를 다시 검토하고 중복되거나 서로 맞지 않는 코드와 문장을 수정하는 과정이 가장 안전합니다.</td>
       </tr>
     </tbody>
   </table>
@@ -80,7 +82,7 @@ Push가 무사히 이루어지려면 'GitHub에 업로드되어 있는 파일'�
 
 </figure>
 
-예를 들어, 'Accept Both Changes'를 클릭하면 오른쪽과 같은 화면을 확인할 수 있습니다. 이제 컴파일(혹은 저장)을 실행하세요.
+예를 들어, 'Accept Both Changes'를 클릭하면 오른쪽과 같은 화면을 확인할 수 있습니다. 바로 compile하거나 저장하지 말고, 작성자가 합쳐진 코드와 문장을 다시 검토해 중복된 내용을 지우고 서로 맞지 않는 줄을 정리하세요. 의도한 최종 결과인지 확인한 뒤에 compile하거나 저장합니다.
 
 <figure class="image-frame">
   <img src="/assets/images/2.2.4-6.png" alt="Accept Both Changes가 강조된 VS Code conflict 화면">
@@ -91,6 +93,15 @@ Push가 무사히 이루어지려면 'GitHub에 업로드되어 있는 파일'�
   <img src="/assets/images/2.2.4-7.png" alt="두 conflict 변경 사항을 모두 반영한 뒤의 VS Code 화면">
 
 </figure>
+
+해결한 파일을 stage하기 전에 다음 명령을 실행하세요.
+
+```shell
+git status
+git diff
+```
+
+conflict marker가 남지 않았는지와 실제로 합쳐진 변경 내용을 확인하고 문서를 compile 또는 build하세요. 이 점검이 모두 끝난 뒤에만 stage와 commit을 진행합니다.
 
 ## merge 마무리
 

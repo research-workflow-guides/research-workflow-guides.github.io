@@ -9,6 +9,14 @@ permalink: /en/writing-in-vs-code/syntax/
 translationKey: writing-syntax
 eyebrow: Topic 2
 lead: Learn the LaTeX pattern first, then save the repeated typing as a VS Code snippet.
+outcome: The manuscript contains a compiled mathematical structure and a figure using the documented LaTeX patterns.
+prerequisites:
+  - The project builds successfully before the content change.
+  - The main `.tex` file is open in VS Code.
+completion: The PDF shows the new equation or theorem structure and the inserted figure without LaTeX errors.
+commonProblems:
+  - Unbalanced delimiters or braces stop the document from compiling.
+  - A figure path must be relative to the project and match the file name exactly.
 toc:
   - id: comparing-latex-and-json
     label: Comparing LaTeX and JSON

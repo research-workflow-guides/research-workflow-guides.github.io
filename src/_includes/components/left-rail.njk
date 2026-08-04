@@ -48,32 +48,10 @@
             </a>
 
             {% if sectionExpanded %}
-              {% if currentUrl == sectionUrl and toc and toc.length and section.key != "writing-in-vs-code" and section.key != "git-github" and section.key != "initial-setup" and section.key != "collaboration" %}
-                <ul class="rail-subtree rail-subtree-headings">
-                  {{ renderTocItems(toc) }}
-                </ul>
-              {% endif %}
-
-              {% if (section.key == "writing-in-vs-code" or section.key == "git-github" or section.key == "initial-setup" or section.key == "collaboration") and groupedSectionPages and groupedSectionPages.length %}
+              {% if groupedSectionPages and groupedSectionPages.length %}
                 <ul class="rail-subtree rail-subtree-groups">
                   {% for group in groupedSectionPages %}
-                    {% if section.key == "initial-setup" %}
-                      {% set groupAnchor = group.key %}
-                    {% elif section.key == "writing-in-vs-code" %}
-                      {% if group.key == "main-topics" %}
-                        {% set groupAnchor = "core-documents" %}
-                      {% elif group.key == "snippets" %}
-                        {% set groupAnchor = "snippets-documents" %}
-                      {% elif group.key == "reference" %}
-                        {% set groupAnchor = "reference-documents" %}
-                      {% elif group.key == "optional-topics" %}
-                        {% set groupAnchor = "optional-documents" %}
-                      {% else %}
-                        {% set groupAnchor = group.key %}
-                      {% endif %}
-                    {% else %}
-                      {% set groupAnchor = group.key %}
-                    {% endif %}
+                    {% set groupAnchor = group.key + "-documents" %}
                     <li class="rail-group">
                       <a class="rail-link rail-link-group" href="{{ sectionUrl }}#{{ groupAnchor }}">{{ group.label }}</a>
                       <ul class="rail-subtree rail-subtree-pages">

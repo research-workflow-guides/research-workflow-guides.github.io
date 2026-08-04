@@ -22,7 +22,7 @@
   {% set currentSection = currentPageUi.activeSection if currentPageUi else activeSection %}
   <body class="{{ pageClass or '' }}{% if currentSection %} section--{{ currentSection }}{% endif %}" data-page-lang="{{ lang or '' }}">
     {% set currentLangSwitch = currentPageUi.langSwitch if currentPageUi else langSwitch %}
-    <header class="site-header" data-pagefind-ignore="all">
+    <header class="site-header{% if isRootLanding %} site-header-root{% endif %}" data-pagefind-ignore="all">
       <div class="wrap site-header-inner">
         <a class="brand" href="/">{{ site.name }}</a>
 
@@ -39,7 +39,7 @@
         {% else %}
           <nav class="site-nav site-nav-root" aria-label="Primary">
             {% for language in navigation.languages %}
-              <a href="{{ language.url }}">{{ language.label }}</a>
+              <a class="lang-switch" href="{{ language.url }}">{{ language.label }}</a>
             {% endfor %}
           </nav>
         {% endif %}

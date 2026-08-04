@@ -9,6 +9,20 @@ permalink: /ko/git-github/git-installation/
 translationKey: git-git-installation
 eyebrow: 주제 1
 lead: 먼저 Git을 설치하고, 이후 commit에 계속 따라갈 이름과 이메일을 설정합니다.
+outcome: 새 터미널에서 Git을 실행하고 전역 commit 이름과 이메일을 확인할 수 있습니다.
+prerequisites:
+  - 소프트웨어 설치 또는 운영체제 package manager 사용 권한이 필요합니다.
+  - 향후 commit에 기록할 이름과 이메일 주소를 준비합니다.
+completion: "`git --version`이 성공하고 `git config --global --list`에 의도한 이름과 이메일이 나타납니다."
+commonProblems:
+  - 설치 전에 열어 둔 터미널에서는 새 `git` 명령을 인식하지 못할 수 있습니다.
+  - Commit 이메일은 GitHub 계정에서 허용된 주소 또는 no-reply 설정과 맞아야 합니다.
+verification:
+  status: needs-review
+  environment: Windows는 상세 installer 경로이며 macOS와 Linux는 공식 플랫폼 설치 방법을 사용합니다.
+  workflow: Git 설치, 전역 identity 설정, 터미널 확인.
+  lastVerified: 현재 제품 기준 walkthrough 대기 중.
+  support: Windows 상세 지원, macOS와 Linux는 공식 package 및 명령 확인 방식 지원.
 toc:
   - id: git-설치
     label: Git 설치
