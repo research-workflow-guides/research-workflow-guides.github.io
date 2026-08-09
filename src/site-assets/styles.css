@@ -133,6 +133,20 @@ body {
   font-family: "NanumSquareRound", "Noto Serif KR", serif;
 }
 
+.page-language-landing .language-card:lang(ko) {
+  font-family: "NanumSquareRound", "Noto Serif KR", serif;
+  word-break: keep-all;
+}
+
+.page-language-landing .language-card:lang(ko) h2 {
+  font-family: "NanumSquareRound", "Fraunces", serif;
+}
+
+.page-language-landing .language-card:lang(ko) .card-kicker {
+  font-family: "NanumSquareRound", "Noto Serif KR", serif;
+  letter-spacing: 0.03em;
+}
+
 img {
   display: block;
   max-width: 100%;

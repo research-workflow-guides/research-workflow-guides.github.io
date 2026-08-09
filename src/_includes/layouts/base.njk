@@ -36,12 +36,6 @@
               >{{ section.title[currentLang] }}</a>
             {% endfor %}
           </nav>
-        {% else %}
-          <nav class="site-nav site-nav-root" aria-label="Primary">
-            {% for language in navigation.languages %}
-              <a class="lang-switch" href="{{ language.url }}">{{ language.label }}</a>
-            {% endfor %}
-          </nav>
         {% endif %}
         {% if currentLang == "en" or currentLang == "ko" %}
           <div class="header-actions">
