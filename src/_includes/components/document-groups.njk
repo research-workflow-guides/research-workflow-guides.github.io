@@ -6,7 +6,9 @@
         <div>
           <h2>{{ classification.label[lang] }}</h2>
         </div>
-        <p class="subtle">{{ classification.summary[lang] }}</p>
+        {% if classification.summary %}
+          <p class="subtle">{{ classification.summary[lang] }}</p>
+        {% endif %}
       </div>
       <div class="feature-grid feature-grid-compact feature-grid-equal-cards">
         {% for doc in docs %}

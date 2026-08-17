@@ -4,10 +4,6 @@ const classificationDefinitions = [
     label: {
       en: "Core path",
       ko: "핵심 경로"
-    },
-    summary: {
-      en: "Follow these documents in order to complete this stage.",
-      ko: "이 문서들을 순서대로 따라 이 단계를 완료합니다."
     }
   },
   {
@@ -15,10 +11,6 @@ const classificationDefinitions = [
     label: {
       en: "Optional guides",
       ko: "선택 문서"
-    },
-    summary: {
-      en: "Open these guides when they match your tools or working style.",
-      ko: "사용하는 도구나 작업 방식에 필요할 때 선택해서 봅니다."
     }
   },
   {
