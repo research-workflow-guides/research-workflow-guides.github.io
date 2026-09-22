@@ -1,5 +1,7 @@
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const { siteRoot } = require("./scripts/output-paths");
+const enhanceImages = require("./scripts/enhance-images");
 
 function escapeHtml(value) {
   return value
@@ -106,6 +108,10 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/site-assets": "site-assets" });
   eleventyConfig.addPassthroughCopy({ assets: "assets" });
 
+  eleventyConfig.addTransform("accessible-image-previews", function (content) {
+    return this.page.outputPath?.endsWith(".html") ? enhanceImages(content) : content;
+  });
+
   eleventyConfig.addCollection("docs", function (collectionApi) {
     return collectionApi.getFilteredByTag("doc").sort((left, right) => {
       return (left.data.order || 0) - (right.data.order || 0);
@@ -142,7 +148,7 @@ module.exports = async function (eleventyConfig) {
       input: "src",
       includes: "_includes",
       data: "_data",
-      output: "_site"
+      output: siteRoot
     },
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk"

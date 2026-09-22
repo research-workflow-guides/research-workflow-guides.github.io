@@ -3,106 +3,37 @@
 {% set currentPageUi = canonical.pageUi[currentUrl] %}
 {% set currentLang = currentPageMeta.lang if currentPageMeta and currentPageMeta.lang != "root" else lang %}
 {% set currentSection = currentPageUi.activeSection if currentPageUi else activeSection %}
-{% set isLanguageHome = currentPageMeta and currentPageMeta.pageType == "language-home" %}
-{% set navigationLabel = "목차 열기" if currentLang == "ko" else "Open contents" %}
-{% macro renderTocItems(items) %}
-  {% for heading in items %}
-    <li>
-      <a class="rail-link rail-link-heading" href="#{{ heading.id }}">{{ heading.label }}</a>
-      {% if heading.children and heading.children.length %}
-        <ul class="rail-subtree rail-subtree-headings rail-subtree-heading-children">
-          {% for child in heading.children %}
-            <li><a class="rail-link rail-link-heading rail-link-heading-sub" href="#{{ child.id }}">{{ child.label }}</a></li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </li>
-  {% endfor %}
-{% endmacro %}
+{% set currentUi = ui[currentLang if currentLang == "ko" else "en"] %}
 <aside class="page-sidebar" data-pagefind-ignore="all">
-  <button
-    class="sidebar-toggle"
-    type="button"
-    aria-expanded="false"
-    aria-controls="page-navigation"
-    data-toc-toggle
-  >
-    {{ navigationLabel }}
-  </button>
-  <section id="page-navigation" class="sidebar-card sidebar-card-rail" data-toc-panel>
+  <div class="mobile-document-bar"><span>{{ title }}</span><button class="sidebar-toggle" type="button" aria-expanded="false" aria-controls="page-navigation" data-toc-toggle>{{ currentUi.openContents }} <span aria-hidden="true">⌄</span></button></div>
+  <nav id="page-navigation" class="sidebar-card-rail" aria-label="{{ currentUi.openContents }}" data-toc-panel data-open="false">
     <div class="sidebar-rail-scroll" data-toc-scroll>
-      <ul class="rail-tree">
-        {% for section in navigation.sections %}
-          {% set sectionUrl = section.url[currentLang] %}
-          {% set sectionPages = section.pages[currentLang] %}
-          {% set groupedSectionPages = section.groupedPages[currentLang] %}
-          {% set sectionExpanded = isLanguageHome or currentSection == section.key %}
-          {% set sectionCurrent = currentUrl == sectionUrl or currentSection == section.key %}
-          <li class="rail-section section--{{ section.key }}{% if sectionExpanded %} is-expanded{% endif %}">
-            <a
-              class="rail-link rail-link-section{% if sectionCurrent %} is-current{% endif %}"
-              href="{{ sectionUrl }}"
-              {% if currentUrl == sectionUrl %}aria-current="page"{% endif %}
-            >
-              {{ section.title[lang] }}
-            </a>
-
-            {% if sectionExpanded %}
-              {% if groupedSectionPages and groupedSectionPages.length %}
-                <ul class="rail-subtree rail-subtree-groups">
-                  {% for group in groupedSectionPages %}
-                    {% set groupAnchor = group.key + "-documents" %}
-                    <li class="rail-group">
-                      <a class="rail-link rail-link-group" href="{{ sectionUrl }}#{{ groupAnchor }}">{{ group.label }}</a>
-                      <ul class="rail-subtree rail-subtree-pages">
-                        {% for item in group.pages %}
-                          {% set itemCurrent = currentUrl == item.url %}
-                          <li class="rail-page-item{% if itemCurrent %} is-current{% endif %}">
-                            <a
-                              class="rail-link rail-link-page{% if itemCurrent %} is-current{% endif %}"
-                              href="{{ item.url }}"
-                              {% if itemCurrent %}aria-current="page"{% endif %}
-                            >
-                              {{ title if itemCurrent else item.title }}
-                            </a>
-
-                            {% if itemCurrent and toc and toc.length %}
-                              <ul class="rail-subtree rail-subtree-headings">
-                                {{ renderTocItems(toc) }}
-                              </ul>
-                            {% endif %}
-                          </li>
-                        {% endfor %}
-                      </ul>
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% elif sectionPages and sectionPages.length %}
-                <ul class="rail-subtree rail-subtree-pages">
-                  {% for item in sectionPages %}
-                    {% set itemCurrent = currentUrl == item.url %}
-                    <li class="rail-page-item{% if itemCurrent %} is-current{% endif %}">
-                      <a
-                        class="rail-link rail-link-page{% if itemCurrent %} is-current{% endif %}"
-                        href="{{ item.url }}"
-                        {% if itemCurrent %}aria-current="page"{% endif %}
-                      >
-                        {{ title if itemCurrent else item.title }}
-                      </a>
-
-                      {% if itemCurrent and toc and toc.length %}
-                        <ul class="rail-subtree rail-subtree-headings">
-                          {{ renderTocItems(toc) }}
-                        </ul>
-                      {% endif %}
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            {% endif %}
-          </li>
+      {% for section in navigation.sections %}
+        {% if currentSection == section.key %}
+          <a class="rail-section-title" href="{{ section.url[currentLang] }}">{{ section.title[currentLang] }}</a>
+          {% for group in section.groupedPages[currentLang] %}
+            <section class="rail-group">
+              {% if group.key != "core" %}<a class="rail-link-group" href="{{ section.url[currentLang] }}#{{ group.key }}-documents">{{ group.label }}</a>{% endif %}
+              <ul class="rail-pages">
+              {% for item in group.pages %}
+                <li><a class="rail-link rail-link-page{% if currentUrl == item.url %} is-current{% endif %}" href="{{ item.url }}"{% if currentUrl == item.url %} aria-current="page"{% endif %}>{{ title if currentUrl == item.url else item.title }}</a></li>
+              {% endfor %}
+              </ul>
+            </section>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+      {% if toc and toc.length %}
+        <section class="rail-local"><h2>{{ currentUi.contents }}</h2><ol class="rail-headings">
+        {% for heading in toc %}
+          <li><a class="rail-link rail-link-heading" href="#{{ heading.id }}"><span class="rail-number" aria-hidden="true">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span><span>{{ heading.label }}</span></a>
+          {% if heading.children and heading.children.length %}<ul class="rail-children">
+            {% for child in heading.children %}<li><a class="rail-link rail-link-heading rail-link-heading-sub" href="#{{ child.id }}">{{ child.label }}</a></li>{% endfor %}
+          </ul>{% endif %}</li>
         {% endfor %}
-      </ul>
+        </ol></section>
+      {% endif %}
+      <a class="rail-feedback" href="https://github.com/research-workflow-guides/research-workflow-guides.github.io/discussions">{{ currentUi.feedback }} <span aria-hidden="true">↗</span></a>
     </div>
-  </section>
+  </nav>
 </aside>

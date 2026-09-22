@@ -31,21 +31,30 @@ tags:
 ---
 ## Download the template
 
+<div class="doc-step-pair">
+  <div class="doc-step-copy">
+    <ol>
+      <li>
+        <p>Open the seed-documents repository in GitHub.</p>
+        <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">seed-documents repository</a></p>
+      </li>
+      <li>Download the ZIP archive from GitHub by clicking the following button.</li>
+    </ol>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/github-code-btn.svg" alt="GitHub Code button">
+  </figure>
+</div>
 
-1. Open the seed-documents repository in GitHub.
-
-   <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">seed-documents repository</a></p>
-
-2. Download the ZIP archive from GitHub by clicking the following button.
-
-   <figure class="image-frame">
-     <img src="/assets/images/github-code-btn.svg" alt="GitHub Code button">
-   </figure>
-
-3. Extract the archive and keep the folder intact — you will open the entire project folder in VS Code in the next part.
-
-<figure class="image-frame">
-  <img src="/assets/images/1.5-1.png" alt="Starter repository on GitHub">
-</figure>
+<div class="doc-step-pair">
+  <div class="doc-step-copy">
+    <ol start="3">
+      <li>Extract the archive and keep the folder intact — you will open the entire project folder in VS Code in the next part.</li>
+    </ol>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.5-1.png" alt="Starter repository on GitHub">
+  </figure>
+</div>
 
 Confirm that the archive downloaded cleanly and the extracted folder contains the project files intact.

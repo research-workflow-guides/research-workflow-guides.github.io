@@ -31,21 +31,30 @@ tags:
 ---
 ## 템플릿 다운로드하기
 
+<div class="doc-step-pair">
+  <div class="doc-step-copy">
+    <ol>
+      <li>
+        <p>GitHub에서 seed-documents 리파지토리를 엽니다.</p>
+        <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">seed-documents 리파지토리</a></p>
+      </li>
+      <li>아래 버튼을 클릭해 ZIP archive를 다운로드합니다.</li>
+    </ol>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/github-code-btn.svg" alt="GitHub Code 버튼">
+  </figure>
+</div>
 
-1. GitHub에서 seed-documents 리파지토리를 엽니다.
-
-   <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">seed-documents 리파지토리</a></p>
-
-2. 아래 버튼을 클릭해 ZIP archive를 다운로드합니다.
-
-   <figure class="image-frame">
-     <img src="/assets/images/github-code-btn.svg" alt="GitHub Code 버튼">
-   </figure>
-
-3. 압축을 풀고 폴더 구조를 유지합니다 — 다음 파트에서 VS Code로 폴더 전체를 열게 됩니다.
-
-<figure class="image-frame">
-  <img src="/assets/images/1.5-1.png" alt="GitHub의 starter repository">
-</figure>
+<div class="doc-step-pair">
+  <div class="doc-step-copy">
+    <ol start="3">
+      <li>압축을 풀고 폴더 구조를 유지합니다 — 다음 파트에서 VS Code로 폴더 전체를 열게 됩니다.</li>
+    </ol>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.5-1.png" alt="GitHub의 starter repository">
+  </figure>
+</div>
 
 압축 파일이 정상적으로 내려받아졌고, 압축을 푼 폴더에 프로젝트 파일이 온전히 들어 있는지 확인합니다.

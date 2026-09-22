@@ -1,11 +1,13 @@
 const fs = require("node:fs");
 const path = require("node:path");
+const { parse } = require("node-html-parser");
+const { siteRoot: outputRoot } = require("./output-paths");
 
 const canonical = require("../src/_data/canonical");
 
-const outputRoot = path.join(__dirname, "..", "_site");
 const errors = [];
 let checkedReferences = 0;
+let checkedImagePreviews = 0;
 
 function assert(condition, message) {
   if (!condition) {
@@ -60,6 +62,7 @@ assert(fs.existsSync(outputRoot), "Generated site directory is missing. Run the 
 if (fs.existsSync(outputRoot)) {
   const files = walk(outputRoot);
   const htmlFiles = files.filter((file) => file.endsWith(".html"));
+  const documents = new Map();
 
   assert(htmlFiles.length === 71, `Expected 71 generated HTML files, found ${htmlFiles.length}.`);
   assert(!fs.existsSync(path.join(outputRoot, "en", "python")), "Generated English Python route exists.");
@@ -67,26 +70,49 @@ if (fs.existsSync(outputRoot)) {
 
   for (const htmlPath of htmlFiles) {
     const html = fs.readFileSync(htmlPath, "utf8");
-    const referencePattern = /\b(?:href|src)=["']([^"']+)["']/g;
+    const document = parse(html);
+    documents.set(htmlPath, document);
 
-    for (const match of html.matchAll(referencePattern)) {
-      const target = localTarget(match[1], htmlPath);
-      if (!target) {
-        continue;
+    for (const element of document.querySelectorAll("[href], [src]")) {
+      for (const attribute of ["href", "src"]) {
+        const reference = element.getAttribute(attribute);
+        const target = localTarget(reference, htmlPath);
+        if (!target) continue;
+        checkedReferences += 1;
+        assert(
+          fs.existsSync(target),
+          `${path.relative(outputRoot, htmlPath)}: missing internal target ${reference}`
+        );
       }
-      checkedReferences += 1;
-      assert(
-        fs.existsSync(target),
-        `${path.relative(outputRoot, htmlPath)}: missing internal target ${match[1]}`
-      );
+    }
+
+    for (const link of document.querySelectorAll(".prose .image-zoom-link")) {
+      const image = link.querySelector("img");
+      checkedImagePreviews += 1;
+      assert(link.tagName === "A", `${htmlPath}: image preview must preserve a native link.`);
+      assert(Boolean(image), `${htmlPath}: image preview has no image.`);
+      assert(link.hasAttribute("data-image-zoom"), `${htmlPath}: image preview hook is missing.`);
+      assert(Boolean(link.getAttribute("aria-label")), `${htmlPath}: image preview accessible label is missing.`);
+      assert(link.getAttribute("href") === image?.getAttribute("src"), `${htmlPath}: image preview must link to the original image.`);
+      assert(!link.querySelector("a"), `${htmlPath}: nested link in an image preview.`);
+    }
+
+    const needsReview = Boolean(document.querySelector(".verification-needs-review"));
+    for (const figure of document.querySelectorAll(".prose figure.image-frame")) {
+      assert(Boolean(figure.querySelector("a img")), `${htmlPath}: image lacks a no-JavaScript link.`);
+      if (needsReview) {
+        assert(Boolean(figure.querySelector(".image-review-note")), `${htmlPath}: screenshot review note is missing.`);
+      }
     }
   }
 
   for (const page of canonical.pages.filter((item) => item.pageType === "document")) {
     const generatedPath = path.join(outputRoot, page.url.slice(1), "index.html");
-    const html = fs.readFileSync(generatedPath, "utf8");
-    const hasContract = html.includes('class="workflow-contract"');
-    const hasCompletion = html.includes('class="workflow-check-block workflow-completion"');
+    const document = documents.get(generatedPath);
+    assert(Boolean(document), `${page.url}: generated canonical document is missing.`);
+    if (!document) continue;
+    const hasContract = Boolean(document.querySelector(".workflow-contract"));
+    const hasCompletion = Boolean(document.querySelector(".workflow-checks .workflow-completion"));
 
     if (page.status === "core") {
       assert(hasContract, `${page.url}: generated core contract is missing.`);
@@ -99,22 +125,36 @@ if (fs.existsSync(outputRoot)) {
   for (const section of canonical.sections) {
     for (const language of ["en", "ko"]) {
       const categoryPath = path.join(outputRoot, language, section.key, "index.html");
-      const html = fs.readFileSync(categoryPath, "utf8");
-      assert(html.includes('id="core-documents"'), `${language}/${section.key}: core group is missing.`);
+      const document = documents.get(categoryPath);
+      assert(Boolean(document), `${language}/${section.key}: generated category page is missing.`);
+      if (!document) continue;
+      assert(Boolean(document.querySelector("#core-documents")), `${language}/${section.key}: core group is missing.`);
       if (canonical.groupedDocs[language][section.key].optional.length) {
         assert(
-          html.includes('id="optional-documents"'),
+          Boolean(document.querySelector("#optional-documents")),
           `${language}/${section.key}: optional group is missing.`
         );
       }
       if (canonical.groupedDocs[language][section.key].troubleshooting.length) {
         assert(
-          html.includes('id="troubleshooting-documents"'),
+          Boolean(document.querySelector("#troubleshooting-documents")),
           `${language}/${section.key}: troubleshooting group is missing.`
         );
       }
     }
   }
+
+  const fontPath = path.join(outputRoot, "assets/fonts/pretendard/PretendardVariable.woff2");
+  const licensePath = path.join(outputRoot, "assets/fonts/pretendard/OFL.txt");
+  assert(fs.existsSync(fontPath), "Local Pretendard Variable font is missing.");
+  if (fs.existsSync(fontPath)) {
+    assert(fs.readFileSync(fontPath).subarray(0, 4).toString() === "wOF2", "Local Pretendard font is not a WOFF2 file.");
+  }
+  assert(fs.existsSync(licensePath), "Pretendard SIL Open Font License is missing.");
+  if (fs.existsSync(licensePath)) {
+    assert(fs.readFileSync(licensePath, "utf8").includes("SIL OPEN FONT LICENSE"), "Pretendard license text is invalid.");
+  }
+  assert(checkedImagePreviews > 0, "No accessible screenshot previews were generated.");
 
   const searchIndexPath = path.join(outputRoot, "search-index.json");
   assert(fs.existsSync(searchIndexPath), "Generated search-index.json is missing.");
@@ -141,4 +181,4 @@ if (errors.length) {
 }
 
 console.log("Generated site validation passed.");
-console.log(`HTML files: 71; search entries: 68; internal references checked: ${checkedReferences}.`);
+console.log(`HTML files: 71; search entries: 68; internal references checked: ${checkedReferences}; image previews: ${checkedImagePreviews}.`);

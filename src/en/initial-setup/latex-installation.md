@@ -43,7 +43,7 @@ tags:
 ## Download MiKTeX
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <div class="doc-action-row">
       <p>Download it from the MiKTeX website.</p>
       <a class="doc-action-link" href="https://miktex.org/download">Official MiKTeX downloads</a>
@@ -55,7 +55,7 @@ tags:
 </div>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>On the download page, choose the installer that matches your operating system.</p>
   </div>
   <figure class="image-frame">
@@ -76,7 +76,7 @@ Linux is supported, but setup details vary by distribution. Follow the **officia
 <p><a class="doc-action-link" href="https://miktex.org/howto/install-miktex-unx">MiKTeX Linux install docs</a></p>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>The installer itself is straightforward. The first real checkpoint is that the setup wizard reaches its completion screen without errors.</p>
   </div>
   <figure class="image-frame">
@@ -85,7 +85,7 @@ Linux is supported, but setup details vary by distribution. Follow the **officia
 </div>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>After setup, search for <code>latexmk</code> in MiKTeX Console and confirm that the package is available for installation.</p>
   </div>
   <figure class="image-frame">
@@ -94,7 +94,7 @@ Linux is supported, but setup details vary by distribution. Follow the **officia
 </div>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>If <code>latexmk</code> is missing, let MiKTeX install it and wait for the package operation to finish.</p>
   </div>
   <figure class="image-frame">
@@ -110,9 +110,16 @@ Linux is supported, but setup details vary by distribution. Follow the **officia
 
 For this guide, treat Windows as the default path. Install MiKTeX first, then **install Strawberry Perl as a required dependency** so later `latexmk`/`latexdiff` workflows do not fail because Perl is missing.
 
-<div class="doc-action-row">
-  <p>Open the official Strawberry Perl site and install it before running the checks.</p>
-  <a class="doc-action-link" href="https://strawberryperl.com/">Strawberry Perl</a>
+<div class="doc-step-pair">
+  <div class="doc-step-copy">
+    <div class="doc-action-row">
+      <p>Open the official Strawberry Perl site and install it before running the checks.</p>
+      <a class="doc-action-link" href="https://strawberryperl.com/">Strawberry Perl</a>
+    </div>
+  </div>
+  <figure class="image-frame">
+    <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl download page">
+  </figure>
 </div>
 
 After install, open a new terminal and verify:
@@ -122,10 +129,6 @@ perl --version
 where perl
 latexmk -v
 ```
-
-<figure class="image-frame">
-  <img src="/assets/images/1.1.3-6.png" alt="Strawberry Perl download page">
-</figure>
 
 ### macOS / Linux
 
@@ -144,7 +147,7 @@ If `perl` is not found, install a Perl runtime first, then rerun the checks.
 When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On Windows, the dialog can appear behind the editor or as a small taskbar preview — look for it before assuming the build has hung.
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>If a build seems to pause, look for the MiKTeX package-install prompt. On Windows, it can appear behind the editor or as a small taskbar preview.</p>
   </div>
   <figure class="image-frame">
@@ -153,7 +156,7 @@ When a build pauses mid-compile, MiKTeX is likely fetching a missing package. On
 </div>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>When the package dialog appears, allow MiKTeX to install the missing package so the build can continue.</p>
   </div>
   <figure class="image-frame">

@@ -35,16 +35,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Resolve output paths
+        id: paths
+        run: node scripts/output-paths.js github >> "$GITHUB_OUTPUT"
+
+      - name: Validate content contract
+        run: npm run validate:content
+
       - name: Build site
         run: npm run build
 
       - name: Build search index
         run: npm run pagefind
 
+      - name: Validate generated site
+        run: npm run validate:site
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: ${{ steps.paths.outputs.site }}
 
   deploy:
     environment:
