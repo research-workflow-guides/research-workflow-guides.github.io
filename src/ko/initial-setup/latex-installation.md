@@ -8,7 +8,7 @@ order: 1
 permalink: /ko/initial-setup/latex-installation/
 translationKey: initial-setup-latex-installation
 eyebrow: 1단계
-lead: MiKTeX를 설치하고, 필요 시 패키지가 자동으로 설치되도록 설정한 뒤, 기본 도구 체인이 준비됐는지 확인합니다.
+lead: LaTeX 문서를 PDF로 만들기 위해 MiKTeX를 설치합니다. 문서에 필요한 패키지를 자동으로 설치하도록 설정하고, 빌드에 사용하는 Perl과 latexmk가 터미널에서 실행되는지 확인합니다.
 outcome: MiKTeX, Perl, latexmk가 설치되어 새 터미널에서 실행됩니다.
 prerequisites:
   - 컴퓨터에 소프트웨어를 설치할 권한이 필요합니다.
@@ -45,7 +45,7 @@ tags:
 <div class="doc-step-pair">
   <div class="doc-step-copy">
     <div class="doc-action-row">
-      <p>먼저 MiKTeX 공식 홈페이지에 들어가서 올바른 배포판 사이트에 와 있는지부터 확인합니다.</p>
+      <p>아래 ‘MiKTeX 공식 다운로드’ 링크를 열어 다운로드 페이지로 이동합니다.</p>
       <a class="doc-action-link" href="https://miktex.org/download">MiKTeX 공식 다운로드</a>
     </div>
   </div>
@@ -56,7 +56,7 @@ tags:
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
-    <p>그 다음 다운로드 페이지로 이동해서 현재 운영체제에 맞는 설치 파일을 고릅니다.</p>
+    <p>다운로드 페이지에서 사용 중인 운영체제를 선택하고, 해당 운영체제의 설치 안내를 따릅니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-2.png" alt="MiKTeX 다운로드 페이지">
@@ -65,19 +65,19 @@ tags:
 
 ## MiKTeX 설치
 
-1. 운영체제에 맞는 MiKTeX 설치 파일을 다운로드합니다.
-2. 일반적인 설치 과정을 마친 뒤 MiKTeX Console을 한 번 실행합니다.
-3. 업데이트를 먼저 적용해 패키지 데이터베이스를 최신 상태로 맞춥니다.
-4. package-on-demand 옵션은 켜 둡니다.
-5. `latexmk`가 보이지 않으면 MiKTeX Console에서 설치한 뒤 진행합니다.
+1. 다운로드한 MiKTeX 설치 파일을 실행하고, 화면의 안내에 따라 설치를 완료합니다.
+2. 설치가 끝나면 MiKTeX Console을 엽니다. 이 프로그램에서 MiKTeX를 업데이트하고 LaTeX 패키지를 관리할 수 있습니다.
+3. MiKTeX Console에서 사용 가능한 업데이트를 확인하고 설치합니다. 업데이트가 완료되면 다음 단계로 진행합니다.
+4. 문서를 컴파일할 때 필요한 LaTeX 패키지가 없으면 자동으로 설치하도록 설정합니다. 자세한 설정 방법은 아래 ‘패키지 자동 설치’ 절에서 설명합니다.
+5. MiKTeX Console에서 `latexmk`를 검색하고 설치 여부를 확인합니다. 설치되어 있지 않으면 해당 패키지를 설치합니다.
 
-Linux는 지원되지만 배포판별 설치 방식 차이가 큽니다. 따라서 배포판별 세부 단계는 MiKTeX **공식 Linux 설치 문서**를 기준으로 진행하는 것이 가장 안전합니다.
+Linux에서는 배포판에 따라 설치 방법이 다릅니다. 아래 ‘MiKTeX Linux 설치 문서’에서 사용 중인 배포판의 안내에 따라 설치합니다.
 
 <p><a class="doc-action-link" href="https://miktex.org/howto/install-miktex-unx">MiKTeX Linux 설치 문서</a></p>
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
-    <p>설치 프로그램 자체는 일반적인 흐름으로 진행하면 충분합니다. 먼저 setup wizard가 오류 없이 끝나는지 확인하는 것이 중요합니다.</p>
+    <p>설치 프로그램에 완료 화면이 표시되는지 확인합니다. 오류가 발생했다면 오류 메시지를 확인하고 해결한 뒤 다음 단계로 진행합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-3.png" alt="MiKTeX setup wizard 완료 화면">
