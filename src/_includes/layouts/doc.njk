@@ -9,105 +9,48 @@ pageClass: page-doc
 {% set prevPage = currentPageUi.prevPage if currentPageUi else prevPage %}
 {% set nextPage = currentPageUi.nextPage if currentPageUi else nextPage %}
 {% set currentUi = ui[lang if lang == "ko" else "en"] %}
-<main class="content-shell">
+<main id="main-content" class="content-shell" tabindex="-1">
   {% include "components/left-rail.njk" %}
-
-  <article class="doc-content panel" data-pagefind-body>
+  <article class="doc-content" data-pagefind-body>
     {% include "components/breadcrumbs.njk" %}
-
-    <section class="doc-hero{% if not meta %} doc-hero-simple{% endif %}">
-      <div>
-        {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
-        <h1>{{ title }}</h1>
-        {% if lead %}<p class="lead">{{ lead | safe }}</p>{% endif %}
-      </div>
-      {% if meta %}
-        <dl class="meta-list">
-          {% for item in meta %}
-            <div>
-              <dt>{{ item.label }}</dt>
-              <dd>{{ item.value }}</dd>
-            </div>
-          {% endfor %}
-        </dl>
-      {% endif %}
-    </section>
-
+    <header class="doc-hero">
+      {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
+      <h1>{{ title }}</h1>
+      {% if lead %}<p class="lead">{{ lead | safe }}</p>{% endif %}
+      {% if meta %}<dl class="meta-list">{% for item in meta %}<div><dt>{{ item.label }}</dt><dd>{{ item.value }}</dd></div>{% endfor %}</dl>{% endif %}
+    </header>
     {% if isCoreDocument %}
       <section class="workflow-contract" aria-label="{{ currentUi.outcome }}">
-        <div class="workflow-contract-block">
-          <p class="eyebrow">{{ currentUi.outcome }}</p>
-          <p>{{ outcome | inlineMarkdown | safe }}</p>
-        </div>
-        <div class="workflow-contract-block">
-          <p class="eyebrow">{{ currentUi.prerequisites }}</p>
-          <ul>
-            {% for prerequisite in prerequisites %}
-              <li>{{ prerequisite | inlineMarkdown | safe }}</li>
-            {% endfor %}
-          </ul>
-        </div>
+        <p class="workflow-outcome"><span>{{ currentUi.outcome }}</span> {{ outcome | inlineMarkdown | safe }}</p>
+        <details class="prerequisites"><summary>{{ currentUi.prerequisites }} <span class="detail-count">{{ prerequisites.length }}</span></summary>
+          <ul>{% for prerequisite in prerequisites %}<li>{{ prerequisite | inlineMarkdown | safe }}</li>{% endfor %}</ul>
+        </details>
       </section>
     {% endif %}
-
     {% if verification %}
-      <section class="verification-card verification-{{ verification.status }}">
-        <h2>{{ currentUi.verification }}</h2>
+      <details class="verification-card verification-{{ verification.status }}" data-verification-status="{{ verification.status }}">
+        <summary><span>{{ currentUi.supportDetails }}</span> <span class="verification-status">{{ currentUi.needsReview if verification.status == "needs-review" else currentUi.verified }}</span></summary>
         <dl class="verification-list">
-          <div>
-            <dt>{{ currentUi.verificationStatus }}</dt>
-            <dd>
-              {% if verification.status == "needs-review" %}
-                {{ "재검증 필요" if lang == "ko" else "Needs review" }}
-              {% else %}
-                {{ "검증 완료" if lang == "ko" else "Verified" }}
-              {% endif %}
-            </dd>
-          </div>
+          <div><dt>{{ currentUi.verificationStatus }}</dt><dd>{{ currentUi.needsReview if verification.status == "needs-review" else currentUi.verified }}</dd></div>
           <div><dt>{{ currentUi.verificationEnvironment }}</dt><dd>{{ verification.environment }}</dd></div>
           <div><dt>{{ currentUi.verificationWorkflow }}</dt><dd>{{ verification.workflow }}</dd></div>
           <div><dt>{{ currentUi.verificationDate }}</dt><dd>{{ verification.lastVerified }}</dd></div>
           <div><dt>{{ currentUi.verificationSupport }}</dt><dd>{{ verification.support }}</dd></div>
         </dl>
-      </section>
+      </details>
     {% endif %}
-
-    <div class="prose">
-      {{ content | safe }}
-    </div>
-
+    <div class="prose">{{ content | safe }}</div>
     {% if isCoreDocument %}
       <section class="workflow-checks">
-        <div class="workflow-check-block">
-          <p class="eyebrow">{{ currentUi.commonProblems }}</p>
-          <ul>
-            {% for problem in commonProblems %}
-              <li>{{ problem | inlineMarkdown | safe }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="workflow-check-block workflow-completion">
-          <p class="eyebrow">{{ currentUi.completion }}</p>
-          <p>{{ completion | inlineMarkdown | safe }}</p>
-        </div>
+        <div class="workflow-check-block"><h2>{{ currentUi.commonProblems }}</h2><ul>{% for problem in commonProblems %}<li>{{ problem | inlineMarkdown | safe }}</li>{% endfor %}</ul></div>
+        <div class="workflow-check-block workflow-completion"><h2>{{ currentUi.completion }}</h2><p>{{ completion | inlineMarkdown | safe }}</p></div>
       </section>
     {% endif %}
-
     {% if prevPage or nextPage %}
-      <section class="page-nav">
-        {% if prevPage %}
-          <a class="nav-panel" href="{{ prevPage.url }}">
-            <strong>{{ currentUi.previousCore if isCoreDocument else currentUi.previous }}</strong>
-            <span>{{ prevPage.title }}</span>
-          </a>
-        {% endif %}
-        {% if nextPage %}
-          <a class="nav-panel" href="{{ nextPage.url }}">
-            <strong>{{ currentUi.nextCore if isCoreDocument else currentUi.next }}</strong>
-            <span>{{ nextPage.title }}</span>
-          </a>
-        {% endif %}
-      </section>
+      <nav class="page-nav" aria-label="{{ currentUi.navigation }}">
+        {% if prevPage %}<a class="nav-panel nav-panel-previous" href="{{ prevPage.url }}"><span>{{ currentUi.previousCore if isCoreDocument else currentUi.previous }}</span><strong><span aria-hidden="true">← </span>{{ prevPage.title }}</strong></a>{% endif %}
+        {% if nextPage %}<a class="nav-panel nav-panel-next" href="{{ nextPage.url }}"><span>{{ currentUi.nextCore if isCoreDocument else currentUi.next }}</span><strong>{{ nextPage.title }}<span aria-hidden="true"> →</span></strong></a>{% endif %}
+      </nav>
     {% endif %}
   </article>
 </main>

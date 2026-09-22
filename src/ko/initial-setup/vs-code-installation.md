@@ -33,13 +33,12 @@ tags:
 ---
 ## VS Code 설치
 
-<div class="doc-action-row">
-  <p>운영체제에 맞는 VS Code 설치 파일을 다운로드한 뒤, 설치 후 VS Code가 오류 없이 열리는지 확인합니다.</p>
-  <a class="doc-action-link" href="https://code.visualstudio.com/Download">VS Code 공식 다운로드</a>
-</div>
-
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
+    <div class="doc-action-row">
+      <p>운영체제에 맞는 VS Code 설치 파일을 다운로드한 뒤, 설치 후 VS Code가 오류 없이 열리는지 확인합니다.</p>
+      <a class="doc-action-link" href="https://code.visualstudio.com/Download">VS Code 공식 다운로드</a>
+    </div>
     <p>먼저 VS Code 공식 홈페이지에 들어가서 올바른 다운로드 경로에 있는지만 확인합니다.</p>
   </div>
   <figure class="image-frame">
@@ -48,7 +47,7 @@ tags:
 </div>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>그다음 다운로드 페이지로 이동해 현재 운영체제에 맞는 설치 파일을 선택합니다.</p>
   </div>
   <figure class="image-frame">
@@ -65,7 +64,7 @@ tags:
 <p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">VS Code Marketplace의 LaTeX Workshop</a></p>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>먼저 Extensions 패널에서 <strong>LaTeX Workshop</strong>를 검색해 올바른 확장을 찾습니다.</p>
   </div>
   <figure class="image-frame">
@@ -74,7 +73,7 @@ tags:
 </div>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>설치가 끝난 뒤에는 확장이 활성화됐는지 확인하고, VS Code가 첫 프로젝트 작업을 받을 준비가 됐는지 봅니다.</p>
   </div>
   <figure class="image-frame">

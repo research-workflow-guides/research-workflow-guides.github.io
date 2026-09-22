@@ -1,8 +1,11 @@
 let pagefindModulePromise;
 let localSearchIndexPromise;
+const searchRequests = new WeakMap();
 
 function setupDisclosure(buttonSelector, panelSelector) {
   const buttons = document.querySelectorAll(buttonSelector);
+  const mobileLayout = window.matchMedia("(max-width: 1099px)");
+  const isKorean = document.body.dataset.pageLang === "ko";
 
   buttons.forEach((button) => {
     const panelId = button.getAttribute("aria-controls");
@@ -13,10 +16,54 @@ function setupDisclosure(buttonSelector, panelSelector) {
       return;
     }
 
-    button.addEventListener("click", function () {
-      const isOpen = button.getAttribute("aria-expanded") === "true";
-      button.setAttribute("aria-expanded", String(!isOpen));
-      target.dataset.open = String(!isOpen);
+    const isContents = button.hasAttribute("data-toc-toggle");
+    const labels = isKorean
+      ? (isContents ? ["목차 열기", "목차 닫기"] : ["메뉴 열기", "메뉴 닫기"])
+      : (isContents ? ["Open contents", "Close contents"] : ["Open menu", "Close menu"]);
+
+    function isOpen() {
+      return button.getAttribute("aria-expanded") === "true";
+    }
+
+    function setOpen(open, restoreFocus = false) {
+      button.setAttribute("aria-expanded", String(open));
+      button.setAttribute("aria-label", labels[open ? 1 : 0]);
+      target.dataset.open = String(open);
+
+      if (open && mobileLayout.matches && !isContents) {
+        target.querySelector("a[href]")?.focus({ preventScroll: true });
+      } else if (!open && restoreFocus && mobileLayout.matches) {
+        button.focus({ preventScroll: true });
+      }
+    }
+
+    setOpen(false);
+
+    button.addEventListener("click", () => {
+      setOpen(!isOpen());
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && isOpen() && !document.querySelector("dialog[open]")) {
+        event.preventDefault();
+        setOpen(false, true);
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (isOpen() && !target.contains(event.target) && !button.contains(event.target)) {
+        setOpen(false, target.contains(document.activeElement));
+      }
+    });
+
+    target.addEventListener("click", (event) => {
+      if (isOpen() && event.target.closest("a[href]")) {
+        setOpen(false, true);
+      }
+    });
+
+    mobileLayout.addEventListener("change", () => {
+      setOpen(false, target.contains(document.activeElement));
     });
   });
 }
@@ -64,6 +111,10 @@ function getLocalSearchIndex() {
           throw new Error("Search index not found");
         }
         return response.json();
+      })
+      .catch((error) => {
+        localSearchIndexPromise = null;
+        throw error;
       });
   }
 
@@ -262,11 +313,17 @@ async function searchLocalIndex(query, lang) {
     .slice(0, 18);
 }
 
-async function runSearch(root, query) {
+async function runSearch(root, query, requestId) {
   const lang = root.dataset.searchLang;
   const input = root.querySelector("[data-search-input]");
   const status = root.querySelector("[data-search-status]");
   const resultsNode = root.querySelector("[data-search-results]");
+  const isCurrentRequest = () => searchRequests.get(root) === requestId;
+
+  if (!isCurrentRequest()) {
+    return;
+  }
+
   clearNode(resultsNode);
 
   if (query.trim().length < 2) {
@@ -279,6 +336,10 @@ async function runSearch(root, query) {
 
   try {
     const matches = await searchLocalIndex(query, lang);
+
+    if (!isCurrentRequest()) {
+      return;
+    }
 
     if (!matches.length) {
       status.textContent = lang === "ko" ? "검색 결과가 없습니다." : "No matching results found.";
@@ -297,13 +358,17 @@ async function runSearch(root, query) {
       query
     );
   } catch (error) {
-    status.textContent =
-      lang === "ko"
-        ? "검색 인덱스를 찾지 못했습니다. `npm run build`를 실행해주세요."
-        : "Search index not found. Run `npm run build`.";
+    if (isCurrentRequest()) {
+      status.textContent =
+        lang === "ko"
+          ? "검색을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요."
+          : "Search could not be loaded. Please try again shortly.";
+    }
+  } finally {
+    if (isCurrentRequest()) {
+      input.setAttribute("aria-busy", "false");
+    }
   }
-
-  input.setAttribute("aria-busy", "false");
 }
 
 function setupSearch() {
@@ -313,44 +378,32 @@ function setupSearch() {
     const input = root.querySelector("[data-search-input]");
     let timer;
 
-    if (!input) {
+    if (!input || !root.querySelector("[data-search-status]") || !root.querySelector("[data-search-results]")) {
       return;
     }
 
     input.addEventListener("input", function (event) {
       const query = event.target.value;
-      input.setAttribute("aria-busy", "true");
+      const requestId = (searchRequests.get(root) || 0) + 1;
+      searchRequests.set(root, requestId);
       window.clearTimeout(timer);
+
+      if (query.trim().length < 2) {
+        runSearch(root, query, requestId);
+        return;
+      }
+
+      input.setAttribute("aria-busy", "true");
       timer = window.setTimeout(() => {
-        runSearch(root, query);
+        runSearch(root, query, requestId);
       }, 180);
     });
   });
 }
 
-function updateHeaderSearchPanelSize(panel) {
-  const nav = document.getElementById("primary-nav");
-  const shell = panel.closest("[data-header-search-panel]");
-  const button = shell ? document.querySelector(`[aria-controls="${shell.id}"][data-header-search-toggle]`) : null;
-
-  if (!nav || !shell || window.matchMedia("(max-width: 760px)").matches) {
-    panel.style.removeProperty("--header-search-left");
-    panel.style.removeProperty("--header-search-width");
-    return;
-  }
-
-  const navRect = nav.getBoundingClientRect();
-  const buttonRect = button ? button.getBoundingClientRect() : navRect;
-  const shellRect = shell.getBoundingClientRect();
-  const left = Math.min(navRect.left, buttonRect.left);
-  const right = Math.max(navRect.right, buttonRect.right);
-
-  panel.style.setProperty("--header-search-left", `${Math.max(0, left - shellRect.left)}px`);
-  panel.style.setProperty("--header-search-width", `${Math.min(shellRect.width, right - left)}px`);
-}
-
 function setupHeaderSearch() {
   const buttons = document.querySelectorAll("[data-header-search-toggle]");
+  const isKorean = document.body.dataset.pageLang === "ko";
 
   buttons.forEach((button) => {
     const panelId = button.getAttribute("aria-controls");
@@ -362,15 +415,21 @@ function setupHeaderSearch() {
       return;
     }
 
-    function setOpen(isOpen) {
+    function setOpen(isOpen, restoreFocus = false) {
       button.setAttribute("aria-expanded", String(isOpen));
+      button.setAttribute("aria-label", isKorean
+        ? (isOpen ? "검색 닫기" : "검색 열기")
+        : (isOpen ? "Close search" : "Open search"));
       shell.dataset.open = String(isOpen);
 
       if (isOpen) {
-        updateHeaderSearchPanelSize(panel);
-        window.setTimeout(() => input.focus(), 0);
+        input.focus({ preventScroll: true });
+      } else if (restoreFocus) {
+        button.focus({ preventScroll: true });
       }
     }
+
+    setOpen(false);
 
     button.addEventListener("click", () => {
       const isOpen = button.getAttribute("aria-expanded") === "true";
@@ -378,9 +437,9 @@ function setupHeaderSearch() {
     });
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
-        setOpen(false);
-        button.focus();
+      if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true" && !document.querySelector("dialog[open]")) {
+        event.preventDefault();
+        setOpen(false, true);
       }
     });
 
@@ -390,13 +449,7 @@ function setupHeaderSearch() {
         !shell.contains(event.target) &&
         !button.contains(event.target)
       ) {
-        setOpen(false);
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      if (button.getAttribute("aria-expanded") === "true") {
-        updateHeaderSearchPanelSize(panel);
+        setOpen(false, shell.contains(document.activeElement));
       }
     });
   });
@@ -427,9 +480,9 @@ function copyText(text) {
 
 function setupCodeCopyButtons() {
   const isKorean = document.body.dataset.pageLang === "ko";
-  const copyLabel = "Copy";
-  const copiedLabel = "Copied";
-  const errorLabel = "Error";
+  const copyLabel = isKorean ? "복사" : "Copy";
+  const copiedLabel = isKorean ? "복사됨" : "Copied";
+  const errorLabel = isKorean ? "복사 실패" : "Error";
 
   document.querySelectorAll(".prose pre").forEach((pre) => {
     if (pre.closest(".code-block-wrapper")) {
@@ -489,71 +542,89 @@ function setupStickyOffset() {
   }
 }
 
-function setupFloatingToc() {
-  const sidebar = document.querySelector(".page-sidebar");
-  const panel = document.getElementById("page-navigation");
-  const contentPanel = document.querySelector(".doc-content");
-  const header = document.querySelector(".site-header");
-  const footer = document.querySelector(".site-footer");
+function setupImageViewer() {
+  const viewer = document.getElementById("image-viewer");
 
-  if (!sidebar || !panel) {
+  if (!viewer || typeof viewer.showModal !== "function") {
     return;
   }
 
-  let ticking = false;
+  const image = viewer.querySelector("[data-image-viewer-image]");
+  const caption = viewer.querySelector("[data-image-viewer-caption]");
+  const closeButton = viewer.querySelector("[data-image-viewer-close]");
+  const isKorean = document.body.dataset.pageLang === "ko";
 
-  function updateFloatingToc() {
-    ticking = false;
+  if (!image || !caption || !closeButton) {
+    return;
+  }
 
-    if (window.matchMedia("(max-width: 1000px)").matches) {
-      sidebar.dataset.floating = "false";
-      sidebar.style.removeProperty("--toc-left");
-      sidebar.style.removeProperty("--toc-width");
-      sidebar.style.removeProperty("--toc-floating-top");
-      sidebar.style.removeProperty("--toc-max-height");
-      return;
-    }
+  let returnFocusTo = null;
+  let backdropPointerDown = false;
+  const viewerLabel = isKorean ? "이미지 확대 보기" : "Expanded image";
 
-    const stickyTop = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--sticky-top")) || 96;
-    const headerRect = header ? header.getBoundingClientRect() : null;
-    const headerBottom = headerRect ? Math.max(0, Math.min(headerRect.bottom, stickyTop - 16)) : 0;
-    const floatingTop = Math.max(16, headerBottom + 16);
-    const sidebarRect = sidebar.getBoundingClientRect();
-    const sidebarTop = sidebar.offsetTop;
-    const shouldFloat = window.scrollY >= sidebarTop - floatingTop;
+  if (!viewer.hasAttribute("aria-labelledby") && !viewer.hasAttribute("aria-label")) {
+    viewer.setAttribute("aria-label", viewerLabel);
+  }
+  closeButton.setAttribute("aria-label", isKorean ? "확대 이미지 닫기" : "Close expanded image");
 
-    sidebar.dataset.floating = String(shouldFloat);
-
-    if (shouldFloat) {
-      const viewportMaxHeight = window.innerHeight - floatingTop - 16;
-      const contentMaxHeight = contentPanel ? contentPanel.getBoundingClientRect().bottom - floatingTop : viewportMaxHeight;
-      const footerMaxHeight = footer ? footer.getBoundingClientRect().top - floatingTop - 16 : viewportMaxHeight;
-      const maxHeight = Math.max(0, Math.floor(Math.min(viewportMaxHeight, contentMaxHeight, footerMaxHeight)));
-
-      sidebar.style.setProperty("--toc-left", `${Math.round(sidebarRect.left)}px`);
-      sidebar.style.setProperty("--toc-width", `${Math.round(sidebarRect.width)}px`);
-      sidebar.style.setProperty("--toc-floating-top", `${Math.round(floatingTop)}px`);
-      sidebar.style.setProperty("--toc-max-height", `${maxHeight}px`);
-    } else {
-      sidebar.style.removeProperty("--toc-left");
-      sidebar.style.removeProperty("--toc-width");
-      sidebar.style.removeProperty("--toc-floating-top");
-      sidebar.style.removeProperty("--toc-max-height");
+  function closeViewer() {
+    if (viewer.open) {
+      viewer.close();
     }
   }
 
-  function requestFloatingUpdate() {
-    if (ticking) {
-      return;
+  document.querySelectorAll("a.image-zoom-link[data-image-zoom]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+        return;
+      }
+
+      const sourceImage = link.querySelector("img");
+      if (!sourceImage) {
+        return;
+      }
+
+      const figure = link.closest("figure");
+      const sourceCaption = figure ? figure.querySelector("figcaption") : null;
+      image.src = link.href;
+      image.alt = sourceImage.alt || viewerLabel;
+      caption.textContent = sourceCaption ? sourceCaption.textContent.trim() : image.alt;
+      returnFocusTo = link;
+
+      try {
+        viewer.showModal();
+      } catch (error) {
+        returnFocusTo = null;
+        return;
+      }
+
+      event.preventDefault();
+      document.body.classList.add("image-viewer-open");
+      closeButton.focus({ preventScroll: true });
+    });
+  });
+
+  closeButton.addEventListener("click", closeViewer);
+  viewer.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeViewer();
+  });
+  viewer.addEventListener("pointerdown", (event) => {
+    backdropPointerDown = event.target === viewer;
+  });
+  viewer.addEventListener("click", (event) => {
+    if (event.target === viewer && backdropPointerDown) {
+      closeViewer();
     }
-
-    ticking = true;
-    window.requestAnimationFrame(updateFloatingToc);
-  }
-
-  updateFloatingToc();
-  window.addEventListener("scroll", requestFloatingUpdate, { passive: true });
-  window.addEventListener("resize", requestFloatingUpdate);
+    backdropPointerDown = false;
+  });
+  viewer.addEventListener("close", () => {
+    document.body.classList.remove("image-viewer-open");
+    if (returnFocusTo && returnFocusTo.isConnected) {
+      returnFocusTo.focus({ preventScroll: true });
+    }
+    returnFocusTo = null;
+  });
 }
 
 function scrollTocLinkIntoView(link) {
@@ -674,11 +745,11 @@ function setupPageTocSpy() {
 
 document.addEventListener("DOMContentLoaded", function () {
   setupStickyOffset();
-  setupFloatingToc();
   setupDisclosure("[data-menu-toggle]", ".site-nav");
   setupDisclosure("[data-toc-toggle]", "[data-toc-panel]");
   setupSearch();
   setupHeaderSearch();
   setupCodeCopyButtons();
+  setupImageViewer();
   setupPageTocSpy();
 });

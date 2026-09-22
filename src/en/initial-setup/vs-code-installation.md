@@ -33,28 +33,25 @@ tags:
 ---
 ## Install VS Code
 
-<div class="doc-action-row">
-  <p>Download VS Code from the official download page for your operating system, then open VS Code after installation and confirm it launches without errors.</p>
-  <a class="doc-action-link" href="https://code.visualstudio.com/Download">Official VS Code downloads</a>
-</div>
-
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
+    <div class="doc-action-row">
+      <p>Download VS Code from the official download page for your operating system, then open VS Code after installation and confirm it launches without errors.</p>
+      <a class="doc-action-link" href="https://code.visualstudio.com/Download">Official VS Code downloads</a>
+    </div>
     <p>Download it from the VS Code website.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-1.png" alt="VS Code homepage">
-
   </figure>
 </div>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>On the download page, choose the installer that matches your operating system.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-2.png" alt="VS Code download page">
-
   </figure>
 </div>
 
@@ -67,22 +64,20 @@ tags:
 <p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop on the VS Code Marketplace</a></p>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>Use the Extensions panel to search for <strong>LaTeX Workshop</strong> inside VS Code.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-3.png" alt="VS Code extensions panel with LaTeX Workshop">
-
   </figure>
 </div>
 
 <div class="doc-step-pair">
-  <div>
+  <div class="doc-step-copy">
     <p>After installation, confirm that the extension is active and that VS Code is ready for the first project workflow.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-4.png" alt="VS Code with installation complete">
-
   </figure>
 </div>
 
