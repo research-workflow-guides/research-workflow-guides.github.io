@@ -172,7 +172,7 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
 .prose pre code { font-size: inherit; overflow-wrap: normal; }
 .code-block-wrapper { position: relative; margin: 0 0 24px; min-width: 0; }
 .code-block-wrapper pre { margin: 0; padding-top: 52px; }
-.code-copy-button { position: absolute; top: 8px; right: 8px; min-height: 36px; padding: 5px 12px; color: #f2f5fc; border: 1px solid #596170; background: #ffffff0d; border-radius: 5px; font-size: 12px; }
+.code-copy-button { position: absolute; top: 8px; right: 8px; min-height: 44px; padding: 5px 12px; color: #f2f5fc; border: 1px solid #596170; background: #ffffff0d; border-radius: 5px; font-size: 12px; }
 .code-copy-button:hover { background: #ffffff22; }
 .prose pre[data-code-label] { padding-top: 52px; }
 .prose pre[data-code-label]::before { content: attr(data-code-label); position: absolute; top: 16px; left: 20px; color: #afbcd0; font: 11px var(--mono); }
