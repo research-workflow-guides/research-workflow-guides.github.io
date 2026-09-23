@@ -282,8 +282,8 @@ const pages = [
     slug: "register-folder",
     order: 1,
     group: "main-topics",
-    title: "Register Folder",
-    description: "Open a folder in VS Code to register it as your workspace.",
+    title: "Open Project Folder",
+    description: "Open the seed-document example folder in VS Code, then build and preview the manuscript.",
     translationKey: "writing-folder-setup",
     status: "core"
   },
@@ -295,8 +295,8 @@ const pages = [
     slug: "register-folder",
     order: 1,
     group: "main-topics",
-    title: "폴더 등록",
-    description: "VS Code에서 폴더를 열어 작업 공간으로 등록합니다.",
+    title: "프로젝트 폴더 열기",
+    description: "VS Code에서 seed-document 예제 폴더를 열고 원고 빌드와 PDF 미리 보기를 확인합니다.",
     translationKey: "writing-folder-setup",
     status: "core"
   },

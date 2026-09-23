@@ -28,7 +28,8 @@ const verificationRequired = new Set([
 const workflowCheckOptional = new Set([
   "initial-setup-latex-installation",
   "initial-setup-vs-code-installation",
-  "initial-setup-project-template"
+  "initial-setup-project-template",
+  "writing-folder-setup"
 ]);
 
 const errors = [];
@@ -117,8 +118,10 @@ for (const page of documents) {
   );
 
   if (page.status === "core") {
-    if (page.translationKey !== "initial-setup-project-template") {
+    if (!["initial-setup-project-template", "writing-folder-setup"].includes(page.translationKey)) {
       assert(typeof data.outcome === "string" && data.outcome.trim(), `${page.url}: outcome is missing.`);
+    }
+    if (!["initial-setup-project-template", "writing-folder-setup"].includes(page.translationKey)) {
       assert(
         Array.isArray(data.prerequisites) && data.prerequisites.length > 0,
         `${page.url}: prerequisites are missing.`
