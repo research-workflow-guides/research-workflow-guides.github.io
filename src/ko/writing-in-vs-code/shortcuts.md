@@ -115,6 +115,6 @@ LaTeX Workshop의 기본 설정에서 `@` 접두어를 입력하면 관련 snipp
 
 
 <div class="doc-action-row">
-  <p>직접 snippet을 만들려면 LaTeX용 사용자 snippet 파일을 여세요. <a href="/ko/writing-in-vs-code/snippets/">LaTeX snippet 설정</a> 안내에서 파일을 여는 과정과 예시를 확인할 수 있습니다.</p>
+  <p>직접 snippet을 만들려면 LaTeX용 사용자 snippet 파일을 여세요. <a href="/ko/writing-in-vs-code/snippets/">LaTeX snippets 설정</a> 안내에서 파일을 여는 과정과 예시를 확인할 수 있습니다.</p>
   <a class="doc-action-link" href="https://code.visualstudio.com/docs/editing/userdefinedsnippets">VS Code snippet 문서</a>
 </div>

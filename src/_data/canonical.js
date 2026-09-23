@@ -360,8 +360,8 @@ const pages = [
     slug: "snippets",
     order: 4,
     group: "snippets",
-    title: "Setting file",
-    description: "Use a small snippet set to speed up repetitive LaTeX typing without overengineering.",
+    title: "Set up LaTeX snippets",
+    description: "Open the LaTeX user snippet file in VS Code on Windows, add the definitions you need, and check what they insert.",
     translationKey: "writing-snippets",
     status: "optional"
   },
@@ -557,8 +557,8 @@ const pages = [
     slug: "snippets",
     order: 4,
     group: "snippets",
-    title: "세팅 파일",
-    description: "자주 쓰는 LaTeX 조각을 snippet으로 묶어 반복 입력을 줄입니다.",
+    title: "LaTeX snippets 설정",
+    description: "Windows용 VS Code에서 LaTeX 사용자 snippet 파일을 열고 필요한 정의를 추가한 뒤 입력 결과를 확인합니다.",
     translationKey: "writing-snippets",
     status: "optional"
   },
