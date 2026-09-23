@@ -413,7 +413,7 @@ const pages = [
     order: 8,
     group: "optional-topics",
     title: "Sync Your VS Code Setup",
-    description: "Turn on Settings Sync with GitHub and keep the same VS Code setup across multiple machines.",
+    description: "Turn on Settings Sync with GitHub in VS Code on Windows to synchronize your setup with another Windows PC.",
     translationKey: "writing-settings-sync",
     status: "optional"
   },
@@ -610,7 +610,7 @@ const pages = [
     order: 8,
     group: "optional-topics",
     title: "VS Code 작업 환경 동기화",
-    description: "GitHub 계정으로 Settings Sync를 켜고 여러 PC에서 같은 VS Code 환경을 유지합니다.",
+    description: "Windows용 VS Code에서 GitHub 계정으로 Settings Sync를 켜고 다른 Windows PC와 사용자 환경을 동기화합니다.",
     translationKey: "writing-settings-sync",
     status: "optional"
   },

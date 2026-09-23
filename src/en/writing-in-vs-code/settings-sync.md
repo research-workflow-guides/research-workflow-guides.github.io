@@ -1,21 +1,29 @@
 ---
 layout: layouts/doc.njk
 title: Sync Your VS Code Setup
-description: Turn on Settings Sync with GitHub and keep the same VS Code setup across multiple machines.
+description: Turn on Settings Sync with GitHub in VS Code on Windows to synchronize your setup with another Windows PC.
 lang: en
 section: writing-in-vs-code
 order: 8
 permalink: /en/writing-in-vs-code/settings-sync/
 translationKey: writing-settings-sync
 eyebrow: Optional
-lead: If you enable Settings Sync with your GitHub account, you can reinstall VS Code or move to another machine without rebuilding the same setup from scratch.
+lead: On Windows, turn on Settings Sync with a GitHub account to sync your VS Code settings, extensions, and other setup when you reinstall VS Code or use another Windows PC.
+verificationCard: false
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: Written for VS Code on Windows; macOS and Linux steps await review.
+  workflow: Turn on Settings Sync, review sync categories, sign in with GitHub, and verify sync on another Windows PC.
+  lastVerified: VS Code Settings Sync documentation checked on 2026-09-23. Current Windows steps and screens await review.
+  support: The three existing screenshots were captured on macOS and need to be updated for current Windows.
 toc:
   - id: what-settings-sync-is
     label: What Settings Sync is
   - id: turn-on-settings-sync-with-github
     label: Turn on Settings Sync with GitHub
   - id: leave-the-sync-options-at-the-defaults
-    label: Leave the sync options at the defaults
+    label: Review sync options
   - id: restore-the-same-setup-on-another-machine
     label: Restore the same setup on another machine
   - id: references
@@ -25,11 +33,9 @@ tags:
 ---
 ## What Settings Sync is
 
-Settings Sync keeps your VS Code setup aligned across machines.
+Settings Sync automatically synchronizes selected preferences between Windows PCs signed in with the same GitHub account.
 
-It is useful when you reinstall VS Code or move to another computer and want your old setup back quickly. Once it is enabled, you do not need to rebuild `settings`, `keyboard shortcuts`, `snippets`, `extensions`, and `profiles` from scratch.
-
-The official documentation lists settings, keyboard shortcuts, user snippets, user tasks, UI State, extensions, and profiles. In VS Code 1.117.0, the Settings Sync picker shows these items:
+In VS Code Settings Sync, you can choose which of the following items to synchronize:
 
 - `Settings`
 - `Keyboard Shortcuts`
@@ -41,15 +47,11 @@ The official documentation lists settings, keyboard shortcuts, user snippets, us
 - `Profiles`
 - `Prompts and Instructions`
 
-At first, it is usually enough to leave these options at the default selection and start there.
-
 ## Turn on Settings Sync with GitHub
 
-The process is straightforward.
-
-1. Open the Command Palette with `Cmd+Shift+P`.
+1. Open the Command Palette with `Ctrl+Shift+P`.
 2. Run `Settings Sync: Backup and Sync Settings...`.
-3. Keep the default sync items selected and choose `Sign in`.
+3. Review the categories to sync, then select `Sign in`.
 4. In the account picker, choose `Sign in with GitHub`.
 5. Finish the GitHub sign-in flow in the browser and return to VS Code.
 
@@ -62,15 +64,13 @@ The process is straightforward.
   </figure>
 </div>
 
-## Leave the sync options at the defaults
+<h2 id="leave-the-sync-options-at-the-defaults">Review sync options</h2>
 
-When you first turn on Settings Sync, VS Code shows the list of items that can be synchronized.
-
-For this guide, there is no need to customize that list. In most cases, the default checked state is enough to restore the same working environment without extra adjustment.
+Review the categories selected by default. Clear any category you do not want to sync, and leave the others selected.
 
 <div class="doc-step-pair">
   <div>
-    <p>Keep the default checked items unless you already know that one category should stay local.</p>
+    <p>To change the selected categories later, run <code>Settings Sync: Configure...</code> from the Command Palette.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/settings-sync/sync-options-defaults.png" alt="Example VS Code Settings Sync item list with default options checked">
@@ -88,13 +88,11 @@ For this guide, there is no need to customize that list. In most cases, the defa
 
 ## Restore the same setup on another machine
 
-After installing VS Code on another machine, sign in with the same GitHub account to bring back the saved setup.
+On another Windows PC, install VS Code and turn on Settings Sync with the same GitHub account to synchronize the selected categories.
 
-At that point, VS Code may ask how to apply the cloud settings on the current machine. `Merge` keeps local settings and combines them with the cloud copy. `Replace Local` overwrites the local setup with the cloud copy, so use it only when the current VS Code installation does not contain local settings you need to preserve.
+When you turn on Settings Sync, VS Code automatically merges local and cloud data. If it cannot resolve a conflict, synchronization pauses and prompts you to resolve it. Use `Show Conflicts` to compare both versions before completing the merge.
 
 ## References
-
-This page is based on the following documentation.
 
 <div class="doc-action-links">
   <a class="doc-action-link" href="https://code.visualstudio.com/docs/configure/settings-sync">VS Code Settings Sync</a>
