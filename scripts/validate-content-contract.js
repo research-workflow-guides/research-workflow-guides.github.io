@@ -30,7 +30,14 @@ const workflowCheckOptional = new Set([
   "initial-setup-vs-code-installation",
   "initial-setup-project-template",
   "writing-folder-setup",
-  "writing-settings"
+  "writing-settings",
+  "writing-syntax"
+]);
+const summaryOptional = new Set([
+  "initial-setup-project-template",
+  "writing-folder-setup",
+  "writing-settings",
+  "writing-syntax"
 ]);
 
 const errors = [];
@@ -119,10 +126,10 @@ for (const page of documents) {
   );
 
   if (page.status === "core") {
-    if (!["initial-setup-project-template", "writing-folder-setup", "writing-settings"].includes(page.translationKey)) {
+    if (!summaryOptional.has(page.translationKey)) {
       assert(typeof data.outcome === "string" && data.outcome.trim(), `${page.url}: outcome is missing.`);
     }
-    if (!["initial-setup-project-template", "writing-folder-setup", "writing-settings"].includes(page.translationKey)) {
+    if (!summaryOptional.has(page.translationKey)) {
       assert(
         Array.isArray(data.prerequisites) && data.prerequisites.length > 0,
         `${page.url}: prerequisites are missing.`
@@ -130,7 +137,7 @@ for (const page of documents) {
     }
     assert(
       data.workflowChecks !== false || workflowCheckOptional.has(page.translationKey),
-      `${page.url}: workflow checks can only be hidden on a supported setup guide.`
+      `${page.url}: workflow checks can only be hidden on a supported guide.`
     );
     if (data.workflowChecks !== false) {
       assert(

@@ -374,7 +374,7 @@ const pages = [
     order: 5,
     group: "snippets",
     title: "Syntax",
-    description: "Reference the LaTeX syntax patterns you reach for most often while writing.",
+    description: "Compare common LaTeX patterns with their VS Code snippet definitions.",
     translationKey: "writing-syntax",
     status: "core"
   },
@@ -571,7 +571,7 @@ const pages = [
     order: 5,
     group: "snippets",
     title: "문법",
-    description: "글을 쓸 때 자주 사용하는 LaTeX 문법 패턴을 정리합니다.",
+    description: "자주 쓰는 LaTeX 패턴과 VS Code snippet 정의를 비교합니다.",
     translationKey: "writing-syntax",
     status: "core"
   },

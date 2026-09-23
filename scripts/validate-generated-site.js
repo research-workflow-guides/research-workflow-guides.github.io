@@ -8,6 +8,12 @@ const osSelectorTopics = new Set([
   "initial-setup-latex-installation",
   "initial-setup-vs-code-installation"
 ]);
+const streamlinedCoreTopics = new Set([
+  "initial-setup-project-template",
+  "writing-folder-setup",
+  "writing-settings",
+  "writing-syntax"
+]);
 
 const errors = [];
 let checkedReferences = 0;
@@ -142,11 +148,14 @@ if (fs.existsSync(outputRoot)) {
     }
 
     if (page.status === "core") {
-      if (!osSelectorTopics.has(page.translationKey) && !["initial-setup-project-template", "writing-folder-setup", "writing-settings"].includes(page.translationKey)) {
+      if (!osSelectorTopics.has(page.translationKey) && !streamlinedCoreTopics.has(page.translationKey)) {
         assert(hasContract, `${page.url}: generated core contract is missing.`);
       }
-      if (osSelectorTopics.has(page.translationKey) || ["initial-setup-project-template", "writing-folder-setup", "writing-settings"].includes(page.translationKey)) {
-        assert(!document.querySelector(".workflow-checks"), `${page.url}: redundant installation wrap-up remains.`);
+      if (streamlinedCoreTopics.has(page.translationKey)) {
+        assert(!hasContract, `${page.url}: redundant workflow summary remains.`);
+      }
+      if (osSelectorTopics.has(page.translationKey) || streamlinedCoreTopics.has(page.translationKey)) {
+        assert(!document.querySelector(".workflow-checks"), `${page.url}: redundant workflow wrap-up remains.`);
       } else {
         assert(hasCompletion, `${page.url}: generated completion check is missing.`);
       }

@@ -1,22 +1,15 @@
 ---
 layout: layouts/doc.njk
 title: Syntax
-description: Reference the LaTeX syntax patterns you reach for most often while writing.
+description: Compare common LaTeX patterns with their VS Code snippet definitions.
 lang: en
 section: writing-in-vs-code
 order: 5
 permalink: /en/writing-in-vs-code/syntax/
 translationKey: writing-syntax
 eyebrow: Topic 2
-lead: Learn the LaTeX pattern first, then save the repeated typing as a VS Code snippet.
-outcome: The manuscript contains a compiled mathematical structure and a figure using the documented LaTeX patterns.
-prerequisites:
-  - The project builds successfully before the content change.
-  - The main `.tex` file is open in VS Code.
-completion: The PDF shows the new equation or theorem structure and the inserted figure without LaTeX errors.
-commonProblems:
-  - Unbalanced delimiters or braces stop the document from compiling.
-  - A figure path must be relative to the project and match the file name exactly.
+lead: Compare LaTeX code for common equations, theorem blocks, and figures with their VS Code snippet definitions.
+workflowChecks: false
 toc:
   - id: comparing-latex-and-json
     label: Comparing LaTeX and JSON
@@ -35,18 +28,16 @@ toc:
   - id: figures
     label: Figures
   - id: texts
-    label: Texts
+    label: Text and math symbols
 tags:
   - doc
 ---
 ## Comparing LaTeX and JSON
 
-Each example below compares the LaTeX source with the JSON snippet syntax:
+- **LaTeX code**: the text inserted into a `.tex` file when a snippet expands.
+- **Snippet definition**: the JSON entry saved in `latex.json`.
 
-- **LaTeX code**: the source you want to appear in your `.tex` file after the snippet expands.
-- **Snippet syntax**: the JSON entry you put inside `latex.json`.
-
-The main difference is escaping. In LaTeX source, a command uses one backslash. Inside a JSON snippet string, that backslash must be written as two backslashes.
+A JSON string escapes a backslash by doubling it. The LaTeX command below begins with one backslash in a `.tex` file and two in the `latex.json` snippet body.
 
 ```latex
 \begin{equation*}
@@ -56,9 +47,13 @@ The main difference is escaping. In LaTeX source, a command uses one backslash. 
 "\\begin{equation*}"
 ```
 
-Use `$1`, `$2`, and `$3` for tab stops. Use `$0` for the final cursor position. Use `${1:label}` when you want editable placeholder text.
+`$1`, `$2`, and `$3` are input positions visited in order with Tab. `$0` marks the final cursor position, and `${1:label}` supplies `label` as the default text at the first position.
 
-When you add more than one snippet to `latex.json`, keep all entries inside the outer `{ ... }` object and separate neighboring entries with commas.
+To store multiple snippet definitions in `latex.json`, place them inside the outer `{ ... }` object and separate entries with commas.
+
+Use the delimiter, matrix, and integral snippets inside math mode. The `equation*`, `align`, and `cases` snippets insert a full display environment.
+
+The `bmatrix`, `equation*`, `align`, `cases`, and `\text` examples require `amsmath`. For `\mathbb{R}`, load `amsfonts` or `amssymb`.
 
 ## Math delimiters
 
@@ -89,7 +84,7 @@ Put these snippet entries in `latex.json`.
 
 ## Math structures
 
-Use this LaTeX pattern for a 2x2 matrix.
+Use this LaTeX pattern for a 2×2 matrix.
 
 ```latex
 \begin{bmatrix}
@@ -112,7 +107,7 @@ Put this snippet entry in `latex.json`.
 }
 ```
 
-Use this LaTeX pattern for an integral.
+Use this LaTeX pattern for a definite integral.
 
 ```latex
 \int_{a}^{b}  f(x)  \, dx
@@ -129,7 +124,7 @@ Put this snippet entry in `latex.json`.
 
 ## Display equations
 
-Use this LaTeX pattern for an unnumbered display equation.
+Use this pattern for a single displayed equation without a number.
 
 ```latex
 \begin{equation*}
@@ -151,9 +146,9 @@ Put this snippet entry in `latex.json`.
 }
 ```
 
-When you type `eq`, VS Code inserts the environment and places the cursor inside it.
+Type `eq` and select its snippet suggestion to insert the `equation*` environment with the cursor inside it.
 
-Use this LaTeX pattern when the equation needs a label.
+For an equation you will reference elsewhere, use numbered `equation` with a `\label{...}`.
 
 ```latex
 \begin{equation}    \label{eq:main-estimate}
@@ -175,7 +170,7 @@ Put this snippet entry in `latex.json`.
 }
 ```
 
-The first tab stop fills the label. The final cursor position stays inside the equation body.
+After inserting `eqn`, edit the label after `eq:` at the first stop. Tab then moves to the final cursor position inside the equation.
 
 ## Alignments
 
@@ -183,9 +178,9 @@ Use this LaTeX pattern for a multi-line calculation without equation numbers.
 
 ```latex
 \begin{align*}
-    ...
-    &= ...
-    &= ...
+    f(x)
+    &= g(x) \\
+    &= h(x)
 \end{align*}
 ```
 
@@ -206,7 +201,7 @@ Put this snippet entry in `latex.json`.
 }
 ```
 
-The `\\\\` in the snippet syntax becomes `\\` in the LaTeX file. That is the line break command used by `align`.
+Four backslashes in a `latex.json` body string become two in the `.tex` file. `align` uses this command to end a row.
 
 Use this LaTeX pattern when the important lines need labels.
 
@@ -235,11 +230,11 @@ Put this snippet entry in `latex.json`.
 }
 ```
 
-Use unnumbered alignment while drafting. Switch to numbered alignment only when another paragraph needs to refer to a specific line.
+Use `align*` when you do not need numbered lines. To refer to a specific line, use `align` and add a `\label{...}` to that line.
 
 ## Theorem blocks and proofs
 
-Use this LaTeX pattern for a theorem-like block.
+Use this pattern after defining `theorem` in the preamble with `\newtheorem{theorem}{Theorem}`.
 
 ```latex
 \begin{theorem}    \label{thm:main-result}
@@ -261,9 +256,9 @@ Put this snippet entry in `latex.json`.
 }
 ```
 
-The same pattern works for definitions, propositions, lemmas, and corollaries. Change the environment name, prefix, and label prefix together.
+If the preamble defines `definition`, `proposition`, `lemma`, or `corollary`, you can reuse this snippet structure. Change the environment name, snippet name and prefix, and label prefix together.
 
-Use this LaTeX pattern for a proof.
+Use this pattern for the `proof` environment provided by `amsthm`.
 
 ```latex
 \begin{proof}
@@ -284,7 +279,7 @@ Put this snippet entry in `latex.json`.
 }
 ```
 
-Keep the label prefix meaningful: `thm:`, `lem:`, `prop:`, `def:`, and `crl:` make references easier to scan.
+Use label prefixes such as `thm:`, `lem:`, `prop:`, `def:`, and `crl:` so the target is easy to identify in the LaTeX source.
 
 ## Cases and piecewise definitions
 
@@ -307,7 +302,7 @@ Put this snippet entry in `latex.json`.
   "prefix": "css2",
   "body": [
     "\\begin{equation*}",
-    "    ${1:f(x)}",
+    "    ${1:f(x)} =",
     "    \\begin{cases}",
     "        $2    &    \\text{${3:if} } $4,    \\\\",
     "        $5    &    \\text{${6:if} } $7",
@@ -318,11 +313,11 @@ Put this snippet entry in `latex.json`.
 }
 ```
 
-Keep the displayed formula short. If a condition is long, explain it before the display and keep the case split readable.
+If a condition is long, explain it before the display and keep each `cases` row concise.
 
 ## Figures
 
-Use this LaTeX pattern for a figure.
+Use this figure pattern when the document loads `graphicx`.
 
 ```latex
 \begin{figure}[htbp]
@@ -351,11 +346,11 @@ Put this snippet entry in `latex.json`.
 }
 ```
 
-The first placeholder controls the width. The second chooses the file. The third writes the caption. The fourth sets the figure label.
+The first placeholder sets the fraction of `\linewidth`; the second supplies the graphics file path. The third sets the caption, and the fourth sets the label after `fig:`.
 
-## Texts
+<h2 id="texts">Text and math symbols</h2>
 
-Use these LaTeX patterns for common text snippets.
+Use the first pattern in text and the other two in math mode.
 
 ```latex
 Fr\'echet
@@ -384,6 +379,6 @@ Put these snippet entries in `latex.json`.
 }
 ```
 
-For short inline snippets, choose prefixes that do not appear inside ordinary words. A convenient shortcut is only useful if it does not expand by accident.
+Choose distinctive prefixes for short snippets. If a one-letter prefix such as `R` appears too often in suggestions, add a marker such as `@R`.
 
-Build snippets from LaTeX code you already understand. The snippet should save repeated typing, not hide syntax that you still need to inspect and edit.
+Save patterns you understand as snippets, then check that you can still read and edit the expanded LaTeX.
