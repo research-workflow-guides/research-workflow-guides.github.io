@@ -35,7 +35,8 @@ const workflowCheckOptional = new Set([
   "writing-syntax",
   "writing-bibliography-citation",
   "git-git-installation",
-  "git-connect-github"
+  "git-connect-github",
+  "git-create-repository"
 ]);
 const summaryOptional = new Set([
   "initial-setup-project-template",
@@ -44,7 +45,8 @@ const summaryOptional = new Set([
   "writing-syntax",
   "writing-bibliography-citation",
   "git-git-installation",
-  "git-connect-github"
+  "git-connect-github",
+  "git-create-repository"
 ]);
 
 const errors = [];

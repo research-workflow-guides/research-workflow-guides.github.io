@@ -15,7 +15,8 @@ const streamlinedCoreTopics = new Set([
   "writing-syntax",
   "writing-bibliography-citation",
   "git-git-installation",
-  "git-connect-github"
+  "git-connect-github",
+  "git-create-repository"
 ]);
 
 const errors = [];

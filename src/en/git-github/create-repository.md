@@ -1,28 +1,24 @@
 ---
 layout: layouts/doc.njk
 title: Create Repository
-description: Create the first empty private repository before you bring in the local project.
+description: Create an empty private GitHub repository before adding your project files.
 lang: en
 section: git-github
 order: 4
 permalink: /en/git-github/create-repository/
 translationKey: git-create-repository
 eyebrow: Topic 2
-lead: Start from an empty private repository so the first push stays simple and the initial history is easy to understand.
-outcome: An empty private GitHub repository exists for the manuscript project.
-prerequisites:
-  - The intended GitHub account is signed in.
-  - A unique repository name and visibility choice are decided.
-completion: The repository page shows the chosen name, Private visibility, and no generated README, license, or `.gitignore` commit.
-commonProblems:
-  - Preselecting a README creates remote history that complicates the first push from an existing local project.
-  - Repository visibility should be confirmed before uploading unpublished research material.
+lead: Create an empty private repository on GitHub. In the next step, clone it and add your project files.
+workflowChecks: false
 verification:
   status: needs-review
-  environment: GitHub web interface; screenshots use the desktop Windows browser path.
-  workflow: Creating an empty private repository without generated starter files.
-  lastVerified: Pending a current GitHub UI walkthrough.
-  support: Browser workflow is platform-independent; screenshots document the desktop path only.
+  screenshots: needs-update
+  environment: This guide uses GitHub web screens from a Windows desktop browser.
+  workflow: Choose the owner and name, set private visibility, omit starter files, and check the empty repository.
+  lastVerified: 2026-09-23 checked official GitHub documentation; current creation screens await verification.
+  support: Existing GitHub creation images need updating. macOS and Linux screens await verification.
+  scopeNote: This page currently uses Windows desktop screens. macOS and Linux screens will be verified later.
+verificationCard: false
 toc:
   - id: choose-the-repository-shape
     label: Choose the repository shape
@@ -33,50 +29,49 @@ tags:
 ---
 ## Choose the repository shape
 
-One private repository for one project is enough for the first workflow. Avoid adding extra files or automation until after the first push.
+Choose the GitHub account that will own the new repository, and set its visibility to <strong>Private</strong>.
 
 ## Create an empty private repository
 
-Create a new private repository with a clear project name. Skip the README, `.gitignore`, and license to keep the first push flow explicit.
+Choose a repository name that identifies the project. You will clone an empty repository in the next step, so leave the README, `.gitignore`, and license options unset for now.
 
 <div class="doc-step-pair">
   <div>
-    <p>From your profile, open the repositories list first.</p>
+    <p>Sign in to GitHub, then open the <strong>Repositories</strong> tab on your profile.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="GitHub profile with the Repositories tab highlighted">
+    <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="Repositories tab highlighted on an older GitHub profile page">
 
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>Then use the <strong>New</strong> button from that repositories page to start the repository form.</p>
+    <p>Select <strong>New</strong> on the <strong>Repositories</strong> page. If your screen looks different, open GitHub's <a href="https://github.com/new">new repository page</a> directly.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="GitHub repositories page with the New button highlighted">
+    <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="New button highlighted on an older GitHub Repositories page">
 
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>Choose a clear name, keep the repository private, and fill out only the basic form fields for the first run.</p>
+    <p>Check <strong>Owner</strong> and <strong>Repository name</strong>, then select <strong>Private</strong>. Leave README, <code>.gitignore</code>, and license unset, and select <strong>Create repository</strong>.</p>
+    <p><strong>The older image shows Public selected. Select Private for this guide.</strong></p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="GitHub create repository form">
+    <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="Older GitHub create repository form with Public selected">
 
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>After creation, you should see an empty repository page ready for the first clone and push.</p>
+    <p>Check for the <strong>Private</strong> label beside the repository name and the <strong>Quick setup</strong> instructions for an empty repository. The older image shows <strong>Public</strong>.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="Empty GitHub repository page after creation">
+    <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="Older empty GitHub repository page showing Public and Quick setup">
 
   </figure>
 </div>
-
-If the private repository exists on GitHub and is still empty, you are ready to clone it locally.

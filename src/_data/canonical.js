@@ -737,7 +737,7 @@ const pages = [
     order: 4,
     group: "first-github-workflow",
     title: "Create Repository",
-    description: "Create the first empty private repository before you bring in the local project.",
+    description: "Create an empty private GitHub repository before adding your project files.",
     translationKey: "git-create-repository",
     status: "core"
   },
@@ -750,7 +750,7 @@ const pages = [
     order: 4,
     group: "first-github-workflow",
     title: "저장소 만들기",
-    description: "프로젝트 파일을 올리기 전에 첫 private repository를 만듭니다.",
+    description: "프로젝트 파일을 가져오기 전에 빈 비공개 GitHub 저장소를 만듭니다.",
     translationKey: "git-create-repository",
     status: "core"
   },
