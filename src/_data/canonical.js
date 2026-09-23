@@ -815,7 +815,7 @@ const pages = [
     order: 8,
     group: "daily-workflow",
     title: "Version Control",
-    description: "Understand tracked, modified, staged, and committed states well enough to stay calm.",
+    description: "Inspect commits and file changes with Git Graph in VS Code on Windows.",
     translationKey: "git-version-control",
     status: "optional"
   },
@@ -854,7 +854,7 @@ const pages = [
     order: 8,
     group: "daily-workflow",
     title: "버전 관리",
-    description: "tracked, modified, staged, committed 상태를 구분해 안정적으로 작업합니다.",
+    description: "Windows의 VS Code에서 Git Graph로 커밋 기록과 파일별 변경 내용을 확인합니다.",
     translationKey: "git-version-control",
     status: "optional"
   },

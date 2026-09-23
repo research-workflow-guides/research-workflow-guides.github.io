@@ -1,17 +1,25 @@
 ---
 layout: layouts/doc.njk
 title: Version Control
-description: Understand tracked, modified, staged, and committed states well enough to stay calm.
+description: Inspect commits and file changes with Git Graph in VS Code on Windows.
 lang: en
 section: git-github
 order: 8
 permalink: /en/git-github/version-control/
 translationKey: git-version-control
 eyebrow: Topic 3
-lead: Let's learn how to manage versions using Git Graph.
+lead: On Windows, use Git Graph in VS Code to inspect commit history and file changes.
+verificationCard: false
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: Written for VS Code and the Git Graph extension on Windows.
+  workflow: Install Git Graph, then inspect commits and file changes.
+  lastVerified: Git Graph Marketplace and official Git documentation checked on 2026-09-24. Current Windows screens await review.
+  support: The existing images show older Git Graph screens and repository history and need updating.
 toc:
   - id: add-extension
-    label: Add extension
+    label: Install Git Graph
   - id: git-graph
     label: Git Graph
   - id: interface
@@ -19,165 +27,96 @@ toc:
   - id: review-of-changes
     label: Review of changes
   - id: to-reset-to-an-old-version
-    label: To reset to an old version
+    label: Inspect an earlier version and Reset
 tags:
   - doc
 ---
-## Add extension
+<h2 id="add-extension">Install Git Graph</h2>
+
+In VS Code, search for `Git Graph` in **Extensions**. Check that the publisher is `mhutchie`, then select **Install**. The Marketplace link below provides the extension details.
 
 <p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph on Visual Studio Marketplace</a></p>
 
 <figure class="image-frame">
-  <img src="/assets/images/gitgraph.png" alt="Git Graph extension">
+  <img src="/assets/images/gitgraph.png" alt="Older VS Code extension details showing Git Graph by publisher mhutchie installed">
 </figure>
 
 ## Git Graph
 
-You can access the Git Graph by clicking on the button with a graph icon in the Source Control panel or by clicking on 'Git Graph' at the bottom of the window.
+Open the Git repository folder in VS Code, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, and run `Git Graph: View Git Graph`. The older screenshots below also show a Source Control button and a **Git Graph** item in the status bar.
 
 <figure class="image-frame">
-  <img src="/assets/images/clone-2.png" alt="VS Code Source Control panel with Git Graph access">
+  <img src="/assets/images/clone-2.png" alt="Older VS Code screen with the Source Control icon highlighted in the activity bar">
 </figure>
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.5-1.png" alt="Git Graph view in VS Code">
+  <img src="/assets/images/2.2.5-1.png" alt="Older VS Code Source Control screen with the button for opening Git Graph highlighted">
 </figure>
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.5-2.png" alt="Git Graph history view in VS Code">
+  <img src="/assets/images/2.2.5-2.png" alt="Older Windows VS Code screen with the Git Graph status-bar item highlighted">
 </figure>
 
-When accessing the Git Graph, you will see the following screen.
+The dots and lines in the graph show how commits and branches connect. `main` points to the local branch, while `origin/main` shows the last known position of the remote branch. The labels do not always point to the same commit.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.5-3.png" alt="Git Graph screen in VS Code">
+  <img src="/assets/images/2.2.5-3.png" alt="Older Git Graph commit history with main and origin/main labels">
 </figure>
 
 ## Interface
 
-Here is an explanation of each section:
+The numbers in the older screenshot identify these areas.
 
-<div style="display:flex;justify-content:center;margin:1.25rem 0">
-  <table style="border-collapse:collapse;min-width:32rem">
-    <thead>
-      <tr style="background:#f0e1c8">
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Section</th>
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Explanation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><span style="display:inline-flex;align-items:center;justify-content:center;width:1.25rem;height:1.25rem;border-radius:50%;background:#ffffff;border:2px solid #ff2d2d;color:#ff2d2d;font-weight:700;font-size:0.85rem;line-height:1">1</span></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">It visualizes the commits that have been pushed so far.</td>
-      </tr>
-      <tr style="background:#fdf7ef">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><span style="display:inline-flex;align-items:center;justify-content:center;width:1.25rem;height:1.25rem;border-radius:50%;background:#ffffff;border:2px solid #ff2d2d;color:#ff2d2d;font-weight:700;font-size:0.85rem;line-height:1">2</span></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">It represents the current commit being discussed along with its message. It is referred to as the current branch. You can use <code>Check out</code> to move to a different commit, but we will not cover that in this tutorial.</td>
-      </tr>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><span style="display:inline-flex;align-items:center;justify-content:center;width:1.25rem;height:1.25rem;border-radius:50%;background:#ffffff;border:2px solid #ff2d2d;color:#ff2d2d;font-weight:700;font-size:0.85rem;line-height:1">3</span></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">It displays the date and author of each pushed commit, along with a unique identifier for each commit.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+| Number | Area | What it shows |
+| --- | --- | --- |
+| 1 | Graph | Dots represent commits; lines connect commits and show where branches diverge. |
+| 2 | Description and labels | Commit messages and branch positions such as `main` and `origin/main`. The selected commit and the current branch are different concepts. |
+| 3 | Date, author, commit | The commit date shown by the current display setting, the author, and an abbreviated commit ID. The date is not the push time. |
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.5-4.png" alt="Git Graph interface sections">
+  <img src="/assets/images/2.2.5-4.png" alt="Older Git Graph screen labeling the graph, commit description and branch labels, and date, author, and commit ID areas">
 </figure>
 
 ## Review of changes
 
-When you click on a commit to review the changes, you will see the following screen. The colors of the file names have the following meanings:
-
-<div style="display:flex;justify-content:center;margin:1.25rem 0">
-  <table style="border-collapse:collapse;min-width:32rem">
-    <thead>
-      <tr style="background:#f0e1c8">
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Color</th>
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Meaning</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code style="color:#7ec36f">Green</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The file is newly created.</td>
-      </tr>
-      <tr style="background:#fdf7ef">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code style="color:#e4c75f">Yellow</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The existing file has been modified.</td>
-      </tr>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code style="color:#ff5f5f">Red</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The file has been deleted.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+Select a commit to list the files changed in that commit. In the older screenshot below, `new file.tex` was added, `revised file.txt` was modified, and `deleted file.txt` was deleted. Colors may vary with display settings, so check the file status as well.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.5-5%20(1).png" alt="Git Graph commit change review screen">
+  <img src="/assets/images/2.2.5-5%20(1).png" alt="Older Git Graph commit details showing one deleted, one added, and one modified file">
 </figure>
 
-If you want to examine the changes in more detail, you can click on a commit, and you will see the following screen. The left side shows the content before the changes, and the right side shows the content after the changes.
-
-For example, if you click on 'revised file.txt', you will see that the sentence 'Also, I like dogs' has been added, indicating the specific change made.
+Select a file in the commit's changed-file list to open the VS Code diff view. The left side shows the earlier content and the right side shows the content after the commit. In the example below, “Also, I like dogs.” was added to `revised file.txt`.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.5-6%20(1).png" alt="Git Graph detailed file change showing added text">
+  <img src="/assets/images/2.2.5-6%20(1).png" alt="Older diff view of revised file.txt showing its earlier text on the left and the added sentence Also, I like dogs. on the right">
 </figure>
 
-## To reset to an old version
+<h2 id="to-reset-to-an-old-version">Inspect an earlier version and Reset</h2>
 
-Moving between commits can be sensitive and complex. Therefore, before reverting to an old version, it is recommended to proceed from a clean state in Source Control, as shown on the right-hand side of the screen, with no pending changes.
+Select an earlier commit in the graph to inspect its changes. Inspecting a commit this way does not alter your current files or branch. Before choosing a recovery operation, check Source Control for uncommitted changes.
 
-If you are sharing your code with others, it is recommended to use 'revert' instead of 'reset'. Alternatively, using 'branch' is also recommended. However, we won't cover these topics in this tutorial.
+To undo the changes from a commit that has already been shared, `revert` creates a new commit that reverses them. The `Reset current branch to this commit` item in the older screenshot below moves the current branch; do not use it merely to inspect an earlier version.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.5-9.png" alt="Clean Source Control state before resetting to an old version">
+  <img src="/assets/images/2.2.5-9.png" alt="Older VS Code Source Control screen without uncommitted changes, alongside Git Graph">
 </figure>
 
-1. Right-click on the commit of the version you want to revert to, and click on "Reset current branch to this commit."
+The older image below shows Git Graph's **Reset current branch to this commit** menu. Reset moves the current branch to the selected commit. Check how each option affects the working files and staging area before using it.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.5-7%20(1).png" alt="Reset current branch to this commit menu in Git Graph">
+  <img src="/assets/images/2.2.5-7%20(1).png" alt="Older Git Graph context menu with Reset current branch to this Commit highlighted on an earlier commit">
 </figure>
 
-2. You will then see the right-hand side screen. You can choose one of the three options, and here are the explanations for each option:
-
-<div style="display:flex;justify-content:center;margin:1.25rem 0">
-  <table style="border-collapse:collapse;min-width:32rem">
-    <thead>
-      <tr style="background:#f0e1c8">
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Option</th>
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Meaning</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Soft</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">All commit history will be removed, but both the selected past commit and the current changes will be kept.</td>
-      </tr>
-      <tr style="background:#fdf7ef">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Mixed</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">All commit history will be removed, but the changes will be kept, accepting the selected past commit.</td>
-      </tr>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Hard</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">All changes will be discarded, and only the selected past commit will be accepted.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+| Option | Effect on the branch and files |
+| --- | --- |
+| **Soft** | Moves the branch to the selected commit while leaving the staging area and working files unchanged. |
+| **Mixed** | Moves the branch and resets the staging area to the selected commit; working files remain unchanged. |
+| **Hard** | Moves the branch and resets the staging area and tracked working files to the selected commit. Uncommitted changes may be lost. |
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.5-8.png" alt="Git Graph reset options">
+  <img src="/assets/images/2.2.5-8.png" alt="Older Git Graph Reset dialog showing Soft, Mixed, and Hard options">
 </figure>
 
-3. It is recommended to prioritize successful pushes based on the chosen option before continuing with your work.
+Resetting a branch that has already been published to GitHub can make the local and remote histories diverge, so a normal push may be rejected. To undo shared changes, consider `revert`, which records a new reversing commit. **Hard** can discard uncommitted changes; check how to preserve your work before using it.
 
-Since Version Control can be complex, it is advisable to start with cautious use of the "Hard" option. For more detailed information, please refer to the resources available at the links below.
-
-<p><a class="doc-action-link" href="https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified">Git Tools - Reset Demystified</a></p>
-
-Git Graph and reset are useful when you need to inspect or manage version history. Before changing history, check that your Source Control state is clean and make sure you understand which changes will be kept.
+For details, see Git's [reset documentation](https://git-scm.com/docs/git-reset) and [revert documentation](https://git-scm.com/docs/git-revert).
