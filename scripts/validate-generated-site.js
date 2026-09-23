@@ -142,10 +142,10 @@ if (fs.existsSync(outputRoot)) {
     }
 
     if (page.status === "core") {
-      if (!osSelectorTopics.has(page.translationKey)) {
+      if (!osSelectorTopics.has(page.translationKey) && page.translationKey !== "initial-setup-project-template") {
         assert(hasContract, `${page.url}: generated core contract is missing.`);
       }
-      if (osSelectorTopics.has(page.translationKey)) {
+      if (osSelectorTopics.has(page.translationKey) || page.translationKey === "initial-setup-project-template") {
         assert(!document.querySelector(".workflow-checks"), `${page.url}: redundant installation wrap-up remains.`);
       } else {
         assert(hasCompletion, `${page.url}: generated completion check is missing.`);

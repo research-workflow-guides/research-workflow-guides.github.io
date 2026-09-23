@@ -1,32 +1,29 @@
 ---
 layout: layouts/doc.njk
 title: Project Template
-description: Download a starter project, build it once, and confirm the environment is ready.
+description: Download seed-documents from GitHub, build check-document.tex, and preview the PDF.
 lang: en
 section: initial-setup
 order: 3
 permalink: /en/initial-setup/project-template/
 translationKey: initial-setup-project-template
 eyebrow: Step 3
-lead: Download the starter project.
-outcome: The starter project is extracted, opened as a folder, and compiled into a PDF.
-prerequisites:
-  - LaTeX, VS Code, and LaTeX Workshop are installed.
-  - The seed-documents ZIP archive can be downloaded from GitHub.
-completion: The starter project builds without errors and its PDF opens in the VS Code preview.
-commonProblems:
-  - Opening the ZIP preview instead of the extracted project folder prevents a normal workspace build.
-  - The first build may pause while MiKTeX installs a missing package.
+lead: Download the <code>seed-documents</code> starter project as a ZIP file from GitHub and extract it. Open the extracted folder in VS Code and run the first PDF build.
+verificationCard: false
+workflowChecks: false
 verification:
   status: needs-review
+  screenshots: needs-update
   environment: The guide is being written for Windows; macOS and Linux instructions are planned for later review.
   workflow: GitHub ZIP download, project extraction, VS Code folder opening, and first PDF build.
-  lastVerified: Pending a current-product walkthrough.
+  lastVerified: Repository and official documentation checked on 2026-09-23. Windows execution check pending.
   support: Windows guidance under review. macOS and Linux guidance is planned.
-  scopeNote: This step currently follows Windows. macOS and Linux procedures will be written and verified later.
+  scopeNote: The Windows procedure still needs an end-to-end check. macOS and Linux guidance will be written later.
 toc:
   - id: download-the-template
     label: Download the template
+  - id: run-the-first-pdf-build
+    label: Run the first PDF build
 tags:
   - doc
 ---
@@ -36,10 +33,9 @@ tags:
   <div class="doc-step-copy">
     <ol>
       <li>
-        <p>Open the seed-documents repository in GitHub.</p>
-        <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">seed-documents repository</a></p>
+        <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">Open the seed-documents repository</a></p>
       </li>
-      <li>Download the ZIP archive from GitHub by clicking the following button.</li>
+      <li>Above the repository's file list, click <strong>Code</strong>, then select <strong>Download ZIP</strong>.</li>
     </ol>
   </div>
   <figure class="image-frame">
@@ -50,7 +46,7 @@ tags:
 <div class="doc-step-pair">
   <div class="doc-step-copy">
     <ol start="3">
-      <li>Extract the archive and keep the folder intact — you will open the entire project folder in VS Code in the next part.</li>
+      <li>In File Explorer, right-click the downloaded ZIP file and select <strong>Extract All</strong>. Confirm that the extracted folder contains <code>check-document.tex</code> and the <code>seed-document</code> folder.</li>
     </ol>
   </div>
   <figure class="image-frame">
@@ -58,4 +54,8 @@ tags:
   </figure>
 </div>
 
-Confirm that the archive downloaded cleanly and the extracted folder contains the project files intact.
+## Run the first PDF build
+
+1. In VS Code, select **File > Open Folder...** and open the extracted top-level folder that contains `check-document.tex`.
+2. Open `check-document.tex` in Explorer. Press `Ctrl+Shift+P` to open the Command Palette, then search for and run `Build LaTeX project`. If MiKTeX prompts you to install a missing package, complete the installation before checking the build result.
+3. When the build finishes, confirm that `check-document.pdf` was created. Run `View LaTeX PDF file` from the Command Palette and check that the PDF opens in the VS Code preview.

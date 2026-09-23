@@ -239,7 +239,7 @@ const pages = [
     order: 3,
     group: "project-template",
     title: "Project Template",
-    description: "Download a starter project, build it once, and confirm the environment is ready.",
+    description: "Download seed-documents from GitHub, build check-document.tex, and preview the PDF.",
     translationKey: "initial-setup-project-template",
     status: "core"
   },
@@ -252,7 +252,7 @@ const pages = [
     order: 3,
     group: "project-template",
     title: "프로젝트 템플릿",
-    description: "시작용 프로젝트를 내려받아 첫 빌드를 실행하고 전체 도구 체인이 동작하는지 확인합니다.",
+    description: "GitHub에서 seed-documents를 내려받아 check-document.tex을 빌드하고 PDF를 확인합니다.",
     translationKey: "initial-setup-project-template",
     status: "core"
   },

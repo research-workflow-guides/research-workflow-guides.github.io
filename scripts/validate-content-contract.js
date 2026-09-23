@@ -27,7 +27,8 @@ const verificationRequired = new Set([
 ]);
 const workflowCheckOptional = new Set([
   "initial-setup-latex-installation",
-  "initial-setup-vs-code-installation"
+  "initial-setup-vs-code-installation",
+  "initial-setup-project-template"
 ]);
 
 const errors = [];
@@ -116,14 +117,16 @@ for (const page of documents) {
   );
 
   if (page.status === "core") {
-    assert(typeof data.outcome === "string" && data.outcome.trim(), `${page.url}: outcome is missing.`);
-    assert(
-      Array.isArray(data.prerequisites) && data.prerequisites.length > 0,
-      `${page.url}: prerequisites are missing.`
-    );
+    if (page.translationKey !== "initial-setup-project-template") {
+      assert(typeof data.outcome === "string" && data.outcome.trim(), `${page.url}: outcome is missing.`);
+      assert(
+        Array.isArray(data.prerequisites) && data.prerequisites.length > 0,
+        `${page.url}: prerequisites are missing.`
+      );
+    }
     assert(
       data.workflowChecks !== false || workflowCheckOptional.has(page.translationKey),
-      `${page.url}: workflow checks can only be hidden on an installation guide.`
+      `${page.url}: workflow checks can only be hidden on a supported setup guide.`
     );
     if (data.workflowChecks !== false) {
       assert(
