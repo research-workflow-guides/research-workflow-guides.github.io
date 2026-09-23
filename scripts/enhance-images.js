@@ -17,6 +17,9 @@ module.exports = function enhanceImages(html) {
   const reviewNote = screenshotsNeedUpdate
     ? isKorean ? "기존 화면 · 업데이트 필요" : "Existing screenshot · update required"
     : isKorean ? "기존 화면 · 재검증 예정" : "Existing screenshot · review pending";
+  const reviewNoteClass = screenshotsNeedUpdate
+    ? "image-review-note image-review-note--needs-update"
+    : "image-review-note";
 
   for (const figure of figures) {
     for (const image of figure.querySelectorAll("img")) {
@@ -53,9 +56,9 @@ module.exports = function enhanceImages(html) {
     if (needsReview && !figure.querySelector(".image-review-note")) {
       const caption = figure.querySelector("figcaption");
       if (caption) {
-        caption.insertAdjacentHTML("beforeend", `<span class="image-review-note">${reviewNote}</span>`);
+        caption.insertAdjacentHTML("beforeend", `<span class="${reviewNoteClass}">${reviewNote}</span>`);
       } else {
-        figure.insertAdjacentHTML("beforeend", `<figcaption class="image-review-note">${reviewNote}</figcaption>`);
+        figure.insertAdjacentHTML("beforeend", `<figcaption class="${reviewNoteClass}">${reviewNote}</figcaption>`);
       }
     }
   }

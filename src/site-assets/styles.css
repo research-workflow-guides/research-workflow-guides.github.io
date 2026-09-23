@@ -161,6 +161,8 @@ summary::marker { color: var(--muted); font-size: 12px; }
 .image-zoom-hint::after { content: "↗"; }
 .image-frame figcaption, .image-review-note { font-size: 12px; color: var(--muted); margin-top: 9px; line-height: 1.5; }
 .image-review-note { max-width: none !important; margin-bottom: 0 !important; }
+.image-frame:has(.image-review-note--needs-update) .image-zoom-link { box-shadow: 0 0 0 2px #b42318; }
+.image-frame .image-review-note--needs-update { display: inline-flex; align-items: center; width: fit-content; padding: 6px 10px; border-radius: 6px; background: #b42318; color: #fff; font-size: 13px; font-weight: 700; line-height: 1.35; }
 .image-frame--gif-result, .image-frame--plot-result { max-width: 32rem; margin-inline: auto; }
 .figure-stack { display: grid; gap: 20px; }
 .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
