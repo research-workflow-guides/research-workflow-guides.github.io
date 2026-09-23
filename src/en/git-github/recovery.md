@@ -1,19 +1,25 @@
 ---
 layout: layouts/doc.njk
 title: Recovery
-description: Recover committed work, undo local mistakes, and return safely to a known Git state.
+description: Inspect Git file changes and recover selected versions in the VS Code terminal on Windows.
 lang: en
 section: git-github
 order: 11
 permalink: /en/git-github/recovery/
 translationKey: git-recovery
 eyebrow: Optional
-lead: Git can help you recover work only after Git has recorded it.
+lead: On Windows, check Git status in the VS Code terminal and restore only the files you intend to change.
+verificationCard: false
+verification:
+  status: needs-review
+  environment: Written for the VS Code integrated Git terminal on Windows.
+  workflow: Check file status, discard or unstage changes, and recover deleted files or versions from older commits.
+  lastVerified: Official Git documentation checked on 2026-09-24. Current Windows execution awaits review.
 toc:
   - id: what-git-can-recover
     label: What Git can recover
   - id: undo-local-changes
-    label: Undo local changes
+    label: Discard working file edits
   - id: unstage-files
     label: Unstage files
   - id: recover-deleted-files
@@ -25,62 +31,84 @@ tags:
 ---
 ## What Git can recover
 
-Git is not an automatic backup for every file on your computer. It can recover work that has been recorded in Git, usually through a commit.
+What you can recover with Git depends on the file's recorded state. You can retrieve committed file versions from history. Save any uncommitted edits you may need before discarding them.
 
-If a file was never saved, staged, committed, or pushed, Git may not be able to recover it. Commit important milestones before risky edits, large rewrites, or folder cleanup.
+A newly saved file may still be untracked by Git, and staging does not create a commit in history. Before a large edit or folder cleanup, run `git status` and commit the work you need to preserve or keep a separate copy.
 
-## Undo local changes
+<h2 id="undo-local-changes">Discard working file edits</h2>
 
-If you edited a tracked file and want to return it to the last committed version, use `git restore`.
-
-```shell
-git restore path/to/file.tex
-```
-
-To discard all current local changes in tracked files:
+Before discarding anything, inspect the named file's status, unstaged diff, and staged diff:
 
 ```shell
-git restore .
+git status --short -- path/to/file.tex
+git diff -- path/to/file.tex
+git diff --cached -- path/to/file.tex
 ```
 
-Use this carefully. The current uncommitted edits will be removed.
+For a previously committed file, `git restore -- path/to/file.tex` discards unstaged edits in the working file and restores its current staged content. If you have already staged changes, that content may differ from the last commit.
+
+```shell
+git restore -- path/to/file.tex
+```
+
+To discard both staged and unstaged edits in this committed file and return it to the last commit, review those differences first, then run:
+
+```shell
+git restore --staged --worktree -- path/to/file.tex
+```
+
+This discards the current edits in the named file. Save anything you may need in a separate copy or commit first.
 
 ## Unstage files
 
-If you used `git add` too early, remove the file from the staging area without deleting your edits:
+If you used `git add` too early, remove the named file from the next commit's staged list while keeping its working file:
 
 ```shell
-git restore --staged path/to/file.tex
+git restore --staged -- path/to/file.tex
 ```
 
-This keeps the file changed in your folder, but it is no longer staged for the next commit.
+An existing tracked file appears as an unstaged change; a newly added file may appear as untracked. Check the result with `git status`.
 
 ## Recover deleted files
 
-If a tracked file was deleted by mistake, restore it from the last committed version:
+If you deleted a committed file, run `git status` to see whether the deletion is staged. Restore an unstaged deletion with:
 
 ```shell
-git restore path/to/file.tex
+git restore -- path/to/file.tex
 ```
 
-This works only if Git already knew about the file. A new untracked file that was never committed cannot be recovered this way.
+For a staged deletion, use this command to recover the last committed version:
+
+```shell
+git restore --staged --worktree -- path/to/file.tex
+```
+
+These commands cannot recover an untracked file that was never committed.
 
 ## Restore from an older commit
 
-If you need the version of one file from an older commit, first find the commit hash in Git Graph or with `git log`.
-
-Then restore that file from the selected commit:
+If you need an older version of a file, find its commit in Git Graph or with:
 
 ```shell
-git restore --source <commit-hash> path/to/file.tex
+git log --oneline -- path/to/file.tex
 ```
 
-This is safer than resetting the whole repository because it restores only the file you name.
-
-Before running recovery commands, check the current state:
+Replace `COMMIT_HASH` below with the hash you found. Read that version with `git show` and preserve any current edits you need:
 
 ```shell
-git status
+git show COMMIT_HASH:path/to/file.tex
 ```
 
-If the current edits may still matter, commit them, stash them, or copy the important text elsewhere before discarding changes. Prefer file-level restore commands before using broad reset commands.
+Check `git status` for staged changes to the named file before you run the next command. Then replace only that file's working copy with the selected version:
+
+```shell
+git restore --source=COMMIT_HASH --worktree -- path/to/file.tex
+```
+
+This command leaves any staged content unchanged. Review the restored file with `git diff -- path/to/file.tex`. If you want to record this version as a new commit, stage the file and commit it.
+
+```shell
+git diff -- path/to/file.tex
+```
+
+If the restored file is part of a build, save it and check the build result as well.

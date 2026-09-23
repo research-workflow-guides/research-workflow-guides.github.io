@@ -921,7 +921,7 @@ const pages = [
     order: 11,
     group: "daily-workflow",
     title: "Recovery",
-    description: "Recover committed work, undo local mistakes, and return safely to a known Git state.",
+    description: "Inspect Git file changes and recover selected versions in the VS Code terminal on Windows.",
     translationKey: "git-recovery",
     status: "troubleshooting"
   },
@@ -947,7 +947,7 @@ const pages = [
     order: 11,
     group: "daily-workflow",
     title: "복구",
-    description: "commit된 작업을 복구하고, 로컬 실수를 되돌리며, 안전하게 알고 있는 Git 상태로 돌아갑니다.",
+    description: "Windows의 VS Code 터미널에서 Git 파일 변경과 삭제를 확인하고 선택한 버전을 복구합니다.",
     translationKey: "git-recovery",
     status: "troubleshooting"
   },
