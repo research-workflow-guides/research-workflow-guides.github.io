@@ -908,7 +908,7 @@ const pages = [
     order: 10,
     group: "daily-workflow",
     title: "Source control",
-    description: "Use VS Code Source Control to stash or discard local changes.",
+    description: "Inspect, stash, and discard changes or undo an unpublished commit in VS Code on Windows.",
     translationKey: "git-source-control",
     status: "optional"
   },
@@ -934,7 +934,7 @@ const pages = [
     order: 10,
     group: "daily-workflow",
     title: "소스 컨트롤",
-    description: "VS Code Source Control에서 변경 사항을 stash하거나 discard합니다.",
+    description: "Windows의 VS Code Source Control에서 변경을 확인하고 임시 저장·취소하며 로컬 커밋을 되돌립니다.",
     translationKey: "git-source-control",
     status: "optional"
   },

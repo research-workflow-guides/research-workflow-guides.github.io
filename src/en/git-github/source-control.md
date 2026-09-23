@@ -1,19 +1,27 @@
 ---
 layout: layouts/doc.njk
 title: Source control
-description: Use VS Code Source Control to stash or discard local changes.
+description: Inspect, stash, and discard changes or undo an unpublished commit in VS Code on Windows.
 lang: en
 section: git-github
 order: 10
 permalink: /en/git-github/source-control/
 translationKey: git-source-control
 eyebrow: Optional
-lead: Manage local changes by saving them for later or discarding them when they are no longer needed.
+lead: On Windows, inspect file changes in VS Code Source Control, save unfinished work for later, or discard unwanted changes. You can also undo a local commit that has not been published.
+verificationCard: false
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: Written for VS Code Source Control and the integrated terminal on Windows.
+  workflow: Inspect changes, create and apply a stash, discard changes, and undo an unpublished local commit.
+  lastVerified: VS Code and official Git documentation checked on 2026-09-24. Current Windows screens await review.
+  support: The existing images show older Source Control screens and generated files and need updating.
 toc:
   - id: open-changes
     label: Open changes
   - id: stash
-    label: Stash
+    label: Save changes with Stash
   - id: discard-changes
     label: Discard Changes
   - id: undo-local-commits
@@ -23,100 +31,92 @@ tags:
 ---
 ## Open changes
 
-Open the Source Control view to see files that have changed since the last commit.
+On Windows, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> to open Source Control and see modified, added, or deleted files. **Changes** lists files that are not staged; **Staged Changes** lists files selected for the next commit.
 
 <figure class="image-frame">
   <img src="/assets/images/source-control-1.png" alt="VS Code Source Control view showing changed files">
 </figure>
 
-The number on the Source Control icon and next to Changes shows how many files currently have changes.
+The Source Control badge summarizes changed items in the repository. The number beside **Changes** counts items that have not been staged.
 
-Click a file under Changes to inspect what changed.
+Select a file under **Changes** to inspect its changes.
 
 <figure class="image-frame">
   <img src="/assets/images/source-control-2.png" alt="Changed file selected in VS Code Source Control">
 </figure>
 
-VS Code opens a comparison view. The left side shows the previous version, and the right side shows the current working tree. Red highlights show removed or previous content, while green highlights show added or current content.
+In a side-by-side diff, the last committed file appears on the left and the current working file on the right. A narrow editor may show an inline diff instead. Use the added and removed line indicators to inspect the change.
 
 <figure class="image-frame">
   <img src="/assets/images/source-control-3.png" alt="VS Code comparison view showing old and current file versions">
 </figure>
 
-## Stash
+<h2 id="stash">Save changes with Stash</h2>
 
-If you want to temporarily save your changes, you can use the 'stash' feature in Source Control. Stashing can be useful for version control purposes.
+Use a stash to put uncommitted changes aside while you handle another task. A stash stays local and is not uploaded to GitHub by Push. Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, run `Git: Stash`, and enter a descriptive message. To include new, untracked files as well, choose `Git: Stash (Include Untracked)`.
 
-To create a stash, click on 'Stash'.
+The older screenshot below also shows generated `.aux`, `.log`, and `.pdf` files. Check whether a new file belongs in the stash before including it; use [Gitignore](/en/git-github/gitignore/) rules for generated files you normally exclude from commits.
 
 <figure class="image-frame">
-  <img src="/assets/images/stash-1.png" alt="VS Code Source Control stash command">
+  <img src="/assets/images/stash-1.png" alt="Older VS Code Source Control menu showing the Stash command beside generated files">
 </figure>
 
-To apply a stash, click on 'Apply Stash'.
+Use `Git: View Stash` to inspect a stash first. `Git: Apply Stash...` restores the selected changes and keeps the stash entry; `Git: Pop Stash...` removes the entry after applying it successfully. Resolve any conflicts with current work before continuing.
 
 <figure class="image-frame">
-  <img src="/assets/images/stash-2.png" alt="VS Code Source Control apply stash command">
+  <img src="/assets/images/stash-2.png" alt="Older VS Code Source Control menu showing Apply Latest Stash and Apply Stash commands">
 </figure>
 
 ## Discard Changes
 
-If you want to discard the changes, you can simply click on the following buttons in the source control.
+To discard uncommitted changes in one file, right-click it under **Changes** and select **Discard Changes**. A new, untracked file has no earlier version to restore and may be removed, so check the target first.
 
 <figure class="image-frame">
-  <img src="/assets/images/discard-changes-1.png" alt="VS Code Source Control discard changes buttons">
+  <img src="/assets/images/discard-changes-1.png" alt="Older Source Control screen highlighting the discard action for an untracked file">
 </figure>
 
-To discard all changes, click the button next to Changes.
+The discard button beside **Changes** discards changes across the list. Use the file action when you only intend to discard one file, and review the confirmation dialog's file list before discarding everything.
 
 <figure class="image-frame">
-  <img src="/assets/images/discard-changes-2.png" alt="VS Code Source Control discard all changes button">
+  <img src="/assets/images/discard-changes-2.png" alt="Older Source Control screen highlighting the discard action for the entire Changes list">
 </figure>
 
 ## Undo local commits
 
-If you already committed by mistake but have not pushed yet, you can undo the commit and return the files to unstaged changes.
+If you made the last commit but have not pushed it, you can remove that commit while keeping its file changes in your working folder. First check the current branch and the commit you intend to undo.
 
-For example, after making a mistaken commit, Source Control may show a `Sync Changes 1↑` button. This means one local commit is waiting to be pushed.
+In the example below, `Sync Changes 1↑` means the local branch is one commit ahead of its remote branch. Confirm that the commit has not been pushed before continuing.
 
 <figure class="image-frame">
-  <img src="/assets/images/mistake-commit-1.png" alt="VS Code Source Control before making a mistaken commit">
+  <img src="/assets/images/mistake-commit-1.png" alt="Older VS Code screen preparing to commit seven new image files and one modified file">
 </figure>
 
 <figure class="image-frame">
-  <img src="/assets/images/mistake-commit-2.png" alt="VS Code Source Control showing one local commit waiting to sync">
+  <img src="/assets/images/mistake-commit-2.png" alt="Older VS Code screen showing Sync Changes 1↑ for a local branch one commit ahead of the remote">
 </figure>
 
-To undo only the latest local commit, run:
+To undo only the latest unpublished commit on the current branch, run this command in the integrated terminal:
 
 ```shell
 git reset --mixed HEAD~1
 ```
 
-This command cancels the latest commit, keeps the file changes, and returns those changes to the unstaged area.
+This command moves the current branch back one commit and resets the staging area while keeping the working files. Modified existing files appear under **Changes**; files first added in the undone commit may appear as untracked files.
 
 <figure class="image-frame">
-  <img src="/assets/images/mistake-commit-3.png" alt="Terminal running git reset mixed HEAD one commit back">
+  <img src="/assets/images/mistake-commit-3.png" alt="Older PowerShell terminal running git reset --mixed HEAD~1">
 </figure>
 
-After the reset, the files appear under Changes again.
+After the reset, inspect the remaining files in Source Control and stage only those you still need.
 
 <figure class="image-frame">
-  <img src="/assets/images/mistake-commit-4.png" alt="VS Code Source Control showing files returned to unstaged changes">
+  <img src="/assets/images/mistake-commit-4.png" alt="Older VS Code screen showing modified and untracked files in Changes after Reset">
 </figure>
 
-To undo the latest two local commits, change the number:
+Do not use this Reset command for a commit that has already been pushed or shared. If you need a new commit that reverses published changes, see the [Git revert documentation](https://git-scm.com/docs/git-revert).
 
-```shell
-git reset --mixed HEAD~2
-```
-
-Use this only for commits that have not been pushed yet. If the commit has already been pushed or shared with others, do not reset it unless you understand the consequences.
-
-Before you discard changes, apply a stash, or reset a local commit, check the current state first:
+Before discarding changes, applying a stash, or resetting a commit, run `git status` to review modified, staged, and untracked files. Preserve work you might need in a separate commit or copy first.
 
 ```shell
 git status
 ```
-
-If the current work might still matter, save it in a commit, stash it, or copy the important text elsewhere before running commands that remove or rewrite local history.
