@@ -1,22 +1,24 @@
 ---
 layout: layouts/doc.njk
 title: Git status
-description: Check what changed before you stage, commit, or push.
+description: Check the Git status of project files moved into the cloned repository.
 lang: en
 section: git-github
 order: 6
 permalink: /en/git-github/git-status/
 translationKey: git-status
 eyebrow: Topic 1
-lead: Check what changed before you stage, commit, or push.
-outcome: The current branch and every changed, staged, or untracked file can be identified before committing.
-prerequisites:
-  - The terminal is open inside a Git repository.
-  - At least one known file change is available for comparison.
-completion: "`git status` reports the expected branch and the listed files match the changes you intended to make."
-commonProblems:
-  - A “not a git repository” error means the terminal is outside the project repository.
-  - Generated LaTeX files should be reviewed before staging and may belong in `.gitignore`.
+lead: After moving the project source files into the cloned repository, run <code>git status</code> to see which files Git does not yet track.
+workflowChecks: false
+verificationCard: false
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: Written for the VS Code integrated terminal on Windows.
+  workflow: Run git status in the cloned repository and identify untracked files.
+  lastVerified: Git documentation and local empty-repository output checked on 2026-09-23. Current Windows screens await review.
+  support: The existing terminal image needs updating. macOS and Linux screens await review.
+  scopeNote: This guide uses Windows screens. macOS and Linux screens will be reviewed later.
 toc:
   - id: check-the-current-state
     label: Check the current state
@@ -27,53 +29,24 @@ tags:
 ---
 ## Check the current state
 
-Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then enter the following command:
+With the cloned repository folder open in VS Code, select **Terminal > New Terminal**. Check that the terminal opened in that repository folder, then run `git status`.
 
 ```shell
 git status
 ```
 
-Then you will see a result like this in the terminal:
+Before the first commit, the output may show `No commits yet` and `Untracked files`. The existing image shows a repository with commits, so its `origin/main` line may differ from your result.
 
 <figure class="image-frame">
-  <img src="/assets/images/gitstatus.png" alt="Git status output in the terminal">
+  <img src="/assets/images/gitstatus.png" alt="Older Windows terminal showing a new file under Untracked files in a repository that already has commits">
 </figure>
 
 ## Basic file states
 
-The most important file states are:
+After moving the files, look under `Untracked files`. Later, distinguish `Changes not staged for commit` from `Changes to be committed`.
 
-<div style="display:flex;justify-content:center;margin:1.25rem 0">
-  <table style="border-collapse:collapse;min-width:32rem">
-    <thead>
-      <tr style="background:#f0e1c8">
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">State</th>
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Meaning</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>tracked</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">Git already knows about the file and watches it for changes.</td>
-      </tr>
-      <tr style="background:#fdf7ef">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>modified</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The file has changed locally, but the change is not staged yet.</td>
-      </tr>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>staged</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The change has been added to the next commit.</td>
-      </tr>
-      <tr style="background:#fdf7ef">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>committed</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The change has been saved in the local Git history.</td>
-      </tr>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>ignored</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">Git intentionally leaves the file out because of an ignore rule.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+- **Untracked files**: New files that Git does not yet track.
+- **Changes not staged for commit**: Changes to tracked files that have not been prepared for the next commit.
+- **Changes to be committed**: Changes prepared for the next commit.
 
-If you can recognize the basic file states, you are ready to use `git status` more deliberately.
+If generated PDFs or LaTeX auxiliary files appear in `git status`, check whether you need them before staging. Add files you want to exclude to [`.gitignore`](/en/git-github/gitignore/).

@@ -828,7 +828,7 @@ const pages = [
     order: 6,
     group: "daily-workflow",
     title: "Git status",
-    description: "Check what changed before you stage, commit, or push.",
+    description: "Check the Git status of project files moved into the cloned repository.",
     translationKey: "git-status",
     status: "core"
   },
@@ -841,7 +841,7 @@ const pages = [
     order: 6,
     group: "daily-workflow",
     title: "Git status",
-    description: "stage, commit, push 전에 무엇이 바뀌었는지 확인합니다.",
+    description: "클론한 저장소에 옮긴 프로젝트 파일의 Git 상태를 확인합니다.",
     translationKey: "git-status",
     status: "core"
   },
