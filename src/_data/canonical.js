@@ -532,7 +532,7 @@ const pages = [
     order: 9,
     group: "optional-topics",
     title: "Generate a redlined PDF",
-    description: "Compare an old TeX file with a revised TeX file and compile a redlined PDF.",
+    description: "Use latexdiff on Windows to compare two TeX files and compile a redlined PDF.",
     translationKey: "writing-revision-pdf-latexdiff",
     status: "optional"
   },
@@ -545,7 +545,7 @@ const pages = [
     order: 9,
     group: "optional-topics",
     title: "수정 사항이 표시된 PDF 만들기",
-    description: "이전 TeX 파일과 현재 TeX 파일을 비교해 수정 사항이 표시된 PDF를 만듭니다.",
+    description: "Windows에서 latexdiff로 두 TeX 파일을 비교하고 변경 표시 PDF를 만듭니다.",
     translationKey: "writing-revision-pdf-latexdiff",
     status: "optional"
   },
