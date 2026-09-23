@@ -309,7 +309,7 @@ const pages = [
     order: 3,
     group: "main-topics",
     title: "Settings",
-    description: "Set the small VS Code and LaTeX Workshop defaults that keep the writing loop calm.",
+    description: "Check LaTeX Workshop shortcuts, user settings, and auto-build options in VS Code on Windows.",
     translationKey: "writing-settings",
     status: "core"
   },
@@ -322,7 +322,7 @@ const pages = [
     order: 3,
     group: "main-topics",
     title: "설정",
-    description: "VS Code와 LaTeX Workshop의 기본 설정을 정리해 반복 작업을 안정화합니다.",
+    description: "Windows VS Code에서 LaTeX Workshop 단축키, 사용자 설정, 자동 빌드 옵션을 확인합니다.",
     translationKey: "writing-settings",
     status: "core"
   },

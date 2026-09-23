@@ -1,28 +1,24 @@
 ---
 layout: layouts/doc.njk
 title: Settings
-description: Set the small VS Code and LaTeX Workshop defaults that keep the writing loop calm.
+description: Check LaTeX Workshop shortcuts, user settings, and auto-build options in VS Code on Windows.
 lang: en
 section: writing-in-vs-code
 order: 3
 permalink: /en/writing-in-vs-code/settings/
 translationKey: writing-settings
 eyebrow: Step 3
-lead: Keep the settings small and durable. You only need the defaults that make build, preview, and cleanup predictable.
-outcome: VS Code exposes a small, predictable set of LaTeX build, preview, and cleanup actions.
-prerequisites:
-  - The manuscript project is open as a VS Code workspace.
-  - LaTeX Workshop is installed and enabled.
-completion: The configured build and preview commands run from the Command Palette and produce the expected PDF.
-commonProblems:
-  - User settings and workspace settings can override each other.
-  - A copied setting may use an outdated LaTeX Workshop command name.
+lead: After building and previewing <code>seed-document.tex</code> in the previous step, review LaTeX Workshop settings in VS Code on Windows. Change only the settings you need, then check the build and preview again.
+verificationCard: false
+workflowChecks: false
 verification:
   status: needs-review
-  environment: Windows is the detailed path; macOS and Linux share the same VS Code settings model.
-  workflow: Command Palette discovery, user and workspace settings, build, preview, and cleanup commands.
-  lastVerified: Pending a current-product walkthrough.
-  support: All three operating systems use the same settings model; keyboard labels differ by platform.
+  screenshots: needs-update
+  environment: Written around Windows screenshots; macOS and Linux screen guidance awaits review.
+  workflow: Command Palette, Keyboard Shortcuts, User and Workspace settings, and builds on save.
+  lastVerified: Official VS Code and LaTeX Workshop documentation and settings example repository checked on 2026-09-23. Windows execution check pending.
+  support: Existing Windows screenshots await current-version review. macOS and Linux steps will be written and checked later.
+  scopeNote: This page uses Windows screenshots. The existing images need updating, and macOS and Linux steps will be written and checked later.
 toc:
   - id: start-with-command-names
     label: Start with command names
@@ -39,18 +35,18 @@ tags:
 ---
 ## Start with command names
 
-Before binding keys, learn the command names you actually use:
+Before changing settings, run `Build LaTeX project` and `View LaTeX PDF file` from the Command Palette (`Ctrl+Shift+P`) to check the current build and preview behavior.
 
-- build LaTeX project
-- view PDF
-- SyncTeX from cursor
-- clean auxiliary files
+- `Build LaTeX project`: build the manuscript
+- `View LaTeX PDF file`: preview the PDF
+- `SyncTeX from cursor`: find the cursor position in the PDF
+- `Clean up auxiliary files`: remove build auxiliary files
 
-The Command Palette is the fastest place to discover which commands deserve a shortcut.
+If you use a command repeatedly, check its current binding in Keyboard Shortcuts and assign a new combination only when it helps.
 
 <div class="doc-step-pair">
   <div>
-    <p>Open the keyboard shortcuts view first. This is the cleanest place to see what VS Code already exposes before you add anything new.</p>
+    <p>Press <kbd>Ctrl</kbd>+<kbd>K</kbd>, then <kbd>Ctrl</kbd>+<kbd>S</kbd> to open Keyboard Shortcuts. You can also run <strong>Preferences: Open Keyboard Shortcuts</strong> from the Command Palette.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/open-keyboard-shortcuts.png" alt="VS Code Command Palette showing Preferences Open Keyboard Shortcuts">
@@ -60,7 +56,7 @@ The Command Palette is the fastest place to discover which commands deserve a sh
 
 <div class="doc-step-pair">
   <div>
-    <p>Then filter the list to LaTeX Workshop commands so the actions you care about are easier to compare.</p>
+    <p>Enter <code>LaTeX Workshop</code> in the Keyboard Shortcuts search box. Check the listed commands and their current bindings, then choose one to change.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/latex-workshop-shortcuts-list.png" alt="VS Code Keyboard Shortcuts filtered to LaTeX Workshop commands">
@@ -70,23 +66,21 @@ The Command Palette is the fastest place to discover which commands deserve a sh
 
 ## Promote repeat actions
 
-Once the daily loop is clear, turn the most repeated actions into keyboard shortcuts.
-
-Two or three good bindings are usually more valuable than a long keymap you cannot remember.
+Check the existing binding first. Choose one frequently used command without a convenient shortcut and assign a new one.
 
 <div class="doc-step-pair">
   <div>
-    <p>If the list is still too broad, search for one exact command before binding it. The screenshot below shows one command-focused search example.</p>
+    <p>For example, add <code>environment</code> to the search box to show LaTeX Workshop commands whose names contain that word.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="VS Code Keyboard Shortcuts view filtered to one environment-related LaTeX Workshop command">
+    <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="LaTeX Workshop shortcuts filtered by the word environment">
 
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>After choosing the command, enter the key combination you actually want to remember. The important step is picking a repeat action first, then adding the key.</p>
+    <p>Select the command, press the desired key combination in the shortcut input, then press <kbd>Enter</kbd> to save it.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/select-shortcut-command.png" alt="VS Code Keyboard Shortcuts view with one command selected for keybinding entry">
@@ -96,7 +90,7 @@ Two or three good bindings are usually more valuable than a long keymap you cann
 
 <div class="doc-step-pair">
   <div>
-    <p>A good example is <strong>SyncTeX from cursor</strong>, because it is useful often enough to justify a shortcut in a long manuscript.</p>
+    <p><strong>SyncTeX from cursor</strong> jumps from the source cursor to the corresponding PDF position. On Windows, try its default shortcut, <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd>; search for the command in Keyboard Shortcuts if you want to change it.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="VS Code Keyboard Shortcuts view showing LaTeX Workshop SyncTeX from cursor command">
@@ -108,7 +102,7 @@ Two or three good bindings are usually more valuable than a long keymap you cann
 
 <div class="doc-step-pair">
   <div>
-    <p>Start from the Command Palette and open your user settings. This keeps the first changes explicit and easy to undo.</p>
+    <p>On Windows, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and run <strong>Preferences: Open User Settings</strong> from the Command Palette. User settings apply to all your VS Code projects.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/open-user-settings.png" alt="VS Code Command Palette showing Preferences Open User Settings">
@@ -116,15 +110,11 @@ Two or three good bindings are usually more valuable than a long keymap you cann
   </figure>
 </div>
 
+To apply a setting only to this project, run `Preferences: Open Workspace Settings` from the Command Palette. To open the JSON file directly, run `Preferences: Open Workspace Settings (JSON)`. VS Code stores it in the project’s `.vscode/settings.json`, and it takes precedence over user settings.
+
 <div class="doc-step-pair">
   <div>
-    <p>If you prefer to inspect the settings files directly, first locate the VS Code <code>Code/User</code> folder for your operating system. The screenshot below shows the Windows location. The path where it lives depends on your operating system:</p>
-
-    <ul>
-      <li>Windows: <code>%APPDATA%\Code\User</code></li>
-      <li>macOS: <code>$HOME/Library/Application Support/Code/User</code></li>
-      <li>Linux: <code>$HOME/.config/Code/User</code></li>
-    </ul>
+    <p>To edit <code>settings.json</code> directly, run <strong>Preferences: Open User Settings (JSON)</strong> from the Command Palette. For the default Windows profile, the file is at <code>%APPDATA%\Code\User\settings.json</code>.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/code-user-folder.png" alt="Windows File Explorer opened to the VS Code Code User folder">
@@ -135,8 +125,8 @@ Two or three good bindings are usually more valuable than a long keymap you cann
 <div class="doc-step-pair">
   <div>
     <div class="doc-action-row">
-      <p>Inside that folder, confirm where <code>settings.json</code> and <code>keybindings.json</code> live so you know what file you are editing. You can use the <code>settings.json</code> and <code>keybindings.json</code> files from the default document pack.</p>
-      <a class="doc-action-link" href="https://github.com/research-workflow-guides/setting">Default document pack</a>
+      <p><code>settings.json</code> stores user settings, and <code>keybindings.json</code> stores customized shortcuts. When using the linked settings example repository, add only the entries you need to your current files.</p>
+      <a class="doc-action-link" href="https://github.com/research-workflow-guides/setting">Settings example repository</a>
     </div>
   </div>
   <figure class="image-frame">
@@ -147,11 +137,11 @@ Two or three good bindings are usually more valuable than a long keymap you cann
 
 ## Useful defaults
 
-The most practical early settings are:
+Check LaTeX Workshop’s defaults first. The options below control building, PDF preview, and auxiliary-file cleanup.
 
 <div class="doc-step-pair">
   <div>
-    <p>Inside Settings, narrow the view to LaTeX Workshop before you start changing values. This keeps you focused on the settings that actually affect the writing loop.</p>
+    <p>Enter <code>LaTeX Workshop</code> in the Settings search box. Use the User tab for values shared across your projects and the Workspace tab for values specific to this project.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/legacy/writing-core/settings/search-latex-workshop-settings.png" alt="VS Code Settings filtered to LaTeX Workshop extension settings">
@@ -159,21 +149,19 @@ The most practical early settings are:
   </figure>
 </div>
 
-- keep PDF preview behavior stable
-- choose a clear cleanup policy
-- avoid experimental recipes until the default recipe works
+- `latex-workshop.latex.autoBuild.run`: defaults to `onFileChange`; use `onSave` to build when saving
+- `latex-workshop.view.pdf.viewer`: defaults to `tab`
+- `latex-workshop.latex.autoClean.run`: defaults to `never`
+- `latex-workshop.latex.recipe.default`: defaults to `first`
 
 ## Example settings
 
-Add these entries to your `settings.json` file, or merge them into the existing object if the file already has settings.
+To build when you save a `.tex` file, add the following entry inside the User or Workspace `settings.json` object you chose above. Keep your other settings in place.
 
 ```json
 {
-  "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latex.clean.enabled": true,
-  "latex-workshop.latex.recipe.default": "lastUsed"
+  "latex-workshop.latex.autoBuild.run": "onSave"
 }
 ```
 
-Confirm that saving a file behaves as expected, PDF preview opens in the place you want, and cleanup does not remove files you still need.
+Add a short test phrase to the body of `seed-document.tex` and save it. Check that LaTeX Workshop builds automatically and the phrase appears in the PDF preview, then remove the phrase and save again.
