@@ -13,10 +13,7 @@ outcome: MiKTeX, Perl, and latexmk are installed and available from a new termin
 prerequisites:
   - Permission to install software on the computer.
   - A stable internet connection for installers and LaTeX packages.
-completion: A new terminal prints version information for both `perl --version` and `latexmk -v`.
-commonProblems:
-  - A package-install prompt may be hidden behind VS Code during the first build.
-  - A newly installed command may require closing and reopening the terminal.
+workflowChecks: false
 verification:
   status: needs-review
   screenshots: needs-update

@@ -18,8 +18,6 @@ module.exports = {
     breadcrumb: "Breadcrumb",
     previous: "Previous",
     next: "Next",
-    previousCore: "Previous core step",
-    nextCore: "Next core step",
     outcome: "Outcome",
     prerequisites: "Before you start",
     commonProblems: "Common problems",
@@ -31,7 +29,6 @@ module.exports = {
     verificationDate: "Last verified",
     verificationSupport: "Operating-system support",
     latestUpdate: "Latest update:",
-    oldVersion: "Old Version",
     support: "Support"
   },
   ko: {
@@ -53,8 +50,6 @@ module.exports = {
     breadcrumb: "경로",
     previous: "이전",
     next: "다음",
-    previousCore: "이전 핵심 단계",
-    nextCore: "다음 핵심 단계",
     outcome: "완료할 작업",
     prerequisites: "시작 전 확인",
     commonProblems: "자주 발생하는 문제",
@@ -66,7 +61,6 @@ module.exports = {
     verificationDate: "마지막 검증",
     verificationSupport: "운영체제 지원",
     latestUpdate: "최근 업데이트:",
-    oldVersion: "이전 버전",
     support: "후원"
   }
 };

@@ -197,8 +197,7 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
 .workflow-check-block p, .workflow-check-block li { font-size: 15px; }
 .workflow-completion { border-left: 2px solid var(--blue); padding-left: 24px; }
 .page-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; border-top: 1px solid var(--line); margin-top: 48px; padding-top: 24px; }
-.nav-panel { display: flex; flex-direction: column; gap: 6px; text-decoration: none; padding: 12px 0; }
-.nav-panel > span { color: var(--muted); font-size: 12px; }
+.nav-panel { display: block; text-decoration: none; padding: 12px 0; }
 .nav-panel strong { font-size: 16px; font-weight: 550; }
 .nav-panel-next { text-align: right; grid-column: 2; }
 /* Homes and classified lists use the same restrained visual vocabulary. */

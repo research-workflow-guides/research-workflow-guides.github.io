@@ -76,6 +76,7 @@ if (fs.existsSync(outputRoot)) {
     const html = fs.readFileSync(htmlPath, "utf8");
     const document = parse(html);
     documents.set(htmlPath, document);
+    assert(!document.querySelector(".footer-old-version"), `${htmlPath}: obsolete version link remains in the footer.`);
 
     for (const element of document.querySelectorAll("[href], [src]")) {
       for (const attribute of ["href", "src"]) {
@@ -118,6 +119,10 @@ if (fs.existsSync(outputRoot)) {
     const hasContract = Boolean(document.querySelector(".workflow-contract"));
     const hasCompletion = Boolean(document.querySelector(".workflow-checks .workflow-completion"));
     const osSelector = document.querySelector(".os-selector");
+    for (const link of document.querySelectorAll(".page-nav .nav-panel")) {
+      assert(!link.querySelector(":scope > span"), `${page.url}: redundant navigation label remains.`);
+      assert(Boolean(link.getAttribute("aria-label")), `${page.url}: navigation link has no direction label.`);
+    }
 
     if (osSelectorTopics.has(page.translationKey)) {
       assert(Boolean(osSelector), `${page.url}: operating-system selector is missing.`);
@@ -142,7 +147,11 @@ if (fs.existsSync(outputRoot)) {
       if (!osSelectorTopics.has(page.translationKey)) {
         assert(hasContract, `${page.url}: generated core contract is missing.`);
       }
-      assert(hasCompletion, `${page.url}: generated completion check is missing.`);
+      if (page.translationKey === "initial-setup-latex-installation") {
+        assert(!document.querySelector(".workflow-checks"), `${page.url}: redundant LaTeX wrap-up remains.`);
+      } else {
+        assert(hasCompletion, `${page.url}: generated completion check is missing.`);
+      }
     } else {
       assert(!hasContract, `${page.url}: non-core page entered the core document contract.`);
     }

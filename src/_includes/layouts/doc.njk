@@ -42,7 +42,7 @@ pageClass: page-doc
     {% endif %}
     {% if verification and verification.scopeNote %}<p class="platform-scope" role="note">{{ verification.scopeNote }}</p>{% endif %}
     <div class="prose">{{ content | safe }}</div>
-    {% if isCoreDocument %}
+    {% if isCoreDocument and workflowChecks != false %}
       <section class="workflow-checks">
         <div class="workflow-check-block"><h2>{{ currentUi.commonProblems }}</h2><ul>{% for problem in commonProblems %}<li>{{ problem | inlineMarkdown | safe }}</li>{% endfor %}</ul></div>
         <div class="workflow-check-block workflow-completion"><h2>{{ currentUi.completion }}</h2><p>{{ completion | inlineMarkdown | safe }}</p></div>
@@ -50,8 +50,8 @@ pageClass: page-doc
     {% endif %}
     {% if prevPage or nextPage %}
       <nav class="page-nav" aria-label="{{ currentUi.navigation }}">
-        {% if prevPage %}<a class="nav-panel nav-panel-previous" href="{{ prevPage.url }}"><span>{{ currentUi.previousCore if isCoreDocument else currentUi.previous }}</span><strong><span aria-hidden="true">← </span>{{ prevPage.title }}</strong></a>{% endif %}
-        {% if nextPage %}<a class="nav-panel nav-panel-next" href="{{ nextPage.url }}"><span>{{ currentUi.nextCore if isCoreDocument else currentUi.next }}</span><strong>{{ nextPage.title }}<span aria-hidden="true"> →</span></strong></a>{% endif %}
+        {% if prevPage %}<a class="nav-panel nav-panel-previous" href="{{ prevPage.url }}" aria-label="{{ currentUi.previous }}: {{ prevPage.title }}"><strong><span aria-hidden="true">← </span>{{ prevPage.title }}</strong></a>{% endif %}
+        {% if nextPage %}<a class="nav-panel nav-panel-next" href="{{ nextPage.url }}" aria-label="{{ currentUi.next }}: {{ nextPage.title }}"><strong>{{ nextPage.title }}<span aria-hidden="true"> →</span></strong></a>{% endif %}
       </nav>
     {% endif %}
   </article>

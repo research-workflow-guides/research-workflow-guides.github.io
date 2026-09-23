@@ -13,10 +13,7 @@ outcome: MiKTeX, Perl, latexmk가 설치되어 새 터미널에서 실행됩니�
 prerequisites:
   - 컴퓨터에 소프트웨어를 설치할 권한이 필요합니다.
   - 설치 파일과 LaTeX 패키지를 받을 수 있는 안정적인 인터넷 연결이 필요합니다.
-completion: 새 터미널에서 `perl --version`과 `latexmk -v`가 모두 버전 정보를 출력합니다.
-commonProblems:
-  - 첫 빌드 중 패키지 설치 창이 VS Code 뒤에 숨어 있을 수 있습니다.
-  - 새로 설치한 명령을 사용하려면 터미널을 닫고 다시 열어야 할 수 있습니다.
+workflowChecks: false
 verification:
   status: needs-review
   screenshots: needs-update

@@ -118,13 +118,19 @@ for (const page of documents) {
       `${page.url}: prerequisites are missing.`
     );
     assert(
-      typeof data.completion === "string" && data.completion.trim(),
-      `${page.url}: completion check is missing.`
+      data.workflowChecks !== false || page.translationKey === "initial-setup-latex-installation",
+      `${page.url}: workflow checks can only be hidden on the LaTeX installation guide.`
     );
-    assert(
-      Array.isArray(data.commonProblems) && data.commonProblems.length > 0,
-      `${page.url}: commonProblems are missing.`
-    );
+    if (data.workflowChecks !== false) {
+      assert(
+        typeof data.completion === "string" && data.completion.trim(),
+        `${page.url}: completion check is missing.`
+      );
+      assert(
+        Array.isArray(data.commonProblems) && data.commonProblems.length > 0,
+        `${page.url}: commonProblems are missing.`
+      );
+    }
   }
 
   if (verificationRequired.has(page.translationKey)) {

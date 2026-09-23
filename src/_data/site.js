@@ -3,7 +3,6 @@ module.exports = {
   shortName: "Guidebook",
   description:
     "A bilingual practical guide for writing LaTeX research documents in VS Code and managing them with GitHub.",
-  oldVersionUrl: "https://sites.google.com/view/a-30-year-journey/",
   sponsorUrl: "https://github.com/sponsors/kyjung2357",
   authorLine: "Kiyuob Jung, Kiwoong Kwon",
   kiwoongAuthor: {
