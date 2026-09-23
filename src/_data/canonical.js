@@ -426,7 +426,7 @@ const pages = [
     order: 2,
     group: "collaboration",
     title: "Overleaf",
-    description: "If your collaborator uses Overleaf instead of VS Code, you can still work in VS Code by connecting Overleaf and GitHub.",
+    description: "Import a GitHub repository used in VS Code on Windows into Overleaf and synchronize it manually.",
     translationKey: "git-overleaf",
     logo: "/assets/images/overleaf-logo.png",
     status: "optional"
@@ -440,7 +440,7 @@ const pages = [
     order: 2,
     group: "collaboration",
     title: "Overleaf",
-    description: "협업자가 VS Code 대신 Overleaf를 사용한다면, Overleaf와 GitHub를 연결해 VS Code에서 작업할 수 있습니다.",
+    description: "Windows의 VS Code 작업 저장소를 Overleaf에 가져오고 GitHub와 수동으로 동기화합니다.",
     translationKey: "git-overleaf",
     logo: "/assets/images/overleaf-logo.png",
     status: "optional"
