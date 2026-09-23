@@ -38,8 +38,8 @@ const sectionDefinitions = [
       ko: "시작하기"
     },
     summary: {
-      en: "Prepare LaTeX and VS Code, then reach the first successful compile.",
-      ko: "LaTeX와 VS Code를 준비하고 첫 compile에 성공합니다."
+      en: "Install LaTeX and VS Code, then build the starter project's first PDF.",
+      ko: "LaTeX와 VS Code를 설치하고 시작용 프로젝트에서 첫 PDF를 만듭니다."
     },
     kicker: {
       en: "Step 1",
@@ -58,8 +58,8 @@ const sectionDefinitions = [
       ko: "VS Code에서 작성하기"
     },
     summary: {
-      en: "Edit, build, and preview a LaTeX research document in a repeatable loop.",
-      ko: "LaTeX 연구 문서를 반복적으로 편집하고 build와 preview를 수행합니다."
+      en: "Edit, build, and preview the manuscript in VS Code, and manage citations.",
+      ko: "VS Code에서 원고를 편집·빌드·미리 보고 참고문헌을 관리합니다."
     },
     kicker: {
       en: "Step 2",
@@ -78,8 +78,8 @@ const sectionDefinitions = [
       ko: "GitHub로 관리하기"
     },
     summary: {
-      en: "Record changes with Git and keep local and GitHub history aligned.",
-      ko: "Git으로 변경을 기록하고 local과 GitHub 이력을 맞춥니다."
+      en: "Record changes with Git and synchronize the local and GitHub repositories.",
+      ko: "Git으로 변경을 기록하고 로컬 저장소와 GitHub 저장소를 동기화합니다."
     },
     kicker: {
       en: "Step 3",
@@ -98,8 +98,8 @@ const sectionDefinitions = [
       ko: "함께 작업하기"
     },
     summary: {
-      en: "Use branches and pull requests for predictable small-team collaboration.",
-      ko: "branch와 pull request로 예측 가능한 소규모 팀 협업을 수행합니다."
+      en: "Work on a branch, review changes in a Pull Request, and merge them into the default branch.",
+      ko: "브랜치에서 작업하고 Pull Request로 변경을 검토해 기본 브랜치에 병합합니다."
     },
     kicker: {
       en: "Step 4",
