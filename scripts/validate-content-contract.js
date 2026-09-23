@@ -25,7 +25,8 @@ const verificationRequired = new Set([
   "git-pull-push",
   "git-collaboration",
   "git-branch",
-  "git-pull-request"
+  "git-pull-request",
+  "git-merge"
 ]);
 const workflowCheckOptional = new Set([
   "initial-setup-latex-installation",
@@ -43,7 +44,8 @@ const workflowCheckOptional = new Set([
   "git-pull-push",
   "git-collaboration",
   "git-branch",
-  "git-pull-request"
+  "git-pull-request",
+  "git-merge"
 ]);
 const summaryOptional = new Set([
   "initial-setup-project-template",
@@ -59,7 +61,8 @@ const summaryOptional = new Set([
   "git-pull-push",
   "git-collaboration",
   "git-branch",
-  "git-pull-request"
+  "git-pull-request",
+  "git-merge"
 ]);
 
 const errors = [];

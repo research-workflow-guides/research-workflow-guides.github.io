@@ -480,7 +480,7 @@ const pages = [
     order: 5,
     group: "git-for-collaboration",
     title: "Merge",
-    description: "Merge an approved Pull Request into main and synchronize the local repository.",
+    description: "Merge a reviewed pull request and update local main.",
     translationKey: "git-merge",
     status: "core"
   },
@@ -492,8 +492,8 @@ const pages = [
     slug: "merge",
     order: 5,
     group: "git-for-collaboration",
-    title: "Merge",
-    description: "승인된 Pull Request를 main에 merge하고 local repository를 동기화합니다.",
+    title: "병합",
+    description: "검토가 끝난 Pull Request를 병합하고 로컬 main을 갱신합니다.",
     translationKey: "git-merge",
     status: "core"
   },

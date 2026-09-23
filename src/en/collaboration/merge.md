@@ -1,22 +1,24 @@
 ---
 layout: layouts/doc.njk
 title: Merge
-description: Merge an approved Pull Request into main and synchronize the local repository.
+description: Merge a reviewed pull request and update local main.
 lang: en
 section: collaboration
 order: 5
 permalink: /en/collaboration/merge/
 translationKey: git-merge
 eyebrow: Topic 4
-lead: Merge the reviewed task branch through its Pull Request, then bring the resulting main history back to your local repository.
-outcome: The approved Pull Request is merged into main on GitHub and the local main branch is synchronized with it.
-prerequisites:
-  - The Pull Request has no unresolved review requests or failing required checks.
-  - The base branch and merge method have been confirmed before merging.
-completion: GitHub marks the Pull Request as merged, and local main is clean and up to date after pulling.
-commonProblems:
-  - Merging before review is complete bypasses the collaboration decision recorded in the Pull Request.
-  - Selecting an unintended merge method can produce a history shape that differs from the repository policy.
+lead: Merge the reviewed pull request into <code>main</code> on GitHub, then update local <code>main</code> in the VS Code integrated terminal on Windows.
+workflowChecks: false
+verificationCard: false
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: Written for a Windows desktop browser and the VS Code integrated terminal.
+  workflow: Merge a pull request, update local main, and optionally bring main into a work branch.
+  lastVerified: Official documentation and the command flow in a disposable local repository checked on 2026-09-23. Current Windows screens await review.
+  support: Existing images show a conflict on the new-contents work branch. macOS and Linux screens await review.
+  scopeNote: This guide uses a Windows desktop browser and the VS Code integrated terminal. macOS and Linux procedures will be reviewed later.
 toc:
   - id: what-a-merge-means
     label: What a merge means
@@ -33,87 +35,85 @@ tags:
 ---
 ## What a merge means
 
-A merge combines the commit history from one branch into another branch. In this core workflow, the task branch enters `main` through the reviewed Pull Request created in the previous document.
+Merging applies changes from a work branch to a target branch. In this guide, you merge the reviewed pull request into `main` on GitHub.
 
-Merging does not mean copying files by hand. Git compares branch histories, and GitHub records the review decision and the merge result on the Pull Request.
-
-The same Git operation can also be run directly in a local repository. Direct local merging can be useful for solo work, but it is not the ordered collaboration path because it bypasses the Pull Request review step.
+GitHub records the reviews and merge result on the pull request. The commit history added to `main` depends on the selected merge method.
 
 ## Confirm the Pull Request is ready
 
-Return to the Pull Request and check the base and compare branches one more time. The base should normally be `main`, and the compare branch should contain the task work.
+At the top of the pull request, confirm `base: main` and `compare: draft-section`. Recheck the files proposed for merging in **Files changed**.
 
-Confirm that requested changes have been addressed, required approvals are present, and required checks have passed. Read the final file diff if commits were added after the last review.
+Confirm that requested changes and the team's review are complete. If the repository requires approvals or automated checks, confirm they passed. If new commits arrived after the last review, reread the diff and request another review when needed.
 
 ## Merge the approved Pull Request
 
-Use the merge method allowed by the repository. GitHub may offer a merge commit, squash merge, or rebase merge. If the team has a documented policy, follow it rather than choosing based only on the shortest button label.
+At the bottom of the PR, check the [merge methods](https://docs.github.com/en/pull-requests/reference/pull-request-merges) allowed by the repository. **Merge pull request** preserves the individual commits and adds a merge commit; **Squash and merge** makes one commit; **Rebase and merge** reapplies commits on `main`. Follow the team's chosen method.
 
-Confirm the merge only after GitHub reports that the Pull Request is ready. When the operation finishes, GitHub marks the PR as merged and `main` contains the reviewed changes. Delete the remote task branch only after confirming that the merge completed successfully.
+After checking the merge status, select the chosen merge method and its confirmation button. Confirm that the PR shows **Merged** and the changes appear on `main`. If the team has finished using the work branch, you can then choose **Delete branch**.
 
 ## Update local main
 
-The merge happened on GitHub, so update the local repository before starting new work. Open a terminal, switch to `main`, and pull the merged history.
+After merging on GitHub, open the VS Code integrated terminal on Windows. Check and settle unfinished changes with `git status`, switch to local `main`, and pull GitHub's `main` using `--ff-only`.
 
-```shell
+```powershell
+git status
 git switch main
-git pull
+git pull --ff-only origin main
 ```
 
-Run `git status` and, when useful, `git log --oneline --graph` to confirm that local `main` is clean, up to date, and contains the merged work.
+After the pull, use `git status` to check the current branch and remaining changes, then confirm the merged files are present locally. If `--ff-only` refuses, inspect commits that exist only on local `main`.
 
 ## Bring main into a task branch
 
-Sometimes you are working on one branch, such as `new-contents`, but you need to bring in the latest work from `main`. In that case, first make sure you are on the branch that should receive the changes.
+Use this procedure only while the PR is still open and your work branch needs changes from `main`. Settle unfinished changes, then switch to `draft-section`.
 
-For example, while you are on `new-contents`, run:
-
-```shell
-git pull origin main
+```powershell
+git status
+git switch draft-section
+git fetch origin
+git merge origin/main
 ```
 
-This pulls the latest `main` branch from GitHub and merges it into the branch you are currently using.
+`git fetch origin` refreshes the GitHub branch information, and `git merge origin/main` integrates it into the current `draft-section` branch. The existing images below show an older conflict example using `git pull origin main` on `new-contents`.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-1.png" alt="Terminal running git pull origin main while on another branch">
+  <img src="/assets/images/pull-different-branch-1.png" alt="Existing Windows terminal showing a conflict while bringing main into new-contents">
 </figure>
 
-If the two branches changed the same file, Git may stop and ask you to resolve a conflict. VS Code then shows the merge state in Source Control.
+If the branches contain conflicting changes, Git pauses the merge and VS Code lists the affected files under **Source Control > Merge Changes**. Without conflicts, the merge may finish immediately.
+
+See the [official VS Code conflict resolution guide](https://code.visualstudio.com/docs/sourcecontrol/merge-conflicts) for choosing the final content of a conflicted file.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-2.png" alt="VS Code Source Control showing merge changes after pulling main into another branch">
+  <img src="/assets/images/pull-different-branch-2.png" alt="Existing VS Code Source Control view listing a conflicted file under Merge Changes">
 </figure>
 
-After you resolve the conflict and stage the files, click `Continue` to create the merge commit.
+Open each conflicted file, choose the final content, and save it. Stage only the resolved files, then use **Commit** to finish the merge. The **Continue** button in the existing image awaits review on current Windows screens.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-3.png" alt="VS Code Source Control Continue button after staged merge changes">
+  <img src="/assets/images/pull-different-branch-3.png" alt="Existing VS Code screen with staged conflict changes and the Continue button highlighted">
 </figure>
 
-VS Code prepares a merge commit message. You can keep the default message or replace it with a short message that explains the merge.
+After the merge commit, Source Control may show the number of commits to publish. `from_main` in the existing image is an example commit message.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-4.png" alt="VS Code Source Control commit message after pulling main into a branch">
+  <img src="/assets/images/pull-different-branch-4.png" alt="Existing VS Code Source Control view showing Sync Changes 2↑ after a from_main commit">
 </figure>
 
-Then sync or push the branch so GitHub receives the merge commit.
+After completing the merge commit, run `git push` to publish the work branch. **Sync Changes** in the existing image may run both Pull and Push.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-5.png" alt="VS Code Source Control Sync Changes button after merge commit">
+  <img src="/assets/images/pull-different-branch-5.png" alt="Existing VS Code Source Control view highlighting the Sync Changes 2↑ button">
 </figure>
 
-VS Code may warn that the action will pull and push commits for the current branch. Confirm only if you are ready to update that branch on GitHub.
+If you choose **Sync Changes**, read the branch named in the Pull and Push confirmation. The existing image shows `origin/new-contents`; if you are working on `draft-section`, cancel when the names differ and recheck the active branch.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-6.png" alt="VS Code confirmation dialog before syncing branch commits">
+  <img src="/assets/images/pull-different-branch-6.png" alt="Existing VS Code Sync Changes confirmation naming origin/new-contents as the Pull and Push target">
 </figure>
 
-After the sync finishes, Git Graph shows the merge commit on the current branch.
+The existing image below shows a merge commit in **Git Graph**. If the branch fast-forwards, there may be no separate merge commit.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-7.png" alt="Git Graph showing a merge commit after pulling main into another branch">
+  <img src="/assets/images/pull-different-branch-7.png" alt="Existing Git Graph showing a merge commit on new-contents and the origin/main marker">
 </figure>
-
-Remember that plain `git pull` pulls from the upstream branch of your current branch. To pull from `main` while staying on another branch, specify `origin main`.
-
-Merge only when you know which branch should receive the changes. If other people need to review the work before it becomes part of `main`, use a Pull Request instead of merging directly.

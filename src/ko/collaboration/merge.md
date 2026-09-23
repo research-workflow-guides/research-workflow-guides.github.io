@@ -1,119 +1,119 @@
 ---
 layout: layouts/doc.njk
-title: Merge
-description: 승인된 Pull Request를 main에 merge하고 local repository를 동기화합니다.
+title: 병합
+description: 검토가 끝난 Pull Request를 병합하고 로컬 main을 갱신합니다.
 lang: ko
 section: collaboration
 order: 5
 permalink: /ko/collaboration/merge/
 translationKey: git-merge
 eyebrow: 주제 4
-lead: Review를 마친 task branch를 Pull Request를 통해 merge하고, 그 결과를 local repository의 main으로 가져옵니다.
-outcome: 승인된 Pull Request가 GitHub의 main에 merge되고 local main도 같은 이력으로 동기화됩니다.
-prerequisites:
-  - Pull Request에 해결되지 않은 review 요청이나 실패한 필수 check가 없습니다.
-  - Merge하기 전에 base branch와 merge 방법을 확인했습니다.
-completion: GitHub가 Pull Request를 merged로 표시하고, pull한 local main이 clean하고 최신 상태입니다.
-commonProblems:
-  - Review가 끝나기 전에 merge하면 Pull Request에 기록된 협업 결정을 건너뛰게 됩니다.
-  - 의도하지 않은 merge 방법을 선택하면 repository 정책과 다른 형태의 이력이 만들어질 수 있습니다.
+lead: 검토를 마친 Pull Request를 GitHub에서 <code>main</code>에 병합하고, Windows의 VS Code 통합 터미널에서 로컬 <code>main</code>을 갱신합니다.
+workflowChecks: false
+verificationCard: false
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: Windows 데스크톱 브라우저와 VS Code 통합 터미널을 기준으로 작성했습니다.
+  workflow: Pull Request 병합, 로컬 main 갱신, 필요한 경우 작업 브랜치에 main 반영.
+  lastVerified: 2026-09-23 공식 문서와 임시 로컬 저장소의 명령 흐름을 확인했습니다. 현재 Windows 화면 검증 대기 중.
+  support: 기존 이미지는 new-contents 작업 브랜치의 충돌 사례입니다. macOS와 Linux 화면은 추후 검증합니다.
+  scopeNote: 현재 Windows 데스크톱 브라우저와 VS Code 통합 터미널을 기준으로 안내합니다. macOS와 Linux 절차는 추후 검증합니다.
 toc:
   - id: merge의-의미
-    label: Merge의 의미
+    label: 병합의 의미
   - id: pull-request가-준비됐는지-확인하기
-    label: Pull Request가 준비됐는지 확인하기
+    label: Pull Request 확인
   - id: 승인된-pull-request-merge하기
-    label: 승인된 Pull Request merge하기
+    label: Pull Request 병합
   - id: local-main-업데이트하기
-    label: local main 업데이트하기
+    label: 로컬 main 갱신
   - id: task-branch로-main-가져오기
-    label: task branch로 main 가져오기
+    label: 작업 브랜치에 main 반영하기
 tags:
   - doc
 ---
-## Merge의 의미
+<h2 id="merge의-의미">병합의 의미</h2>
 
-Merge는 한 branch의 commit 이력을 다른 branch에 합치는 작업입니다. 이 핵심 흐름에서는 이전 문서에서 만든 Pull Request를 review한 뒤 task branch를 `main`에 merge합니다.
+병합은 작업 브랜치의 변경을 대상 브랜치에 반영하는 작업입니다. 이 안내에서는 검토가 끝난 Pull Request를 GitHub에서 `main`에 병합합니다.
 
-Merge는 파일을 손으로 복사하는 것이 아닙니다. Git은 branch 이력을 비교하고, GitHub는 review 결정과 merge 결과를 Pull Request에 기록합니다.
+GitHub는 Pull Request에 검토 의견과 병합 결과를 남깁니다. 선택한 병합 방식에 따라 `main`에 남는 커밋 이력은 달라집니다.
 
-같은 Git 작업을 local repository에서 직접 실행할 수도 있습니다. 직접 local merge는 혼자 작업할 때 유용할 수 있지만, Pull Request review를 건너뛰므로 이 협업 핵심 경로에는 포함하지 않습니다.
+<h2 id="pull-request가-준비됐는지-확인하기">Pull Request 확인</h2>
 
-## Pull Request가 준비됐는지 확인하기
+Pull Request 상단에서 `base: main`과 `compare: draft-section`을 확인합니다. **Files changed**에서 병합할 파일 목록도 다시 살펴봅니다.
 
-Pull Request로 돌아가 base branch와 compare branch를 다시 확인합니다. 보통 base는 `main`이고 compare branch에는 task 작업이 들어 있어야 합니다.
+요청받은 수정과 팀 검토를 마쳤는지 확인합니다. 저장소가 승인이나 자동 검사를 필수로 지정했다면 통과 여부를 확인합니다. 마지막 검토 뒤 새 커밋이 올라왔다면 파일 차이를 다시 읽고 필요하면 재검토를 요청합니다.
 
-요청된 수정 사항을 반영했고, 필요한 승인이 있으며, 필수 check가 통과했는지 확인합니다. 마지막 review 뒤에 commit이 추가됐다면 최종 파일 차이를 다시 읽습니다.
+<h2 id="승인된-pull-request-merge하기">Pull Request 병합</h2>
 
-## 승인된 Pull Request merge하기
+PR 하단에서 저장소가 허용하는 [병합 방법](https://docs.github.com/en/pull-requests/reference/pull-request-merges)을 확인합니다. **Merge pull request**는 개별 커밋과 병합 커밋을 남기고, **Squash and merge**는 변경을 한 커밋으로 묶으며, **Rebase and merge**는 커밋을 `main` 위에 다시 배치합니다. 팀 규칙이 있다면 그 방법을 선택합니다.
 
-Repository에서 허용하는 merge 방법을 사용합니다. GitHub는 merge commit, squash merge, rebase merge를 제공할 수 있습니다. 팀 정책이 문서화되어 있다면 버튼 이름이 짧다는 이유로 선택하지 말고 그 정책을 따릅니다.
+병합 상태를 확인한 뒤 선택한 방법의 버튼과 확인 버튼을 누릅니다. PR에 **Merged**가 표시되고 `main`에 변경이 반영됐는지 확인합니다. 팀에서 작업 브랜치를 더 쓰지 않는다면 그다음 **Delete branch**로 원격 브랜치를 정리할 수 있습니다.
 
-GitHub가 Pull Request를 merge할 수 있다고 표시할 때만 merge를 확정합니다. 작업이 끝나면 GitHub가 PR을 merged로 표시하고 `main`에 검토된 변경 사항이 포함됩니다. Remote task branch는 merge가 성공한 것을 확인한 뒤에만 삭제합니다.
+<h2 id="local-main-업데이트하기">로컬 main 갱신</h2>
 
-## local main 업데이트하기
+GitHub에서 병합한 뒤 Windows의 VS Code 통합 터미널을 엽니다. `git status`로 미완료 변경을 확인해 정리하고 로컬 `main`으로 전환합니다. `--ff-only`를 사용해 GitHub의 `main`을 가져옵니다.
 
-Merge는 GitHub에서 이루어졌으므로 새 작업을 시작하기 전에 local repository를 업데이트합니다. Terminal을 열고 `main`으로 이동한 뒤 merge된 이력을 가져옵니다.
-
-```shell
+```powershell
+git status
 git switch main
-git pull
+git pull --ff-only origin main
 ```
 
-`git status`와 필요하면 `git log --oneline --graph`를 실행해 local `main`이 clean하고 최신이며 merge된 작업을 포함하는지 확인합니다.
+가져오기가 끝나면 `git status`로 현재 브랜치와 남은 변경을 확인하고, 병합한 파일이 로컬에도 반영됐는지 살펴봅니다. `--ff-only`가 거절되면 로컬 `main`에 별도 커밋이 있는지 확인합니다.
 
-## task branch로 main 가져오기
+<h2 id="task-branch로-main-가져오기">작업 브랜치에 main 반영하기</h2>
 
-예를 들어 `new-contents` branch에서 작업 중인데 `main`의 최신 작업을 가져와야 할 때가 있습니다. 이 경우 먼저 변경 사항을 받을 branch에 있는지 확인합니다.
+PR이 아직 열려 있고 `main`의 최신 변경을 작업 브랜치에 반영해야 할 때만 이 절차를 사용합니다. 먼저 미완료 변경을 정리하고 `draft-section`으로 이동합니다.
 
-예를 들어 `new-contents`에 있는 상태에서 다음을 실행합니다.
-
-```shell
-git pull origin main
+```powershell
+git status
+git switch draft-section
+git fetch origin
+git merge origin/main
 ```
 
-이 명령어는 GitHub의 최신 `main` branch를 가져와 현재 사용 중인 branch에 merge합니다.
+`git fetch origin`은 GitHub의 브랜치 정보를 갱신하고, `git merge origin/main`은 그 변경을 현재 `draft-section`에 반영합니다. 아래 기존 이미지는 `new-contents`에서 `git pull origin main`을 사용하다 충돌이 발생한 예시입니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-1.png" alt="다른 branch에서 git pull origin main을 실행하는 terminal">
+  <img src="/assets/images/pull-different-branch-1.png" alt="기존 Windows 터미널에서 new-contents 브랜치에 main을 가져오다 충돌이 발생한 화면">
 </figure>
 
-두 branch가 같은 파일의 같은 부분을 수정했다면 Git이 멈추고 conflict 해결을 요청할 수 있습니다. 이때 VS Code의 Source Control에 merge 상태가 표시됩니다.
+두 브랜치의 변경이 충돌하면 Git이 병합을 멈추고 VS Code의 **Source Control > Merge Changes**에 해당 파일을 표시합니다. 충돌이 없으면 병합이 바로 끝날 수 있습니다.
+
+충돌 파일의 내용을 결정하는 방법은 [VS Code 공식 충돌 해결 안내](https://code.visualstudio.com/docs/sourcecontrol/merge-conflicts)에서 확인할 수 있습니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-2.png" alt="main을 다른 branch로 pull한 뒤 VS Code Source Control에 표시된 merge changes">
+  <img src="/assets/images/pull-different-branch-2.png" alt="기존 VS Code Source Control의 Merge Changes에 충돌 파일이 표시된 화면">
 </figure>
 
-Conflict를 해결하고 파일을 stage한 뒤 `Continue`를 클릭하면 merge commit을 만들 수 있습니다.
+충돌 파일을 열어 최종 내용을 정하고 저장합니다. 해결한 파일만 Stage한 뒤 **Commit**으로 병합을 완료합니다. 아래 기존 화면의 **Continue** 버튼은 현재 Windows 화면에서 재검증이 필요합니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-3.png" alt="merge changes가 stage된 뒤 VS Code Source Control의 Continue 버튼">
+  <img src="/assets/images/pull-different-branch-3.png" alt="기존 VS Code 화면에서 충돌 파일이 Stage된 뒤 강조된 Continue 버튼">
 </figure>
 
-VS Code가 merge commit message를 준비합니다. 기본 message를 그대로 사용하거나, merge 내용을 설명하는 짧은 message로 바꿀 수 있습니다.
+병합 커밋을 마치면 Source Control에 업로드할 커밋 수가 표시될 수 있습니다. 아래 기존 화면의 `from_main`은 예시 커밋 메시지입니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-4.png" alt="branch에 main을 pull한 뒤 VS Code Source Control에 표시된 commit message">
+  <img src="/assets/images/pull-different-branch-4.png" alt="기존 VS Code Source Control에서 from_main 커밋 뒤 Sync Changes 2↑가 표시된 화면">
 </figure>
 
-그다음 sync하거나 push해서 GitHub에도 merge commit이 올라가게 합니다.
+병합 커밋을 마친 뒤 `git push`로 작업 브랜치를 GitHub에 올립니다. 아래 기존 이미지의 **Sync Changes**는 Pull과 Push를 함께 실행할 수 있습니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-5.png" alt="merge commit 뒤 VS Code Source Control의 Sync Changes 버튼">
+  <img src="/assets/images/pull-different-branch-5.png" alt="기존 VS Code Source Control에서 Sync Changes 2↑ 버튼이 강조된 화면">
 </figure>
 
-VS Code가 현재 branch의 commit을 pull하고 push한다고 경고할 수 있습니다. GitHub의 해당 branch를 업데이트할 준비가 되었을 때만 확인하세요.
+**Sync Changes**를 선택했다면 확인 창의 Pull·Push 대상 브랜치를 읽습니다. 아래 기존 화면은 `origin/new-contents`를 보여주므로, `draft-section`에서 작업 중이라면 이름이 다를 때 취소하고 현재 브랜치를 다시 확인합니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-6.png" alt="branch commit을 sync하기 전 VS Code 확인 창">
+  <img src="/assets/images/pull-different-branch-6.png" alt="기존 VS Code가 origin/new-contents를 Pull·Push한다고 알리는 Sync Changes 확인 창">
 </figure>
 
-Sync가 끝나면 Git Graph에서 현재 branch에 merge commit이 표시됩니다.
+아래 기존 이미지는 **Git Graph**에 병합 커밋이 표시된 사례입니다. 브랜치가 빠른 전진으로 갱신되면 별도 병합 커밋이 생기지 않을 수 있습니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-different-branch-7.png" alt="main을 다른 branch에 pull한 뒤 Git Graph에 표시된 merge commit">
+  <img src="/assets/images/pull-different-branch-7.png" alt="기존 Git Graph에서 new-contents 브랜치의 병합 커밋과 origin/main을 보여주는 화면">
 </figure>
-
-단순히 `git pull`만 입력하면 현재 branch의 upstream branch에서 pull합니다. 다른 branch에 머무른 채 `main`에서 pull하려면 `origin main`을 명시하세요.
-
-어떤 branch가 변경 사항을 받아야 하는지 확실할 때만 merge하세요. 다른 사람이 작업을 확인한 뒤 `main`에 포함해야 한다면 직접 merge하는 대신 Pull Request를 사용하세요.
