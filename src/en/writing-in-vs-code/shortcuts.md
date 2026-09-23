@@ -1,14 +1,22 @@
 ---
 layout: layouts/doc.njk
 title: Shortcuts
-description: Pin the few shortcuts that remove friction from the daily writing loop.
+description: Review the Command Palette and basic VS Code shortcuts on Windows, plus LaTeX Workshop's @ completion examples.
 lang: en
 section: writing-in-vs-code
 order: 2
 permalink: /en/writing-in-vs-code/shortcuts/
 translationKey: writing-shortcuts
-eyebrow: Step 2
-lead: You do not need a large shortcut system. Keep only the commands you reach for every day.
+eyebrow: Step 2 (Optional)
+lead: Check the Windows VS Code shortcuts for commands you use while writing. If a shortcut behaves differently, inspect its current assignment in Keyboard Shortcuts.
+verificationCard: false
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: Written for VS Code on Windows; macOS and Linux shortcuts await review.
+  workflow: Command Palette, basic shortcuts, LaTeX Workshop @ suggestions, and snippet tabstops.
+  lastVerified: Official VS Code and LaTeX Workshop documentation and the existing image checked on 2026-09-23. Windows screen check pending.
+  support: The existing Command Palette image needs review and updating against the current Windows screen.
 toc:
   - id: command-palette
     label: Command Palette
@@ -23,8 +31,8 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p>The <strong>Command Palette</strong> gives you access to every VS Code command by name. Instead of navigating menus, type what you want and run it directly.</p>
-    <p>Open it with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).</p>
+    <p>Use the <strong>Command Palette</strong> to search for and run VS Code commands by name. Type part of a command name to narrow the list.</p>
+    <p>On Windows, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to open the Command Palette.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/palette.png" alt="VS Code Command Palette">
@@ -34,81 +42,79 @@ tags:
 
 ## Basic shortcuts
 
-- <kbd>Alt</kbd>+<i class="fa-solid fa-arrow-pointer"></i> Click (macOS: <kbd>⌘</kbd>+<i class="fa-solid fa-arrow-pointer"></i> Click)
+- <kbd>Alt</kbd>+Click
 
-  Place multiple cursors at once.
+  On Windows, hold <kbd>Alt</kbd> and click a position in the editor to add a cursor there. Use multiple cursors to edit several positions at once.
 
-- <kbd>Ctrl</kbd>+<kbd>/</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>/</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>/</kbd>
 
-  Toggle comment on the current line.
+  Toggle line comments for the current line or selected lines.
 
-- <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>M</kbd>
 
-  Show a live preview of the formula you are typing.
+  Toggles LaTeX Workshop's Math Preview Panel in the default keymap. It shows a live preview of supported equations in a separate panel.
 
-- <kbd>Ctrl</kbd>+<kbd>S</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>S</kbd>) or <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>B</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>
 
-  Compile the LaTeX code.
+  Runs LaTeX Workshop's Build LaTeX project command in the default keymap. <kbd>Ctrl</kbd>+<kbd>S</kbd> saves the file; whether saving triggers an automatic build depends on the <code>latex-workshop.latex.autoBuild.run</code> setting.
 
-- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd>
 
-  Open a new terminal.
+  Opens a new integrated terminal in VS Code on Windows.
 
-- <kbd>Ctrl</kbd>+<kbd>R</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>R</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>R</kbd>
 
-  Open a registered folder.
+  Shows recently opened folders, workspaces, and files. Select an item to reopen it.
 
-- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>
 
-  Open a new VS Code window.
+  Opens a new VS Code window on Windows.
 
 ## Snippets
 
-VS Code <strong>snippets</strong> allow you to insert long LaTeX commands or formulas instantly by typing a short prefix. It is the most efficient way to handle complex mathematical syntax without repetitive typing.
+With LaTeX Workshop's default settings, typing an `@` prefix shows matching snippets in the completion list. Select a suggestion to insert a LaTeX command or math structure.
 
-- <kbd>@</kbd>+<kbd>a</kbd>
+- `@a`
 
   <code>&#92;alpha</code>
 
-- <kbd>@</kbd>+<kbd>A</kbd>
+- `@D`
 
-  <code>&#92;Alpha</code>
+  <code>&#92;Delta</code>
 
-- <kbd>@</kbd>+<kbd>6</kbd>
+- `@S`
+
+  <code>&#92;Sigma</code>
+
+- `@6`
 
   <code>&#92;partial</code>
 
-- <kbd>@</kbd>+<kbd>(</kbd>
+- `@(`
 
-  <code>&#92;left( &#92;right)</code>
+  <code>&#92;left( $1 &#92;right)</code>
 
-- <kbd>@</kbd>+<kbd>{</kbd>
+- `@{`
 
-  <code>&#92;left&#92;{ &#92;right&#92;}</code>
+  <code>&#92;left&#92;{ $1 &#92;right&#92;}</code>
 
-- <kbd>@</kbd>+<kbd>[</kbd>
+- `@[`
 
-  <code>&#92;left[ &#92;right]</code>
+  <code>&#92;left[ $1 &#92;right]</code>
 
 
-You can use the <kbd>Tab</kbd> key to jump between predefined positions (e.g., $1, $2) within a snippet. This allows you to fill in numerators, denominators, or bracket contents rapidly without using arrow keys.
+After selecting a completion suggestion, the cursor starts at `$1` in the inserted snippet. Enter the content, then press <kbd>Tab</kbd> to move to `$2` and later tabstops.
 
-- <kbd>@</kbd>+<kbd>/</kbd> → <kbd>Tab</kbd> → Type numerator → <kbd>Tab</kbd> → Type denominator
+- `@/` → Select suggestion → Type numerator → <kbd>Tab</kbd> → Type denominator
 
   <code>&#92;frac{$1}{$2}</code>
 
-- <kbd>@</kbd>+<kbd>S</kbd> → <kbd>Tab</kbd> → Type lower bound → <kbd>Tab</kbd> → Type upper bound
-
-  <code>&#92;sum_{$1}^{$2}</code>
-
-- <kbd>@</kbd>+<kbd>I</kbd> → <kbd>Tab</kbd> → Type lower bound → <kbd>Tab</kbd> → Type upper bound
+- `@I` → Select suggestion → Type lower bound → <kbd>Tab</kbd> → Type upper bound
 
   <code>&#92;int_{$1}^{$2}</code>
 
 
 <div class="doc-action-row">
-  <p>You can also define your own snippets. We will cover how to create custom snippets later in this guide.</p>
-  <a class="doc-action-link" href="https://code.visualstudio.com/docs/editing/userdefinedsnippets">VS Code documentation</a>
+  <p>To create your own snippets, open the LaTeX user snippet file. The <a href="/en/writing-in-vs-code/snippets/">Set up LaTeX snippets</a> guide shows how to find that file and includes an example.</p>
+  <a class="doc-action-link" href="https://code.visualstudio.com/docs/editing/userdefinedsnippets">VS Code snippet documentation</a>
 </div>
-
-Confirm that the commands you use every day are easy to reach and that your shortcut list is still short enough to remember.

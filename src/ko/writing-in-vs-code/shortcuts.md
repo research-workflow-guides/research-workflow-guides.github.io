@@ -1,14 +1,22 @@
 ---
 layout: layouts/doc.njk
 title: 단축키
-description: 매일 반복하는 동작을 줄여주는 핵심 단축키만 정리합니다.
+description: Windows용 VS Code의 Command Palette와 기본 단축키, LaTeX Workshop의 @ 자동완성 예시를 확인합니다.
 lang: ko
 section: writing-in-vs-code
 order: 2
 permalink: /ko/writing-in-vs-code/shortcuts/
 translationKey: writing-shortcuts
-eyebrow: 2단계
-lead: 단축키 체계를 크게 만들 필요는 없습니다. 매일 반복하는 명령만 빠르게 닿게 두면 충분합니다.
+eyebrow: 2단계 (선택)
+lead: Windows용 VS Code에서 문서 작성 중 자주 쓰는 명령의 단축키를 확인합니다. 단축키가 다르게 동작하면 Keyboard Shortcuts에서 현재 할당을 확인하세요.
+verificationCard: false
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: Windows용 VS Code를 기준으로 설명하며 macOS와 Linux 단축키는 추후 검증합니다.
+  workflow: Command Palette, 기본 단축키, LaTeX Workshop의 @ 자동완성과 snippet 입력 위치.
+  lastVerified: 2026-09-23 VS Code와 LaTeX Workshop 공식 문서 및 기존 이미지 확인. Windows 실제 화면 재검증 대기 중.
+  support: 기존 Command Palette 이미지는 현재 Windows 화면과 대조해 업데이트할 필요가 있습니다.
 toc:
   - id: command-palette
     label: Command Palette
@@ -23,8 +31,8 @@ tags:
 
 <div class="doc-step-pair">
   <div>
-    <p><strong>Command Palette</strong>는 VS Code의 모든 명령을 이름으로 실행할 수 있는 입력창입니다. 메뉴를 탐색하는 대신 원하는 명령을 바로 입력해서 실행합니다.</p>
-    <p><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)로 엽니다.</p>
+    <p><strong>Command Palette</strong>에서 VS Code 명령을 이름으로 검색해 실행할 수 있습니다. 명령 이름의 일부를 입력하면 목록이 좁혀져 원하는 명령을 찾기 쉽습니다.</p>
+    <p>Windows에서는 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 눌러 Command Palette를 엽니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/palette.png" alt="VS Code Command Palette">
@@ -34,81 +42,79 @@ tags:
 
 ## 기본 단축키
 
-- <kbd>Alt</kbd>+<i class="fa-solid fa-arrow-pointer"></i> Click (macOS: <kbd>⌘</kbd>+<i class="fa-solid fa-arrow-pointer"></i> Click)
+- <kbd>Alt</kbd>+Click
 
-  커서를 동시에 여러 군데 클릭할 수 있습니다.
+  Windows에서 <kbd>Alt</kbd>를 누른 채 편집기의 원하는 위치를 클릭하면 그 위치에 커서를 추가합니다. 여러 위치를 동시에 편집할 때 사용합니다.
 
-- <kbd>Ctrl</kbd>+<kbd>/</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>/</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>/</kbd>
 
-  커서가 있는 줄을 주석으로 처리하거나 취소합니다.
+  현재 줄이나 선택한 줄의 줄 주석을 켜거나 끕니다.
 
-- <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>M</kbd>
 
-  입력 중인 수식을 실시간으로 보여줍니다.
+  기본 키맵에서 LaTeX Workshop의 Math Preview Panel을 열거나 닫습니다. 지원되는 수식을 별도 패널에서 실시간으로 미리 볼 수 있습니다.
 
-- <kbd>Ctrl</kbd>+<kbd>S</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>S</kbd>) or <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>B</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>
 
-  LaTeX 코드를 컴파일합니다.
+  기본 키맵에서 LaTeX Workshop의 Build LaTeX project 명령을 실행합니다. <kbd>Ctrl</kbd>+<kbd>S</kbd>는 파일을 저장하며, 저장 후 자동 빌드 여부는 <code>latex-workshop.latex.autoBuild.run</code> 설정에 따라 달라집니다.
 
-- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd>
 
-  새 terminal을 엽니다.
+  Windows에서 VS Code의 새 통합 터미널을 엽니다.
 
-- <kbd>Ctrl</kbd>+<kbd>R</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>R</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>R</kbd>
 
-  등록된 폴더를 엽니다.
+  최근에 연 폴더·작업 영역·파일 목록을 표시합니다. 항목을 선택하면 다시 열 수 있습니다.
 
-- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> (macOS: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>)
+- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>
 
-  새 VS Code 창을 엽니다.
+  Windows에서 새 VS Code 창을 엽니다.
 
 ## Snippets
 
-VS Code <strong>snippets</strong>를 사용하면 짧은 prefix를 입력해 긴 LaTeX 명령이나 수식을 즉시 삽입할 수 있습니다. 반복 입력 없이 복잡한 수식을 다루는 가장 효율적인 방법입니다.
+LaTeX Workshop의 기본 설정에서 `@` 접두어를 입력하면 관련 snippets가 자동완성 목록에 표시됩니다. 제안을 선택해 LaTeX 명령이나 수식 구조를 삽입할 수 있습니다.
 
-- <kbd>@</kbd>+<kbd>a</kbd>
+- `@a`
 
   <code>&#92;alpha</code>
 
-- <kbd>@</kbd>+<kbd>A</kbd>
+- `@D`
 
-  <code>&#92;Alpha</code>
+  <code>&#92;Delta</code>
 
-- <kbd>@</kbd>+<kbd>6</kbd>
+- `@S`
+
+  <code>&#92;Sigma</code>
+
+- `@6`
 
   <code>&#92;partial</code>
 
-- <kbd>@</kbd>+<kbd>(</kbd>
+- `@(`
 
-  <code>&#92;left( &#92;right)</code>
+  <code>&#92;left( $1 &#92;right)</code>
 
-- <kbd>@</kbd>+<kbd>{</kbd>
+- `@{`
 
-  <code>&#92;left&#92;{ &#92;right&#92;}</code>
+  <code>&#92;left&#92;{ $1 &#92;right&#92;}</code>
 
-- <kbd>@</kbd>+<kbd>[</kbd>
+- `@[`
 
-  <code>&#92;left[ &#92;right]</code>
+  <code>&#92;left[ $1 &#92;right]</code>
 
 
-<kbd>Tab</kbd> 키를 이용하면 snippet 안의 미리 정해진 위치($1, $2 등)를 순서대로 이동할 수 있습니다. 방향키 없이 분자, 분모, 괄호 내용을 빠르게 채울 수 있습니다.
+자동완성 제안을 선택해 snippet을 삽입하면 커서가 `$1` 위치에 놓입니다. 내용을 입력한 뒤 <kbd>Tab</kbd>을 누르면 `$2` 등 다음 입력 위치로 이동합니다.
 
-- <kbd>@</kbd>+<kbd>/</kbd> → <kbd>Tab</kbd> → 분자 입력 → <kbd>Tab</kbd> → 분모 입력
+- `@/` → 제안 선택 → 분자 입력 → <kbd>Tab</kbd> → 분모 입력
 
   <code>&#92;frac{$1}{$2}</code>
 
-- <kbd>@</kbd>+<kbd>S</kbd> → <kbd>Tab</kbd> → 아래끝 입력 → <kbd>Tab</kbd> → 위끝 입력
-
-  <code>&#92;sum_{$1}^{$2}</code>
-
-- <kbd>@</kbd>+<kbd>I</kbd> → <kbd>Tab</kbd> → 아래끝 입력 → <kbd>Tab</kbd> → 위끝 입력
+- `@I` → 제안 선택 → 아래끝 입력 → <kbd>Tab</kbd> → 위끝 입력
 
   <code>&#92;int_{$1}^{$2}</code>
 
 
 <div class="doc-action-row">
-  <p>직접 snippet을 만들 수도 있습니다. custom snippet 만드는 방법은 이 가이드의 뒷부분에서 다룹니다.</p>
-  <a class="doc-action-link" href="https://code.visualstudio.com/docs/editing/userdefinedsnippets">VS Code 공식 문서</a>
+  <p>직접 snippet을 만들려면 LaTeX용 사용자 snippet 파일을 여세요. <a href="/ko/writing-in-vs-code/snippets/">LaTeX snippet 설정</a> 안내에서 파일을 여는 과정과 예시를 확인할 수 있습니다.</p>
+  <a class="doc-action-link" href="https://code.visualstudio.com/docs/editing/userdefinedsnippets">VS Code snippet 문서</a>
 </div>
-
-매일 쓰는 명령이 바로 닿고, 단축키 목록이 아직 외울 수 있을 만큼 짧다면 다음으로 넘어갑니다.

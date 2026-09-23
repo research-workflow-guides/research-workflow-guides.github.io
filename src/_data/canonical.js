@@ -335,7 +335,7 @@ const pages = [
     order: 2,
     group: "main-topics",
     title: "Shortcuts",
-    description: "Pin the few shortcuts that remove friction from the daily writing loop.",
+    description: "Review the Command Palette and basic VS Code shortcuts on Windows, plus LaTeX Workshop's @ completion examples.",
     translationKey: "writing-shortcuts",
     status: "optional"
   },
@@ -348,7 +348,7 @@ const pages = [
     order: 2,
     group: "main-topics",
     title: "단축키",
-    description: "매일 반복하는 동작을 줄여주는 핵심 단축키만 정리합니다.",
+    description: "Windows용 VS Code의 Command Palette와 기본 단축키, LaTeX Workshop의 @ 자동완성 예시를 확인합니다.",
     translationKey: "writing-shortcuts",
     status: "optional"
   },

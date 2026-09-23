@@ -17,6 +17,7 @@ const verificationRequired = new Set([
   "initial-setup-project-template",
   "initial-setup-extension",
   "writing-folder-setup",
+  "writing-shortcuts",
   "writing-settings",
   "writing-bibliography-citation",
   "git-git-installation",
