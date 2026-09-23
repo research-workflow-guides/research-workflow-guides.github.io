@@ -685,7 +685,7 @@ const pages = [
     order: 2,
     group: "preparation",
     title: "GitHub Account Setup",
-    description: "Prepare the GitHub account you will use for repositories and collaboration.",
+    description: "Check or create a GitHub account, verify its email address, and review security settings.",
     translationKey: "git-github-account-setup",
     status: "optional"
   },
@@ -698,7 +698,7 @@ const pages = [
     order: 2,
     group: "preparation",
     title: "GitHub 계정 준비",
-    description: "저장소 작업과 협업에 사용할 GitHub 계정을 준비합니다.",
+    description: "GitHub 계정을 확인하거나 만들고 이메일 인증과 보안 설정을 점검합니다.",
     translationKey: "git-github-account-setup",
     status: "optional"
   },

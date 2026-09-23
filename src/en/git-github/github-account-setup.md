@@ -1,14 +1,22 @@
 ---
 layout: layouts/doc.njk
 title: GitHub Account Setup
-description: Prepare the GitHub account you will use for repositories and collaboration.
+description: Check or create a GitHub account, verify its email address, and review security settings.
 lang: en
 section: git-github
 order: 2
 permalink: /en/git-github/github-account-setup/
 translationKey: git-github-account-setup
 eyebrow: Topic 2
-lead: Prepare one GitHub account for repository hosting, sharing, and later collaboration tasks.
+lead: Check the GitHub account you will use for repositories and collaboration. If you need an account, create one and verify its email address.
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: This guide follows the GitHub browser flow; the existing images show older desktop views.
+  workflow: Choose or create an account, verify its email, and review two-factor authentication.
+  lastVerified: 2026-09-23 checked official GitHub documentation; current sign-up screens await verification.
+  support: Existing GitHub sign-up images need updating.
+verificationCard: false
 toc:
   - id: create-or-confirm-the-account
     label: Create or confirm the account
@@ -21,32 +29,32 @@ tags:
 ---
 ## Create or confirm the account
 
-Use one GitHub account for research work. Avoid splitting the workflow across temporary accounts.
+Choose the GitHub account that will own this repository. If you already have an account, sign in with it.
 
 <div class="doc-step-pair">
   <div>
-    <p>Start from the main GitHub homepage.</p>
+    <p>Open the <a href="https://github.com/">official GitHub homepage</a>.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.4-1.png" alt="GitHub homepage">
+    <img src="/assets/images/1.4-1.png" alt="Older GitHub homepage start screen">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>If you do not already have an account, sign up from that page.</p>
+    <p>If you do not have an account, sign up on the <a href="https://github.com/signup">GitHub sign-up page</a> and follow the prompts to verify your email address.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.4-2.png" alt="GitHub sign-up page">
+    <img src="/assets/images/1.4-2.png" alt="Sign up button on an older GitHub homepage">
   </figure>
 </div>
 
 ## Turn on basic security
 
-At a minimum, set a strong password and a recovery path you control. Enable two-factor authentication if available.
+If you use a password, make it strong and unique. Follow GitHub's [two-factor authentication guide](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) to set up 2FA, and store your [recovery codes](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods) securely.
 
 ## Prepare a usable profile
 
-Make sure the account has a stable username, a readable display name, and a verified email address. These details make collaboration less confusing later.
+Check the username on your profile. Creating a repository requires a verified email address, so check its status under <strong>Settings &gt; Emails</strong> and follow GitHub's [email verification guide](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/verifying-your-email-address) if needed.
 
-If you can sign in reliably, receive GitHub email, and see a stable username on your profile, continue to the VS Code connection step.
+If you can sign in with the account you chose and have verified its email address, continue to [Connect GitHub](/en/git-github/connect-github/).

@@ -1,14 +1,22 @@
 ---
 layout: layouts/doc.njk
 title: GitHub 계정 준비
-description: 저장소 작업과 협업에 사용할 GitHub 계정을 준비합니다.
+description: GitHub 계정을 확인하거나 만들고 이메일 인증과 보안 설정을 점검합니다.
 lang: ko
 section: git-github
 order: 2
 permalink: /ko/git-github/github-account-setup/
 translationKey: git-github-account-setup
 eyebrow: 주제 2
-lead: repository 호스팅과 협업에 계속 사용할 GitHub 계정을 하나 정리합니다.
+lead: 저장소를 만들고 협업할 GitHub 계정을 확인합니다. 계정이 없다면 만들고 이메일 주소를 인증합니다.
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: GitHub 웹 브라우저 흐름을 기준으로 작성했으며 기존 이미지는 예전 데스크톱 화면입니다.
+  workflow: 계정 선택 또는 가입, 이메일 인증, 2단계 인증 확인.
+  lastVerified: 2026-09-23 GitHub 공식 문서 확인. 현재 가입 화면 검증 대기 중.
+  support: 기존 GitHub 가입 이미지는 업데이트가 필요합니다.
+verificationCard: false
 toc:
   - id: 계정-만들기-또는-확인
     label: 계정 만들기 또는 확인
@@ -21,34 +29,34 @@ tags:
 ---
 ## 계정 만들기 또는 확인
 
-연구 작업용 GitHub 계정 하나를 정합니다. workflow를 여러 임시 계정에 나누면 관리가 어려워집니다.
+이번 저장소를 소유할 GitHub 계정을 선택합니다. 이미 계정이 있다면 해당 계정으로 로그인합니다.
 
 <div class="doc-step-pair">
   <div>
-    <p>GitHub 메인 페이지에서 시작합니다.</p>
+    <p><a href="https://github.com/">GitHub 공식 홈페이지</a>를 엽니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.4-1.png" alt="GitHub 홈페이지">
+    <img src="/assets/images/1.4-1.png" alt="예전 GitHub 홈페이지의 시작 화면">
 
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>계정이 없다면 그 페이지에서 회원가입합니다.</p>
+    <p>계정이 없다면 <a href="https://github.com/signup">GitHub 가입 페이지</a>에서 가입하고 안내에 따라 이메일 주소를 인증합니다.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.4-2.png" alt="GitHub 회원가입 페이지">
+    <img src="/assets/images/1.4-2.png" alt="예전 GitHub 홈페이지의 Sign up 버튼">
 
   </figure>
 </div>
 
 ## 기본 보안 설정
 
-강한 비밀번호와 본인이 직접 접근할 수 있는 recovery 경로를 설정합니다. 가능하다면 two-factor authentication도 켭니다.
+비밀번호를 사용한다면 고유하고 강한 비밀번호를 설정합니다. GitHub의 [2단계 인증 안내](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)에 따라 인증을 설정하고 [복구 코드](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods)를 안전하게 보관합니다.
 
 ## 프로필 정리
 
-username, display name, verified email이 안정적으로 보이게 맞춥니다. 이런 기본 정보가 협업 때 혼란을 많이 줄여줍니다.
+프로필에서 사용자명을 확인합니다. 새 저장소를 만들려면 이메일 주소가 인증되어 있어야 하므로, <strong>Settings &gt; Emails</strong>에서 상태를 확인하고 필요하면 [이메일 인증 안내](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/verifying-your-email-address)를 따릅니다.
 
-문제 없이 로그인할 수 있고, GitHub 메일을 받을 수 있으며, 프로필에 안정적인 username이 보이면 다음 단계로 넘어갑니다.
+선택한 계정으로 로그인할 수 있고 이메일 인증을 마쳤다면 [GitHub 연결](/ko/git-github/connect-github/) 안내로 진행합니다.
