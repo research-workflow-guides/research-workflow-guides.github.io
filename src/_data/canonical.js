@@ -400,7 +400,7 @@ const pages = [
     order: 7,
     group: "reference",
     title: "JabRef",
-    description: "JabRef is a graphical application for managing bibliographical databases.",
+    description: "Install JabRef on Windows and open your project's .bib file to manage references.",
     translationKey: "writing-jabref",
     status: "optional"
   },
@@ -597,7 +597,7 @@ const pages = [
     order: 7,
     group: "reference",
     title: "JabRef",
-    description: "JabRef는 BibTeX과 같은 문헌 데이터베이스를 관리하는 그래픽 어플리케이션입니다.",
+    description: "Windows에서 JabRef를 설치하고 프로젝트의 .bib 파일을 열어 문헌 항목을 관리합니다.",
     translationKey: "writing-jabref",
     status: "optional"
   },
