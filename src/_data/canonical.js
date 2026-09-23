@@ -659,7 +659,7 @@ const pages = [
     order: 1,
     group: "preparation",
     title: "Git Installation",
-    description: "Install Git and set the basic identity you will reuse across projects.",
+    description: "Install Git for Windows and configure the name and email recorded in commits.",
     translationKey: "git-git-installation",
     status: "core"
   },
@@ -672,7 +672,7 @@ const pages = [
     order: 1,
     group: "preparation",
     title: "Git 설치",
-    description: "Git을 설치하고 프로젝트마다 재사용할 기본 identity를 설정합니다.",
+    description: "Windows에 Git을 설치하고 커밋 작성자 이름·이메일을 설정합니다.",
     translationKey: "git-git-installation",
     status: "core"
   },

@@ -33,14 +33,16 @@ const workflowCheckOptional = new Set([
   "writing-folder-setup",
   "writing-settings",
   "writing-syntax",
-  "writing-bibliography-citation"
+  "writing-bibliography-citation",
+  "git-git-installation"
 ]);
 const summaryOptional = new Set([
   "initial-setup-project-template",
   "writing-folder-setup",
   "writing-settings",
   "writing-syntax",
-  "writing-bibliography-citation"
+  "writing-bibliography-citation",
+  "git-git-installation"
 ]);
 
 const errors = [];
