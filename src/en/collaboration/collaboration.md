@@ -1,54 +1,50 @@
 ---
 layout: layouts/doc.njk
-title: GitHub
-description: Use a small-team repository workflow that stays readable and predictable.
+title: Start Collaborating
+description: Invite a collaborator to a private repository and agree on how to share changes.
 lang: en
 section: collaboration
 order: 1
 permalink: /en/collaboration/collaboration/
 translationKey: git-collaboration
 eyebrow: Topic 1
-lead: Small-team collaboration works best when the repository rhythm is boring, explicit, and easy to recover from.
-outcome: The repository has an invited collaborator and a shared rule for pulling, committing, and communicating large changes.
-prerequisites:
-  - A GitHub repository exists and you have permission to manage access.
-  - The collaborator's GitHub username or email address is known.
-completion: The collaborator appears in repository access settings and can open the private repository after accepting the invitation.
-commonProblems:
-  - An invitation sent to the wrong account will not grant access to the collaborator's active GitHub identity.
-  - Repository settings are unavailable to users without administration permission.
+lead: Invite a collaborator to the private repository and confirm that they accept. Agree as a team on when to Pull, Commit, and Push shared changes.
+workflowChecks: false
+verificationCard: false
 verification:
   status: needs-review
-  environment: GitHub web interface; screenshots document a desktop browser path.
-  workflow: Repository access settings and collaborator invitation acceptance.
-  lastVerified: Pending a current GitHub UI walkthrough.
-  support: Browser workflow is platform-independent; exact menu placement may change.
+  screenshots: needs-update
+  environment: Written for a private repository owned by a personal account in a Windows desktop browser.
+  workflow: Invite a collaborator, confirm acceptance, and agree on how to share changes.
+  lastVerified: GitHub documentation checked on 2026-09-23. Current Windows screens await review.
+  support: The older images show a public repository. macOS, Linux, and organization repository screens await review.
+  scopeNote: This guide uses a private repository owned by a personal account in a Windows desktop browser. macOS, Linux, and organization repository screens will be reviewed later.
 toc:
   - id: collaboration-guidelines
     label: Collaboration Guidelines
   - id: invite-collaborators
     label: Invite collaborators
+  - id: confirm-access
+    label: Confirm access
 tags:
   - doc
 ---
 ## Collaboration Guidelines
 
-Teams stay coordinated when everyone shares the same basic expectations:
+Before starting work, check for remote changes and Pull when needed. Commit changes in coherent units, then Push when they are ready to share.
 
-- pull before major work
-- commit coherent units
-- push regularly instead of hoarding changes
-
-If you are about to rename many files, reorganize a folder, or rewrite a shared section, tell the other collaborators first. Most collaboration pain comes from surprise, not from Git itself.
+If you plan to rename many files, reorganize folders, or substantially revise a shared document, tell the team before you start. Share the scope and timing so others can coordinate overlapping work.
 
 ## Invite collaborators
 
+A collaborator gains read and write access, so check the GitHub account you intend to invite. The older images below show a public repository; use them only to locate the controls. See [GitHub's invitation guide](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository) for the current procedure.
+
 <div class="doc-step-pair">
   <div>
-    <p>Select the Settings tab in the repository where you want to invite a collaborator.</p>
+    <p>Open the private repository and select <strong>Settings</strong>. If the tab is hidden, find <strong>Settings</strong> in the repository's top menu.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/2.2.5-100.png" alt="GitHub repository page with the Settings tab highlighted">
+    <img src="/assets/images/2.2.5-100.png" alt="Older public GitHub repository with the Settings tab highlighted">
   </figure>
 </div>
 
@@ -57,7 +53,7 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
     <p>In the Settings sidebar, choose Collaborators under Access.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/2.2.5-101.png" alt="GitHub repository settings page with Collaborators highlighted">
+    <img src="/assets/images/2.2.5-101.png" alt="Older public GitHub repository settings with Collaborators highlighted">
   </figure>
 </div>
 
@@ -66,35 +62,37 @@ If you are about to rename many files, reorganize a folder, or rewrite a shared 
     <p>Click the Add people button.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="GitHub repository access page">
+    <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="Older public GitHub repository access page showing Add people">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>Search for the collaborator by username or email.</p>
+    <p>Enter the person's GitHub username or email address, then select their account from the matches.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="Search field for adding a collaborator on GitHub">
+    <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="Older GitHub search field for adding a collaborator">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>After the correct person appears, confirm the invitation so GitHub can send access to that collaborator.</p>
+    <p>Check the display name and username in the search result, then use the button to add that account to the repository and send the invitation.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="GitHub dialog for confirming a collaborator invitation">
+    <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="Older GitHub dialog showing a selected collaborator account and invitation button">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div>
-    <p>A pending invitation is a normal intermediate state before the collaborator accepts and joins the repository.</p>
+    <p>The invitation remains pending until the other person accepts it.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="GitHub access page showing a pending collaborator invitation">
+    <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="Older public GitHub repository access page showing a Pending Invite">
   </figure>
 </div>
 
-If your collaborators can predict how and when changes will appear in the repository, the workflow is in a good place.
+## Confirm access
+
+After the invitation is accepted, confirm that the collaborator can open the private repository. If they cannot, check whether the GitHub username or email address on the invitation matches the account they use.

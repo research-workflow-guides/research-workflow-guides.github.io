@@ -866,8 +866,8 @@ const pages = [
     slug: "collaboration",
     order: 1,
     group: "collaboration",
-    title: "GitHub",
-    description: "Use a small-team repository workflow that stays readable and predictable.",
+    title: "Start Collaborating",
+    description: "Invite a collaborator to a private repository and agree on how to share changes.",
     translationKey: "git-collaboration",
     logo: "/assets/images/GitHub_Lockup_Black.png",
     status: "core"
@@ -880,8 +880,8 @@ const pages = [
     slug: "collaboration",
     order: 1,
     group: "collaboration",
-    title: "GitHub",
-    description: "작은 팀이 함께 써도 흐름이 흐트러지지 않는 협업 방식을 정리합니다.",
+    title: "협업 시작",
+    description: "비공개 저장소에 공동 작업자를 초대하고 변경 공유 순서를 정합니다.",
     translationKey: "git-collaboration",
     logo: "/assets/images/GitHub_Lockup_Black.png",
     status: "core"
