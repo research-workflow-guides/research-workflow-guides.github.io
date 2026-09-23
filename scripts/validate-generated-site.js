@@ -12,7 +12,8 @@ const streamlinedCoreTopics = new Set([
   "initial-setup-project-template",
   "writing-folder-setup",
   "writing-settings",
-  "writing-syntax"
+  "writing-syntax",
+  "writing-bibliography-citation"
 ]);
 
 const errors = [];

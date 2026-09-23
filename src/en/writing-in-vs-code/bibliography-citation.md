@@ -8,20 +8,21 @@ order: 6
 permalink: /en/writing-in-vs-code/bibliography-citation/
 translationKey: writing-bibliography-citation
 eyebrow: Topic 3
-lead: In LaTeX, it is convenient to organize references in a .bib file. Sources that are not cited in the .tex file do not appear in the compiled PDF, so one .bib file can be shared across multiple papers.
-outcome: A source stored in a `.bib` file appears as an in-text citation and in the compiled bibliography.
-prerequisites:
-  - The manuscript project builds successfully.
-  - A valid BibTeX entry and a unique citation key are available.
-completion: The PDF displays the citation without question marks and includes the cited source in the bibliography.
-commonProblems:
-  - A citation key in the `.tex` file must exactly match the key in the `.bib` file.
-  - Bibliography changes may require more than one build cycle before references resolve.
+lead: Store reference entries in a .bib file and cite the entries you need by key in the manuscript's .tex file. The same .bib file can be reused across manuscripts.
+verificationCard: false
+verification:
+  status: needs-review
+  screenshots: needs-update
+  environment: Existing images show Windows VS Code and MathSciNet screens.
+  workflow: Create a .bib file, copy a BibTeX entry, cite it, and print a bibliography.
+  lastVerified: 2026-09-23 compared existing images with the current setup guide; live screen check pending.
+  support: Existing images show an older project folder structure and need updating.
+workflowChecks: false
 toc:
   - id: what-citations-need
-    label: What citations need
+    label: How BibTeX uses two files
   - id: create-a-bib-file
-    label: Create a .bib file
+    label: Prepare a .bib file
   - id: find-a-bibtex-entry
     label: Find a BibTeX entry
   - id: add-the-entry
@@ -29,59 +30,59 @@ toc:
   - id: cite-the-source
     label: Cite the source
   - id: print-the-bibliography
-    label: Print the bibliography
+    label: Check the bibliography
 tags:
   - doc
 ---
-## What citations need
+<h2 id="what-citations-need">How BibTeX uses two files</h2>
 
-A BibTeX workflow uses two files together.
-
-- The `.bib` file stores reference entries.
+- The `.bib` file stores each reference's bibliographic details and citation key.
 - The `.tex` file cites selected entries with citation keys.
 
-Only the entries cited in the `.tex` file appear in the compiled PDF. This lets you keep many references in one bibliography file while printing only the sources used in the current manuscript.
+In the BibTeX example below, only entries cited with `\cite` in the `.tex` file appear in the bibliography. You can keep many references in one `.bib` file and cite the ones needed for the current manuscript.
 
-## Create a .bib file
+<h2 id="create-a-bib-file">Prepare a .bib file</h2>
 
-Create a new file in the project root folder.
+The `seed-document` example from the previous step already includes `bibliography.bib`; open that file. For a new manuscript, create a `.bib` file in the folder containing its `.tex` file.
 
 <figure class="image-frame">
   <img src="/assets/images/reference-1.png" alt="VS Code explorer menu for creating a new file">
 </figure>
 
-Name the file `reference.bib`.
+If you create a new file, use `reference.bib` as the example name.
 
 <figure class="image-frame">
   <img src="/assets/images/reference-2.png" alt="VS Code explorer showing a new reference.bib file">
 </figure>
 
-Keeping the `.bib` file beside the manuscript makes it easy to track the reference file in Git and reuse it across related papers.
+Keeping the `.bib` file in the manuscript folder lets you track it in Git and use it from other manuscripts in that folder.
 
 ## Find a BibTeX entry
 
 <div class="doc-action-row">
-  <p>Open a bibliographic database such as MathSciNet, Google Scholar, a journal website, or a publisher page.</p>
-  <a class="doc-action-link" href="https://mathscinet-ams-org.proxy1.cl.msu.edu/mathscinet/publications-search">MathSciNet</a>
+  <p>Search for the source in MathSciNet or Google Scholar, or open its journal or publisher page.</p>
+  <a class="doc-action-link" href="https://mathscinet.ams.org/">MathSciNet</a>
 </div>
+
+The MathSciNet images below show an older interface. In the current interface, follow the **Export → BibTeX → Get Citations → Copy** sequence described in the text.
 
 <figure class="image-frame">
   <img src="/assets/images/reference-3.png" alt="MathSciNet publication search page">
 </figure>
 
-Search for the book, article, or paper you want to cite.
+Search by the source's title or author.
 
 <figure class="image-frame">
   <img src="/assets/images/reference-4.png" alt="MathSciNet search results for a reference">
 </figure>
 
-Open the record and choose the citation tool.
+Open **Export** above the search results and select the entry you want to cite.
 
 <figure class="image-frame">
   <img src="/assets/images/reference-5.png" alt="MathSciNet record page with the Cite button highlighted">
 </figure>
 
-Select `BibTeX`, then copy the citation entry.
+Set the citation format to **BibTeX**, select **Get Citations**, and then use **Copy** to copy the entry.
 
 <figure class="image-frame">
   <img src="/assets/images/reference-6.png" alt="MathSciNet citation formatting dialog with BibTeX selected">
@@ -89,7 +90,7 @@ Select `BibTeX`, then copy the citation entry.
 
 ## Add the entry
 
-Paste the copied BibTeX entry into `reference.bib`.
+Paste the copied BibTeX entry into the `.bib` file you are using. The example below adds it to `reference.bib`.
 
 ```bibtex
 @book {MR737190,
@@ -107,7 +108,7 @@ Paste the copied BibTeX entry into `reference.bib`.
   MRNUMBER = {737190},
 MRREVIEWER = {O.\ John},
        DOI = {10.1007/978-3-642-61798-0},
-       URL = {https://doi-org.proxy1.cl.msu.edu/10.1007/978-3-642-61798-0},
+       URL = {https://doi.org/10.1007/978-3-642-61798-0},
 }
 ```
 
@@ -115,17 +116,15 @@ MRREVIEWER = {O.\ John},
   <img src="/assets/images/reference-7.png" alt="VS Code editor showing a BibTeX entry inside reference.bib">
 </figure>
 
-The part after `{` is the citation key. In this example, the key is `MR737190`.
+On the first line, `MR737190` inside the braces after `@book` is the citation key. Use the same value in the manuscript's `\cite{...}` command.
 
 ## Cite the source
-
-In the manuscript, cite the source with the citation key.
 
 ```latex
 \cite{MR737190}
 ```
 
-Then tell LaTeX which bibliography file to use.
+If your manuscript uses the new `reference.bib` file, add these commands before `\end{document}`. The first chooses the bibliography style; the second selects the `.bib` file. Keep the existing `abbrv` style and `bibliography.bib` connection when using the `seed-document` example.
 
 ```latex
 \bibliographystyle{plain}
@@ -136,20 +135,18 @@ Then tell LaTeX which bibliography file to use.
   <img src="/assets/images/reference-8.png" alt="VS Code editor showing a citation command and bibliography commands in a tex file">
 </figure>
 
-The file name is written without `.bib`, so `reference.bib` becomes `reference`.
+Omit the `.bib` extension inside `\bibliography{...}`. Use `\bibliography{reference}` for `reference.bib` or `\bibliography{bibliography}` for `bibliography.bib`.
 
-## Print the bibliography
+<h2 id="print-the-bibliography">Check the bibliography</h2>
 
-Compile the manuscript and check the PDF.
+Open the manuscript's `.tex` file in VS Code, run **Build LaTeX project** from the Command Palette, and check the PDF preview.
 
 <figure class="image-frame">
   <img src="/assets/images/reference-9.png" alt="Compiled PDF showing an in-text citation and references section">
 </figure>
 
-The citation appears in the manuscript, and the cited entry appears in the references section. If a reference exists in `reference.bib` but is never cited in the `.tex` file, it will not appear in the PDF.
+Check that the citation in the PDF is not `?` and that the source appears in the bibliography. If the entry is missing, check that the citation key in `.tex` matches the key on the first line of the `.bib` entry.
 
-Some templates use `biblatex` instead of BibTeX. In that case, the project may use commands such as `\addbibresource{reference.bib}` near the top and `\printbibliography` near the end. Use the system your template expects.
+If the manuscript template loads `biblatex`, do not add the BibTeX commands above. Follow the template's `\addbibresource{...}` and `\printbibliography` setup instead. If the bibliography is missing, check that the build runs the backend specified by the template.
 
-After adding or changing citations, compile the manuscript again and check the PDF.
-
-If the bibliography does not update immediately, run the build again. Bibliography tools often need more than one build pass before citations and reference lists are fully updated.
+If a citation remains `?` or the bibliography does not update, check the LaTeX Workshop build log for BibTeX or template backend errors. Fix the error, rebuild, and check the PDF.

@@ -584,7 +584,7 @@ const pages = [
     order: 6,
     group: "reference",
     title: "BibTeX",
-    description: ".bib 파일에서 reference를 관리하고 manuscript에서 source를 cite합니다.",
+    description: ".bib 파일에 참고 문헌 정보를 저장하고 LaTeX 원고에서 인용하는 방법을 안내합니다.",
     translationKey: "writing-bibliography-citation",
     status: "core"
   },

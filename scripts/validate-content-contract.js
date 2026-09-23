@@ -17,6 +17,7 @@ const verificationRequired = new Set([
   "initial-setup-project-template",
   "writing-folder-setup",
   "writing-settings",
+  "writing-bibliography-citation",
   "git-git-installation",
   "git-connect-github",
   "git-create-repository",
@@ -31,13 +32,15 @@ const workflowCheckOptional = new Set([
   "initial-setup-project-template",
   "writing-folder-setup",
   "writing-settings",
-  "writing-syntax"
+  "writing-syntax",
+  "writing-bibliography-citation"
 ]);
 const summaryOptional = new Set([
   "initial-setup-project-template",
   "writing-folder-setup",
   "writing-settings",
-  "writing-syntax"
+  "writing-syntax",
+  "writing-bibliography-citation"
 ]);
 
 const errors = [];
