@@ -25,6 +25,10 @@ const verificationRequired = new Set([
   "git-collaboration",
   "git-pull-request"
 ]);
+const workflowCheckOptional = new Set([
+  "initial-setup-latex-installation",
+  "initial-setup-vs-code-installation"
+]);
 
 const errors = [];
 
@@ -118,8 +122,8 @@ for (const page of documents) {
       `${page.url}: prerequisites are missing.`
     );
     assert(
-      data.workflowChecks !== false || page.translationKey === "initial-setup-latex-installation",
-      `${page.url}: workflow checks can only be hidden on the LaTeX installation guide.`
+      data.workflowChecks !== false || workflowCheckOptional.has(page.translationKey),
+      `${page.url}: workflow checks can only be hidden on an installation guide.`
     );
     if (data.workflowChecks !== false) {
       assert(

@@ -136,9 +136,7 @@ if (fs.existsSync(outputRoot)) {
       assert(!document.querySelector(".platform-scope"), `${page.url}: duplicate scope note remains.`);
       assert(!hasContract, `${page.url}: redundant setup summary remains above the guide.`);
       assert(!document.querySelector(".verification-card"), `${page.url}: verification details remain above the guide.`);
-      if (page.translationKey === "initial-setup-latex-installation") {
-        assert(Boolean(document.querySelector(".image-review-note--needs-update")), `${page.url}: screenshot update marker is missing.`);
-      }
+      assert(Boolean(document.querySelector(".image-review-note--needs-update")), `${page.url}: screenshot update marker is missing.`);
     } else {
       assert(!osSelector, `${page.url}: operating-system selector appeared outside installation guides.`);
     }
@@ -147,8 +145,8 @@ if (fs.existsSync(outputRoot)) {
       if (!osSelectorTopics.has(page.translationKey)) {
         assert(hasContract, `${page.url}: generated core contract is missing.`);
       }
-      if (page.translationKey === "initial-setup-latex-installation") {
-        assert(!document.querySelector(".workflow-checks"), `${page.url}: redundant LaTeX wrap-up remains.`);
+      if (osSelectorTopics.has(page.translationKey)) {
+        assert(!document.querySelector(".workflow-checks"), `${page.url}: redundant installation wrap-up remains.`);
       } else {
         assert(hasCompletion, `${page.url}: generated completion check is missing.`);
       }

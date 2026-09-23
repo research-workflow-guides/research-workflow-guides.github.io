@@ -3,49 +3,41 @@
 <div class="doc-step-pair">
   <div class="doc-step-copy">
     <div class="doc-action-row">
-      <p>Download the Windows installer from the official VS Code download page, then open VS Code after installation and confirm it launches without errors.</p>
+      <p>On the official VS Code download page, choose the Windows <strong>User Installer</strong>. Download the x64 installer for an Intel or AMD PC, or the Arm64 installer for an Arm PC.</p>
       <a class="doc-action-link" href="https://code.visualstudio.com/Download">Official VS Code downloads</a>
     </div>
-    <p>Download it from the VS Code website.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.2-1.png" alt="VS Code homepage">
+    <img src="/assets/images/1.2-2.png" alt="Windows installer options on the VS Code download page">
   </figure>
 </div>
 
-<div class="doc-step-pair">
-  <div class="doc-step-copy">
-    <p>On the download page, choose the Windows installer.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.2-2.png" alt="VS Code download page">
-  </figure>
-</div>
+Run the downloaded installer and follow its prompts. The User Installer installs VS Code for your account without requiring administrator permissions. When setup finishes, open VS Code and confirm that its start screen appears.
 
 ## Install LaTeX Workshop
 
-1. Open the Extensions panel from the left sidebar or the Command Palette.
-2. Search for **LaTeX Workshop** and install the extension published by James Yu.
-3. Leave VS Code open for a moment after installation so the extension finishes registering.
+Select the Extensions icon on the left side of VS Code, or press `Ctrl+Shift+X` to open the Extensions view.
 
 <p><a class="doc-action-link" href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop on the VS Code Marketplace</a></p>
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
-    <p>Use the Extensions panel to search for <strong>LaTeX Workshop</strong> inside VS Code.</p>
+    <p>Search for <strong>LaTeX Workshop</strong>. Select the extension published by <strong>James Yu</strong> and choose <strong>Install</strong>.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.2-3.png" alt="VS Code extensions panel with LaTeX Workshop">
+    <img src="/assets/images/1.2-3.png" alt="James Yu's LaTeX Workshop in VS Code Extensions search results">
   </figure>
 </div>
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
-    <p>After installation, confirm that the extension is active and that VS Code is ready for the first project workflow.</p>
+    <p>Find LaTeX Workshop in the Installed extensions list. If it is marked Disabled, choose <strong>Enable</strong> or <strong>Enable (Workspace)</strong> from its Manage menu. Reload the VS Code window if prompted.</p>
   </div>
   <figure class="image-frame">
-    <img src="/assets/images/1.2-4.png" alt="VS Code with installation complete">
+    <img src="/assets/images/1.2-4.png" alt="LaTeX Workshop in the VS Code Installed extensions list">
   </figure>
 </div>
 
-Confirm that VS Code opens, the extension is installed, and LaTeX Workshop commands appear in the Command Palette.
+## Check the build command
+
+Open the Command Palette with `Ctrl+Shift+P` and search for `Build LaTeX project`. If the command does not appear, open a `.tex` file and search again, then check that LaTeX Workshop is enabled. You will build a PDF in the next project-template step.

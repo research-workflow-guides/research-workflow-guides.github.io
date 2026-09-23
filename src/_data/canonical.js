@@ -187,7 +187,7 @@ const pages = [
     order: 2,
     group: "installation",
     title: "VS Code Installation",
-    description: "Install VS Code and add the LaTeX Workshop extension.",
+    description: "Install VS Code and LaTeX Workshop on Windows, then check that the extension is enabled.",
     translationKey: "initial-setup-vs-code-installation",
     status: "core"
   },
@@ -226,7 +226,7 @@ const pages = [
     order: 2,
     group: "installation",
     title: "VS Code 설치",
-    description: "VS Code를 설치하고 LaTeX Workshop 확장을 추가합니다.",
+    description: "Windows에서 VS Code와 LaTeX Workshop을 설치하고 활성화를 확인합니다.",
     translationKey: "initial-setup-vs-code-installation",
     status: "core"
   },
