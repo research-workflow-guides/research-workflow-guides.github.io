@@ -199,8 +199,8 @@ const pages = [
     slug: "extension",
     order: 2.5,
     group: "installation",
-    title: "Extension",
-    description: "Add extra useful VS Code extensions.",
+    title: "Optional extensions",
+    description: "Choose and install the extra VS Code extensions you need on Windows.",
     translationKey: "initial-setup-extension",
     status: "optional"
   },
@@ -212,8 +212,8 @@ const pages = [
     slug: "extension",
     order: 2.5,
     group: "installation",
-    title: "Extension",
-    description: "유용한 VS Code extension을 소개합니다.",
+    title: "추가 확장",
+    description: "Windows의 VS Code에서 필요한 추가 확장을 선택해 설치합니다.",
     translationKey: "initial-setup-extension",
     status: "optional"
   },

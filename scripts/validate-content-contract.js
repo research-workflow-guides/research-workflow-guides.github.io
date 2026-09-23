@@ -15,6 +15,7 @@ const verificationRequired = new Set([
   "initial-setup-latex-installation",
   "initial-setup-vs-code-installation",
   "initial-setup-project-template",
+  "initial-setup-extension",
   "writing-folder-setup",
   "writing-settings",
   "writing-bibliography-citation",
