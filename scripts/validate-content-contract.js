@@ -134,6 +134,12 @@ for (const page of documents) {
         ["verified", "needs-review"].includes(data.verification.status),
         `${page.url}: verification status is invalid.`
       );
+      if (data.verification.screenshots !== undefined) {
+        assert(
+          data.verification.screenshots === "needs-update",
+          `${page.url}: verification.screenshots is invalid.`
+        );
+      }
       for (const field of ["environment", "workflow", "lastVerified", "support"]) {
         assert(
           typeof data.verification[field] === "string" && data.verification[field].trim(),

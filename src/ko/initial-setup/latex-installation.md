@@ -19,9 +19,10 @@ commonProblems:
   - 새로 설치한 명령을 사용하려면 터미널을 닫고 다시 열어야 할 수 있습니다.
 verification:
   status: needs-review
+  screenshots: needs-update
   environment: Windows는 상세 screenshot 경로이며 macOS와 Linux는 명령 중심으로 안내합니다.
   workflow: MiKTeX, Perl, latexmk와 필요 패키지 자동 설치.
-  lastVerified: 현재 제품 기준 walkthrough 대기 중.
+  lastVerified: 기존 Windows 설치 화면 업데이트 필요. 현재 제품 기준 walkthrough 대기 중.
   support: Windows 상세 지원, macOS와 Linux는 터미널 확인 중심의 요약 지원.
 toc:
   - id: miktex-다운로드

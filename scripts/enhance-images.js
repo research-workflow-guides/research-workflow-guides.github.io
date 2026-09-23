@@ -11,9 +11,12 @@ module.exports = function enhanceImages(html) {
 
   const isKorean = document.querySelector("html")?.getAttribute("lang") === "ko";
   const needsReview = Boolean(document.querySelector(".verification-needs-review"));
+  const screenshotsNeedUpdate = Boolean(document.querySelector('[data-screenshot-update="needs-update"]'));
   const zoomLabel = isKorean ? "이미지 원본 확대" : "Enlarge original image";
   const zoomHint = isKorean ? "확대" : "Enlarge";
-  const reviewNote = isKorean ? "기존 화면 · 재검증 예정" : "Existing screenshot · review pending";
+  const reviewNote = screenshotsNeedUpdate
+    ? isKorean ? "기존 화면 · 업데이트 필요" : "Existing screenshot · update required"
+    : isKorean ? "기존 화면 · 재검증 예정" : "Existing screenshot · review pending";
 
   for (const figure of figures) {
     for (const image of figure.querySelectorAll("img")) {

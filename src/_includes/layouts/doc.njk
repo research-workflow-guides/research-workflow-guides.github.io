@@ -28,7 +28,7 @@ pageClass: page-doc
       </section>
     {% endif %}
     {% if verification %}
-      <details class="verification-card verification-{{ verification.status }}" data-verification-status="{{ verification.status }}">
+      <details class="verification-card verification-{{ verification.status }}" data-verification-status="{{ verification.status }}"{% if verification.screenshots %} data-screenshot-update="{{ verification.screenshots }}"{% endif %}>
         <summary><span>{{ currentUi.supportDetails }}</span> <span class="verification-status">{{ currentUi.needsReview if verification.status == "needs-review" else currentUi.verified }}</span></summary>
         <dl class="verification-list">
           <div><dt>{{ currentUi.verificationStatus }}</dt><dd>{{ currentUi.needsReview if verification.status == "needs-review" else currentUi.verified }}</dd></div>

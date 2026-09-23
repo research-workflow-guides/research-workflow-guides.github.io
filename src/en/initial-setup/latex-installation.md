@@ -19,9 +19,10 @@ commonProblems:
   - A newly installed command may require closing and reopening the terminal.
 verification:
   status: needs-review
+  screenshots: needs-update
   environment: Windows is the detailed screenshot path; macOS and Linux use command-based guidance.
   workflow: MiKTeX, Perl, latexmk, and on-demand package installation.
-  lastVerified: Pending a current-product walkthrough.
+  lastVerified: Existing Windows installation screenshots need updating. Pending a current-product walkthrough.
   support: Windows detailed; macOS and Linux summary with terminal verification.
 toc:
   - id: download-miktex
