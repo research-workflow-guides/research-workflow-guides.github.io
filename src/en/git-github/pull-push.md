@@ -1,170 +1,126 @@
 ---
 layout: layouts/doc.njk
 title: Pull & Push
-description: Repeat one clean sync loop so local work and remote history stay aligned.
+description: Publish the first commit to GitHub, then exchange later changes with Pull and Push.
 lang: en
 section: git-github
 order: 7
 permalink: /en/git-github/pull-push/
 translationKey: git-pull-push
 eyebrow: Topic 2
-lead: "Keep the daily remote workflow small: pull before work if needed, commit coherent changes, then push when the work unit is ready."
-outcome: Local and GitHub history contain the same completed commit after one pull and push cycle.
-prerequisites:
-  - The terminal is inside the intended repository and branch.
-  - Local changes have been reviewed and committed before pushing.
-completion: "`git status` reports a clean working tree and the local branch is up to date with its remote branch."
-commonProblems:
-  - Pulling with uncommitted overlapping changes can block the sync and require cleanup first.
-  - A rejected push usually means remote commits must be pulled and reviewed before retrying.
+lead: Create the first commit from the files added to the empty cloned repository, then use Publish Branch to send it to GitHub. After that, use Pull to receive remote commits and Push to upload local commits.
+workflowChecks: false
+verificationCard: false
 verification:
   status: needs-review
-  environment: Command-line behavior applies across platforms; screenshots also show Windows VS Code and GitHub Desktop paths.
-  workflow: Pull and push through Git, VS Code, and GitHub Desktop.
-  lastVerified: Pending a current-product walkthrough.
-  support: Git commands support Windows, macOS, and Linux; graphical controls differ by product and platform.
+  screenshots: needs-update
+  environment: Written for VS Code Source Control and the integrated terminal on Windows.
+  workflow: Publish the first commit from an empty repository, then use Pull and Push.
+  lastVerified: VS Code and GitHub documentation checked on 2026-09-23. Current Windows screens await review.
+  support: The existing VS Code images need updating. macOS and Linux screens await review.
+  scopeNote: This guide uses Windows screens. macOS and Linux screens will be reviewed later.
 toc:
   - id: key-terms
     label: Key terms
-  - id: pull-first-way
-    label: Pull (first way)
-  - id: pull-second-way
-    label: Pull (second way)
-  - id: pull-third-way
-    label: Pull (third way)
-  - id: push-first-way
-    label: Push (first way)
-  - id: push-second-way
-    label: Push (second way)
-  - id: push-third-way
-    label: Push (third way)
+  - id: publish-the-first-commit
+    label: Publish the first commit
+  - id: receive-remote-changes
+    label: Receive remote changes
+  - id: upload-local-commits
+    label: Upload local commits
+  - id: check-the-published-commit
+    label: Check the published commit
 tags:
   - doc
 ---
 
 <figure class="image-frame">
-  <img src="/assets/images/3-topic-1-1.PNG" alt="Pull and push workflow overview">
+  <img src="/assets/images/3-topic-1-1.PNG" alt="Existing diagram showing commits sent from one local repository to GitHub and pulled into another">
 </figure>
 
 ## Key terms
 
-<div style="display:flex;justify-content:center;margin:1.25rem 0">
-  <table style="border-collapse:collapse;min-width:32rem">
-    <thead>
-      <tr style="background:#f0e1c8">
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Term</th>
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">Meaning</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Stage</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The process of preparing changes to be included in a commit, before actually committing them.</td>
-      </tr>
-      <tr style="background:#fdf7ef">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Commit</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The operation of saving changes to the local Git repository.</td>
-      </tr>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Push</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The action of transferring commits from the local Git repository to a remote repository.</td>
-      </tr>
-      <tr style="background:#fdf7ef">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Pull</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">The action of fetching commits from a remote repository and merging them into the local branch.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+- **Stage**: Choose changes for the next commit.
+- **Commit**: Record those changes in local Git history.
+- **Push**: Send local commits to GitHub.
+- **Pull**: Bring new GitHub commits into the local branch.
 
-## Pull (first way)
+## Publish the first commit
 
-Let's learn how to download what's uploaded to GitHub to the registered folder.
+Choose the project source files identified by `git status` in the previous step. For example, review `check-document.tex` and the source files in `seed-document`. Decide separately whether you need build outputs such as `.aux`, `.log`, `.fls`, `.synctex.gz`, and PDF files. Add files you want to exclude to [`.gitignore`](/en/git-github/gitignore/) before staging.
 
-Click the button on the right and select 'Pull' in Source Control.
+In VS Code **Source Control**, click `+` beside **each file** you want to stage. The older image below shows the `+` beside the **Changes heading**, which stages every file, including generated files. Use it only to locate the control. If **Staged Changes** contains files you do not want, click `-` beside those files to unstage them.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-10.png" alt="VS Code Source Control pull menu">
+  <img src="/assets/images/2.2.3-1.png" alt="Older VS Code Source Control showing the Stage All button beside Changes and generated files">
 </figure>
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-11%20(1).png" alt="VS Code Source Control menu with Pull highlighted">
+  <img src="/assets/images/2.2.3-2.png" alt="Older VS Code Staged Changes list that includes generated LaTeX files">
 </figure>
 
-When the pull is successfully completed, you will be able to see the following screen.
-
-If nobody else has changed the repository, the pull does nothing — that is expected.
+Once **Staged Changes** contains only the files you intend to upload, enter a commit message and select **Commit**. This records the commit locally. The older image below also includes generated files, so rely on the file list you reviewed.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-12.png" alt="VS Code Source Control after pull completes">
+  <img src="/assets/images/2.2.3-3.png" alt="Older VS Code Source Control view with a commit message entered">
 </figure>
 
-## Pull (second way)
+After committing, select **Publish Branch** in **Source Control** to upload the current branch to the GitHub repository you cloned earlier. Check the displayed repository address so you do not select **Publish to GitHub**, which creates another repository. Then confirm the files and first commit on GitHub.
 
-Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then enter the following command:
+## Receive remote changes
 
-```shell
+After publishing the first branch, when GitHub has new commits, select **Pull** from the **Source Control** `...` menu. Commit or safely set aside any unfinished changes first. If nobody has added a remote commit, there are no new files to receive.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-10.png" alt="Older VS Code Source Control More Actions menu location">
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-11%20(1).png" alt="Older VS Code Source Control Pull menu item">
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-12.png" alt="Older VS Code notification after Pull completes">
+</figure>
+
+You can also run `git pull` in the terminal, or open the **Command Palette** with `Ctrl+Shift+P` and run `Git: Pull`.
+
+```powershell
 git pull
 ```
 
-## Pull (third way)
-
-You can also perform Pull commands from the Command Palette with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on macOS.
-
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-10%20(2).png" alt="VS Code Command Palette pull command">
+  <img src="/assets/images/2.2.3-10%20(2).png" alt="Older VS Code Command Palette showing Git Pull">
 </figure>
 
-## Push (first way)
+## Upload local commits
 
-You can upload the changes to GitHub by staging them, committing, and then pushing.
+For later changes, review the files, stage only those you need, and commit them. Then select **Push** from the **Source Control** `...` menu or run `git push` in the terminal. If a push is rejected because another commit was added to the remote branch, Pull and review those changes before pushing again.
 
-Click the '+' button in Source Control.
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-1.png" alt="VS Code Source Control plus button for staging changes">
-</figure>
-
-You will see the Staged Changes appear.
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-2.png" alt="VS Code source control panel with staged changes">
-</figure>
-
-Enter the commit message.
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-3.png" alt="VS Code source control panel with a commit message entered">
-</figure>
-
-Click the button on the right.
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-5.png" alt="VS Code Source Control commit button menu">
-</figure>
-
-Select 'Commit & Push'.
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-6.png" alt="VS Code Source Control Commit & Push option">
-</figure>
-
-## Push (second way)
-
-Open a new terminal with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd> on macOS. Then enter the following command:
-
-```shell
-git add .
-git commit -m "Describe your change"
+```powershell
 git push
 ```
 
-## Push (third way)
-
-You can also perform Push commands from the Command Palette with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on macOS.
+The older images below show **Commit & Push** with generated files in the staged list. Do not follow that selection as shown. Use **Publish Branch** above for the first commit.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-11%20(2).png" alt="VS Code Command Palette push command">
+  <img src="/assets/images/2.2.3-5.png" alt="Older VS Code commit menu with generated files in the staged list">
 </figure>
 
-If you can explain when to pull, when to commit, and when to push without improvising, your daily sync loop is ready.
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-6.png" alt="Older VS Code Commit & Push option with generated files staged">
+</figure>
+
+You can also open the **Command Palette** with `Ctrl+Shift+P` and run `Git: Push`.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-11%20(2).png" alt="Older VS Code Command Palette showing Git Push">
+</figure>
+
+## Check the published commit
+
+On GitHub, check the files and latest commit on the branch you uploaded. Locally, run `git status` to check for unexpected remaining changes.
+
+```powershell
+git status
+```

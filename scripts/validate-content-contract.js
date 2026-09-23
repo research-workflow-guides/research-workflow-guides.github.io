@@ -38,7 +38,8 @@ const workflowCheckOptional = new Set([
   "git-connect-github",
   "git-create-repository",
   "git-clone-first-push",
-  "git-status"
+  "git-status",
+  "git-pull-push"
 ]);
 const summaryOptional = new Set([
   "initial-setup-project-template",
@@ -50,7 +51,8 @@ const summaryOptional = new Set([
   "git-connect-github",
   "git-create-repository",
   "git-clone-first-push",
-  "git-status"
+  "git-status",
+  "git-pull-push"
 ]);
 
 const errors = [];

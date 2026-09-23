@@ -1,170 +1,126 @@
 ---
 layout: layouts/doc.njk
 title: Pull과 Push
-description: 로컬 작업과 원격 이력을 맞추는 기본 sync 루프를 반복합니다.
+description: 첫 커밋을 GitHub에 올리고 이후 Pull과 Push로 변경을 주고받습니다.
 lang: ko
 section: git-github
 order: 7
 permalink: /ko/git-github/pull-push/
 translationKey: git-pull-push
 eyebrow: 주제 2
-lead: 일상적인 원격 작업 흐름은 작게 유지합니다. 필요하면 먼저 pull하고, 의미 있는 단위로 commit한 뒤, 준비되면 push합니다.
-outcome: 한 번의 pull과 push 흐름 후 local과 GitHub 이력에 같은 완료 commit이 존재합니다.
-prerequisites:
-  - 터미널이 의도한 repository와 branch 안에 있습니다.
-  - Push 전에 local 변경을 검토하고 commit했습니다.
-completion: "`git status`가 clean working tree와 local branch가 remote branch와 최신 상태임을 표시합니다."
-commonProblems:
-  - 겹치는 local 변경을 commit하지 않은 채 pull하면 sync가 중단될 수 있습니다.
-  - Push가 거절되면 원격 commit을 먼저 pull하고 검토한 뒤 다시 시도해야 합니다.
+lead: 앞에서 클론한 빈 저장소에서 추가할 파일을 확인하고 첫 커밋을 만듭니다. Publish Branch로 해당 브랜치를 GitHub에 올린 뒤, 이후 작업에서 원격 커밋을 받을 때 Pull, 로컬 커밋을 올릴 때 Push를 사용합니다.
+workflowChecks: false
+verificationCard: false
 verification:
   status: needs-review
-  environment: Command-line 동작은 모든 플랫폼에 적용되며 screenshot은 Windows VS Code와 GitHub Desktop 경로도 포함합니다.
-  workflow: Git, VS Code, GitHub Desktop의 pull과 push.
-  lastVerified: 현재 제품 기준 walkthrough 대기 중.
-  support: Git 명령은 Windows, macOS, Linux를 지원하며 graphical control은 제품과 플랫폼마다 다릅니다.
+  screenshots: needs-update
+  environment: Windows의 VS Code Source Control과 통합 터미널을 기준으로 작성했습니다.
+  workflow: 빈 저장소의 첫 커밋 게시, 이후 Pull과 Push.
+  lastVerified: 2026-09-23 VS Code와 GitHub 공식 문서를 확인했습니다. 현재 Windows 화면 검증 대기 중.
+  support: 기존 VS Code 이미지는 업데이트가 필요합니다. macOS와 Linux 화면은 추후 검증합니다.
+  scopeNote: 현재 Windows 화면을 기준으로 안내합니다. macOS와 Linux 화면은 추후 검증합니다.
 toc:
   - id: 용어-정리
     label: 용어 정리
-  - id: pull-첫-번째-방법
-    label: Pull (첫 번째 방법)
-  - id: pull-두-번째-방법
-    label: Pull (두 번째 방법)
-  - id: pull-세-번째-방법
-    label: Pull (세 번째 방법)
-  - id: push-첫-번째-방법
-    label: Push (첫 번째 방법)
-  - id: push-두-번째-방법
-    label: Push (두 번째 방법)
-  - id: push-세-번째-방법
-    label: Push (세 번째 방법)
+  - id: 첫-커밋-게시
+    label: 첫 커밋 게시
+  - id: 원격-변경-받기
+    label: 원격 변경 받기
+  - id: 로컬-커밋-올리기
+    label: 로컬 커밋 올리기
+  - id: 게시-확인
+    label: 게시 확인
 tags:
   - doc
 ---
 
 <figure class="image-frame">
-  <img src="/assets/images/3-topic-1-1.PNG" alt="Pull과 Push 워크플로우 개요">
+  <img src="/assets/images/3-topic-1-1.PNG" alt="로컬 저장소에서 GitHub로 커밋을 보내고 다른 저장소에서 받는 Pull과 Push 흐름을 그린 기존 도식">
 </figure>
 
 ## 용어 정리
 
-<div style="display:flex;justify-content:center;margin:1.25rem 0">
-  <table style="border-collapse:collapse;min-width:32rem">
-    <thead>
-      <tr style="background:#f0e1c8">
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">용어</th>
-        <th style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center">의미</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Stage</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">변경 사항을 커밋에 포함시키기 전에 준비하는 작업.</td>
-      </tr>
-      <tr style="background:#fdf7ef">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Commit</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">로컬 Git 저장소에 변경 사항을 저장하는 작업.</td>
-      </tr>
-      <tr style="background:#ffffff">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Push</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">로컬 Git 저장소에 있는 커밋을 원격 저장소로 전송하는 작업.</td>
-      </tr>
-      <tr style="background:#fdf7ef">
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem;text-align:center"><code>Pull</code></td>
-        <td style="border:1px solid #dfc9a0;padding:0.65rem 1.2rem">원격 저장소에 있는 커밋을 가져와 로컬 브랜치에 병합하는 작업.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+- **Stage**: 다음 커밋에 넣을 변경을 고릅니다.
+- **Commit**: 고른 변경을 로컬 이력에 기록합니다.
+- **Push**: 로컬 커밋을 GitHub로 보냅니다.
+- **Pull**: GitHub의 새 커밋을 가져와 로컬 브랜치에 반영합니다.
 
-## Pull (첫 번째 방법)
+## 첫 커밋 게시
 
-GitHub에 업로드 되어 있는 것을 등록된 폴더로 다운로드하는 것을 배워보도록 하겠습니다.
+앞 단계의 `git status`에서 확인한 파일 중 GitHub에 올릴 프로젝트 원본을 고릅니다. 예를 들어 `check-document.tex`과 `seed-document`의 원본 파일을 확인하고, 빌드로 생성된 `.aux`, `.log`, `.fls`, `.synctex.gz`, PDF 등은 필요한 파일인지 따로 판단합니다. 제외할 파일은 Stage하기 전에 [`.gitignore`](/ko/git-github/gitignore/)에 기록합니다.
 
-Source Control에서 오른쪽 버튼을 클릭하고 'Pull'을 선택하세요.
+VS Code의 **Source Control**에서 필요한 파일 **각 행**의 `+`를 눌러 Stage합니다. 아래 기존 화면은 **Changes 제목의 `+`로 전체 파일을 선택**하며 생성 파일도 포함합니다. 버튼 위치만 참고하고, **Staged Changes**에 불필요한 파일이 있으면 해당 행의 `-`로 Stage를 취소하세요.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-10.png" alt="VS Code Source Control Pull 메뉴">
+  <img src="/assets/images/2.2.3-1.png" alt="예전 VS Code Source Control에서 Changes 제목의 전체 Stage 버튼과 생성 파일이 보이는 화면">
 </figure>
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-11%20(1).png" alt="Pull 메뉴가 강조된 VS Code Source Control 화면">
+  <img src="/assets/images/2.2.3-2.png" alt="예전 VS Code의 Staged Changes에 LaTeX 생성 파일까지 포함된 화면">
 </figure>
 
-Pull이 성공적으로 완료되면 다음과 같은 화면을 확인할 수 있습니다.
-
-아무도 remote를 바꾸지 않았다면 pull은 아무 일도 하지 않습니다. 그것도 정상입니다.
+**Staged Changes**에 올릴 파일만 남았으면 커밋 메시지를 입력하고 **Commit**을 선택합니다. 커밋은 로컬 이력에 기록됩니다. 아래 기존 화면의 파일 목록에는 생성 파일도 있으므로, 목록은 앞에서 확인한 결과를 기준으로 판단하세요.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-12.png" alt="Pull 완료 후 VS Code Source Control 화면">
+  <img src="/assets/images/2.2.3-3.png" alt="예전 VS Code Source Control의 커밋 메시지 입력 화면">
 </figure>
 
-## Pull (두 번째 방법)
+커밋을 만든 뒤 **Source Control**에 표시되는 **Publish Branch**를 선택해 현재 브랜치를 앞에서 클론한 GitHub 저장소에 올립니다. 이때 다른 저장소를 새로 만드는 **Publish to GitHub**를 선택하지 않도록, 표시된 저장소 주소를 확인합니다. 게시가 끝나면 GitHub에서 파일과 첫 커밋을 확인합니다.
 
-Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 터미널을 엽니다. 그런 다음 다음 명령어를 입력하세요:
+## 원격 변경 받기
 
-```shell
+첫 브랜치 게시 후 GitHub에 새 커밋이 생겼다면 **Source Control**의 `...` 메뉴에서 **Pull**을 선택합니다. 작업 중인 변경이 있다면 먼저 커밋하거나 안전하게 보관한 뒤 Pull합니다. 다른 곳에서 만든 새 커밋이 없다면 가져올 파일도 없습니다.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-10.png" alt="예전 VS Code Source Control의 더보기 메뉴 위치">
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-11%20(1).png" alt="예전 VS Code Source Control의 Pull 메뉴">
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-12.png" alt="예전 VS Code의 Pull 완료 알림 화면">
+</figure>
+
+터미널에서는 `git pull`을 실행할 수 있습니다. `Ctrl+Shift+P`로 **Command Palette**를 열고 `Git: Pull`을 실행해도 됩니다.
+
+```powershell
 git pull
 ```
 
-## Pull (세 번째 방법)
-
-Command Palette에서도 Pull 명령을 실행할 수 있습니다. Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>를 사용하세요.
-
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-10%20(2).png" alt="VS Code Command Palette Pull 명령">
+  <img src="/assets/images/2.2.3-10%20(2).png" alt="예전 VS Code Command Palette의 Git Pull 명령">
 </figure>
 
-## Push (첫 번째 방법)
+## 로컬 커밋 올리기
 
-변경된 사항을 Stage하고 Commit 후에 Push함으로써 GitHub에 업로드할 수 있습니다.
+이후 작업도 변경 파일을 확인하고 필요한 파일만 Stage한 뒤 커밋합니다. 커밋 후 **Source Control**의 `...` 메뉴에서 **Push**를 선택하거나 터미널에서 `git push`를 실행합니다. 다른 곳에서 원격 브랜치에 새 커밋을 올려 Push가 거절되면, Pull로 가져와 변경을 검토한 뒤 다시 Push합니다.
 
-Source Control에서 Changes의 '+'버튼을 클릭하세요.
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-1.png" alt="VS Code Source Control Changes의 plus 버튼">
-</figure>
-
-Staged Changes가 생긴 것을 확인할 수 있습니다.
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-2.png" alt="Staged Changes가 생긴 VS Code Source Control 화면">
-</figure>
-
-Commit message를 입력하세요.
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-3.png" alt="commit message가 입력된 VS Code Source Control 화면">
-</figure>
-
-오른쪽 버튼을 클릭하세요.
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-5.png" alt="VS Code Source Control commit 버튼 메뉴">
-</figure>
-
-'Commit & Push'를 선택하세요.
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-6.png" alt="VS Code Source Control Commit & Push 선택지">
-</figure>
-
-## Push (두 번째 방법)
-
-Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 터미널을 엽니다. 그런 다음 다음 명령어를 입력하세요:
-
-```shell
-git add .
-git commit -m "Describe your change"
+```powershell
 git push
 ```
 
-## Push (세 번째 방법)
-
-Command Palette에서도 Push 명령을 실행할 수 있습니다. Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>를 사용하세요.
+아래 기존 화면은 **Commit & Push** 메뉴를 보여줍니다. 이미 Stage한 파일 목록에 생성 파일이 포함되어 있으므로 이 화면을 그대로 따라 선택하지 마세요. 첫 커밋 게시에는 위의 **Publish Branch** 절차를 사용합니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-11%20(2).png" alt="VS Code Command Palette Push 명령">
+  <img src="/assets/images/2.2.3-5.png" alt="예전 VS Code Source Control의 커밋 메뉴와 생성 파일 목록">
 </figure>
 
-언제 pull하고, 언제 commit하고, 언제 push하는지 즉흥적으로 판단하지 않고 설명할 수 있으면 기본 sync 루프는 자리 잡은 것입니다.
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-6.png" alt="예전 VS Code의 Commit & Push 메뉴와 생성 파일 목록">
+</figure>
+
+`Ctrl+Shift+P`로 **Command Palette**를 열어 `Git: Push`를 실행할 수도 있습니다.
+
+<figure class="image-frame">
+  <img src="/assets/images/2.2.3-11%20(2).png" alt="예전 VS Code Command Palette의 Git Push 명령">
+</figure>
+
+## 게시 확인
+
+GitHub 저장소에서 올린 브랜치의 파일과 최신 커밋을 확인합니다. 로컬에서는 `git status`를 실행해 예상하지 못한 변경이 남았는지 확인합니다.
+
+```powershell
+git status
+```

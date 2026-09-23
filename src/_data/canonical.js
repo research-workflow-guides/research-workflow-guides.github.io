@@ -789,7 +789,7 @@ const pages = [
     order: 7,
     group: "daily-workflow",
     title: "Pull & Push",
-    description: "Repeat one clean sync loop so local work and remote history stay aligned.",
+    description: "Publish the first commit to GitHub, then exchange later changes with Pull and Push.",
     translationKey: "git-pull-push",
     status: "core"
   },
@@ -802,7 +802,7 @@ const pages = [
     order: 7,
     group: "daily-workflow",
     title: "Pull과 Push",
-    description: "로컬 작업과 원격 이력을 맞추는 기본 sync 루프를 반복합니다.",
+    description: "첫 커밋을 GitHub에 올리고 이후 Pull과 Push로 변경을 주고받습니다.",
     translationKey: "git-pull-push",
     status: "core"
   },
