@@ -10,7 +10,7 @@ module.exports = function enhanceImages(html) {
   if (!figures.length) return html;
 
   const isKorean = document.querySelector("html")?.getAttribute("lang") === "ko";
-  const needsReview = Boolean(document.querySelector(".verification-needs-review"));
+  const needsReview = Boolean(document.querySelector('[data-verification-status="needs-review"]'));
   const screenshotsNeedUpdate = Boolean(document.querySelector('[data-screenshot-update="needs-update"]'));
   const zoomLabel = isKorean ? "이미지 원본 확대" : "Enlarge original image";
   const zoomHint = isKorean ? "확대" : "Enlarge";

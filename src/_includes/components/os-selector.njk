@@ -1,0 +1,17 @@
+{% set platformOptions = osGuides[osGuide.topic] %}
+<nav class="os-selector" aria-label="{{ currentUi.osSelector }}" data-pagefind-ignore="all">
+  <p class="os-selector-heading">{{ currentUi.osSelector }}</p>
+  <ul class="os-selector-options">
+    {% for platform in ["windows", "macos", "linux"] %}
+      {% set option = platformOptions[platform] %}
+      <li>
+        {% if option.available %}
+          <a class="os-option{% if osGuide.platform == platform %} os-option-current{% endif %}" href="{{ option.urls[lang] }}"{% if osGuide.platform == platform %} aria-current="page"{% endif %}>{{ option.label }}</a>
+        {% else %}
+          <span class="os-option os-option-pending">{{ option.label }} <small>{{ currentUi.osPending }}</small></span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="os-selector-note">{{ currentUi.osSelectorNote }}</p>
+</nav>

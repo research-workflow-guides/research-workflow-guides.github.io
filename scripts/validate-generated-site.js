@@ -4,6 +4,10 @@ const { parse } = require("node-html-parser");
 const { siteRoot: outputRoot } = require("./output-paths");
 
 const canonical = require("../src/_data/canonical");
+const osSelectorTopics = new Set([
+  "initial-setup-latex-installation",
+  "initial-setup-vs-code-installation"
+]);
 
 const errors = [];
 let checkedReferences = 0;
@@ -97,7 +101,7 @@ if (fs.existsSync(outputRoot)) {
       assert(!link.querySelector("a"), `${htmlPath}: nested link in an image preview.`);
     }
 
-    const needsReview = Boolean(document.querySelector(".verification-needs-review"));
+    const needsReview = Boolean(document.querySelector('[data-verification-status="needs-review"]'));
     for (const figure of document.querySelectorAll(".prose figure.image-frame")) {
       assert(Boolean(figure.querySelector("a img")), `${htmlPath}: image lacks a no-JavaScript link.`);
       if (needsReview) {
@@ -113,9 +117,31 @@ if (fs.existsSync(outputRoot)) {
     if (!document) continue;
     const hasContract = Boolean(document.querySelector(".workflow-contract"));
     const hasCompletion = Boolean(document.querySelector(".workflow-checks .workflow-completion"));
+    const osSelector = document.querySelector(".os-selector");
+
+    if (osSelectorTopics.has(page.translationKey)) {
+      assert(Boolean(osSelector), `${page.url}: operating-system selector is missing.`);
+      if (osSelector) {
+        const current = osSelector.querySelector('a.os-option[aria-current="page"]');
+        const pending = osSelector.querySelectorAll(".os-option-pending");
+        assert(current?.getAttribute("href") === page.url, `${page.url}: Windows selector link is incorrect.`);
+        assert(pending.length === 2, `${page.url}: pending operating systems are missing.`);
+        assert(pending.every((item) => item.tagName === "SPAN" && !item.querySelector("a")), `${page.url}: pending operating system is linked.`);
+      }
+      assert(!document.querySelector(".platform-scope"), `${page.url}: duplicate scope note remains.`);
+      assert(!hasContract, `${page.url}: redundant setup summary remains above the guide.`);
+      assert(!document.querySelector(".verification-card"), `${page.url}: verification details remain above the guide.`);
+      if (page.translationKey === "initial-setup-latex-installation") {
+        assert(Boolean(document.querySelector(".image-review-note--needs-update")), `${page.url}: screenshot update marker is missing.`);
+      }
+    } else {
+      assert(!osSelector, `${page.url}: operating-system selector appeared outside installation guides.`);
+    }
 
     if (page.status === "core") {
-      assert(hasContract, `${page.url}: generated core contract is missing.`);
+      if (!osSelectorTopics.has(page.translationKey)) {
+        assert(hasContract, `${page.url}: generated core contract is missing.`);
+      }
       assert(hasCompletion, `${page.url}: generated completion check is missing.`);
     } else {
       assert(!hasContract, `${page.url}: non-core page entered the core document contract.`);

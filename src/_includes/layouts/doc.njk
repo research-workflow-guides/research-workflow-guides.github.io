@@ -11,15 +11,16 @@ pageClass: page-doc
 {% set currentUi = ui[lang if lang == "ko" else "en"] %}
 <main id="main-content" class="content-shell" tabindex="-1">
   {% include "components/left-rail.njk" %}
-  <article class="doc-content" data-pagefind-body>
+  <article class="doc-content" data-pagefind-body{% if osGuide and verification %} data-verification-status="{{ verification.status }}"{% if verification.screenshots %} data-screenshot-update="{{ verification.screenshots }}"{% endif %}{% endif %}>
     {% include "components/breadcrumbs.njk" %}
     <header class="doc-hero">
       {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
       <h1>{{ title }}</h1>
       {% if lead %}<p class="lead">{{ lead | safe }}</p>{% endif %}
+      {% if osGuide %}{% include "components/os-selector.njk" %}{% endif %}
       {% if meta %}<dl class="meta-list">{% for item in meta %}<div><dt>{{ item.label }}</dt><dd>{{ item.value }}</dd></div>{% endfor %}</dl>{% endif %}
     </header>
-    {% if isCoreDocument %}
+    {% if isCoreDocument and not osGuide %}
       <section class="workflow-contract" aria-label="{{ currentUi.outcome }}">
         <p class="workflow-outcome"><span>{{ currentUi.outcome }}</span> {{ outcome | inlineMarkdown | safe }}</p>
         <details class="prerequisites"><summary>{{ currentUi.prerequisites }} <span class="detail-count">{{ prerequisites.length }}</span></summary>
@@ -27,7 +28,7 @@ pageClass: page-doc
         </details>
       </section>
     {% endif %}
-    {% if verification %}
+    {% if verification and not osGuide %}
       <details class="verification-card verification-{{ verification.status }}" data-verification-status="{{ verification.status }}"{% if verification.screenshots %} data-screenshot-update="{{ verification.screenshots }}"{% endif %}>
         <summary><span>{{ currentUi.supportDetails }}</span> <span class="verification-status">{{ currentUi.needsReview if verification.status == "needs-review" else currentUi.verified }}</span></summary>
         <dl class="verification-list">
