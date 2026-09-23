@@ -1,28 +1,24 @@
 ---
 layout: layouts/doc.njk
 title: Pull Request
-description: Review branch changes on GitHub before merging them into the main project history.
+description: Open a pull request from a work branch and review its changes and feedback.
 lang: en
 section: collaboration
 order: 4
 permalink: /en/collaboration/pull-request/
 translationKey: git-pull-request
 eyebrow: Topic 3
-lead: A Pull Request is a GitHub review page for branch work before it is merged.
-outcome: A pushed task branch is reviewed in a GitHub Pull Request and becomes ready to merge into main.
-prerequisites:
-  - The task branch is committed and pushed to GitHub.
-  - The base branch and intended reviewers are known.
-completion: The Pull Request has no unresolved review requests or failing checks and GitHub reports that it is ready to merge.
-commonProblems:
-  - Selecting the wrong base branch changes what the Pull Request proposes to merge.
-  - New commits after review may require another review before merging.
+lead: Push your work branch to GitHub and open a pull request into <code>main</code>. Review the changed files and feedback before merging.
+workflowChecks: false
+verificationCard: false
 verification:
   status: needs-review
-  environment: GitHub web interface; screenshots document a desktop browser path.
-  workflow: Opening, reviewing, and merging a Pull Request, then updating local main.
-  lastVerified: Pending a current GitHub UI walkthrough.
-  support: Browser workflow is platform-independent; GitHub controls may move over time.
+  screenshots: needs-update
+  environment: Written for a private personal-account repository in a Windows desktop browser.
+  workflow: Opening a pull request, reviewing changes, and preparing to merge.
+  lastVerified: GitHub documentation checked on 2026-09-23. Current Windows screens await review.
+  support: Existing images use the new-contents example branch. Current Windows and macOS/Linux screens await review.
+  scopeNote: This guide uses a private personal-account repository in a Windows desktop browser. macOS and Linux screens will be reviewed later.
 toc:
   - id: what-a-pull-request-means
     label: What a Pull Request means
@@ -39,70 +35,64 @@ tags:
 ---
 ## What a Pull Request means
 
-A Pull Request, often shortened to PR, is not a separate Git command. It is a GitHub workflow built on top of Git branches, commits, and merges.
+A pull request (PR) proposes merging changes from a work branch into another branch on GitHub. It lets collaborators review and discuss those changes before merging.
 
-A PR asks GitHub to compare one branch with another branch. Usually, your work branch is the compare branch, and `main` is the base branch that will receive the work.
-
-Use a Pull Request when another person should review the work, when the change is large, or when you want a clear discussion record before merging.
+When creating a PR, select `main` as the base branch that will receive the changes and your work branch as the compare branch. GitHub shows the differences in that direction.
 
 ## Push the branch to GitHub
 
-Before you can open a Pull Request, the branch must be uploaded to GitHub.
+After committing your work, use `git branch --show-current` in the VS Code integrated terminal to confirm that `draft-section` is active. If this branch has not been published yet, push it to GitHub with the following command.
 
-```shell
+```powershell
 git push -u origin draft-section
 ```
 
-The `-u` option connects your local branch with the branch on GitHub. After that, you can usually use `git push` on the same branch.
+The `-u` option sets the upstream branch for local `draft-section`. On later commits to the same branch, `git push` sends them to GitHub.
 
 ## Open a Pull Request
 
-After pushing the branch, GitHub may show a `Compare & pull request` button. Click it to start the PR.
+The existing images below use `new-contents` as an example branch. Select `draft-section` when following this guide.
+
+On GitHub, select the `draft-section` branch. Choose `Compare & pull request` above the file list if it appears. Otherwise, open **Pull requests > New pull request**.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-requests-1.png" alt="GitHub repository page showing a Compare and pull request button">
+  <img src="/assets/images/pull-requests-1.png" alt="Existing GitHub Pull requests list with a Compare & pull request button">
 </figure>
 
-Check the branch direction carefully. The base branch is the branch that will receive the changes, usually `main`. The compare branch is the branch that contains your work.
-
 <figure class="image-frame">
-  <img src="/assets/images/pull-requests-2.png" alt="GitHub pull request comparison page showing base and compare branches">
+  <img src="/assets/images/pull-requests-2.png" alt="Close-up of the Compare & pull request button in an existing GitHub image">
 </figure>
 
-Write a short title and description. The title should name the work, and the description should explain what changed or what the reviewer should check.
+On the PR creation page, confirm `base: main` and `compare: draft-section`. Check that the proposed file changes contain only the intended work.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-requests-3.png" alt="GitHub page for creating a pull request with title and description fields">
+  <img src="/assets/images/pull-requests-3.png" alt="Existing PR creation form with base main, compare new-contents, title, and description">
+</figure>
+
+Give the PR a short title. In the description, explain what changed, why, and what needs review. When ready, select **Create pull request**.
+
+<figure class="image-frame">
+  <img src="/assets/images/pull-requests-4.png" alt="Existing PR creation form with the Create pull request button highlighted">
 </figure>
 
 ## Review the Pull Request
 
-After the Pull Request is created, GitHub keeps the discussion, commits, checks, and merge status in one place.
+On the PR page, use **Conversation** for the description and comments, **Commits** for commit history, **Checks** for automated results, and **Files changed** for file differences.
 
 <figure class="image-frame">
-  <img src="/assets/images/pull-requests-4.png" alt="Created pull request page on GitHub">
+  <img src="/assets/images/pull-requests-5.png" alt="Existing PR Conversation page showing tabs, Reviewers, and merge status">
 </figure>
 
-Use the changed files view to inspect the exact differences before merging. Reviewers can leave comments, approve the PR, or request changes.
+In **Files changed**, check that the PR contains the expected files and inspect each difference. To request a review, select a collaborator under **Reviewers** in the right sidebar. Reviewers can comment, approve, or request changes.
 
-<figure class="image-frame">
-  <img src="/assets/images/pull-requests-5.png" alt="GitHub pull request page showing changed files for review">
-</figure>
+If changes are requested, edit the files on the same `draft-section` branch. In **Source Control**, stage only the intended files, commit them, and run `git push`. The PR updates when those commits reach the branch.
 
-If someone requests changes, return to the same branch, edit the files, commit the fix, and push again.
-
-```shell
-git add .
-git commit -m "Address review comments"
+```powershell
 git push
 ```
 
-The Pull Request updates automatically after the new commit is pushed to the same branch.
-
 ## Prepare the Pull Request for merge
 
-Before merging, confirm that the requested changes have been addressed, required reviewers have approved the work, and automated checks have passed. GitHub should report that the Pull Request is ready to merge.
+Confirm that requested changes and the team's review are complete. Check the merge status at the bottom of **Conversation** for conflicts, and satisfy any required approvals or automated checks configured for the repository.
 
-Leave the Pull Request open at this point. The next core document explains how to merge the approved PR and update your local `main` branch.
-
-Do not treat a Pull Request as just another way to push. Its value is review: checking the branch direction, reading the file differences, discussing the change, and deciding that the work is ready before it enters `main`.
+Leave the reviewed PR open. Follow [Merge](/en/collaboration/merge/) to merge it and update your local `main` branch.

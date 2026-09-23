@@ -21,7 +21,8 @@ const streamlinedCoreTopics = new Set([
   "git-status",
   "git-pull-push",
   "git-collaboration",
-  "git-branch"
+  "git-branch",
+  "git-pull-request"
 ]);
 
 const errors = [];

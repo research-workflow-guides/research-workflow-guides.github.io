@@ -506,7 +506,7 @@ const pages = [
     order: 4,
     group: "git-for-collaboration",
     title: "Pull Request",
-    description: "Review branch changes on GitHub before merging them into the main project history.",
+    description: "Open a pull request from a work branch and review its changes and feedback.",
     translationKey: "git-pull-request",
     status: "core"
   },
@@ -519,7 +519,7 @@ const pages = [
     order: 4,
     group: "git-for-collaboration",
     title: "Pull Request",
-    description: "Branch 변경 사항을 main 이력에 merge하기 전에 GitHub에서 검토합니다.",
+    description: "작업 브랜치로 Pull Request를 열고 변경 내용과 검토 의견을 확인합니다.",
     translationKey: "git-pull-request",
     status: "core"
   },
