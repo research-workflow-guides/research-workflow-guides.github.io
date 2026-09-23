@@ -32,11 +32,6 @@ toc:
     label: Install MiKTeX
   - id: perl-installation
     label: Perl Installation
-    children:
-      - id: windows
-        label: Windows
-      - id: macos-linux
-        label: macOS / Linux
   - id: package-auto-installation
     label: Package auto-installation
 tags:
@@ -104,14 +99,12 @@ tags:
 
 `latexmk` and later `latexdiff`-style workflows depend on Perl-based tools. The Windows installation and verification steps are below.
 
-### Windows
-
-For this guide, treat Windows as the default path. Install MiKTeX first, then **install Strawberry Perl as a required dependency** so later `latexmk`/`latexdiff` workflows do not fail because Perl is missing.
+If Perl is not already available on Windows, install Strawberry Perl after MiKTeX so later `latexmk` and `latexdiff` workflows can run.
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
     <div class="doc-action-row">
-      <p>Open the official Strawberry Perl site and install it before running the checks.</p>
+      <p>Open the official Strawberry Perl site and install it if Perl is not already available.</p>
       <a class="doc-action-link" href="https://strawberryperl.com/">Strawberry Perl</a>
     </div>
   </div>
@@ -120,17 +113,13 @@ For this guide, treat Windows as the default path. Install MiKTeX first, then **
   </figure>
 </div>
 
-After install, open a new terminal and verify:
+Open a new PowerShell window and verify:
 
 ```powershell
 perl --version
-where perl
+where.exe perl
 latexmk -v
 ```
-
-### macOS / Linux
-
-Installation and verification steps will be written and checked later.
 
 ## Package auto-installation
 

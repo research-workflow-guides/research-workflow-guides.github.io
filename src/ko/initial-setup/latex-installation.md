@@ -32,11 +32,6 @@ toc:
     label: MiKTeX 설치
   - id: perl-설치
     label: Perl 설치
-    children:
-      - id: windows
-        label: Windows
-      - id: macos-linux
-        label: macOS / Linux
   - id: 패키지-자동-설치
     label: 패키지 자동 설치
 tags:
@@ -104,8 +99,6 @@ tags:
 
 `latexmk`와 이후 `latexdiff` 계열 작업에는 Perl이 필요합니다. Windows에서 설치하고 확인하는 방법은 다음과 같습니다.
 
-### Windows
-
 Windows에 Perl이 설치되어 있지 않다면 Strawberry Perl을 설치합니다. 이미 Perl을 사용 중이라면 아래 명령으로 실행 여부를 먼저 확인합니다.
 
 <div class="doc-step-pair">
@@ -127,10 +120,6 @@ perl --version
 where.exe perl
 latexmk -v
 ```
-
-### macOS / Linux
-
-설치 및 확인 절차를 추후 작성·검증할 예정입니다.
 
 ## 패키지 자동 설치
 
