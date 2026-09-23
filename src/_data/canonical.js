@@ -763,7 +763,7 @@ const pages = [
     order: 5,
     group: "first-github-workflow",
     title: "Clone",
-    description: "Choose a clone workflow and open the copied repository in VS Code.",
+    description: "Clone an empty private GitHub repository in VS Code on Windows.",
     translationKey: "git-clone-first-push",
     status: "core"
   },
@@ -776,7 +776,7 @@ const pages = [
     order: 5,
     group: "first-github-workflow",
     title: "클론",
-    description: "clone 방법을 고르고 복사한 repository를 VS Code에서 엽니다.",
+    description: "빈 비공개 GitHub 저장소를 Windows의 VS Code로 클론합니다.",
     translationKey: "git-clone-first-push",
     status: "core"
   },

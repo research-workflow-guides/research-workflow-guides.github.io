@@ -1,144 +1,100 @@
 ---
 layout: layouts/doc.njk
 title: 클론
-description: clone 방법을 고르고 복사한 repository를 VS Code에서 엽니다.
+description: 빈 비공개 GitHub 저장소를 Windows의 VS Code로 클론합니다.
 lang: ko
 section: git-github
 order: 5
 permalink: /ko/git-github/clone-first-push/
 translationKey: git-clone-first-push
 eyebrow: 주제 3
-lead: 지금 시작하는 위치에 맞는 clone 방법을 고르세요. GitHub repository를 clone하는 방법은 세 가지가 있습니다.
-outcome: GitHub repository가 local project folder에 clone되어 VS Code에 열립니다.
-prerequisites:
-  - Git과 GitHub 인증이 정상적으로 동작합니다.
-  - Clone할 상위 folder의 위치와 쓰기 권한을 확인했습니다.
-completion: "Clone한 folder 안에서 `git status`가 repository 오류 없이 예상한 branch를 표시합니다."
-commonProblems:
-  - 잘못된 상위 folder에서 clone하면 예상하지 않은 중첩 project 경로가 생깁니다.
-  - Private repository를 clone하려면 browser 또는 VS Code 인증을 먼저 완료해야 합니다.
+lead: 앞에서 만든 빈 비공개 저장소의 주소를 GitHub에서 복사한 뒤, VS Code에서 클론합니다. 클론이 끝나면 저장소 폴더를 열어 프로젝트 파일을 넣을 준비를 합니다.
+workflowChecks: false
+verificationCard: false
 verification:
   status: needs-review
-  environment: Windows는 VS Code와 GitHub Desktop 상세 경로이며 command-line clone은 macOS와 Linux에도 적용됩니다.
-  workflow: VS Code, GitHub Desktop, command-line clone 시작 경로.
-  lastVerified: 현재 제품 기준 walkthrough 대기 중.
-  support: Windows 상세 지원, macOS는 대응 앱, Linux는 Git과 VS Code 명령으로 지원.
+  screenshots: needs-update
+  environment: Windows 데스크톱 브라우저와 VS Code를 기준으로 작성했습니다.
+  workflow: 빈 저장소의 HTTPS 주소 복사, VS Code 클론, 폴더 열기와 원격 주소 확인.
+  lastVerified: 2026-09-23 GitHub와 VS Code 공식 문서 확인. 현재 Windows 화면 검증 대기 중.
+  support: 기존 GitHub와 VS Code 이미지는 업데이트가 필요합니다. macOS와 Linux 화면은 추후 검증합니다.
+  scopeNote: 현재 Windows 데스크톱 화면을 기준으로 안내합니다. macOS와 Linux 화면은 추후 검증합니다.
 toc:
-  - id: 첫-번째-방법
-    label: 첫 번째 방법
-  - id: 두-번째-방법
-    label: 두 번째 방법
-  - id: 세-번째-방법
-    label: 세 번째 방법
-  - id: fork
-    label: Fork
+  - id: 빈-저장소-주소-복사
+    label: 빈 저장소 주소 복사
+  - id: vs-code에서-클론
+    label: VS Code에서 클론
+  - id: 다른-클론-방법
+    label: 다른 클론 방법
+  - id: 클론-확인
+    label: 클론 확인
 tags:
   - doc
 ---
-## 첫 번째 방법
+## 빈 저장소 주소 복사
 
-<div class="doc-step-pair">
-  <div>
-    <p>Source Control 화면을 열고 <strong>Clone Repository</strong>를 선택한 뒤 <strong>Clone from GitHub</strong>를 고릅니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-2.png" alt="clone 흐름을 시작하는 VS Code Welcome 화면">
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>clone하려는 repository를 검색합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-3.png" alt="GitHub repository 목록이 보이는 VS Code repository 선택 창">
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>VS Code가 repository source를 물어보면 <strong>Clone from GitHub</strong>를 선택합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-4.png" alt="Clone from GitHub가 선택된 VS Code clone source 선택 창">
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>GitHub 검색 결과에서 repository를 선택합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-5.png" alt="GitHub repository가 선택된 VS Code repository 선택 창">
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>프로젝트 파일을 옮기기 전에 clone을 둘 위치를 먼저 고릅니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="clone 위치를 고르는 폴더 선택 창">
-
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>clone이 끝나면 그 cloned repository를 작업 폴더로 엽니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/clone-open-repo.png" alt="clone된 저장소가 열린 VS Code 화면">
-
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>폴더 복제가 무사히 끝나면 다음과 같은 화면을 확인할 수 있습니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-7.png" alt="clone된 repository가 Explorer에 열린 VS Code 화면">
-  </figure>
-</div>
-
-## 두 번째 방법
-
-<div class="doc-step-pair">
-  <div>
-    <p>GitHub에서 repository URL을 복사합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-1.png" alt="repository URL 복사 버튼이 강조된 GitHub repository 화면">
-
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>GitHub에서 복사한 repository URL을 VS Code에 직접 붙여넣는 방법도 있습니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-6.png" alt="GitHub repository URL을 붙여넣는 VS Code clone 입력창">
-
-  </figure>
-</div>
-
-## 세 번째 방법
-
-터미널에 다음 명령을 입력하세요.
-
-```shell
-git clone <repository-url>
-cd <repository-folder>
-```
-
-## Fork
-
-다른 사람의 public repository를 복사하고 싶다면, <strong>Fork</strong>를 이용하세요.
+앞에서 만든 빈 비공개 저장소를 열고 **Quick setup**에 표시된 HTTPS 주소를 복사합니다. 기존 이미지는 파일이 들어 있는 공개 저장소의 **Code** 메뉴이므로, 주소를 복사하는 위치만 참고하세요.
 
 <figure class="image-frame">
-  <img src="/assets/images/Fork.png" alt="Fork 버튼이 강조된 GitHub repository 화면">
+  <img src="/assets/images/clone-1.png" alt="예전 공개 GitHub 저장소의 Code 메뉴에서 HTTPS 주소 복사 위치가 강조된 화면">
 </figure>
 
-clone된 repository가 VS Code에 열려 있고 프로젝트 파일이 그 안에 들어갔다면 첫 commit과 push 흐름으로 넘어갑니다.
+## VS Code에서 클론
+
+VS Code의 **Source Control**을 엽니다.
+
+<figure class="image-frame">
+  <img src="/assets/images/clone-2.png" alt="예전 VS Code 시작 화면에서 Source Control 아이콘이 강조된 모습">
+</figure>
+
+**Clone Repository**를 선택합니다. 이 버튼이 보이지 않으면 `Ctrl+Shift+P`로 Command Palette를 열고 `Git: Clone`을 실행합니다.
+
+<figure class="image-frame">
+  <img src="/assets/images/clone-3.png" alt="예전 VS Code Source Control 화면의 Clone Repository 버튼">
+</figure>
+
+복사한 HTTPS 주소를 입력하고 **Clone from URL**을 선택합니다. 비공개 저장소 로그인 창이 열리면 브라우저에서 인증을 마친 뒤 VS Code로 돌아옵니다.
+
+<figure class="image-frame">
+  <img src="/assets/images/clone-6.png" alt="예전 VS Code 클론 입력창에 저장소 HTTPS 주소를 붙여넣은 모습">
+</figure>
+
+클론할 저장소 폴더가 들어갈 상위 폴더를 선택합니다. VS Code가 클론을 마치면 **Open**을 눌러 새 저장소 폴더를 엽니다.
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="예전 Windows 폴더 선택 창에서 클론의 상위 폴더를 고르는 모습">
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/clone-open-repo.png" alt="예전 VS Code에서 클론한 저장소를 열지 묻는 창">
+</figure>
+
+## 다른 클론 방법
+
+VS Code에서 **Clone from GitHub**를 선택하고 저장소 이름을 검색해 클론할 수도 있습니다. 아래 이미지는 예전 목록 화면이며, 앞에서 만든 비공개 저장소가 검색되지 않으면 HTTPS 주소를 사용하세요.
+
+<figure class="image-frame">
+  <img src="/assets/images/clone-4.png" alt="예전 VS Code 클론 입력창에서 Clone from GitHub를 선택하는 모습">
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/clone-5.png" alt="예전 VS Code의 GitHub 저장소 검색 목록">
+</figure>
+
+터미널을 사용한다면 클론할 상위 폴더에서 다음 명령을 실행합니다. 예시 주소는 자신의 저장소 HTTPS 주소로 바꾸세요.
+
+```powershell
+git clone https://github.com/OWNER/REPOSITORY.git
+cd REPOSITORY
+```
+
+## 클론 확인
+
+클론한 폴더에서 다음 명령을 실행합니다. `git status`가 저장소 오류 없이 실행되고, `git remote -v`의 `origin`이 앞에서 복사한 주소를 가리키면 클론이 완료된 것입니다. 빈 저장소에는 아직 커밋과 프로젝트 파일이 없습니다.
+
+```powershell
+git status
+git remote -v
+```
+
+3단계에서 내려받은 `seed-documents` 폴더의 **내용** 중 필요한 프로젝트 원본 파일을 클론한 저장소 폴더 안으로 옮깁니다. `seed-documents` 폴더 자체를 다시 넣으면 폴더가 한 단계 더 중첩됩니다.

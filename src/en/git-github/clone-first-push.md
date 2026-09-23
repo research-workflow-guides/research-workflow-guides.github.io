@@ -1,144 +1,100 @@
 ---
 layout: layouts/doc.njk
 title: Clone
-description: Choose a clone workflow and open the copied repository in VS Code.
+description: Clone an empty private GitHub repository in VS Code on Windows.
 lang: en
 section: git-github
 order: 5
 permalink: /en/git-github/clone-first-push/
 translationKey: git-clone-first-push
 eyebrow: Topic 3
-lead: Choose the clone workflow that matches where you are starting from. There are three ways to clone repositories in GitHub.
-outcome: The GitHub repository is cloned to a local project folder and opened in VS Code.
-prerequisites:
-  - Git and GitHub authentication are working.
-  - The destination parent folder is known and writable.
-completion: "`git status` runs inside the cloned folder and reports the expected branch without a repository error."
-commonProblems:
-  - Cloning into the wrong parent folder can create an unexpected nested project path.
-  - A browser or VS Code authentication prompt must finish before a private repository can be cloned.
+lead: Copy the URL of the empty private repository you created earlier, then clone it in VS Code. Open the cloned folder before adding your project files.
+workflowChecks: false
+verificationCard: false
 verification:
   status: needs-review
-  environment: Windows is the detailed VS Code and GitHub Desktop path; command-line cloning also applies to macOS and Linux.
-  workflow: VS Code, GitHub Desktop, and command-line clone entry points.
-  lastVerified: Pending a current-product walkthrough.
-  support: Windows detailed; macOS supported through equivalent apps; Linux supported through Git and VS Code commands.
+  screenshots: needs-update
+  environment: Written for a Windows desktop browser and VS Code.
+  workflow: Copy the empty repository's HTTPS URL, clone in VS Code, open the folder, and check the remote URL.
+  lastVerified: GitHub and VS Code documentation checked on 2026-09-23. Current Windows screens await verification.
+  support: Existing GitHub and VS Code images need updating. macOS and Linux screens await review.
+  scopeNote: This guide uses Windows desktop screens. macOS and Linux screens will be reviewed later.
 toc:
-  - id: first-way
-    label: First way
-  - id: second-way
-    label: Second way
-  - id: third-way
-    label: Third way
-  - id: fork
-    label: Fork
+  - id: copy-the-empty-repository-url
+    label: Copy the empty repository URL
+  - id: clone-in-vs-code
+    label: Clone in VS Code
+  - id: other-clone-methods
+    label: Other clone methods
+  - id: check-the-clone
+    label: Check the clone
 tags:
   - doc
 ---
-## First way
+## Copy the empty repository URL
 
-<div class="doc-step-pair">
-  <div>
-    <p>Open the Source Control view, choose <strong>Clone Repository</strong>, and select <strong>Clone from GitHub</strong>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-2.png" alt="VS Code welcome screen for starting a clone workflow">
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>Search for the repository you want to clone.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-3.png" alt="VS Code repository picker with GitHub repositories listed">
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>If VS Code asks for a repository source, choose <strong>Clone from GitHub</strong>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-4.png" alt="VS Code clone source picker with Clone from GitHub selected">
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>Select the repository from the GitHub search results.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-5.png" alt="VS Code repository picker with a GitHub repository selected">
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>Choose a destination folder for the clone before moving any project files.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="Folder selection dialog for choosing a clone destination">
-
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>After the clone finishes, open that cloned repository as the working folder before copying your project files into it.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/clone-open-repo.png" alt="VS Code after opening the cloned repository">
-
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>Once the folder cloning is completed successfully, you will be able to see the following screen.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-7.png" alt="VS Code showing the cloned repository open in the Explorer">
-  </figure>
-</div>
-
-## Second way
-
-<div class="doc-step-pair">
-  <div>
-    <p>Copy the repository URL from GitHub.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-1.png" alt="GitHub repository page with the repository URL copy button highlighted">
-
-  </figure>
-</div>
-
-<div class="doc-step-pair">
-  <div>
-    <p>You can also paste the repository URL copied from GitHub directly into VS Code.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/clone-6.png" alt="VS Code clone input for pasting a GitHub repository URL">
-
-  </figure>
-</div>
-
-## Third way
-
-Enter these commands in the terminal.
-
-```shell
-git clone <repository-url>
-cd <repository-folder>
-```
-
-## Fork
-
-If you want to copy someone else's public repository, use <strong>Fork</strong>.
+Open the empty private repository you created earlier and copy its HTTPS URL from **Quick setup**. The existing image shows the **Code** menu of a public repository that already has files; use it only to locate the URL copy control.
 
 <figure class="image-frame">
-  <img src="/assets/images/Fork.png" alt="GitHub repository page with the Fork button highlighted">
+  <img src="/assets/images/clone-1.png" alt="Older public GitHub repository with the HTTPS URL copy control highlighted in the Code menu">
 </figure>
 
-If the cloned repository is open in VS Code and the project files are inside it, continue to the first commit and push workflow.
+## Clone in VS Code
+
+Open **Source Control** in VS Code.
+
+<figure class="image-frame">
+  <img src="/assets/images/clone-2.png" alt="Older VS Code welcome screen with the Source Control icon highlighted">
+</figure>
+
+Select **Clone Repository**. If the button is not visible, open the Command Palette with `Ctrl+Shift+P` and run `Git: Clone`.
+
+<figure class="image-frame">
+  <img src="/assets/images/clone-3.png" alt="Clone Repository button in an older VS Code Source Control view">
+</figure>
+
+Paste the HTTPS URL and select **Clone from URL**. If a sign-in prompt appears for the private repository, finish authentication in the browser and return to VS Code.
+
+<figure class="image-frame">
+  <img src="/assets/images/clone-6.png" alt="Repository HTTPS URL pasted into an older VS Code clone prompt">
+</figure>
+
+Choose the parent folder where the cloned repository folder will be created. When cloning finishes, select **Open** to open the new repository folder.
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/clone-select-folder.png" alt="Older Windows folder picker for choosing the clone's parent folder">
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/clone-open-repo.png" alt="Older VS Code prompt asking whether to open the cloned repository">
+</figure>
+
+## Other clone methods
+
+You can also select **Clone from GitHub** in VS Code and search for the repository by name. The images below show an older repository picker. If the empty private repository does not appear, use its HTTPS URL instead.
+
+<figure class="image-frame">
+  <img src="/assets/images/clone-4.png" alt="Clone from GitHub selected in an older VS Code clone prompt">
+</figure>
+
+<figure class="image-frame">
+  <img src="/assets/images/clone-5.png" alt="Older VS Code picker listing GitHub repositories">
+</figure>
+
+To use a terminal, run these commands from the parent folder where you want the clone. Replace the example URL with your repository's HTTPS URL.
+
+```powershell
+git clone https://github.com/OWNER/REPOSITORY.git
+cd REPOSITORY
+```
+
+## Check the clone
+
+Run these commands in the cloned folder. The clone is ready when `git status` runs without a repository error and `origin` in `git remote -v` points to the URL you copied. An empty repository has no commits or project files yet.
+
+```powershell
+git status
+git remote -v
+```
+
+Move the needed source files from **inside** the `seed-documents` folder downloaded in step 3 into the cloned repository folder. Copying the `seed-documents` folder itself would add an extra folder level.
