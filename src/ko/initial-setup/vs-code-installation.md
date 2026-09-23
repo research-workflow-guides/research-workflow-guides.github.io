@@ -19,10 +19,11 @@ commonProblems:
   - LaTeX Workshop 명령이 보이려면 VS Code 창을 reload해야 할 수 있습니다.
 verification:
   status: needs-review
-  environment: Windows는 상세 screenshot 경로이며 macOS와 Linux도 같은 extension 흐름을 사용합니다.
+  environment: Windows 기준으로 작성 중이며 macOS와 Linux는 추후 작성·검증할 예정입니다.
   workflow: VS Code 설치와 LaTeX Workshop extension 설정.
   lastVerified: 현재 제품 기준 walkthrough 대기 중.
-  support: Windows 상세 지원, macOS와 Linux는 공식 다운로드와 공통 extension 흐름 지원.
+  support: Windows 안내 검토 중. macOS와 Linux 안내는 추후 추가 예정.
+  scopeNote: 이 단계는 Windows를 기준으로 설명합니다. macOS와 Linux 절차는 추후 작성·검증할 예정입니다.
 toc:
   - id: vs-code-설치
     label: VS Code 설치
@@ -36,7 +37,7 @@ tags:
 <div class="doc-step-pair">
   <div class="doc-step-copy">
     <div class="doc-action-row">
-      <p>운영체제에 맞는 VS Code 설치 파일을 다운로드한 뒤, 설치 후 VS Code가 오류 없이 열리는지 확인합니다.</p>
+      <p>Windows용 VS Code 설치 파일을 다운로드한 뒤, 설치 후 VS Code가 오류 없이 열리는지 확인합니다.</p>
       <a class="doc-action-link" href="https://code.visualstudio.com/Download">VS Code 공식 다운로드</a>
     </div>
     <p>먼저 VS Code 공식 홈페이지에 들어가서 올바른 다운로드 경로에 있는지만 확인합니다.</p>
@@ -48,7 +49,7 @@ tags:
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
-    <p>그다음 다운로드 페이지로 이동해 현재 운영체제에 맞는 설치 파일을 선택합니다.</p>
+    <p>그다음 다운로드 페이지로 이동해 Windows용 설치 파일을 선택합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-2.png" alt="VS Code 다운로드 페이지">

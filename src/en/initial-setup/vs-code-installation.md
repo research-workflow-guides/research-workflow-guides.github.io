@@ -19,10 +19,11 @@ commonProblems:
   - VS Code may need to be reloaded before LaTeX Workshop commands appear.
 verification:
   status: needs-review
-  environment: Windows is the detailed screenshot path; macOS and Linux use the same extension workflow.
+  environment: The guide is being written for Windows; macOS and Linux instructions are planned for later review.
   workflow: VS Code installation and LaTeX Workshop extension setup.
   lastVerified: Pending a current-product walkthrough.
-  support: Windows detailed; macOS and Linux supported through official downloads and the shared extension flow.
+  support: Windows guidance under review. macOS and Linux guidance is planned.
+  scopeNote: This step currently follows Windows. macOS and Linux procedures will be written and verified later.
 toc:
   - id: install-vs-code
     label: Install VS Code
@@ -36,7 +37,7 @@ tags:
 <div class="doc-step-pair">
   <div class="doc-step-copy">
     <div class="doc-action-row">
-      <p>Download VS Code from the official download page for your operating system, then open VS Code after installation and confirm it launches without errors.</p>
+      <p>Download the Windows installer from the official VS Code download page, then open VS Code after installation and confirm it launches without errors.</p>
       <a class="doc-action-link" href="https://code.visualstudio.com/Download">Official VS Code downloads</a>
     </div>
     <p>Download it from the VS Code website.</p>
@@ -48,7 +49,7 @@ tags:
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
-    <p>On the download page, choose the installer that matches your operating system.</p>
+    <p>On the download page, choose the Windows installer.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.2-2.png" alt="VS Code download page">

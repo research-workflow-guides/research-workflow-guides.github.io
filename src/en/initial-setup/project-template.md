@@ -19,10 +19,11 @@ commonProblems:
   - The first build may pause while MiKTeX installs a missing package.
 verification:
   status: needs-review
-  environment: Windows is the detailed screenshot path; macOS and Linux use the same repository and build result.
+  environment: The guide is being written for Windows; macOS and Linux instructions are planned for later review.
   workflow: GitHub ZIP download, project extraction, VS Code folder opening, and first PDF build.
   lastVerified: Pending a current-product walkthrough.
-  support: Windows detailed; macOS and Linux supported by the same file and build checks.
+  support: Windows guidance under review. macOS and Linux guidance is planned.
+  scopeNote: This step currently follows Windows. macOS and Linux procedures will be written and verified later.
 toc:
   - id: download-the-template
     label: Download the template

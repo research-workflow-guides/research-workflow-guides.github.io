@@ -20,10 +20,11 @@ commonProblems:
 verification:
   status: needs-review
   screenshots: needs-update
-  environment: Windows는 상세 screenshot 경로이며 macOS와 Linux는 명령 중심으로 안내합니다.
+  environment: Windows 기준으로 작성 중이며 macOS와 Linux는 추후 작성·검증할 예정입니다.
   workflow: MiKTeX, Perl, latexmk와 필요 패키지 자동 설치.
   lastVerified: 기존 Windows 설치 화면 업데이트 필요. 현재 제품 기준 walkthrough 대기 중.
-  support: Windows 상세 지원, macOS와 Linux는 터미널 확인 중심의 요약 지원.
+  support: Windows 안내 검토 중. macOS와 Linux 안내는 추후 추가 예정.
+  scopeNote: 이 단계는 Windows를 기준으로 설명합니다. macOS와 Linux 절차는 추후 작성·검증할 예정입니다.
 toc:
   - id: miktex-다운로드
     label: MiKTeX 다운로드
@@ -57,7 +58,7 @@ tags:
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
-    <p>다운로드 페이지에서 사용 중인 운영체제를 선택하고, 해당 운영체제의 설치 안내를 따릅니다.</p>
+    <p>다운로드 페이지에서 Windows용 설치 파일을 선택합니다.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-2.png" alt="MiKTeX 다운로드 페이지">
@@ -71,10 +72,6 @@ tags:
 3. MiKTeX Console에서 사용 가능한 업데이트를 확인하고 설치합니다. 업데이트가 완료되면 다음 단계로 진행합니다.
 4. 문서를 컴파일할 때 필요한 LaTeX 패키지가 없으면 자동으로 설치하도록 설정합니다. 자세한 설정 방법은 아래 ‘패키지 자동 설치’ 절에서 설명합니다.
 5. MiKTeX Console에서 `latexmk`를 검색하고 설치 여부를 확인합니다. 설치되어 있지 않으면 해당 패키지를 설치합니다.
-
-Linux에서는 배포판에 따라 설치 방법이 다릅니다. 아래 ‘MiKTeX Linux 설치 문서’에서 사용 중인 배포판의 안내에 따라 설치합니다.
-
-<p><a class="doc-action-link" href="https://miktex.org/howto/install-miktex-unx">MiKTeX Linux 설치 문서</a></p>
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
@@ -105,7 +102,7 @@ Linux에서는 배포판에 따라 설치 방법이 다릅니다. 아래 ‘MiKT
 
 ## Perl 설치
 
-`latexmk`와 이후 `latexdiff` 계열 작업에는 Perl이 필요합니다. 운영체제별 설치 및 확인 방법은 다음과 같습니다.
+`latexmk`와 이후 `latexdiff` 계열 작업에는 Perl이 필요합니다. Windows에서 설치하고 확인하는 방법은 다음과 같습니다.
 
 ### Windows
 
@@ -133,15 +130,7 @@ latexmk -v
 
 ### macOS / Linux
 
-macOS와 Linux에서는 터미널에서 Perl과 `latexmk`가 실행되는지 확인합니다.
-
-```bash
-perl --version
-command -v perl
-latexmk -v
-```
-
-`perl` 명령이 없으면 Perl을 설치한 뒤 다시 확인합니다. `latexmk -v`가 실행되지 않으면 MiKTeX Console에서 `latexmk` 패키지의 설치 상태를 확인합니다.
+설치 및 확인 절차를 추후 작성·검증할 예정입니다.
 
 ## 패키지 자동 설치
 

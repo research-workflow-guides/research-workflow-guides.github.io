@@ -39,6 +39,7 @@ pageClass: page-doc
         </dl>
       </details>
     {% endif %}
+    {% if verification and verification.scopeNote %}<p class="platform-scope" role="note">{{ verification.scopeNote }}</p>{% endif %}
     <div class="prose">{{ content | safe }}</div>
     {% if isCoreDocument %}
       <section class="workflow-checks">

@@ -19,10 +19,11 @@ commonProblems:
   - 첫 build에서 MiKTeX가 누락된 패키지를 설치하는 동안 잠시 멈출 수 있습니다.
 verification:
   status: needs-review
-  environment: Windows는 상세 screenshot 경로이며 macOS와 Linux도 같은 repository와 build 결과를 사용합니다.
+  environment: Windows 기준으로 작성 중이며 macOS와 Linux는 추후 작성·검증할 예정입니다.
   workflow: GitHub ZIP 다운로드, 압축 해제, VS Code 폴더 열기, 첫 PDF build.
   lastVerified: 현재 제품 기준 walkthrough 대기 중.
-  support: Windows 상세 지원, macOS와 Linux는 같은 파일 및 build 확인 방식 지원.
+  support: Windows 안내 검토 중. macOS와 Linux 안내는 추후 추가 예정.
+  scopeNote: 이 단계는 Windows를 기준으로 설명합니다. macOS와 Linux 절차는 추후 작성·검증할 예정입니다.
 toc:
   - id: 템플릿-다운로드하기
     label: 템플릿 다운로드하기

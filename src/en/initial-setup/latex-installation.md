@@ -20,10 +20,11 @@ commonProblems:
 verification:
   status: needs-review
   screenshots: needs-update
-  environment: Windows is the detailed screenshot path; macOS and Linux use command-based guidance.
+  environment: The guide is being written for Windows; macOS and Linux instructions are planned for later review.
   workflow: MiKTeX, Perl, latexmk, and on-demand package installation.
   lastVerified: Existing Windows installation screenshots need updating. Pending a current-product walkthrough.
-  support: Windows detailed; macOS and Linux summary with terminal verification.
+  support: Windows guidance under review. macOS and Linux guidance is planned.
+  scopeNote: This step currently follows Windows. macOS and Linux procedures will be written and verified later.
 toc:
   - id: download-miktex
     label: Download MiKTeX
@@ -57,7 +58,7 @@ tags:
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
-    <p>On the download page, choose the installer that matches your operating system.</p>
+    <p>On the download page, choose the Windows installer.</p>
   </div>
   <figure class="image-frame">
     <img src="/assets/images/1.1.3-2.png" alt="MiKTeX download page">
@@ -66,15 +67,11 @@ tags:
 
 ## Install MiKTeX
 
-1. Download the installer from the official MiKTeX download page for your platform.
+1. Download the Windows installer from the official MiKTeX download page.
 2. Finish the normal installer flow, then open MiKTeX Console once after installation.
 3. Run updates in MiKTeX Console before moving on, so the package database is current.
 4. Keep on-demand package installation enabled, since that is the working assumption of this guide.
 5. Confirm that `latexmk` is available. If it is missing, install it through MiKTeX Console before continuing.
-
-Linux is supported, but setup details vary by distribution. Follow the **official MiKTeX Linux installation docs** for distro-specific steps.
-
-<p><a class="doc-action-link" href="https://miktex.org/howto/install-miktex-unx">MiKTeX Linux install docs</a></p>
 
 <div class="doc-step-pair">
   <div class="doc-step-copy">
@@ -105,7 +102,7 @@ Linux is supported, but setup details vary by distribution. Follow the **officia
 
 ## Perl Installation
 
-`latexmk` and later `latexdiff`-style workflows depend on Perl-based tools. Operating-system-specific installation and verification steps are below.
+`latexmk` and later `latexdiff`-style workflows depend on Perl-based tools. The Windows installation and verification steps are below.
 
 ### Windows
 
@@ -133,15 +130,7 @@ latexmk -v
 
 ### macOS / Linux
 
-macOS environments usually expose Perl already (`/usr/bin/perl`), while Linux varies by distribution. In both environments, verify from Terminal before moving on.
-
-```bash
-perl --version
-which perl
-latexmk -v
-```
-
-If `perl` is not found, install a Perl runtime first, then rerun the checks.
+Installation and verification steps will be written and checked later.
 
 ## Package auto-installation
 
