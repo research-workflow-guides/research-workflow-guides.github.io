@@ -72,7 +72,7 @@ tags:
 
 ## Snippets
 
-LaTeX Workshop의 기본 설정에서 `@` 접두어를 입력하면 관련 snippets가 자동완성 목록에 표시됩니다. 제안을 선택해 LaTeX 명령이나 수식 구조를 삽입할 수 있습니다.
+LaTeX Workshop의 기본 설정에서 `@` 접두어를 입력하면 관련 snippets가 자동완성 목록에 표시됩니다. 원하는 제안이 선택된 상태에서 <kbd>Tab</kbd>을 누르면 삽입됩니다.
 
 - `@a`
 
@@ -103,13 +103,13 @@ LaTeX Workshop의 기본 설정에서 `@` 접두어를 입력하면 관련 snipp
   <code>&#92;left[ $1 &#92;right]</code>
 
 
-자동완성 제안을 선택해 snippet을 삽입하면 커서가 `$1` 위치에 놓입니다. 내용을 입력한 뒤 <kbd>Tab</kbd>을 누르면 `$2` 등 다음 입력 위치로 이동합니다.
+입력 위치가 있는 snippet은 삽입 후 커서가 `$1`에 놓입니다. 내용을 입력한 뒤 <kbd>Tab</kbd>을 누르면 `$2` 등 다음 입력 위치로 이동합니다.
 
-- `@/` → 제안 선택 → 분자 입력 → <kbd>Tab</kbd> → 분모 입력
+- `@/` → 분수 제안이 선택되면 <kbd>Tab</kbd> → 분자 입력 → <kbd>Tab</kbd> → 분모 입력
 
   <code>&#92;frac{$1}{$2}</code>
 
-- `@I` → 제안 선택 → 아래끝 입력 → <kbd>Tab</kbd> → 위끝 입력
+- `@I` → 적분 제안이 선택되면 <kbd>Tab</kbd> → 아래끝 입력 → <kbd>Tab</kbd> → 위끝 입력
 
   <code>&#92;int_{$1}^{$2}</code>
 

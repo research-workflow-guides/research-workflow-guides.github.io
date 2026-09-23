@@ -72,7 +72,7 @@ tags:
 
 ## Snippets
 
-With LaTeX Workshop's default settings, typing an `@` prefix shows matching snippets in the completion list. Select a suggestion to insert a LaTeX command or math structure.
+With LaTeX Workshop's default settings, typing an `@` prefix shows matching snippets in the completion list. Press <kbd>Tab</kbd> when the desired suggestion is selected to insert it.
 
 - `@a`
 
@@ -103,13 +103,13 @@ With LaTeX Workshop's default settings, typing an `@` prefix shows matching snip
   <code>&#92;left[ $1 &#92;right]</code>
 
 
-After selecting a completion suggestion, the cursor starts at `$1` in the inserted snippet. Enter the content, then press <kbd>Tab</kbd> to move to `$2` and later tabstops.
+For snippets with tabstops, the cursor starts at `$1` after insertion. Enter the content, then press <kbd>Tab</kbd> to move to `$2` and later tabstops.
 
-- `@/` → Select suggestion → Type numerator → <kbd>Tab</kbd> → Type denominator
+- `@/` → When the fraction suggestion is selected, press <kbd>Tab</kbd> → Type numerator → <kbd>Tab</kbd> → Type denominator
 
   <code>&#92;frac{$1}{$2}</code>
 
-- `@I` → Select suggestion → Type lower bound → <kbd>Tab</kbd> → Type upper bound
+- `@I` → When the integral suggestion is selected, press <kbd>Tab</kbd> → Type lower bound → <kbd>Tab</kbd> → Type upper bound
 
   <code>&#92;int_{$1}^{$2}</code>
 
