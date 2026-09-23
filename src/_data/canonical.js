@@ -711,7 +711,7 @@ const pages = [
     order: 3,
     group: "preparation",
     title: "Connect GitHub",
-    description: "Set the Git identity VS Code will use and know what to do if GitHub asks for browser sign-in.",
+    description: "Follow browser authentication when VS Code asks you to sign in to GitHub.",
     translationKey: "git-connect-github",
     status: "core"
   },
@@ -724,7 +724,7 @@ const pages = [
     order: 3,
     group: "preparation",
     title: "GitHub 연결",
-    description: "VS Code에서 사용할 Git identity를 설정하고 GitHub 브라우저 로그인이 나오면 처리합니다.",
+    description: "VS Code가 GitHub 로그인을 요청할 때 브라우저에서 인증하는 방법을 안내합니다.",
     translationKey: "git-connect-github",
     status: "core"
   },
