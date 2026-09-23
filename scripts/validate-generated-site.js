@@ -20,7 +20,8 @@ const streamlinedCoreTopics = new Set([
   "git-clone-first-push",
   "git-status",
   "git-pull-push",
-  "git-collaboration"
+  "git-collaboration",
+  "git-branch"
 ]);
 
 const errors = [];

@@ -24,6 +24,7 @@ const verificationRequired = new Set([
   "git-clone-first-push",
   "git-pull-push",
   "git-collaboration",
+  "git-branch",
   "git-pull-request"
 ]);
 const workflowCheckOptional = new Set([
@@ -40,7 +41,8 @@ const workflowCheckOptional = new Set([
   "git-clone-first-push",
   "git-status",
   "git-pull-push",
-  "git-collaboration"
+  "git-collaboration",
+  "git-branch"
 ]);
 const summaryOptional = new Set([
   "initial-setup-project-template",
@@ -54,7 +56,8 @@ const summaryOptional = new Set([
   "git-clone-first-push",
   "git-status",
   "git-pull-push",
-  "git-collaboration"
+  "git-collaboration",
+  "git-branch"
 ]);
 
 const errors = [];

@@ -1,124 +1,106 @@
 ---
 layout: layouts/doc.njk
-title: Branch
-description: 브랜치를 사용해 작업을 분리하고, 작업 맥락을 바꾸며, main 흐름을 방해하지 않고 협업합니다.
+title: 브랜치
+description: 브랜치로 작업을 분리하고 만들기, 확인, 전환, 삭제를 익힙니다.
 lang: ko
 section: collaboration
 order: 3
 permalink: /ko/collaboration/branch/
 translationKey: git-branch
 eyebrow: 주제 2
-lead: 브랜치는 협업자가 각자의 작업 흐름에서 수정한 뒤, 준비된 변경 사항을 main 프로젝트 이력으로 다시 합칠 수 있게 해줍니다.
-outcome: 이름을 붙인 task branch가 local에 생성되고 다음 작업을 위한 active branch가 됩니다.
-prerequisites:
-  - Repository가 clean 상태이며 local main branch가 최신입니다.
-  - 하나의 작업을 설명하는 짧은 branch 이름을 정했습니다.
-completion: "`git branch --show-current`가 새 task branch 이름을 출력하고 `git status`가 clean 시작 상태를 표시합니다."
-commonProblems:
-  - 오래된 main에서 branch를 만들면 이전 이력을 그대로 작업에 가져옵니다.
-  - 현재 checkout된 branch는 삭제할 수 없습니다.
+lead: 브랜치를 만들면 현재 커밋에서 작업을 분리할 수 있습니다. 그 브랜치에서 만든 커밋은 병합하기 전까지 <code>main</code>에 반영되지 않습니다.
+workflowChecks: false
+verificationCard: false
+verification:
+  status: needs-review
+  environment: Windows의 VS Code 통합 터미널을 기준으로 작성했습니다.
+  workflow: 브랜치 만들기, 목록 확인, 전환, 병합 후 삭제.
+  lastVerified: 2026-09-23 Git 공식 문서와 임시 로컬 저장소의 명령 흐름을 확인했습니다. 현재 Windows 화면 검증 대기 중.
+  support: macOS와 Linux의 터미널 절차는 추후 검증합니다.
+  scopeNote: 현재 Windows의 VS Code 통합 터미널을 기준으로 안내합니다. macOS와 Linux 절차는 추후 검증합니다.
 toc:
   - id: branch의-의미
-    label: Branch의 의미
+    label: 브랜치의 의미
   - id: branch-만들기
-    label: Branch 만들기
+    label: 브랜치 만들기
   - id: branch-목록-확인하기
-    label: Branch 목록 확인하기
+    label: 브랜치 목록 확인하기
   - id: branch-이동하기
-    label: Branch 이동하기
+    label: 브랜치 전환하기
   - id: branch-삭제하기
-    label: Branch 삭제하기
+    label: 브랜치 삭제하기
 tags:
   - doc
 ---
-## Branch의 의미
+<h2 id="branch의-의미">브랜치의 의미</h2>
 
-Branch는 같은 repository 안에서 이름을 가진 별도의 작업 흐름입니다. 보통 `main` branch에는 안정적인 프로젝트 이력이 있고, 다른 branch에는 초안, 실험, 수정, 협업자별 작업을 따로 담을 수 있습니다.
+브랜치는 같은 저장소의 특정 커밋을 가리키는 이름입니다. 새 브랜치는 현재 커밋에서 시작하며, 그 브랜치에서 새 커밋을 만들면 이름이 새 커밋을 가리킵니다.
 
-Branch에서 작업한다고 해서 repository를 새로 만드는 것은 아닙니다. commit 이력을 가리키는 별도의 포인터를 만드는 것이므로, main 흐름을 바로 바꾸지 않고 commit을 만들 수 있습니다.
-
-Branch는 다음과 같은 경우에 유용합니다.
+브랜치는 다음과 같은 경우에 유용합니다.
 
 - 두 명 이상이 동시에 작업해야 할 때
-- 하나의 변경 사항이 여러 commit으로 나뉠 때
-- main 작업에 합치기 전에 아이디어를 먼저 테스트하고 싶을 때
+- 하나의 변경 사항이 여러 커밋으로 나뉠 때
+- `main`에 합치기 전에 아이디어를 먼저 테스트하고 싶을 때
 
-## Branch 만들기
+<h2 id="branch-만들기">브랜치 만들기</h2>
 
-Windows에서는 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>, macOS에서는 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>&#96;</kbd>로 새 terminal을 여세요. 그다음 다음 명령어를 입력합니다.
+Windows의 VS Code에서 **Terminal > New Terminal**을 엽니다. `git status`로 작업 중인 변경을 확인하고 정리합니다. 아래에서는 기본 브랜치 이름을 `main`으로 가정합니다.
 
-`main`과 분리해서 진행해야 하는 작업을 시작하기 전에 branch를 만듭니다.
+`main`으로 이동해 [Pull](/ko/git-github/pull-push/)로 원격 변경을 받은 뒤, 새 브랜치를 만들면서 전환합니다. 기본 브랜치 이름이 다르면 첫 명령의 `main`을 바꾸세요.
 
-```shell
-git branch draft-section
-git switch draft-section
-```
-
-새 branch를 만들고 바로 이동하려면 다음 명령어를 사용할 수도 있습니다.
-
-```shell
+```powershell
+git switch main
+git pull
 git switch -c draft-section
 ```
 
-Branch 이름은 작업을 설명하는 짧은 이름으로 만드세요. 예를 들어 `fix-conflict-notes`, `revise-introduction`, `add-results-table`처럼 정할 수 있습니다.
+브랜치 이름은 한 작업을 설명하도록 짧게 정합니다. 예를 들어 `revise-introduction`이나 `add-results-table`을 사용할 수 있습니다.
 
-## Branch 목록 확인하기
+<h2 id="branch-목록-확인하기">브랜치 목록 확인하기</h2>
 
-repository 안의 local branch를 확인하려면 다음을 입력합니다.
+현재 브랜치 이름은 `git branch --show-current`로 확인합니다. `git branch`는 로컬 브랜치 목록을 보여주며, 현재 브랜치에는 `*`가 붙습니다.
 
-```shell
+```powershell
+git branch --show-current
 git branch
 ```
 
-현재 사용 중인 branch 옆에는 `*` 표시가 붙습니다.
+GitHub의 브랜치를 함께 확인하려면 원격 정보를 갱신한 뒤 전체 목록을 봅니다. `origin/`으로 시작하는 항목은 마지막으로 가져온 원격 브랜치 정보입니다.
 
-GitHub에 있는 remote branch까지 함께 확인하려면 다음을 입력합니다.
-
-```shell
+```powershell
+git fetch origin
 git branch -a
 ```
 
-이 명령어는 branch가 내 컴퓨터에만 있는지, GitHub에도 있는지 확실하지 않을 때 유용합니다.
+<h2 id="branch-이동하기">브랜치 전환하기</h2>
 
-## Branch 이동하기
+브랜치를 전환하면 VS Code에 보이는 파일이 선택한 브랜치의 커밋 상태에 맞게 바뀝니다.
 
-Branch를 이동한다는 것은 현재 폴더에서 어떤 작업 흐름을 보고 있는지 바꾸는 것입니다. 이동 후에는 VS Code 안의 파일들이 선택한 branch 상태에 맞게 바뀝니다.
-
-```shell
+```powershell
 git switch main
 git switch draft-section
 ```
 
-Branch를 이동하기 전에 현재 변경 사항을 commit하거나 stash하세요. commit하지 않은 변경 사항이 덮어써질 수 있다면 Git이 branch 이동을 멈출 수 있습니다.
+전환 전 `git status`로 미완료 변경을 확인하고 필요한 작업을 커밋하거나 안전하게 보관합니다. `git switch`는 변경을 덮어쓸 위험이 있으면 멈추지만, 겹치지 않는 변경은 새 브랜치로 함께 이동할 수도 있습니다.
 
-Branch를 이동하는 것은 작업을 삭제하는 것이 아닙니다. 현재 폴더가 보여주는 commit과, 다음 commit이 추가될 위치를 바꾸는 것입니다.
+<h2 id="branch-삭제하기">브랜치 삭제하기</h2>
 
-## Branch 삭제하기
+작업을 `main`에 병합한 뒤 브랜치를 정리할 수 있습니다. 먼저 `main`으로 이동해 원격 변경을 받고, 작업 브랜치에만 남은 커밋을 확인합니다. `git log`에 출력이 없으면 해당 브랜치의 커밋이 모두 `main`에 포함된 상태입니다.
 
-분리해서 진행하던 작업이 끝났거나, merge되었거나, 더 이상 필요하지 않다면 branch를 삭제합니다.
-
-현재 사용 중인 branch는 삭제할 수 없습니다. 먼저 유지할 branch로 이동합니다.
-
-```shell
+```powershell
 git switch main
+git pull
+git log main..draft-section --oneline
 ```
 
-그다음 local branch를 삭제합니다.
+출력이 없다면 로컬 작업 브랜치를 삭제합니다. `-d`가 삭제를 거절하면 병합 상태를 다시 확인하세요.
 
-```shell
+```powershell
 git branch -d draft-section
 ```
 
-`-d` 옵션은 더 안전한 선택입니다. merge되지 않은 commit이 있으면 Git이 삭제를 막아줍니다. 정말 버릴 branch라면 강제로 삭제할 수 있습니다.
+GitHub에 원격 브랜치가 남아 있고 팀에서 더 이상 사용하지 않는다면 별도로 삭제할 수 있습니다.
 
-```shell
-git branch -D draft-section
-```
-
-이미 GitHub에 push한 branch라면 remote branch도 따로 삭제합니다.
-
-```shell
+```powershell
 git push origin --delete draft-section
 ```
-
-아직 공유할 준비가 되지 않은 작업은 branch로 분리하세요. Branch를 merge하거나 삭제하기 전에는 중요한 commit이 유지할 branch에 push되었거나 merge되었는지 확인하세요.

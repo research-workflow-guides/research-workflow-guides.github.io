@@ -454,7 +454,7 @@ const pages = [
     order: 3,
     group: "git-for-collaboration",
     title: "Branch",
-    description: "Use branches to separate work, switch contexts, and collaborate without disturbing the main line.",
+    description: "Create, inspect, switch, and remove branches to keep work separate.",
     translationKey: "git-branch",
     status: "core"
   },
@@ -466,8 +466,8 @@ const pages = [
     slug: "branch",
     order: 3,
     group: "git-for-collaboration",
-    title: "Branch",
-    description: "브랜치를 사용해 작업을 분리하고, 작업 맥락을 바꾸며, main 흐름을 방해하지 않고 협업합니다.",
+    title: "브랜치",
+    description: "브랜치로 작업을 분리하고 만들기, 확인, 전환, 삭제를 익힙니다.",
     translationKey: "git-branch",
     status: "core"
   },
