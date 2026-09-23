@@ -960,7 +960,7 @@ const pages = [
     order: 12,
     group: "daily-workflow",
     title: "Gitignore",
-    description: "Exclude files and folders when you push to GitHub.",
+    description: "Use .gitignore in VS Code on Windows to keep generated files and local folders out of Git tracking.",
     translationKey: "git-gitignore",
     status: "optional"
   },
@@ -973,7 +973,7 @@ const pages = [
     order: 12,
     group: "daily-workflow",
     title: "Gitignore",
-    description: "특정 파일이나 폴더를 GitHub 커밋에서 제외합니다.",
+    description: "Windows의 VS Code에서 .gitignore로 생성 파일과 로컬 폴더를 Git 추적에서 제외합니다.",
     translationKey: "git-gitignore",
     status: "optional"
   },
