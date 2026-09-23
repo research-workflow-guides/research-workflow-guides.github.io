@@ -895,7 +895,7 @@ const pages = [
     order: 9,
     group: "daily-workflow",
     title: "Conflict",
-    description: "Resolve same-file text conflicts without panic and return to the normal loop.",
+    description: "Resolve merge conflicts during Pull in VS Code on Windows and review the result.",
     translationKey: "git-conflict",
     status: "troubleshooting"
   },
@@ -986,7 +986,7 @@ const pages = [
     order: 9,
     group: "daily-workflow",
     title: "충돌 해결",
-    description: "같은 파일 충돌을 침착하게 정리하고 다시 정상 작업 흐름으로 돌아갑니다.",
+    description: "Windows의 VS Code에서 Pull 중 생긴 merge 충돌을 해결하고 변경을 확인합니다.",
     translationKey: "git-conflict",
     status: "troubleshooting"
   }
