@@ -88,7 +88,7 @@ git merge origin/main
   <img src="/assets/images/pull-different-branch-2.png" alt="기존 VS Code Source Control의 Merge Changes에 충돌 파일이 표시된 화면">
 </figure>
 
-충돌 파일을 열어 최종 내용을 정하고 저장합니다. 해결한 파일만 Stage한 뒤 **Commit**으로 병합을 완료합니다. 아래 기존 화면의 **Continue** 버튼은 현재 Windows 화면에서 재검증이 필요합니다.
+충돌 파일을 열어 최종 내용을 정하고 저장합니다. 해결한 파일만 Stage한 뒤 병합 완료 동작을 선택합니다. VS Code의 상태와 버전에 따라 **Commit** 또는 아래 예시의 **Continue**로 표시될 수 있습니다.
 
 <figure class="image-frame">
   <img src="/assets/images/pull-different-branch-3.png" alt="기존 VS Code 화면에서 충돌 파일이 Stage된 뒤 강조된 Continue 버튼">

@@ -88,7 +88,7 @@ See the [official VS Code conflict resolution guide](https://code.visualstudio.c
   <img src="/assets/images/pull-different-branch-2.png" alt="Existing VS Code Source Control view listing a conflicted file under Merge Changes">
 </figure>
 
-Open each conflicted file, choose the final content, and save it. Stage only the resolved files, then use **Commit** to finish the merge. The **Continue** button in the existing image awaits review on current Windows screens.
+Open each conflicted file, choose the final content, and save it. Stage only the resolved files, then finish the merge. Depending on the VS Code version and current operation, the action may be labeled **Commit** or **Continue**, as in the example below.
 
 <figure class="image-frame">
   <img src="/assets/images/pull-different-branch-3.png" alt="Existing VS Code screen with staged conflict changes and the Continue button highlighted">

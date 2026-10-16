@@ -39,59 +39,41 @@ tags:
 
 공동 작업자에게는 저장소 읽기·쓰기 권한이 생기므로 초대할 GitHub 계정을 확인하세요. 아래 기존 이미지는 공개 저장소의 예전 화면이므로 메뉴 위치만 참고합니다. 자세한 절차는 [GitHub 공식 초대 안내](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository)에서 확인할 수 있습니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p>초대할 비공개 저장소를 열고 <strong>Settings</strong>를 선택합니다. 탭이 보이지 않으면 저장소 상단의 더보기 메뉴에서 <strong>Settings</strong>를 찾습니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/2.2.5-100.png" alt="예전 공개 GitHub 저장소에서 Settings 탭이 강조된 화면">
-  </figure>
-</div>
+<p>초대할 비공개 저장소를 열고 <strong>Settings</strong>를 선택합니다. 탭이 보이지 않으면 저장소 상단의 더보기 메뉴에서 <strong>Settings</strong>를 찾습니다.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>Settings 왼쪽 메뉴에서 Access 아래의 Collaborators를 선택합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/2.2.5-101.png" alt="예전 공개 GitHub 저장소 설정에서 Collaborators 메뉴가 강조된 화면">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/2.2.5-100.png" alt="예전 공개 GitHub 저장소에서 Settings 탭이 강조된 화면">
+</figure>
 
-<div class="doc-step-pair">
-  <div>
-    <p>Add people 버튼을 클릭합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="예전 공개 GitHub 저장소의 Add people 버튼이 보이는 Access 화면">
-  </figure>
-</div>
+<p>Settings 왼쪽 메뉴에서 Access 아래의 Collaborators를 선택합니다.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>GitHub 사용자 이름이나 이메일을 입력하고, 검색 결과에서 초대할 계정을 선택합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="예전 GitHub 공동 작업자 검색 창">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/2.2.5-101.png" alt="예전 공개 GitHub 저장소 설정에서 Collaborators 메뉴가 강조된 화면">
+</figure>
 
-<div class="doc-step-pair">
-  <div>
-    <p>검색 결과의 표시 이름과 사용자 이름이 맞는지 확인한 뒤, 선택한 계정을 저장소에 추가하는 버튼을 눌러 초대를 보냅니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="예전 GitHub 화면에서 선택한 공동 작업자 계정과 초대 확인 버튼">
-  </figure>
-</div>
+<p><strong>Add people</strong> 버튼을 클릭합니다. 아래는 버튼 위치를 보여주는 공개 저장소의 예시이며, 실제로 초대할 대상은 앞에서 만든 비공개 저장소입니다.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>상대가 초대를 수락하기 전에는 초대가 대기 상태로 표시됩니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="예전 공개 GitHub 저장소의 Pending Invite 상태가 보이는 Access 화면">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="예전 공개 GitHub 저장소의 Add people 버튼이 보이는 Access 화면">
+</figure>
+
+<p>GitHub 사용자 이름이나 이메일을 입력하고, 검색 결과에서 초대할 계정을 선택합니다.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="예전 GitHub 공동 작업자 검색 창">
+</figure>
+
+<p>검색 결과의 표시 이름과 사용자 이름이 맞는지 확인한 뒤, 선택한 계정을 저장소에 추가하는 버튼을 눌러 초대를 보냅니다.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="예전 GitHub 화면에서 선택한 공동 작업자 계정과 초대 확인 버튼">
+</figure>
+
+<p>상대가 초대를 수락하기 전에는 초대가 대기 상태로 표시됩니다.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="예전 공개 GitHub 저장소의 Pending Invite 상태가 보이는 Access 화면">
+</figure>
 
 ## 초대 확인
 

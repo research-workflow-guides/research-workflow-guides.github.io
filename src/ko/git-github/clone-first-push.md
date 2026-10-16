@@ -33,7 +33,7 @@ tags:
 ---
 ## 빈 저장소 주소 복사
 
-앞에서 만든 빈 비공개 저장소를 열고 **Quick setup**에 표시된 HTTPS 주소를 복사합니다. 기존 이미지는 파일이 들어 있는 공개 저장소의 **Code** 메뉴이므로, 주소를 복사하는 위치만 참고하세요.
+앞에서 만든 빈 비공개 저장소를 열고 **Quick setup**에 표시된 HTTPS 주소를 복사합니다. 파일이 이미 있는 저장소라면 아래 예시처럼 **Code > Local > HTTPS**에서 주소 옆의 복사 버튼을 사용합니다.
 
 <figure class="image-frame">
   <img src="/assets/images/clone-1.png" alt="예전 공개 GitHub 저장소의 Code 메뉴에서 HTTPS 주소 복사 위치가 강조된 화면">

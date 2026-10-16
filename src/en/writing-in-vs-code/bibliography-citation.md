@@ -15,8 +15,8 @@ verification:
   screenshots: needs-update
   environment: Existing images show Windows VS Code and MathSciNet screens.
   workflow: Create a .bib file, copy a BibTeX entry, cite it, and print a bibliography.
-  lastVerified: 2026-09-23 compared existing images with the current setup guide; live screen check pending.
-  support: Existing images show an older project folder structure and need updating.
+  lastVerified: MathSciNet record and Citation Formatting dialog inspected on 2026-10-16. Full LaTeX compilation was not run.
+  support: Existing MathSciNet images illustrate the checked Cite, BibTeX, and Copy flow. Search and VS Code screenshots remain instructional examples.
 workflowChecks: false
 toc:
   - id: what-citations-need
@@ -64,7 +64,7 @@ Keeping the `.bib` file in the manuscript folder lets you track it in Git and us
   <a class="doc-action-link" href="https://mathscinet.ams.org/">MathSciNet</a>
 </div>
 
-The MathSciNet images below show an older interface. In the current interface, follow the **Export → BibTeX → Get Citations → Copy** sequence described in the text.
+The search images below are illustrative examples. Find and open the record you want to cite, then follow **Cite → BibTeX → Copy** for that record.
 
 <figure class="image-frame">
   <img src="/assets/images/reference-3.png" alt="MathSciNet publication search page">
@@ -76,16 +76,16 @@ Search by the source's title or author.
   <img src="/assets/images/reference-4.png" alt="MathSciNet search results for a reference">
 </figure>
 
-Open **Export** above the search results and select the entry you want to cite.
+Open the record you want to cite, then select **Cite**.
 
 <figure class="image-frame">
-  <img src="/assets/images/reference-5.png" alt="MathSciNet record page with the Cite button highlighted">
+  <img src="/assets/images/reference-5.png" alt="MathSciNet record for MR737190 with the Cite button highlighted">
 </figure>
 
-Set the citation format to **BibTeX**, select **Get Citations**, and then use **Copy** to copy the entry.
+In **Citation Formatting**, confirm that **BibTeX** is selected, then select **Copy** to copy the entry.
 
 <figure class="image-frame">
-  <img src="/assets/images/reference-6.png" alt="MathSciNet citation formatting dialog with BibTeX selected">
+  <img src="/assets/images/reference-6.png" alt="MathSciNet Citation Formatting dialog with BibTeX selected and the Copy button highlighted">
 </figure>
 
 ## Add the entry

@@ -39,59 +39,41 @@ If you plan to rename many files, reorganize folders, or substantially revise a 
 
 A collaborator gains read and write access, so check the GitHub account you intend to invite. The older images below show a public repository; use them only to locate the controls. See [GitHub's invitation guide](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository) for the current procedure.
 
-<div class="doc-step-pair">
-  <div>
-    <p>Open the private repository and select <strong>Settings</strong>. If the tab is hidden, find <strong>Settings</strong> in the repository's top menu.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/2.2.5-100.png" alt="Older public GitHub repository with the Settings tab highlighted">
-  </figure>
-</div>
+<p>Open the private repository and select <strong>Settings</strong>. If the tab is hidden, find <strong>Settings</strong> in the repository's top menu.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>In the Settings sidebar, choose Collaborators under Access.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/2.2.5-101.png" alt="Older public GitHub repository settings with Collaborators highlighted">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/2.2.5-100.png" alt="Older public GitHub repository with the Settings tab highlighted">
+</figure>
 
-<div class="doc-step-pair">
-  <div>
-    <p>Click the Add people button.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="Older public GitHub repository access page showing Add people">
-  </figure>
-</div>
+<p>In the Settings sidebar, choose Collaborators under Access.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>Enter the person's GitHub username or email address, then select their account from the matches.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="Older GitHub search field for adding a collaborator">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/2.2.5-101.png" alt="Older public GitHub repository settings with Collaborators highlighted">
+</figure>
 
-<div class="doc-step-pair">
-  <div>
-    <p>Check the display name and username in the search result, then use the button to add that account to the repository and send the invitation.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="Older GitHub dialog showing a selected collaborator account and invitation button">
-  </figure>
-</div>
+<p>Click <strong>Add people</strong>. The public repository below illustrates the button location; use the private repository you created earlier when inviting your collaborator.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>The invitation remains pending until the other person accepts it.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="Older public GitHub repository access page showing a Pending Invite">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/collaboration-access-page.png" alt="Older public GitHub repository access page showing Add people">
+</figure>
+
+<p>Enter the person's GitHub username or email address, then select their account from the matches.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/collaboration-search-collaborator.png" alt="Older GitHub search field for adding a collaborator">
+</figure>
+
+<p>Check the display name and username in the search result, then use the button to add that account to the repository and send the invitation.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/collaboration-add-collaborator.png" alt="Older GitHub dialog showing a selected collaborator account and invitation button">
+</figure>
+
+<p>The invitation remains pending until the other person accepts it.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/collaboration-pending-invite.png" alt="Older public GitHub repository access page showing a Pending Invite">
+</figure>
 
 ## Confirm access
 

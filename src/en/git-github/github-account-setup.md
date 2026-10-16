@@ -31,23 +31,17 @@ tags:
 
 Choose the GitHub account that will own this repository. If you already have an account, sign in with it.
 
-<div class="doc-step-pair">
-  <div>
-    <p>Open the <a href="https://github.com/">official GitHub homepage</a>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.4-1.png" alt="Older GitHub homepage start screen">
-  </figure>
-</div>
+<p>Open the <a href="https://github.com/">official GitHub homepage</a>.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>If you do not have an account, sign up on the <a href="https://github.com/signup">GitHub sign-up page</a> and follow the prompts to verify your email address.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.4-2.png" alt="Sign up button on an older GitHub homepage">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/1.4-1.png" alt="Older GitHub homepage start screen">
+</figure>
+
+<p>If you do not have an account, sign up on the <a href="https://github.com/signup">GitHub sign-up page</a> and follow the prompts to verify your email address.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/1.4-2.png" alt="Sign up button on an older GitHub homepage">
+</figure>
 
 ## Turn on basic security
 

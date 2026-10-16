@@ -15,8 +15,8 @@ verification:
   screenshots: needs-update
   environment: 기존 이미지는 Windows VS Code와 MathSciNet 화면을 보여줍니다.
   workflow: .bib 파일 작성, BibTeX 항목 복사, 원고 인용과 참고 문헌 출력.
-  lastVerified: 2026-09-23 기존 이미지와 현재 단계 안내 비교. 실제 화면 재검증 대기 중.
-  support: 기존 이미지는 예전 프로젝트 폴더 구조를 보여주므로 업데이트가 필요합니다.
+  lastVerified: 2026-10-16 MathSciNet 개별 문헌 페이지와 Citation Formatting 창을 직접 확인했습니다. LaTeX 전체 컴파일은 실행하지 않았습니다.
+  support: 기존 MathSciNet 이미지는 확인한 Cite, BibTeX, Copy 흐름을 보여줍니다. 검색과 VS Code 이미지는 설명용 예시로 유지합니다.
 workflowChecks: false
 toc:
   - id: bibtex에-필요한-것
@@ -64,7 +64,7 @@ tags:
   <a class="doc-action-link" href="https://mathscinet.ams.org/">MathSciNet</a>
 </div>
 
-아래 MathSciNet 이미지는 이전 화면입니다. 현재 화면에서는 본문에 적힌 **Export → BibTeX → Get Citations → Copy** 순서를 따릅니다.
+아래 검색 이미지는 검색 방법을 보여주는 예시입니다. 인용할 문헌의 상세 페이지를 연 뒤 **Cite → BibTeX → Copy** 순서로 진행합니다.
 
 <figure class="image-frame">
   <img src="/assets/images/reference-3.png" alt="MathSciNet publication search page">
@@ -76,16 +76,16 @@ tags:
   <img src="/assets/images/reference-4.png" alt="reference 검색 결과가 보이는 MathSciNet 화면">
 </figure>
 
-검색 결과 위쪽에서 **Export**를 열고 인용할 항목을 선택합니다.
+인용할 문헌의 상세 페이지를 열고 **Cite**를 선택합니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/reference-5.png" alt="Cite 버튼이 강조된 MathSciNet record page">
+  <img src="/assets/images/reference-5.png" alt="MR737190 문헌의 Cite 버튼이 강조된 MathSciNet 상세 페이지">
 </figure>
 
-인용 형식을 **BibTeX**로 정하고 **Get Citations**를 누른 뒤 **Copy**로 항목을 복사합니다.
+**Citation Formatting** 창에서 **BibTeX**가 선택되어 있는지 확인하고 **Copy**를 눌러 항목을 복사합니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/reference-6.png" alt="BibTeX가 선택된 MathSciNet citation formatting 창">
+  <img src="/assets/images/reference-6.png" alt="BibTeX가 선택되고 Copy 버튼이 강조된 MathSciNet Citation Formatting 창">
 </figure>
 
 <h2 id="entry-추가하기">항목 추가하기</h2>

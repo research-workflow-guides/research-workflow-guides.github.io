@@ -15,8 +15,8 @@ verification:
   screenshots: needs-update
   environment: This guide uses GitHub web screens from a Windows desktop browser.
   workflow: Choose the owner and name, set private visibility, omit starter files, and check the empty repository.
-  lastVerified: 2026-09-23 checked official GitHub documentation; current creation screens await verification.
-  support: Existing GitHub creation images need updating. macOS and Linux screens await verification.
+  lastVerified: GitHub repository configuration screen checked and captured in a Windows browser on 2026-10-16. Repository creation was not executed.
+  support: Older GitHub screenshots illustrate repository creation and Quick setup. The creation form shows Public selected; select Private for this guide.
   scopeNote: This page currently uses Windows desktop screens. macOS and Linux screens will be verified later.
 verificationCard: false
 toc:
@@ -35,43 +35,31 @@ Choose the GitHub account that will own the new repository, and set its visibili
 
 Choose a repository name that identifies the project. You will clone an empty repository in the next step, so leave the README, `.gitignore`, and license options unset for now.
 
-<div class="doc-step-pair">
-  <div>
-    <p>Sign in to GitHub, then open the <strong>Repositories</strong> tab on your profile.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="Repositories tab highlighted on an older GitHub profile page">
+<p>Sign in to GitHub, then open the <strong>Repositories</strong> tab on your profile.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="Repositories tab highlighted on an older GitHub profile page">
 
-<div class="doc-step-pair">
-  <div>
-    <p>Select <strong>New</strong> on the <strong>Repositories</strong> page. If your screen looks different, open GitHub's <a href="https://github.com/new">new repository page</a> directly.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="New button highlighted on an older GitHub Repositories page">
+</figure>
 
-  </figure>
-</div>
+<p>Select <strong>New</strong> on the <strong>Repositories</strong> page. If your screen looks different, open GitHub's <a href="https://github.com/new">new repository page</a> directly.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>Check <strong>Owner</strong> and <strong>Repository name</strong>, then select <strong>Private</strong>. Leave README, <code>.gitignore</code>, and license unset, and select <strong>Create repository</strong>.</p>
-    <p><strong>The older image shows Public selected. Select Private for this guide.</strong></p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="Older GitHub create repository form with Public selected">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="New button highlighted on an older GitHub Repositories page">
 
-  </figure>
-</div>
+</figure>
 
-<div class="doc-step-pair">
-  <div>
-    <p>Check for the <strong>Private</strong> label beside the repository name and the <strong>Quick setup</strong> instructions for an empty repository. The older image shows <strong>Public</strong>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="Older empty GitHub repository page showing Public and Quick setup">
+<p>Check <strong>Owner</strong> and <strong>Repository name</strong>, then select <strong>Private</strong>. Leave README, <code>.gitignore</code>, and license unset, and select <strong>Create repository</strong>.</p>
+<p><strong>The older image shows Public selected. Select Private for this guide.</strong></p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="Older GitHub create repository form with Public selected">
+
+</figure>
+
+<p>Check the <strong>Private</strong> label beside your repository name and the <strong>Quick setup</strong> instructions for an empty repository. The image below is a location example for <strong>Quick setup</strong>; it shows an older public repository. Confirm that your own repository is <strong>Private</strong>.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="Older empty GitHub repository page showing Public and Quick setup">
+
+</figure>

@@ -29,30 +29,24 @@ tags:
 ---
 ## Download the template
 
-<div class="doc-step-pair">
-  <div class="doc-step-copy">
-    <ol>
-      <li>
-        <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">Open the seed-documents repository</a></p>
-      </li>
-      <li>Above the repository's file list, click <strong>Code</strong>, then select <strong>Download ZIP</strong>.</li>
-    </ol>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/github-code-btn.svg" alt="GitHub Code button">
-  </figure>
-</div>
+<ol>
+  <li>
+    <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">Open the seed-documents repository</a></p>
+  </li>
+  <li>Above the repository's file list, click <strong>Code</strong>, then select <strong>Download ZIP</strong>.</li>
+</ol>
 
-<div class="doc-step-pair">
-  <div class="doc-step-copy">
-    <ol start="3">
-      <li>In File Explorer, right-click the downloaded ZIP file and select <strong>Extract All</strong>. Confirm that the extracted folder contains <code>check-document.tex</code> and the <code>seed-document</code> folder.</li>
-    </ol>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.5-1.png" alt="Starter repository on GitHub">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/github-code-btn.svg" alt="GitHub Code button">
+</figure>
+
+<ol start="3">
+  <li>In File Explorer, right-click the downloaded ZIP file and select <strong>Extract All</strong>. Confirm that the extracted folder contains <code>check-document.tex</code> and the <code>seed-document</code> folder.</li>
+</ol>
+
+<figure class="image-frame">
+  <img src="/assets/images/1.5-1.png" alt="Starter repository on GitHub">
+</figure>
 
 ## Run the first PDF build
 

@@ -16,8 +16,8 @@ verification:
   screenshots: needs-update
   environment: Written for VS Code Source Control and the integrated terminal on Windows.
   workflow: Publish the first commit from an empty repository, then use Pull and Push.
-  lastVerified: VS Code and GitHub documentation checked on 2026-09-23. Current Windows screens await review.
-  support: The existing VS Code images need updating. macOS and Linux screens await review.
+  lastVerified: Staging and commit menu screens checked in VS Code on Windows on 2026-10-16. Publish Branch, Pull, and Push were not performed during this screen review.
+  support: Existing screenshots illustrate staging and commit menu locations; exclude generated files as instructed. The full workflow was not verified. macOS and Linux screens await review.
   scopeNote: This guide uses Windows screens. macOS and Linux screens will be reviewed later.
 toc:
   - id: key-terms
@@ -49,20 +49,20 @@ tags:
 
 Choose the project source files identified by `git status` in the previous step. For example, review `check-document.tex` and the source files in `seed-document`. Decide separately whether you need build outputs such as `.aux`, `.log`, `.fls`, `.synctex.gz`, and PDF files. Add files you want to exclude to [`.gitignore`](/en/git-github/gitignore/) before staging.
 
-In VS Code **Source Control**, click `+` beside **each file** you want to stage. The older image below shows the `+` beside the **Changes heading**, which stages every file, including generated files. Use it only to locate the control. If **Staged Changes** contains files you do not want, click `-` beside those files to unstage them.
+In VS Code **Source Control**, click `+` beside **each file** you want to stage, or right-click the file and select **Stage Changes**. The screenshots below show all files, including generated files, selected using the `+` beside **Changes**. In your own work, keep only the `.tex`, `.bib`, and other source files you need. If **Staged Changes** contains an unwanted file, click `-` beside that file to unstage it.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-1.png" alt="Older VS Code Source Control showing the Stage All button beside Changes and generated files">
+  <img src="/assets/images/2.2.3-1.png" alt="Existing VS Code screenshot with a LaTeX project's Changes list and the Stage All Changes button highlighted">
 </figure>
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-2.png" alt="Older VS Code Staged Changes list that includes generated LaTeX files">
+  <img src="/assets/images/2.2.3-2.png" alt="Existing VS Code screenshot with LaTeX source and generated files together under Staged Changes">
 </figure>
 
-Once **Staged Changes** contains only the files you intend to upload, enter a commit message and select **Commit**. This records the commit locally. The older image below also includes generated files, so rely on the file list you reviewed.
+Once **Staged Changes** contains only the files you intend to upload, enter a commit message and select **Commit**. This records the commit locally. The screenshot shows where to enter the message; write one that describes your own changes.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-3.png" alt="Older VS Code Source Control view with a commit message entered">
+  <img src="/assets/images/2.2.3-3.png" alt="Existing VS Code screenshot of a LaTeX project with the commit message field highlighted">
 </figure>
 
 After committing, select **Publish Branch** in **Source Control** to upload the current branch to the GitHub repository you cloned earlier. Check the displayed repository address so you do not select **Publish to GitHub**, which creates another repository. Then confirm the files and first commit on GitHub.
@@ -77,10 +77,6 @@ After publishing the first branch, when GitHub has new commits, select **Pull** 
 
 <figure class="image-frame">
   <img src="/assets/images/2.2.3-11%20(1).png" alt="Older VS Code Source Control Pull menu item">
-</figure>
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-12.png" alt="Older VS Code notification after Pull completes">
 </figure>
 
 You can also run `git pull` in the terminal, or open the **Command Palette** with `Ctrl+Shift+P` and run `Git: Pull`.
@@ -101,14 +97,10 @@ For later changes, review the files, stage only those you need, and commit them.
 git push
 ```
 
-The older images below show **Commit & Push** with generated files in the staged list. Do not follow that selection as shown. Use **Publish Branch** above for the first commit.
+After reviewing the staged files, you can also use **Commit & Push** for later commits on an already published branch. The screenshot shows where to find the menu. Do not copy its generated-file selection; check that only the source files you need remain staged. Use **Publish Branch** above for the first commit.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.3-5.png" alt="Older VS Code commit menu with generated files in the staged list">
-</figure>
-
-<figure class="image-frame">
-  <img src="/assets/images/2.2.3-6.png" alt="Older VS Code Commit & Push option with generated files staged">
+  <img src="/assets/images/2.2.3-6.png" alt="Existing VS Code screenshot of a LaTeX project with Commit & Push highlighted">
 </figure>
 
 You can also open the **Command Palette** with `Ctrl+Shift+P` and run `Git: Push`.

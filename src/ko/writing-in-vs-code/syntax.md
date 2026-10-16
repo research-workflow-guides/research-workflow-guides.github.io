@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc.njk
-title: 문법
+title: Snippet
 description: 자주 쓰는 LaTeX 패턴과 VS Code snippet 정의를 비교합니다.
 lang: ko
 section: writing-in-vs-code

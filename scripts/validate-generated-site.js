@@ -2,6 +2,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { parse } = require("node-html-parser");
 const { siteRoot: outputRoot } = require("./output-paths");
+const screenshotReviews = require("./screenshot-reviews.json");
 
 const canonical = require("../src/_data/canonical");
 const osSelectorTopics = new Set([
@@ -34,6 +35,48 @@ function assert(condition, message) {
   if (!condition) {
     errors.push(message);
   }
+}
+
+function normalizeImageSource(source) {
+  try {
+    return decodeURIComponent(source || "");
+  } catch {
+    return source || "";
+  }
+}
+
+function validReviewDate(value) {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const date = new Date(`${value}T00:00:00Z`);
+  return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value;
+}
+
+assert(screenshotReviews.schemaVersion === 1, "Screenshot review registry schemaVersion must be 1.");
+assert(screenshotReviews.images && typeof screenshotReviews.images === "object" && !Array.isArray(screenshotReviews.images), "Screenshot review registry images must be an object.");
+const imageReviews = new Map();
+const projectRoot = path.resolve(__dirname, "..");
+for (const [source, review] of Object.entries(screenshotReviews.images || {})) {
+  const normalized = normalizeImageSource(source);
+  const validPath = normalized.startsWith("/assets/images/") && !/[\\?#]/.test(normalized) && path.posix.normalize(normalized) === normalized;
+  assert(validPath, `Screenshot review registry: invalid image path ${source}.`);
+  if (validPath) {
+    const filePath = path.join(projectRoot, normalized.slice(1));
+    assert(fs.existsSync(filePath) && fs.statSync(filePath).isFile(), `Screenshot review registry: image does not exist ${source}.`);
+  }
+  assert(!imageReviews.has(normalized), `Screenshot review registry: duplicate normalized image path ${source}.`);
+  assert(review && typeof review === "object" && !Array.isArray(review), `Screenshot review registry: invalid entry for ${source}.`);
+  if (review && typeof review === "object" && !Array.isArray(review)) {
+    assert(["retained", "updated"].includes(review.status), `Screenshot review registry: invalid status for ${source}.`);
+    assert(validReviewDate(review.reviewedOn), `Screenshot review registry: invalid reviewedOn date for ${source}.`);
+    assert(typeof review.reason === "string" && review.reason.trim(), `Screenshot review registry: reason is missing for ${source}.`);
+    imageReviews.set(normalized, review);
+  }
+}
+
+function figureReviews(figure) {
+  const images = figure.querySelectorAll("img");
+  const reviews = images.map((image) => imageReviews.get(normalizeImageSource(image.getAttribute("src"))));
+  return reviews.length > 0 && reviews.every((review) => review && ["retained", "updated"].includes(review.status)) ? reviews : null;
 }
 
 function walk(directory) {
@@ -94,6 +137,7 @@ if (fs.existsSync(outputRoot)) {
     const document = parse(html);
     documents.set(htmlPath, document);
     assert(!document.querySelector(".footer-old-version"), `${htmlPath}: obsolete version link remains in the footer.`);
+    assert(!document.querySelector(".image-review-note, .image-review-note--needs-update"), `${htmlPath}: screenshot review badge remains.`);
 
     for (const element of document.querySelectorAll("[href], [src]")) {
       for (const attribute of ["href", "src"]) {
@@ -119,11 +163,14 @@ if (fs.existsSync(outputRoot)) {
       assert(!link.querySelector("a"), `${htmlPath}: nested link in an image preview.`);
     }
 
-    const needsReview = Boolean(document.querySelector('[data-verification-status="needs-review"]'));
     for (const figure of document.querySelectorAll(".prose figure.image-frame")) {
       assert(Boolean(figure.querySelector("a img")), `${htmlPath}: image lacks a no-JavaScript link.`);
-      if (needsReview) {
-        assert(Boolean(figure.querySelector(".image-review-note")), `${htmlPath}: screenshot review note is missing.`);
+      const reviews = figureReviews(figure);
+      if (reviews) {
+        const reviewedOn = reviews.map((review) => review.reviewedOn).sort().at(-1);
+        assert(figure.getAttribute("data-screenshot-reviewed") === reviewedOn, `${htmlPath}: reviewed screenshot date is missing or incorrect.`);
+      } else {
+        assert(!figure.hasAttribute("data-screenshot-reviewed"), `${htmlPath}: unregistered screenshot is marked as reviewed.`);
       }
     }
   }
@@ -153,7 +200,6 @@ if (fs.existsSync(outputRoot)) {
       assert(!document.querySelector(".platform-scope"), `${page.url}: duplicate scope note remains.`);
       assert(!hasContract, `${page.url}: redundant setup summary remains above the guide.`);
       assert(!document.querySelector(".verification-card"), `${page.url}: verification details remain above the guide.`);
-      assert(Boolean(document.querySelector(".image-review-note--needs-update")), `${page.url}: screenshot update marker is missing.`);
     } else {
       assert(!osSelector, `${page.url}: operating-system selector appeared outside installation guides.`);
     }

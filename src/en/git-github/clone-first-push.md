@@ -33,7 +33,7 @@ tags:
 ---
 ## Copy the empty repository URL
 
-Open the empty private repository you created earlier and copy its HTTPS URL from **Quick setup**. The existing image shows the **Code** menu of a public repository that already has files; use it only to locate the URL copy control.
+Open the empty private repository you created earlier and copy its HTTPS URL from **Quick setup**. For a repository that already has files, use the copy button beside the URL under **Code > Local > HTTPS**, as illustrated below.
 
 <figure class="image-frame">
   <img src="/assets/images/clone-1.png" alt="Older public GitHub repository with the HTTPS URL copy control highlighted in the Code menu">

@@ -33,27 +33,19 @@ tags:
 
 Copy the earlier `.tex` file you want to compare to `old_version.tex`. Keep project files needed to compile the PDF, such as images and bibliography files, available.
 
-<div class="doc-step-pair">
-  <div>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-1.png" alt="Windows File Explorer with the earlier manuscript file old_version highlighted">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-1.png" alt="Windows File Explorer with the earlier manuscript file old_version highlighted">
 
-  </figure>
-</div>
+</figure>
 
 ## Prepare revised version
 
 Copy the revised manuscript’s `.tex` file to `revised_version.tex`. Put it in the same folder as `old_version.tex` and check that these are the two versions you intend to compare.
 
-<div class="doc-step-pair">
-  <div>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-2.png" alt="Windows File Explorer with the earlier revised filename Check_document highlighted">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-2.png" alt="Windows File Explorer with the earlier revised filename Check_document highlighted">
 
-  </figure>
-</div>
+</figure>
 
 ## Run latexdiff
 
@@ -62,31 +54,18 @@ Copy the revised manuscript’s `.tex` file to `revised_version.tex`. Put it in 
   <a class="doc-action-link" href="https://github.com/ftilmann/latexdiff">Official documentation</a>
 </div>
 
-<div class="doc-step-pair">
-  <div>
-    <p>In VS Code, open the folder containing <code>old_version.tex</code> and <code>revised_version.tex</code>. Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to open the Command Palette, then run <code>Terminal: Create New Terminal</code>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="VS Code Command Palette with Terminal: Create New Terminal selected">
+<p>In VS Code, open the folder containing <code>old_version.tex</code> and <code>revised_version.tex</code>. Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to open the Command Palette, then run <code>Terminal: Create New Terminal</code>.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="VS Code Command Palette with Terminal: Create New Terminal selected">
 
-<div class="doc-step-pair">
-  <div>
-    <p>In the PowerShell terminal, run the following command to generate <code>diff_version.tex</code>:</p>
+</figure>
+
+In the PowerShell terminal, run the following command to generate `diff_version.tex`:
 
 ```powershell
 cmd /c "latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex"
 ```
-
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-4.png" alt="Earlier latexdiff command entered in a PowerShell terminal">
-
-  </figure>
-</div>
-
 
 The command uses `--math-markup=0`, which suppresses math markup. Deleted equations will not appear in the difference file. To show equation changes, choose `1`, `2`, or `3` from the table below and use that value in the command.
 
@@ -99,14 +78,10 @@ The command uses `--math-markup=0`, which suppresses math markup. Deleted equati
 
 When the command finishes, check that `diff_version.tex` appears in the folder containing the two input files.
 
-<div class="doc-step-pair">
-  <div>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-5.png" alt="Windows File Explorer with the generated diff_version LaTeX file highlighted">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-5.png" alt="Windows File Explorer with the generated diff_version LaTeX file highlighted">
 
-  </figure>
-</div>
+</figure>
 
 ## Compile the redlined file
 
@@ -116,12 +91,9 @@ If the manuscript uses pdfLaTeX, compile `diff_version.tex` in the same terminal
 latexmk -pdf diff_version.tex
 ```
 
-<div class="doc-step-pair">
-  <div>
-    <p>After compilation, open <code>diff_version.pdf</code> and check that text changes appear as in the example below. Equation markup depends on the selected <code>--math-markup</code> value.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-6.png" alt="Example PDF with deleted text in red and added text in blue">
+<p>After compilation, open <code>diff_version.pdf</code> and check that text changes appear as in the example below. Equation markup depends on the selected <code>--math-markup</code> value.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-6.png" alt="Example PDF with deleted text in red and added text in blue">
+
+</figure>

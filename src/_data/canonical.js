@@ -373,7 +373,7 @@ const pages = [
     slug: "syntax",
     order: 5,
     group: "snippets",
-    title: "Syntax",
+    title: "Snippet",
     description: "Compare common LaTeX patterns with their VS Code snippet definitions.",
     translationKey: "writing-syntax",
     status: "core"
@@ -570,7 +570,7 @@ const pages = [
     slug: "syntax",
     order: 5,
     group: "snippets",
-    title: "문법",
+    title: "Snippet",
     description: "자주 쓰는 LaTeX 패턴과 VS Code snippet 정의를 비교합니다.",
     translationKey: "writing-syntax",
     status: "core"

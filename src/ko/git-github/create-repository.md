@@ -15,8 +15,8 @@ verification:
   screenshots: needs-update
   environment: Windows 데스크톱 브라우저의 GitHub 웹 화면을 기준으로 작성했습니다.
   workflow: 저장소 소유자와 이름 선택, 비공개 설정, 초기 파일 제외, 빈 저장소 확인.
-  lastVerified: 2026-09-23 GitHub 공식 문서 확인. 현재 생성 화면 검증 대기 중.
-  support: 기존 GitHub 생성 이미지는 업데이트가 필요합니다. macOS와 Linux 화면은 추후 검증합니다.
+  lastVerified: 2026-10-16 Windows 브라우저에서 GitHub 저장소 생성 옵션 화면을 확인하고 촬영했습니다. 저장소 생성은 실행하지 않았습니다.
+  support: 예전 GitHub 화면으로 저장소 생성과 Quick setup 위치를 안내합니다. 생성 폼에는 Public이 선택되어 있으므로 실제 작업에서는 Private를 선택해야 합니다.
   scopeNote: 현재 Windows 데스크톱 화면을 기준으로 안내합니다. macOS와 Linux 화면은 추후 검증합니다.
 verificationCard: false
 toc:
@@ -35,43 +35,31 @@ tags:
 
 프로젝트를 알아볼 수 있는 저장소 이름을 정합니다. 다음 단계에서 빈 저장소를 클론할 예정이므로 README, `.gitignore`, license는 아직 추가하지 않습니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p>GitHub에 로그인한 뒤 프로필의 <strong>Repositories</strong> 탭을 엽니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="예전 GitHub 프로필 화면에서 Repositories 탭이 강조된 모습">
+<p>GitHub에 로그인한 뒤 프로필의 <strong>Repositories</strong> 탭을 엽니다.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/create-repository-repositories-tab.png" alt="예전 GitHub 프로필 화면에서 Repositories 탭이 강조된 모습">
 
-<div class="doc-step-pair">
-  <div>
-    <p><strong>Repositories</strong> 페이지에서 <strong>New</strong>를 선택합니다. 화면 구성이 다르면 <a href="https://github.com/new">GitHub의 새 저장소 페이지</a>를 바로 엽니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="예전 GitHub Repositories 페이지에서 New 버튼이 강조된 모습">
+</figure>
 
-  </figure>
-</div>
+<p><strong>Repositories</strong> 페이지에서 <strong>New</strong>를 선택합니다. 화면 구성이 다르면 <a href="https://github.com/new">GitHub의 새 저장소 페이지</a>를 바로 엽니다.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p><strong>Owner</strong>와 <strong>Repository name</strong>을 확인하고 <strong>Private</strong>를 선택합니다. README, <code>.gitignore</code>, license를 추가하지 않은 채 <strong>Create repository</strong>를 누릅니다.</p>
-    <p><strong>기존 이미지에는 Public이 선택되어 있습니다. 실제 작업에서는 Private를 선택하세요.</strong></p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="예전 GitHub 저장소 생성 폼에서 Public이 선택된 화면">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/create-repository-new-button.png" alt="예전 GitHub Repositories 페이지에서 New 버튼이 강조된 모습">
 
-  </figure>
-</div>
+</figure>
 
-<div class="doc-step-pair">
-  <div>
-    <p>저장소 이름 옆의 <strong>Private</strong> 표시와 빈 저장소의 <strong>Quick setup</strong> 안내를 확인합니다. 기존 이미지에는 <strong>Public</strong>이 표시되어 있습니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="예전 빈 GitHub 저장소 페이지에서 Public 표시와 Quick setup 안내가 보이는 화면">
+<p><strong>Owner</strong>와 <strong>Repository name</strong>을 확인하고 <strong>Private</strong>를 선택합니다. README, <code>.gitignore</code>, license를 추가하지 않은 채 <strong>Create repository</strong>를 누릅니다.</p>
+<p><strong>기존 이미지에는 Public이 선택되어 있습니다. 실제 작업에서는 Private를 선택하세요.</strong></p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/create-repository-form.png" alt="예전 GitHub 저장소 생성 폼에서 Public이 선택된 화면">
+
+</figure>
+
+<p>본인 저장소 이름 옆의 <strong>Private</strong> 표시와 빈 저장소의 <strong>Quick setup</strong> 안내를 확인합니다. 아래 이미지는 <strong>Quick setup</strong> 위치를 보여주는 예시이며 예전 공개 저장소 화면입니다. 실제로 만든 저장소는 <strong>Private</strong>인지 확인하세요.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/github-workflow/create-repository-empty-repo.png" alt="예전 빈 GitHub 저장소 페이지에서 Public 표시와 Quick setup 안내가 보이는 화면">
+
+</figure>

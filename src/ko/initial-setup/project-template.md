@@ -29,30 +29,24 @@ tags:
 ---
 ## 템플릿 다운로드하기
 
-<div class="doc-step-pair">
-  <div class="doc-step-copy">
-    <ol>
-      <li>
-        <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">seed-documents 저장소 열기</a></p>
-      </li>
-      <li>저장소의 파일 목록 위에서 <strong>Code</strong>를 클릭한 다음 <strong>Download ZIP</strong>을 선택합니다.</li>
-    </ol>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/github-code-btn.svg" alt="GitHub Code 버튼">
-  </figure>
-</div>
+<ol>
+  <li>
+    <p><a class="doc-action-link" href="https://github.com/research-workflow-guides/seed-documents">seed-documents 저장소 열기</a></p>
+  </li>
+  <li>저장소의 파일 목록 위에서 <strong>Code</strong>를 클릭한 다음 <strong>Download ZIP</strong>을 선택합니다.</li>
+</ol>
 
-<div class="doc-step-pair">
-  <div class="doc-step-copy">
-    <ol start="3">
-      <li>다운로드한 ZIP 파일을 파일 탐색기에서 마우스 오른쪽 버튼으로 클릭하고 <strong>모두 압축 풀기(Extract All)</strong>를 선택합니다. 압축을 푼 폴더에 <code>check-document.tex</code> 파일과 <code>seed-document</code> 폴더가 있는지 확인합니다.</li>
-    </ol>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.5-1.png" alt="GitHub의 starter repository">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/github-code-btn.svg" alt="GitHub Code 버튼">
+</figure>
+
+<ol start="3">
+  <li>다운로드한 ZIP 파일을 파일 탐색기에서 마우스 오른쪽 버튼으로 클릭하고 <strong>모두 압축 풀기(Extract All)</strong>를 선택합니다. 압축을 푼 폴더에 <code>check-document.tex</code> 파일과 <code>seed-document</code> 폴더가 있는지 확인합니다.</li>
+</ol>
+
+<figure class="image-frame">
+  <img src="/assets/images/1.5-1.png" alt="GitHub의 starter repository">
+</figure>
 
 ## 첫 PDF 빌드 실행
 

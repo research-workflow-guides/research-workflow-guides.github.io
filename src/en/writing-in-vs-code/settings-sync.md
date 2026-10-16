@@ -15,8 +15,8 @@ verification:
   screenshots: needs-update
   environment: Written for VS Code on Windows; macOS and Linux steps await review.
   workflow: Turn on Settings Sync, review sync categories, sign in with GitHub, and verify sync on another Windows PC.
-  lastVerified: VS Code Settings Sync documentation checked on 2026-09-23. Current Windows steps and screens await review.
-  support: The three existing screenshots were captured on macOS and need to be updated for current Windows.
+  lastVerified: The commands and sync categories in the existing macOS images were compared with Windows VS Code 1.142.0 on 2026-10-16.
+  support: The macOS screenshots remain illustrative examples. Browser sign-in and synchronization between PCs were not run.
 toc:
   - id: what-settings-sync-is
     label: What Settings Sync is
@@ -55,36 +55,29 @@ In VS Code Settings Sync, you can choose which of the following items to synchro
 4. In the account picker, choose `Sign in with GitHub`.
 5. Finish the GitHub sign-in flow in the browser and return to VS Code.
 
-<div class="doc-step-pair">
-  <div>
-    <p>Run <code>Settings Sync: Backup and Sync Settings...</code> from the Command Palette.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/settings-sync/backup-and-sync-settings.png" alt="VS Code Command Palette showing Settings Sync Backup and Sync Settings">
-  </figure>
-</div>
+The screenshots below are macOS examples; use the same commands and sync categories on Windows.
+
+<p>Run <code>Settings Sync: Backup and Sync Settings...</code> from the Command Palette. It is the second result in this example; the highlighted <code>Help: Settings Sync</code> opens help.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/settings-sync/backup-and-sync-settings.png" alt="macOS VS Code Command Palette showing Settings Sync Backup and Sync Settings below the selected Help result">
+</figure>
 
 <h2 id="leave-the-sync-options-at-the-defaults">Review sync options</h2>
 
 Review the categories selected by default. Clear any category you do not want to sync, and leave the others selected.
 
-<div class="doc-step-pair">
-  <div>
-    <p>To change the selected categories later, run <code>Settings Sync: Configure...</code> from the Command Palette.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/settings-sync/sync-options-defaults.png" alt="Example VS Code Settings Sync item list with default options checked">
-  </figure>
-</div>
+<p>To change the selected categories later, run <code>Settings Sync: Configure...</code> from the Command Palette.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>After selecting <code>Sign in</code>, choose <code>Sign in with GitHub</code>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/settings-sync/sign-in-with-github.png" alt="Example VS Code account picker with Sign in with GitHub selected">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/settings-sync/sync-options-defaults.png" alt="macOS VS Code Settings Sync categories with default options checked">
+</figure>
+
+<p>After selecting <code>Sign in</code>, choose <code>Sign in with GitHub</code>.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/settings-sync/sign-in-with-github.png" alt="Example VS Code account picker with Sign in with GitHub selected">
+</figure>
 
 ## Restore the same setup on another machine
 

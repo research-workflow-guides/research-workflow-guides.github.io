@@ -31,55 +31,40 @@ List generated files or local folders that Git should not track in the repositor
 
 Ignore rules are useful for generated `.aux` and `.log` files or temporary folders used only on your computer. Decide which source files, such as manuscripts and bibliographies, the project should share and commit those as needed.
 
-<div class="doc-step-pair">
-  <div>
-    <p>In this example, we will tell Git to ignore the <code>heavy</code> folder. It contains files that Git does not yet track.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/gitignore-1.png" alt="Older VS Code Explorer with a heavy folder containing an untracked file">
+<p>In this example, we will tell Git to ignore the <code>heavy</code> folder. It contains files that Git does not yet track.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/gitignore-1.png" alt="Older VS Code Explorer with a heavy folder containing an untracked file">
 
-<div class="doc-step-pair">
-  <div>
-    <p>In VS Code, right-click the repository's root folder and select <strong>New File...</strong>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/gitignore-2.png" alt="Older VS Code menu selecting New File in the repository root">
+</figure>
 
-  </figure>
-</div>
+<p>In VS Code, right-click the repository's root folder and select <strong>New File...</strong>.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>Name the new file <code>.gitignore</code>. Place it at the same root level as the example <code>heavy</code> folder.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/gitignore-3.png" alt="Older VS Code screen entering the .gitignore filename at the repository root">
+<figure class="image-frame">
+  <img src="/assets/images/gitignore-2.png" alt="Older VS Code menu selecting New File in the repository root">
 
-  </figure>
-</div>
+</figure>
 
-<div class="doc-step-pair">
-  <div>
-    <p>Enter <code>heavy/</code> on its own line in <code>.gitignore</code>, then save the file. The trailing <code>/</code> marks a directory. This rule applies to directories named <code>heavy</code> below the location of this <code>.gitignore</code>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/gitignore-4.png" alt="Older VS Code screen entering the heavy/ rule in .gitignore">
+<p>Name the new file <code>.gitignore</code>. Place it at the same root level as the example <code>heavy</code> folder.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/gitignore-3.png" alt="Older VS Code screen entering the .gitignore filename at the repository root">
 
-<div class="doc-step-pair">
-  <div>
-    <p>After saving the file, VS Code may dim the ignored folder. Check the rule with the Git command below regardless of how the folder appears.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/gitignore-5.png" alt="Older VS Code screen showing the heavy folder dimmed after saving the heavy/ rule">
+</figure>
 
-  </figure>
-</div>
+<p>Enter <code>heavy/</code> on its own line in <code>.gitignore</code>, then save the file. The trailing <code>/</code> marks a directory. This rule applies to directories named <code>heavy</code> below the location of this <code>.gitignore</code>. The older example uses <code>heavy</code>, which also excludes the folder; use <code>heavy/</code> here to specify a directory.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/gitignore-4.png" alt="VS Code example entering the heavy rule in .gitignore">
+
+</figure>
+
+<p>After saving the file, VS Code may dim the ignored folder. Check the rule with the Git command below regardless of how the folder appears.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/gitignore-5.png" alt="VS Code example showing the heavy folder dimmed after saving the heavy rule">
+
+</figure>
 
 Run this command from the repository root. If the output names the `heavy/` rule in `.gitignore`, Git is ignoring the example file.
 
@@ -89,15 +74,12 @@ git check-ignore -v heavy/this-is-a-heavy-file.txt
 
 Commit and push only `.gitignore` and the source files you intend to share.
 
-<div class="doc-step-pair">
-  <div>
-    <p>The committed <code>.gitignore</code> appears in your private GitHub repository, while the <code>heavy</code> folder ignored from the start does not. The older screenshot below shows a public-repository example.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/gitignore-6.png" alt="Older public GitHub repository showing .gitignore but no heavy folder">
+<p>The committed <code>.gitignore</code> appears in your private GitHub repository, while the <code>heavy</code> folder ignored from the start does not. The older screenshot below shows a public-repository example.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/gitignore-6.png" alt="Older public GitHub repository showing .gitignore but no heavy folder">
+
+</figure>
 
 <h2 id="already-uploaded-clutter-files">Stop tracking existing files</h2>
 

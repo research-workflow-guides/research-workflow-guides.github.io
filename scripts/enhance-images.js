@@ -1,4 +1,15 @@
 const { parse } = require("node-html-parser");
+const screenshotReviews = require("./screenshot-reviews.json");
+
+function normalizeImageSource(source) {
+  try {
+    return decodeURIComponent(source || "");
+  } catch {
+    return source || "";
+  }
+}
+
+const imageReviews = new Map(Object.entries(screenshotReviews.images).map(([source, review]) => [normalizeImageSource(source), review]));
 
 function escapeAttribute(value) {
   return String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
@@ -6,23 +17,26 @@ function escapeAttribute(value) {
 
 module.exports = function enhanceImages(html) {
   const document = parse(html);
+  const reviewNotes = document.querySelectorAll(".image-review-note, .image-review-note--needs-update");
+  for (const note of reviewNotes) note.remove();
   const figures = document.querySelectorAll(".prose figure.image-frame");
-  if (!figures.length) return html;
+  if (!figures.length) return reviewNotes.length ? document.toString() : html;
 
   const isKorean = document.querySelector("html")?.getAttribute("lang") === "ko";
-  const needsReview = Boolean(document.querySelector('[data-verification-status="needs-review"]'));
-  const screenshotsNeedUpdate = Boolean(document.querySelector('[data-screenshot-update="needs-update"]'));
   const zoomLabel = isKorean ? "이미지 원본 확대" : "Enlarge original image";
   const zoomHint = isKorean ? "확대" : "Enlarge";
-  const reviewNote = screenshotsNeedUpdate
-    ? isKorean ? "기존 화면 · 업데이트 필요" : "Existing screenshot · update required"
-    : isKorean ? "기존 화면 · 재검증 예정" : "Existing screenshot · review pending";
-  const reviewNoteClass = screenshotsNeedUpdate
-    ? "image-review-note image-review-note--needs-update"
-    : "image-review-note";
 
   for (const figure of figures) {
-    for (const image of figure.querySelectorAll("img")) {
+    const images = figure.querySelectorAll("img");
+    const reviews = images.map((image) => imageReviews.get(normalizeImageSource(image.getAttribute("src"))));
+    const reviewed = reviews.length > 0 && reviews.every((review) => review && ["retained", "updated"].includes(review.status));
+    if (reviewed) {
+      figure.setAttribute("data-screenshot-reviewed", reviews.map((review) => review.reviewedOn).sort().at(-1));
+    } else {
+      figure.removeAttribute("data-screenshot-reviewed");
+    }
+
+    for (const image of images) {
       const source = image.getAttribute("src");
       if (!source) continue;
 
@@ -53,14 +67,6 @@ module.exports = function enhanceImages(html) {
       }
     }
 
-    if (needsReview && !figure.querySelector(".image-review-note")) {
-      const caption = figure.querySelector("figcaption");
-      if (caption) {
-        caption.insertAdjacentHTML("beforeend", `<span class="${reviewNoteClass}">${reviewNote}</span>`);
-      } else {
-        figure.insertAdjacentHTML("beforeend", `<figcaption class="${reviewNoteClass}">${reviewNote}</figcaption>`);
-      }
-    }
   }
 
   return document.toString();

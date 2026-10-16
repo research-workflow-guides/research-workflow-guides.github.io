@@ -44,110 +44,83 @@ Before changing settings, run `Build LaTeX project` and `View LaTeX PDF file` fr
 
 If you use a command repeatedly, check its current binding in Keyboard Shortcuts and assign a new combination only when it helps.
 
-<div class="doc-step-pair">
-  <div>
-    <p>Press <kbd>Ctrl</kbd>+<kbd>K</kbd>, then <kbd>Ctrl</kbd>+<kbd>S</kbd> to open Keyboard Shortcuts. You can also run <strong>Preferences: Open Keyboard Shortcuts</strong> from the Command Palette.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/open-keyboard-shortcuts.png" alt="VS Code Command Palette showing Preferences Open Keyboard Shortcuts">
+<p>Press <kbd>Ctrl</kbd>+<kbd>K</kbd>, then <kbd>Ctrl</kbd>+<kbd>S</kbd> to open Keyboard Shortcuts. You can also run <strong>Preferences: Open Keyboard Shortcuts</strong> from the Command Palette.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/shortcuts/open-keyboard-shortcuts.png" alt="VS Code Command Palette showing Preferences Open Keyboard Shortcuts">
 
-<div class="doc-step-pair">
-  <div>
-    <p>Enter <code>LaTeX Workshop</code> in the Keyboard Shortcuts search box. Check the listed commands and their current bindings, then choose one to change.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/latex-workshop-shortcuts-list.png" alt="VS Code Keyboard Shortcuts filtered to LaTeX Workshop commands">
+</figure>
 
-  </figure>
-</div>
+<p>Enter <code>LaTeX Workshop</code> in the Keyboard Shortcuts search box. Check the listed commands and their current bindings, then choose one to change.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/shortcuts/latex-workshop-shortcuts-list.png" alt="VS Code Keyboard Shortcuts filtered to LaTeX Workshop commands">
+
+</figure>
 
 ## Promote repeat actions
 
 Check the existing binding first. Choose one frequently used command without a convenient shortcut and assign a new one.
 
-<div class="doc-step-pair">
-  <div>
-    <p>For example, add <code>environment</code> to the search box to show LaTeX Workshop commands whose names contain that word.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="LaTeX Workshop shortcuts filtered by the word environment">
+<p>For example, add <code>environment</code> to the search box to show LaTeX Workshop commands whose names contain that word.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="LaTeX Workshop shortcuts filtered by the word environment">
 
-<div class="doc-step-pair">
-  <div>
-    <p>Select the command, press the desired key combination in the shortcut input, then press <kbd>Enter</kbd> to save it.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/select-shortcut-command.png" alt="VS Code Keyboard Shortcuts view with one command selected for keybinding entry">
+</figure>
 
-  </figure>
-</div>
+<p>Select the command, press the desired key combination in the shortcut input, then press <kbd>Enter</kbd> to save it.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p><strong>SyncTeX from cursor</strong> jumps from the source cursor to the corresponding PDF position. On Windows, try its default shortcut, <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd>; search for the command in Keyboard Shortcuts if you want to change it.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="VS Code Keyboard Shortcuts view showing LaTeX Workshop SyncTeX from cursor command">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/shortcuts/select-shortcut-command.png" alt="VS Code Keyboard Shortcuts view with one command selected for keybinding entry">
 
-  </figure>
-</div>
+</figure>
+
+<p><strong>SyncTeX from cursor</strong> jumps from the source cursor to the corresponding PDF position. On Windows, try its default shortcut, <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd>; search for the command in Keyboard Shortcuts if you want to change it.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="VS Code Keyboard Shortcuts view showing LaTeX Workshop SyncTeX from cursor command">
+
+</figure>
 
 ## Find your settings files
 
-<div class="doc-step-pair">
-  <div>
-    <p>On Windows, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and run <strong>Preferences: Open User Settings</strong> from the Command Palette. User settings apply to all your VS Code projects.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/settings/open-user-settings.png" alt="VS Code Command Palette showing Preferences Open User Settings">
+<p>On Windows, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and run <strong>Preferences: Open User Settings</strong> from the Command Palette. User settings apply to all your VS Code projects.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/settings/open-user-settings.png" alt="VS Code Command Palette showing Preferences Open User Settings">
+
+</figure>
 
 To apply a setting only to this project, run `Preferences: Open Workspace Settings` from the Command Palette. To open the JSON file directly, run `Preferences: Open Workspace Settings (JSON)`. VS Code stores it in the project’s `.vscode/settings.json`, and it takes precedence over user settings.
 
-<div class="doc-step-pair">
-  <div>
-    <p>To edit <code>settings.json</code> directly, run <strong>Preferences: Open User Settings (JSON)</strong> from the Command Palette. For the default Windows profile, the file is at <code>%APPDATA%\Code\User\settings.json</code>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/settings/code-user-folder.png" alt="Windows File Explorer opened to the VS Code Code User folder">
+<p>To edit <code>settings.json</code> directly, run <strong>Preferences: Open User Settings (JSON)</strong> from the Command Palette. For the default Windows profile, the file is at <code>%APPDATA%\Code\User\settings.json</code>.</p>
 
-  </figure>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/settings/code-user-folder.png" alt="Windows File Explorer opened to the VS Code Code User folder">
+
+</figure>
+
+<div class="doc-action-row">
+  <p><code>settings.json</code> stores user settings, and <code>keybindings.json</code> stores customized shortcuts. When using the linked settings example repository, add only the entries you need to your current files.</p>
+  <a class="doc-action-link" href="https://github.com/research-workflow-guides/setting">Settings example repository</a>
 </div>
 
-<div class="doc-step-pair">
-  <div>
-    <div class="doc-action-row">
-      <p><code>settings.json</code> stores user settings, and <code>keybindings.json</code> stores customized shortcuts. When using the linked settings example repository, add only the entries you need to your current files.</p>
-      <a class="doc-action-link" href="https://github.com/research-workflow-guides/setting">Settings example repository</a>
-    </div>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="Windows File Explorer showing settings and keybindings files inside the VS Code user folder">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="Windows File Explorer showing settings and keybindings files inside the VS Code user folder">
 
-  </figure>
-</div>
+</figure>
 
 ## Useful defaults
 
 Check LaTeX Workshop’s defaults first. The options below control building, PDF preview, and auxiliary-file cleanup.
 
-<div class="doc-step-pair">
-  <div>
-    <p>Enter <code>LaTeX Workshop</code> in the Settings search box. Use the User tab for values shared across your projects and the Workspace tab for values specific to this project.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/settings/search-latex-workshop-settings.png" alt="VS Code Settings filtered to LaTeX Workshop extension settings">
+<p>Enter <code>LaTeX Workshop</code> in the Settings search box. Use the User tab for values shared across your projects and the Workspace tab for values specific to this project.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/settings/search-latex-workshop-settings.png" alt="VS Code Settings filtered to LaTeX Workshop extension settings">
+
+</figure>
 
 - `latex-workshop.latex.autoBuild.run`: defaults to `onFileChange`; use `onSave` to build when saving
 - `latex-workshop.view.pdf.viewer`: defaults to `tab`

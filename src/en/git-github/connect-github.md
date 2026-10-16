@@ -37,13 +37,10 @@ If you do not have a GitHub account, follow the [GitHub account setup guide](/en
 
 ## Sign in when prompted
 
-<div class="doc-step-pair">
-  <div>
-    <p>VS Code may ask you to sign in when you clone a private repository or push to GitHub. If prompted, choose the browser sign-in option and authenticate with the GitHub account you intend to use.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/connecting-github.png" alt="Older VS Code Connect to GitHub dialog with Sign in with your browser highlighted">
-  </figure>
-</div>
+<p>VS Code may ask you to sign in when you clone a private repository or push to GitHub. If prompted, choose the browser sign-in option and authenticate with the GitHub account you intend to use.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/connecting-github.png" alt="Older VS Code Connect to GitHub dialog with Sign in with your browser highlighted">
+</figure>
 
 Return to VS Code when browser authentication is complete. If you have not seen a sign-in request yet, continue to [Create Repository](/en/git-github/create-repository/).

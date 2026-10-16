@@ -17,7 +17,6 @@ verification:
   workflow: Git for Windows 설치, 전역 이름·이메일 설정, PowerShell에서 명령 확인.
   lastVerified: 2026-09-23 Git 공식 문서 확인. Windows 실제 설치 검증 대기 중.
   support: 기존 Windows 설치 이미지는 업데이트가 필요합니다. macOS와 Linux 안내는 준비 중입니다.
-  scopeNote: 현재 Windows 설치 절차를 안내합니다. macOS와 Linux 절차는 추후 작성·검증합니다.
 verificationCard: false
 toc:
   - id: git-설치
@@ -31,45 +30,33 @@ tags:
 ---
 ## Git 설치
 
-<div class="doc-step-pair">
-  <div>
-    <p>Git 공식 <a href="https://git-scm.com/install/windows">Windows 설치 페이지</a>를 엽니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.3-1.png" alt="예전 Git 다운로드 페이지의 Windows 버튼과 2.40.1 버전 표시">
+<p>Git 공식 <a href="https://git-scm.com/install/windows">Windows 설치 페이지</a>를 엽니다.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/reviewed-2026-10-16/git-windows-download.png" alt="x64와 ARM64 설치 파일 링크가 보이는 Git 공식 Windows 설치 페이지">
 
-<div class="doc-step-pair">
-  <div>
-    <p>Windows 설치 페이지에서 PC에 맞는 x64 또는 ARM64 Setup 파일을 내려받아 실행합니다. 설치 창이 열리면 <strong>Next</strong>로 진행합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.3-2.png" alt="Git 2.40.1 설치 마법사의 Information 화면과 Next 버튼">
+</figure>
 
-  </figure>
-</div>
+<p>Windows 설치 페이지에서 PC에 맞는 x64 또는 ARM64 Setup 파일을 내려받아 실행합니다. 설치 창이 열리면 <strong>Next</strong>로 진행합니다.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>기본 편집기 선택 화면이 나오면, VS Code를 Git 편집기로 쓰려는 경우 <strong>Use Visual Studio Code as Git's default editor</strong>를 선택합니다. 다른 설치 옵션은 각 화면의 설명을 확인하며 진행합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.3-3.png" alt="Git 2.40.1 설치 마법사의 기본 편집기 목록에서 Visual Studio Code를 선택하는 화면">
+<figure class="image-frame">
+  <img src="/assets/images/1.3-2.png" alt="Git 2.40.1 설치 마법사의 Information 화면과 Next 버튼">
 
-  </figure>
-</div>
+</figure>
 
-<div class="doc-step-pair">
-  <div>
-    <p>설치 마법사의 마지막 화면에서 <strong>Finish</strong>를 선택합니다. 설치 전에 열어둔 PowerShell이나 VS Code 터미널은 닫고 새로 엽니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.3-4.png" alt="Git 2.40.1 설치 마법사의 완료 화면과 Finish 버튼">
+<p>기본 편집기 선택 화면이 나오면, VS Code를 Git 편집기로 쓰려는 경우 <strong>Use Visual Studio Code as Git's default editor</strong>를 선택합니다. 다른 설치 옵션은 각 화면의 설명을 확인하며 진행합니다.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/1.3-3.png" alt="Git 2.40.1 설치 마법사의 기본 편집기 목록에서 Visual Studio Code를 선택하는 화면">
+
+</figure>
+
+<p>설치 마법사의 마지막 화면에서 <strong>Finish</strong>를 선택합니다. 설치 전에 열어둔 PowerShell이나 VS Code 터미널은 닫고 새로 엽니다.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/1.3-4.png" alt="Git 2.40.1 설치 마법사의 완료 화면과 Finish 버튼">
+
+</figure>
 
 <h2 id="identity-설정">커밋 작성자 설정</h2>
 

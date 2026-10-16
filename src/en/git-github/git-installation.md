@@ -31,45 +31,33 @@ tags:
 ---
 ## Install Git
 
-<div class="doc-step-pair">
-  <div>
-    <p>Open the <a href="https://git-scm.com/install/windows">official Git for Windows installation page</a>.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.3-1.png" alt="Older Git downloads page showing the Windows button and version 2.40.1">
+<p>Open the <a href="https://git-scm.com/install/windows">official Git for Windows installation page</a>.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/reviewed-2026-10-16/git-windows-download.png" alt="Official Git for Windows installation page with x64 and ARM64 download links">
 
-<div class="doc-step-pair">
-  <div>
-    <p>Download and run the x64 or ARM64 Setup file that matches your Windows PC. When the installer opens, select <strong>Next</strong> to continue.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.3-2.png" alt="Information screen and Next button in the Git 2.40.1 installer">
+</figure>
 
-  </figure>
-</div>
+<p>Download and run the x64 or ARM64 Setup file that matches your Windows PC. When the installer opens, select <strong>Next</strong> to continue.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p>When the default editor screen appears, choose <strong>Use Visual Studio Code as Git's default editor</strong> if you want Git to open VS Code for editing. Review the descriptions on the remaining installer screens as you continue.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.3-3.png" alt="Git 2.40.1 installer default-editor list with Visual Studio Code selected">
+<figure class="image-frame">
+  <img src="/assets/images/1.3-2.png" alt="Information screen and Next button in the Git 2.40.1 installer">
 
-  </figure>
-</div>
+</figure>
 
-<div class="doc-step-pair">
-  <div>
-    <p>Select <strong>Finish</strong> on the final installer screen. Close any PowerShell or VS Code terminals that were open before installation, then open a new one.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.3-4.png" alt="Final screen and Finish button in the Git 2.40.1 installer">
+<p>When the default editor screen appears, choose <strong>Use Visual Studio Code as Git's default editor</strong> if you want Git to open VS Code for editing. Review the descriptions on the remaining installer screens as you continue.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/1.3-3.png" alt="Git 2.40.1 installer default-editor list with Visual Studio Code selected">
+
+</figure>
+
+<p>Select <strong>Finish</strong> on the final installer screen. Close any PowerShell or VS Code terminals that were open before installation, then open a new one.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/1.3-4.png" alt="Final screen and Finish button in the Git 2.40.1 installer">
+
+</figure>
 
 <h2 id="set-your-identity">Set your commit identity</h2>
 

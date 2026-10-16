@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc.njk
-title: Syntax
+title: Snippet
 description: Compare common LaTeX patterns with their VS Code snippet definitions.
 lang: en
 section: writing-in-vs-code

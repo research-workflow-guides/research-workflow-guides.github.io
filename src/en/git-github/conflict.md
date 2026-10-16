@@ -15,8 +15,8 @@ verification:
   screenshots: needs-update
   environment: Written for VS Code and the integrated Git terminal on Windows.
   workflow: Check local status before Pull, edit conflicts, stage only source files, and complete the merge.
-  lastVerified: Official VS Code and Git documentation checked on 2026-09-24. Current Windows screens await review.
-  support: The existing images show older VS Code screens and an example that stages generated files; they need updating.
+  lastVerified: Staging and commit menu screens checked in VS Code on Windows on 2026-10-16. A merge and Push were not performed during this screen review.
+  support: Existing screenshots illustrate staging and commit menu locations; exclude generated files as instructed. The full workflow was not verified.
 toc:
   - id: what-a-conflict-means
     label: When conflicts occur
@@ -91,27 +91,29 @@ Build the document and review the result, then stage only the resolved source fi
 
 <h2 id="finish-the-merge">Complete the merge</h2>
 
-In Source Control, stage only the resolved TeX source file under **Merge Changes**. The second and third older images below also stage the entire **Changes** list, including generated `.log` and `.pdf` files. Do not use that button; check the staged files with `git status` and `git diff --cached`.
+In Source Control, stage only the resolved TeX source file under **Merge Changes**. Check the staged files with `git status` and `git diff --cached`.
 
 <figure class="image-frame">
   <img src="/assets/images/2.2.4-8.png" alt="Older VS Code screen showing the button to stage only the resolved TeX file under Merge Changes">
 
 </figure>
 
+The `+` beside **Changes** in the screenshot stages all files. In your own work, select only the `.tex`, `.bib`, and other source files you need; exclude generated files such as the `.log` and `.pdf` files shown. If **Staged Changes** contains an unwanted file, click `-` beside that file to unstage it.
+
 <figure class="image-frame">
-  <img src="/assets/images/2.2.4-9.png" alt="Older VS Code screen showing the stage-all Changes button including generated files, which should not be used">
+  <img src="/assets/images/2.2.4-9.png" alt="Existing VS Code screenshot with the resolved TeX file staged and the Stage All Changes button highlighted">
 
 </figure>
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.4-10.png" alt="Older VS Code screen with TeX source and generated log and PDF files all staged, an example not to follow">
+  <img src="/assets/images/2.2.4-10.png" alt="Existing VS Code screenshot with TeX source and generated files together under Staged Changes">
 
 </figure>
 
-After reviewing the staged source file, select **Commit** to complete the merge, then **Push**. The **Commit & Push** image below shows an older menu.
+After reviewing the staged source files and build result, select **Commit** to complete the merge, then **Push**. The screenshot below shows where to find **Commit & Push**. Before using it, unstage unwanted generated files and finish reviewing the merge result.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.4-11.png" alt="Older VS Code menu highlighting Commit & Push while generated files are also staged">
+  <img src="/assets/images/2.2.4-11.png" alt="Existing VS Code screenshot with a merge commit message and the Commit & Push menu highlighted">
 
 </figure>
 

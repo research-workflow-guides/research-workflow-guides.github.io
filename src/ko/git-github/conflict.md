@@ -15,8 +15,8 @@ verification:
   screenshots: needs-update
   environment: Windows의 VS Code와 Git 통합 터미널을 기준으로 안내합니다.
   workflow: Pull 전 로컬 상태 확인, 충돌 구간 편집, 원본 파일만 stage한 뒤 merge 완료.
-  lastVerified: 2026-09-24 VS Code와 Git 공식 문서를 확인했습니다. 현재 Windows 화면 검증 대기 중.
-  support: 기존 이미지에는 오래된 VS Code 화면과 생성 파일을 모두 stage하는 예시가 있어 업데이트가 필요합니다.
+  lastVerified: 2026-10-16 Windows의 VS Code에서 Stage와 커밋 메뉴 화면을 확인했습니다. 이번 화면 검토에서는 merge와 Push를 실행하지 않았습니다.
+  support: 기존 사진을 Stage와 커밋 메뉴 위치 예시로 유지하며 생성 파일은 제외하도록 안내합니다. 전체 절차는 실행 검증하지 않았습니다.
 toc:
   - id: conflict의-의미
     label: 충돌이 발생할 때
@@ -91,27 +91,29 @@ git diff
 
 <h2 id="merge-마무리">merge 완료</h2>
 
-Source Control의 **Merge Changes**에서 해결한 TeX 원본 파일만 stage합니다. 아래 두 번째·세 번째 기존 이미지는 **Changes** 전체를 stage해 `.log`, `.pdf` 등 생성 파일까지 포함한 예시입니다. 그 버튼은 누르지 말고 `git status`와 `git diff --cached`로 stage된 파일을 확인합니다.
+Source Control의 **Merge Changes**에서 해결한 TeX 원본 파일만 stage합니다. `git status`와 `git diff --cached`로 stage된 파일을 확인합니다.
 
 <figure class="image-frame">
   <img src="/assets/images/2.2.4-8.png" alt="Merge Changes의 해결한 TeX 파일만 stage하는 버튼을 표시한 예전 VS Code 화면">
 
 </figure>
 
+아래 사진의 **Changes** 옆 `+`는 전체 파일을 Stage하는 버튼입니다. 실제 작업에서는 필요한 `.tex`, `.bib` 원본 파일만 선택하고, 사진에 보이는 `.log`, `.pdf` 등 생성 파일은 제외합니다. **Staged Changes**에 불필요한 파일이 있으면 해당 행의 `-`로 Stage를 취소합니다.
+
 <figure class="image-frame">
-  <img src="/assets/images/2.2.4-9.png" alt="생성 파일까지 포함하는 Changes 전체 stage 버튼을 표시한 예전 VS Code 화면, 이 버튼은 사용하지 않음">
+  <img src="/assets/images/2.2.4-9.png" alt="해결한 TeX 파일이 Stage된 상태와 Changes 전체 선택 버튼이 표시된 기존 VS Code 화면">
 
 </figure>
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.4-10.png" alt="TeX 파일과 생성된 log, PDF 등이 모두 stage된 예전 VS Code 화면, 따라 하지 않는 예시">
+  <img src="/assets/images/2.2.4-10.png" alt="Staged Changes에 TeX 원본과 생성 파일이 함께 표시된 기존 VS Code 화면">
 
 </figure>
 
-Stage된 원본 파일을 확인한 뒤 **Commit**으로 merge를 완료하고 **Push**합니다. 아래 **Commit & Push** 이미지는 이전 화면의 메뉴 예시입니다.
+Stage된 원본 파일과 빌드 결과를 확인한 뒤 **Commit**으로 merge를 완료하고 **Push**합니다. 아래 사진은 **Commit & Push** 메뉴의 위치를 보여줍니다. 실행 전에 불필요한 생성 파일을 Stage에서 빼고 merge 결과 검토를 먼저 마칩니다.
 
 <figure class="image-frame">
-  <img src="/assets/images/2.2.4-11.png" alt="Commit & Push가 강조된 예전 VS Code 메뉴, 생성 파일도 stage된 상태">
+  <img src="/assets/images/2.2.4-11.png" alt="merge 커밋 메시지와 Commit & Push 메뉴가 표시된 기존 VS Code 화면">
 
 </figure>
 

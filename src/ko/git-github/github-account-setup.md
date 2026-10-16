@@ -31,25 +31,19 @@ tags:
 
 이번 저장소를 소유할 GitHub 계정을 선택합니다. 이미 계정이 있다면 해당 계정으로 로그인합니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p><a href="https://github.com/">GitHub 공식 홈페이지</a>를 엽니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.4-1.png" alt="예전 GitHub 홈페이지의 시작 화면">
+<p><a href="https://github.com/">GitHub 공식 홈페이지</a>를 엽니다.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/1.4-1.png" alt="예전 GitHub 홈페이지의 시작 화면">
 
-<div class="doc-step-pair">
-  <div>
-    <p>계정이 없다면 <a href="https://github.com/signup">GitHub 가입 페이지</a>에서 가입하고 안내에 따라 이메일 주소를 인증합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/1.4-2.png" alt="예전 GitHub 홈페이지의 Sign up 버튼">
+</figure>
 
-  </figure>
-</div>
+<p>계정이 없다면 <a href="https://github.com/signup">GitHub 가입 페이지</a>에서 가입하고 안내에 따라 이메일 주소를 인증합니다.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/1.4-2.png" alt="예전 GitHub 홈페이지의 Sign up 버튼">
+
+</figure>
 
 ## 기본 보안 설정
 

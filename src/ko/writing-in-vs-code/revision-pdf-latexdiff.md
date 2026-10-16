@@ -33,27 +33,19 @@ tags:
 
 비교할 이전 버전의 `.tex` 파일을 `old_version.tex`로 복사합니다. PDF를 만들 때 필요한 이미지·참고문헌 등 프로젝트 파일은 계속 사용할 수 있게 둡니다.
 
-<div class="doc-step-pair">
-  <div>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-1.png" alt="Windows 파일 탐색기에서 이전 버전 원고 old_version이 강조된 화면">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-1.png" alt="Windows 파일 탐색기에서 이전 버전 원고 old_version이 강조된 화면">
 
-  </figure>
-</div>
+</figure>
 
 ## 수정 버전 준비
 
 수정한 원고의 `.tex` 파일을 `revised_version.tex`로 복사합니다. `old_version.tex`와 같은 폴더에 두고, 두 파일이 실제 비교할 버전인지 확인합니다.
 
-<div class="doc-step-pair">
-  <div>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-2.png" alt="Windows 파일 탐색기에서 예전 수정 원고 파일명 Check_document가 강조된 화면">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-2.png" alt="Windows 파일 탐색기에서 예전 수정 원고 파일명 Check_document가 강조된 화면">
 
-  </figure>
-</div>
+</figure>
 
 ## latexdiff 실행
 
@@ -62,31 +54,18 @@ tags:
   <a class="doc-action-link" href="https://github.com/ftilmann/latexdiff">공식 문서</a>
 </div>
 
-<div class="doc-step-pair">
-  <div>
-    <p>VS Code에서 <code>old_version.tex</code>와 <code>revised_version.tex</code>가 있는 폴더를 엽니다. <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 눌러 명령 팔레트를 열고 <code>Terminal: Create New Terminal</code>을 실행합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="VS Code 명령 팔레트에서 Terminal: Create New Terminal이 선택된 화면">
+<p>VS Code에서 <code>old_version.tex</code>와 <code>revised_version.tex</code>가 있는 폴더를 엽니다. <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 눌러 명령 팔레트를 열고 <code>Terminal: Create New Terminal</code>을 실행합니다.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-3.png" alt="VS Code 명령 팔레트에서 Terminal: Create New Terminal이 선택된 화면">
 
-<div class="doc-step-pair">
-  <div>
-    <p>PowerShell 터미널에서 다음 명령을 실행해 <code>diff_version.tex</code>를 생성합니다.</p>
+</figure>
+
+PowerShell 터미널에서 다음 명령을 실행해 `diff_version.tex`를 생성합니다.
 
 ```powershell
 cmd /c "latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_version.tex"
 ```
-
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-4.png" alt="PowerShell 터미널에 입력된 예전 latexdiff 명령">
-
-  </figure>
-</div>
-
 
 위 명령의 `--math-markup=0`은 수식의 변경 표시를 끕니다. 삭제된 수식은 변경 파일에도 나타나지 않습니다. 수식 변경을 표시하려면 아래 표에서 `1`, `2`, `3` 중 하나를 선택해 명령에 적용합니다.
 
@@ -99,14 +78,10 @@ cmd /c "latexdiff --math-markup=0 old_version.tex revised_version.tex > diff_ver
 
 명령이 끝나면 두 입력 파일이 있는 폴더에 `diff_version.tex`가 생성됐는지 확인합니다.
 
-<div class="doc-step-pair">
-  <div>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-5.png" alt="Windows 파일 탐색기에서 생성된 diff_version LaTeX 파일이 강조된 화면">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-5.png" alt="Windows 파일 탐색기에서 생성된 diff_version LaTeX 파일이 강조된 화면">
 
-  </figure>
-</div>
+</figure>
 
 ## 수정 사항 파일 컴파일
 
@@ -116,12 +91,9 @@ pdfLaTeX로 작성한 원고라면 같은 터미널에서 다음 명령으로 `d
 latexmk -pdf diff_version.tex
 ```
 
-<div class="doc-step-pair">
-  <div>
-    <p>컴파일 후 <code>diff_version.pdf</code>를 열어 아래 예시처럼 텍스트 변경이 표시되는지 확인합니다. 수식 변경 표시는 선택한 <code>--math-markup</code> 값에 따릅니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-6.png" alt="삭제된 텍스트는 빨간색, 추가된 텍스트는 파란색으로 표시된 PDF 예시">
+<p>컴파일 후 <code>diff_version.pdf</code>를 열어 아래 예시처럼 텍스트 변경이 표시되는지 확인합니다. 수식 변경 표시는 선택한 <code>--math-markup</code> 값에 따릅니다.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-optional/revision-pdf-latexdiff/2.3.2-6.png" alt="삭제된 텍스트는 빨간색, 추가된 텍스트는 파란색으로 표시된 PDF 예시">
+
+</figure>

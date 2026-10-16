@@ -44,110 +44,83 @@ tags:
 
 자주 반복하는 명령이 있다면 Keyboard Shortcuts 화면에서 현재 키 조합을 확인하고, 필요한 명령에만 새 조합을 지정합니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p><kbd>Ctrl</kbd>+<kbd>K</kbd>, <kbd>Ctrl</kbd>+<kbd>S</kbd>를 차례로 눌러 Keyboard Shortcuts를 엽니다. Command Palette에서 <strong>Preferences: Open Keyboard Shortcuts</strong>를 실행해도 됩니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/open-keyboard-shortcuts.png" alt="Preferences Open Keyboard Shortcuts가 보이는 VS Code Command Palette">
+<p><kbd>Ctrl</kbd>+<kbd>K</kbd>, <kbd>Ctrl</kbd>+<kbd>S</kbd>를 차례로 눌러 Keyboard Shortcuts를 엽니다. Command Palette에서 <strong>Preferences: Open Keyboard Shortcuts</strong>를 실행해도 됩니다.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/shortcuts/open-keyboard-shortcuts.png" alt="Preferences Open Keyboard Shortcuts가 보이는 VS Code Command Palette">
 
-<div class="doc-step-pair">
-  <div>
-    <p>Keyboard Shortcuts 검색창에 <code>LaTeX Workshop</code>을 입력합니다. 표시된 명령과 현재 단축키를 확인하고 바꿀 항목을 고릅니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/latex-workshop-shortcuts-list.png" alt="LaTeX Workshop 명령으로 필터링된 VS Code Keyboard Shortcuts 화면">
+</figure>
 
-  </figure>
-</div>
+<p>Keyboard Shortcuts 검색창에 <code>LaTeX Workshop</code>을 입력합니다. 표시된 명령과 현재 단축키를 확인하고 바꿀 항목을 고릅니다.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/shortcuts/latex-workshop-shortcuts-list.png" alt="LaTeX Workshop 명령으로 필터링된 VS Code Keyboard Shortcuts 화면">
+
+</figure>
 
 ## 반복 동작 단축키 만들기
 
 먼저 기존 단축키를 확인합니다. 자주 쓰지만 편리한 키 조합이 없는 명령 하나를 골라 새 단축키를 지정합니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p>예를 들어 검색창에 <code>environment</code>를 더 입력하면 이름에 이 단어가 들어간 LaTeX Workshop 명령만 표시됩니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="environment 검색어로 좁혀진 LaTeX Workshop 단축키 목록">
+<p>예를 들어 검색창에 <code>environment</code>를 더 입력하면 이름에 이 단어가 들어간 LaTeX Workshop 명령만 표시됩니다.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/shortcuts/filter-specific-shortcut.png" alt="environment 검색어로 좁혀진 LaTeX Workshop 단축키 목록">
 
-<div class="doc-step-pair">
-  <div>
-    <p>명령을 선택해 키 입력창을 열고, 원하는 키 조합을 누른 뒤 <kbd>Enter</kbd>로 저장합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/select-shortcut-command.png" alt="선택한 명령에 새 keybinding을 입력하는 VS Code Keyboard Shortcuts 화면">
+</figure>
 
-  </figure>
-</div>
+<p>명령을 선택해 키 입력창을 열고, 원하는 키 조합을 누른 뒤 <kbd>Enter</kbd>로 저장합니다.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p><strong>SyncTeX from cursor</strong>는 원고의 커서 위치에 대응하는 PDF 위치로 이동합니다. Windows에서는 먼저 기본 단축키 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd>를 사용해 보고, 바꾸려면 Keyboard Shortcuts에서 이 명령을 찾습니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="LaTeX Workshop SyncTeX from cursor 명령이 보이는 VS Code Keyboard Shortcuts 화면">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/shortcuts/select-shortcut-command.png" alt="선택한 명령에 새 keybinding을 입력하는 VS Code Keyboard Shortcuts 화면">
 
-  </figure>
-</div>
+</figure>
+
+<p><strong>SyncTeX from cursor</strong>는 원고의 커서 위치에 대응하는 PDF 위치로 이동합니다. Windows에서는 먼저 기본 단축키 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd>를 사용해 보고, 바꾸려면 Keyboard Shortcuts에서 이 명령을 찾습니다.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/shortcuts/synctex-from-cursor-shortcut.png" alt="LaTeX Workshop SyncTeX from cursor 명령이 보이는 VS Code Keyboard Shortcuts 화면">
+
+</figure>
 
 ## 설정 파일 찾기
 
-<div class="doc-step-pair">
-  <div>
-    <p>Windows에서 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>로 Command Palette를 열고 <strong>Preferences: Open User Settings</strong>를 실행합니다. 사용자 설정은 VS Code의 모든 프로젝트에 적용됩니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/settings/open-user-settings.png" alt="Preferences Open User Settings가 보이는 VS Code Command Palette">
+<p>Windows에서 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>로 Command Palette를 열고 <strong>Preferences: Open User Settings</strong>를 실행합니다. 사용자 설정은 VS Code의 모든 프로젝트에 적용됩니다.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/settings/open-user-settings.png" alt="Preferences Open User Settings가 보이는 VS Code Command Palette">
+
+</figure>
 
 현재 프로젝트에만 적용하려면 Command Palette에서 `Preferences: Open Workspace Settings`를 실행합니다. JSON 파일을 직접 열려면 `Preferences: Open Workspace Settings (JSON)`을 실행합니다. 이 설정은 프로젝트의 `.vscode/settings.json`에 저장되며 사용자 설정보다 우선합니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p><code>settings.json</code>을 직접 편집하려면 Command Palette에서 <strong>Preferences: Open User Settings (JSON)</strong>을 실행합니다. 기본 Windows 프로필의 파일 위치는 <code>%APPDATA%\Code\User\settings.json</code>입니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/settings/code-user-folder.png" alt="VS Code Code User 폴더가 열린 Windows 파일 탐색기">
+<p><code>settings.json</code>을 직접 편집하려면 Command Palette에서 <strong>Preferences: Open User Settings (JSON)</strong>을 실행합니다. 기본 Windows 프로필의 파일 위치는 <code>%APPDATA%\Code\User\settings.json</code>입니다.</p>
 
-  </figure>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/settings/code-user-folder.png" alt="VS Code Code User 폴더가 열린 Windows 파일 탐색기">
+
+</figure>
+
+<div class="doc-action-row">
+  <p><code>settings.json</code>에는 사용자 설정이, <code>keybindings.json</code>에는 바꾼 단축키가 저장됩니다. 연결된 설정 예제 저장소를 참고할 때는 필요한 항목만 현재 파일에 추가합니다.</p>
+  <a class="doc-action-link" href="https://github.com/research-workflow-guides/setting">설정 예제 저장소</a>
 </div>
 
-<div class="doc-step-pair">
-  <div>
-    <div class="doc-action-row">
-      <p><code>settings.json</code>에는 사용자 설정이, <code>keybindings.json</code>에는 바꾼 단축키가 저장됩니다. 연결된 설정 예제 저장소를 참고할 때는 필요한 항목만 현재 파일에 추가합니다.</p>
-      <a class="doc-action-link" href="https://github.com/research-workflow-guides/setting">설정 예제 저장소</a>
-    </div>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="VS Code user 폴더 안의 settings와 keybindings 파일">
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/settings/settings-keybindings-files.png" alt="VS Code user 폴더 안의 settings와 keybindings 파일">
 
-  </figure>
-</div>
+</figure>
 
 ## 유용한 기본 설정
 
 먼저 LaTeX Workshop의 기본값을 확인합니다. 아래 항목은 빌드, PDF 미리보기, 보조 파일 정리와 관련됩니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p>Settings 검색창에 <code>LaTeX Workshop</code>을 입력합니다. 모든 프로젝트에 적용할 값은 User 탭에서, 현재 프로젝트에만 적용할 값은 Workspace 탭에서 확인합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/legacy/writing-core/settings/search-latex-workshop-settings.png" alt="LaTeX Workshop 설정으로 필터링된 VS Code Settings 화면">
+<p>Settings 검색창에 <code>LaTeX Workshop</code>을 입력합니다. 모든 프로젝트에 적용할 값은 User 탭에서, 현재 프로젝트에만 적용할 값은 Workspace 탭에서 확인합니다.</p>
 
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/legacy/writing-core/settings/search-latex-workshop-settings.png" alt="LaTeX Workshop 설정으로 필터링된 VS Code Settings 화면">
+
+</figure>
 
 - `latex-workshop.latex.autoBuild.run`: 기본값 `onFileChange`, 저장할 때 빌드하려면 `onSave`
 - `latex-workshop.view.pdf.viewer`: 기본값 `tab`

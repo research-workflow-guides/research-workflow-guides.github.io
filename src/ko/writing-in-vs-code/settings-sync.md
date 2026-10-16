@@ -15,8 +15,8 @@ verification:
   screenshots: needs-update
   environment: Windows용 VS Code를 기준으로 설명하며 macOS와 Linux 절차는 추후 검증합니다.
   workflow: Settings Sync 활성화, 동기화 항목 확인, GitHub 로그인, 다른 Windows PC에서 동기화 확인.
-  lastVerified: 2026-09-23 VS Code Settings Sync 공식 문서 확인. Windows 실제 절차와 화면 재검증 대기 중.
-  support: 기존 세 화면은 macOS에서 캡처되어 현재 Windows 화면으로 업데이트할 필요가 있습니다.
+  lastVerified: 2026-10-16 기존 macOS 이미지의 명령과 동기화 항목을 Windows용 VS Code 1.142.0과 비교했습니다.
+  support: macOS 사진을 설명용 예시로 유지합니다. 브라우저 로그인과 PC 간 동기화는 실행하지 않았습니다.
 toc:
   - id: settings-sync란-무엇인가
     label: Settings Sync란 무엇인가
@@ -55,36 +55,29 @@ Settings Sync에서는 다음 항목을 선택해 동기화할 수 있습니다.
 4. 계정 선택 창에서 `Sign in with GitHub`를 선택합니다.
 5. 브라우저에서 GitHub 로그인을 완료하고 VS Code로 돌아옵니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p>Command Palette에서 <code>Settings Sync: Backup and Sync Settings...</code>를 실행합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/settings-sync/backup-and-sync-settings.png" alt="Settings Sync Backup and Sync Settings 명령이 보이는 VS Code Command Palette 실제 화면">
-  </figure>
-</div>
+아래 사진은 macOS 예시이며, Windows에서도 같은 명령과 동기화 항목을 선택합니다.
+
+<p>Command Palette에서 <code>Settings Sync: Backup and Sync Settings...</code>를 실행합니다. 사진에서는 두 번째 항목입니다. 선택되어 있는 <code>Help: Settings Sync</code>는 도움말을 여는 명령입니다.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/settings-sync/backup-and-sync-settings.png" alt="선택된 Help 아래 Settings Sync Backup and Sync Settings 명령이 보이는 macOS용 VS Code Command Palette">
+</figure>
 
 <h2 id="동기화-항목은-기본값-그대로-두기">동기화 항목 확인하기</h2>
 
 기본으로 체크된 항목을 확인합니다. 동기화하지 않을 항목이 있다면 체크를 해제하고, 나머지는 그대로 둡니다.
 
-<div class="doc-step-pair">
-  <div>
-    <p>나중에 동기화 항목을 바꾸려면 Command Palette에서 <code>Settings Sync: Configure...</code>를 실행합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/settings-sync/sync-options-defaults.png" alt="기본 동기화 항목이 체크된 VS Code Settings Sync 예시 화면">
-  </figure>
-</div>
+<p>나중에 동기화 항목을 바꾸려면 Command Palette에서 <code>Settings Sync: Configure...</code>를 실행합니다.</p>
 
-<div class="doc-step-pair">
-  <div>
-    <p><code>Sign in</code>을 누른 뒤 계정 선택 화면에서 <code>Sign in with GitHub</code>를 선택합니다.</p>
-  </div>
-  <figure class="image-frame">
-    <img src="/assets/images/settings-sync/sign-in-with-github.png" alt="Sign in with GitHub가 선택된 VS Code 계정 선택 실제 화면">
-  </figure>
-</div>
+<figure class="image-frame">
+  <img src="/assets/images/settings-sync/sync-options-defaults.png" alt="기본 동기화 항목이 체크된 macOS용 VS Code Settings Sync 예시 화면">
+</figure>
+
+<p><code>Sign in</code>을 누른 뒤 계정 선택 화면에서 <code>Sign in with GitHub</code>를 선택합니다.</p>
+
+<figure class="image-frame">
+  <img src="/assets/images/settings-sync/sign-in-with-github.png" alt="Sign in with GitHub가 선택된 VS Code 계정 선택 실제 화면">
+</figure>
 
 ## 다른 PC에서 같은 환경 이어받기
 
