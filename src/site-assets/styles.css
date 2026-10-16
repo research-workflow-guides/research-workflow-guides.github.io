@@ -202,7 +202,7 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
 .hero-h1 { max-width: 19ch; font-size: clamp(38px, 4vw, 60px); line-height: 1.14; letter-spacing: -0.045em; }
 [data-page-lang="ko"] .hero-h1 { max-width: 22ch; word-break: keep-all; }
 .landing-hero .lead { margin-top: 24px; max-width: 60ch; }
-.language-landing-copy .hero-h1 { max-width: 18ch; }
+.language-landing-copy .hero-h1 { max-width: none; }
 .editorial-band { padding: 52px 0; }
 .section-heading { margin-bottom: 32px; }
 .section-heading h2 { margin-bottom: 12px; }
@@ -271,11 +271,12 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
 }
 @media (max-width: 1099px) {
   :root { --gutter: 32px; }
-  .site-header-inner { min-height: 76px; grid-template-columns: 1fr auto; gap: 0; }
+  /* Keep the brand row fixed while the navigation opens beneath it. */
+  .site-header-inner { min-height: 76px; grid-template-columns: 1fr auto; grid-template-rows: 76px auto; gap: 0; }
   .header-actions { grid-column: 2; grid-row: 1; }
-  .brand { font-size: 18px; }
+  .brand { grid-column: 1; grid-row: 1; font-size: 18px; }
   .brand-mark { width: 40px; height: 40px; }
-  .site-nav { grid-column: 1 / -1; flex-wrap: wrap; gap: 12px 28px; padding: 12px 0 20px; }
+  .site-nav { grid-column: 1 / -1; grid-row: 2; flex-wrap: wrap; gap: 12px 28px; padding: 12px 0 20px; }
   .site-nav > a[aria-current="page"]::after { bottom: 0; }
   .js .site-nav { display: none; }
   .js .site-nav[data-open="true"] { display: flex; }
@@ -303,7 +304,7 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
   body { font-size: 17px; }
   h1, .doc-hero h1 { font-size: 34px; }
   h2 { font-size: 25px; }
-  .site-header-inner { min-height: 72px; }
+  .site-header-inner { min-height: 72px; grid-template-rows: 72px auto; }
   .brand { font-size: 15px; gap: 10px; }
   .brand-mark { width: 32px; height: 32px; }
   .header-actions { gap: 0; }
