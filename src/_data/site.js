@@ -4,7 +4,10 @@ module.exports = {
   description:
     "A bilingual practical guide for writing LaTeX research documents in VS Code and managing them with GitHub.",
   sponsorUrl: "https://github.com/sponsors/kyjung2357",
-  authorLine: "Kiyuob Jung, Kiwoong Kwon",
+  kiyuobAuthor: {
+    name: "Kiyuob Jung",
+    url: "https://kiyuobjung.com/"
+  },
   kiwoongAuthor: {
     name: "Kiwoong Kwon",
     affiliation: "Department of Mathematics, TU Darmstadt, Germany",

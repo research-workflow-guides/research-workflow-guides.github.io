@@ -19,7 +19,7 @@
     {% set currentLangSwitch = currentPageUi.langSwitch if currentPageUi else langSwitch %}
     <header class="site-header{% if isRootLanding %} site-header-root{% endif %}" data-pagefind-ignore="all">
       <div class="wrap site-header-inner">
-        <a class="brand" href="/" aria-label="{{ site.name }}"><span class="brand-mark" aria-hidden="true">[ ]</span><span>Research Workflow<br>Guidebook</span></a>
+        <a class="brand" href="/" aria-label="{{ site.name }}"><img class="brand-mark" src="/assets/images/logo/research-workflow-guidebook.png" alt="" width="44" height="44"><span>Research Workflow<br>Guidebook</span></a>
 
         {% if currentLang %}
           <nav id="primary-nav" class="site-nav" aria-label="{{ currentUi.navigation }}" data-open="false">
@@ -82,7 +82,7 @@
     <footer class="site-footer" data-pagefind-ignore="all">
       <div class="wrap footer-inner">
         <p class="footer-brand">{{ site.name }}</p>
-        <p class="footer-copy">&copy; 2026 {{ site.authorLine }}</p>
+        <p class="footer-copy">&copy; 2026 <a href="{{ site.kiyuobAuthor.url }}">{{ site.kiyuobAuthor.name }}</a>, {{ site.kiwoongAuthor.name }}</p>
         {% set latestFooterDate = git.latestCommitDate %}
         {% if latestFooterDate %}
           <p class="footer-update">{{ currentUi.latestUpdate }} {{ latestFooterDate | dateDots }}</p>

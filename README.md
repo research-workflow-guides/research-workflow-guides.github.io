@@ -40,9 +40,5 @@ The site hosts [Pretendard Variable 1.3.9](https://github.com/orioncactus/preten
 
 ## Authors
 
-- 정기엽(Jung, Kiyuob), Department of Mathematics, Michigan State University, kyjung@msu.edu, [homepage](https://sites.google.com/view/kiyuob-jung)
+- 정기엽(Jung, Kiyuob), Department of Mathematics, Michigan State University, kyjung@msu.edu, [homepage](https://kiyuobjung.com/)
 - 권기웅(Kwon, Kiwoong), Department of Mathematics, TU Darmstadt, Germany, kwon@mathematik.tu-darmstadt.de
-
-## Old Version
-
-- <https://sites.google.com/view/a-30-year-journey/>

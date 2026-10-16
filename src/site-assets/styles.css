@@ -50,7 +50,7 @@ button svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke
 .site-header-inner { min-height: 88px; display: grid; grid-template-columns: minmax(240px, 1fr) auto minmax(126px, 1fr); gap: 28px; align-items: center; }
 .site-header-root .site-header-inner { grid-template-columns: 1fr; }
 .brand { display: inline-flex; gap: 15px; align-items: center; width: fit-content; color: var(--ink); text-decoration: none; font-size: 20px; font-weight: 700; line-height: 1.04; letter-spacing: -0.04em; }
-.brand-mark { font: 500 32px/1 var(--mono); color: var(--blue); white-space: nowrap; letter-spacing: -0.22em; padding-right: 5px; }
+.brand-mark { display: block; flex-shrink: 0; width: 44px; height: 44px; object-fit: contain; }
 .site-nav { display: flex; align-items: stretch; gap: 32px; align-self: stretch; }
 .site-nav > a { display: inline-flex; align-items: center; position: relative; min-height: 44px; color: var(--ink); text-decoration: none; font-size: 15px; white-space: nowrap; }
 .site-nav > a[aria-current="page"] { color: var(--blue-hover); font-weight: 650; }
@@ -249,6 +249,7 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
 .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: 12px 32px; color: var(--muted); font-size: 12px; }
 .footer-brand { color: var(--ink); font-size: 15px; font-weight: 650; }
 .footer-copy { text-align: right; }
+.footer-copy a { color: inherit; text-decoration: none; }
 .footer-links { display: flex; gap: 24px; justify-content: flex-end; }
 .footer-links a { color: var(--ink); text-decoration: none; }
 /* The original image stays available as a link when JavaScript is disabled. */
@@ -273,7 +274,7 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
   .site-header-inner { min-height: 76px; grid-template-columns: 1fr auto; gap: 0; }
   .header-actions { grid-column: 2; grid-row: 1; }
   .brand { font-size: 18px; }
-  .brand-mark { font-size: 29px; }
+  .brand-mark { width: 40px; height: 40px; }
   .site-nav { grid-column: 1 / -1; flex-wrap: wrap; gap: 12px 28px; padding: 12px 0 20px; }
   .site-nav > a[aria-current="page"]::after { bottom: 0; }
   .js .site-nav { display: none; }
@@ -304,7 +305,7 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
   h2 { font-size: 25px; }
   .site-header-inner { min-height: 72px; }
   .brand { font-size: 15px; gap: 10px; }
-  .brand-mark { font-size: 25px; }
+  .brand-mark { width: 32px; height: 32px; }
   .header-actions { gap: 0; }
   .lang-switch { font-size: 11px; min-width: 35px; }
   .nav-search-button, .site-menu-toggle { min-width: 40px; }
