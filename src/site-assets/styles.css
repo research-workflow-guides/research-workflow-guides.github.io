@@ -198,6 +198,7 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
 /* Homes and classified lists use the same restrained visual vocabulary. */
 .landing-hero { padding: 84px 0 64px; background: var(--bg); }
 .hero-h1 { max-width: 19ch; font-size: clamp(38px, 4vw, 60px); line-height: 1.14; letter-spacing: -0.045em; }
+.page-home[data-page-lang="en"] .hero-h1 { max-width: none; }
 [data-page-lang="ko"] .hero-h1 { max-width: 22ch; word-break: keep-all; }
 .landing-hero .lead { margin-top: 24px; }
 .language-landing-copy .hero-h1 { max-width: none; }
