@@ -4,7 +4,7 @@ title: JabRef
 description: Windows에서 JabRef를 설치하고 프로젝트의 .bib 파일을 열어 문헌 항목을 관리합니다.
 lang: ko
 section: writing-in-vs-code
-order: 7
+order: 8
 permalink: /ko/writing-in-vs-code/jabref/
 translationKey: writing-jabref
 eyebrow: 선택

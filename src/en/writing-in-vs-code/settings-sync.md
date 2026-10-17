@@ -4,7 +4,7 @@ title: Sync Your VS Code Setup
 description: Turn on Settings Sync with GitHub in VS Code on Windows to synchronize your setup with another Windows PC.
 lang: en
 section: writing-in-vs-code
-order: 8
+order: 9
 permalink: /en/writing-in-vs-code/settings-sync/
 translationKey: writing-settings-sync
 eyebrow: Optional

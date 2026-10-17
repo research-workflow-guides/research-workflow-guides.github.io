@@ -1,6 +1,31 @@
 {
   "schemaVersion": 1,
   "images": {
+    "/assets/images/texbb/markdown-note.png": {
+      "status": "retained",
+      "reviewedOn": "2026-10-16",
+      "reason": "TeXBB 홈페이지의 Markdown 편집기와 수식 미리보기 예제 사진을 변경 없이 사용합니다. 본문의 짧은 실습 코드와 별개인 기능 소개 예시입니다."
+    },
+    "/assets/images/texbb/reference-diagram.png": {
+      "status": "retained",
+      "reviewedOn": "2026-10-16",
+      "reason": "TeXBB 홈페이지의 Reference Viewer 인용 관계 그림 예제를 변경 없이 사용합니다. 문헌 항목과 관계를 보는 화면의 예시입니다."
+    },
+    "/assets/images/texbb/reference-table.png": {
+      "status": "retained",
+      "reviewedOn": "2026-10-16",
+      "reason": "TeXBB 홈페이지의 Reference Table 문헌 목록 예제를 변경 없이 사용합니다. 문헌 정보를 표로 살펴보는 화면의 예시입니다."
+    },
+    "/assets/images/texbb/android-viewer.jpg": {
+      "status": "retained",
+      "reviewedOn": "2026-10-16",
+      "reason": "TeXBB 공식 홈페이지의 Android 문서 뷰어 원본 사진을 변경 없이 사용합니다. PDF 열람 화면의 예시이며 실제 기기 연결이나 동기화를 검증했다는 뜻은 아닙니다."
+    },
+    "/assets/images/texbb/desktop-latex.png": {
+      "status": "retained",
+      "reviewedOn": "2026-10-16",
+      "reason": "TeXBB 홈페이지의 PC 전용 LaTeX 편집기와 PDF 미리보기 예제 사진을 변경 없이 사용합니다. 제품 설명용 예시이며 앱의 설치·빌드 전체 절차를 실행 검증했다는 뜻은 아닙니다."
+    },
     "/assets/images/legacy/github-workflow/connect-trust-folder.png": {
       "status": "retained",
       "reviewedOn": "2026-10-16",

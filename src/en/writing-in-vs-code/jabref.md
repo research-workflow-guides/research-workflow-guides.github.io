@@ -4,7 +4,7 @@ title: JabRef
 description: Install JabRef on Windows and open your project's .bib file to manage references.
 lang: en
 section: writing-in-vs-code
-order: 7
+order: 8
 permalink: /en/writing-in-vs-code/jabref/
 translationKey: writing-jabref
 eyebrow: Optional

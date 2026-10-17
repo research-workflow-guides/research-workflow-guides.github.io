@@ -128,7 +128,7 @@ if (fs.existsSync(outputRoot)) {
   const htmlFiles = files.filter((file) => file.endsWith(".html"));
   const documents = new Map();
 
-  assert(htmlFiles.length === 71, `Expected 71 generated HTML files, found ${htmlFiles.length}.`);
+  assert(htmlFiles.length === 73, `Expected 73 generated HTML files, found ${htmlFiles.length}.`);
   assert(!fs.existsSync(path.join(outputRoot, "en", "python")), "Generated English Python route exists.");
   assert(!fs.existsSync(path.join(outputRoot, "ko", "python")), "Generated Korean Python route exists.");
 
@@ -183,6 +183,13 @@ if (fs.existsSync(outputRoot)) {
     const hasContract = Boolean(document.querySelector(".workflow-contract"));
     const hasCompletion = Boolean(document.querySelector(".workflow-checks .workflow-completion"));
     const osSelector = document.querySelector(".os-selector");
+    if (page.translationKey === "writing-texbb") {
+      const translatedTexbbUrl = `/${page.lang === "en" ? "ko" : "en"}/writing-in-vs-code/texbb/`;
+      assert(
+        document.querySelector(".header-actions .lang-switch")?.getAttribute("href") === translatedTexbbUrl,
+        `${page.url}: generated TeXBB language switch must link to its translation.`
+      );
+    }
     for (const link of document.querySelectorAll(".page-nav .nav-panel")) {
       assert(!link.querySelector(":scope > span"), `${page.url}: redundant navigation label remains.`);
       assert(Boolean(link.getAttribute("aria-label")), `${page.url}: navigation link has no direction label.`);
@@ -234,6 +241,17 @@ if (fs.existsSync(outputRoot)) {
           `${language}/${section.key}: optional group is missing.`
         );
       }
+      if (section.key === "writing-in-vs-code") {
+        const optionalRows = document.querySelectorAll("#optional-documents .document-row");
+        assert(
+          optionalRows[2]?.getAttribute("href") === `/${language}/writing-in-vs-code/texbb/`,
+          `${language}/${section.key}: Optional guides index 2 must link to TeXBB.`
+        );
+        assert(
+          optionalRows[3]?.getAttribute("href") === `/${language}/writing-in-vs-code/jabref/`,
+          `${language}/${section.key}: Optional guides index 3 must link to JabRef.`
+        );
+      }
       if (canonical.groupedDocs[language][section.key].troubleshooting.length) {
         assert(
           Boolean(document.querySelector("#troubleshooting-documents")),
@@ -259,7 +277,13 @@ if (fs.existsSync(outputRoot)) {
   assert(fs.existsSync(searchIndexPath), "Generated search-index.json is missing.");
   if (fs.existsSync(searchIndexPath)) {
     const searchEntries = JSON.parse(fs.readFileSync(searchIndexPath, "utf8"));
-    assert(searchEntries.length === 68, `Expected 68 search entries, found ${searchEntries.length}.`);
+    assert(searchEntries.length === 70, `Expected 70 search entries, found ${searchEntries.length}.`);
+    for (const language of ["en", "ko"]) {
+      assert(
+        searchEntries.some((entry) => entry.lang === language && entry.url === `/${language}/writing-in-vs-code/texbb/`),
+        `${language}: TeXBB is missing from the search index.`
+      );
+    }
     assert(
       searchEntries.every((entry) => ["en", "ko"].includes(entry.lang)),
       "Search entry with an unsupported language exists."
@@ -280,4 +304,4 @@ if (errors.length) {
 }
 
 console.log("Generated site validation passed.");
-console.log(`HTML files: 71; search entries: 68; internal references checked: ${checkedReferences}; image previews: ${checkedImagePreviews}.`);
+console.log(`HTML files: 73; search entries: 70; internal references checked: ${checkedReferences}; image previews: ${checkedImagePreviews}.`);

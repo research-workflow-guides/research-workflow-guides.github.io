@@ -4,7 +4,7 @@ title: Generate a redlined PDF
 description: Use latexdiff on Windows to compare two TeX files and compile a redlined PDF.
 lang: en
 section: writing-in-vs-code
-order: 9
+order: 10
 permalink: /en/writing-in-vs-code/revision-pdf-latexdiff/
 translationKey: writing-revision-pdf-latexdiff
 eyebrow: Optional

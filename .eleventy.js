@@ -2,6 +2,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const { siteRoot } = require("./scripts/output-paths");
 const enhanceImages = require("./scripts/enhance-images");
+const enhanceInlineCode = require("./scripts/enhance-inline-code");
 
 function escapeHtml(value) {
   return value
@@ -110,6 +111,10 @@ module.exports = async function (eleventyConfig) {
 
   eleventyConfig.addTransform("accessible-image-previews", function (content) {
     return this.page.outputPath?.endsWith(".html") ? enhanceImages(content) : content;
+  });
+
+  eleventyConfig.addTransform("readable-inline-code", function (content) {
+    return this.page.outputPath?.endsWith(".html") ? enhanceInlineCode(content) : content;
   });
 
   eleventyConfig.addCollection("docs", function (collectionApi) {

@@ -7,7 +7,7 @@ section: writing-in-vs-code
 order: 2
 permalink: /ko/writing-in-vs-code/shortcuts/
 translationKey: writing-shortcuts
-eyebrow: 2단계 (선택)
+eyebrow: 선택
 lead: Windows용 VS Code에서 문서 작성 중 자주 쓰는 명령의 단축키를 확인합니다. 단축키가 다르게 동작하면 Keyboard Shortcuts에서 현재 할당을 확인하세요.
 verificationCard: false
 verification:

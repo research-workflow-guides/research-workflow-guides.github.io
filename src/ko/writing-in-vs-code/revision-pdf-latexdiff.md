@@ -4,7 +4,7 @@ title: 수정 사항이 표시된 PDF 만들기
 description: Windows에서 latexdiff로 두 TeX 파일을 비교하고 변경 표시 PDF를 만듭니다.
 lang: ko
 section: writing-in-vs-code
-order: 9
+order: 10
 permalink: /ko/writing-in-vs-code/revision-pdf-latexdiff/
 translationKey: writing-revision-pdf-latexdiff
 eyebrow: 선택

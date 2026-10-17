@@ -86,7 +86,7 @@ function sourcePath(page) {
   );
 }
 
-assert(canonical.pages.length === 71, `Expected 71 public pages, found ${canonical.pages.length}.`);
+assert(canonical.pages.length === 73, `Expected 73 public pages, found ${canonical.pages.length}.`);
 assert(canonical.sections.length === 4, `Expected 4 sections, found ${canonical.sections.length}.`);
 assert(
   canonical.pages.every((page) => !page.url.includes("/python/")),
@@ -132,7 +132,28 @@ for (const section of canonical.sections) {
 }
 
 const documents = canonical.pages.filter((page) => page.pageType === "document");
-assert(documents.length === 60, `Expected 60 document pages, found ${documents.length}.`);
+assert(documents.length === 62, `Expected 62 document pages, found ${documents.length}.`);
+const documentPairKeys = new Set(documents.map((page) => page.translationKey));
+assert(documentPairKeys.size === 31, `Expected 31 document translation pairs, found ${documentPairKeys.size}.`);
+
+for (const language of ["en", "ko"]) {
+  const optionalWriting = canonical.groupedDocs[language]["writing-in-vs-code"].optional;
+  const texbbUrl = `/${language}/writing-in-vs-code/texbb/`;
+  const translatedTexbbUrl = `/${language === "en" ? "ko" : "en"}/writing-in-vs-code/texbb/`;
+  assert(
+    optionalWriting[2]?.translationKey === "writing-texbb" && optionalWriting[2]?.url === texbbUrl,
+    `${language}/writing-in-vs-code: Optional guides index 2 must be TeXBB.`
+  );
+  assert(
+    optionalWriting[3]?.translationKey === "writing-jabref",
+    `${language}/writing-in-vs-code: Optional guides index 3 must be JabRef.`
+  );
+  assert(
+    canonical.pagesByUrl[texbbUrl]?.translationKey === "writing-texbb" &&
+      canonical.pageUi[texbbUrl]?.langSwitch?.url === translatedTexbbUrl,
+    `${texbbUrl}: TeXBB language switch must link to its translation.`
+  );
+}
 
 for (const page of documents) {
   const filePath = sourcePath(page);
@@ -238,4 +259,4 @@ if (errors.length) {
 }
 
 console.log("Content contract validation passed.");
-console.log("Sections: 4; pages: 71; document pairs: 30; core paths: 3, 4, 6, 4.");
+console.log("Sections: 4; pages: 73; document pairs: 31; core paths: 3, 4, 6, 4.");

@@ -4,7 +4,7 @@ title: VS Code 작업 환경 동기화
 description: Windows용 VS Code에서 GitHub 계정으로 Settings Sync를 켜고 다른 Windows PC와 사용자 환경을 동기화합니다.
 lang: ko
 section: writing-in-vs-code
-order: 8
+order: 9
 permalink: /ko/writing-in-vs-code/settings-sync/
 translationKey: writing-settings-sync
 eyebrow: 선택
