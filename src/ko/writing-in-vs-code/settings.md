@@ -18,7 +18,6 @@ verification:
   workflow: Command Palette, Keyboard Shortcuts, 사용자와 Workspace 설정, 저장 시 자동 빌드.
   lastVerified: 2026-09-23 VS Code와 LaTeX Workshop 공식 문서 및 설정 예제 저장소 확인. Windows 실제 실행 검증 대기 중.
   support: 기존 Windows 이미지의 현재 버전 검증 대기 중. macOS와 Linux 절차는 추후 작성·확인 예정.
-  scopeNote: 이 페이지는 Windows 화면을 기준으로 설명합니다. 기존 이미지는 업데이트가 필요하며 macOS와 Linux 절차는 추후 작성·확인할 예정입니다.
 toc:
   - id: 명령-이름부터-익히기
     label: 명령 이름부터 익히기

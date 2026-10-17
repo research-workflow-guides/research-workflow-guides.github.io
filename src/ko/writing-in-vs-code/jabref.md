@@ -20,7 +20,7 @@ tags:
 ## JabRef 다운로드
 
 <div class="doc-action-row">
-  <p>JabRef 공식 웹사이트의 <strong>Download</strong>에서 Windows 설치 파일을 받아 실행하고, 설치 창의 안내에 따라 설치합니다. macOS와 Linux 절차는 추후 작성·검증합니다.</p>
+  <p>JabRef 공식 웹사이트의 <strong>Download</strong>에서 Windows 설치 파일을 받아 실행하고, 설치 창의 안내에 따라 설치합니다.</p>
   <a class="doc-action-link" href="https://www.jabref.org/#download">공식 JabRef 다운로드</a>
 </div>
 

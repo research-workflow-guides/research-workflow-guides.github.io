@@ -18,7 +18,6 @@ verification:
   workflow: GitHub ZIP 다운로드, 압축 해제, VS Code 폴더 열기, 첫 PDF build.
   lastVerified: 2026-09-23 저장소와 공식 문서 확인. Windows 실제 실행 검증 대기 중.
   support: Windows 안내 검토 중. macOS와 Linux 안내는 추후 추가 예정.
-  scopeNote: Windows 절차의 실제 동작 검증이 남아 있습니다. macOS와 Linux 안내는 추후 작성합니다.
 toc:
   - id: 템플릿-다운로드하기
     label: 템플릿 다운로드하기

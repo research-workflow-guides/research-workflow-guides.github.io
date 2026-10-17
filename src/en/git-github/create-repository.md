@@ -17,7 +17,6 @@ verification:
   workflow: Choose the owner and name, set private visibility, omit starter files, and check the empty repository.
   lastVerified: GitHub repository configuration screen checked and captured in a Windows browser on 2026-10-16. Repository creation was not executed.
   support: Older GitHub screenshots illustrate repository creation and Quick setup. The creation form shows Public selected; select Private for this guide.
-  scopeNote: This page currently uses Windows desktop screens. macOS and Linux screens will be verified later.
 verificationCard: false
 toc:
   - id: choose-the-repository-shape

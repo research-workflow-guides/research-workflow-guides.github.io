@@ -17,7 +17,6 @@ verification:
   workflow: Create, list, switch, and remove a branch after merging.
   lastVerified: Git documentation and the command flow in a disposable local repository checked on 2026-09-23. Current Windows screens await review.
   support: macOS and Linux terminal procedures await review.
-  scopeNote: This guide uses the VS Code integrated terminal on Windows. macOS and Linux procedures will be reviewed later.
 toc:
   - id: what-a-branch-means
     label: What a branch means

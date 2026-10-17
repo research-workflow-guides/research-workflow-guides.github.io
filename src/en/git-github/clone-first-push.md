@@ -18,7 +18,6 @@ verification:
   workflow: Copy the empty repository's HTTPS URL, clone in VS Code, open the folder, and check the remote URL.
   lastVerified: GitHub and VS Code documentation checked on 2026-09-23. Current Windows screens await verification.
   support: Existing GitHub and VS Code images need updating. macOS and Linux screens await review.
-  scopeNote: This guide uses Windows desktop screens. macOS and Linux screens will be reviewed later.
 toc:
   - id: copy-the-empty-repository-url
     label: Copy the empty repository URL

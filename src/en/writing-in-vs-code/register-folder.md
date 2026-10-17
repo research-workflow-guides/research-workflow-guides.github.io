@@ -18,7 +18,6 @@ verification:
   workflow: VS Code Open Folder, Workspace Trust, Explorer, and LaTeX Workshop build.
   lastVerified: Existing Windows screenshots were visually reviewed as instructional examples on 2026-10-16. The full folder-opening and LaTeX build workflow was not executed.
   support: Existing images remain as instructional examples, with guidance not to trust the entire parent folder. macOS and Linux screen guidance will be checked later.
-  scopeNote: This page uses Windows screenshots. Visual image review is separate from executing the full workflow; macOS and Linux screen guidance will be checked later.
 toc:
   - id: open-folder
     label: Open folder

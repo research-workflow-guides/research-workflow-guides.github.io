@@ -18,7 +18,6 @@ verification:
   workflow: 빈 저장소의 HTTPS 주소 복사, VS Code 클론, 폴더 열기와 원격 주소 확인.
   lastVerified: 2026-09-23 GitHub와 VS Code 공식 문서 확인. 현재 Windows 화면 검증 대기 중.
   support: 기존 GitHub와 VS Code 이미지는 업데이트가 필요합니다. macOS와 Linux 화면은 추후 검증합니다.
-  scopeNote: 현재 Windows 데스크톱 화면을 기준으로 안내합니다. macOS와 Linux 화면은 추후 검증합니다.
 toc:
   - id: 빈-저장소-주소-복사
     label: 빈 저장소 주소 복사

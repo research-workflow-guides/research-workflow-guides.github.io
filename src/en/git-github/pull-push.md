@@ -18,7 +18,6 @@ verification:
   workflow: Publish the first commit from an empty repository, then use Pull and Push.
   lastVerified: Staging and commit menu screens checked in VS Code on Windows on 2026-10-16. Publish Branch, Pull, and Push were not performed during this screen review.
   support: Existing screenshots illustrate staging and commit menu locations; exclude generated files as instructed. The full workflow was not verified. macOS and Linux screens await review.
-  scopeNote: This guide uses Windows screens. macOS and Linux screens will be reviewed later.
 toc:
   - id: key-terms
     label: Key terms

@@ -53,7 +53,6 @@ tags:
 </div>
 
 - **Windows 기본 프로필**: `%APPDATA%\Code\User\snippets\latex.json`
-- **macOS / Linux**: 경로와 절차를 추후 작성·검증할 예정입니다.
 
 <p>Windows 파일 탐색기 주소창에 <code>%APPDATA%\Code\User\snippets</code>를 입력하고 <kbd>Enter</kbd>를 누르면 기본 프로필의 snippet 폴더가 열립니다.</p>
 

@@ -18,7 +18,6 @@ verification:
   workflow: Run git status in the cloned repository and identify untracked files.
   lastVerified: Git documentation and local empty-repository output checked on 2026-09-23. Current Windows screens await review.
   support: The existing terminal image needs updating. macOS and Linux screens await review.
-  scopeNote: This guide uses Windows screens. macOS and Linux screens will be reviewed later.
 toc:
   - id: check-the-current-state
     label: Check the current state

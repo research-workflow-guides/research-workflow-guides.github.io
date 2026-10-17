@@ -18,7 +18,6 @@ verification:
   workflow: Pull Request 병합, 로컬 main 갱신, 필요한 경우 작업 브랜치에 main 반영.
   lastVerified: 2026-09-23 공식 문서와 임시 로컬 저장소의 명령 흐름을 확인했습니다. 현재 Windows 화면 검증 대기 중.
   support: 기존 이미지는 new-contents 작업 브랜치의 충돌 사례입니다. macOS와 Linux 화면은 추후 검증합니다.
-  scopeNote: 현재 Windows 데스크톱 브라우저와 VS Code 통합 터미널을 기준으로 안내합니다. macOS와 Linux 절차는 추후 검증합니다.
 toc:
   - id: merge의-의미
     label: 병합의 의미

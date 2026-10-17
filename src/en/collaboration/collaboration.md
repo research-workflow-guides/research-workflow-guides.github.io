@@ -18,7 +18,6 @@ verification:
   workflow: Invite a collaborator, confirm acceptance, and agree on how to share changes.
   lastVerified: GitHub documentation checked on 2026-09-23. Current Windows screens await review.
   support: The older images show a public repository. macOS, Linux, and organization repository screens await review.
-  scopeNote: This guide uses a private repository owned by a personal account in a Windows desktop browser. macOS, Linux, and organization repository screens will be reviewed later.
 toc:
   - id: collaboration-guidelines
     label: Collaboration Guidelines

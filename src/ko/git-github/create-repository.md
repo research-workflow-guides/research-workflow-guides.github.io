@@ -17,7 +17,6 @@ verification:
   workflow: 저장소 소유자와 이름 선택, 비공개 설정, 초기 파일 제외, 빈 저장소 확인.
   lastVerified: 2026-10-16 Windows 브라우저에서 GitHub 저장소 생성 옵션 화면을 확인하고 촬영했습니다. 저장소 생성은 실행하지 않았습니다.
   support: 예전 GitHub 화면으로 저장소 생성과 Quick setup 위치를 안내합니다. 생성 폼에는 Public이 선택되어 있으므로 실제 작업에서는 Private를 선택해야 합니다.
-  scopeNote: 현재 Windows 데스크톱 화면을 기준으로 안내합니다. macOS와 Linux 화면은 추후 검증합니다.
 verificationCard: false
 toc:
   - id: 저장소-형태-정하기

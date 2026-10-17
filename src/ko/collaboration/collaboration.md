@@ -18,7 +18,6 @@ verification:
   workflow: 공동 작업자 초대, 수락 확인, 변경 공유 순서.
   lastVerified: 2026-09-23 GitHub 공식 문서를 확인했습니다. 현재 Windows 화면 검증 대기 중.
   support: 기존 이미지는 공개 저장소의 예전 화면입니다. macOS와 Linux, 조직 저장소 화면은 추후 검증합니다.
-  scopeNote: 현재 Windows 데스크톱 브라우저의 개인 계정 소유 비공개 저장소를 기준으로 안내합니다. macOS·Linux와 조직 저장소 화면은 추후 검증합니다.
 toc:
   - id: 협업할-때-주의-사항
     label: 협업할 때 주의 사항

@@ -17,7 +17,6 @@ verification:
   workflow: Install Git for Windows, set a global name and email, and verify commands in PowerShell.
   lastVerified: 2026-09-23 checked official Git documentation; live Windows installation pending.
   support: Existing Windows installer images need updating. macOS and Linux guides are pending.
-  scopeNote: This page currently covers Windows installation. macOS and Linux procedures will be written and verified later.
 verificationCard: false
 toc:
   - id: install-git

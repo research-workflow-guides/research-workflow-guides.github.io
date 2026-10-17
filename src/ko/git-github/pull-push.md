@@ -18,7 +18,6 @@ verification:
   workflow: 빈 저장소의 첫 커밋 게시, 이후 Pull과 Push.
   lastVerified: 2026-10-16 Windows의 VS Code에서 Stage와 커밋 메뉴 화면을 확인했습니다. 이번 화면 검토에서는 Publish Branch, Pull, Push를 실행하지 않았습니다.
   support: 기존 사진을 Stage와 커밋 메뉴 위치 예시로 유지하며 생성 파일은 제외하도록 안내합니다. 전체 절차는 실행 검증하지 않았습니다. macOS와 Linux 화면은 추후 검증합니다.
-  scopeNote: 현재 Windows 화면을 기준으로 안내합니다. macOS와 Linux 화면은 추후 검증합니다.
 toc:
   - id: 용어-정리
     label: 용어 정리

@@ -18,7 +18,6 @@ verification:
   workflow: GitHub ZIP download, project extraction, VS Code folder opening, and first PDF build.
   lastVerified: Repository and official documentation checked on 2026-09-23. Windows execution check pending.
   support: Windows guidance under review. macOS and Linux guidance is planned.
-  scopeNote: The Windows procedure still needs an end-to-end check. macOS and Linux guidance will be written later.
 toc:
   - id: download-the-template
     label: Download the template

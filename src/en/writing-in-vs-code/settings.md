@@ -18,7 +18,6 @@ verification:
   workflow: Command Palette, Keyboard Shortcuts, User and Workspace settings, and builds on save.
   lastVerified: Official VS Code and LaTeX Workshop documentation and settings example repository checked on 2026-09-23. Windows execution check pending.
   support: Existing Windows screenshots await current-version review. macOS and Linux steps will be written and checked later.
-  scopeNote: This page uses Windows screenshots. The existing images need updating, and macOS and Linux steps will be written and checked later.
 toc:
   - id: start-with-command-names
     label: Start with command names

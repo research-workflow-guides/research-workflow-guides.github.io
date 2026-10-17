@@ -18,7 +18,6 @@ verification:
   workflow: VS Code Open Folder, Workspace Trust, Explorer, LaTeX Workshop build.
   lastVerified: 2026-10-16 기존 Windows 화면을 설명용 예시로 검토했습니다. 폴더 열기부터 LaTeX 빌드까지 전체 절차는 실행하지 않았습니다.
   support: 기존 이미지를 설명용 예시로 유지하며 상위 폴더 전체 신뢰 옵션은 선택하지 않도록 안내합니다. macOS와 Linux 화면 안내는 추후 확인 예정입니다.
-  scopeNote: 이 페이지의 화면은 Windows 기준입니다. 사진의 시각 검토와 전체 절차의 실행 검증은 구분하며 macOS와 Linux 화면 안내는 추후 확인합니다.
 toc:
   - id: 폴더-열기
     label: 폴더 열기

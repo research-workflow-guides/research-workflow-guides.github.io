@@ -18,7 +18,6 @@ verification:
   workflow: Opening a pull request, reviewing changes, and preparing to merge.
   lastVerified: GitHub documentation checked on 2026-09-23. Current Windows screens await review.
   support: Existing images use the new-contents example branch. Current Windows and macOS/Linux screens await review.
-  scopeNote: This guide uses a private personal-account repository in a Windows desktop browser. macOS and Linux screens will be reviewed later.
 toc:
   - id: what-a-pull-request-means
     label: What a Pull Request means

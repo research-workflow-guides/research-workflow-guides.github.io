@@ -53,7 +53,6 @@ tags:
 </div>
 
 - **Windows default profile**: `%APPDATA%\Code\User\snippets\latex.json`
-- **macOS / Linux**: Paths and steps will be written and verified later.
 
 <p>In Windows File Explorer, enter <code>%APPDATA%\Code\User\snippets</code> in the address bar and press <kbd>Enter</kbd> to open the default profile's snippets folder.</p>
 

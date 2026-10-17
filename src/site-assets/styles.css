@@ -115,7 +115,6 @@ button svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke
 .os-option-current { background: var(--blue-wash); border-bottom-color: var(--blue); color: var(--blue-hover); font-weight: 650; }
 .os-option-pending { background: var(--bg); color: var(--muted); }
 .os-option small { font-size: 12px; font-weight: 500; }
-.os-selector-note { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.5; }
 .meta-list { display: flex; gap: 24px; flex-wrap: wrap; padding: 0; margin: 20px 0; }
 .meta-list dt { color: var(--muted); font-size: 13px; }
 .meta-list dd { margin: 0; }
@@ -133,20 +132,6 @@ summary::marker { color: var(--muted); font-size: 12px; }
 .verification-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 16px 0; }
 .verification-list dt { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
 .verification-list dd { margin: 0; color: var(--ink); }
-.platform-scope {
-  width: 100%;
-  max-width: none;
-  margin-top: 28px;
-  padding: 20px 24px;
-  border: 1px solid #d6def7;
-  border-left: 4px solid var(--blue);
-  border-radius: 10px;
-  background: var(--blue-wash);
-  color: #34415f;
-  font-size: 15px;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
 /* The document container sets one width for headings, text, notes and figures. */
 .prose { margin-top: 32px; counter-reset: doc-step; min-width: 0; overflow-wrap: anywhere; }
 .prose > :first-child { margin-top: 0; }
@@ -257,7 +242,7 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
 .callout-card h2 { font-size: 23px; margin-bottom: 14px; }
 .text-link { display: inline-block; margin-top: 16px; font-weight: 550; }
 .subtle, .small-note, .source-note { color: var(--muted); font-size: 14px; }
-.site-footer { padding: 36px 0; background: var(--bg); border-top: 1px solid var(--line); }
+.site-footer { padding: 36px 0; background: var(--paper); border-top: 1px solid var(--line); }
 .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: 12px 32px; color: var(--muted); font-size: 12px; }
 .footer-brand { color: var(--ink); font-size: 15px; font-weight: 650; }
 .footer-copy { text-align: right; }
@@ -334,7 +319,6 @@ kbd { display: inline-block; font-size: 0.78em; line-height: 1.45; padding: 3px 
   .verification-card summary { font-size: 12px; }
   .verification-status { margin-left: 8px; }
   .verification-list { grid-template-columns: 1fr; gap: 16px; }
-  .platform-scope { margin-top: 24px; padding: 18px; }
   .prose { margin-top: 24px; }
   .prose > h2 { gap: 14px; font-size: 25px; margin-top: 40px; }
   .prose > h2::before { font-size: 25px; }

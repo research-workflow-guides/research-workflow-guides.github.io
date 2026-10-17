@@ -17,7 +17,6 @@ verification:
   workflow: 브랜치 만들기, 목록 확인, 전환, 병합 후 삭제.
   lastVerified: 2026-09-23 Git 공식 문서와 임시 로컬 저장소의 명령 흐름을 확인했습니다. 현재 Windows 화면 검증 대기 중.
   support: macOS와 Linux의 터미널 절차는 추후 검증합니다.
-  scopeNote: 현재 Windows의 VS Code 통합 터미널을 기준으로 안내합니다. macOS와 Linux 절차는 추후 검증합니다.
 toc:
   - id: branch의-의미
     label: 브랜치의 의미

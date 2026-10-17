@@ -7,7 +7,7 @@ section: git-github
 order: 8
 permalink: /ko/git-github/version-control/
 translationKey: git-version-control
-eyebrow: 주제 3
+eyebrow: 선택
 lead: Windows의 VS Code에서 Git Graph로 커밋 기록과 파일별 변경 내용을 확인합니다.
 verificationCard: false
 verification:

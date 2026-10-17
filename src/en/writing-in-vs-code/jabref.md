@@ -20,7 +20,7 @@ tags:
 ## Download JabRef
 
 <div class="doc-action-row">
-  <p>In <strong>Download</strong> on the official JabRef website, get the Windows installer, run it, and follow the installer prompts. macOS and Linux steps will be written and verified later.</p>
+  <p>In <strong>Download</strong> on the official JabRef website, get the Windows installer, run it, and follow the installer prompts.</p>
   <a class="doc-action-link" href="https://www.jabref.org/#download">Official JabRef downloads</a>
 </div>
 

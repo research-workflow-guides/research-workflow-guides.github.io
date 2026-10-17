@@ -7,7 +7,7 @@ section: git-github
 order: 2
 permalink: /ko/git-github/github-account-setup/
 translationKey: git-github-account-setup
-eyebrow: 주제 2
+eyebrow: 선택
 lead: 저장소를 만들고 협업할 GitHub 계정을 확인합니다. 계정이 없다면 만들고 이메일 주소를 인증합니다.
 verification:
   status: needs-review

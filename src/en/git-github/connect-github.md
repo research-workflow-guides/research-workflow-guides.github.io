@@ -17,7 +17,6 @@ verification:
   workflow: Recognize a GitHub sign-in request, authenticate in the browser, and return to VS Code.
   lastVerified: 2026-09-23 checked official VS Code documentation; current Windows sign-in screen awaits verification.
   support: The existing VS Code sign-in image needs updating. macOS and Linux guides are pending.
-  scopeNote: This page currently uses Windows VS Code screens. macOS and Linux screens will be written and verified later.
 verificationCard: false
 toc:
   - id: open-the-terminal

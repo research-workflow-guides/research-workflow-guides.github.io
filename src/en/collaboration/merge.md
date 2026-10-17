@@ -18,7 +18,6 @@ verification:
   workflow: Merge a pull request, update local main, and optionally bring main into a work branch.
   lastVerified: Official documentation and the command flow in a disposable local repository checked on 2026-09-23. Current Windows screens await review.
   support: Existing images show a conflict on the new-contents work branch. macOS and Linux screens await review.
-  scopeNote: This guide uses a Windows desktop browser and the VS Code integrated terminal. macOS and Linux procedures will be reviewed later.
 toc:
   - id: what-a-merge-means
     label: What a merge means

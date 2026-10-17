@@ -18,7 +18,6 @@ verification:
   workflow: 클론한 저장소에서 git status를 실행하고 추적되지 않는 파일을 확인합니다.
   lastVerified: 2026-09-23 Git 공식 문서와 빈 저장소의 로컬 출력을 확인했습니다. 현재 Windows 화면 검증 대기 중.
   support: 기존 터미널 이미지는 업데이트가 필요합니다. macOS와 Linux 화면은 추후 검증합니다.
-  scopeNote: 현재 Windows 화면을 기준으로 안내합니다. macOS와 Linux 화면은 추후 검증합니다.
 toc:
   - id: 현재-상태-확인
     label: 현재 상태 확인
